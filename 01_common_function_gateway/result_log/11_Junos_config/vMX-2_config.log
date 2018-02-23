@@ -1,0 +1,392 @@
+root@vMX-2# rollback ?
+Possible completions:
+  <[Enter]>            Execute this command
+  0                    2017-05-11 12:05:11 JST by esi via netconf 
+  1                    2017-05-11 11:59:15 JST by root via cli 
+  2                    2017-05-11 11:58:32 JST by esi via netconf 
+  3                    2017-05-09 16:24:11 JST by root via cli 
+  4                    2017-05-09 16:19:40 JST by esi via netconf 
+  5                    2017-05-09 16:11:35 JST by root via cli 
+  6                    2017-05-09 16:08:27 JST by root via cli 
+  7                    2017-05-09 15:45:43 JST by root via cli 
+  8                    2017-05-09 15:42:54 JST by root via cli 
+  9                    2017-05-09 15:39:42 JST by esi via netconf 
+  10                   2017-05-09 15:39:05 JST by esi via netconf 
+  11                   2017-05-09 15:38:34 JST by esi via netconf 
+  12                   2017-05-09 15:09:03 JST by root via cli 
+  13                   2017-05-09 15:01:08 JST by root via cli 
+  14                   2017-05-09 14:49:16 JST by root via cli 
+  15                   2017-05-09 14:45:11 JST by esi via netconf 
+  16                   2017-05-09 14:44:08 JST by esi via netconf 
+  17                   2017-05-09 14:42:27 JST by esi via netconf 
+  18                   2017-05-09 14:41:56 JST by esi via netconf 
+  19                   2017-05-09 14:35:58 JST by root via cli 
+  20                   2017-05-09 14:34:53 JST by esi via netconf 
+  21                   2017-05-09 14:33:58 JST by esi via netconf 
+  22                   2017-05-09 14:32:48 JST by esi via netconf 
+  23                   2017-05-09 14:32:26 JST by esi via netconf 
+  24                   2017-05-09 14:30:59 JST by root via cli 
+  25                   2017-05-01 14:10:02 JST by esi via netconf 
+  26                   2017-05-01 14:09:23 JST by esi via netconf 
+  27                   2017-05-01 14:08:51 JST by esi via netconf 
+  28                   2017-05-01 12:56:43 JST by root via cli 
+  29                   2017-05-01 12:55:05 JST by esi via netconf 
+  30                   2017-05-01 12:53:23 JST by esi via netconf 
+  31                   2017-05-01 12:51:45 JST by esi via netconf 
+  32                   2017-05-01 12:51:14 JST by esi via netconf 
+  33                   2017-05-01 12:42:19 JST by root via cli 
+  34                   2017-05-01 12:40:35 JST by root via cli 
+  35                   2017-05-01 12:39:05 JST by esi via netconf 
+  36                   2017-05-01 12:37:25 JST by esi via netconf 
+  37                   2017-05-01 12:36:21 JST by esi via netconf 
+  38                   2017-05-01 12:36:00 JST by esi via netconf 
+  39                   2017-05-01 12:26:56 JST by root via cli 
+  40                   2017-05-01 12:25:25 JST by esi via netconf 
+  41                   2017-05-01 12:24:15 JST by esi via netconf 
+  42                   2017-05-01 12:23:11 JST by esi via netconf 
+  43                   2017-05-01 12:22:50 JST by esi via netconf 
+  44                   2017-05-01 12:05:29 JST by root via cli 
+  45                   2017-05-01 12:01:35 JST by esi via netconf 
+  46                   2017-05-01 12:01:07 JST by esi via netconf 
+  47                   2017-05-01 11:50:26 JST by root via cli 
+  48                   2017-05-01 11:45:38 JST by esi via netconf 
+  49                   2017-05-01 11:44:29 JST by esi via netconf 
+  |                    Pipe through a command
+[edit]
+root@vMX-2# rollback    
+load complete
+
+[edit]
+root@vMX-2# show |compare rollback 1 
+[edit]
++  services {
++      service-set vrf_gw_sample-ha-router-downlink_1025 {
++          nat-rules vrf_gw_sample-ha-router-downlink_1025-SNAPT;
++          nat-rules vrf_gw_sample-ha-router-downlink_1025-DNAT;
++          interface-service {
++              service-interface ms-0/2/0.1025;
++          }
++      }
++      nat {
++          pool vrf_gw_sample-ha-router-downlink_1025-SNAPT-POOL {
++              apply-groups SNAPT-POOL;
++              address 100.64.0.10/32;
++          }
++          pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-1 {
++              apply-groups DNAT-POOL-1;
++          }
++          pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-2 {
++              apply-groups DNAT-POOL-2;
++          }
++          rule vrf_gw_sample-ha-router-downlink_1025-SNAPT {
++              apply-groups SNAPT-RULE;
++              term source {
++                  then {
++                      translated {
++                          source-pool vrf_gw_sample-ha-router-downlink_1025-SNAPT-POOL;
++                      }
++                  }
++              }
++          }
++          rule vrf_gw_sample-ha-router-downlink_1025-DNAT {
++              apply-groups DNAT-RULE;
++              term 1 {
++                  then {
++                      translated {
++                          destination-pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-1;
++                      }
++                  }                    
++              }
++              term 2 {
++                  then {
++                      translated {
++                          destination-pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-2;
++                      }
++                  }
++              }
++          }
++      }
++  }
+[edit interfaces]
++   lt-0/0/0 {
++       unit 1025 {
++           peer-unit 11025;
++           family inet {
++               service {
++                   input {
++                       service-set vrf_gw_sample-ha-router-downlink_1025;
++                   }
++                   output {
++                       service-set vrf_gw_sample-ha-router-downlink_1025;
++                   }
++               }
++           }
++       }
++       unit 11025 {
++           peer-unit 1025;
++       }
++   }
++   ms-0/2/0 {
++       unit 1025 {
++           family inet;
++       }
++   }
+[edit interfaces ae0]
++    unit 1025 {
++        apply-groups IF-USER-VRRP-ACT; 
++        description vrf_gw_sample-ha-router-downlink_1025;
++        vlan-id 1025;
++        family inet {
++            service {
++                input {
++                    service-set vrf_gw_sample-ha-router-downlink_1025;
++                }
++                output {
++                    service-set vrf_gw_sample-ha-router-downlink_1025;
++                }
++            }
++        }
++    }
+[edit routing-instances]
++   SHARED-RESOURCE {
++       interface lt-0/0/0.11025;
++       routing-options {
++           static {
++               route 100.64.0.10/32 next-hop lt-0/0/0.11025;
++           }
++       }
++   }
++   vrf_gw_sample-ha-router-downlink_1025 {
++       instance-type virtual-router;
++       interface lt-0/0/0.1025;
++       interface ms-0/2/0.1025;
++       interface ae0.1025;
++       routing-options {
++           static {
++               route 0.0.0.0/0 next-hop lt-0/0/0.1025;
++           }
++       }
++   }
+
+[edit]
+
+
+
+
+---------------
+root@vMX-2# show |display set 
+set version 16.1R1.7
+set groups VPNGW1-VRRP interfaces <*> unit <*> family inet address <*> vrrp-group <*> fast-interval 10000
+set groups VPNGW1-VRRP interfaces <*> unit <*> family inet address <*> vrrp-group <*> preempt hold-time 180
+set groups VPNGW1-VRRP interfaces <*> unit <*> family inet address <*> vrrp-group <*> accept-data
+set groups InetGW1-VRRP interfaces <*> unit <*> family inet address <*> vrrp-group <*> fast-interval 10000
+set groups InetGW1-VRRP interfaces <*> unit <*> family inet address <*> vrrp-group <*> preempt hold-time 180
+set groups InetGW1-VRRP interfaces <*> unit <*> family inet address <*> vrrp-group <*> accept-data
+set groups InetGW1-VRRP interfaces <*> unit <*> family inet6 address <*> vrrp-inet6-group <*> fast-interval 10000
+set groups InetGW1-VRRP interfaces <*> unit <*> family inet6 address <*> vrrp-inet6-group <*> preempt hold-time 180
+set groups InetGW1-VRRP interfaces <*> unit <*> family inet6 address <*> vrrp-inet6-group <*> accept-data
+set groups InetGW2-RI-IBGP routing-instances <*> protocols bgp log-updown
+set groups InetGW2-RI-IBGP routing-instances <*> protocols bgp group <*> type internal
+set groups InetGW2-RI-IBGP routing-instances <*> protocols bgp group <*> peer-as 65101
+set groups InetGW2-RI-IBGP routing-instances <*> protocols bgp group <*> neighbor <*> hold-time 30
+set groups InetGW2-RI-IBGP routing-instances <*> protocols bgp group <*> neighbor <*> import BGP-InetGW2-RI_IN
+set groups InetGW2-RI-IBGP routing-instances <*> protocols bgp group <*> neighbor <*> export BGP-InetGW2-RI_OUT
+set groups VPNGW1-RI-EBGP routing-instances <*> protocols bgp group <*> type external
+set groups VPNGW1-RI-EBGP routing-instances <*> protocols bgp group <*> neighbor <*> hold-time 40
+set groups VPNGW1-RI-EBGP routing-instances <*> protocols bgp group <*> neighbor <*> import BGP-CLOUDGW1_IN
+set groups VPNGW1-RI-EBGP routing-instances <*> protocols bgp group <*> neighbor <*> family inet unicast prefix-limit maximum 20000
+set groups VPNGW1-RI-EBGP routing-instances <*> protocols bgp group <*> neighbor <*> family inet unicast prefix-limit teardown 80
+set groups VPNGW1-RI-EBGP routing-instances <*> protocols bgp group <*> neighbor <*> family inet unicast prefix-limit teardown idle-timeout forever
+set groups VPNGW1-RI-EBGP routing-instances <*> protocols bgp group <*> neighbor <*> export BGP-CLOUDGW1_OUT
+set groups VPNGW1-RI-IBGP routing-instances <*> protocols bgp group <*> type internal
+set groups VPNGW1-RI-IBGP routing-instances <*> protocols bgp group <*> neighbor <*> hold-time 40
+set groups VPNGW1-RI-IBGP routing-instances <*> protocols bgp group <*> neighbor <*> import BGP-VPNGW2_IN
+set groups VPNGW1-RI-IBGP routing-instances <*> protocols bgp group <*> neighbor <*> import BGP-VPNGW2_OUT
+set groups SNAPT-POOL services nat pool <*> port range low 10000
+set groups SNAPT-POOL services nat pool <*> port range high 65535
+set groups SNAPT-RULE services nat rule <*> match-direction output
+set groups SNAPT-RULE services nat rule <*> term source from source-address 169.254.0.0/16
+set groups SNAPT-RULE services nat rule <*> term source then translated translation-type napt-44
+set groups DNAT-RULE services nat rule <*> match-direction input
+set groups DNAT-RULE services nat rule <*> term 1 from destination-address 169.254.1.227/32
+set groups DNAT-RULE services nat rule <*> term 1 then translated translation-type dnat-44
+set groups DNAT-RULE services nat rule <*> term 2 from destination-address 169.254.1.228/32
+set groups DNAT-RULE services nat rule <*> term 2 then translated translation-type dnat-44
+set groups IF-LT interfaces lt-0/0/0 unit <*> encapsulation frame-relay
+set groups IF-LT interfaces lt-0/0/0 unit <*> dlci 10
+set groups IF-LT interfaces lt-0/0/0 unit <*> family inet
+set groups DNAT-POOL-1 services nat pool <*> address 100.64.0.127/32
+set groups DNAT-POOL-2 services nat pool <*> address 100.64.0.128/32
+set groups IF-USER-VRRP-ACT interfaces <*> unit <*> family inet address 169.254.1.251/17 vrrp-group 41 virtual-address 169.254.1.227
+set groups IF-USER-VRRP-ACT interfaces <*> unit <*> family inet address 169.254.1.253/17 vrrp-group 42 virtual-address 169.254.1.228
+set apply-groups IF-LT                  
+set system host-name vMX-2
+set system time-zone Asia/Tokyo
+set system root-authentication encrypted-password "$5$S53ZL7eE$owDnhUeT3ctxY5Cwr8YMPc6gMiDgvKY7PWWTodyCEaD"
+set system login user apgw uid 2000
+set system login user apgw class super-user
+set system login user apgw authentication encrypted-password "$5$tmc0F5gw$bgcaYiaGag/xPYTbvnHVveIcd/ZUNk2M.5Gtu4bSWs/"
+set system login user esi uid 2001
+set system login user esi class super-user
+set system login user esi authentication encrypted-password "$5$kstEcbSM$RY9H7ew8JHPM/Pfnr.oAS1UgzcFIfhMMp9qvSoqFheA"
+set system services ssh root-login allow
+set system services netconf ssh port 830
+set system services web-management http interface fxp0.0
+set system syslog user * any emergency
+set system syslog file messages any notice
+set system syslog file messages authorization info
+set system syslog file interactive-commands interactive-commands any
+set chassis aggregated-devices ethernet device-count 2
+set chassis fpc 0 lite-mode
+set services service-set vrf_gw_sample-ha-router-downlink_1025 nat-rules vrf_gw_sample-ha-router-downlink_1025-SNAPT
+set services service-set vrf_gw_sample-ha-router-downlink_1025 nat-rules vrf_gw_sample-ha-router-downlink_1025-DNAT
+set services service-set vrf_gw_sample-ha-router-downlink_1025 interface-service service-interface ms-0/2/0.1025
+set services nat pool vrf_gw_sample-ha-router-downlink_1025-SNAPT-POOL apply-groups SNAPT-POOL
+set services nat pool vrf_gw_sample-ha-router-downlink_1025-SNAPT-POOL address 100.64.0.10/32
+set services nat pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-1 apply-groups DNAT-POOL-1
+set services nat pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-2 apply-groups DNAT-POOL-2
+set services nat rule vrf_gw_sample-ha-router-downlink_1025-SNAPT apply-groups SNAPT-RULE
+set services nat rule vrf_gw_sample-ha-router-downlink_1025-SNAPT term source then translated source-pool vrf_gw_sample-ha-router-downlink_1025-SNAPT-POOL
+set services nat rule vrf_gw_sample-ha-router-downlink_1025-DNAT apply-groups DNAT-RULE
+set services nat rule vrf_gw_sample-ha-router-downlink_1025-DNAT term 1 then translated destination-pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-1
+set services nat rule vrf_gw_sample-ha-router-downlink_1025-DNAT term 2 then translated destination-pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-2
+set interfaces ge-0/0/0 gigether-options 802.3ad ae0
+set interfaces lt-0/0/0 unit 1025 peer-unit 11025
+set interfaces lt-0/0/0 unit 1025 family inet service input service-set vrf_gw_sample-ha-router-downlink_1025
+set interfaces lt-0/0/0 unit 1025 family inet service output service-set vrf_gw_sample-ha-router-downlink_1025
+set interfaces lt-0/0/0 unit 11025 peer-unit 1025
+set interfaces ge-0/0/1 vlan-tagging
+set interfaces ge-0/0/1 unit 0 vlan-id 4000
+set interfaces ge-0/0/1 unit 0 family inet filter input INET_IN
+set interfaces ge-0/0/1 unit 0 family inet filter output INET_OUT
+set interfaces ms-0/2/0 unit 1025 family inet
+set interfaces ae0 vlan-tagging
+set interfaces ae0 aggregated-ether-options link-speed 1g
+set interfaces ae0 unit 1025 apply-groups IF-USER-VRRP-ACT
+set interfaces ae0 unit 1025 description vrf_gw_sample-ha-router-downlink_1025
+set interfaces ae0 unit 1025 vlan-id 1025
+set interfaces ae0 unit 1025 family inet service input service-set vrf_gw_sample-ha-router-downlink_1025
+set interfaces ae0 unit 1025 family inet service output service-set vrf_gw_sample-ha-router-downlink_1025
+set interfaces fxp0 unit 0 family inet address 10.79.5.185/24
+set interfaces lo0 unit 0 family inet address 10.0.0.2/32
+set routing-options static route 0.0.0.0/0 next-hop 10.79.5.1
+set routing-options autonomous-system 65101
+set protocols vrrp version-3
+set policy-options prefix-list BGP-VIRTUAL-ROUTER-PEERS apply-path "routing-instances <*> protocols bgp group <*> neighbor <*.*>"
+set policy-options policy-statement BGP-CLOUDGW1_IN term all-permit then accept
+set policy-options policy-statement BGP-CLOUDGW1_OUT term default from policy FLTR-STATIC
+set policy-options policy-statement BGP-CLOUDGW1_OUT term default from policy FLTR-CONNECTED
+set policy-options policy-statement BGP-CLOUDGW1_OUT term default from policy FLTR-ALL-DENY
+set policy-options policy-statement BGP-CLOUDGW1_OUT term default then next-hop self
+set policy-options policy-statement BGP-CLOUDGW1_OUT term default then accept
+set policy-options policy-statement BGP-CLOUDGW1_OUT term all-deny then reject
+set policy-options policy-statement BGP-InetGW2-RI_IN term all-permit then accept
+set policy-options policy-statement BGP-InetGW2-RI_OUT term default from policy FLTR-DEFAULT
+set policy-options policy-statement BGP-InetGW2-RI_OUT term default from policy FLTR-ALL-DENY
+set policy-options policy-statement BGP-InetGW2-RI_OUT term default then next-hop self
+set policy-options policy-statement BGP-InetGW2-RI_OUT term default then accept
+set policy-options policy-statement BGP-InetGW2-RI_OUT term all-deny then reject
+set policy-options policy-statement BGP-VPNGW2_IN term all-permit then accept
+set policy-options policy-statement BGP-VPNGW2_OUT term policy from policy FLTR-BGP
+set policy-options policy-statement BGP-VPNGW2_OUT term policy from policy FLTR-ALL-DENY
+set policy-options policy-statement BGP-VPNGW2_OUT term policy then next-hop self
+set policy-options policy-statement BGP-VPNGW2_OUT term policy then accept
+set policy-options policy-statement BGP-VPNGW2_OUT term all-deny then reject
+set policy-options policy-statement FLTR-ALL-DENY then reject
+set policy-options policy-statement FLTR-BGP term bgp from protocol bgp
+set policy-options policy-statement FLTR-BGP term bgp then accept
+set policy-options policy-statement FLTR-BGP term next-policy then next policy
+set policy-options policy-statement FLTR-CONNECTED term connected then accept
+set policy-options policy-statement FLTR-CONNECTED term next-policy then next policy
+set policy-options policy-statement FLTR-DEFAULT term 1 from route-filter 0.0.0.0/0 exact
+set policy-options policy-statement FLTR-DEFAULT term 1 then accept
+set policy-options policy-statement FLTR-DEFAULT term next-policy then next policy
+set policy-options policy-statement FLTR-STATIC term static from protocol static
+set policy-options policy-statement FLTR-STATIC term static then accept
+set policy-options policy-statement FLTR-STATIC term next-policy then next policy
+set policy-options policy-statement INSTANCE-USER_IN term instance from instance Global
+set policy-options policy-statement INSTANCE-USER_IN term instance then accept
+set policy-options policy-statement INSTANCE-USER_IN term all-deny then reject
+set policy-options policy-statement INSTANCE-USER_OUT term all-permit then accept
+set class-of-service forwarding-classes queue 3 FC-VPN-GA
+set class-of-service forwarding-classes queue 4 FC-INET-GA
+set firewall family inet filter INET_IN term all-accept then accept
+set firewall family inet filter INET_OUT term all-accept then accept
+set firewall family inet filter FILTER_10M-GA-DOWN-INET interface-specific
+set firewall family inet filter FILTER_10M-GA-DOWN-INET term bgp-accept from destination-prefix-list BGP-VIRTUAL-ROUTER-PEERS
+set firewall family inet filter FILTER_10M-GA-DOWN-INET term bgp-accept from protocol tcp
+set firewall family inet filter FILTER_10M-GA-DOWN-INET term bgp-accept from port bgp
+set firewall family inet filter FILTER_10M-GA-DOWN-INET term bgp-accept then accept
+set firewall family inet filter FILTER_10M-GA-DOWN-INET term vrrp-accept from protocol vrrp
+set firewall family inet filter FILTER_10M-GA-DOWN-INET term vrrp-accept then accept
+set firewall family inet filter FILTER_10M-GA-DOWN-INET term policer then policer 10M-GA-DOWN-INET
+set firewall family inet filter FILTER_10M-GA-DOWN-INET term policer then accept
+set firewall family inet filter FILTER_10M-GA-UP-INET interface-specific
+set firewall family inet filter FILTER_10M-GA-UP-INET term bgp-accept from source-prefix-list BGP-VIRTUAL-ROUTER-PEERS
+set firewall family inet filter FILTER_10M-GA-UP-INET term bgp-accept from protocol tcp
+set firewall family inet filter FILTER_10M-GA-UP-INET term bgp-accept from port bgp
+set firewall family inet filter FILTER_10M-GA-UP-INET term bgp-accept then accept
+set firewall family inet filter FILTER_10M-GA-UP-INET term vrrp-accept from source-prefix-list BGP-VIRTUAL-ROUTER-PEERS
+set firewall family inet filter FILTER_10M-GA-UP-INET term vrrp-accept from protocol vrrp
+set firewall family inet filter FILTER_10M-GA-UP-INET term vrrp-accept then accept
+set firewall family inet filter FILTER_10M-GA-UP-INET term qos then three-color-policer single-rate 10M-GA-UP-INET
+set firewall family inet filter FILTER_10M-GA-UP-INET term qos then forwarding-class FC-INET-GA
+set firewall family inet filter FILTER_10M-GA-UP-INET term qos then accept
+set firewall policer 10M-GA-DOWN-INET if-exceeding bandwidth-limit 10m
+set firewall policer 10M-GA-DOWN-INET if-exceeding burst-size-limit 5k
+set firewall policer 10M-GA-DOWN-INET then discard
+set firewall policer 10M-GA-DOWN-VPN if-exceeding bandwidth-limit 10m
+set firewall policer 10M-GA-DOWN-VPN if-exceeding burst-size-limit 1875000
+set firewall policer 10M-GA-DOWN-VPN then discard
+set firewall three-color-policer 10M-GA-UP-INET action loss-priority high then discard
+set firewall three-color-policer 10M-GA-UP-INET single-rate color-blind
+set firewall three-color-policer 10M-GA-UP-INET single-rate committed-information-rate 10m
+set firewall three-color-policer 10M-GA-UP-INET single-rate committed-burst-size 5k
+set firewall three-color-policer 10M-GA-UP-INET single-rate excess-burst-size 5k
+set firewall three-color-policer 10M-GA-UP-VPN action loss-priority high then discard
+set firewall three-color-policer 10M-GA-UP-VPN single-rate color-blind
+set firewall three-color-policer 10M-GA-UP-VPN single-rate committed-information-rate 50m
+set firewall three-color-policer 10M-GA-UP-VPN single-rate committed-burst-size 9375000
+set firewall three-color-policer 10M-GA-UP-VPN single-rate excess-burst-size 9375000
+set firewall filter FILTER_10M-GA-UP-VPN interface-specific
+set firewall filter FILTER_10M-GA-UP-VPN term bgp-accept from source-prefix-list BGP-VIRTUAL-ROUTER-PEERS
+set firewall filter FILTER_10M-GA-UP-VPN term bgp-accept from protocol tcp
+set firewall filter FILTER_10M-GA-UP-VPN term bgp-accept from port bgp
+set firewall filter FILTER_10M-GA-UP-VPN term bgp-accept then accept
+set firewall filter FILTER_10M-GA-UP-VPN term vrrp-accept from source-prefix-list BGP-VIRTUAL-ROUTER-PEERS
+set firewall filter FILTER_10M-GA-UP-VPN term vrrp-accept from protocol vrrp
+set firewall filter FILTER_10M-GA-UP-VPN term vrrp-accept then accept
+set firewall filter FILTER_10M-GA-UP-VPN term qos then three-color-policer single-rate 10M-GA-UP-VPN
+set firewall filter FILTER_10M-GA-UP-VPN term qos then forwarding-class FC-VPN-GA
+set firewall filter FILTER_10M-GA-UP-VPN term qos then accept
+set firewall filter FILTER_10M-GA-DOWN-VPN interface-specific
+set firewall filter FILTER_10M-GA-DOWN-VPN term bgp-accept from destination-prefix-list BGP-VIRTUAL-ROUTER-PEERS
+set firewall filter FILTER_10M-GA-DOWN-VPN term bgp-accept from protocol tcp
+set firewall filter FILTER_10M-GA-DOWN-VPN term bgp-accept from port bgp
+set firewall filter FILTER_10M-GA-DOWN-VPN term bgp-accept then accept
+set firewall filter FILTER_10M-GA-DOWN-VPN term vrrp-accept from protocol vrrp
+set firewall filter FILTER_10M-GA-DOWN-VPN term vrrp-accept then accept
+set firewall filter FILTER_10M-GA-DOWN-VPN term policer then policer 10M-GA-DOWN-VPN
+set firewall filter FILTER_10M-GA-DOWN-VPN term policer then accept
+set routing-instances Global instance-type virtual-router
+set routing-instances SHARED-RESOURCE interface lt-0/0/0.11025
+set routing-instances SHARED-RESOURCE routing-options static route 100.64.0.10/32 next-hop lt-0/0/0.11025
+set routing-instances vrf_gw_sample-ha-router-downlink_1025 instance-type virtual-router
+set routing-instances vrf_gw_sample-ha-router-downlink_1025 interface lt-0/0/0.1025
+set routing-instances vrf_gw_sample-ha-router-downlink_1025 interface ms-0/2/0.1025
+set routing-instances vrf_gw_sample-ha-router-downlink_1025 interface ae0.1025
+set routing-instances vrf_gw_sample-ha-router-downlink_1025 routing-options static route 0.0.0.0/0 next-hop lt-0/0/0.1025
+
+[edit]
+
+
+
+
+-------------
+root@vMX-2> show vrrp 
+Interface     State       Group   VR state VR Mode   Timer    Type   Address
+ae0.1025      up             41   master   Active      A  0.158 lcl    169.254.1.251  
+                                                                vip    169.254.1.227  
+ae0.1025      up             42   master   Active      A  0.154 lcl    169.254.1.253  
+                                                                vip    169.254.1.228  
+

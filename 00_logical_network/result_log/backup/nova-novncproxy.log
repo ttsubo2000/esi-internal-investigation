@@ -1,0 +1,15 @@
+2018-02-15 06:52:05.986 20 INFO nova.console.websocketproxy [-] WebSocket server settings:
+2018-02-15 06:52:05.988 20 INFO nova.console.websocketproxy [-]   - Listen on 0.0.0.0:6080
+2018-02-15 06:52:05.994 20 INFO nova.console.websocketproxy [-]   - Flash security policy server
+2018-02-15 06:52:05.995 20 INFO nova.console.websocketproxy [-]   - Web server. Web root: /usr/share/novnc
+2018-02-15 06:52:05.996 20 INFO nova.console.websocketproxy [-]   - No SSL/TLS support (no cert file)
+2018-02-15 06:52:05.997 20 INFO nova.console.websocketproxy [-]   - proxying from 0.0.0.0:6080 to None:None
+2018-02-15 06:52:16.528 20 INFO nova.console.websocketproxy [-] Got SIGTERM, exiting
+2018-02-15 06:52:16.530 20 INFO nova.console.websocketproxy [-] In exit
+2018-02-15 06:52:16.533 20 DEBUG nova.console.websocketproxy [-] Closing socket listening at 0.0.0.0:6080 vmsg /usr/lib/python2.7/dist-packages/websockify/websocket.py:824
+2018-02-15 06:52:18.189 91 INFO nova.console.websocketproxy [-] WebSocket server settings:
+2018-02-15 06:52:18.190 91 INFO nova.console.websocketproxy [-]   - Listen on 0.0.0.0:6080
+2018-02-15 06:52:18.191 91 INFO nova.console.websocketproxy [-]   - Flash security policy server
+2018-02-15 06:52:18.192 91 INFO nova.console.websocketproxy [-]   - Web server. Web root: /usr/share/novnc
+2018-02-15 06:52:18.193 91 INFO nova.console.websocketproxy [-]   - No SSL/TLS support (no cert file)
+2018-02-15 06:52:18.194 91 INFO nova.console.websocketproxy [-]   - proxying from 0.0.0.0:6080 to None:None

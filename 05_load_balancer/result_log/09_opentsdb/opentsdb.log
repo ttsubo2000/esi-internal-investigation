@@ -1,0 +1,41 @@
+nc: connect to 127.0.0.1 port 16010 (tcp) failed: Connection refused
+Connection to 127.0.0.1 16010 port [tcp/*] succeeded!
+*** hbase master connection have done
+2018-02-19 05:13:55,945 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+HBase Shell; enter 'help<RETURN>' for list of supported commands.
+Type "exit<RETURN>" to leave the HBase Shell
+Version 1.1.0.1, r4de7d45cb593f98ae5d020080cbc7116d3e9d9a0, Sun May 17 12:52:10 PDT 2015
+
+create 'tsdb-uid',
+  {NAME => 'id', COMPRESSION => 'NONE', BLOOMFILTER => 'ROW'},
+  {NAME => 'name', COMPRESSION => 'NONE', BLOOMFILTER => 'ROW'}
+0 row(s) in 3.4240 seconds
+
+Hbase::Table - tsdb-uid
+
+create 'tsdb',
+  {NAME => 't', VERSIONS => 1, COMPRESSION => 'NONE', BLOOMFILTER => 'ROW'}
+0 row(s) in 1.2240 seconds
+
+Hbase::Table - tsdb
+  
+create 'tsdb-tree',
+  {NAME => 't', VERSIONS => 1, COMPRESSION => 'NONE', BLOOMFILTER => 'ROW'}
+0 row(s) in 1.2250 seconds
+
+Hbase::Table - tsdb-tree
+  
+create 'tsdb-meta',
+  {NAME => 'name', COMPRESSION => 'NONE', BLOOMFILTER => 'ROW'}
+0 row(s) in 1.2220 seconds
+
+Hbase::Table - tsdb-meta
+*** Start OpenTSDB ...
+*** Create Metrics ...
+metrics cpu.percents: [0, 0, 1]
+metrics memory.kbytes: [0, 0, 2]
+metrics tcp.connections: [0, 0, 3]
+metrics traffic.bytes: [0, 0, 4]
+metrics memory.percents: [0, 0, 5]
+metrics http.request.connections: [0, 0, 6]
+metrics traffic.contrail_bytes: [0, 0, 7]

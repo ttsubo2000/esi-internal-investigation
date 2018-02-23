@@ -1,0 +1,5142 @@
+2018-02-12 07:38:12,251:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:38:12,252:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:38:12,252:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:38:12,253:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:38:12,255:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:38:30,705:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all],
+ value=[]
+2018-02-12 07:38:30,705:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:38:30,706:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:38:30,707:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:38:30,707:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:38:30,709:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:39:25,893:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:network:73b2c401-a1f3-49fb-8612-8c755b37a28d:1:cp3xh],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+        "handler": "heat_worker", 
+        "job_name": "network:73b2c401-a1f3-49fb-8612-8c755b37a28d:1", 
+        "dependency": [], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+                "param": "uuid"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "3", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "admin_state_up"
+            }
+        ], 
+        "resource_type": "network", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:network:73b2c401-a1f3-49fb-8612-8c755b37a28d:1:cp3xh", 
+        "resource_input": {
+            "status": "PENDING_CREATE", 
+            "subnets": [], 
+            "description": "dummy network for firewall", 
+            "tags": {}, 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": true, 
+            "plane": "data", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "shared": false, 
+            "id": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+            "name": "dummy-net"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:39:25,894:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:39:25,894:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:39:25,895:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:39:25,896:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:39:25,897:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:39:29,291:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:network:73b2c401-a1f3-49fb-8612-8c755b37a28d:1:cp3xh],
+ value=[]
+2018-02-12 07:39:29,292:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:39:29,293:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:39:29,293:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:39:29,294:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:39:29,296:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:39:35,902:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:subnet:1244d619-cc55-4bb7-b181-606776ba5e88:1:hid71],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+        "handler": "heat_worker", 
+        "job_name": "subnet:1244d619-cc55-4bb7-b181-606776ba5e88:1", 
+        "dependency": [], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "enable_dhcp"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                }, 
+                "param": "network_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "default-domain:default-project:default-network-ipam", 
+                "param": "ipam"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "dns_nameservers"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "3", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "10.121.232.2", 
+                "param": "dhcp_server_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "ntp_servers"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "start": "10.121.232.2", 
+                        "end": "10.121.232.254"
+                    }
+                ], 
+                "param": "allocation_pools"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "10.121.232.1", 
+                "param": "gateway_ip"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "host_routes"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "10.121.232.0/24", 
+                "param": "cidr"
+            }
+        ], 
+        "resource_type": "subnet", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:subnet:1244d619-cc55-4bb7-b181-606776ba5e88:1:hid71", 
+        "resource_input": {
+            "status": "PENDING_CREATE", 
+            "description": "dummy subnet for firewall", 
+            "enable_dhcp": true, 
+            "tags": {}, 
+            "network_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "dns_nameservers": [], 
+            "dhcp_server_address": "10.121.232.2", 
+            "ntp_servers": [], 
+            "allocation_pools": [
+                {
+                    "start": "10.121.232.2", 
+                    "end": "10.121.232.254"
+                }
+            ], 
+            "gateway_ip": "10.121.232.1", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "ip_version": 4, 
+            "host_routes": [], 
+            "cidr": "10.121.232.0/24", 
+            "id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+            "name": "dummy-subnet"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:39:35,902:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:39:35,903:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:39:35,903:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:39:35,904:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:39:35,906:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:39:38,187:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:subnet:1244d619-cc55-4bb7-b181-606776ba5e88:1:hid71],
+ value=[]
+2018-02-12 07:39:38,188:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:39:38,188:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:39:38,189:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:39:38,189:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:39:38,192:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:39:43,604:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:network:75c2c3ec-7fe7-494c-a35c-db3f94d3a554:1:s0u5y],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554", 
+        "handler": "heat_worker", 
+        "job_name": "network:75c2c3ec-7fe7-494c-a35c-db3f94d3a554:1", 
+        "dependency": [], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554", 
+                "param": "uuid"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "3", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "admin_state_up"
+            }
+        ], 
+        "resource_type": "network", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:network:75c2c3ec-7fe7-494c-a35c-db3f94d3a554:1:s0u5y", 
+        "resource_input": {
+            "status": "PENDING_CREATE", 
+            "subnets": [], 
+            "description": "adminpod network", 
+            "tags": {}, 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": true, 
+            "plane": "data", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "shared": false, 
+            "id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554", 
+            "name": "adminpod-net"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:39:43,604:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:39:43,605:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:39:43,605:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:39:43,606:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:39:43,607:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:39:45,745:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:network:75c2c3ec-7fe7-494c-a35c-db3f94d3a554:1:s0u5y],
+ value=[]
+2018-02-12 07:39:45,746:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:39:45,746:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:39:45,748:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:39:45,748:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:39:45,751:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:39:50,721:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:subnet:c8090497-34be-456b-9186-377e918f3d50:1:du1dc],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "c8090497-34be-456b-9186-377e918f3d50", 
+        "handler": "heat_worker", 
+        "job_name": "subnet:c8090497-34be-456b-9186-377e918f3d50:1", 
+        "dependency": [], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "c8090497-34be-456b-9186-377e918f3d50", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "enable_dhcp"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554"
+                }, 
+                "param": "network_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "default-domain:default-project:default-network-ipam", 
+                "param": "ipam"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "dns_nameservers"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "3", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "100.64.193.2", 
+                "param": "dhcp_server_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "ntp_servers"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "start": "100.64.193.2", 
+                        "end": "100.64.193.254"
+                    }
+                ], 
+                "param": "allocation_pools"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "100.64.193.1", 
+                "param": "gateway_ip"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "destination": "172.26.10.0/24", 
+                        "nexthop": "100.64.193.1"
+                    }
+                ], 
+                "param": "host_routes"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "100.64.193.0/24", 
+                "param": "cidr"
+            }
+        ], 
+        "resource_type": "subnet", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:subnet:c8090497-34be-456b-9186-377e918f3d50:1:du1dc", 
+        "resource_input": {
+            "status": "PENDING_CREATE", 
+            "description": "adminpod subnet", 
+            "enable_dhcp": true, 
+            "tags": {}, 
+            "network_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "dns_nameservers": [], 
+            "dhcp_server_address": "100.64.193.2", 
+            "ntp_servers": [], 
+            "allocation_pools": [
+                {
+                    "start": "100.64.193.2", 
+                    "end": "100.64.193.254"
+                }
+            ], 
+            "gateway_ip": "100.64.193.1", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "ip_version": 4, 
+            "host_routes": [
+                {
+                    "destination": "172.26.10.0/24", 
+                    "nexthop": "100.64.193.1"
+                }
+            ], 
+            "cidr": "100.64.193.0/24", 
+            "id": "c8090497-34be-456b-9186-377e918f3d50", 
+            "name": "adminpod-subnet"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:39:50,722:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:39:50,722:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:39:50,723:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:39:50,723:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:39:50,725:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:39:54,106:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:subnet:c8090497-34be-456b-9186-377e918f3d50:1:du1dc],
+ value=[]
+2018-02-12 07:39:54,106:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:39:54,107:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:39:54,107:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:39:54,108:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:39:54,112:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:02,857:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:port:cdde9cfd-a898-4911-b812-b6849f611549:1:gbf5r],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "cdde9cfd-a898-4911-b812-b6849f611549", 
+        "handler": "heat_worker", 
+        "job_name": "port:cdde9cfd-a898-4911-b812-b6849f611549:1", 
+        "dependency": [], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "cdde9cfd-a898-4911-b812-b6849f611549", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:2f:e8:a6", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 1, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "c8090497-34be-456b-9186-377e918f3d50", 
+                        "ip_address": "100.64.193.3"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "c8090497-34be-456b-9186-377e918f3d50"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "c8090497-34be-456b-9186-377e918f3d50"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "cdde9cfd-a898-4911-b812-b6849f611549", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:port:cdde9cfd-a898-4911-b812-b6849f611549:1:gbf5r", 
+        "resource_input": {
+            "allowed_address_pairs": [], 
+            "device_owner": "", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "c8090497-34be-456b-9186-377e918f3d50", 
+                    "ip_address": "100.64.193.3"
+                }
+            ], 
+            "id": "cdde9cfd-a898-4911-b812-b6849f611549", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:2f:e8:a6", 
+            "status": "PENDING_CREATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "", 
+            "name": "firewall-management-port", 
+            "managed_by_service": false, 
+            "network_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": true, 
+            "attached": false, 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:40:02,858:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:02,859:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:02,859:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:02,860:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:02,862:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:02,945:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:port:dea87c7b-b43f-4936-8e32-8995b038b3f8:1:ovs11],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+        "handler": "heat_worker", 
+        "job_name": "port:dea87c7b-b43f-4936-8e32-8995b038b3f8:1", 
+        "dependency": [], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:99:1e:37", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 1, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                        "ip_address": "10.121.232.3"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:port:dea87c7b-b43f-4936-8e32-8995b038b3f8:1:ovs11", 
+        "resource_input": {
+            "allowed_address_pairs": [], 
+            "device_owner": "", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                    "ip_address": "10.121.232.3"
+                }
+            ], 
+            "id": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:99:1e:37", 
+            "status": "PENDING_CREATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "", 
+            "name": "firewall-user-port", 
+            "managed_by_service": false, 
+            "network_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": false, 
+            "attached": false, 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:40:02,945:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:02,946:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:02,946:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:02,947:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:02,950:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:03,019:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:1:qz049],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+        "handler": "heat_worker", 
+        "job_name": "port:fd09eda4-10b1-4534-984a-7124c338c69d:1", 
+        "dependency": [], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:8e:dd:05", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 1, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                        "ip_address": "10.121.232.4"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:1:qz049", 
+        "resource_input": {
+            "allowed_address_pairs": [], 
+            "device_owner": "", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                    "ip_address": "10.121.232.4"
+                }
+            ], 
+            "id": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:8e:dd:05", 
+            "status": "PENDING_CREATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "", 
+            "name": "firewall-user-port", 
+            "managed_by_service": false, 
+            "network_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": false, 
+            "attached": false, 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:40:03,020:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:03,020:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:03,021:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:03,022:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:03,023:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:03,064:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:1:64gpp],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb", 
+        "handler": "heat_worker", 
+        "job_name": "vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:1", 
+        "dependency": [], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "RAW", 
+                "param": "user_data_format"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "firewall-8e4c20be-d221-43f4-8325-0162c1f06166", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "nova", 
+                "param": "availability_zone"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "vnf_template", 
+                        "resource_id": "5a84974a-9d8b-4887-898b-8e3c095e744d"
+                    }
+                ], 
+                "type": "value", 
+                "value": "vyatta-0108-2016", 
+                "param": "image"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "reboot"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "user_data"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "18", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 1, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb", 
+                "param": "gohan_id"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "vnf_plan", 
+                        "resource_id": "60791395-2267-4553-b115-a38fad3ebf69"
+                    }
+                ], 
+                "type": "value", 
+                "value": "m1.large", 
+                "param": "flavor"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "port": "cdde9cfd-a898-4911-b812-b6849f611549"
+                    }, 
+                    {
+                        "port": "dea87c7b-b43f-4936-8e32-8995b038b3f8"
+                    }, 
+                    {
+                        "port": "fd09eda4-10b1-4534-984a-7124c338c69d"
+                    }
+                ], 
+                "param": "networks"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "config_drive"
+            }
+        ], 
+        "resource_type": "vnf_instance", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:1:64gpp", 
+        "resource_input": {
+            "status": "PENDING_CREATE", 
+            "user_data_format": "RAW", 
+            "name": "firewall-8e4c20be-d221-43f4-8325-0162c1f06166", 
+            "availability_zone": "nova", 
+            "operational_state": "NO_STATE", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "vnf_template_id": "5a84974a-9d8b-4887-898b-8e3c095e744d", 
+            "vnf_plan_id": "60791395-2267-4553-b115-a38fad3ebf69", 
+            "networks": [
+                {
+                    "port": "cdde9cfd-a898-4911-b812-b6849f611549"
+                }, 
+                {
+                    "port": "dea87c7b-b43f-4936-8e32-8995b038b3f8"
+                }, 
+                {
+                    "port": "fd09eda4-10b1-4534-984a-7124c338c69d"
+                }
+            ], 
+            "reboot": "", 
+            "user_data": "", 
+            "management_ip": "100.64.193.3", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "owner_tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "user_data_parameters": {}, 
+            "id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb", 
+            "config_drive": false
+        }
+    }, 
+    0
+]]
+2018-02-12 07:40:03,064:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:03,065:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:03,067:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:03,068:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:03,070:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:03,127:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:firewall:8e4c20be-d221-43f4-8325-0162c1f06166:1:uvr6e],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "8e4c20be-d221-43f4-8325-0162c1f06166", 
+        "handler": "heat_worker", 
+        "job_name": "firewall:8e4c20be-d221-43f4-8325-0162c1f06166:1", 
+        "dependency": [
+            "create:heat_worker:vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:1:64gpp"
+        ], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "192.168.1.1", 
+                "param": "default_gateway"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "k3cjZ4FNRrkX", 
+                "param": "user_password"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "other_username"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "vnf_instance", 
+                        "resource_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+                    }
+                ], 
+                "type": "value", 
+                "value": "100.64.193.3", 
+                "param": "management_ip"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "user-admin", 
+                "param": "admin_username"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "user-read", 
+                "param": "user_username"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 13, 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 1, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "other_password"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "f5UhAERVGmYS", 
+                "param": "admin_password"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "vnf_instance", 
+                        "resource_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+                    }, 
+                    {
+                        "resource_type": "vnf_template", 
+                        "resource_id": "5a84974a-9d8b-4887-898b-8e3c095e744d"
+                    }
+                ], 
+                "type": "value", 
+                "value": {
+                    "username": "vfwadmin", 
+                    "password": "password"
+                }, 
+                "param": "credentials"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "8e4c20be-d221-43f4-8325-0162c1f06166", 
+                "param": "gohan_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "ifname": "dp0s4", 
+                        "type": "disable"
+                    }, 
+                    {
+                        "ifname": "dp0s5", 
+                        "type": "disable"
+                    }
+                ], 
+                "param": "networks"
+            }
+        ], 
+        "resource_type": "firewall", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:firewall:8e4c20be-d221-43f4-8325-0162c1f06166:1:uvr6e", 
+        "resource_input": {
+            "status": "PENDING_CREATE", 
+            "description": "", 
+            "default_gateway": "192.168.1.1", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "interfaces": [], 
+            "other_username": "", 
+            "admin_username": "user-admin", 
+            "vnf_instance_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb", 
+            "user_username": "user-read", 
+            "user_password": "k3cjZ4FNRrkX", 
+            "other_password": "", 
+            "admin_password": "f5UhAERVGmYS", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "availability_zone": "nova", 
+            "id": "8e4c20be-d221-43f4-8325-0162c1f06166", 
+            "operational_state": "NO_STATE", 
+            "networks": [
+                {
+                    "ifname": "dp0s4", 
+                    "type": "disable"
+                }, 
+                {
+                    "ifname": "dp0s5", 
+                    "type": "disable"
+                }
+            ], 
+            "firewall_plan_id": "40520774-4f10-4e8c-90fa-550bd4cdf101", 
+            "name": ""
+        }
+    }, 
+    0
+]]
+2018-02-12 07:40:03,128:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:03,129:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:03,129:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:03,130:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:03,136:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:03,160:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:firewall_interface:cdf30a48-8cf7-4935-9f8a-5b51f1177704:1:40zyf],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "cdf30a48-8cf7-4935-9f8a-5b51f1177704", 
+        "handler": "heat_worker", 
+        "job_name": "firewall_interface:cdf30a48-8cf7-4935-9f8a-5b51f1177704:1", 
+        "dependency": [
+            "create:heat_worker:vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:1:64gpp", 
+            "create:heat_worker:firewall:8e4c20be-d221-43f4-8325-0162c1f06166:1:uvr6e"
+        ], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 2, 
+                "param": "jinja_slot_number"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "firewall", 
+                        "resource_id": "8e4c20be-d221-43f4-8325-0162c1f06166"
+                    }, 
+                    {
+                        "resource_type": "vnf_instance", 
+                        "resource_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+                    }
+                ], 
+                "type": "value", 
+                "value": "100.64.193.3", 
+                "param": "management_ip"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 3, 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 1, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "cdf30a48-8cf7-4935-9f8a-5b51f1177704", 
+                "param": "gohan_id"
+            }
+        ], 
+        "resource_type": "firewall_interface", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:firewall_interface:cdf30a48-8cf7-4935-9f8a-5b51f1177704:1:40zyf", 
+        "resource_input": {
+            "status": "PENDING_CREATE", 
+            "name": "dp0s5", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "firewall_id": "8e4c20be-d221-43f4-8325-0162c1f06166", 
+            "vnf_interface_id": "1e047117-2ca8-43dc-aa80-619b224bab4c", 
+            "slot_number": 2, 
+            "type": "user", 
+            "id": "cdf30a48-8cf7-4935-9f8a-5b51f1177704"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:40:03,161:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:03,161:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:03,162:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:03,162:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:03,166:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:03,186:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:firewall_interface:3543155d-0d9a-43a3-ae77-3479cf8a0e4a:1:37zym],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "3543155d-0d9a-43a3-ae77-3479cf8a0e4a", 
+        "handler": "heat_worker", 
+        "job_name": "firewall_interface:3543155d-0d9a-43a3-ae77-3479cf8a0e4a:1", 
+        "dependency": [
+            "create:heat_worker:vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:1:64gpp", 
+            "create:heat_worker:firewall:8e4c20be-d221-43f4-8325-0162c1f06166:1:uvr6e"
+        ], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 1, 
+                "param": "jinja_slot_number"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "firewall", 
+                        "resource_id": "8e4c20be-d221-43f4-8325-0162c1f06166"
+                    }, 
+                    {
+                        "resource_type": "vnf_instance", 
+                        "resource_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+                    }
+                ], 
+                "type": "value", 
+                "value": "100.64.193.3", 
+                "param": "management_ip"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 3, 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 1, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "3543155d-0d9a-43a3-ae77-3479cf8a0e4a", 
+                "param": "gohan_id"
+            }
+        ], 
+        "resource_type": "firewall_interface", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:firewall_interface:3543155d-0d9a-43a3-ae77-3479cf8a0e4a:1:37zym", 
+        "resource_input": {
+            "status": "PENDING_CREATE", 
+            "name": "dp0s4", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "firewall_id": "8e4c20be-d221-43f4-8325-0162c1f06166", 
+            "vnf_interface_id": "c6cf2771-be40-4d16-ba15-20a62f8b78f6", 
+            "slot_number": 1, 
+            "type": "user", 
+            "id": "3543155d-0d9a-43a3-ae77-3479cf8a0e4a"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:40:03,188:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:03,188:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:03,189:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:03,189:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:03,191:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:03,213:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:firewall_interface:1c351257-d185-40b7-b04a-6272de75d434:1:249va],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "1c351257-d185-40b7-b04a-6272de75d434", 
+        "handler": "heat_worker", 
+        "job_name": "firewall_interface:1c351257-d185-40b7-b04a-6272de75d434:1", 
+        "dependency": [
+            "create:heat_worker:vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:1:64gpp", 
+            "create:heat_worker:firewall:8e4c20be-d221-43f4-8325-0162c1f06166:1:uvr6e"
+        ], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 0, 
+                "param": "jinja_slot_number"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "firewall", 
+                        "resource_id": "8e4c20be-d221-43f4-8325-0162c1f06166"
+                    }, 
+                    {
+                        "resource_type": "vnf_instance", 
+                        "resource_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+                    }
+                ], 
+                "type": "value", 
+                "value": "100.64.193.3", 
+                "param": "management_ip"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 3, 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 1, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "1c351257-d185-40b7-b04a-6272de75d434", 
+                "param": "gohan_id"
+            }
+        ], 
+        "resource_type": "firewall_interface", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:firewall_interface:1c351257-d185-40b7-b04a-6272de75d434:1:249va", 
+        "resource_input": {
+            "status": "PENDING_CREATE", 
+            "name": "dp0s3", 
+            "network_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "operational_state": "NO_STATE", 
+            "ip_address": "100.64.193.3", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "firewall_id": "8e4c20be-d221-43f4-8325-0162c1f06166", 
+            "vnf_interface_id": "c8fef8f8-a7a1-448f-ae76-81992e598016", 
+            "slot_number": 0, 
+            "type": "management", 
+            "id": "1c351257-d185-40b7-b04a-6272de75d434"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:40:03,213:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:03,214:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:03,214:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:03,215:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:03,218:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:07,766:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:port:dea87c7b-b43f-4936-8e32-8995b038b3f8:1:ovs11],
+ value=[]
+2018-02-12 07:40:07,766:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:07,767:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:07,767:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:07,768:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:07,769:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:07,961:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:port:cdde9cfd-a898-4911-b812-b6849f611549:1:gbf5r],
+ value=[]
+2018-02-12 07:40:07,962:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:07,962:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:07,963:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:07,963:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:07,966:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:08,022:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:1:qz049],
+ value=[]
+2018-02-12 07:40:08,023:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:08,023:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:08,023:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:08,024:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:08,026:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:10,447:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:port:cdde9cfd-a898-4911-b812-b6849f611549:2:t06aq],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "cdde9cfd-a898-4911-b812-b6849f611549", 
+        "handler": "heat_worker", 
+        "job_name": "port:cdde9cfd-a898-4911-b812-b6849f611549:2", 
+        "dependency": [], 
+        "version": 2, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554"
+                    }, 
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "cdde9cfd-a898-4911-b812-b6849f611549", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:2f:e8:a6", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 2, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "c8090497-34be-456b-9186-377e918f3d50", 
+                        "ip_address": "100.64.193.3"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "c8090497-34be-456b-9186-377e918f3d50"
+                    }, 
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "c8090497-34be-456b-9186-377e918f3d50"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "c8090497-34be-456b-9186-377e918f3d50"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "cdde9cfd-a898-4911-b812-b6849f611549", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:port:cdde9cfd-a898-4911-b812-b6849f611549:2:t06aq", 
+        "resource_input": {
+            "ese_logical_port_id": null, 
+            "allowed_address_pairs": [], 
+            "device_owner": "compute:nova", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "c8090497-34be-456b-9186-377e918f3d50", 
+                    "ip_address": "100.64.193.3"
+                }
+            ], 
+            "id": "cdde9cfd-a898-4911-b812-b6849f611549", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:2f:e8:a6", 
+            "status": "PENDING_UPDATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+            "name": "firewall-management-port", 
+            "managed_by_service": false, 
+            "network_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": true, 
+            "attached": false, 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "UPDATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:40:10,447:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:10,448:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:10,448:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:10,449:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:10,451:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:21,127:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:port:cdde9cfd-a898-4911-b812-b6849f611549:2:t06aq],
+ value=[]
+2018-02-12 07:40:21,127:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:21,128:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:21,128:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:21,129:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:21,131:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:21,234:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:port:cdde9cfd-a898-4911-b812-b6849f611549:3:f4d2q],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "cdde9cfd-a898-4911-b812-b6849f611549", 
+        "handler": "heat_worker", 
+        "job_name": "port:cdde9cfd-a898-4911-b812-b6849f611549:3", 
+        "dependency": [], 
+        "version": 3, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554"
+                    }, 
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "cdde9cfd-a898-4911-b812-b6849f611549", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:2f:e8:a6", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 3, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "c8090497-34be-456b-9186-377e918f3d50", 
+                        "ip_address": "100.64.193.3"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "c8090497-34be-456b-9186-377e918f3d50"
+                    }, 
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "c8090497-34be-456b-9186-377e918f3d50"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "c8090497-34be-456b-9186-377e918f3d50"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "cdde9cfd-a898-4911-b812-b6849f611549", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:port:cdde9cfd-a898-4911-b812-b6849f611549:3:f4d2q", 
+        "resource_input": {
+            "ese_logical_port_id": null, 
+            "allowed_address_pairs": [], 
+            "device_owner": "compute:nova", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "c8090497-34be-456b-9186-377e918f3d50", 
+                    "ip_address": "100.64.193.3"
+                }
+            ], 
+            "id": "cdde9cfd-a898-4911-b812-b6849f611549", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:2f:e8:a6", 
+            "status": "PENDING_UPDATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+            "name": "firewall-management-port", 
+            "managed_by_service": false, 
+            "network_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": true, 
+            "attached": true, 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "UPDATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:40:21,235:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:21,236:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:21,236:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:21,237:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:21,238:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:40:31,862:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:port:cdde9cfd-a898-4911-b812-b6849f611549:3:f4d2q],
+ value=[]
+2018-02-12 07:40:31,863:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:40:31,863:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:40:31,864:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:40:31,864:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:40:31,866:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:44:15,249:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:port:dea87c7b-b43f-4936-8e32-8995b038b3f8:2:6ymv5],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+        "handler": "heat_worker", 
+        "job_name": "port:dea87c7b-b43f-4936-8e32-8995b038b3f8:2", 
+        "dependency": [], 
+        "version": 2, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }, 
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:99:1e:37", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 2, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                        "ip_address": "10.121.232.3"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }, 
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:port:dea87c7b-b43f-4936-8e32-8995b038b3f8:2:6ymv5", 
+        "resource_input": {
+            "ese_logical_port_id": null, 
+            "allowed_address_pairs": [], 
+            "device_owner": "compute:nova", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                    "ip_address": "10.121.232.3"
+                }
+            ], 
+            "id": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:99:1e:37", 
+            "status": "PENDING_UPDATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+            "name": "firewall-user-port", 
+            "managed_by_service": false, 
+            "network_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": false, 
+            "attached": false, 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "UPDATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:44:15,250:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:44:15,251:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:44:15,251:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:44:15,252:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:44:15,255:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:44:25,973:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:port:dea87c7b-b43f-4936-8e32-8995b038b3f8:2:6ymv5],
+ value=[]
+2018-02-12 07:44:25,974:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:44:25,975:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:44:25,975:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:44:25,976:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:44:25,979:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:44:26,089:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:port:dea87c7b-b43f-4936-8e32-8995b038b3f8:3:g8dg6],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+        "handler": "heat_worker", 
+        "job_name": "port:dea87c7b-b43f-4936-8e32-8995b038b3f8:3", 
+        "dependency": [], 
+        "version": 3, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }, 
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:99:1e:37", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 3, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                        "ip_address": "10.121.232.3"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }, 
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:port:dea87c7b-b43f-4936-8e32-8995b038b3f8:3:g8dg6", 
+        "resource_input": {
+            "ese_logical_port_id": null, 
+            "allowed_address_pairs": [], 
+            "device_owner": "compute:nova", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                    "ip_address": "10.121.232.3"
+                }
+            ], 
+            "id": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:99:1e:37", 
+            "status": "PENDING_UPDATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+            "name": "firewall-user-port", 
+            "managed_by_service": false, 
+            "network_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": false, 
+            "attached": true, 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "UPDATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:44:26,089:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:44:26,090:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:44:26,090:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:44:26,091:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:44:26,093:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:44:28,673:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:2:miils],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+        "handler": "heat_worker", 
+        "job_name": "port:fd09eda4-10b1-4534-984a-7124c338c69d:2", 
+        "dependency": [], 
+        "version": 2, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }, 
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:8e:dd:05", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 2, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                        "ip_address": "10.121.232.4"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }, 
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:2:miils", 
+        "resource_input": {
+            "ese_logical_port_id": null, 
+            "allowed_address_pairs": [], 
+            "device_owner": "compute:nova", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                    "ip_address": "10.121.232.4"
+                }
+            ], 
+            "id": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:8e:dd:05", 
+            "status": "PENDING_UPDATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+            "name": "firewall-user-port", 
+            "managed_by_service": false, 
+            "network_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": false, 
+            "attached": false, 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "UPDATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:44:28,674:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:44:28,674:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:44:28,675:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:44:28,676:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:44:28,678:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:44:36,871:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:port:dea87c7b-b43f-4936-8e32-8995b038b3f8:3:g8dg6],
+ value=[]
+2018-02-12 07:44:36,873:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:44:36,873:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:44:36,874:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:44:36,875:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:44:36,876:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:44:39,380:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:2:miils],
+ value=[]
+2018-02-12 07:44:39,381:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:44:39,381:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:44:39,382:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:44:39,383:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:44:39,384:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:44:39,492:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:3:x6421],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+        "handler": "heat_worker", 
+        "job_name": "port:fd09eda4-10b1-4534-984a-7124c338c69d:3", 
+        "dependency": [], 
+        "version": 3, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }, 
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:8e:dd:05", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 3, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                        "ip_address": "10.121.232.4"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }, 
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:3:x6421", 
+        "resource_input": {
+            "ese_logical_port_id": null, 
+            "allowed_address_pairs": [], 
+            "device_owner": "compute:nova", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                    "ip_address": "10.121.232.4"
+                }
+            ], 
+            "id": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:8e:dd:05", 
+            "status": "PENDING_UPDATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+            "name": "firewall-user-port", 
+            "managed_by_service": false, 
+            "network_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": false, 
+            "attached": true, 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "UPDATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:44:39,492:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:44:39,493:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:44:39,493:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:44:39,494:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:44:39,496:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:44:48,383:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:1:64gpp],
+ value=[]
+2018-02-12 07:44:48,384:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:44:48,385:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:44:48,385:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:44:48,386:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:44:48,387:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:44:50,225:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:3:x6421],
+ value=[]
+2018-02-12 07:44:50,226:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:44:50,227:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:44:50,227:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:44:50,228:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:44:50,230:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:44:51,506:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:firewall:8e4c20be-d221-43f4-8325-0162c1f06166:1:uvr6e],
+ value=[]
+2018-02-12 07:44:51,506:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:44:51,507:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:44:51,507:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:44:51,508:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:44:51,510:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:44:54,367:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:firewall_interface:3543155d-0d9a-43a3-ae77-3479cf8a0e4a:1:37zym],
+ value=[]
+2018-02-12 07:44:54,368:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:44:54,368:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:44:54,369:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:44:54,370:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:44:54,374:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:44:54,419:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:firewall_interface:cdf30a48-8cf7-4935-9f8a-5b51f1177704:1:40zyf],
+ value=[]
+2018-02-12 07:44:54,420:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:44:54,421:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:44:54,421:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:44:54,422:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:44:54,424:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:44:54,443:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:firewall_interface:1c351257-d185-40b7-b04a-6272de75d434:1:249va],
+ value=[]
+2018-02-12 07:44:54,443:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:44:54,444:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:44:54,444:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:44:54,445:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:44:54,447:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:46:43,164:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:network:82712b89-c35c-4276-83cb-818860d41f9e:1:bsexy],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "82712b89-c35c-4276-83cb-818860d41f9e", 
+        "handler": "heat_worker", 
+        "job_name": "network:82712b89-c35c-4276-83cb-818860d41f9e:1", 
+        "dependency": [], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "82712b89-c35c-4276-83cb-818860d41f9e", 
+                "param": "uuid"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "3", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "82712b89-c35c-4276-83cb-818860d41f9e", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "admin_state_up"
+            }
+        ], 
+        "resource_type": "network", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:network:82712b89-c35c-4276-83cb-818860d41f9e:1:bsexy", 
+        "resource_input": {
+            "status": "PENDING_CREATE", 
+            "subnets": [], 
+            "description": "firewall network", 
+            "tags": {}, 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": true, 
+            "plane": "data", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "shared": false, 
+            "id": "82712b89-c35c-4276-83cb-818860d41f9e", 
+            "name": "sample-fw-net"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:46:43,165:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:46:43,166:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:46:43,167:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:46:43,168:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:46:43,170:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:46:45,320:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:network:82712b89-c35c-4276-83cb-818860d41f9e:1:bsexy],
+ value=[]
+2018-02-12 07:46:45,320:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:46:45,321:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:46:45,321:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:46:45,323:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:46:45,324:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:46:51,470:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:subnet:a11785e2-0c2b-4131-9144-349155f958f5:1:5gauj],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "a11785e2-0c2b-4131-9144-349155f958f5", 
+        "handler": "heat_worker", 
+        "job_name": "subnet:a11785e2-0c2b-4131-9144-349155f958f5:1", 
+        "dependency": [], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "a11785e2-0c2b-4131-9144-349155f958f5", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "enable_dhcp"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "82712b89-c35c-4276-83cb-818860d41f9e"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "82712b89-c35c-4276-83cb-818860d41f9e"
+                }, 
+                "param": "network_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "default-domain:default-project:default-network-ipam", 
+                "param": "ipam"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "dns_nameservers"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "3", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "10.98.76.2", 
+                "param": "dhcp_server_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "ntp_servers"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "start": "10.98.76.2", 
+                        "end": "10.98.76.254"
+                    }
+                ], 
+                "param": "allocation_pools"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "10.98.76.1", 
+                "param": "gateway_ip"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "host_routes"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "10.98.76.0/24", 
+                "param": "cidr"
+            }
+        ], 
+        "resource_type": "subnet", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:subnet:a11785e2-0c2b-4131-9144-349155f958f5:1:5gauj", 
+        "resource_input": {
+            "status": "PENDING_CREATE", 
+            "description": "firewall subnet", 
+            "enable_dhcp": true, 
+            "tags": {}, 
+            "network_id": "82712b89-c35c-4276-83cb-818860d41f9e", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "dns_nameservers": [], 
+            "dhcp_server_address": "10.98.76.2", 
+            "ntp_servers": [], 
+            "allocation_pools": [
+                {
+                    "start": "10.98.76.2", 
+                    "end": "10.98.76.254"
+                }
+            ], 
+            "gateway_ip": "10.98.76.1", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "ip_version": 4, 
+            "host_routes": [], 
+            "cidr": "10.98.76.0/24", 
+            "id": "a11785e2-0c2b-4131-9144-349155f958f5", 
+            "name": "sample-fw-subnet"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:46:51,471:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:46:51,472:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:46:51,472:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:46:51,473:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:46:51,475:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:46:53,766:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:subnet:a11785e2-0c2b-4131-9144-349155f958f5:1:5gauj],
+ value=[]
+2018-02-12 07:46:53,766:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:46:53,767:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:46:53,768:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:46:53,768:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:46:53,770:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:46:59,830:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/create:heat_worker:port:472879c4-4611-4762-a069-293e0081bcbf:1:yd2co],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "472879c4-4611-4762-a069-293e0081bcbf", 
+        "handler": "heat_worker", 
+        "job_name": "port:472879c4-4611-4762-a069-293e0081bcbf:1", 
+        "dependency": [], 
+        "version": 1, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "82712b89-c35c-4276-83cb-818860d41f9e"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "82712b89-c35c-4276-83cb-818860d41f9e"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "472879c4-4611-4762-a069-293e0081bcbf", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:f0:f2:72", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 1, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "a11785e2-0c2b-4131-9144-349155f958f5", 
+                        "ip_address": "10.98.76.3"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "a11785e2-0c2b-4131-9144-349155f958f5"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "a11785e2-0c2b-4131-9144-349155f958f5"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "472879c4-4611-4762-a069-293e0081bcbf", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "create", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "create:heat_worker:port:472879c4-4611-4762-a069-293e0081bcbf:1:yd2co", 
+        "resource_input": {
+            "allowed_address_pairs": [], 
+            "device_owner": "", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "a11785e2-0c2b-4131-9144-349155f958f5", 
+                    "ip_address": "10.98.76.3"
+                }
+            ], 
+            "id": "472879c4-4611-4762-a069-293e0081bcbf", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:f0:f2:72", 
+            "status": "PENDING_CREATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "", 
+            "name": "firewall-user-port", 
+            "managed_by_service": false, 
+            "network_id": "82712b89-c35c-4276-83cb-818860d41f9e", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": true, 
+            "attached": false, 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "CREATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:46:59,830:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:46:59,830:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:46:59,831:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:46:59,832:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:46:59,833:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:46:59,882:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:2:wqq3h],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb", 
+        "handler": "heat_worker", 
+        "job_name": "vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:2", 
+        "dependency": [], 
+        "version": 2, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "RAW", 
+                "param": "user_data_format"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "firewall-8e4c20be-d221-43f4-8325-0162c1f06166", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "nova", 
+                "param": "availability_zone"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "vnf_template", 
+                        "resource_id": "5a84974a-9d8b-4887-898b-8e3c095e744d"
+                    }, 
+                    {
+                        "resource_type": "vnf_template", 
+                        "resource_id": "5a84974a-9d8b-4887-898b-8e3c095e744d"
+                    }
+                ], 
+                "type": "value", 
+                "value": "vyatta-0108-2016", 
+                "param": "image"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "reboot"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "user_data"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "18", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 2, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb", 
+                "param": "gohan_id"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "vnf_plan", 
+                        "resource_id": "60791395-2267-4553-b115-a38fad3ebf69"
+                    }, 
+                    {
+                        "resource_type": "vnf_plan", 
+                        "resource_id": "60791395-2267-4553-b115-a38fad3ebf69"
+                    }
+                ], 
+                "type": "value", 
+                "value": "m1.large", 
+                "param": "flavor"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "port": "cdde9cfd-a898-4911-b812-b6849f611549"
+                    }, 
+                    {
+                        "port": "472879c4-4611-4762-a069-293e0081bcbf"
+                    }, 
+                    {
+                        "port": "fd09eda4-10b1-4534-984a-7124c338c69d"
+                    }
+                ], 
+                "param": "networks"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "config_drive"
+            }
+        ], 
+        "resource_type": "vnf_instance", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:2:wqq3h", 
+        "resource_input": {
+            "status": "PENDING_UPDATE", 
+            "user_data_format": "RAW", 
+            "description": null, 
+            "availability_zone": "nova", 
+            "operational_state": "INIT", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "vnf_template_id": "5a84974a-9d8b-4887-898b-8e3c095e744d", 
+            "vnf_plan_id": "60791395-2267-4553-b115-a38fad3ebf69", 
+            "reboot": "", 
+            "user_data": "", 
+            "management_ip": "100.64.193.3", 
+            "config_drive": false, 
+            "orchestration_state": "UPDATE_IN_PROGRESS", 
+            "owner_tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb", 
+            "user_data_parameters": {}, 
+            "networks": [
+                {
+                    "port": "cdde9cfd-a898-4911-b812-b6849f611549"
+                }, 
+                {
+                    "port": "472879c4-4611-4762-a069-293e0081bcbf"
+                }, 
+                {
+                    "port": "fd09eda4-10b1-4534-984a-7124c338c69d"
+                }
+            ], 
+            "name": "firewall-8e4c20be-d221-43f4-8325-0162c1f06166"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:46:59,883:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:46:59,883:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:46:59,884:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:46:59,885:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:46:59,889:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:46:59,917:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:firewall_interface:3543155d-0d9a-43a3-ae77-3479cf8a0e4a:2:ur5by],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "3543155d-0d9a-43a3-ae77-3479cf8a0e4a", 
+        "handler": "heat_worker", 
+        "job_name": "firewall_interface:3543155d-0d9a-43a3-ae77-3479cf8a0e4a:2", 
+        "dependency": [
+            "modify:heat_worker:vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:2:wqq3h"
+        ], 
+        "version": 2, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 1, 
+                "param": "jinja_slot_number"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "firewall", 
+                        "resource_id": "8e4c20be-d221-43f4-8325-0162c1f06166"
+                    }, 
+                    {
+                        "resource_type": "vnf_instance", 
+                        "resource_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+                    }, 
+                    {
+                        "resource_type": "firewall", 
+                        "resource_id": "8e4c20be-d221-43f4-8325-0162c1f06166"
+                    }, 
+                    {
+                        "resource_type": "vnf_instance", 
+                        "resource_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+                    }
+                ], 
+                "type": "value", 
+                "value": "100.64.193.3", 
+                "param": "management_ip"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 3, 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 2, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "3543155d-0d9a-43a3-ae77-3479cf8a0e4a", 
+                "param": "gohan_id"
+            }
+        ], 
+        "resource_type": "firewall_interface", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:firewall_interface:3543155d-0d9a-43a3-ae77-3479cf8a0e4a:2:ur5by", 
+        "resource_input": {
+            "status": "PENDING_UPDATE", 
+            "virtual_ip_properties": null, 
+            "description": null, 
+            "network_id": "82712b89-c35c-4276-83cb-818860d41f9e", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "operational_state": "INIT", 
+            "ip_address": "10.98.76.3", 
+            "orchestration_state": "UPDATE_IN_PROGRESS", 
+            "firewall_id": "8e4c20be-d221-43f4-8325-0162c1f06166", 
+            "vnf_interface_id": "c6cf2771-be40-4d16-ba15-20a62f8b78f6", 
+            "slot_number": 1, 
+            "virtual_ip_address": null, 
+            "type": "user", 
+            "id": "3543155d-0d9a-43a3-ae77-3479cf8a0e4a", 
+            "name": "dp0s4"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:46:59,917:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:46:59,918:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:46:59,918:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:46:59,919:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:46:59,921:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:46:59,939:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:firewall:8e4c20be-d221-43f4-8325-0162c1f06166:2:qzrbq],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "8e4c20be-d221-43f4-8325-0162c1f06166", 
+        "handler": "heat_worker", 
+        "job_name": "firewall:8e4c20be-d221-43f4-8325-0162c1f06166:2", 
+        "dependency": [
+            "modify:heat_worker:firewall_interface:3543155d-0d9a-43a3-ae77-3479cf8a0e4a:2:ur5by", 
+            "modify:heat_worker:vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:2:wqq3h"
+        ], 
+        "version": 2, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "192.168.1.1", 
+                "param": "default_gateway"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "k3cjZ4FNRrkX", 
+                "param": "user_password"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "other_username"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "vnf_instance", 
+                        "resource_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+                    }, 
+                    {
+                        "resource_type": "vnf_instance", 
+                        "resource_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+                    }
+                ], 
+                "type": "value", 
+                "value": "100.64.193.3", 
+                "param": "management_ip"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "user-admin", 
+                "param": "admin_username"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "user-read", 
+                "param": "user_username"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 13, 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 2, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "other_password"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "f5UhAERVGmYS", 
+                "param": "admin_password"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "vnf_instance", 
+                        "resource_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+                    }, 
+                    {
+                        "resource_type": "vnf_template", 
+                        "resource_id": "5a84974a-9d8b-4887-898b-8e3c095e744d"
+                    }, 
+                    {
+                        "resource_type": "vnf_instance", 
+                        "resource_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+                    }, 
+                    {
+                        "resource_type": "vnf_template", 
+                        "resource_id": "5a84974a-9d8b-4887-898b-8e3c095e744d"
+                    }
+                ], 
+                "type": "value", 
+                "value": {
+                    "username": "vfwadmin", 
+                    "password": "password"
+                }, 
+                "param": "credentials"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "8e4c20be-d221-43f4-8325-0162c1f06166", 
+                "param": "gohan_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "ip_address": "10.98.76.3", 
+                        "cidr": "24", 
+                        "type": "static", 
+                        "ifname": "dp0s4"
+                    }, 
+                    {
+                        "ifname": "dp0s5", 
+                        "type": "disable"
+                    }
+                ], 
+                "param": "networks"
+            }
+        ], 
+        "resource_type": "firewall", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:firewall:8e4c20be-d221-43f4-8325-0162c1f06166:2:qzrbq", 
+        "resource_input": {
+            "status": "PENDING_UPDATE", 
+            "description": "", 
+            "default_gateway": "192.168.1.1", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "interfaces": [], 
+            "other_username": "", 
+            "admin_username": "user-admin", 
+            "vnf_instance_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb", 
+            "user_username": "user-read", 
+            "user_password": "k3cjZ4FNRrkX", 
+            "other_password": "", 
+            "admin_password": "f5UhAERVGmYS", 
+            "orchestration_state": "UPDATE_IN_PROGRESS", 
+            "availability_zone": "nova", 
+            "id": "8e4c20be-d221-43f4-8325-0162c1f06166", 
+            "operational_state": "INIT", 
+            "networks": [
+                {
+                    "ip_address": "10.98.76.3", 
+                    "cidr": "24", 
+                    "type": "static", 
+                    "ifname": "dp0s4"
+                }, 
+                {
+                    "ifname": "dp0s5", 
+                    "type": "disable"
+                }
+            ], 
+            "firewall_plan_id": "40520774-4f10-4e8c-90fa-550bd4cdf101", 
+            "name": ""
+        }
+    }, 
+    0
+]]
+2018-02-12 07:46:59,940:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:46:59,940:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:46:59,940:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:46:59,941:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:46:59,943:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:47:03,197:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/create:heat_worker:port:472879c4-4611-4762-a069-293e0081bcbf:1:yd2co],
+ value=[]
+2018-02-12 07:47:03,198:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:47:03,198:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:47:03,199:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:47:03,199:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:47:03,201:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:47:06,964:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/logical_delete:heat_worker:port:dea87c7b-b43f-4936-8e32-8995b038b3f8:4:iq8l6],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+        "handler": "heat_worker", 
+        "job_name": "port:dea87c7b-b43f-4936-8e32-8995b038b3f8:4", 
+        "dependency": [], 
+        "version": 4, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }, 
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:99:1e:37", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 4, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                        "ip_address": "10.121.232.3"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }, 
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "logical_delete", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "logical_delete:heat_worker:port:dea87c7b-b43f-4936-8e32-8995b038b3f8:4:iq8l6", 
+        "resource_input": {
+            "ese_logical_port_id": null, 
+            "allowed_address_pairs": [], 
+            "device_owner": "compute:nova", 
+            "fake_delete": false, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                    "ip_address": "10.121.232.3"
+                }
+            ], 
+            "id": "dea87c7b-b43f-4936-8e32-8995b038b3f8", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:99:1e:37", 
+            "status": "PENDING_DELETE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+            "name": "firewall-user-port", 
+            "managed_by_service": false, 
+            "network_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": false, 
+            "attached": true, 
+            "operational_state": "INIT", 
+            "orchestration_state": "DELETE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:47:06,965:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:47:06,965:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:47:06,967:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:47:06,968:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:47:06,970:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:47:11,254:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/logical_delete:heat_worker:port:dea87c7b-b43f-4936-8e32-8995b038b3f8:4:iq8l6],
+ value=[]
+2018-02-12 07:47:11,255:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:47:11,255:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:47:11,256:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:47:11,256:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:47:11,259:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:47:13,179:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:4:oasut],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+        "handler": "heat_worker", 
+        "job_name": "port:fd09eda4-10b1-4534-984a-7124c338c69d:4", 
+        "dependency": [], 
+        "version": 4, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }, 
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:8e:dd:05", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 4, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                        "ip_address": "10.121.232.4"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }, 
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:4:oasut", 
+        "resource_input": {
+            "ese_logical_port_id": null, 
+            "allowed_address_pairs": [], 
+            "device_owner": "", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                    "ip_address": "10.121.232.4"
+                }
+            ], 
+            "id": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:8e:dd:05", 
+            "status": "PENDING_UPDATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "", 
+            "name": "firewall-user-port", 
+            "managed_by_service": false, 
+            "network_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": false, 
+            "attached": false, 
+            "operational_state": "INIT", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:47:13,180:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:47:13,180:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:47:13,181:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:47:13,181:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:47:13,184:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:47:24,148:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:4:oasut],
+ value=[]
+2018-02-12 07:47:24,149:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:47:24,150:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:47:24,150:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:47:24,151:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:47:24,153:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:48:25,669:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:port:472879c4-4611-4762-a069-293e0081bcbf:2:bf5vp],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "472879c4-4611-4762-a069-293e0081bcbf", 
+        "handler": "heat_worker", 
+        "job_name": "port:472879c4-4611-4762-a069-293e0081bcbf:2", 
+        "dependency": [], 
+        "version": 2, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "82712b89-c35c-4276-83cb-818860d41f9e"
+                    }, 
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "82712b89-c35c-4276-83cb-818860d41f9e"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "82712b89-c35c-4276-83cb-818860d41f9e"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "472879c4-4611-4762-a069-293e0081bcbf", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:f0:f2:72", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 2, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "a11785e2-0c2b-4131-9144-349155f958f5", 
+                        "ip_address": "10.98.76.3"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "a11785e2-0c2b-4131-9144-349155f958f5"
+                    }, 
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "a11785e2-0c2b-4131-9144-349155f958f5"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "a11785e2-0c2b-4131-9144-349155f958f5"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "472879c4-4611-4762-a069-293e0081bcbf", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:port:472879c4-4611-4762-a069-293e0081bcbf:2:bf5vp", 
+        "resource_input": {
+            "ese_logical_port_id": null, 
+            "allowed_address_pairs": [], 
+            "device_owner": "compute:nova", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "a11785e2-0c2b-4131-9144-349155f958f5", 
+                    "ip_address": "10.98.76.3"
+                }
+            ], 
+            "id": "472879c4-4611-4762-a069-293e0081bcbf", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:f0:f2:72", 
+            "status": "PENDING_UPDATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+            "name": "firewall-user-port", 
+            "managed_by_service": false, 
+            "network_id": "82712b89-c35c-4276-83cb-818860d41f9e", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": true, 
+            "attached": false, 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "UPDATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:48:25,670:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:48:25,671:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:48:25,671:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:48:25,672:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:48:25,677:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:48:36,298:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:port:472879c4-4611-4762-a069-293e0081bcbf:2:bf5vp],
+ value=[]
+2018-02-12 07:48:36,299:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:48:36,300:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:48:36,301:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:48:36,301:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:48:36,303:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:48:36,410:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:port:472879c4-4611-4762-a069-293e0081bcbf:3:tx85c],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "472879c4-4611-4762-a069-293e0081bcbf", 
+        "handler": "heat_worker", 
+        "job_name": "port:472879c4-4611-4762-a069-293e0081bcbf:3", 
+        "dependency": [], 
+        "version": 3, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "82712b89-c35c-4276-83cb-818860d41f9e"
+                    }, 
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "82712b89-c35c-4276-83cb-818860d41f9e"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "82712b89-c35c-4276-83cb-818860d41f9e"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "472879c4-4611-4762-a069-293e0081bcbf", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:f0:f2:72", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 3, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "a11785e2-0c2b-4131-9144-349155f958f5", 
+                        "ip_address": "10.98.76.3"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "a11785e2-0c2b-4131-9144-349155f958f5"
+                    }, 
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "a11785e2-0c2b-4131-9144-349155f958f5"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "a11785e2-0c2b-4131-9144-349155f958f5"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "472879c4-4611-4762-a069-293e0081bcbf", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:port:472879c4-4611-4762-a069-293e0081bcbf:3:tx85c", 
+        "resource_input": {
+            "ese_logical_port_id": null, 
+            "allowed_address_pairs": [], 
+            "device_owner": "compute:nova", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "a11785e2-0c2b-4131-9144-349155f958f5", 
+                    "ip_address": "10.98.76.3"
+                }
+            ], 
+            "id": "472879c4-4611-4762-a069-293e0081bcbf", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:f0:f2:72", 
+            "status": "PENDING_UPDATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+            "name": "firewall-user-port", 
+            "managed_by_service": false, 
+            "network_id": "82712b89-c35c-4276-83cb-818860d41f9e", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": true, 
+            "attached": true, 
+            "operational_state": "NO_STATE", 
+            "orchestration_state": "UPDATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:48:36,411:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:48:36,411:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:48:36,412:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:48:36,412:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:48:36,416:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:48:38,829:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:5:6s5za],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+        "handler": "heat_worker", 
+        "job_name": "port:fd09eda4-10b1-4534-984a-7124c338c69d:5", 
+        "dependency": [], 
+        "version": 5, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }, 
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:8e:dd:05", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 5, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                        "ip_address": "10.121.232.4"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }, 
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:5:6s5za", 
+        "resource_input": {
+            "ese_logical_port_id": null, 
+            "allowed_address_pairs": [], 
+            "device_owner": "compute:nova", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                    "ip_address": "10.121.232.4"
+                }
+            ], 
+            "id": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:8e:dd:05", 
+            "status": "PENDING_UPDATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+            "name": "firewall-user-port", 
+            "managed_by_service": false, 
+            "network_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": false, 
+            "attached": false, 
+            "operational_state": "INIT", 
+            "orchestration_state": "UPDATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:48:38,830:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:48:38,830:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:48:38,831:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:48:38,831:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:48:38,833:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:48:46,905:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:port:472879c4-4611-4762-a069-293e0081bcbf:3:tx85c],
+ value=[]
+2018-02-12 07:48:46,905:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:48:46,906:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:48:46,906:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:48:46,907:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:48:46,908:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:48:49,226:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:5:6s5za],
+ value=[]
+2018-02-12 07:48:49,226:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:48:49,227:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:48:49,227:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:48:49,228:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:48:49,231:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:48:49,335:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/jobs/all/modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:6:g7du5],
+ value=[[
+    "heat_worker", 
+    {
+        "is_first": true, 
+        "resource_id": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+        "handler": "heat_worker", 
+        "job_name": "port:fd09eda4-10b1-4534-984a-7124c338c69d:6", 
+        "dependency": [], 
+        "version": 6, 
+        "params": [
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": true, 
+                "param": "jinja_attached"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }, 
+                    {
+                        "resource_type": "network", 
+                        "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                    }
+                ], 
+                "type": "output_key", 
+                "value": {
+                    "output_key": "id", 
+                    "resource_type": "network", 
+                    "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+                }, 
+                "param": "virtual_network"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+                "param": "virtual_machine"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+                "param": "name"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": false, 
+                "param": "admin_state_up"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "0f40dffa48614d9baa7eaac7e7532099", 
+                "param": "tenant_id"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "13", 
+                "param": "heat_timeout"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "virtual_machine_interface_allowed_address_pairs"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fa:16:3e:8e:dd:05", 
+                "param": "virtual_machine_interface_mac_address"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "device_owner"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": 6, 
+                "param": "version"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [], 
+                "param": "security_groups"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_gw_interface"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": [
+                    {
+                        "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                        "ip_address": "10.121.232.4"
+                    }
+                ], 
+                "param": "jinja_fixed_ips"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": null, 
+                "param": "jinja_force_dependency_cfg"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "compute:nova", 
+                "param": "jinja_device_owner"
+            }, 
+            {
+                "resources": [
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }, 
+                    {
+                        "resource_type": "subnet", 
+                        "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                    }
+                ], 
+                "type": "list", 
+                "value": [
+                    {
+                        "param": "jinja_subnets", 
+                        "type": "output_key", 
+                        "value": {
+                            "output_key": "id", 
+                            "resource_type": "subnet", 
+                            "resource_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
+                        }, 
+                        "resources": []
+                    }
+                ], 
+                "param": "jinja_subnets"
+            }, 
+            {
+                "resources": [], 
+                "type": "value", 
+                "value": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+                "param": "uuid"
+            }
+        ], 
+        "resource_type": "port", 
+        "action": "modify", 
+        "is_last": true, 
+        "on_failure": "fail", 
+        "id": "modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:6:g7du5", 
+        "resource_input": {
+            "ese_logical_port_id": null, 
+            "allowed_address_pairs": [], 
+            "device_owner": "compute:nova", 
+            "fake_delete": true, 
+            "fixed_ips": [
+                {
+                    "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", 
+                    "ip_address": "10.121.232.4"
+                }
+            ], 
+            "id": "fd09eda4-10b1-4534-984a-7124c338c69d", 
+            "security_groups": [], 
+            "binding:vif_type": "vrouter", 
+            "mac_address": "fa:16:3e:8e:dd:05", 
+            "status": "PENDING_UPDATE", 
+            "description": "", 
+            "tags": {}, 
+            "segmentation_id": 0, 
+            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917", 
+            "name": "firewall-user-port", 
+            "managed_by_service": false, 
+            "network_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d", 
+            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099", 
+            "admin_state_up": false, 
+            "attached": true, 
+            "operational_state": "INIT", 
+            "orchestration_state": "UPDATE_IN_PROGRESS", 
+            "segmentation_type": "flat"
+        }
+    }, 
+    0
+]]
+2018-02-12 07:48:49,336:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:48:49,337:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:48:49,337:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:48:49,338:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:48:49,340:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:48:59,929:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:port:fd09eda4-10b1-4534-984a-7124c338c69d:6:g7du5],
+ value=[]
+2018-02-12 07:48:59,930:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:48:59,931:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:48:59,931:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:48:59,932:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:48:59,935:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:49:02,362:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:vnf_instance:44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb:2:wqq3h],
+ value=[]
+2018-02-12 07:49:02,362:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:49:02,363:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:49:02,364:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:49:02,365:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:49:02,368:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:49:07,907:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:firewall_interface:3543155d-0d9a-43a3-ae77-3479cf8a0e4a:2:ur5by],
+ value=[]
+2018-02-12 07:49:07,907:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:49:07,908:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:49:07,909:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:49:07,910:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:49:07,912:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-02-12 07:49:17,949:DEBUG:
+*** Consume stored data in etcd ***
+ action=[delete], key=[/jobs/all/modify:heat_worker:firewall:8e4c20be-d221-43f4-8325-0162c1f06166:2:qzrbq],
+ value=[]
+2018-02-12 07:49:17,950:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-02-12 07:49:17,951:DEBUG:About to wait on key /jobs/all, index None
+2018-02-12 07:49:17,951:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-02-12 07:49:17,952:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-02-12 07:49:17,954:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None

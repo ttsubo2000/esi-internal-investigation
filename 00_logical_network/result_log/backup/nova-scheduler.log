@@ -1,0 +1,873 @@
+2018-02-15 06:52:06.051 19 DEBUG nova.servicegroup.api [-] ServiceGroup driver defined as an instance of db __new__ /usr/lib/python2.7/dist-packages/nova/servicegroup/api.py:65
+2018-02-15 06:52:06.218 19 DEBUG nova.openstack.common.service [-] Full set of CONF: _wait_for_exit_or_signal /usr/lib/python2.7/dist-packages/nova/openstack/common/service.py:167
+2018-02-15 06:52:06.221 19 DEBUG nova.openstack.common.service [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1979
+2018-02-15 06:52:06.224 19 DEBUG nova.openstack.common.service [-] Configuration options gathered from: log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1980
+2018-02-15 06:52:06.227 19 DEBUG nova.openstack.common.service [-] command line args: ['--config-file=/etc/nova/nova.conf', '--log-file=/log/nova-scheduler.log'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1981
+2018-02-15 06:52:06.228 19 DEBUG nova.openstack.common.service [-] config files: ['/etc/nova/nova.conf'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1982
+2018-02-15 06:52:06.229 19 DEBUG nova.openstack.common.service [-] ================================================================================ log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1983
+2018-02-15 06:52:06.230 19 DEBUG nova.openstack.common.service [-] aggregate_image_properties_isolation_namespace = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.231 19 DEBUG nova.openstack.common.service [-] aggregate_image_properties_isolation_separator = . log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.232 19 DEBUG nova.openstack.common.service [-] allow_instance_snapshots       = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.234 19 DEBUG nova.openstack.common.service [-] allow_migrate_to_same_host     = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.235 19 DEBUG nova.openstack.common.service [-] allow_resize_to_same_host      = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.236 19 DEBUG nova.openstack.common.service [-] amqp_auto_delete               = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.238 19 DEBUG nova.openstack.common.service [-] amqp_durable_queues            = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.239 19 DEBUG nova.openstack.common.service [-] api_paste_config               = api-paste.ini log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.240 19 DEBUG nova.openstack.common.service [-] api_rate_limit                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.242 19 DEBUG nova.openstack.common.service [-] auth_strategy                  = keystone log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.243 19 DEBUG nova.openstack.common.service [-] backdoor_port                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.245 19 DEBUG nova.openstack.common.service [-] bandwidth_poll_interval        = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.246 19 DEBUG nova.openstack.common.service [-] bindir                         = /usr/local/bin log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.247 19 DEBUG nova.openstack.common.service [-] block_device_allocate_retries  = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.249 19 DEBUG nova.openstack.common.service [-] block_device_allocate_retries_interval = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.250 19 DEBUG nova.openstack.common.service [-] boot_script_template           = /usr/lib/python2.7/dist-packages/nova/cloudpipe/bootscript.template log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.252 19 DEBUG nova.openstack.common.service [-] ca_file                        = cacert.pem log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.254 19 DEBUG nova.openstack.common.service [-] ca_path                        = /usr/lib/python2.7/dist-packages/CA log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.255 19 DEBUG nova.openstack.common.service [-] cert_manager                   = nova.cert.manager.CertManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.256 19 DEBUG nova.openstack.common.service [-] client_socket_timeout          = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.258 19 DEBUG nova.openstack.common.service [-] compute_available_monitors     = ['nova.compute.monitors.all_monitors'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.259 19 DEBUG nova.openstack.common.service [-] compute_driver                 = fake.FakeDriver log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.261 19 DEBUG nova.openstack.common.service [-] compute_manager                = nova.compute.manager.ComputeManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.262 19 DEBUG nova.openstack.common.service [-] compute_monitors               = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.263 19 DEBUG nova.openstack.common.service [-] compute_resources              = ['vcpu'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.265 19 DEBUG nova.openstack.common.service [-] compute_stats_class            = nova.compute.stats.Stats log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.266 19 DEBUG nova.openstack.common.service [-] compute_topic                  = compute log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.267 19 DEBUG nova.openstack.common.service [-] config_dir                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.268 19 DEBUG nova.openstack.common.service [-] config_file                    = ['/etc/nova/nova.conf'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.270 19 DEBUG nova.openstack.common.service [-] console_host                   = nova-server log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.271 19 DEBUG nova.openstack.common.service [-] console_manager                = nova.console.manager.ConsoleProxyManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.272 19 DEBUG nova.openstack.common.service [-] console_topic                  = console log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.274 19 DEBUG nova.openstack.common.service [-] consoleauth_manager            = nova.consoleauth.manager.ConsoleAuthManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.276 19 DEBUG nova.openstack.common.service [-] consoleauth_topic              = consoleauth log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.277 19 DEBUG nova.openstack.common.service [-] control_exchange               = nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.279 19 DEBUG nova.openstack.common.service [-] cpu_allocation_ratio           = 16.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.280 19 DEBUG nova.openstack.common.service [-] crl_file                       = crl.pem log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.282 19 DEBUG nova.openstack.common.service [-] db_driver                      = nova.db log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.283 19 DEBUG nova.openstack.common.service [-] debug                          = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.285 19 DEBUG nova.openstack.common.service [-] default_access_ip_network_name = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.286 19 DEBUG nova.openstack.common.service [-] default_availability_zone      = nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.288 19 DEBUG nova.openstack.common.service [-] default_ephemeral_format       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.289 19 DEBUG nova.openstack.common.service [-] default_flavor                 = m1.small log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.290 19 DEBUG nova.openstack.common.service [-] default_log_levels             = ['amqp=WARN', 'amqplib=WARN', 'boto=WARN', 'qpid=WARN', 'sqlalchemy=WARN', 'suds=INFO', 'oslo.messaging=INFO', 'iso8601=WARN', 'requests.packages.urllib3.connectionpool=WARN', 'urllib3.connectionpool=WARN', 'websocket=WARN', 'keystonemiddleware=WARN', 'routes.middleware=WARN', 'stevedore=WARN'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.292 19 DEBUG nova.openstack.common.service [-] default_notification_level     = INFO log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.293 19 DEBUG nova.openstack.common.service [-] default_publisher_id           = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.295 19 DEBUG nova.openstack.common.service [-] default_schedule_zone          = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.296 19 DEBUG nova.openstack.common.service [-] defer_iptables_apply           = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.297 19 DEBUG nova.openstack.common.service [-] disable_process_locking        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.299 19 DEBUG nova.openstack.common.service [-] disk_allocation_ratio          = 1.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.300 19 DEBUG nova.openstack.common.service [-] dmz_mask                       = 255.255.255.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.302 19 DEBUG nova.openstack.common.service [-] dmz_net                        = 10.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.303 19 DEBUG nova.openstack.common.service [-] ec2_listen                     = 0.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.306 19 DEBUG nova.openstack.common.service [-] ec2_listen_port                = 8773 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.307 19 DEBUG nova.openstack.common.service [-] ec2_private_dns_show_ip        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.308 19 DEBUG nova.openstack.common.service [-] ec2_strict_validation          = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.309 19 DEBUG nova.openstack.common.service [-] ec2_timestamp_expiry           = 300 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.311 19 DEBUG nova.openstack.common.service [-] ec2_workers                    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.312 19 DEBUG nova.openstack.common.service [-] enable_instance_password       = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.313 19 DEBUG nova.openstack.common.service [-] enable_new_services            = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.314 19 DEBUG nova.openstack.common.service [-] enabled_apis                   = ['osapi_compute', 'metadata'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.316 19 DEBUG nova.openstack.common.service [-] enabled_ssl_apis               = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.317 19 DEBUG nova.openstack.common.service [-] fake_rabbit                    = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.319 19 DEBUG nova.openstack.common.service [-] fatal_deprecations             = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.320 19 DEBUG nova.openstack.common.service [-] fatal_exception_format_errors  = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.321 19 DEBUG nova.openstack.common.service [-] heal_instance_info_cache_interval = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.322 19 DEBUG nova.openstack.common.service [-] host                           = nova-server log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.324 19 DEBUG nova.openstack.common.service [-] image_cache_manager_interval   = 2400 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.325 19 DEBUG nova.openstack.common.service [-] image_cache_subdirectory_name  = _base log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.327 19 DEBUG nova.openstack.common.service [-] injected_network_template      = /usr/lib/python2.7/dist-packages/nova/virt/interfaces.template log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.328 19 DEBUG nova.openstack.common.service [-] instance_build_timeout         = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.329 19 DEBUG nova.openstack.common.service [-] instance_delete_interval       = 300 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.331 19 DEBUG nova.openstack.common.service [-] instance_format                = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.332 19 DEBUG nova.openstack.common.service [-] instance_name_template         = instance-%08x log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.333 19 DEBUG nova.openstack.common.service [-] instance_usage_audit           = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.335 19 DEBUG nova.openstack.common.service [-] instance_usage_audit_period    = month log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.336 19 DEBUG nova.openstack.common.service [-] instance_uuid_format           = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.338 19 DEBUG nova.openstack.common.service [-] instances_path                 = /usr/lib/python2.7/dist-packages/instances log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.340 19 DEBUG nova.openstack.common.service [-] internal_service_availability_zone = internal log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.341 19 DEBUG nova.openstack.common.service [-] isolated_hosts                 = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.343 19 DEBUG nova.openstack.common.service [-] isolated_images                = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.344 19 DEBUG nova.openstack.common.service [-] key_file                       = private/cakey.pem log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.346 19 DEBUG nova.openstack.common.service [-] keys_path                      = /usr/lib/python2.7/dist-packages/keys log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.347 19 DEBUG nova.openstack.common.service [-] keystone_ec2_url               = http://localhost:5000/v2.0/ec2tokens log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.349 19 DEBUG nova.openstack.common.service [-] kombu_reconnect_delay          = 1.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.351 19 DEBUG nova.openstack.common.service [-] kombu_ssl_ca_certs             =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.352 19 DEBUG nova.openstack.common.service [-] kombu_ssl_certfile             =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.353 19 DEBUG nova.openstack.common.service [-] kombu_ssl_keyfile              =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.355 19 DEBUG nova.openstack.common.service [-] kombu_ssl_version              =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.356 19 DEBUG nova.openstack.common.service [-] live_migration_retry_count     = 30 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.358 19 DEBUG nova.openstack.common.service [-] lock_path                      = /var/lock/nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.359 19 DEBUG nova.openstack.common.service [-] lockout_attempts               = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.364 19 DEBUG nova.openstack.common.service [-] lockout_minutes                = 15 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.368 19 DEBUG nova.openstack.common.service [-] lockout_window                 = 15 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.369 19 DEBUG nova.openstack.common.service [-] log_config_append              = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.370 19 DEBUG nova.openstack.common.service [-] log_date_format                = %Y-%m-%d %H:%M:%S log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.372 19 DEBUG nova.openstack.common.service [-] log_dir                        = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.373 19 DEBUG nova.openstack.common.service [-] log_file                       = /log/nova-scheduler.log log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.375 19 DEBUG nova.openstack.common.service [-] log_format                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.376 19 DEBUG nova.openstack.common.service [-] logging_context_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [%(request_id)s %(user_identity)s] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.377 19 DEBUG nova.openstack.common.service [-] logging_debug_format_suffix    = %(funcName)s %(pathname)s:%(lineno)d log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.379 19 DEBUG nova.openstack.common.service [-] logging_default_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [-] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.381 19 DEBUG nova.openstack.common.service [-] logging_exception_prefix       = %(asctime)s.%(msecs)03d %(process)d TRACE %(name)s %(instance)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.382 19 DEBUG nova.openstack.common.service [-] max_age                        = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.383 19 DEBUG nova.openstack.common.service [-] max_header_line                = 16384 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.385 19 DEBUG nova.openstack.common.service [-] max_instances_per_host         = 50 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.387 19 DEBUG nova.openstack.common.service [-] max_io_ops_per_host            = 8 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.388 19 DEBUG nova.openstack.common.service [-] max_local_block_devices        = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.389 19 DEBUG nova.openstack.common.service [-] maximum_instance_delete_attempts = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.391 19 DEBUG nova.openstack.common.service [-] memcached_servers              = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.392 19 DEBUG nova.openstack.common.service [-] metadata_listen                = 0.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.394 19 DEBUG nova.openstack.common.service [-] metadata_listen_port           = 8775 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.395 19 DEBUG nova.openstack.common.service [-] metadata_manager               = nova.api.manager.MetadataManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.397 19 DEBUG nova.openstack.common.service [-] metadata_workers               = 4 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.398 19 DEBUG nova.openstack.common.service [-] migrate_max_retries            = -1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.400 19 DEBUG nova.openstack.common.service [-] monkey_patch                   = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.402 19 DEBUG nova.openstack.common.service [-] monkey_patch_modules           = ['nova.api.ec2.cloud:nova.notifications.notify_decorator', 'nova.compute.api:nova.notifications.notify_decorator'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.403 19 DEBUG nova.openstack.common.service [-] multi_instance_display_name_template = %(name)s-%(uuid)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.404 19 DEBUG nova.openstack.common.service [-] my_ip                          = 172.18.0.18 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.405 19 DEBUG nova.openstack.common.service [-] network_allocate_retries       = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.407 19 DEBUG nova.openstack.common.service [-] network_api_class              = nova.network.neutronv2.api.API log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.408 19 DEBUG nova.openstack.common.service [-] network_device_mtu             = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.410 19 DEBUG nova.openstack.common.service [-] network_manager                = nova.network.manager.VlanManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.411 19 DEBUG nova.openstack.common.service [-] non_inheritable_image_properties = ['cache_in_nova', 'bittorrent'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.412 19 DEBUG nova.openstack.common.service [-] notification_driver            = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.415 19 DEBUG nova.openstack.common.service [-] notification_topics            = ['notifications'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.416 19 DEBUG nova.openstack.common.service [-] notify_api_faults              = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.418 19 DEBUG nova.openstack.common.service [-] notify_on_state_change         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.419 19 DEBUG nova.openstack.common.service [-] novncproxy_base_url            = http://127.0.0.1:6080/vnc_auto.html log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.421 19 DEBUG nova.openstack.common.service [-] null_kernel                    = nokernel log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.422 19 DEBUG nova.openstack.common.service [-] osapi_compute_ext_list         = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.423 19 DEBUG nova.openstack.common.service [-] osapi_compute_extension        = ['nova.api.openstack.compute.contrib.standard_extensions'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.425 19 DEBUG nova.openstack.common.service [-] osapi_compute_link_prefix      = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.426 19 DEBUG nova.openstack.common.service [-] osapi_compute_listen           = 0.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.428 19 DEBUG nova.openstack.common.service [-] osapi_compute_listen_port      = 8774 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.429 19 DEBUG nova.openstack.common.service [-] osapi_compute_workers          = 4 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.430 19 DEBUG nova.openstack.common.service [-] osapi_glance_link_prefix       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.432 19 DEBUG nova.openstack.common.service [-] osapi_max_limit                = 1000 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.433 19 DEBUG nova.openstack.common.service [-] password_length                = 12 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.435 19 DEBUG nova.openstack.common.service [-] pci_alias                      = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.436 19 DEBUG nova.openstack.common.service [-] pci_passthrough_whitelist      = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.437 19 DEBUG nova.openstack.common.service [-] periodic_enable                = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.440 19 DEBUG nova.openstack.common.service [-] periodic_fuzzy_delay           = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.441 19 DEBUG nova.openstack.common.service [-] policy_default_rule            = default log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.443 19 DEBUG nova.openstack.common.service [-] policy_file                    = policy.json log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.444 19 DEBUG nova.openstack.common.service [-] preallocate_images             = none log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.445 19 DEBUG nova.openstack.common.service [-] project_cert_subject           = /C=US/ST=California/O=OpenStack/OU=NovaDev/CN=project-ca-%.16s-%s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.447 19 DEBUG nova.openstack.common.service [-] publish_errors                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.448 19 DEBUG nova.openstack.common.service [-] pybasedir                      = /usr/lib/python2.7/dist-packages log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.449 19 DEBUG nova.openstack.common.service [-] quota_cores                    = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.451 19 DEBUG nova.openstack.common.service [-] quota_driver                   = nova.quota.DbQuotaDriver log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.452 19 DEBUG nova.openstack.common.service [-] quota_fixed_ips                = -1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.454 19 DEBUG nova.openstack.common.service [-] quota_floating_ips             = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.455 19 DEBUG nova.openstack.common.service [-] quota_injected_file_content_bytes = 10240 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.456 19 DEBUG nova.openstack.common.service [-] quota_injected_file_path_length = 255 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.458 19 DEBUG nova.openstack.common.service [-] quota_injected_files           = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.459 19 DEBUG nova.openstack.common.service [-] quota_instances                = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.461 19 DEBUG nova.openstack.common.service [-] quota_key_pairs                = 100 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.462 19 DEBUG nova.openstack.common.service [-] quota_metadata_items           = 128 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.463 19 DEBUG nova.openstack.common.service [-] quota_ram                      = 51200 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.464 19 DEBUG nova.openstack.common.service [-] quota_security_group_rules     = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.466 19 DEBUG nova.openstack.common.service [-] quota_security_groups          = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.467 19 DEBUG nova.openstack.common.service [-] quota_server_group_members     = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.468 19 DEBUG nova.openstack.common.service [-] quota_server_groups            = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.470 19 DEBUG nova.openstack.common.service [-] rabbit_ha_queues               = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.471 19 DEBUG nova.openstack.common.service [-] rabbit_host                    = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.473 19 DEBUG nova.openstack.common.service [-] rabbit_hosts                   = ['127.0.0.1:5672'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.475 19 DEBUG nova.openstack.common.service [-] rabbit_login_method            = AMQPLAIN log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.476 19 DEBUG nova.openstack.common.service [-] rabbit_max_retries             = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.478 19 DEBUG nova.openstack.common.service [-] rabbit_password                = **** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.479 19 DEBUG nova.openstack.common.service [-] rabbit_port                    = 5672 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.481 19 DEBUG nova.openstack.common.service [-] rabbit_retry_backoff           = 2 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.482 19 DEBUG nova.openstack.common.service [-] rabbit_retry_interval          = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.484 19 DEBUG nova.openstack.common.service [-] rabbit_use_ssl                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.485 19 DEBUG nova.openstack.common.service [-] rabbit_userid                  = guest log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.486 19 DEBUG nova.openstack.common.service [-] rabbit_virtual_host            = / log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.488 19 DEBUG nova.openstack.common.service [-] ram_allocation_ratio           = 1.5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.489 19 DEBUG nova.openstack.common.service [-] ram_weight_multiplier          = 1.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.491 19 DEBUG nova.openstack.common.service [-] reboot_timeout                 = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.492 19 DEBUG nova.openstack.common.service [-] reclaim_instance_interval      = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.493 19 DEBUG nova.openstack.common.service [-] remove_unused_base_images      = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.495 19 DEBUG nova.openstack.common.service [-] remove_unused_original_minimum_age_seconds = 86400 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.496 19 DEBUG nova.openstack.common.service [-] report_interval                = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.497 19 DEBUG nova.openstack.common.service [-] rescue_timeout                 = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.498 19 DEBUG nova.openstack.common.service [-] reservation_expire             = 86400 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.500 19 DEBUG nova.openstack.common.service [-] reserved_host_disk_mb          = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.501 19 DEBUG nova.openstack.common.service [-] reserved_host_memory_mb        = 512 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.503 19 DEBUG nova.openstack.common.service [-] resize_confirm_window          = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.504 19 DEBUG nova.openstack.common.service [-] restrict_isolated_hosts_to_isolated_images = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.505 19 DEBUG nova.openstack.common.service [-] resume_guests_state_on_host_boot = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.507 19 DEBUG nova.openstack.common.service [-] rootwrap_config                = /etc/nova/rootwrap.conf log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.508 19 DEBUG nova.openstack.common.service [-] rpc_backend                    = rabbit log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.509 19 DEBUG nova.openstack.common.service [-] rpc_conn_pool_size             = 30 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.511 19 DEBUG nova.openstack.common.service [-] rpc_response_timeout           = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.512 19 DEBUG nova.openstack.common.service [-] run_external_periodic_tasks    = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.513 19 DEBUG nova.openstack.common.service [-] running_deleted_instance_action = reap log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.515 19 DEBUG nova.openstack.common.service [-] running_deleted_instance_poll_interval = 1800 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.516 19 DEBUG nova.openstack.common.service [-] running_deleted_instance_timeout = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.518 19 DEBUG nova.openstack.common.service [-] scheduler_available_filters    = ['nova.scheduler.filters.all_filters'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.520 19 DEBUG nova.openstack.common.service [-] scheduler_default_filters      = ['RetryFilter', 'AvailabilityZoneFilter', 'ComputeFilter', 'ComputeCapabilitiesFilter', 'ImagePropertiesFilter', 'ServerGroupAntiAffinityFilter', 'ServerGroupAffinityFilter'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.521 19 DEBUG nova.openstack.common.service [-] scheduler_driver               = nova.scheduler.filter_scheduler.FilterScheduler log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.522 19 DEBUG nova.openstack.common.service [-] scheduler_driver_task_period   = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.524 19 DEBUG nova.openstack.common.service [-] scheduler_host_manager         = nova.scheduler.host_manager.HostManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.525 19 DEBUG nova.openstack.common.service [-] scheduler_host_subset_size     = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.526 19 DEBUG nova.openstack.common.service [-] scheduler_json_config_location =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.527 19 DEBUG nova.openstack.common.service [-] scheduler_manager              = nova.scheduler.manager.SchedulerManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.528 19 DEBUG nova.openstack.common.service [-] scheduler_max_attempts         = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.529 19 DEBUG nova.openstack.common.service [-] scheduler_topic                = scheduler log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.531 19 DEBUG nova.openstack.common.service [-] scheduler_weight_classes       = ['nova.scheduler.weights.all_weighers'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.532 19 DEBUG nova.openstack.common.service [-] security_group_api             = nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.533 19 DEBUG nova.openstack.common.service [-] service_down_time              = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.534 19 DEBUG nova.openstack.common.service [-] servicegroup_driver            = db log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.536 19 DEBUG nova.openstack.common.service [-] share_dhcp_address             = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.537 19 DEBUG nova.openstack.common.service [-] shelved_offload_time           = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.539 19 DEBUG nova.openstack.common.service [-] shelved_poll_interval          = 3600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.540 19 DEBUG nova.openstack.common.service [-] shutdown_timeout               = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.542 19 DEBUG nova.openstack.common.service [-] snapshot_name_template         = snapshot-%s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.543 19 DEBUG nova.openstack.common.service [-] ssl_ca_file                    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.544 19 DEBUG nova.openstack.common.service [-] ssl_cert_file                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.546 19 DEBUG nova.openstack.common.service [-] ssl_key_file                   = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.547 19 DEBUG nova.openstack.common.service [-] state_path                     = /usr/lib/python2.7/dist-packages log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.549 19 DEBUG nova.openstack.common.service [-] sync_power_state_concurrency   = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.550 19 DEBUG nova.openstack.common.service [-] sync_power_state_interval      = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.551 19 DEBUG nova.openstack.common.service [-] syslog_connect_retries         = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.553 19 DEBUG nova.openstack.common.service [-] syslog_log_facility            = LOG_USER log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.555 19 DEBUG nova.openstack.common.service [-] tcp_keepidle                   = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.556 19 DEBUG nova.openstack.common.service [-] tempdir                        = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.558 19 DEBUG nova.openstack.common.service [-] transport_url                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.559 19 DEBUG nova.openstack.common.service [-] until_refresh                  = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.561 19 DEBUG nova.openstack.common.service [-] use_cow_images                 = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.562 19 DEBUG nova.openstack.common.service [-] use_forwarded_for              = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.563 19 DEBUG nova.openstack.common.service [-] use_ipv6                       = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.565 19 DEBUG nova.openstack.common.service [-] use_project_ca                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.566 19 DEBUG nova.openstack.common.service [-] use_stderr                     = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.567 19 DEBUG nova.openstack.common.service [-] use_syslog                     = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.569 19 DEBUG nova.openstack.common.service [-] use_syslog_rfc_format          = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.570 19 DEBUG nova.openstack.common.service [-] user_cert_subject              = /C=US/ST=California/O=OpenStack/OU=NovaDev/CN=%.16s-%.16s-%s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.572 19 DEBUG nova.openstack.common.service [-] vcpu_pin_set                   = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.573 19 DEBUG nova.openstack.common.service [-] verbose                        = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.575 19 DEBUG nova.openstack.common.service [-] vif_plugging_is_fatal          = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.576 19 DEBUG nova.openstack.common.service [-] vif_plugging_timeout           = 300 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.577 19 DEBUG nova.openstack.common.service [-] vnc_enabled                    = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.579 19 DEBUG nova.openstack.common.service [-] vnc_keymap                     = en-us log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.580 19 DEBUG nova.openstack.common.service [-] vncserver_listen               = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.582 19 DEBUG nova.openstack.common.service [-] vncserver_proxyclient_address  = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.584 19 DEBUG nova.openstack.common.service [-] volume_api_class               = nova.volume.cinder.API log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.585 19 DEBUG nova.openstack.common.service [-] volume_usage_poll_interval     = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.587 19 DEBUG nova.openstack.common.service [-] vpn_flavor                     = m1.tiny log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.588 19 DEBUG nova.openstack.common.service [-] vpn_image_id                   = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.590 19 DEBUG nova.openstack.common.service [-] vpn_key_suffix                 = -vpn log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.591 19 DEBUG nova.openstack.common.service [-] wsgi_default_pool_size         = 1000 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.593 19 DEBUG nova.openstack.common.service [-] wsgi_keep_alive                = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.594 19 DEBUG nova.openstack.common.service [-] wsgi_log_format                = %(client_ip)s "%(request_line)s" status: %(status_code)s len: %(body_length)s time: %(wall_seconds).7f log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.596 19 DEBUG nova.openstack.common.service [-] xvpvncproxy_base_url           = http://127.0.0.1:6081/console log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:06.597 19 DEBUG nova.openstack.common.service [-] ephemeral_storage_encryption.cipher = aes-xts-plain64 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.599 19 DEBUG nova.openstack.common.service [-] ephemeral_storage_encryption.enabled = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.600 19 DEBUG nova.openstack.common.service [-] ephemeral_storage_encryption.key_size = 512 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.602 19 DEBUG nova.openstack.common.service [-] osapi_v3.enabled               = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.603 19 DEBUG nova.openstack.common.service [-] osapi_v3.extensions_blacklist  = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.604 19 DEBUG nova.openstack.common.service [-] osapi_v3.extensions_whitelist  = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.606 19 DEBUG nova.openstack.common.service [-] rdp.enabled                    = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.607 19 DEBUG nova.openstack.common.service [-] rdp.html5_proxy_base_url       = http://127.0.0.1:6083/ log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.609 19 DEBUG nova.openstack.common.service [-] conductor.manager              = nova.conductor.manager.ConductorManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.610 19 DEBUG nova.openstack.common.service [-] conductor.topic                = conductor log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.612 19 DEBUG nova.openstack.common.service [-] conductor.use_local            = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.613 19 DEBUG nova.openstack.common.service [-] conductor.workers              = 4 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.615 19 DEBUG nova.openstack.common.service [-] database.backend               = sqlalchemy log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.616 19 DEBUG nova.openstack.common.service [-] database.connection            = **** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.618 19 DEBUG nova.openstack.common.service [-] database.connection_debug      = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.620 19 DEBUG nova.openstack.common.service [-] database.connection_trace      = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.621 19 DEBUG nova.openstack.common.service [-] database.db_inc_retry_interval = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.623 19 DEBUG nova.openstack.common.service [-] database.db_max_retries        = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.625 19 DEBUG nova.openstack.common.service [-] database.db_max_retry_interval = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.626 19 DEBUG nova.openstack.common.service [-] database.db_retry_interval     = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.629 19 DEBUG nova.openstack.common.service [-] database.idle_timeout          = 3600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.630 19 DEBUG nova.openstack.common.service [-] database.max_overflow          = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.632 19 DEBUG nova.openstack.common.service [-] database.max_pool_size         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.633 19 DEBUG nova.openstack.common.service [-] database.max_retries           = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.635 19 DEBUG nova.openstack.common.service [-] database.min_pool_size         = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.637 19 DEBUG nova.openstack.common.service [-] database.mysql_sql_mode        = TRADITIONAL log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.638 19 DEBUG nova.openstack.common.service [-] database.pool_timeout          = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.640 19 DEBUG nova.openstack.common.service [-] database.retry_interval        = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.642 19 DEBUG nova.openstack.common.service [-] database.slave_connection      = **** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.643 19 DEBUG nova.openstack.common.service [-] database.sqlite_db             = nova.sqlite log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.645 19 DEBUG nova.openstack.common.service [-] database.sqlite_synchronous    = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.646 19 DEBUG nova.openstack.common.service [-] database.use_db_reconnect      = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.647 19 DEBUG nova.openstack.common.service [-] database.use_tpool             = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.649 19 DEBUG nova.openstack.common.service [-] upgrade_levels.baseapi         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.651 19 DEBUG nova.openstack.common.service [-] upgrade_levels.cells           = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.652 19 DEBUG nova.openstack.common.service [-] upgrade_levels.compute         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.653 19 DEBUG nova.openstack.common.service [-] upgrade_levels.conductor       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.655 19 DEBUG nova.openstack.common.service [-] upgrade_levels.console         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.656 19 DEBUG nova.openstack.common.service [-] upgrade_levels.consoleauth     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.658 19 DEBUG nova.openstack.common.service [-] upgrade_levels.scheduler       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.660 19 DEBUG nova.openstack.common.service [-] cells.bandwidth_update_interval = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.661 19 DEBUG nova.openstack.common.service [-] cells.call_timeout             = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.662 19 DEBUG nova.openstack.common.service [-] cells.capabilities             = ['hypervisor=xenserver;kvm', 'os=linux;windows'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.664 19 DEBUG nova.openstack.common.service [-] cells.cell_type                = compute log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.665 19 DEBUG nova.openstack.common.service [-] cells.enable                   = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.666 19 DEBUG nova.openstack.common.service [-] cells.manager                  = nova.cells.manager.CellsManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.667 19 DEBUG nova.openstack.common.service [-] cells.mute_child_interval      = 300 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.668 19 DEBUG nova.openstack.common.service [-] cells.name                     = nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.669 19 DEBUG nova.openstack.common.service [-] cells.reserve_percent          = 10.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.671 19 DEBUG nova.openstack.common.service [-] cells.topic                    = cells log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.672 19 DEBUG nova.openstack.common.service [-] keymgr.api_class               = nova.keymgr.conf_key_mgr.ConfKeyManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.673 19 DEBUG nova.openstack.common.service [-] serial_console.base_url        = ws://127.0.0.1:6083/ log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.675 19 DEBUG nova.openstack.common.service [-] serial_console.enabled         = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.677 19 DEBUG nova.openstack.common.service [-] serial_console.listen          = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.679 19 DEBUG nova.openstack.common.service [-] serial_console.port_range      = 10000:20000 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.680 19 DEBUG nova.openstack.common.service [-] serial_console.proxyclient_address = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.681 19 DEBUG nova.openstack.common.service [-] metrics.required               = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.682 19 DEBUG nova.openstack.common.service [-] metrics.weight_multiplier      = 1.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.684 19 DEBUG nova.openstack.common.service [-] metrics.weight_of_unavailable  = -10000.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.685 19 DEBUG nova.openstack.common.service [-] metrics.weight_setting         = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.687 19 DEBUG nova.openstack.common.service [-] ssl.ca_file                    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.688 19 DEBUG nova.openstack.common.service [-] ssl.cert_file                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.689 19 DEBUG nova.openstack.common.service [-] ssl.key_file                   = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.691 19 DEBUG nova.openstack.common.service [-] glance.allowed_direct_url_schemes = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.692 19 DEBUG nova.openstack.common.service [-] glance.api_insecure            = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.693 19 DEBUG nova.openstack.common.service [-] glance.api_servers             = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.695 19 DEBUG nova.openstack.common.service [-] glance.host                    = glance-server.monitoringrefactordocker_default log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.696 19 DEBUG nova.openstack.common.service [-] glance.num_retries             = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.697 19 DEBUG nova.openstack.common.service [-] glance.port                    = 9292 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.700 19 DEBUG nova.openstack.common.service [-] glance.protocol                = http log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.701 19 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_api_url = /OpenAttestationWebServices/V1.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.702 19 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_auth_blob = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.704 19 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_auth_timeout = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.705 19 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_insecure_ssl = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.707 19 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_port = 8443 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.709 19 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_server = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.710 19 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_server_ca_file = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.711 19 DEBUG nova.openstack.common.service [-] workarounds.destroy_after_evacuate = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.712 19 DEBUG nova.openstack.common.service [-] remote_debug.host              = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.714 19 DEBUG nova.openstack.common.service [-] remote_debug.port              = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.715 19 DEBUG nova.openstack.common.service [-] spice.agent_enabled            = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.716 19 DEBUG nova.openstack.common.service [-] spice.enabled                  = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.718 19 DEBUG nova.openstack.common.service [-] spice.html5proxy_base_url      = http://127.0.0.1:6082/spice_auto.html log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.720 19 DEBUG nova.openstack.common.service [-] spice.keymap                   = en-us log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.722 19 DEBUG nova.openstack.common.service [-] spice.server_listen            = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.723 19 DEBUG nova.openstack.common.service [-] spice.server_proxyclient_address = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:06.725 19 DEBUG nova.openstack.common.service [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2002
+2018-02-15 06:52:06.726 19 AUDIT nova.service [-] Starting scheduler node (version 2014.2.4)
+2018-02-15 06:52:07.596 19 DEBUG oslo.db.sqlalchemy.session [req-57dbfeee-20af-4e05-a86e-4d0b6246ce79 ] MySQL server mode set to STRICT_TRANS_TABLES,STRICT_ALL_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,TRADITIONAL,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION _init_events /usr/lib/python2.7/dist-packages/oslo/db/sqlalchemy/session.py:461
+2018-02-15 06:52:07.881 19 DEBUG nova.service [req-57dbfeee-20af-4e05-a86e-4d0b6246ce79 None] Creating RPC server for service scheduler start /usr/lib/python2.7/dist-packages/nova/service.py:186
+2018-02-15 06:52:07.886 19 INFO oslo.messaging._drivers.impl_rabbit [req-57dbfeee-20af-4e05-a86e-4d0b6246ce79 ] Connecting to AMQP server on 127.0.0.1:5672
+2018-02-15 06:52:07.903 19 ERROR oslo.messaging._drivers.impl_rabbit [req-57dbfeee-20af-4e05-a86e-4d0b6246ce79 ] AMQP server on 127.0.0.1:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 1 seconds.
+2018-02-15 06:52:08.908 19 INFO oslo.messaging._drivers.impl_rabbit [req-57dbfeee-20af-4e05-a86e-4d0b6246ce79 ] Delaying reconnect for 1.0 seconds...
+2018-02-15 06:52:09.912 19 INFO oslo.messaging._drivers.impl_rabbit [req-57dbfeee-20af-4e05-a86e-4d0b6246ce79 ] Connecting to AMQP server on 127.0.0.1:5672
+2018-02-15 06:52:09.921 19 ERROR oslo.messaging._drivers.impl_rabbit [req-57dbfeee-20af-4e05-a86e-4d0b6246ce79 ] AMQP server on 127.0.0.1:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 3 seconds.
+2018-02-15 06:52:12.923 19 INFO oslo.messaging._drivers.impl_rabbit [req-57dbfeee-20af-4e05-a86e-4d0b6246ce79 ] Delaying reconnect for 1.0 seconds...
+2018-02-15 06:52:13.927 19 INFO oslo.messaging._drivers.impl_rabbit [req-57dbfeee-20af-4e05-a86e-4d0b6246ce79 ] Connecting to AMQP server on 127.0.0.1:5672
+2018-02-15 06:52:13.935 19 ERROR oslo.messaging._drivers.impl_rabbit [req-57dbfeee-20af-4e05-a86e-4d0b6246ce79 ] AMQP server on 127.0.0.1:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 5 seconds.
+2018-02-15 06:52:16.523 19 INFO nova.openstack.common.service [-] Caught SIGTERM, exiting
+2018-02-15 06:52:19.133 97 DEBUG nova.servicegroup.api [-] ServiceGroup driver defined as an instance of db __new__ /usr/lib/python2.7/dist-packages/nova/servicegroup/api.py:65
+2018-02-15 06:52:19.586 97 DEBUG nova.openstack.common.service [-] Full set of CONF: _wait_for_exit_or_signal /usr/lib/python2.7/dist-packages/nova/openstack/common/service.py:167
+2018-02-15 06:52:19.598 97 DEBUG nova.openstack.common.service [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1979
+2018-02-15 06:52:19.599 97 DEBUG nova.openstack.common.service [-] Configuration options gathered from: log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1980
+2018-02-15 06:52:19.599 97 DEBUG nova.openstack.common.service [-] command line args: ['--config-file=/etc/nova/nova.conf', '--log-file=/log/nova-scheduler.log'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1981
+2018-02-15 06:52:19.601 97 DEBUG nova.openstack.common.service [-] config files: ['/etc/nova/nova.conf'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1982
+2018-02-15 06:52:19.601 97 DEBUG nova.openstack.common.service [-] ================================================================================ log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1983
+2018-02-15 06:52:19.602 97 DEBUG nova.openstack.common.service [-] aggregate_image_properties_isolation_namespace = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.604 97 DEBUG nova.openstack.common.service [-] aggregate_image_properties_isolation_separator = . log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.605 97 DEBUG nova.openstack.common.service [-] allow_instance_snapshots       = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.606 97 DEBUG nova.openstack.common.service [-] allow_migrate_to_same_host     = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.607 97 DEBUG nova.openstack.common.service [-] allow_resize_to_same_host      = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.608 97 DEBUG nova.openstack.common.service [-] amqp_auto_delete               = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.609 97 DEBUG nova.openstack.common.service [-] amqp_durable_queues            = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.610 97 DEBUG nova.openstack.common.service [-] api_paste_config               = api-paste.ini log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.611 97 DEBUG nova.openstack.common.service [-] api_rate_limit                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.612 97 DEBUG nova.openstack.common.service [-] auth_strategy                  = keystone log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.613 97 DEBUG nova.openstack.common.service [-] backdoor_port                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.614 97 DEBUG nova.openstack.common.service [-] bandwidth_poll_interval        = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.615 97 DEBUG nova.openstack.common.service [-] bindir                         = /usr/local/bin log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.616 97 DEBUG nova.openstack.common.service [-] block_device_allocate_retries  = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.617 97 DEBUG nova.openstack.common.service [-] block_device_allocate_retries_interval = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.618 97 DEBUG nova.openstack.common.service [-] boot_script_template           = /usr/lib/python2.7/dist-packages/nova/cloudpipe/bootscript.template log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.619 97 DEBUG nova.openstack.common.service [-] ca_file                        = cacert.pem log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.620 97 DEBUG nova.openstack.common.service [-] ca_path                        = /usr/lib/python2.7/dist-packages/CA log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.621 97 DEBUG nova.openstack.common.service [-] cert_manager                   = nova.cert.manager.CertManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.621 97 DEBUG nova.openstack.common.service [-] client_socket_timeout          = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.622 97 DEBUG nova.openstack.common.service [-] compute_available_monitors     = ['nova.compute.monitors.all_monitors'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.623 97 DEBUG nova.openstack.common.service [-] compute_driver                 = fake.FakeDriver log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.624 97 DEBUG nova.openstack.common.service [-] compute_manager                = nova.compute.manager.ComputeManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.625 97 DEBUG nova.openstack.common.service [-] compute_monitors               = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.626 97 DEBUG nova.openstack.common.service [-] compute_resources              = ['vcpu'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.627 97 DEBUG nova.openstack.common.service [-] compute_stats_class            = nova.compute.stats.Stats log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.628 97 DEBUG nova.openstack.common.service [-] compute_topic                  = compute log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.629 97 DEBUG nova.openstack.common.service [-] config_dir                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.630 97 DEBUG nova.openstack.common.service [-] config_file                    = ['/etc/nova/nova.conf'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.631 97 DEBUG nova.openstack.common.service [-] console_host                   = nova-server log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.632 97 DEBUG nova.openstack.common.service [-] console_manager                = nova.console.manager.ConsoleProxyManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.633 97 DEBUG nova.openstack.common.service [-] console_topic                  = console log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.634 97 DEBUG nova.openstack.common.service [-] consoleauth_manager            = nova.consoleauth.manager.ConsoleAuthManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.635 97 DEBUG nova.openstack.common.service [-] consoleauth_topic              = consoleauth log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.636 97 DEBUG nova.openstack.common.service [-] control_exchange               = nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.637 97 DEBUG nova.openstack.common.service [-] cpu_allocation_ratio           = 16.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.638 97 DEBUG nova.openstack.common.service [-] crl_file                       = crl.pem log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.639 97 DEBUG nova.openstack.common.service [-] db_driver                      = nova.db log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.640 97 DEBUG nova.openstack.common.service [-] debug                          = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.641 97 DEBUG nova.openstack.common.service [-] default_access_ip_network_name = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.642 97 DEBUG nova.openstack.common.service [-] default_availability_zone      = nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.648 97 DEBUG nova.openstack.common.service [-] default_ephemeral_format       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.654 97 DEBUG nova.openstack.common.service [-] default_flavor                 = m1.small log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.656 97 DEBUG nova.openstack.common.service [-] default_log_levels             = ['amqp=WARN', 'amqplib=WARN', 'boto=WARN', 'qpid=WARN', 'sqlalchemy=WARN', 'suds=INFO', 'oslo.messaging=INFO', 'iso8601=WARN', 'requests.packages.urllib3.connectionpool=WARN', 'urllib3.connectionpool=WARN', 'websocket=WARN', 'keystonemiddleware=WARN', 'routes.middleware=WARN', 'stevedore=WARN'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.657 97 DEBUG nova.openstack.common.service [-] default_notification_level     = INFO log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.658 97 DEBUG nova.openstack.common.service [-] default_publisher_id           = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.658 97 DEBUG nova.openstack.common.service [-] default_schedule_zone          = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.659 97 DEBUG nova.openstack.common.service [-] defer_iptables_apply           = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.660 97 DEBUG nova.openstack.common.service [-] disable_process_locking        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.661 97 DEBUG nova.openstack.common.service [-] disk_allocation_ratio          = 1.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.662 97 DEBUG nova.openstack.common.service [-] dmz_mask                       = 255.255.255.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.663 97 DEBUG nova.openstack.common.service [-] dmz_net                        = 10.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.664 97 DEBUG nova.openstack.common.service [-] ec2_listen                     = 0.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.665 97 DEBUG nova.openstack.common.service [-] ec2_listen_port                = 8773 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.666 97 DEBUG nova.openstack.common.service [-] ec2_private_dns_show_ip        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.667 97 DEBUG nova.openstack.common.service [-] ec2_strict_validation          = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.668 97 DEBUG nova.openstack.common.service [-] ec2_timestamp_expiry           = 300 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.669 97 DEBUG nova.openstack.common.service [-] ec2_workers                    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.670 97 DEBUG nova.openstack.common.service [-] enable_instance_password       = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.671 97 DEBUG nova.openstack.common.service [-] enable_new_services            = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.672 97 DEBUG nova.openstack.common.service [-] enabled_apis                   = ['osapi_compute', 'metadata'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.673 97 DEBUG nova.openstack.common.service [-] enabled_ssl_apis               = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.674 97 DEBUG nova.openstack.common.service [-] fake_rabbit                    = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.675 97 DEBUG nova.openstack.common.service [-] fatal_deprecations             = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.676 97 DEBUG nova.openstack.common.service [-] fatal_exception_format_errors  = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.677 97 DEBUG nova.openstack.common.service [-] heal_instance_info_cache_interval = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.678 97 DEBUG nova.openstack.common.service [-] host                           = nova-server log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.679 97 DEBUG nova.openstack.common.service [-] image_cache_manager_interval   = 2400 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.681 97 DEBUG nova.openstack.common.service [-] image_cache_subdirectory_name  = _base log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.682 97 DEBUG nova.openstack.common.service [-] injected_network_template      = /usr/lib/python2.7/dist-packages/nova/virt/interfaces.template log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.683 97 DEBUG nova.openstack.common.service [-] instance_build_timeout         = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.684 97 DEBUG nova.openstack.common.service [-] instance_delete_interval       = 300 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.685 97 DEBUG nova.openstack.common.service [-] instance_format                = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.686 97 DEBUG nova.openstack.common.service [-] instance_name_template         = instance-%08x log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.687 97 DEBUG nova.openstack.common.service [-] instance_usage_audit           = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.688 97 DEBUG nova.openstack.common.service [-] instance_usage_audit_period    = month log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.689 97 DEBUG nova.openstack.common.service [-] instance_uuid_format           = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.690 97 DEBUG nova.openstack.common.service [-] instances_path                 = /usr/lib/python2.7/dist-packages/instances log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.691 97 DEBUG nova.openstack.common.service [-] internal_service_availability_zone = internal log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.692 97 DEBUG nova.openstack.common.service [-] isolated_hosts                 = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.693 97 DEBUG nova.openstack.common.service [-] isolated_images                = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.694 97 DEBUG nova.openstack.common.service [-] key_file                       = private/cakey.pem log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.695 97 DEBUG nova.openstack.common.service [-] keys_path                      = /usr/lib/python2.7/dist-packages/keys log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.698 97 DEBUG nova.openstack.common.service [-] keystone_ec2_url               = http://localhost:5000/v2.0/ec2tokens log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.708 97 DEBUG nova.openstack.common.service [-] kombu_reconnect_delay          = 1.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.709 97 DEBUG nova.openstack.common.service [-] kombu_ssl_ca_certs             =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.710 97 DEBUG nova.openstack.common.service [-] kombu_ssl_certfile             =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.711 97 DEBUG nova.openstack.common.service [-] kombu_ssl_keyfile              =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.712 97 DEBUG nova.openstack.common.service [-] kombu_ssl_version              =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.713 97 DEBUG nova.openstack.common.service [-] live_migration_retry_count     = 30 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.714 97 DEBUG nova.openstack.common.service [-] lock_path                      = /var/lock/nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.715 97 DEBUG nova.openstack.common.service [-] lockout_attempts               = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.716 97 DEBUG nova.openstack.common.service [-] lockout_minutes                = 15 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.716 97 DEBUG nova.openstack.common.service [-] lockout_window                 = 15 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.718 97 DEBUG nova.openstack.common.service [-] log_config_append              = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.719 97 DEBUG nova.openstack.common.service [-] log_date_format                = %Y-%m-%d %H:%M:%S log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.720 97 DEBUG nova.openstack.common.service [-] log_dir                        = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.720 97 DEBUG nova.openstack.common.service [-] log_file                       = /log/nova-scheduler.log log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.721 97 DEBUG nova.openstack.common.service [-] log_format                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.722 97 DEBUG nova.openstack.common.service [-] logging_context_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [%(request_id)s %(user_identity)s] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.723 97 DEBUG nova.openstack.common.service [-] logging_debug_format_suffix    = %(funcName)s %(pathname)s:%(lineno)d log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.724 97 DEBUG nova.openstack.common.service [-] logging_default_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [-] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.725 97 DEBUG nova.openstack.common.service [-] logging_exception_prefix       = %(asctime)s.%(msecs)03d %(process)d TRACE %(name)s %(instance)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.726 97 DEBUG nova.openstack.common.service [-] max_age                        = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.727 97 DEBUG nova.openstack.common.service [-] max_header_line                = 16384 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.728 97 DEBUG nova.openstack.common.service [-] max_instances_per_host         = 50 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.729 97 DEBUG nova.openstack.common.service [-] max_io_ops_per_host            = 8 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.730 97 DEBUG nova.openstack.common.service [-] max_local_block_devices        = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.731 97 DEBUG nova.openstack.common.service [-] maximum_instance_delete_attempts = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.731 97 DEBUG nova.openstack.common.service [-] memcached_servers              = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.734 97 DEBUG nova.openstack.common.service [-] metadata_listen                = 0.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.734 97 DEBUG nova.openstack.common.service [-] metadata_listen_port           = 8775 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.735 97 DEBUG nova.openstack.common.service [-] metadata_manager               = nova.api.manager.MetadataManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.737 97 DEBUG nova.openstack.common.service [-] metadata_workers               = 4 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.738 97 DEBUG nova.openstack.common.service [-] migrate_max_retries            = -1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.739 97 DEBUG nova.openstack.common.service [-] monkey_patch                   = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.740 97 DEBUG nova.openstack.common.service [-] monkey_patch_modules           = ['nova.api.ec2.cloud:nova.notifications.notify_decorator', 'nova.compute.api:nova.notifications.notify_decorator'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.741 97 DEBUG nova.openstack.common.service [-] multi_instance_display_name_template = %(name)s-%(uuid)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.742 97 DEBUG nova.openstack.common.service [-] my_ip                          = 172.18.0.18 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.743 97 DEBUG nova.openstack.common.service [-] network_allocate_retries       = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.744 97 DEBUG nova.openstack.common.service [-] network_api_class              = nova.network.neutronv2.api.API log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.745 97 DEBUG nova.openstack.common.service [-] network_device_mtu             = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.745 97 DEBUG nova.openstack.common.service [-] network_manager                = nova.network.manager.VlanManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.746 97 DEBUG nova.openstack.common.service [-] non_inheritable_image_properties = ['cache_in_nova', 'bittorrent'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.747 97 DEBUG nova.openstack.common.service [-] notification_driver            = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.749 97 DEBUG nova.openstack.common.service [-] notification_topics            = ['notifications'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.750 97 DEBUG nova.openstack.common.service [-] notify_api_faults              = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.750 97 DEBUG nova.openstack.common.service [-] notify_on_state_change         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.751 97 DEBUG nova.openstack.common.service [-] novncproxy_base_url            = http://127.0.0.1:6080/vnc_auto.html log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.752 97 DEBUG nova.openstack.common.service [-] null_kernel                    = nokernel log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.753 97 DEBUG nova.openstack.common.service [-] osapi_compute_ext_list         = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.755 97 DEBUG nova.openstack.common.service [-] osapi_compute_extension        = ['nova.api.openstack.compute.contrib.standard_extensions'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.756 97 DEBUG nova.openstack.common.service [-] osapi_compute_link_prefix      = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.758 97 DEBUG nova.openstack.common.service [-] osapi_compute_listen           = 0.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.759 97 DEBUG nova.openstack.common.service [-] osapi_compute_listen_port      = 8774 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.760 97 DEBUG nova.openstack.common.service [-] osapi_compute_workers          = 4 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.761 97 DEBUG nova.openstack.common.service [-] osapi_glance_link_prefix       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.762 97 DEBUG nova.openstack.common.service [-] osapi_max_limit                = 1000 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.763 97 DEBUG nova.openstack.common.service [-] password_length                = 12 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.764 97 DEBUG nova.openstack.common.service [-] pci_alias                      = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.765 97 DEBUG nova.openstack.common.service [-] pci_passthrough_whitelist      = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.766 97 DEBUG nova.openstack.common.service [-] periodic_enable                = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.767 97 DEBUG nova.openstack.common.service [-] periodic_fuzzy_delay           = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.768 97 DEBUG nova.openstack.common.service [-] policy_default_rule            = default log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.770 97 DEBUG nova.openstack.common.service [-] policy_file                    = policy.json log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.771 97 DEBUG nova.openstack.common.service [-] preallocate_images             = none log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.772 97 DEBUG nova.openstack.common.service [-] project_cert_subject           = /C=US/ST=California/O=OpenStack/OU=NovaDev/CN=project-ca-%.16s-%s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.772 97 DEBUG nova.openstack.common.service [-] publish_errors                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.773 97 DEBUG nova.openstack.common.service [-] pybasedir                      = /usr/lib/python2.7/dist-packages log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.774 97 DEBUG nova.openstack.common.service [-] quota_cores                    = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.775 97 DEBUG nova.openstack.common.service [-] quota_driver                   = nova.quota.DbQuotaDriver log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.776 97 DEBUG nova.openstack.common.service [-] quota_fixed_ips                = -1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.777 97 DEBUG nova.openstack.common.service [-] quota_floating_ips             = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.782 97 DEBUG nova.openstack.common.service [-] quota_injected_file_content_bytes = 10240 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.783 97 DEBUG nova.openstack.common.service [-] quota_injected_file_path_length = 255 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.784 97 DEBUG nova.openstack.common.service [-] quota_injected_files           = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.785 97 DEBUG nova.openstack.common.service [-] quota_instances                = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.786 97 DEBUG nova.openstack.common.service [-] quota_key_pairs                = 100 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.787 97 DEBUG nova.openstack.common.service [-] quota_metadata_items           = 128 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.788 97 DEBUG nova.openstack.common.service [-] quota_ram                      = 51200 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.789 97 DEBUG nova.openstack.common.service [-] quota_security_group_rules     = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.790 97 DEBUG nova.openstack.common.service [-] quota_security_groups          = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.791 97 DEBUG nova.openstack.common.service [-] quota_server_group_members     = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.792 97 DEBUG nova.openstack.common.service [-] quota_server_groups            = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.793 97 DEBUG nova.openstack.common.service [-] rabbit_ha_queues               = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.794 97 DEBUG nova.openstack.common.service [-] rabbit_host                    = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.795 97 DEBUG nova.openstack.common.service [-] rabbit_hosts                   = ['127.0.0.1:5672'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.796 97 DEBUG nova.openstack.common.service [-] rabbit_login_method            = AMQPLAIN log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.796 97 DEBUG nova.openstack.common.service [-] rabbit_max_retries             = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.797 97 DEBUG nova.openstack.common.service [-] rabbit_password                = **** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.798 97 DEBUG nova.openstack.common.service [-] rabbit_port                    = 5672 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.799 97 DEBUG nova.openstack.common.service [-] rabbit_retry_backoff           = 2 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.800 97 DEBUG nova.openstack.common.service [-] rabbit_retry_interval          = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.801 97 DEBUG nova.openstack.common.service [-] rabbit_use_ssl                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.802 97 DEBUG nova.openstack.common.service [-] rabbit_userid                  = guest log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.803 97 DEBUG nova.openstack.common.service [-] rabbit_virtual_host            = / log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.804 97 DEBUG nova.openstack.common.service [-] ram_allocation_ratio           = 1.5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.805 97 DEBUG nova.openstack.common.service [-] ram_weight_multiplier          = 1.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.806 97 DEBUG nova.openstack.common.service [-] reboot_timeout                 = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.808 97 DEBUG nova.openstack.common.service [-] reclaim_instance_interval      = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.810 97 DEBUG nova.openstack.common.service [-] remove_unused_base_images      = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.816 97 DEBUG nova.openstack.common.service [-] remove_unused_original_minimum_age_seconds = 86400 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.818 97 DEBUG nova.openstack.common.service [-] report_interval                = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.822 97 DEBUG nova.openstack.common.service [-] rescue_timeout                 = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.823 97 DEBUG nova.openstack.common.service [-] reservation_expire             = 86400 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.824 97 DEBUG nova.openstack.common.service [-] reserved_host_disk_mb          = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.825 97 DEBUG nova.openstack.common.service [-] reserved_host_memory_mb        = 512 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.827 97 DEBUG nova.openstack.common.service [-] resize_confirm_window          = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.828 97 DEBUG nova.openstack.common.service [-] restrict_isolated_hosts_to_isolated_images = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.829 97 DEBUG nova.openstack.common.service [-] resume_guests_state_on_host_boot = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.830 97 DEBUG nova.openstack.common.service [-] rootwrap_config                = /etc/nova/rootwrap.conf log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.831 97 DEBUG nova.openstack.common.service [-] rpc_backend                    = rabbit log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.832 97 DEBUG nova.openstack.common.service [-] rpc_conn_pool_size             = 30 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.833 97 DEBUG nova.openstack.common.service [-] rpc_response_timeout           = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.834 97 DEBUG nova.openstack.common.service [-] run_external_periodic_tasks    = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.835 97 DEBUG nova.openstack.common.service [-] running_deleted_instance_action = reap log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.836 97 DEBUG nova.openstack.common.service [-] running_deleted_instance_poll_interval = 1800 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.837 97 DEBUG nova.openstack.common.service [-] running_deleted_instance_timeout = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.848 97 DEBUG nova.openstack.common.service [-] scheduler_available_filters    = ['nova.scheduler.filters.all_filters'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.858 97 DEBUG nova.openstack.common.service [-] scheduler_default_filters      = ['RetryFilter', 'AvailabilityZoneFilter', 'ComputeFilter', 'ComputeCapabilitiesFilter', 'ImagePropertiesFilter', 'ServerGroupAntiAffinityFilter', 'ServerGroupAffinityFilter'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.859 97 DEBUG nova.openstack.common.service [-] scheduler_driver               = nova.scheduler.filter_scheduler.FilterScheduler log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.860 97 DEBUG nova.openstack.common.service [-] scheduler_driver_task_period   = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.861 97 DEBUG nova.openstack.common.service [-] scheduler_host_manager         = nova.scheduler.host_manager.HostManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.862 97 DEBUG nova.openstack.common.service [-] scheduler_host_subset_size     = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.863 97 DEBUG nova.openstack.common.service [-] scheduler_json_config_location =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.864 97 DEBUG nova.openstack.common.service [-] scheduler_manager              = nova.scheduler.manager.SchedulerManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.865 97 DEBUG nova.openstack.common.service [-] scheduler_max_attempts         = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.866 97 DEBUG nova.openstack.common.service [-] scheduler_topic                = scheduler log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.867 97 DEBUG nova.openstack.common.service [-] scheduler_weight_classes       = ['nova.scheduler.weights.all_weighers'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.870 97 DEBUG nova.openstack.common.service [-] security_group_api             = nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.871 97 DEBUG nova.openstack.common.service [-] service_down_time              = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.872 97 DEBUG nova.openstack.common.service [-] servicegroup_driver            = db log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.873 97 DEBUG nova.openstack.common.service [-] share_dhcp_address             = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.874 97 DEBUG nova.openstack.common.service [-] shelved_offload_time           = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.874 97 DEBUG nova.openstack.common.service [-] shelved_poll_interval          = 3600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.875 97 DEBUG nova.openstack.common.service [-] shutdown_timeout               = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.876 97 DEBUG nova.openstack.common.service [-] snapshot_name_template         = snapshot-%s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.877 97 DEBUG nova.openstack.common.service [-] ssl_ca_file                    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.878 97 DEBUG nova.openstack.common.service [-] ssl_cert_file                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.879 97 DEBUG nova.openstack.common.service [-] ssl_key_file                   = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.879 97 DEBUG nova.openstack.common.service [-] state_path                     = /usr/lib/python2.7/dist-packages log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.880 97 DEBUG nova.openstack.common.service [-] sync_power_state_concurrency   = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.881 97 DEBUG nova.openstack.common.service [-] sync_power_state_interval      = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.882 97 DEBUG nova.openstack.common.service [-] syslog_connect_retries         = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.883 97 DEBUG nova.openstack.common.service [-] syslog_log_facility            = LOG_USER log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.883 97 DEBUG nova.openstack.common.service [-] tcp_keepidle                   = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.886 97 DEBUG nova.openstack.common.service [-] tempdir                        = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.908 97 DEBUG nova.openstack.common.service [-] transport_url                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.909 97 DEBUG nova.openstack.common.service [-] until_refresh                  = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.910 97 DEBUG nova.openstack.common.service [-] use_cow_images                 = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.918 97 DEBUG nova.openstack.common.service [-] use_forwarded_for              = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.919 97 DEBUG nova.openstack.common.service [-] use_ipv6                       = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.920 97 DEBUG nova.openstack.common.service [-] use_project_ca                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.920 97 DEBUG nova.openstack.common.service [-] use_stderr                     = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.921 97 DEBUG nova.openstack.common.service [-] use_syslog                     = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.922 97 DEBUG nova.openstack.common.service [-] use_syslog_rfc_format          = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.923 97 DEBUG nova.openstack.common.service [-] user_cert_subject              = /C=US/ST=California/O=OpenStack/OU=NovaDev/CN=%.16s-%.16s-%s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.924 97 DEBUG nova.openstack.common.service [-] vcpu_pin_set                   = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.925 97 DEBUG nova.openstack.common.service [-] verbose                        = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.925 97 DEBUG nova.openstack.common.service [-] vif_plugging_is_fatal          = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.926 97 DEBUG nova.openstack.common.service [-] vif_plugging_timeout           = 300 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.927 97 DEBUG nova.openstack.common.service [-] vnc_enabled                    = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.929 97 DEBUG nova.openstack.common.service [-] vnc_keymap                     = en-us log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.929 97 DEBUG nova.openstack.common.service [-] vncserver_listen               = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.930 97 DEBUG nova.openstack.common.service [-] vncserver_proxyclient_address  = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.931 97 DEBUG nova.openstack.common.service [-] volume_api_class               = nova.volume.cinder.API log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.932 97 DEBUG nova.openstack.common.service [-] volume_usage_poll_interval     = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.933 97 DEBUG nova.openstack.common.service [-] vpn_flavor                     = m1.tiny log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.934 97 DEBUG nova.openstack.common.service [-] vpn_image_id                   = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.935 97 DEBUG nova.openstack.common.service [-] vpn_key_suffix                 = -vpn log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.936 97 DEBUG nova.openstack.common.service [-] wsgi_default_pool_size         = 1000 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.936 97 DEBUG nova.openstack.common.service [-] wsgi_keep_alive                = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.937 97 DEBUG nova.openstack.common.service [-] wsgi_log_format                = %(client_ip)s "%(request_line)s" status: %(status_code)s len: %(body_length)s time: %(wall_seconds).7f log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.939 97 DEBUG nova.openstack.common.service [-] xvpvncproxy_base_url           = http://127.0.0.1:6081/console log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-02-15 06:52:19.939 97 DEBUG nova.openstack.common.service [-] ephemeral_storage_encryption.cipher = aes-xts-plain64 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.940 97 DEBUG nova.openstack.common.service [-] ephemeral_storage_encryption.enabled = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.941 97 DEBUG nova.openstack.common.service [-] ephemeral_storage_encryption.key_size = 512 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.942 97 DEBUG nova.openstack.common.service [-] osapi_v3.enabled               = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.948 97 DEBUG nova.openstack.common.service [-] osapi_v3.extensions_blacklist  = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.968 97 DEBUG nova.openstack.common.service [-] osapi_v3.extensions_whitelist  = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.969 97 DEBUG nova.openstack.common.service [-] rdp.enabled                    = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.970 97 DEBUG nova.openstack.common.service [-] rdp.html5_proxy_base_url       = http://127.0.0.1:6083/ log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.971 97 DEBUG nova.openstack.common.service [-] conductor.manager              = nova.conductor.manager.ConductorManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.972 97 DEBUG nova.openstack.common.service [-] conductor.topic                = conductor log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.973 97 DEBUG nova.openstack.common.service [-] conductor.use_local            = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.974 97 DEBUG nova.openstack.common.service [-] conductor.workers              = 4 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.975 97 DEBUG nova.openstack.common.service [-] database.backend               = sqlalchemy log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.976 97 DEBUG nova.openstack.common.service [-] database.connection            = **** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.977 97 DEBUG nova.openstack.common.service [-] database.connection_debug      = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.978 97 DEBUG nova.openstack.common.service [-] database.connection_trace      = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.978 97 DEBUG nova.openstack.common.service [-] database.db_inc_retry_interval = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.979 97 DEBUG nova.openstack.common.service [-] database.db_max_retries        = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.980 97 DEBUG nova.openstack.common.service [-] database.db_max_retry_interval = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.981 97 DEBUG nova.openstack.common.service [-] database.db_retry_interval     = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.982 97 DEBUG nova.openstack.common.service [-] database.idle_timeout          = 3600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.983 97 DEBUG nova.openstack.common.service [-] database.max_overflow          = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.984 97 DEBUG nova.openstack.common.service [-] database.max_pool_size         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.985 97 DEBUG nova.openstack.common.service [-] database.max_retries           = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.986 97 DEBUG nova.openstack.common.service [-] database.min_pool_size         = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.987 97 DEBUG nova.openstack.common.service [-] database.mysql_sql_mode        = TRADITIONAL log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.989 97 DEBUG nova.openstack.common.service [-] database.pool_timeout          = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:19.989 97 DEBUG nova.openstack.common.service [-] database.retry_interval        = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.001 97 DEBUG nova.openstack.common.service [-] database.slave_connection      = **** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.008 97 DEBUG nova.openstack.common.service [-] database.sqlite_db             = nova.sqlite log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.009 97 DEBUG nova.openstack.common.service [-] database.sqlite_synchronous    = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.010 97 DEBUG nova.openstack.common.service [-] database.use_db_reconnect      = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.011 97 DEBUG nova.openstack.common.service [-] database.use_tpool             = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.012 97 DEBUG nova.openstack.common.service [-] upgrade_levels.baseapi         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.012 97 DEBUG nova.openstack.common.service [-] upgrade_levels.cells           = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.013 97 DEBUG nova.openstack.common.service [-] upgrade_levels.compute         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.014 97 DEBUG nova.openstack.common.service [-] upgrade_levels.conductor       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.015 97 DEBUG nova.openstack.common.service [-] upgrade_levels.console         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.016 97 DEBUG nova.openstack.common.service [-] upgrade_levels.consoleauth     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.017 97 DEBUG nova.openstack.common.service [-] upgrade_levels.scheduler       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.018 97 DEBUG nova.openstack.common.service [-] cells.bandwidth_update_interval = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.019 97 DEBUG nova.openstack.common.service [-] cells.call_timeout             = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.020 97 DEBUG nova.openstack.common.service [-] cells.capabilities             = ['hypervisor=xenserver;kvm', 'os=linux;windows'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.021 97 DEBUG nova.openstack.common.service [-] cells.cell_type                = compute log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.022 97 DEBUG nova.openstack.common.service [-] cells.enable                   = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.023 97 DEBUG nova.openstack.common.service [-] cells.manager                  = nova.cells.manager.CellsManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.031 97 DEBUG nova.openstack.common.service [-] cells.mute_child_interval      = 300 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.033 97 DEBUG nova.openstack.common.service [-] cells.name                     = nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.034 97 DEBUG nova.openstack.common.service [-] cells.reserve_percent          = 10.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.035 97 DEBUG nova.openstack.common.service [-] cells.topic                    = cells log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.036 97 DEBUG nova.openstack.common.service [-] keymgr.api_class               = nova.keymgr.conf_key_mgr.ConfKeyManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.037 97 DEBUG nova.openstack.common.service [-] serial_console.base_url        = ws://127.0.0.1:6083/ log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.038 97 DEBUG nova.openstack.common.service [-] serial_console.enabled         = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.047 97 DEBUG nova.openstack.common.service [-] serial_console.listen          = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.058 97 DEBUG nova.openstack.common.service [-] serial_console.port_range      = 10000:20000 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.059 97 DEBUG nova.openstack.common.service [-] serial_console.proxyclient_address = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.059 97 DEBUG nova.openstack.common.service [-] metrics.required               = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.060 97 DEBUG nova.openstack.common.service [-] metrics.weight_multiplier      = 1.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.061 97 DEBUG nova.openstack.common.service [-] metrics.weight_of_unavailable  = -10000.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.062 97 DEBUG nova.openstack.common.service [-] metrics.weight_setting         = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.063 97 DEBUG nova.openstack.common.service [-] ssl.ca_file                    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.064 97 DEBUG nova.openstack.common.service [-] ssl.cert_file                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.065 97 DEBUG nova.openstack.common.service [-] ssl.key_file                   = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.066 97 DEBUG nova.openstack.common.service [-] glance.allowed_direct_url_schemes = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.067 97 DEBUG nova.openstack.common.service [-] glance.api_insecure            = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.068 97 DEBUG nova.openstack.common.service [-] glance.api_servers             = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.070 97 DEBUG nova.openstack.common.service [-] glance.host                    = glance-server.monitoringrefactordocker_default log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.070 97 DEBUG nova.openstack.common.service [-] glance.num_retries             = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.071 97 DEBUG nova.openstack.common.service [-] glance.port                    = 9292 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.072 97 DEBUG nova.openstack.common.service [-] glance.protocol                = http log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.073 97 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_api_url = /OpenAttestationWebServices/V1.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.074 97 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_auth_blob = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.084 97 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_auth_timeout = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.087 97 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_insecure_ssl = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.087 97 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_port = 8443 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.089 97 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_server = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.090 97 DEBUG nova.openstack.common.service [-] trusted_computing.attestation_server_ca_file = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.090 97 DEBUG nova.openstack.common.service [-] workarounds.destroy_after_evacuate = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.091 97 DEBUG nova.openstack.common.service [-] remote_debug.host              = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.092 97 DEBUG nova.openstack.common.service [-] remote_debug.port              = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.093 97 DEBUG nova.openstack.common.service [-] spice.agent_enabled            = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.094 97 DEBUG nova.openstack.common.service [-] spice.enabled                  = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.095 97 DEBUG nova.openstack.common.service [-] spice.html5proxy_base_url      = http://127.0.0.1:6082/spice_auto.html log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.096 97 DEBUG nova.openstack.common.service [-] spice.keymap                   = en-us log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.097 97 DEBUG nova.openstack.common.service [-] spice.server_listen            = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.098 97 DEBUG nova.openstack.common.service [-] spice.server_proxyclient_address = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-02-15 06:52:20.099 97 DEBUG nova.openstack.common.service [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2002
+2018-02-15 06:52:20.100 97 AUDIT nova.service [-] Starting scheduler node (version 2014.2.4)
+2018-02-15 06:52:20.720 97 DEBUG oslo.db.sqlalchemy.session [req-aea1d3f3-dc50-4054-997c-86abba1cba33 ] MySQL server mode set to STRICT_TRANS_TABLES,STRICT_ALL_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,TRADITIONAL,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION _init_events /usr/lib/python2.7/dist-packages/oslo/db/sqlalchemy/session.py:461
+2018-02-15 06:52:20.976 97 DEBUG nova.service [req-aea1d3f3-dc50-4054-997c-86abba1cba33 None] Creating RPC server for service scheduler start /usr/lib/python2.7/dist-packages/nova/service.py:186
+2018-02-15 06:52:20.981 97 INFO oslo.messaging._drivers.impl_rabbit [req-aea1d3f3-dc50-4054-997c-86abba1cba33 ] Connecting to AMQP server on 127.0.0.1:5672
+2018-02-15 06:52:20.989 97 ERROR oslo.messaging._drivers.impl_rabbit [req-aea1d3f3-dc50-4054-997c-86abba1cba33 ] AMQP server on 127.0.0.1:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 1 seconds.
+2018-02-15 06:52:21.992 97 INFO oslo.messaging._drivers.impl_rabbit [req-aea1d3f3-dc50-4054-997c-86abba1cba33 ] Delaying reconnect for 1.0 seconds...
+2018-02-15 06:52:22.995 97 INFO oslo.messaging._drivers.impl_rabbit [req-aea1d3f3-dc50-4054-997c-86abba1cba33 ] Connecting to AMQP server on 127.0.0.1:5672
+2018-02-15 06:52:23.006 97 INFO oslo.messaging._drivers.impl_rabbit [req-aea1d3f3-dc50-4054-997c-86abba1cba33 ] Connected to AMQP server on 127.0.0.1:5672
+2018-02-15 06:52:23.013 97 DEBUG nova.service [req-aea1d3f3-dc50-4054-997c-86abba1cba33 None] Join ServiceGroup membership for this service scheduler start /usr/lib/python2.7/dist-packages/nova/service.py:204
+2018-02-15 06:52:23.015 97 DEBUG nova.servicegroup.api [req-aea1d3f3-dc50-4054-997c-86abba1cba33 None] Join new ServiceGroup member nova-server to the scheduler group, service = <nova.service.Service object at 0x7fb4a86c4410> join /usr/lib/python2.7/dist-packages/nova/servicegroup/api.py:109
+2018-02-15 06:52:23.016 97 DEBUG nova.servicegroup.drivers.db [req-aea1d3f3-dc50-4054-997c-86abba1cba33 None] DB_Driver: join new ServiceGroup member nova-server to the scheduler group, service = <nova.service.Service object at 0x7fb4a86c4410> join /usr/lib/python2.7/dist-packages/nova/servicegroup/drivers/db.py:46
+2018-02-15 06:52:25.019 97 DEBUG nova.openstack.common.periodic_task [req-a0b522e4-2f28-4e76-b130-c4424e38f23d None] Running periodic task SchedulerManager._run_periodic_tasks run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:52:25.020 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 54.52 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:53:19.543 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._expire_reservations run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:53:19.555 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 5.47 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:53:25.021 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._run_periodic_tasks run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:53:25.024 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 55.52 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:54:20.545 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._expire_reservations run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:54:20.554 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 6.47 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:54:27.022 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._run_periodic_tasks run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:54:27.025 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 53.52 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:55:20.546 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._expire_reservations run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:55:20.553 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 6.47 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:55:27.021 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._run_periodic_tasks run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:55:27.023 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 53.52 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:56:20.543 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._expire_reservations run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:56:20.551 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 7.47 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:56:28.022 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._run_periodic_tasks run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:56:28.025 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 53.52 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:57:21.546 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._expire_reservations run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:57:21.556 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 8.46 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:57:30.021 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._run_periodic_tasks run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:57:30.023 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 52.52 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:58:22.544 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._expire_reservations run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:58:22.554 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 9.47 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:58:32.023 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._run_periodic_tasks run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:58:32.025 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 51.52 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:59:23.545 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._expire_reservations run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:59:23.551 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 8.47 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-02-15 06:59:28.053 97 ERROR oslo.db.sqlalchemy.exc_filters [-] DB exception wrapped.
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters Traceback (most recent call last):
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 887, in _execute_context
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     conn = self._revalidate_connection()
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 244, in _revalidate_connection
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     self.__connection = self.engine.raw_connection()
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in raw_connection
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     return self.pool.unique_connection()
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 280, in unique_connection
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     return _ConnectionFairy._checkout(self)
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 641, in _checkout
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     fairy = _ConnectionRecord.checkout(pool)
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 442, in checkout
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     dbapi_connection = rec.get_connection()
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 505, in get_connection
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     self.connection = self.__connect()
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 537, in __connect
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     connection = self.__pool._creator()
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 96, in connect
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     connection_invalidated=invalidated
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 199, in raise_from_cause
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     reraise(type(exception), exception, tb=exc_tb)
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 90, in connect
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     return dialect.connect(*cargs, **cparams)
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 377, in connect
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     return self.dbapi.connect(*cargs, **cparams)
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     return Connection(*args, **kwargs)
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters   File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters     super(Connection, self).__init__(*args, **kwargs2)
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters OperationalError: (OperationalError) (2005, "Unknown MySQL server host 'mysql-openstack' (0)") None None
+2018-02-15 06:59:28.053 97 TRACE oslo.db.sqlalchemy.exc_filters 
+2018-02-15 06:59:28.056 97 ERROR nova.servicegroup.drivers.db [-] model server went away
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db Traceback (most recent call last):
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/nova/servicegroup/drivers/db.py", line 99, in _report_state
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     service.service_ref, state_catalog)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/nova/conductor/api.py", line 180, in service_update
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return self._manager.service_update(context, service, values)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/nova/utils.py", line 973, in wrapper
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return func(*args, **kwargs)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/oslo/messaging/rpc/server.py", line 139, in inner
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return func(*args, **kwargs)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/nova/conductor/manager.py", line 320, in service_update
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     svc = self.db.service_update(context, service['id'], values)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/nova/db/api.py", line 150, in service_update
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return IMPL.service_update(context, service_id, values)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/nova/db/sqlalchemy/api.py", line 125, in wrapper
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return f(*args, **kwargs)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/nova/db/sqlalchemy/api.py", line 181, in wrapped
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return f(*args, **kwargs)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/nova/db/sqlalchemy/api.py", line 524, in service_update
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     with_compute_node=False, session=session)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/nova/db/sqlalchemy/api.py", line 424, in _service_get
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     result = query.first()
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2341, in first
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     ret = list(self[0:1])
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2208, in __getitem__
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return list(res)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2412, in __iter__
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return self._execute_and_instances(context)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2425, in _execute_and_instances
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     close_with_result=True)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/query.py", line 2416, in _connection_from_session
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     **kw)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 854, in connection
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     close_with_result=close_with_result)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 858, in _connection_for_bind
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return self.transaction._connection_for_bind(engine)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/orm/session.py", line 329, in _connection_for_bind
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     transaction = conn.begin()
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 420, in begin
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     self.__transaction = RootTransaction(self)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1357, in __init__
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     self.connection._begin_impl(self)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 490, in _begin_impl
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     self.dispatch.begin(self)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/event/attr.py", line 260, in __call__
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     fn(*args, **kw)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/oslo/db/sqlalchemy/session.py", line 331, in _begin_ping_listener
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     connection.scalar(select([1]))
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 659, in scalar
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return self.execute(object, *multiparams, **params).scalar()
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 729, in execute
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return meth(self, multiparams, params)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/sql/elements.py", line 321, in _execute_on_connection
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return connection._execute_clauseelement(self, multiparams, params)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 826, in _execute_clauseelement
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     compiled_sql, distilled_params
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 893, in _execute_context
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     None, None)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1156, in _handle_dbapi_exception
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     util.raise_from_cause(newraise, exc_info)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 199, in raise_from_cause
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     reraise(type(exception), exception, tb=exc_tb)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 887, in _execute_context
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     conn = self._revalidate_connection()
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 244, in _revalidate_connection
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     self.__connection = self.engine.raw_connection()
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/base.py", line 1848, in raw_connection
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return self.pool.unique_connection()
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 280, in unique_connection
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return _ConnectionFairy._checkout(self)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 641, in _checkout
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     fairy = _ConnectionRecord.checkout(pool)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 442, in checkout
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     dbapi_connection = rec.get_connection()
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 505, in get_connection
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     self.connection = self.__connect()
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/pool.py", line 537, in __connect
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     connection = self.__pool._creator()
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 96, in connect
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     connection_invalidated=invalidated
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/util/compat.py", line 199, in raise_from_cause
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     reraise(type(exception), exception, tb=exc_tb)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/strategies.py", line 90, in connect
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return dialect.connect(*cargs, **cparams)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/sqlalchemy/engine/default.py", line 377, in connect
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return self.dbapi.connect(*cargs, **cparams)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/MySQLdb/__init__.py", line 81, in Connect
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     return Connection(*args, **kwargs)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db   File "/usr/lib/python2.7/dist-packages/MySQLdb/connections.py", line 187, in __init__
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db     super(Connection, self).__init__(*args, **kwargs2)
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db DBError: (OperationalError) (2005, "Unknown MySQL server host 'mysql-openstack' (0)") None None (original cause: OperationalError: (OperationalError) (2005, "Unknown MySQL server host 'mysql-openstack' (0)") None None) u'SELECT 1' []
+2018-02-15 06:59:28.056 97 TRACE nova.servicegroup.drivers.db 
+2018-02-15 06:59:32.022 97 DEBUG nova.openstack.common.periodic_task [-] Running periodic task SchedulerManager._run_periodic_tasks run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-02-15 06:59:32.024 97 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7fb4a86c4410>> sleeping for 51.52 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132

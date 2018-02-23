@@ -1,0 +1,511 @@
+2017-05-11 04:20:41,389:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:20:41,390:DEBUG:About to wait on key /state, index None
+2017-05-11 04:20:41,390:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:20:41,391:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:20:41,397:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:23:04,128:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/quotas/default],
+ value=[{
+    "state": {
+        "worker_state": "READ_COMPLETE"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:23:04,128:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:23:04,129:DEBUG:About to wait on key /state, index None
+2017-05-11 04:23:04,129:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:23:04,129:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:23:04,131:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:23:04,145:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/reserve_addresses/default],
+ value=[{
+    "state": {
+        "worker_state": "READ_COMPLETE"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:23:04,145:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:23:04,146:DEBUG:About to wait on key /state, index None
+2017-05-11 04:23:04,146:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:23:04,146:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:23:04,147:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:23:12,980:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/common/v1.0/tenants/0b576f6f4cbf414f829cd12f008bf08f],
+ value=[{
+    "state": {
+        "worker_state": "READ_COMPLETE"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:23:12,980:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:23:12,980:DEBUG:About to wait on key /state, index None
+2017-05-11 04:23:12,980:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:23:12,981:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:23:12,982:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:23:15,955:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/ese_devices/a1f745c1-e6b9-45ef-94db-f33b37709fb0],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"switch\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[{\"output_value\": [\"default-global-system-config\", \"QFX-NW02\"], \"description\": \"The FQ name of the physical router.\", \"output_key\": \"fq_name\"}, {\"output_value\": \"physical_router\", \"description\": \"A unique id for the physical router.\", \"output_key\": \"id\"}, {\"output_value\": \"dummy\", \"description\": \"The name of the physical router.\", \"output_key\": \"name\"}]"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:23:15,955:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:23:15,955:DEBUG:About to wait on key /state, index None
+2017-05-11 04:23:15,955:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:23:15,956:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:23:15,957:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:23:21,617:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/ese_physical_ports/97fcdf3a-81a4-41a5-8ae6-52c431fc5a5c],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"port\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[{\"output_value\": \"dddddddd-dddd-dddd-dddd-dddddddddddd\", \"description\": \"A unique id for the physical interface\", \"output_key\": \"id\"}, {\"output_value\": null, \"output_error\": \"'ContrailPhysicalInterface' object has no attribute 'pi_uuid'\", \"description\": \"The name of the physical interface.\", \"output_key\": \"name\"}]"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:23:21,617:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:23:21,617:DEBUG:About to wait on key /state, index None
+2017-05-11 04:23:21,617:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:23:21,618:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:23:21,621:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:23:27,725:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/ese_physical_ports/8a4bbfe0-5aae-42f5-8b94-c4c14b9e7306],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"port\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[{\"output_value\": \"dddddddd-dddd-dddd-dddd-dddddddddddd\", \"description\": \"A unique id for the physical interface\", \"output_key\": \"id\"}, {\"output_value\": null, \"output_error\": \"'ContrailPhysicalInterface' object has no attribute 'pi_uuid'\", \"description\": \"The name of the physical interface.\", \"output_key\": \"name\"}]"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:23:27,726:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:23:27,726:DEBUG:About to wait on key /state, index None
+2017-05-11 04:23:27,726:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:23:27,726:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:23:27,728:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:23:31,571:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/edge_routers/9b82b55a-551e-4069-ae77-c972e30ab0cc],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"router\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:23:31,571:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:23:31,572:DEBUG:About to wait on key /state, index None
+2017-05-11 04:23:31,572:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:23:31,572:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:23:31,573:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:23:33,379:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/edge_routers/198b93f2-006e-45b6-96d3-e7ef6f759501],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"router\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:23:33,379:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:23:33,380:DEBUG:About to wait on key /state, index None
+2017-05-11 04:23:33,380:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:23:33,381:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:23:33,382:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:23:35,356:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/ha_routers/d4286c1d-86e7-42d3-9d84-a4d9daa3ae17],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"primary\": \"ACTIVE\", \"secondary\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:23:35,357:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:23:35,357:DEBUG:About to wait on key /state, index None
+2017-05-11 04:23:35,358:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:23:35,358:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:23:35,359:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:23:37,249:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/er_physical_interfaces/1fda2a88-f7e9-4982-9ce2-d65c9611aae7],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"interface\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:23:37,249:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:23:37,249:DEBUG:About to wait on key /state, index None
+2017-05-11 04:23:37,249:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:23:37,250:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:23:37,251:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:23:40,174:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/er_physical_interfaces/469e4283-80e6-491c-830f-c483c1f7c695],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"interface\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:23:40,174:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:23:40,174:DEBUG:About to wait on key /state, index None
+2017-05-11 04:23:40,174:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:23:40,174:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:23:40,175:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:23:42,527:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/ha_interfaces/1205d3f2-7568-412a-a554-012340ab3172],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"primary\": \"ACTIVE\", \"secondary\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:23:42,527:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:23:42,528:DEBUG:About to wait on key /state, index None
+2017-05-11 04:23:42,528:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:23:42,528:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:23:42,531:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:23:54,236:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/internet_services/848e04de-733d-4f98-8971-bdb3b83e0296],
+ value=[{
+    "state": {
+        "worker_state": "READ_COMPLETE"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:23:54,236:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:23:54,237:DEBUG:About to wait on key /state, index None
+2017-05-11 04:23:54,237:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:23:54,237:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:23:54,238:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:24:05,070:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/qos_options/e25f6309-c384-446e-bdc1-5241cb14890b],
+ value=[{
+    "state": {
+        "worker_state": "READ_COMPLETE"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:24:05,070:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:24:05,070:DEBUG:About to wait on key /state, index None
+2017-05-11 04:24:05,070:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:24:05,071:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:24:05,072:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:24:05,969:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/public_ip_pools/5cd14f90-cf3c-4aeb-b30a-227b3c936761],
+ value=[{
+    "state": {
+        "worker_state": "READ_COMPLETE"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:24:05,969:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:24:05,969:DEBUG:About to wait on key /state, index None
+2017-05-11 04:24:05,969:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:24:05,970:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:24:05,972:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:24:23,737:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/internet_gateways/429e24b5-a2f0-4fb8-b467-e335857e9476],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"downlink\": \"ACTIVE\", \"uplink\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[]"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:24:23,738:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:24:23,738:DEBUG:About to wait on key /state, index None
+2017-05-11 04:24:23,738:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:24:23,738:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:24:23,739:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:24:37,345:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/public_ip_pools/5cd14f90-cf3c-4aeb-b30a-227b3c936761],
+ value=[{
+    "state": {
+        "worker_state": "READ_COMPLETE"
+    }, 
+    "version": 2, 
+    "error": ""
+}]
+2017-05-11 04:24:37,346:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:24:37,346:DEBUG:About to wait on key /state, index None
+2017-05-11 04:24:37,346:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:24:37,346:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:24:37,347:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:24:46,231:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/public_ips/bc6f2c6d-59be-4f56-a2d7-96ab578c0735],
+ value=[{
+    "state": {
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[]"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:24:46,232:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:24:46,232:DEBUG:About to wait on key /state, index None
+2017-05-11 04:24:46,232:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:24:46,232:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:24:46,235:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:25:03,425:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/networks/52d7bef8-aa17-45c3-b63e-6a0e504603f0],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"network\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[{\"output_value\": \"[]\", \"description\": \"The name of the virtual network.\", \"output_key\": \"route_targets\"}, {\"output_value\": \"default-domain:admin:52d7bef8-aa17-45c3-b63e-6a0e504603f0\", \"description\": \"The FQ name of the virtual network.\", \"output_key\": \"fq_name\"}, {\"output_value\": \"52d7bef8-aa17-45c3-b63e-6a0e504603f0\", \"description\": \"A unique id for the virtual network.\", \"output_key\": \"id\"}, {\"output_value\": \"52d7bef8-aa17-45c3-b63e-6a0e504603f0\", \"description\": \"The name of the virtual network.\", \"output_key\": \"name\"}]"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:25:03,426:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:25:03,426:DEBUG:About to wait on key /state, index None
+2017-05-11 04:25:03,426:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:25:03,426:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:25:03,430:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:25:20,207:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/ports/0cd64eb2-32e8-4069-b5e4-9b718aa61b76],
+ value=[{
+    "state": {
+        "worker_state": "READ_COMPLETE"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:25:20,208:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:25:20,208:DEBUG:About to wait on key /state, index None
+2017-05-11 04:25:20,208:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:25:20,209:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:25:20,212:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:25:22,493:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/subnets/a510f785-7758-4ce5-8fd4-c107d11b8e40],
+ value=[{
+    "state": {
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[{\"output_value\": \"172.16.101.0/24\", \"description\": \"IP prefix of local subnet.\", \"output_key\": \"ip_prefix\"}, {\"output_value\": \"a510f785-7758-4ce5-8fd4-c107d11b8e40\", \"description\": \"The name of the local subnet.\", \"output_key\": \"name\"}, {\"output_value\": \"172.16.101.1\", \"description\": \"Default gateway of local subnet.\", \"output_key\": \"default_gateway\"}, {\"output_value\": \"52d7bef8-aa17-45c3-b63e-6a0e504603f0\", \"description\": \"A unique id for the network.\", \"output_key\": \"network_id\"}, {\"output_value\": \"aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa\", \"description\": \"IPAM this local subnet uses.\", \"output_key\": \"ipam\"}, {\"output_value\": \"435a94ee-ab64-4787-acbb-d2d7c95867e9\", \"description\": \"A unique id for the local subnet.\", \"output_key\": \"id\"}]"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:25:22,493:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:25:22,493:DEBUG:About to wait on key /state, index None
+2017-05-11 04:25:22,494:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:25:22,494:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:25:22,496:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:25:57,166:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/gw_interfaces/b9618566-14ea-4505-8eae-8fdb4b6a0ec1],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"primary\": \"master\", \"secondary\": \"backup\"}", 
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[]"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:25:57,166:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:25:57,166:DEBUG:About to wait on key /state, index None
+2017-05-11 04:25:57,166:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:25:57,167:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:25:57,167:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:26:00,677:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/ports/b411d930-df4c-4766-ae66-d0aed9d27c76],
+ value=[{
+    "state": {
+        "state_monitoring": "{}", 
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[{\"output_value\": \"bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb\", \"description\": \"Virtual network.\", \"output_key\": \"virtual_network\"}, {\"output_value\": \"default-domain:admin:b411d930-df4c-4766-ae66-d0aed9d27c76\", \"description\": \"Fully Qualified Name of the VMI\", \"output_key\": \"fq_name\"}, {\"output_value\": \"b411d930-df4c-4766-ae66-d0aed9d27c76\", \"description\": \"A unique id for the virtual machine interface.\", \"output_key\": \"id\"}, {\"output_value\": \"null\", \"description\": \"Virtual machine allowed address pairs.\", \"output_key\": \"allowed_address_pairs\"}, {\"output_value\": \"xx:xx:xx:xx:xx:xx\", \"description\": \"Virtual machine interface mac address.\", \"output_key\": \"mac_address\"}]"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:26:00,678:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:26:00,678:DEBUG:About to wait on key /state, index None
+2017-05-11 04:26:00,678:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:26:00,678:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:26:00,680:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:26:01,057:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/ports/7abe783f-4837-417d-b76f-771ec4d38b97],
+ value=[{
+    "state": {
+        "state_monitoring": "{}", 
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[{\"output_value\": \"bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb\", \"description\": \"Virtual network.\", \"output_key\": \"virtual_network\"}, {\"output_value\": \"default-domain:admin:7abe783f-4837-417d-b76f-771ec4d38b97\", \"description\": \"Fully Qualified Name of the VMI\", \"output_key\": \"fq_name\"}, {\"output_value\": \"7abe783f-4837-417d-b76f-771ec4d38b97\", \"description\": \"A unique id for the virtual machine interface.\", \"output_key\": \"id\"}, {\"output_value\": \"null\", \"description\": \"Virtual machine allowed address pairs.\", \"output_key\": \"allowed_address_pairs\"}, {\"output_value\": \"xx:xx:xx:xx:xx:xx\", \"description\": \"Virtual machine interface mac address.\", \"output_key\": \"mac_address\"}]"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:26:01,058:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:26:01,058:DEBUG:About to wait on key /state, index None
+2017-05-11 04:26:01,058:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:26:01,058:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:26:01,061:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:26:03,087:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/ese_logical_ports/b1cf2461-ecb9-4923-966e-e61211f8b03c],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"logical_port\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[{\"output_value\": \"cccccccc-cccc-cccc-cccc-cccccccccccc\", \"description\": \"A unique id for the logical interface\", \"output_key\": \"id\"}, {\"output_value\": null, \"output_error\": \"'ContrailLogicalInterface' object has no attribute 'li_uuid'\", \"description\": \"The name of the logical interface.\", \"output_key\": \"name\"}]"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:26:03,087:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:26:03,087:DEBUG:About to wait on key /state, index None
+2017-05-11 04:26:03,088:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:26:03,088:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:26:03,089:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:26:03,438:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/ese_logical_ports/3ce86e39-7a81-46f8-b0c4-62a4776746f1],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"logical_port\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[{\"output_value\": \"cccccccc-cccc-cccc-cccc-cccccccccccc\", \"description\": \"A unique id for the logical interface\", \"output_key\": \"id\"}, {\"output_value\": null, \"output_error\": \"'ContrailLogicalInterface' object has no attribute 'li_uuid'\", \"description\": \"The name of the logical interface.\", \"output_key\": \"name\"}]"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:26:03,438:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:26:03,438:DEBUG:About to wait on key /state, index None
+2017-05-11 04:26:03,439:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:26:03,439:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:26:03,440:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:26:13,878:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/ports/7abe783f-4837-417d-b76f-771ec4d38b97],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"vmi\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[{\"output_value\": \"bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb\", \"description\": \"Virtual network.\", \"output_key\": \"virtual_network\"}, {\"output_value\": \"default-domain:admin:7abe783f-4837-417d-b76f-771ec4d38b97\", \"description\": \"Fully Qualified Name of the VMI\", \"output_key\": \"fq_name\"}, {\"output_value\": \"7abe783f-4837-417d-b76f-771ec4d38b97\", \"description\": \"A unique id for the virtual machine interface.\", \"output_key\": \"id\"}, {\"output_value\": \"null\", \"description\": \"Virtual machine allowed address pairs.\", \"output_key\": \"allowed_address_pairs\"}, {\"output_value\": \"xx:xx:xx:xx:xx:xx\", \"description\": \"Virtual machine interface mac address.\", \"output_key\": \"mac_address\"}]"
+    }, 
+    "version": 2, 
+    "error": ""
+}]
+2017-05-11 04:26:13,878:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:26:13,878:DEBUG:About to wait on key /state, index None
+2017-05-11 04:26:13,878:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:26:13,878:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:26:13,881:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:26:14,494:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/ports/b411d930-df4c-4766-ae66-d0aed9d27c76],
+ value=[{
+    "state": {
+        "state_monitoring": "{\"vmi\": \"ACTIVE\"}", 
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[{\"output_value\": \"bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb\", \"description\": \"Virtual network.\", \"output_key\": \"virtual_network\"}, {\"output_value\": \"default-domain:admin:b411d930-df4c-4766-ae66-d0aed9d27c76\", \"description\": \"Fully Qualified Name of the VMI\", \"output_key\": \"fq_name\"}, {\"output_value\": \"b411d930-df4c-4766-ae66-d0aed9d27c76\", \"description\": \"A unique id for the virtual machine interface.\", \"output_key\": \"id\"}, {\"output_value\": \"null\", \"description\": \"Virtual machine allowed address pairs.\", \"output_key\": \"allowed_address_pairs\"}, {\"output_value\": \"xx:xx:xx:xx:xx:xx\", \"description\": \"Virtual machine interface mac address.\", \"output_key\": \"mac_address\"}]"
+    }, 
+    "version": 2, 
+    "error": ""
+}]
+2017-05-11 04:26:14,494:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:26:14,495:DEBUG:About to wait on key /state, index None
+2017-05-11 04:26:14,495:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:26:14,495:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:26:14,498:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:27:13,458:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/state/v2.0/static_routes/2cbf727e-ac76-4c54-be9c-3f374d792ff4],
+ value=[{
+    "state": {
+        "worker_state": "CREATE_COMPLETED", 
+        "heat_outputs": "[]"
+    }, 
+    "version": 1, 
+    "error": ""
+}]
+2017-05-11 04:27:13,458:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:27:13,458:DEBUG:About to wait on key /state, index None
+2017-05-11 04:27:13,458:DEBUG:Issuing read for key /state with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:27:13,459:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:27:13,460:DEBUG:"GET /v2/keys/state?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 04:37:13,560:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2017-05-11 04:37:13,560:DEBUG:Reconnection disabled, giving up.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/hubs/hub.py", line 457, in fire_timers
+    timer()
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/hubs/timer.py", line 58, in __call__
+    cb(*args, **kw)
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/greenthread.py", line 214, in main
+    result = function(*args, **kwargs)
+  File "/tools/etcd-watcher-for-esi/python-etcd-watch.py", line 15, in _consume_loop
+    result = client.watch(key_info, recursive=True)
+  File "/usr/local/lib/python2.7/dist-packages/etcd/client.py", line 655, in watch
+    recursive=recursive)
+  File "/usr/local/lib/python2.7/dist-packages/etcd/client.py", line 481, in read
+    timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/etcd/client.py", line 788, in api_execute
+    cause=e
+EtcdConnectionFailed: Connection to etcd failed due to ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+Traceback (most recent call last):
+  File "/tools/etcd-watcher-for-esi/python-etcd-watch.py", line 48, in <module>
+    thread.wait()
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/greenthread.py", line 175, in wait
+    return self._exit_event.wait()
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/event.py", line 121, in wait
+    return hubs.get_hub().switch()
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/hubs/hub.py", line 294, in switch
+    return self.greenlet.switch()
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/greenthread.py", line 214, in main
+    result = function(*args, **kwargs)
+  File "/tools/etcd-watcher-for-esi/python-etcd-watch.py", line 15, in _consume_loop
+    result = client.watch(key_info, recursive=True)
+  File "/usr/local/lib/python2.7/dist-packages/etcd/client.py", line 655, in watch
+    recursive=recursive)
+  File "/usr/local/lib/python2.7/dist-packages/etcd/client.py", line 481, in read
+    timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/etcd/client.py", line 788, in api_execute
+    cause=e
+etcd.EtcdConnectionFailed: Connection to etcd failed due to ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)

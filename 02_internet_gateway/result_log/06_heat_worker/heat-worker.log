@@ -1,0 +1,2147 @@
+2017-05-11 04:21:56,825 [1;37mINFO[0m heat_worker - Registered gohan 2-step delete flag: marked_for_deletion (resources.py - 62)
+2017-05-11 04:21:56,825 [1;34mDEBUG[0m heat_worker - Gohan config path: /config (resources.py - 274)
+2017-05-11 04:21:56,826 [1;34mDEBUG[0m heat_worker - Gohan state path: /state (resources.py - 298)
+2017-05-11 04:21:57,048 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 1s. (gohan.py - 27)
+2017-05-11 04:21:58,051 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 2s. (gohan.py - 27)
+2017-05-11 04:22:00,054 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 4s. (gohan.py - 27)
+2017-05-11 04:22:04,061 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 8s. (gohan.py - 27)
+2017-05-11 04:22:12,066 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 16s. (gohan.py - 27)
+2017-05-11 04:22:28,083 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 16s. (gohan.py - 27)
+2017-05-11 04:22:44,102 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 16s. (gohan.py - 27)
+================================================
+2017-05-11 04:23:00,597 [1;34mDEBUG[0m heat_worker - Starting worker. (etcd_worker.py - 229)
+2017-05-11 04:23:00,598 [1;34mDEBUG[0m heat_worker - Worker started. (etcd_worker.py - 232)
+2017-05-11 04:23:00,598 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:23:00,598 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:23:13,108 [1;34mDEBUG[0m heat_worker - Reserved job: create:heat_worker:ese_device:a1f745c1-e6b9-45ef-94db-f33b37709fb0:1:gyov9 using id: 07f7ad5b-c59b-4828-8f28-c63f8faa703d (job_queue.py - 245)
+2017-05-11 04:23:13,110 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:23:13,111 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 212)
+2017-05-11 04:23:13,119 [1;34mDEBUG[0m heat_worker - Starting work on new ready job create:heat_worker:ese_device:a1f745c1-e6b9-45ef-94db-f33b37709fb0:1:gyov9 (etcd_worker.py - 113)
+2017-05-11 04:23:13,120 [1;34mDEBUG[0m heat_worker - Checking job status for ese_device:a1f745c1-e6b9-45ef-94db-f33b37709fb0 (heat_stacks_worker.py - 42)
+2017-05-11 04:23:13,843 [1;37mINFO[0m heat_worker - CREATE STARTED (heat_messenger.py - 62)
+2017-05-11 04:23:14,014 [1;34mDEBUG[0m heat_worker - Template id ese_device_existing resolved from mapping: ACese_device_&Pexisting (resources.py - 838)
+2017-05-11 04:23:14,019 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  ESE Device (existing) template
+
+parameters:
+  name:
+    type: string
+    label: Physical Router Name
+    description: Name of the physical router that will be created.
+  hostname:
+    type: string
+    label: Hostname
+    description: Name of host (vrouter) to create router on
+
+resources:
+  physical_router:
+    type: OS::Contrail::ExistingResource
+    properties:
+      fq_name:
+        - "default-global-system-config"
+        - { get_param: hostname }
+      resource_type: "physical_router"
+outputs:
+  id:
+    description: A unique id for the physical router.
+    value: { get_resource: physical_router }
+  name:
+    description: The name of the physical router.
+    value: { get_attr: [physical_router, name] }
+  fq_name:
+    description: The FQ name of the physical router.
+    value: { get_attr: [physical_router, fq_name] }
+ with parameters:
+{u'hostname': u'QFX-NW02', u'name': u'QFX-NW02'}, 
+using this jinja parameters: 
+{} (heat.py - 129)
+2017-05-11 04:23:14,510 [1;34mDEBUG[0m heat_worker - Stack "ese_device_a1f745c1-e6b9-45ef-94db-f33b37709fb0" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:23:15,607 [1;34mDEBUG[0m heat_worker - Stack "ese_device_a1f745c1-e6b9-45ef-94db-f33b37709fb0" in status "CREATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:23:15,607 [1;37mINFO[0m heat_worker - CREATED ese_device_a1f745c1-e6b9-45ef-94db-f33b37709fb0 (heat.py - 239)
+2017-05-11 04:23:15,819 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:ese_device:a1f745c1-e6b9-45ef-94db-f33b37709fb0:1:gyov9 with handler heat_worker is not last. (etcd_worker.py - 185)
+2017-05-11 04:23:15,836 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:ese_device:a1f745c1-e6b9-45ef-94db-f33b37709fb0:1:gyov9 finished. (job_queue.py - 266)
+2017-05-11 04:23:19,397 [1;34mDEBUG[0m heat_worker - Reserved job: create:heat_worker:ese_physical_port:97fcdf3a-81a4-41a5-8ae6-52c431fc5a5c:1:k4lop using id: 6d22847f-5fdc-42d8-ac56-7467e1f1abdf (job_queue.py - 245)
+2017-05-11 04:23:19,399 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:23:19,400 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 212)
+2017-05-11 04:23:19,410 [1;34mDEBUG[0m heat_worker - Starting work on new ready job create:heat_worker:ese_physical_port:97fcdf3a-81a4-41a5-8ae6-52c431fc5a5c:1:k4lop (etcd_worker.py - 113)
+2017-05-11 04:23:19,411 [1;34mDEBUG[0m heat_worker - Checking job status for ese_physical_port:97fcdf3a-81a4-41a5-8ae6-52c431fc5a5c (heat_stacks_worker.py - 42)
+2017-05-11 04:23:19,693 [1;37mINFO[0m heat_worker - CREATE STARTED (heat_messenger.py - 62)
+2017-05-11 04:23:19,799 [1;34mDEBUG[0m heat_worker - Template id ese_physical_port_new resolved from mapping: ACese_physical_port_&Pexisting (resources.py - 838)
+2017-05-11 04:23:19,802 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  Physical port template
+
+parameters:
+  physical_device:
+    type: string
+    label: Physical Device Id
+    description: Id of the physical device on which physical port will be created.
+  physical_port_name:
+    type: string
+    label: Physical Interface Name
+    description: Name of the physical port.
+
+resources:
+  physical_interface:
+    type: OS::Contrail::PhysicalInterface
+    properties:
+      name: { get_param: physical_port_name }
+      physical_router: { get_param: physical_device }
+
+outputs:
+  id:
+    description: A unique id for the physical interface
+    value: { get_resource: physical_interface }
+  name:
+    description: The name of the physical interface.
+    value: { get_attr: [physical_interface, name] }
+ with parameters:
+{u'physical_port_name': u'xe-0/0/3', u'physical_device': u'physical_router'}, 
+using this jinja parameters: 
+{} (heat.py - 129)
+2017-05-11 04:23:20,145 [1;34mDEBUG[0m heat_worker - Stack "ese_physical_port_97fcdf3a-81a4-41a5-8ae6-52c431fc5a5c" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:23:21,265 [1;34mDEBUG[0m heat_worker - Stack "ese_physical_port_97fcdf3a-81a4-41a5-8ae6-52c431fc5a5c" in status "CREATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:23:21,266 [1;37mINFO[0m heat_worker - CREATED ese_physical_port_97fcdf3a-81a4-41a5-8ae6-52c431fc5a5c (heat.py - 239)
+2017-05-11 04:23:21,493 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:ese_physical_port:97fcdf3a-81a4-41a5-8ae6-52c431fc5a5c:1:k4lop with handler heat_worker is not last. (etcd_worker.py - 185)
+2017-05-11 04:23:21,516 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:ese_physical_port:97fcdf3a-81a4-41a5-8ae6-52c431fc5a5c:1:k4lop finished. (job_queue.py - 266)
+2017-05-11 04:23:25,305 [1;34mDEBUG[0m heat_worker - Reserved job: create:heat_worker:ese_physical_port:8a4bbfe0-5aae-42f5-8b94-c4c14b9e7306:1:nmu85 using id: 41c56fc5-c8dd-4aa3-9c8f-2fc3d2eb1c09 (job_queue.py - 245)
+2017-05-11 04:23:25,306 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:23:25,307 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 212)
+2017-05-11 04:23:25,319 [1;34mDEBUG[0m heat_worker - Starting work on new ready job create:heat_worker:ese_physical_port:8a4bbfe0-5aae-42f5-8b94-c4c14b9e7306:1:nmu85 (etcd_worker.py - 113)
+2017-05-11 04:23:25,320 [1;34mDEBUG[0m heat_worker - Checking job status for ese_physical_port:8a4bbfe0-5aae-42f5-8b94-c4c14b9e7306 (heat_stacks_worker.py - 42)
+2017-05-11 04:23:25,658 [1;37mINFO[0m heat_worker - CREATE STARTED (heat_messenger.py - 62)
+2017-05-11 04:23:25,782 [1;34mDEBUG[0m heat_worker - Template id ese_physical_port_new resolved from mapping: ACese_physical_port_&Pexisting (resources.py - 838)
+2017-05-11 04:23:25,786 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  Physical port template
+
+parameters:
+  physical_device:
+    type: string
+    label: Physical Device Id
+    description: Id of the physical device on which physical port will be created.
+  physical_port_name:
+    type: string
+    label: Physical Interface Name
+    description: Name of the physical port.
+
+resources:
+  physical_interface:
+    type: OS::Contrail::PhysicalInterface
+    properties:
+      name: { get_param: physical_port_name }
+      physical_router: { get_param: physical_device }
+
+outputs:
+  id:
+    description: A unique id for the physical interface
+    value: { get_resource: physical_interface }
+  name:
+    description: The name of the physical interface.
+    value: { get_attr: [physical_interface, name] }
+ with parameters:
+{u'physical_port_name': u'xe-0/0/4', u'physical_device': u'physical_router'}, 
+using this jinja parameters: 
+{} (heat.py - 129)
+2017-05-11 04:23:26,184 [1;34mDEBUG[0m heat_worker - Stack "ese_physical_port_8a4bbfe0-5aae-42f5-8b94-c4c14b9e7306" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:23:27,367 [1;34mDEBUG[0m heat_worker - Stack "ese_physical_port_8a4bbfe0-5aae-42f5-8b94-c4c14b9e7306" in status "CREATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:23:27,367 [1;37mINFO[0m heat_worker - CREATED ese_physical_port_8a4bbfe0-5aae-42f5-8b94-c4c14b9e7306 (heat.py - 239)
+2017-05-11 04:23:27,618 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:ese_physical_port:8a4bbfe0-5aae-42f5-8b94-c4c14b9e7306:1:nmu85 with handler heat_worker is not last. (etcd_worker.py - 185)
+2017-05-11 04:23:27,638 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:ese_physical_port:8a4bbfe0-5aae-42f5-8b94-c4c14b9e7306:1:nmu85 finished. (job_queue.py - 266)
+2017-05-11 04:23:55,496 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:23:55,497 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:23:55,497 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:24:07,057 [1;34mDEBUG[0m heat_worker - Reserved job: create:heat_worker:internet_gateway:429e24b5-a2f0-4fb8-b467-e335857e9476:1:gt36x using id: 6968a7c7-3264-4f6a-8055-86eef75e4dce (job_queue.py - 245)
+2017-05-11 04:24:07,060 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:24:07,061 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 212)
+2017-05-11 04:24:07,085 [1;34mDEBUG[0m heat_worker - Starting work on new ready job create:heat_worker:internet_gateway:429e24b5-a2f0-4fb8-b467-e335857e9476:1:gt36x (etcd_worker.py - 113)
+2017-05-11 04:24:07,086 [1;34mDEBUG[0m heat_worker - Checking job status for internet_gateway:429e24b5-a2f0-4fb8-b467-e335857e9476 (heat_stacks_worker.py - 42)
+2017-05-11 04:24:07,387 [1;37mINFO[0m heat_worker - CREATE STARTED (heat_messenger.py - 62)
+2017-05-11 04:24:07,525 [1;34mDEBUG[0m heat_worker - Template id internet_gateway resolved from mapping: Cinternet_gateway (resources.py - 838)
+2017-05-11 04:24:07,535 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  Internet GW Instance
+
+parameters:
+  primary_device_ip:
+    description: Ip address that will be used to establish ssh connection to the Primary Device.
+    label: Ip address of the device.
+    type: string
+  primary_device_port:
+    description: Port that will be used to establish ssh connection to the Primary Device.
+    label: Port of the ssh connection.
+    type: number
+  primary_device_username:
+    description: Name of the user which will be used to log onto the Primary Device.
+    label: User name to log on to device.
+    type: string
+  primary_device_password:
+    description: Password of the user which will be used to log onto the Primary Device.
+    label: Users password.
+    type: string
+  secondary_device_ip:
+    description: Ip address that will be used to establish ssh connection to the Secondary Device.
+    label: Ip address of the device.
+    type: string
+  secondary_device_port:
+    description: Port that will be used to establish ssh connection to the Secondary Device.
+    label: Port of the ssh connection.
+    type: number
+  secondary_device_username:
+    description: Name of the user which will be used to log onto the Secondary Device.
+    label: User name to log on to device.
+    type: string
+  secondary_device_password:
+    description: Password of the user which will be used to log onto the Secondary Device.
+    label: Users password.
+    type: string
+  primary_device_physical_interface:
+    description: Physical port on the Primary device on which the logical port will be configured
+    label: Underlying physical interface
+    type: string
+  primary_device_logical_interface:
+    description: Name of the created logical interface on the Primary device
+    label: Logical Interface name
+    type: string
+  secondary_device_physical_interface:
+    description: Physical port on the Secondary device on which the logical port will be configured
+    label: Underlying physical interface
+    type: string
+  secondary_device_logical_interface:
+    description: Name of the created logical interface on the Secondary device
+    label: Logical Interface name
+    type: string
+  vlan:
+    description: vlan tag used by logical interface
+    label: VLAN ID
+    type: string
+  vrf_name:
+    description: Name for VRF used by logical interface
+    label: VRF name
+    type: string
+  vrf_import_policy:
+    description: Import Policy for IGS
+    label: Import Policy
+    type: string
+  vrf_export_policy:
+    description: Export Policy for IGS
+    label: Export Policy
+    type: string
+  uplink_import_policy:
+    description: Uplink Import Policy for IGS
+    label: Uplink Import Policy
+    type: string
+  input_filter_name:
+    description: Policer name to use as input policer
+    label: Input policer name
+    type: string
+  output_filter_name:
+    description: Policer name to use as output policer
+    label: Output policer name
+    type: string
+  primary_vrrp_config_group:
+    description: Name for apply group to use for interface for VRRP
+    label: Apply group name
+    type: string
+  secondary_vrrp_config_group:
+    description: Name for apply group to use for interface for VRRP
+    label: Apply group name
+    type: string
+  inet_in_filter:
+    label: Internet Input Filter
+    type: string
+  inet_out_filter:
+    label: Internet Output Filter
+    type: string
+  prefix_list_name:
+    label: Prefix list name
+    type: string
+  filter_term_name:
+    label: Filter term name
+    type: string
+
+resources:
+
+  netconf_configure_primary:
+    properties:
+      on_update: merge
+      lock_timeout: 3000
+      configs:
+      - config:
+          str_replace:
+            params:
+              $APPLY_GROUP:
+                get_param: primary_vrrp_config_group
+              $VLAN:
+                get_param: vlan
+              $INPUT_FILTER:
+                get_param: input_filter_name
+              $OUTPUT_FILTER:
+                get_param: output_filter_name
+            template: |
+              apply-groups $APPLY_GROUP
+              vlan-id $VLAN;
+              description inet_gw;
+              family inet {
+                  filter {
+                      input $INPUT_FILTER;
+                      output $OUTPUT_FILTER;
+                  }
+              }
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: interfaces
+          - config_type: name
+            xml_type: named_tag
+            tag: interface
+            name: { get_param: primary_device_physical_interface }
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: unit
+            name: { get_param: vlan }
+      - config:
+          str_replace:
+            params:
+              $LIF:
+                get_param: primary_device_logical_interface
+              $IMPORT_POLICY:
+                get_param: vrf_import_policy
+              $EXPORT_POLICY:
+                get_param: vrf_export_policy
+            template: |
+                instance-type virtual-router;
+                interface $LIF;
+                routing-options instance-import $IMPORT_POLICY;
+                routing-options instance-export $EXPORT_POLICY;
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: routing-instances
+          - config_type: name
+            xml_type: named_tag
+            tag: instance
+            name: { get_param: vrf_name }
+      - config:
+          str_replace:
+            params:
+              $VRF_NAME:
+                get_param: vrf_name
+            template: |
+              from instance $VRF_NAME;
+              then accept;
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: policy-options
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: policy-statement
+            name: { get_param: uplink_import_policy }
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: term
+            name: { get_param: vrf_name }
+      - config: ""
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: policy-options
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: prefix-list
+            name: { get_param: prefix_list_name }
+      - config:
+          str_replace:
+            params:
+              $PREFIX_LIST_NAME:
+                get_param: prefix_list_name
+              $VRF_NAME:
+                get_param: vrf_name
+            template: |
+               from {
+                  destination-prefix-list {
+                       $PREFIX_LIST_NAME;
+                  }
+               }
+               then {
+                    count $VRF_NAME_IN;
+                    accept;
+               }
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: firewall
+          - config_type: tag
+            xml_type: tag
+            tag: family
+          - config_type: tag
+            xml_type: tag
+            tag: inet
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: filter
+            name: { get_param: inet_in_filter }
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: term
+            name: { get_param: filter_term_name }
+        additional_commands:
+          str_replace:
+            params:
+              $TERM_NAME:
+                get_param: filter_term_name
+              $INET_IN:
+                get_param: inet_in_filter
+            template: |
+              insert firewall family inet filter $INET_IN term $TERM_NAME before term all-accept
+      - config:
+          str_replace:
+            params:
+              $PREFIX_LIST_NAME:
+                get_param: prefix_list_name
+              $VRF_NAME:
+                get_param: vrf_name
+            template: |
+               from {
+                  source-prefix-list {
+                       $PREFIX_LIST_NAME;
+                  }
+               }
+               then {
+                    count $VRF_NAME_OUT;
+                    accept;
+               }
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: firewall
+          - config_type: tag
+            xml_type: tag
+            tag: family
+          - config_type: tag
+            xml_type: tag
+            tag: inet
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: filter
+            name: { get_param: inet_out_filter }
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: term
+            name: { get_param: filter_term_name }
+        additional_commands:
+          str_replace:
+            params:
+              $TERM_NAME:
+                get_param: filter_term_name
+              $INET_OUT:
+                get_param: inet_out_filter
+            template: |
+              insert firewall family inet filter $INET_OUT term $TERM_NAME before term all-accept
+      device_ip:
+        get_param: primary_device_ip
+      password:
+        get_param: primary_device_password
+      port:
+        get_param: primary_device_port
+      username:
+        get_param: primary_device_username
+    type: OS::Contrail::NetconfNamedConfigs
+
+  netconf_configure_secondary:
+    properties:
+      on_update: merge
+      lock_timeout: 3000
+      configs:
+      - config:
+          str_replace:
+            params:
+              $APPLY_GROUP:
+                get_param: secondary_vrrp_config_group
+              $VLAN:
+                get_param: vlan
+              $INPUT_FILTER:
+                get_param: input_filter_name
+              $OUTPUT_FILTER:
+                get_param: output_filter_name
+            template: |
+              apply-groups $APPLY_GROUP
+              vlan-id $VLAN;
+              description inet_gw;
+              family inet {
+                  filter {
+                      input $INPUT_FILTER;
+                      output $OUTPUT_FILTER;
+                  }
+              }
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: interfaces
+          - config_type: name
+            xml_type: named_tag
+            tag: interface
+            name: { get_param: secondary_device_physical_interface }
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: unit
+            name: { get_param: vlan }
+      - config:
+          str_replace:
+            params:
+              $LIF:
+                get_param: secondary_device_logical_interface
+              $IMPORT_POLICY:
+                get_param: vrf_import_policy
+              $EXPORT_POLICY:
+                get_param: vrf_export_policy
+            template: |
+                instance-type virtual-router;
+                interface $LIF;
+                routing-options instance-import $IMPORT_POLICY;
+                routing-options instance-export $EXPORT_POLICY;
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: routing-instances
+          - config_type: name
+            xml_type: named_tag
+            tag: instance
+            name: { get_param: vrf_name }
+      - config:
+          str_replace:
+            params:
+              $VRF_NAME:
+                get_param: vrf_name
+            template: |
+              from instance $VRF_NAME;
+              then accept;
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: policy-options
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: policy-statement
+            name: { get_param: uplink_import_policy }
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: term
+            name: { get_param: vrf_name }
+      - config: ""
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: policy-options
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: prefix-list
+            name: { get_param: prefix_list_name }
+      - config:
+          str_replace:
+            params:
+              $PREFIX_LIST_NAME:
+                get_param: prefix_list_name
+              $VRF_NAME:
+                get_param: vrf_name
+            template: |
+               from {
+                  destination-prefix-list {
+                       $PREFIX_LIST_NAME;
+                  }
+               }
+               then {
+                    count $VRF_NAME_IN;
+                    accept;
+               }
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: firewall
+          - config_type: tag
+            xml_type: tag
+            tag: family
+          - config_type: tag
+            xml_type: tag
+            tag: inet
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: filter
+            name: { get_param: inet_in_filter }
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: term
+            name: { get_param: filter_term_name }
+        additional_commands:
+          str_replace:
+            params:
+              $TERM_NAME:
+                get_param: filter_term_name
+              $INET_IN:
+                get_param: inet_in_filter
+            template: |
+              insert firewall family inet filter $INET_IN term $TERM_NAME before term all-accept
+      - config:
+          str_replace:
+            params:
+              $PREFIX_LIST_NAME:
+                get_param: prefix_list_name
+              $VRF_NAME:
+                get_param: vrf_name
+            template: |
+               from {
+                  source-prefix-list {
+                       $PREFIX_LIST_NAME;
+                  }
+               }
+               then {
+                    count $VRF_NAME_OUT;
+                    accept;
+               }
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: firewall
+          - config_type: tag
+            xml_type: tag
+            tag: family
+          - config_type: tag
+            xml_type: tag
+            tag: inet
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: filter
+            name: { get_param: inet_out_filter }
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: term
+            name: { get_param: filter_term_name }
+        additional_commands:
+          str_replace:
+            params:
+              $TERM_NAME:
+                get_param: filter_term_name
+              $INET_OUT:
+                get_param: inet_out_filter
+            template: |
+              insert firewall family inet filter $INET_OUT term $TERM_NAME before term all-accept
+      device_ip:
+        get_param: secondary_device_ip
+      password:
+        get_param: secondary_device_password
+      port:
+        get_param: secondary_device_port
+      username:
+        get_param: secondary_device_username
+    type: OS::Contrail::NetconfNamedConfigs
+
+ with parameters:
+{u'vrf_export_policy': u'INSTANCE-USER_OUT', u'secondary_device_physical_interface': u'ae0', u'primary_device_logical_interface': u'ae0.1025', u'primary_device_password': u'esiesi0000', u'vrf_import_policy': u'INSTANCE-USER_IN', u'prefix_list_name': u'vrf_gw_sample-ha-router-downlink_1025_prefix', u'output_filter_name': u'FILTER_10M-GA-DOWN-INET', u'secondary_vrrp_config_group': u'InetGW2-VRRP', u'primary_device_ip': u'10.79.5.185', u'inet_in_filter': u'INET_IN', u'primary_vrrp_config_group': u'InetGW1-VRRP', u'secondary_device_logical_interface': u'ae0.1025', u'inet_out_filter': u'INET_OUT', u'vlan': u'1025', u'primary_device_physical_interface': u'ae0', u'uplink_import_policy': u'INSTANCE-MASTER_IN', u'input_filter_name': u'FILTER_10M-GA-UP-INET', u'filter_term_name': u'vrf_gw_sample-ha-router-downlink_1025_filter', u'secondary_device_port': 830, u'secondary_device_password': u'esiesi0000', u'vrf_name': u'vrf_gw_sample-ha-router-downlink_1025', u'primary_device_username': u'esi', u'secondary_device_username': u'esi', u'primary_device_port': 830, u'secondary_device_ip': u'10.79.5.184'}, 
+using this jinja parameters: 
+{u'jinja_vrf_config': u''} (heat.py - 129)
+2017-05-11 04:24:08,000 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:09,091 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:10,188 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:11,284 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:12,383 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:13,510 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:14,603 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:15,707 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:16,800 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:17,896 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:18,979 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:20,064 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:21,182 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:22,279 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:23,363 [1;34mDEBUG[0m heat_worker - Stack "internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476" in status "CREATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:24:23,364 [1;37mINFO[0m heat_worker - CREATED internet_gateway_429e24b5-a2f0-4fb8-b467-e335857e9476 (heat.py - 239)
+2017-05-11 04:24:23,561 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:internet_gateway:429e24b5-a2f0-4fb8-b467-e335857e9476:1:gt36x with handler heat_worker is not last. (etcd_worker.py - 185)
+2017-05-11 04:24:23,582 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:internet_gateway:429e24b5-a2f0-4fb8-b467-e335857e9476:1:gt36x finished. (job_queue.py - 266)
+2017-05-11 04:24:36,622 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:24:36,623 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:24:36,623 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:24:37,443 [1;34mDEBUG[0m heat_worker - Reserved job: create:heat_worker:public_ip:bc6f2c6d-59be-4f56-a2d7-96ab578c0735:1:rpxah using id: 8b0c4a11-8c71-4f1a-81e1-3c5a38a0e6bb (job_queue.py - 245)
+2017-05-11 04:24:37,445 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:24:37,445 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 212)
+2017-05-11 04:24:37,461 [1;34mDEBUG[0m heat_worker - Starting work on new ready job create:heat_worker:public_ip:bc6f2c6d-59be-4f56-a2d7-96ab578c0735:1:rpxah (etcd_worker.py - 113)
+2017-05-11 04:24:37,461 [1;34mDEBUG[0m heat_worker - Checking job status for public_ip:bc6f2c6d-59be-4f56-a2d7-96ab578c0735 (heat_stacks_worker.py - 42)
+2017-05-11 04:24:37,755 [1;37mINFO[0m heat_worker - CREATE STARTED (heat_messenger.py - 62)
+2017-05-11 04:24:37,866 [1;34mDEBUG[0m heat_worker - Template id public_ip resolved from mapping: Cpublic_ip (resources.py - 838)
+2017-05-11 04:24:37,873 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  QoS Option
+
+parameters:
+  primary_device_ip:
+    description: Ip address that will be used to establish ssh connection to the Primary Device.
+    label: Ip address of the device.
+    type: string
+  primary_device_port:
+    description: Port that will be used to establish ssh connection to the Primary Device.
+    label: Port of the ssh connection.
+    type: number
+  primary_device_username:
+    description: Name of the user which will be used to log onto the Primary Device.
+    label: User name to log on to device.
+    type: string
+  primary_device_password:
+    description: Password of the user which will be used to log onto the Primary Device.
+    label: Users password.
+    type: string
+  secondary_device_ip:
+    description: Ip address that will be used to establish ssh connection to the Secondary Device.
+    label: Ip address of the device.
+    type: string
+  secondary_device_port:
+    description: Port that will be used to establish ssh connection to the Secondary Device.
+    label: Port of the ssh connection.
+    type: number
+  secondary_device_username:
+    description: Name of the user which will be used to log onto the Secondary Device.
+    label: User name to log on to device.
+    type: string
+  secondary_device_password:
+    description: Password of the user which will be used to log onto the Secondary Device.
+    label: Users password.
+    type: string
+  prefix_list_name:
+    label: Prefix List name.
+    type: string
+  ip_cidr:
+    label: Public IP CIDR
+    type: string
+  ip_mask:
+    label: Public IP CIDR
+    type: string
+resources:
+
+  netconf_configure_primary:
+    properties:
+      lock_timeout: 3000
+      configs:
+      - config: ""
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: policy-options
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: prefix-list
+            name: { get_param: prefix_list_name }
+          - config_type: name
+            xml_type: named_tag
+            tag: prefix-list-item
+            name:
+              str_replace:
+                params:
+                  $CIDR:
+                    { get_param: ip_cidr }
+                  $MASK:
+                    { get_param: ip_mask }
+                template: |
+                  $CIDR/$MASK
+      device_ip:
+        get_param: primary_device_ip
+      password:
+        get_param: primary_device_password
+      port:
+        get_param: primary_device_port
+      username:
+        get_param: primary_device_username
+    type: OS::Contrail::NetconfNamedConfigs
+
+  netconf_configure_secondary:
+    properties:
+      lock_timeout: 3000
+      configs:
+      - config: ""
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: policy-options
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: prefix-list
+            name: { get_param: prefix_list_name }
+          - config_type: name
+            xml_type: named_tag
+            tag: prefix-list-item
+            name:
+              str_replace:
+                params:
+                  $CIDR:
+                    { get_param: ip_cidr }
+                  $MASK:
+                    { get_param: ip_mask }
+                template: |
+                  $CIDR/$MASK
+      device_ip:
+        get_param: secondary_device_ip
+      password:
+        get_param: secondary_device_password
+      port:
+        get_param: secondary_device_port
+      username:
+        get_param: secondary_device_username
+    type: OS::Contrail::NetconfNamedConfigs
+
+ with parameters:
+{u'primary_device_ip': u'10.79.5.185', u'secondary_device_port': 830, u'secondary_device_password': u'esiesi0000', u'ip_mask': 28, u'primary_device_password': u'esiesi0000', u'ip_cidr': u'203.0.112.0', u'primary_device_username': u'esi', u'prefix_list_name': u'vrf_gw_sample-ha-router-downlink_1025_prefix', u'primary_device_port': 830, u'secondary_device_ip': u'10.79.5.184', u'secondary_device_username': u'esi'}, 
+using this jinja parameters: 
+{} (heat.py - 129)
+2017-05-11 04:24:38,273 [1;34mDEBUG[0m heat_worker - Stack "public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:39,357 [1;34mDEBUG[0m heat_worker - Stack "public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:40,476 [1;34mDEBUG[0m heat_worker - Stack "public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:41,585 [1;34mDEBUG[0m heat_worker - Stack "public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:42,667 [1;34mDEBUG[0m heat_worker - Stack "public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:43,785 [1;34mDEBUG[0m heat_worker - Stack "public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:44,865 [1;34mDEBUG[0m heat_worker - Stack "public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:24:45,972 [1;34mDEBUG[0m heat_worker - Stack "public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735" in status "CREATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:24:45,972 [1;37mINFO[0m heat_worker - CREATED public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735 (heat.py - 239)
+2017-05-11 04:24:46,254 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:public_ip:bc6f2c6d-59be-4f56-a2d7-96ab578c0735:1:rpxah finished. (job_queue.py - 266)
+2017-05-11 04:24:46,260 [1;34mDEBUG[0m heat_worker - Trying to delete internal process state for resource public_ip:bc6f2c6d-59be-4f56-a2d7-96ab578c0735 (resources.py - 706)
+2017-05-11 04:25:01,033 [1;34mDEBUG[0m heat_worker - Reserved job: create:heat_worker:network:52d7bef8-aa17-45c3-b63e-6a0e504603f0:1:v1aq0 using id: 539fe1d8-597a-4e1a-a8d1-26de89f79c3d (job_queue.py - 245)
+2017-05-11 04:25:01,035 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:25:01,035 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 212)
+2017-05-11 04:25:01,043 [1;34mDEBUG[0m heat_worker - Starting work on new ready job create:heat_worker:network:52d7bef8-aa17-45c3-b63e-6a0e504603f0:1:v1aq0 (etcd_worker.py - 113)
+2017-05-11 04:25:01,048 [1;34mDEBUG[0m heat_worker - Checking job status for network:52d7bef8-aa17-45c3-b63e-6a0e504603f0 (heat_stacks_worker.py - 42)
+2017-05-11 04:25:01,394 [1;37mINFO[0m heat_worker - CREATE STARTED (heat_messenger.py - 62)
+2017-05-11 04:25:01,521 [1;34mDEBUG[0m heat_worker - Template id network resolved from mapping: Cnetwork (resources.py - 838)
+2017-05-11 04:25:01,524 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  Network template
+
+parameters:
+  uuid:
+    type: string
+    label: Virtual Network UUID
+    description: UUID of the virtual network that will be created.
+    default: ""
+  name:
+    type: string
+    label: Virtual Network Name
+    description: Name of the virtual network that will be created.
+  forwarding_mode:
+    type: string
+    label: Forwarding Mode
+    description: Forwarding Mode.
+    default: 'l2_l3'
+  route_targets:
+    type: comma_delimited_list
+    label: Route Targets list
+    default: []
+  shared:
+    type: boolean
+    label: Shared Network
+    default: false
+  external:
+    type: boolean
+    label: External Network
+    default: true
+  allow_transit:
+    type: boolean
+    label: Allow Transit
+    default: false
+  admin_state_up:
+    type: boolean
+    label: Admin state up
+    default: true
+
+resources:
+  network:
+    type: OS::Contrail::VirtualNetwork
+    properties:
+      uuid: { get_param: uuid }
+      name: { get_param: name }
+      forwarding_mode: { get_param: forwarding_mode }
+      route_targets: { get_param: route_targets }
+      shared: { get_param: shared }
+      admin_state_up: { get_param: admin_state_up }
+
+outputs:
+  id:
+    description: A unique id for the virtual network.
+    value: { get_resource: network }
+  name:
+    description: The name of the virtual network.
+    value: { get_attr: [network, name] }
+  fq_name:
+    description: The FQ name of the virtual network.
+    value: { get_attr: [network, fq_name] }
+  route_targets:
+    description: The name of the virtual network.
+    value: { get_attr: [network, route_targets] }
+ with parameters:
+{u'admin_state_up': True, u'uuid': u'52d7bef8-aa17-45c3-b63e-6a0e504603f0', u'name': u'52d7bef8-aa17-45c3-b63e-6a0e504603f0'}, 
+using this jinja parameters: 
+{} (heat.py - 129)
+2017-05-11 04:25:01,897 [1;34mDEBUG[0m heat_worker - Stack "network_52d7bef8-aa17-45c3-b63e-6a0e504603f0" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:03,030 [1;34mDEBUG[0m heat_worker - Stack "network_52d7bef8-aa17-45c3-b63e-6a0e504603f0" in status "CREATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:25:03,031 [1;37mINFO[0m heat_worker - CREATED network_52d7bef8-aa17-45c3-b63e-6a0e504603f0 (heat.py - 239)
+2017-05-11 04:25:03,277 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:network:52d7bef8-aa17-45c3-b63e-6a0e504603f0:1:v1aq0 with handler heat_worker is not last. (etcd_worker.py - 185)
+2017-05-11 04:25:03,293 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:network:52d7bef8-aa17-45c3-b63e-6a0e504603f0:1:v1aq0 finished. (job_queue.py - 266)
+2017-05-11 04:25:20,210 [1;34mDEBUG[0m heat_worker - Reserved job: create:heat_worker:subnet:a510f785-7758-4ce5-8fd4-c107d11b8e40:1:yek4y using id: 121921f8-6c75-4b4a-bd21-feb54542e523 (job_queue.py - 245)
+2017-05-11 04:25:20,214 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:25:20,214 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 212)
+2017-05-11 04:25:20,241 [1;34mDEBUG[0m heat_worker - Starting work on new ready job create:heat_worker:subnet:a510f785-7758-4ce5-8fd4-c107d11b8e40:1:yek4y (etcd_worker.py - 113)
+2017-05-11 04:25:20,242 [1;34mDEBUG[0m heat_worker - Checking job status for subnet:a510f785-7758-4ce5-8fd4-c107d11b8e40 (heat_stacks_worker.py - 42)
+2017-05-11 04:25:20,661 [1;37mINFO[0m heat_worker - CREATE STARTED (heat_messenger.py - 62)
+2017-05-11 04:25:20,790 [1;34mDEBUG[0m heat_worker - Template id subnet resolved from mapping: Csubnet (resources.py - 838)
+2017-05-11 04:25:20,796 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  Subnet template
+
+parameters:
+  name:
+    type: string
+    label: Local Subnet Name
+    description: Name of the local subnet that will be created.
+  network_id:
+    type: string
+    label: Network ID
+    description: ID of the network for which subnet will be created.
+  cidr:
+    type: string
+    label: Local Subnet IP prefix
+    description: IP prefix of the local subnet that will be created.
+  gateway_ip:
+    default: "0.0.0.0"
+    type: string
+    label: Default Gateway
+    description: Default gateway for the local subnet that will be created.
+  ipam:
+    type: string
+    label: IP Address Management
+    description: IPAM for the local subnet that will be created.
+    default: ''
+  enable_dhcp:
+    type: boolean
+    label: Enable DHCP
+    description: Enable DHCP
+    default: true
+  dhcp_server_address:
+    type: string
+    label: DHCP Server address
+    description: DHCP Server address
+    default: "0.0.0.0"
+  allocation_pools:
+    type: string
+    label: Allocation Pools
+    description: Allocation Pools
+    default: []
+  dns_nameservers:
+    type: comma_delimited_list
+    label: DNS Nameservers List
+    description: DNS Nameservers List
+    default: []
+  ntp_servers:
+    type: comma_delimited_list
+    label: NTP Nameservers List
+    description: NTP Nameservers List
+    default: []
+  host_routes:
+    type: json
+    label: Host Routes
+    description: Host Routes
+    default: []
+
+resources:
+  subnet:
+    type: OS::Contrail::VnSubnet
+    properties:
+      name: { get_param: name }
+      network_id: { get_param: network_id }
+      ip_prefix: { get_param: cidr }
+      default_gateway: { get_param: gateway_ip }
+      ipam: { get_param: ipam }
+      enable_dhcp: { get_param: enable_dhcp }
+      dns_server_address: { get_param: dhcp_server_address }
+      dns_nameservers: { get_param: dns_nameservers }
+      ntp_servers: { get_param: ntp_servers }
+      host_routes: { get_param: host_routes }
+      allocation_pools: { get_param: allocation_pools }
+      gateway_is_vrouter: false
+
+outputs:
+  id:
+    description: A unique id for the local subnet.
+    value: { get_resource: subnet }
+  name:
+    description: The name of the local subnet.
+    value: { get_attr: [subnet, name] }
+  network_id:
+    description: A unique id for the network.
+    value: { get_attr: [subnet, network_id] }
+  ip_prefix:
+    description: IP prefix of local subnet.
+    value: { get_attr: [subnet, ip_prefix] }
+  default_gateway:
+    description: Default gateway of local subnet.
+    value: { get_attr: [subnet, default_gateway] }
+  ipam:
+    description: IPAM this local subnet uses.
+    value: { get_attr: [subnet, ipam] }
+ with parameters:
+{u'name': u'a510f785-7758-4ce5-8fd4-c107d11b8e40', u'enable_dhcp': True, u'network_id': u'52d7bef8-aa17-45c3-b63e-6a0e504603f0', u'ipam': u'default-domain:default-project:default-network-ipam', u'dns_nameservers': [], u'dhcp_server_address': u'172.16.101.2', u'ntp_servers': [], u'allocation_pools': [{u'start': u'172.16.101.2', u'end': u'172.16.101.254'}], u'gateway_ip': u'172.16.101.1', u'host_routes': [], u'cidr': u'172.16.101.0/24'}, 
+using this jinja parameters: 
+{} (heat.py - 129)
+2017-05-11 04:25:21,163 [1;34mDEBUG[0m heat_worker - Stack "subnet_a510f785-7758-4ce5-8fd4-c107d11b8e40" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:22,271 [1;34mDEBUG[0m heat_worker - Stack "subnet_a510f785-7758-4ce5-8fd4-c107d11b8e40" in status "CREATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:25:22,272 [1;37mINFO[0m heat_worker - CREATED subnet_a510f785-7758-4ce5-8fd4-c107d11b8e40 (heat.py - 239)
+2017-05-11 04:25:22,516 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:subnet:a510f785-7758-4ce5-8fd4-c107d11b8e40:1:yek4y finished. (job_queue.py - 266)
+2017-05-11 04:25:22,517 [1;34mDEBUG[0m heat_worker - Trying to delete internal process state for resource subnet:a510f785-7758-4ce5-8fd4-c107d11b8e40 (resources.py - 706)
+2017-05-11 04:25:39,270 [1;34mDEBUG[0m heat_worker - Reserved job: create:heat_worker:gw_interface:b9618566-14ea-4505-8eae-8fdb4b6a0ec1:1:ihknd using id: aacf12ba-aa41-4273-a915-e77228b15c2c (job_queue.py - 245)
+2017-05-11 04:25:39,273 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:25:39,273 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 212)
+2017-05-11 04:25:39,295 [1;34mDEBUG[0m heat_worker - Starting work on new ready job create:heat_worker:gw_interface:b9618566-14ea-4505-8eae-8fdb4b6a0ec1:1:ihknd (etcd_worker.py - 113)
+2017-05-11 04:25:39,296 [1;34mDEBUG[0m heat_worker - Checking job status for gw_interface:b9618566-14ea-4505-8eae-8fdb4b6a0ec1 (heat_stacks_worker.py - 42)
+2017-05-11 04:25:39,630 [1;37mINFO[0m heat_worker - CREATE STARTED (heat_messenger.py - 62)
+2017-05-11 04:25:39,740 [1;34mDEBUG[0m heat_worker - Template id gw_interface_internet resolved from mapping: ACgw_interface_&Pservice_type (resources.py - 838)
+2017-05-11 04:25:39,750 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  Inet Address
+
+parameters:
+  primary_device_ip:
+    description: Ip address that will be used to establish ssh connection to the Primary Device.
+    label: Ip address of the device.
+    type: string
+  primary_device_port:
+    description: Port that will be used to establish ssh connection to the Primary Device.
+    label: Port of the ssh connection.
+    type: number
+  primary_device_username:
+    description: Name of the user which will be used to log onto the Primary Device.
+    label: User name to log on to device.
+    type: string
+  primary_device_password:
+    description: Password of the user which will be used to log onto the Primary Device.
+    label: Users password.
+    type: string
+  secondary_device_ip:
+    description: Ip address that will be used to establish ssh connection to the Secondary Device.
+    label: Ip address of the device.
+    type: string
+  secondary_device_port:
+    description: Port that will be used to establish ssh connection to the Secondary Device.
+    label: Port of the ssh connection.
+    type: number
+  secondary_device_username:
+    description: Name of the user which will be used to log onto the Secondary Device.
+    label: User name to log on to device.
+    type: string
+  secondary_device_password:
+    description: Password of the user which will be used to log onto the Secondary Device.
+    label: Users password.
+    type: string
+  primary_device_physical_interface:
+    description: MX physical port on which logical interface will be created
+    label: Underlying physical interface
+    type: string
+  secondary_device_physical_interface:
+    description: MX physical port on which logical interface will be created
+    label: Underlying physical interface
+    type: string
+  vlan:
+    description: Vlan tag for mx logical interface
+    label: Vlan Tag
+    type: string
+  gw_vip:
+    description: Virtual IP configured on VRRP
+    label: Inet Address CIDR
+    type: string
+  primary_device_gw_ip:
+    description: IP on primary device
+    label: Inet Address CIDR
+    type: string
+  secondary_device_gw_ip:
+    description: IP on secondary device
+    label: Inet Address CIDR
+    type: string
+  netmask:
+    description: Netmask for gw_ip
+    label: Netmask
+    type: number
+  vrrp_group:
+    type: string
+    label: VRRP Group
+  primary_device_priority:
+    type: string
+    label: Primary device priority
+  secondary_device_priority:
+    type: string
+    label: Secondary device priority
+  vrf_name:
+    type: string
+    label: VRF
+  bgp_group_name:
+    type: string
+    label: Name of BGP Group on VRF
+  primary_ibgp_config_group:
+    description: Name for apply group to use for downlink interface
+    label: Apply group name
+    type: string
+  secondary_ibgp_config_group:
+    description: Name for apply group to use for downlink interface
+    label: Apply group name
+    type: string
+resources:
+
+  netconf_configure_primary:
+    properties:
+      lock_timeout: 3000
+      configs:
+      - config:
+          str_replace:
+            params:
+              $VRRP_GROUP:
+                    get_param: vrrp_group
+              $PRIORITY:
+                    get_param: primary_device_priority
+              $VIP:
+                    get_param: gw_vip
+            template: |
+                vrrp-group $VRRP_GROUP {
+                    virtual-address $VIP;
+                    priority $PRIORITY;
+                }
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: interfaces
+          - config_type: name
+            xml_type: named_tag
+            tag: interface
+            name: { get_param: primary_device_physical_interface }
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: unit
+            name: { get_param: vlan }
+          - config_type: tag
+            xml_type: tag
+            tag: family
+          - config_type: tag
+            xml_type: tag
+            tag: inet
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: address
+            name:
+              str_replace:
+                params:
+                  $DEVICE_IP:
+                    get_param: primary_device_gw_ip
+                  $NETMASK:
+                    get_param: netmask
+                template: |
+                  $DEVICE_IP/$NETMASK
+      - config:
+          str_replace:
+            params:
+              $DEVICE_GW_IP:
+                    get_param: primary_device_gw_ip
+              $NEIGHBOR_GW_IP:
+                    get_param: secondary_device_gw_ip
+              $APPLY_GROUP:
+                    get_param: primary_ibgp_config_group
+            template: |
+              apply-groups $APPLY_GROUP
+              local-address $DEVICE_GW_IP;
+              neighbor $NEIGHBOR_GW_IP;
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: routing-instances
+          - config_type: name
+            xml_type: named_tag
+            tag: instance
+            name: { get_param: vrf_name }
+          - config_type: tag
+            xml_type: tag
+            tag: protocols
+          - config_type: tag
+            xml_type: tag
+            tag: bgp
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: group
+            name: { get_param: bgp_group_name }
+      device_ip:
+        get_param: primary_device_ip
+      password:
+        get_param: primary_device_password
+      port:
+        get_param: primary_device_port
+      username:
+        get_param: primary_device_username
+    type: OS::Contrail::NetconfNamedConfigs
+
+  netconf_configure_secondary:
+    properties:
+      lock_timeout: 3000
+      configs:
+      - config:
+          str_replace:
+            params:
+              $VRRP_GROUP:
+                    get_param: vrrp_group
+              $PRIORITY:
+                    get_param: secondary_device_priority
+              $VIP:
+                    get_param: gw_vip
+            template: |
+                vrrp-group $VRRP_GROUP {
+                    virtual-address $VIP;
+                    priority $PRIORITY;
+                }
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: interfaces
+          - config_type: name
+            xml_type: named_tag
+            tag: interface
+            name: { get_param: secondary_device_physical_interface }
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: unit
+            name: { get_param: vlan }
+          - config_type: tag
+            xml_type: tag
+            tag: family
+          - config_type: tag
+            xml_type: tag
+            tag: inet
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: address
+            name:
+              str_replace:
+                params:
+                  $DEVICE_IP:
+                    get_param: secondary_device_gw_ip
+                  $NETMASK:
+                    get_param: netmask
+                template: |
+                  $DEVICE_IP/$NETMASK
+      - config:
+          str_replace:
+            params:
+              $DEVICE_GW_IP:
+                    get_param: secondary_device_gw_ip
+              $NEIGHBOR_GW_IP:
+                    get_param: primary_device_gw_ip
+              $APPLY_GROUP:
+                    get_param: secondary_ibgp_config_group
+            template: |
+              apply-groups $APPLY_GROUP
+              local-address $DEVICE_GW_IP;
+              neighbor $NEIGHBOR_GW_IP;
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: routing-instances
+          - config_type: name
+            xml_type: named_tag
+            tag: instance
+            name: { get_param: vrf_name }
+          - config_type: tag
+            xml_type: tag
+            tag: protocols
+          - config_type: tag
+            xml_type: tag
+            tag: bgp
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: group
+            name: { get_param: bgp_group_name }
+      device_ip:
+        get_param: secondary_device_ip
+      password:
+        get_param: secondary_device_password
+      port:
+        get_param: secondary_device_port
+      username:
+        get_param: secondary_device_username
+    type: OS::Contrail::NetconfNamedConfigs
+
+ with parameters:
+{u'secondary_device_physical_interface': u'ae0', u'secondary_ibgp_config_group': u'InetGW1-RI-IBGP', u'primary_device_password': u'esiesi0000', u'secondary_device_gw_ip': u'172.16.101.153', u'bgp_group_name': u'inet-gw-group', u'gw_vip': u'172.16.101.151', u'primary_device_ip': u'10.79.5.185', u'secondary_device_username': u'esi', u'vlan': u'1025', u'vrrp_group': 20, u'netmask': 24, u'primary_device_physical_interface': u'ae0', u'primary_device_priority': u'105', u'primary_device_gw_ip': u'172.16.101.152', u'secondary_device_port': 830, u'secondary_device_password': u'esiesi0000', u'vrf_name': u'vrf_gw_sample-ha-router-downlink_1025', u'primary_device_username': u'esi', u'secondary_device_priority': u'100', u'primary_ibgp_config_group': u'InetGW2-RI-IBGP', u'primary_device_port': 830, u'secondary_device_ip': u'10.79.5.184'}, 
+using this jinja parameters: 
+{u'jinja_dummy_dependency': u'', u'jinja_force_dependency': u'52d7bef8-aa17-45c3-b63e-6a0e504603f0'} (heat.py - 129)
+2017-05-11 04:25:40,203 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:41,323 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:42,428 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:43,542 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:44,654 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:45,758 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:46,871 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:47,981 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:49,074 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:50,157 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:51,239 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:52,325 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:53,405 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:54,501 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:55,618 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:56,755 [1;34mDEBUG[0m heat_worker - Stack "gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1" in status "CREATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:25:56,755 [1;37mINFO[0m heat_worker - CREATED gw_interface_b9618566-14ea-4505-8eae-8fdb4b6a0ec1 (heat.py - 239)
+2017-05-11 04:25:56,970 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:gw_interface:b9618566-14ea-4505-8eae-8fdb4b6a0ec1:1:ihknd with handler heat_worker is not last. (etcd_worker.py - 185)
+2017-05-11 04:25:56,988 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:gw_interface:b9618566-14ea-4505-8eae-8fdb4b6a0ec1:1:ihknd finished. (job_queue.py - 266)
+2017-05-11 04:25:57,038 [1;34mDEBUG[0m heat_worker - Reserved job: create:heat_worker:port:b411d930-df4c-4766-ae66-d0aed9d27c76:1:0ore3 using id: 6c8df6b0-13f3-4ad9-9f26-c873a7415a42 (job_queue.py - 245)
+2017-05-11 04:25:57,040 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:25:57,041 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 212)
+2017-05-11 04:25:57,054 [1;34mDEBUG[0m heat_worker - Starting work on new ready job create:heat_worker:port:b411d930-df4c-4766-ae66-d0aed9d27c76:1:0ore3 (etcd_worker.py - 113)
+2017-05-11 04:25:57,054 [1;34mDEBUG[0m heat_worker - Checking job status for port:b411d930-df4c-4766-ae66-d0aed9d27c76 (heat_stacks_worker.py - 42)
+2017-05-11 04:25:57,083 [1;34mDEBUG[0m heat_worker - Reserved job: create:heat_worker:port:7abe783f-4837-417d-b76f-771ec4d38b97:1:3gezy using id: 805a497a-607a-4fd2-9d63-966709b1968a (job_queue.py - 245)
+2017-05-11 04:25:57,084 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:25:57,085 [1;34mDEBUG[0m heat_worker - 6 job slots available (etcd_worker.py - 212)
+2017-05-11 04:25:57,091 [1;34mDEBUG[0m heat_worker - Starting work on new ready job create:heat_worker:port:7abe783f-4837-417d-b76f-771ec4d38b97:1:3gezy (etcd_worker.py - 113)
+2017-05-11 04:25:57,096 [1;34mDEBUG[0m heat_worker - Checking job status for port:7abe783f-4837-417d-b76f-771ec4d38b97 (heat_stacks_worker.py - 42)
+2017-05-11 04:25:57,467 [1;37mINFO[0m heat_worker - CREATE STARTED (heat_messenger.py - 62)
+2017-05-11 04:25:57,522 [1;37mINFO[0m heat_worker - CREATE STARTED (heat_messenger.py - 62)
+2017-05-11 04:25:57,596 [1;34mDEBUG[0m heat_worker - Template id port resolved from mapping: {u'else_mapping': {u'constant': u'port'}, u'if_mapping': {u'regexp': [{u'field': u'device_owner'}, {u'constant': u'network:dhcp|network:empty'}]}, u'then_mapping': {u'constant': None}} (resources.py - 838)
+2017-05-11 04:25:57,637 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  Virtual Machine Interface Template
+
+parameters:
+  uuid:
+    type: string
+    label: Backend Virtual Machine Interface UUID
+    description: A unique id for the Virtual Machine Interface.
+  name:
+    type: string
+    label: Physical Interface ID
+    description: A unique id for the Physical Interface.
+  virtual_machine_interface_allowed_address_pairs:
+    type: json
+    label: Virtual machine interface allowed address pairs.
+  virtual_machine_interface_mac_address:
+    type: string
+    default: "fe:ff:ff:ff:ff:ff"
+    label: Virtual machine interface mac address.
+  virtual_network:
+    type: string
+    label: Virtual Network.
+  virtual_machine:
+    type: string
+    label: Virtual Machine.
+    default: ""
+  device_owner:
+    type: string
+    label: Device Owner
+    default: ""
+  admin_state_up:
+    type: boolean
+    label: Admin state up
+    default: true
+
+resources:
+  virtual_machine_interface:
+    type: OS::Contrail::VirtualMachineInterface
+    properties:
+      uuid: { get_param: uuid }
+      name: { get_param: name }
+      virtual_machine_interface_allowed_address_pairs: { get_param: virtual_machine_interface_allowed_address_pairs }
+      virtual_machine_interface_mac_addresses: [ { get_param: virtual_machine_interface_mac_address } ]
+      virtual_networks: [ { get_param: virtual_network } ]
+      virtual_machine: { get_param: virtual_machine }
+      device_owner: { get_param: device_owner }
+      admin_state_up: { get_param: admin_state_up }
+
+
+
+  instance_ip_0:
+    type: OS::Contrail::InstanceIp
+    properties:
+      name:
+        str_replace:
+          template: '%name%_%zone%_%ip%'
+          params:
+            "%name%": { get_param: name }
+            "%zone%": a510f785-7758-4ce5-8fd4-c107d11b8e40
+            "%ip%": 172.16.101.151
+      ip_address: 172.16.101.151
+      subnet_id: 435a94ee-ab64-4787-acbb-d2d7c95867e9
+      network_id: { get_param: virtual_network }
+      virtual_machine_interfaces: [ { get_resource: virtual_machine_interface } ]
+
+
+  instance_ip_1:
+    type: OS::Contrail::InstanceIp
+    properties:
+      name:
+        str_replace:
+          template: '%name%_%zone%_%ip%'
+          params:
+            "%name%": { get_param: name }
+            "%zone%": a510f785-7758-4ce5-8fd4-c107d11b8e40
+            "%ip%": 172.16.101.152
+      ip_address: 172.16.101.152
+      subnet_id: 435a94ee-ab64-4787-acbb-d2d7c95867e9
+      network_id: { get_param: virtual_network }
+      virtual_machine_interfaces: [ { get_resource: virtual_machine_interface } ]
+
+
+outputs:
+  id:
+    description: A unique id for the virtual machine interface.
+    value: { get_resource: virtual_machine_interface }
+  mac_address:
+    description: Virtual machine interface mac address.
+    value: { get_attr: [virtual_machine_interface, virtual_machine_interface_mac_addresses] }
+  allowed_address_pairs:
+    description: Virtual machine allowed address pairs.
+    value: { get_attr: [virtual_machine_interface, virtual_machine_interface_allowed_address_pairs] }
+  virtual_network:
+    description: Virtual network.
+    value: { get_attr: [virtual_machine_interface, virtual_networks] }
+  fq_name:
+    description: Fully Qualified Name of the VMI
+    value: { get_attr: [virtual_machine_interface, fq_name] }
+ with parameters:
+{u'virtual_machine': u'b9618566-14ea-4505-8eae-8fdb4b6a0ec1', u'name': u'b411d930-df4c-4766-ae66-d0aed9d27c76', u'admin_state_up': True, u'virtual_machine_interface_allowed_address_pairs': [], u'virtual_machine_interface_mac_address': u'fa:16:3e:49:3c:12', u'device_owner': u'network:gw_interface', u'virtual_network': u'52d7bef8-aa17-45c3-b63e-6a0e504603f0', u'uuid': u'b411d930-df4c-4766-ae66-d0aed9d27c76'}, 
+using this jinja parameters: 
+{u'jinja_force_dependency_cfg': None, u'jinja_subnets': [u'435a94ee-ab64-4787-acbb-d2d7c95867e9', u'435a94ee-ab64-4787-acbb-d2d7c95867e9'], u'jinja_force_dependency_gw_interface': u'b9618566-14ea-4505-8eae-8fdb4b6a0ec1', u'jinja_fixed_ips': [{u'subnet_id': u'a510f785-7758-4ce5-8fd4-c107d11b8e40', u'ip_address': u'172.16.101.151'}, {u'subnet_id': u'a510f785-7758-4ce5-8fd4-c107d11b8e40', u'ip_address': u'172.16.101.152'}]} (heat.py - 129)
+2017-05-11 04:25:57,650 [1;34mDEBUG[0m heat_worker - Template id port resolved from mapping: {u'else_mapping': {u'constant': u'port'}, u'if_mapping': {u'regexp': [{u'field': u'device_owner'}, {u'constant': u'network:dhcp|network:empty'}]}, u'then_mapping': {u'constant': None}} (resources.py - 838)
+2017-05-11 04:25:57,658 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  Virtual Machine Interface Template
+
+parameters:
+  uuid:
+    type: string
+    label: Backend Virtual Machine Interface UUID
+    description: A unique id for the Virtual Machine Interface.
+  name:
+    type: string
+    label: Physical Interface ID
+    description: A unique id for the Physical Interface.
+  virtual_machine_interface_allowed_address_pairs:
+    type: json
+    label: Virtual machine interface allowed address pairs.
+  virtual_machine_interface_mac_address:
+    type: string
+    default: "fe:ff:ff:ff:ff:ff"
+    label: Virtual machine interface mac address.
+  virtual_network:
+    type: string
+    label: Virtual Network.
+  virtual_machine:
+    type: string
+    label: Virtual Machine.
+    default: ""
+  device_owner:
+    type: string
+    label: Device Owner
+    default: ""
+  admin_state_up:
+    type: boolean
+    label: Admin state up
+    default: true
+
+resources:
+  virtual_machine_interface:
+    type: OS::Contrail::VirtualMachineInterface
+    properties:
+      uuid: { get_param: uuid }
+      name: { get_param: name }
+      virtual_machine_interface_allowed_address_pairs: { get_param: virtual_machine_interface_allowed_address_pairs }
+      virtual_machine_interface_mac_addresses: [ { get_param: virtual_machine_interface_mac_address } ]
+      virtual_networks: [ { get_param: virtual_network } ]
+      virtual_machine: { get_param: virtual_machine }
+      device_owner: { get_param: device_owner }
+      admin_state_up: { get_param: admin_state_up }
+
+
+
+  instance_ip_0:
+    type: OS::Contrail::InstanceIp
+    properties:
+      name:
+        str_replace:
+          template: '%name%_%zone%_%ip%'
+          params:
+            "%name%": { get_param: name }
+            "%zone%": a510f785-7758-4ce5-8fd4-c107d11b8e40
+            "%ip%": 172.16.101.153
+      ip_address: 172.16.101.153
+      subnet_id: 435a94ee-ab64-4787-acbb-d2d7c95867e9
+      network_id: { get_param: virtual_network }
+      virtual_machine_interfaces: [ { get_resource: virtual_machine_interface } ]
+
+
+outputs:
+  id:
+    description: A unique id for the virtual machine interface.
+    value: { get_resource: virtual_machine_interface }
+  mac_address:
+    description: Virtual machine interface mac address.
+    value: { get_attr: [virtual_machine_interface, virtual_machine_interface_mac_addresses] }
+  allowed_address_pairs:
+    description: Virtual machine allowed address pairs.
+    value: { get_attr: [virtual_machine_interface, virtual_machine_interface_allowed_address_pairs] }
+  virtual_network:
+    description: Virtual network.
+    value: { get_attr: [virtual_machine_interface, virtual_networks] }
+  fq_name:
+    description: Fully Qualified Name of the VMI
+    value: { get_attr: [virtual_machine_interface, fq_name] }
+ with parameters:
+{u'virtual_machine': u'b9618566-14ea-4505-8eae-8fdb4b6a0ec1', u'name': u'7abe783f-4837-417d-b76f-771ec4d38b97', u'admin_state_up': True, u'virtual_machine_interface_allowed_address_pairs': [], u'virtual_machine_interface_mac_address': u'fa:16:3e:f8:45:26', u'device_owner': u'network:gw_interface', u'virtual_network': u'52d7bef8-aa17-45c3-b63e-6a0e504603f0', u'uuid': u'7abe783f-4837-417d-b76f-771ec4d38b97'}, 
+using this jinja parameters: 
+{u'jinja_force_dependency_cfg': None, u'jinja_subnets': [u'435a94ee-ab64-4787-acbb-d2d7c95867e9'], u'jinja_force_dependency_gw_interface': u'b9618566-14ea-4505-8eae-8fdb4b6a0ec1', u'jinja_fixed_ips': [{u'subnet_id': u'a510f785-7758-4ce5-8fd4-c107d11b8e40', u'ip_address': u'172.16.101.153'}]} (heat.py - 129)
+2017-05-11 04:25:58,017 [1;34mDEBUG[0m heat_worker - Stack "port_b411d930-df4c-4766-ae66-d0aed9d27c76" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:58,374 [1;34mDEBUG[0m heat_worker - Stack "port_7abe783f-4837-417d-b76f-771ec4d38b97" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:59,182 [1;34mDEBUG[0m heat_worker - Stack "port_b411d930-df4c-4766-ae66-d0aed9d27c76" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:25:59,471 [1;34mDEBUG[0m heat_worker - Stack "port_7abe783f-4837-417d-b76f-771ec4d38b97" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:00,290 [1;34mDEBUG[0m heat_worker - Stack "port_b411d930-df4c-4766-ae66-d0aed9d27c76" in status "CREATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:26:00,291 [1;37mINFO[0m heat_worker - CREATED port_b411d930-df4c-4766-ae66-d0aed9d27c76 (heat.py - 239)
+2017-05-11 04:26:00,546 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:port:b411d930-df4c-4766-ae66-d0aed9d27c76:1:0ore3 with handler heat_worker is not last. (etcd_worker.py - 185)
+2017-05-11 04:26:00,565 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:port:b411d930-df4c-4766-ae66-d0aed9d27c76:1:0ore3 finished. (job_queue.py - 266)
+2017-05-11 04:26:00,611 [1;34mDEBUG[0m heat_worker - Stack "port_7abe783f-4837-417d-b76f-771ec4d38b97" in status "CREATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:26:00,611 [1;37mINFO[0m heat_worker - CREATED port_7abe783f-4837-417d-b76f-771ec4d38b97 (heat.py - 239)
+2017-05-11 04:26:00,633 [1;34mDEBUG[0m heat_worker - Reserved job: create:heat_worker:ese_logical_port:b1cf2461-ecb9-4923-966e-e61211f8b03c:1:8snvs using id: 91f54acd-2181-4f0b-9284-d5c43d8ffa2c (job_queue.py - 245)
+2017-05-11 04:26:00,634 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:26:00,634 [1;34mDEBUG[0m heat_worker - 6 job slots available (etcd_worker.py - 212)
+2017-05-11 04:26:00,642 [1;34mDEBUG[0m heat_worker - Starting work on new ready job create:heat_worker:ese_logical_port:b1cf2461-ecb9-4923-966e-e61211f8b03c:1:8snvs (etcd_worker.py - 113)
+2017-05-11 04:26:00,642 [1;34mDEBUG[0m heat_worker - Checking job status for ese_logical_port:b1cf2461-ecb9-4923-966e-e61211f8b03c (heat_stacks_worker.py - 42)
+2017-05-11 04:26:00,908 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:port:7abe783f-4837-417d-b76f-771ec4d38b97:1:3gezy with handler heat_worker is not last. (etcd_worker.py - 185)
+2017-05-11 04:26:00,934 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:port:7abe783f-4837-417d-b76f-771ec4d38b97:1:3gezy finished. (job_queue.py - 266)
+2017-05-11 04:26:00,984 [1;34mDEBUG[0m heat_worker - Reserved job: create:heat_worker:ese_logical_port:3ce86e39-7a81-46f8-b0c4-62a4776746f1:1:3l58a using id: 8c262ba8-b3b9-438e-ade7-3c3331b5ec4c (job_queue.py - 245)
+2017-05-11 04:26:00,986 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:26:00,988 [1;34mDEBUG[0m heat_worker - 6 job slots available (etcd_worker.py - 212)
+2017-05-11 04:26:00,998 [1;34mDEBUG[0m heat_worker - Starting work on new ready job create:heat_worker:ese_logical_port:3ce86e39-7a81-46f8-b0c4-62a4776746f1:1:3l58a (etcd_worker.py - 113)
+2017-05-11 04:26:00,998 [1;34mDEBUG[0m heat_worker - Checking job status for ese_logical_port:3ce86e39-7a81-46f8-b0c4-62a4776746f1 (heat_stacks_worker.py - 42)
+2017-05-11 04:26:01,068 [1;37mINFO[0m heat_worker - CREATE STARTED (heat_messenger.py - 62)
+2017-05-11 04:26:01,248 [1;34mDEBUG[0m heat_worker - Template id ese_logical_port resolved from mapping: Cese_logical_port (resources.py - 838)
+2017-05-11 04:26:01,253 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  Logical port template
+
+parameters:
+  physical_port_id:
+    type: string
+    label: Physical Interface ID
+    description: A unique id for the Physical Interface.
+  logical_port_name:
+    type: string
+    label: Logical Port Name
+    description: Name of the logical port.
+  logical_port_type:
+    type: string
+    label: Logical Port Type
+    description: Type of the logical port.
+  logical_port_vlan_id:
+    type: number
+    label: VLAN id for Logical Port
+    description: VLAN id to use for logical port creation.
+    default: 0
+  virtual_machine_interface_ids:
+    type: comma_delimited_list
+    label: Virtual Machine Interface ID
+    description: Virtual Machine Interface ID.
+
+resources:
+  logical_interface:
+    type: OS::Contrail::LogicalInterface
+    properties:
+      name: { get_param: logical_port_name }
+      physical_interface: { get_param: physical_port_id }
+      virtual_machine_interfaces: { get_param: virtual_machine_interface_ids }
+      type: { get_param: logical_port_type }
+      vlan: { get_param: logical_port_vlan_id }
+
+outputs:
+  id:
+    description: A unique id for the logical interface
+    value: { get_resource: logical_interface }
+  name:
+    description: The name of the logical interface.
+    value: { get_attr: [logical_interface, name] }
+ with parameters:
+{u'logical_port_name': u'xe-0/0/3.1025', u'logical_port_type': u'L2', u'physical_port_id': u'dddddddd-dddd-dddd-dddd-dddddddddddd', u'logical_port_vlan_id': 1025, u'virtual_machine_interface_ids': [u'b411d930-df4c-4766-ae66-d0aed9d27c76']}, 
+using this jinja parameters: 
+{} (heat.py - 129)
+2017-05-11 04:26:01,364 [1;37mINFO[0m heat_worker - CREATE STARTED (heat_messenger.py - 62)
+2017-05-11 04:26:01,491 [1;34mDEBUG[0m heat_worker - Template id ese_logical_port resolved from mapping: Cese_logical_port (resources.py - 838)
+2017-05-11 04:26:01,495 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  Logical port template
+
+parameters:
+  physical_port_id:
+    type: string
+    label: Physical Interface ID
+    description: A unique id for the Physical Interface.
+  logical_port_name:
+    type: string
+    label: Logical Port Name
+    description: Name of the logical port.
+  logical_port_type:
+    type: string
+    label: Logical Port Type
+    description: Type of the logical port.
+  logical_port_vlan_id:
+    type: number
+    label: VLAN id for Logical Port
+    description: VLAN id to use for logical port creation.
+    default: 0
+  virtual_machine_interface_ids:
+    type: comma_delimited_list
+    label: Virtual Machine Interface ID
+    description: Virtual Machine Interface ID.
+
+resources:
+  logical_interface:
+    type: OS::Contrail::LogicalInterface
+    properties:
+      name: { get_param: logical_port_name }
+      physical_interface: { get_param: physical_port_id }
+      virtual_machine_interfaces: { get_param: virtual_machine_interface_ids }
+      type: { get_param: logical_port_type }
+      vlan: { get_param: logical_port_vlan_id }
+
+outputs:
+  id:
+    description: A unique id for the logical interface
+    value: { get_resource: logical_interface }
+  name:
+    description: The name of the logical interface.
+    value: { get_attr: [logical_interface, name] }
+ with parameters:
+{u'logical_port_name': u'xe-0/0/4.1025', u'logical_port_type': u'L2', u'physical_port_id': u'dddddddd-dddd-dddd-dddd-dddddddddddd', u'logical_port_vlan_id': 1025, u'virtual_machine_interface_ids': [u'7abe783f-4837-417d-b76f-771ec4d38b97']}, 
+using this jinja parameters: 
+{} (heat.py - 129)
+2017-05-11 04:26:01,626 [1;34mDEBUG[0m heat_worker - Stack "ese_logical_port_b1cf2461-ecb9-4923-966e-e61211f8b03c" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:01,874 [1;34mDEBUG[0m heat_worker - Stack "ese_logical_port_3ce86e39-7a81-46f8-b0c4-62a4776746f1" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:02,713 [1;34mDEBUG[0m heat_worker - Stack "ese_logical_port_b1cf2461-ecb9-4923-966e-e61211f8b03c" in status "CREATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:26:02,714 [1;37mINFO[0m heat_worker - CREATED ese_logical_port_b1cf2461-ecb9-4923-966e-e61211f8b03c (heat.py - 239)
+2017-05-11 04:26:02,948 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:ese_logical_port:b1cf2461-ecb9-4923-966e-e61211f8b03c:1:8snvs with handler heat_worker is not last. (etcd_worker.py - 185)
+2017-05-11 04:26:02,972 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:ese_logical_port:b1cf2461-ecb9-4923-966e-e61211f8b03c:1:8snvs finished. (job_queue.py - 266)
+2017-05-11 04:26:03,006 [1;34mDEBUG[0m heat_worker - Stack "ese_logical_port_3ce86e39-7a81-46f8-b0c4-62a4776746f1" in status "CREATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:26:03,006 [1;37mINFO[0m heat_worker - CREATED ese_logical_port_3ce86e39-7a81-46f8-b0c4-62a4776746f1 (heat.py - 239)
+2017-05-11 04:26:03,285 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:ese_logical_port:3ce86e39-7a81-46f8-b0c4-62a4776746f1:1:3l58a with handler heat_worker is not last. (etcd_worker.py - 185)
+2017-05-11 04:26:03,315 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:ese_logical_port:3ce86e39-7a81-46f8-b0c4-62a4776746f1:1:3l58a finished. (job_queue.py - 266)
+2017-05-11 04:26:03,355 [1;34mDEBUG[0m heat_worker - Reserved job: modify:heat_worker:port:b411d930-df4c-4766-ae66-d0aed9d27c76:2:fdbdr using id: f5c1c673-eb16-49f8-b33b-cc7121b4a514 (job_queue.py - 245)
+2017-05-11 04:26:03,357 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:26:03,358 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 212)
+2017-05-11 04:26:03,364 [1;34mDEBUG[0m heat_worker - Starting work on new ready job modify:heat_worker:port:b411d930-df4c-4766-ae66-d0aed9d27c76:2:fdbdr (etcd_worker.py - 113)
+2017-05-11 04:26:03,364 [1;34mDEBUG[0m heat_worker - Checking job status for port:b411d930-df4c-4766-ae66-d0aed9d27c76 (heat_stacks_worker.py - 42)
+2017-05-11 04:26:03,760 [1;34mDEBUG[0m heat_worker - Reserved job: modify:heat_worker:port:7abe783f-4837-417d-b76f-771ec4d38b97:2:oq2tr using id: 7d90df89-e1ab-4bc6-802f-5190d414b2d3 (job_queue.py - 245)
+2017-05-11 04:26:03,762 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:26:03,763 [1;34mDEBUG[0m heat_worker - 6 job slots available (etcd_worker.py - 212)
+2017-05-11 04:26:03,767 [1;34mDEBUG[0m heat_worker - Starting work on new ready job modify:heat_worker:port:7abe783f-4837-417d-b76f-771ec4d38b97:2:oq2tr (etcd_worker.py - 113)
+2017-05-11 04:26:03,768 [1;34mDEBUG[0m heat_worker - Checking job status for port:7abe783f-4837-417d-b76f-771ec4d38b97 (heat_stacks_worker.py - 42)
+2017-05-11 04:26:03,781 [1;34mDEBUG[0m heat_worker - Found stack with status CREATE_COMPLETE for port:b411d930-df4c-4766-ae66-d0aed9d27c76 (heat_stacks_worker.py - 53)
+2017-05-11 04:26:03,781 [1;37mINFO[0m heat_worker - MODIFY STARTED (heat_messenger.py - 89)
+2017-05-11 04:26:04,129 [1;34mDEBUG[0m heat_worker - Found stack with status CREATE_COMPLETE for port:7abe783f-4837-417d-b76f-771ec4d38b97 (heat_stacks_worker.py - 53)
+2017-05-11 04:26:04,129 [1;37mINFO[0m heat_worker - MODIFY STARTED (heat_messenger.py - 89)
+2017-05-11 04:26:04,587 [1;34mDEBUG[0m heat_worker - Template id port resolved from mapping: {u'else_mapping': {u'constant': u'port'}, u'if_mapping': {u'regexp': [{u'field': u'device_owner'}, {u'constant': u'network:dhcp|network:empty'}]}, u'then_mapping': {u'constant': None}} (resources.py - 838)
+2017-05-11 04:26:04,594 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  Virtual Machine Interface Template
+
+parameters:
+  uuid:
+    type: string
+    label: Backend Virtual Machine Interface UUID
+    description: A unique id for the Virtual Machine Interface.
+  name:
+    type: string
+    label: Physical Interface ID
+    description: A unique id for the Physical Interface.
+  virtual_machine_interface_allowed_address_pairs:
+    type: json
+    label: Virtual machine interface allowed address pairs.
+  virtual_machine_interface_mac_address:
+    type: string
+    default: "fe:ff:ff:ff:ff:ff"
+    label: Virtual machine interface mac address.
+  virtual_network:
+    type: string
+    label: Virtual Network.
+  virtual_machine:
+    type: string
+    label: Virtual Machine.
+    default: ""
+  device_owner:
+    type: string
+    label: Device Owner
+    default: ""
+  admin_state_up:
+    type: boolean
+    label: Admin state up
+    default: true
+
+resources:
+  virtual_machine_interface:
+    type: OS::Contrail::VirtualMachineInterface
+    properties:
+      uuid: { get_param: uuid }
+      name: { get_param: name }
+      virtual_machine_interface_allowed_address_pairs: { get_param: virtual_machine_interface_allowed_address_pairs }
+      virtual_machine_interface_mac_addresses: [ { get_param: virtual_machine_interface_mac_address } ]
+      virtual_networks: [ { get_param: virtual_network } ]
+      virtual_machine: { get_param: virtual_machine }
+      device_owner: { get_param: device_owner }
+      admin_state_up: { get_param: admin_state_up }
+
+
+
+  instance_ip_0:
+    type: OS::Contrail::InstanceIp
+    properties:
+      name:
+        str_replace:
+          template: '%name%_%zone%_%ip%'
+          params:
+            "%name%": { get_param: name }
+            "%zone%": a510f785-7758-4ce5-8fd4-c107d11b8e40
+            "%ip%": 172.16.101.153
+      ip_address: 172.16.101.153
+      subnet_id: 435a94ee-ab64-4787-acbb-d2d7c95867e9
+      network_id: { get_param: virtual_network }
+      virtual_machine_interfaces: [ { get_resource: virtual_machine_interface } ]
+
+
+outputs:
+  id:
+    description: A unique id for the virtual machine interface.
+    value: { get_resource: virtual_machine_interface }
+  mac_address:
+    description: Virtual machine interface mac address.
+    value: { get_attr: [virtual_machine_interface, virtual_machine_interface_mac_addresses] }
+  allowed_address_pairs:
+    description: Virtual machine allowed address pairs.
+    value: { get_attr: [virtual_machine_interface, virtual_machine_interface_allowed_address_pairs] }
+  virtual_network:
+    description: Virtual network.
+    value: { get_attr: [virtual_machine_interface, virtual_networks] }
+  fq_name:
+    description: Fully Qualified Name of the VMI
+    value: { get_attr: [virtual_machine_interface, fq_name] }
+ with parameters:
+{u'virtual_machine': u'b9618566-14ea-4505-8eae-8fdb4b6a0ec1', u'name': u'7abe783f-4837-417d-b76f-771ec4d38b97', u'admin_state_up': True, u'virtual_machine_interface_allowed_address_pairs': [], u'virtual_machine_interface_mac_address': u'fa:16:3e:f8:45:26', u'device_owner': u'network:gw_interface', u'virtual_network': u'52d7bef8-aa17-45c3-b63e-6a0e504603f0', u'uuid': u'7abe783f-4837-417d-b76f-771ec4d38b97'}, 
+using this jinja parameters: 
+{u'jinja_force_dependency_cfg': None, u'jinja_subnets': [u'435a94ee-ab64-4787-acbb-d2d7c95867e9'], u'jinja_force_dependency_gw_interface': u'b9618566-14ea-4505-8eae-8fdb4b6a0ec1', u'jinja_fixed_ips': [{u'subnet_id': u'a510f785-7758-4ce5-8fd4-c107d11b8e40', u'ip_address': u'172.16.101.153'}]} (heat.py - 129)
+2017-05-11 04:26:04,878 [1;34mDEBUG[0m heat_worker - Stack "port_7abe783f-4837-417d-b76f-771ec4d38b97" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:05,020 [1;34mDEBUG[0m heat_worker - Template id port resolved from mapping: {u'else_mapping': {u'constant': u'port'}, u'if_mapping': {u'regexp': [{u'field': u'device_owner'}, {u'constant': u'network:dhcp|network:empty'}]}, u'then_mapping': {u'constant': None}} (resources.py - 838)
+2017-05-11 04:26:05,030 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  Virtual Machine Interface Template
+
+parameters:
+  uuid:
+    type: string
+    label: Backend Virtual Machine Interface UUID
+    description: A unique id for the Virtual Machine Interface.
+  name:
+    type: string
+    label: Physical Interface ID
+    description: A unique id for the Physical Interface.
+  virtual_machine_interface_allowed_address_pairs:
+    type: json
+    label: Virtual machine interface allowed address pairs.
+  virtual_machine_interface_mac_address:
+    type: string
+    default: "fe:ff:ff:ff:ff:ff"
+    label: Virtual machine interface mac address.
+  virtual_network:
+    type: string
+    label: Virtual Network.
+  virtual_machine:
+    type: string
+    label: Virtual Machine.
+    default: ""
+  device_owner:
+    type: string
+    label: Device Owner
+    default: ""
+  admin_state_up:
+    type: boolean
+    label: Admin state up
+    default: true
+
+resources:
+  virtual_machine_interface:
+    type: OS::Contrail::VirtualMachineInterface
+    properties:
+      uuid: { get_param: uuid }
+      name: { get_param: name }
+      virtual_machine_interface_allowed_address_pairs: { get_param: virtual_machine_interface_allowed_address_pairs }
+      virtual_machine_interface_mac_addresses: [ { get_param: virtual_machine_interface_mac_address } ]
+      virtual_networks: [ { get_param: virtual_network } ]
+      virtual_machine: { get_param: virtual_machine }
+      device_owner: { get_param: device_owner }
+      admin_state_up: { get_param: admin_state_up }
+
+
+
+  instance_ip_0:
+    type: OS::Contrail::InstanceIp
+    properties:
+      name:
+        str_replace:
+          template: '%name%_%zone%_%ip%'
+          params:
+            "%name%": { get_param: name }
+            "%zone%": a510f785-7758-4ce5-8fd4-c107d11b8e40
+            "%ip%": 172.16.101.151
+      ip_address: 172.16.101.151
+      subnet_id: 435a94ee-ab64-4787-acbb-d2d7c95867e9
+      network_id: { get_param: virtual_network }
+      virtual_machine_interfaces: [ { get_resource: virtual_machine_interface } ]
+
+
+  instance_ip_1:
+    type: OS::Contrail::InstanceIp
+    properties:
+      name:
+        str_replace:
+          template: '%name%_%zone%_%ip%'
+          params:
+            "%name%": { get_param: name }
+            "%zone%": a510f785-7758-4ce5-8fd4-c107d11b8e40
+            "%ip%": 172.16.101.152
+      ip_address: 172.16.101.152
+      subnet_id: 435a94ee-ab64-4787-acbb-d2d7c95867e9
+      network_id: { get_param: virtual_network }
+      virtual_machine_interfaces: [ { get_resource: virtual_machine_interface } ]
+
+
+outputs:
+  id:
+    description: A unique id for the virtual machine interface.
+    value: { get_resource: virtual_machine_interface }
+  mac_address:
+    description: Virtual machine interface mac address.
+    value: { get_attr: [virtual_machine_interface, virtual_machine_interface_mac_addresses] }
+  allowed_address_pairs:
+    description: Virtual machine allowed address pairs.
+    value: { get_attr: [virtual_machine_interface, virtual_machine_interface_allowed_address_pairs] }
+  virtual_network:
+    description: Virtual network.
+    value: { get_attr: [virtual_machine_interface, virtual_networks] }
+  fq_name:
+    description: Fully Qualified Name of the VMI
+    value: { get_attr: [virtual_machine_interface, fq_name] }
+ with parameters:
+{u'virtual_machine': u'b9618566-14ea-4505-8eae-8fdb4b6a0ec1', u'name': u'b411d930-df4c-4766-ae66-d0aed9d27c76', u'admin_state_up': True, u'virtual_machine_interface_allowed_address_pairs': [], u'virtual_machine_interface_mac_address': u'fa:16:3e:49:3c:12', u'device_owner': u'network:gw_interface', u'virtual_network': u'52d7bef8-aa17-45c3-b63e-6a0e504603f0', u'uuid': u'b411d930-df4c-4766-ae66-d0aed9d27c76'}, 
+using this jinja parameters: 
+{u'jinja_force_dependency_cfg': None, u'jinja_subnets': [u'435a94ee-ab64-4787-acbb-d2d7c95867e9', u'435a94ee-ab64-4787-acbb-d2d7c95867e9'], u'jinja_force_dependency_gw_interface': u'b9618566-14ea-4505-8eae-8fdb4b6a0ec1', u'jinja_fixed_ips': [{u'subnet_id': u'a510f785-7758-4ce5-8fd4-c107d11b8e40', u'ip_address': u'172.16.101.151'}, {u'subnet_id': u'a510f785-7758-4ce5-8fd4-c107d11b8e40', u'ip_address': u'172.16.101.152'}]} (heat.py - 129)
+2017-05-11 04:26:05,294 [1;34mDEBUG[0m heat_worker - Stack "port_b411d930-df4c-4766-ae66-d0aed9d27c76" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:05,971 [1;34mDEBUG[0m heat_worker - Stack "port_7abe783f-4837-417d-b76f-771ec4d38b97" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:06,379 [1;34mDEBUG[0m heat_worker - Stack "port_b411d930-df4c-4766-ae66-d0aed9d27c76" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:07,055 [1;34mDEBUG[0m heat_worker - Stack "port_7abe783f-4837-417d-b76f-771ec4d38b97" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:07,524 [1;34mDEBUG[0m heat_worker - Stack "port_b411d930-df4c-4766-ae66-d0aed9d27c76" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:08,145 [1;34mDEBUG[0m heat_worker - Stack "port_7abe783f-4837-417d-b76f-771ec4d38b97" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:08,617 [1;34mDEBUG[0m heat_worker - Stack "port_b411d930-df4c-4766-ae66-d0aed9d27c76" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:09,231 [1;34mDEBUG[0m heat_worker - Stack "port_7abe783f-4837-417d-b76f-771ec4d38b97" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:09,727 [1;34mDEBUG[0m heat_worker - Stack "port_b411d930-df4c-4766-ae66-d0aed9d27c76" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:10,316 [1;34mDEBUG[0m heat_worker - Stack "port_7abe783f-4837-417d-b76f-771ec4d38b97" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:10,810 [1;34mDEBUG[0m heat_worker - Stack "port_b411d930-df4c-4766-ae66-d0aed9d27c76" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:11,398 [1;34mDEBUG[0m heat_worker - Stack "port_7abe783f-4837-417d-b76f-771ec4d38b97" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:11,914 [1;34mDEBUG[0m heat_worker - Stack "port_b411d930-df4c-4766-ae66-d0aed9d27c76" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:12,482 [1;34mDEBUG[0m heat_worker - Stack "port_7abe783f-4837-417d-b76f-771ec4d38b97" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:13,002 [1;34mDEBUG[0m heat_worker - Stack "port_b411d930-df4c-4766-ae66-d0aed9d27c76" in status "UPDATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:13,576 [1;34mDEBUG[0m heat_worker - Stack "port_7abe783f-4837-417d-b76f-771ec4d38b97" in status "UPDATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:26:13,576 [1;37mINFO[0m heat_worker - MODIFIED port_7abe783f-4837-417d-b76f-771ec4d38b97 (heat.py - 286)
+2017-05-11 04:26:13,777 [1;34mDEBUG[0m heat_worker - Job modify:heat_worker:port:7abe783f-4837-417d-b76f-771ec4d38b97:2:oq2tr with handler heat_worker is not last. (etcd_worker.py - 185)
+2017-05-11 04:26:13,793 [1;34mDEBUG[0m heat_worker - Job modify:heat_worker:port:7abe783f-4837-417d-b76f-771ec4d38b97:2:oq2tr finished. (job_queue.py - 266)
+2017-05-11 04:26:14,116 [1;34mDEBUG[0m heat_worker - Stack "port_b411d930-df4c-4766-ae66-d0aed9d27c76" in status "UPDATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:26:14,117 [1;37mINFO[0m heat_worker - MODIFIED port_b411d930-df4c-4766-ae66-d0aed9d27c76 (heat.py - 286)
+2017-05-11 04:26:14,377 [1;34mDEBUG[0m heat_worker - Job modify:heat_worker:port:b411d930-df4c-4766-ae66-d0aed9d27c76:2:fdbdr with handler heat_worker is not last. (etcd_worker.py - 185)
+2017-05-11 04:26:14,392 [1;34mDEBUG[0m heat_worker - Job modify:heat_worker:port:b411d930-df4c-4766-ae66-d0aed9d27c76:2:fdbdr finished. (job_queue.py - 266)
+2017-05-11 04:26:33,450 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:26:33,452 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:26:33,453 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:26:55,600 [1;34mDEBUG[0m heat_worker - Reserved job: create:heat_worker:static_route:2cbf727e-ac76-4c54-be9c-3f374d792ff4:1:o7c19 using id: 64aee54b-a4a2-480d-bb67-cb2cc93a45ff (job_queue.py - 245)
+2017-05-11 04:26:55,606 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:26:55,606 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 212)
+2017-05-11 04:26:55,614 [1;34mDEBUG[0m heat_worker - Starting work on new ready job create:heat_worker:static_route:2cbf727e-ac76-4c54-be9c-3f374d792ff4:1:o7c19 (etcd_worker.py - 113)
+2017-05-11 04:26:55,615 [1;34mDEBUG[0m heat_worker - Checking job status for static_route:2cbf727e-ac76-4c54-be9c-3f374d792ff4 (heat_stacks_worker.py - 42)
+2017-05-11 04:26:55,981 [1;37mINFO[0m heat_worker - CREATE STARTED (heat_messenger.py - 62)
+2017-05-11 04:26:56,133 [1;34mDEBUG[0m heat_worker - Template id static_route_internet resolved from mapping: ACstatic_route_&Pservice_type (resources.py - 838)
+2017-05-11 04:26:56,141 [1;34mDEBUG[0m heat_worker - Heat template prepared: 
+heat_template_version: 2013-05-23
+
+description: >
+  Internet Gateway Static Route
+
+parameters:
+  primary_device_ip:
+    description: Ip address that will be used to establish ssh connection to the Primary Device.
+    label: Ip address of the device.
+    type: string
+  primary_device_port:
+    description: Port that will be used to establish ssh connection to the Primary Device.
+    label: Port of the ssh connection.
+    type: number
+  primary_device_username:
+    description: Name of the user which will be used to log onto the Primary Device.
+    label: User name to log on to device.
+    type: string
+  primary_device_password:
+    description: Password of the user which will be used to log onto the Primary Device.
+    label: Users password.
+    type: string
+  secondary_device_ip:
+    description: Ip address that will be used to establish ssh connection to the Secondary Device.
+    label: Ip address of the device.
+    type: string
+  secondary_device_port:
+    description: Port that will be used to establish ssh connection to the Secondary Device.
+    label: Port of the ssh connection.
+    type: number
+  secondary_device_username:
+    description: Name of the user which will be used to log onto the Secondary Device.
+    label: User name to log on to device.
+    type: string
+  secondary_device_password:
+    description: Password of the user which will be used to log onto the Secondary Device.
+    label: Users password.
+    type: string
+  vrf_name:
+    description: Name of VRF to add this static route
+    label: VRF
+    type: string
+  route:
+    description: Static Route definition
+    label: Route
+    type: string
+  next_hop:
+    description: Next hop for the static route
+    label: Next hop
+    type: string
+
+resources:
+
+  netconf_configure_primary:
+    properties:
+      lock_timeout: 3000
+      configs:
+      - config:
+          str_replace:
+            params:
+              $NEXT_HOP:
+                get_param: next_hop
+            template: |
+              next-hop $NEXT_HOP;
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: routing-instances
+          - config_type: name
+            xml_type: named_tag
+            tag: instance
+            name: { get_param: vrf_name }
+          - config_type: tag
+            xml_type: tag
+            tag: routing-options
+          - config_type: tag
+            xml_type: tag
+            tag: static
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: route
+            name: { get_param: route }
+      device_ip:
+        get_param: primary_device_ip
+      password:
+        get_param: primary_device_password
+      port:
+        get_param: primary_device_port
+      username:
+        get_param: primary_device_username
+    type: OS::Contrail::NetconfNamedConfigs
+
+  netconf_configure_secondary:
+    properties:
+      lock_timeout: 3000
+      configs:
+      - config:
+          str_replace:
+            params:
+              $NEXT_HOP:
+                get_param: next_hop
+            template: |
+              next-hop $NEXT_HOP;
+        path:
+          - config_type: tag
+            xml_type: tag
+            tag: routing-instances
+          - config_type: name
+            xml_type: named_tag
+            tag: instance
+            name: { get_param: vrf_name }
+          - config_type: tag
+            xml_type: tag
+            tag: routing-options
+          - config_type: tag
+            xml_type: tag
+            tag: static
+          - config_type: named_tag
+            xml_type: named_tag
+            tag: route
+            name: { get_param: route }
+      device_ip:
+        get_param: secondary_device_ip
+      password:
+        get_param: secondary_device_password
+      port:
+        get_param: secondary_device_port
+      username:
+        get_param: secondary_device_username
+    type: OS::Contrail::NetconfNamedConfigs
+
+ with parameters:
+{u'primary_device_ip': u'10.79.5.185', u'route': u'203.0.112.0/28', u'secondary_device_port': 830, u'secondary_device_password': u'esiesi0000', u'primary_device_password': u'esiesi0000', u'next_hop': u'172.16.101.1', u'vrf_name': u'vrf_gw_sample-ha-router-downlink_1025', u'primary_device_username': u'esi', u'primary_device_port': 830, u'secondary_device_ip': u'10.79.5.184', u'secondary_device_username': u'esi'}, 
+using this jinja parameters: 
+{u'jinja_dummy_dependency': u'bc6f2c6d-59be-4f56-a2d7-96ab578c0735'} (heat.py - 129)
+2017-05-11 04:26:56,607 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:57,715 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:58,818 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:26:59,926 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:27:01,034 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:27:02,138 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:27:03,241 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:27:04,345 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:27:05,453 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:27:06,535 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:27:07,616 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:27:08,723 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:27:09,820 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:27:10,913 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:27:12,029 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_IN_PROGRESS" (heat.py - 193)
+2017-05-11 04:27:13,139 [1;34mDEBUG[0m heat_worker - Stack "static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4" in status "CREATE_COMPLETE" (heat.py - 193)
+2017-05-11 04:27:13,141 [1;37mINFO[0m heat_worker - CREATED static_route_2cbf727e-ac76-4c54-be9c-3f374d792ff4 (heat.py - 239)
+2017-05-11 04:27:13,476 [1;34mDEBUG[0m heat_worker - Job create:heat_worker:static_route:2cbf727e-ac76-4c54-be9c-3f374d792ff4:1:o7c19 finished. (job_queue.py - 266)
+2017-05-11 04:27:13,478 [1;34mDEBUG[0m heat_worker - Trying to delete internal process state for resource static_route:2cbf727e-ac76-4c54-be9c-3f374d792ff4 (resources.py - 706)
+2017-05-11 04:27:25,615 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:27:25,616 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:27:25,616 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:27:55,628 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:27:55,629 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:27:55,629 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:28:25,641 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:28:25,641 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:28:25,642 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:28:55,652 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:28:55,653 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:28:55,653 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:29:25,665 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:29:25,666 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:29:25,666 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:29:55,671 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:29:55,672 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:29:55,672 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:30:25,682 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:30:25,682 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:30:25,683 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:30:55,696 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:30:55,697 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:30:55,697 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:31:25,708 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:31:25,709 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:31:25,709 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:31:55,718 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:31:55,718 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:31:55,718 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:32:25,726 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:32:25,726 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:32:25,727 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:32:55,740 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:32:55,740 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:32:55,740 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:33:25,753 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:33:25,753 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:33:25,753 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:33:55,765 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:33:55,766 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:33:55,766 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:34:25,772 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:34:25,773 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:34:25,773 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:34:55,781 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:34:55,782 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:34:55,782 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:35:25,795 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:35:25,795 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:35:25,795 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:35:55,805 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:35:55,806 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:35:55,806 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:36:25,812 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:36:25,812 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:36:25,812 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:36:55,825 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:36:55,825 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:36:55,826 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:37:25,836 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:37:25,837 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:37:25,837 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:37:55,849 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:37:55,849 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:37:55,849 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:38:25,858 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:38:25,859 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:38:25,859 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:38:55,866 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:38:55,867 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:38:55,867 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:39:25,872 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:39:25,873 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:39:25,873 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:39:55,882 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:39:55,882 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:39:55,882 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:40:25,892 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:40:25,893 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:40:25,893 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:40:55,905 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:40:55,905 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:40:55,905 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:41:25,914 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:41:25,914 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:41:25,914 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:41:55,921 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:41:55,921 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:41:55,922 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:42:25,934 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:42:25,935 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:42:25,935 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)
+2017-05-11 04:42:55,939 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 225)
+2017-05-11 04:42:55,939 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 217)
+2017-05-11 04:42:55,939 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 212)

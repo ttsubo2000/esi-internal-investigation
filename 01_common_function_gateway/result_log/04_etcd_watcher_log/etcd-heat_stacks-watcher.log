@@ -1,0 +1,420 @@
+2017-05-11 03:01:07,959:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 03:01:07,959:DEBUG:About to wait on key /esi-worker/heat_stacks, index None
+2017-05-11 03:01:07,959:DEBUG:Issuing read for key /esi-worker/heat_stacks with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 03:01:07,960:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 03:01:08,005:DEBUG:"GET /v2/keys/esi-worker/heat_stacks?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 03:04:05,848:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/esi-worker/heat_stacks/v2.0/ese_devices/9f05b260-26ca-46f7-98c3-ad88e411a989],
+ value=[{
+    "stack_id": "ese_device_9f05b260-26ca-46f7-98c3-ad88e411a989", 
+    "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f", 
+    "stack_status": "CREATE_COMPLETE", 
+    "output": [
+        {
+            "output_value": [
+                "default-global-system-config", 
+                "QFX-NW02"
+            ], 
+            "description": "The FQ name of the physical router.", 
+            "output_key": "fq_name"
+        }, 
+        {
+            "output_value": "physical_router", 
+            "description": "A unique id for the physical router.", 
+            "output_key": "id"
+        }, 
+        {
+            "output_value": "dummy", 
+            "description": "The name of the physical router.", 
+            "output_key": "name"
+        }
+    ], 
+    "status_reason": "Stack CREATE completed successfully", 
+    "id": "ese_device:9f05b260-26ca-46f7-98c3-ad88e411a989"
+}]
+2017-05-11 03:04:05,848:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 03:04:05,848:DEBUG:About to wait on key /esi-worker/heat_stacks, index None
+2017-05-11 03:04:05,848:DEBUG:Issuing read for key /esi-worker/heat_stacks with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 03:04:05,849:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 03:04:05,851:DEBUG:"GET /v2/keys/esi-worker/heat_stacks?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 03:04:11,731:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/esi-worker/heat_stacks/v2.0/ese_physical_ports/976156ef-05b4-47f4-9497-a36531563a08],
+ value=[{
+    "stack_id": "ese_physical_port_976156ef-05b4-47f4-9497-a36531563a08", 
+    "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f", 
+    "stack_status": "CREATE_COMPLETE", 
+    "output": [
+        {
+            "output_value": "dddddddd-dddd-dddd-dddd-dddddddddddd", 
+            "description": "A unique id for the physical interface", 
+            "output_key": "id"
+        }, 
+        {
+            "output_value": null, 
+            "output_error": "'ContrailPhysicalInterface' object has no attribute 'pi_uuid'", 
+            "description": "The name of the physical interface.", 
+            "output_key": "name"
+        }
+    ], 
+    "status_reason": "Stack CREATE completed successfully", 
+    "id": "ese_physical_port:976156ef-05b4-47f4-9497-a36531563a08"
+}]
+2017-05-11 03:04:11,732:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 03:04:11,732:DEBUG:About to wait on key /esi-worker/heat_stacks, index None
+2017-05-11 03:04:11,732:DEBUG:Issuing read for key /esi-worker/heat_stacks with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 03:04:11,732:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 03:04:11,733:DEBUG:"GET /v2/keys/esi-worker/heat_stacks?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 03:04:17,681:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/esi-worker/heat_stacks/v2.0/ese_physical_ports/5b2dee2e-7420-4cd4-b270-5081eb9eb371],
+ value=[{
+    "stack_id": "ese_physical_port_5b2dee2e-7420-4cd4-b270-5081eb9eb371", 
+    "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f", 
+    "stack_status": "CREATE_COMPLETE", 
+    "output": [
+        {
+            "output_value": "dddddddd-dddd-dddd-dddd-dddddddddddd", 
+            "description": "A unique id for the physical interface", 
+            "output_key": "id"
+        }, 
+        {
+            "output_value": null, 
+            "output_error": "'ContrailPhysicalInterface' object has no attribute 'pi_uuid'", 
+            "description": "The name of the physical interface.", 
+            "output_key": "name"
+        }
+    ], 
+    "status_reason": "Stack CREATE completed successfully", 
+    "id": "ese_physical_port:5b2dee2e-7420-4cd4-b270-5081eb9eb371"
+}]
+2017-05-11 03:04:17,682:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 03:04:17,682:DEBUG:About to wait on key /esi-worker/heat_stacks, index None
+2017-05-11 03:04:17,682:DEBUG:Issuing read for key /esi-worker/heat_stacks with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 03:04:17,682:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 03:04:17,683:DEBUG:"GET /v2/keys/esi-worker/heat_stacks?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 03:05:33,874:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/esi-worker/heat_stacks/v2.0/networks/f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57],
+ value=[{
+    "stack_id": "network_f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57", 
+    "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f", 
+    "stack_status": "CREATE_COMPLETE", 
+    "output": [
+        {
+            "output_value": "[]", 
+            "description": "The name of the virtual network.", 
+            "output_key": "route_targets"
+        }, 
+        {
+            "output_value": "default-domain:admin:f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57", 
+            "description": "The FQ name of the virtual network.", 
+            "output_key": "fq_name"
+        }, 
+        {
+            "output_value": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57", 
+            "description": "A unique id for the virtual network.", 
+            "output_key": "id"
+        }, 
+        {
+            "output_value": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57", 
+            "description": "The name of the virtual network.", 
+            "output_key": "name"
+        }
+    ], 
+    "status_reason": "Stack CREATE completed successfully", 
+    "id": "network:f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57"
+}]
+2017-05-11 03:05:33,874:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 03:05:33,875:DEBUG:About to wait on key /esi-worker/heat_stacks, index None
+2017-05-11 03:05:33,875:DEBUG:Issuing read for key /esi-worker/heat_stacks with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 03:05:33,875:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 03:05:33,877:DEBUG:"GET /v2/keys/esi-worker/heat_stacks?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 03:05:36,197:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/esi-worker/heat_stacks/v2.0/subnets/e1353d56-b05a-43a9-b924-383ab0d64d7b],
+ value=[{
+    "stack_id": "subnet_e1353d56-b05a-43a9-b924-383ab0d64d7b", 
+    "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f", 
+    "stack_status": "CREATE_COMPLETE", 
+    "output": [
+        {
+            "output_value": "169.254.0.0/17", 
+            "description": "IP prefix of local subnet.", 
+            "output_key": "ip_prefix"
+        }, 
+        {
+            "output_value": "e1353d56-b05a-43a9-b924-383ab0d64d7b", 
+            "description": "The name of the local subnet.", 
+            "output_key": "name"
+        }, 
+        {
+            "output_value": "0.0.0.0", 
+            "description": "Default gateway of local subnet.", 
+            "output_key": "default_gateway"
+        }, 
+        {
+            "output_value": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57", 
+            "description": "A unique id for the network.", 
+            "output_key": "network_id"
+        }, 
+        {
+            "output_value": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa", 
+            "description": "IPAM this local subnet uses.", 
+            "output_key": "ipam"
+        }, 
+        {
+            "output_value": "9e61b626-a866-4ba5-b1c7-01935fdac3f4", 
+            "description": "A unique id for the local subnet.", 
+            "output_key": "id"
+        }
+    ], 
+    "status_reason": "Stack CREATE completed successfully", 
+    "id": "subnet:e1353d56-b05a-43a9-b924-383ab0d64d7b"
+}]
+2017-05-11 03:05:36,197:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 03:05:36,198:DEBUG:About to wait on key /esi-worker/heat_stacks, index None
+2017-05-11 03:05:36,198:DEBUG:Issuing read for key /esi-worker/heat_stacks with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 03:05:36,198:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 03:05:36,199:DEBUG:"GET /v2/keys/esi-worker/heat_stacks?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 03:05:40,187:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/esi-worker/heat_stacks/v2.0/ports/327f59b7-df38-4d8f-97db-d320defcab76],
+ value=[{
+    "stack_id": "port_327f59b7-df38-4d8f-97db-d320defcab76", 
+    "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f", 
+    "stack_status": "CREATE_COMPLETE", 
+    "output": [
+        {
+            "output_value": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb", 
+            "description": "Virtual network.", 
+            "output_key": "virtual_network"
+        }, 
+        {
+            "output_value": "default-domain:admin:327f59b7-df38-4d8f-97db-d320defcab76", 
+            "description": "Fully Qualified Name of the VMI", 
+            "output_key": "fq_name"
+        }, 
+        {
+            "output_value": "327f59b7-df38-4d8f-97db-d320defcab76", 
+            "description": "A unique id for the virtual machine interface.", 
+            "output_key": "id"
+        }, 
+        {
+            "output_value": "null", 
+            "description": "Virtual machine allowed address pairs.", 
+            "output_key": "allowed_address_pairs"
+        }, 
+        {
+            "output_value": "xx:xx:xx:xx:xx:xx", 
+            "description": "Virtual machine interface mac address.", 
+            "output_key": "mac_address"
+        }
+    ], 
+    "status_reason": "Stack CREATE completed successfully", 
+    "id": "port:327f59b7-df38-4d8f-97db-d320defcab76"
+}]
+2017-05-11 03:05:40,187:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 03:05:40,187:DEBUG:About to wait on key /esi-worker/heat_stacks, index None
+2017-05-11 03:05:40,187:DEBUG:Issuing read for key /esi-worker/heat_stacks with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 03:05:40,188:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 03:05:40,190:DEBUG:"GET /v2/keys/esi-worker/heat_stacks?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 03:05:40,648:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/esi-worker/heat_stacks/v2.0/ports/a778c668-6ccb-4d46-9ec3-956693262d63],
+ value=[{
+    "stack_id": "port_a778c668-6ccb-4d46-9ec3-956693262d63", 
+    "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f", 
+    "stack_status": "CREATE_COMPLETE", 
+    "output": [
+        {
+            "output_value": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb", 
+            "description": "Virtual network.", 
+            "output_key": "virtual_network"
+        }, 
+        {
+            "output_value": "default-domain:admin:a778c668-6ccb-4d46-9ec3-956693262d63", 
+            "description": "Fully Qualified Name of the VMI", 
+            "output_key": "fq_name"
+        }, 
+        {
+            "output_value": "a778c668-6ccb-4d46-9ec3-956693262d63", 
+            "description": "A unique id for the virtual machine interface.", 
+            "output_key": "id"
+        }, 
+        {
+            "output_value": "null", 
+            "description": "Virtual machine allowed address pairs.", 
+            "output_key": "allowed_address_pairs"
+        }, 
+        {
+            "output_value": "xx:xx:xx:xx:xx:xx", 
+            "description": "Virtual machine interface mac address.", 
+            "output_key": "mac_address"
+        }
+    ], 
+    "status_reason": "Stack CREATE completed successfully", 
+    "id": "port:a778c668-6ccb-4d46-9ec3-956693262d63"
+}]
+2017-05-11 03:05:40,648:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 03:05:40,648:DEBUG:About to wait on key /esi-worker/heat_stacks, index None
+2017-05-11 03:05:40,649:DEBUG:Issuing read for key /esi-worker/heat_stacks with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 03:05:40,649:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 03:05:40,650:DEBUG:"GET /v2/keys/esi-worker/heat_stacks?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 03:05:43,058:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/esi-worker/heat_stacks/v2.0/ese_logical_ports/b04853c4-6ebf-441f-9093-ea4b844c4bc7],
+ value=[{
+    "stack_id": "ese_logical_port_b04853c4-6ebf-441f-9093-ea4b844c4bc7", 
+    "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f", 
+    "stack_status": "CREATE_COMPLETE", 
+    "output": [
+        {
+            "output_value": "cccccccc-cccc-cccc-cccc-cccccccccccc", 
+            "description": "A unique id for the logical interface", 
+            "output_key": "id"
+        }, 
+        {
+            "output_value": null, 
+            "output_error": "'ContrailLogicalInterface' object has no attribute 'li_uuid'", 
+            "description": "The name of the logical interface.", 
+            "output_key": "name"
+        }
+    ], 
+    "status_reason": "Stack CREATE completed successfully", 
+    "id": "ese_logical_port:b04853c4-6ebf-441f-9093-ea4b844c4bc7"
+}]
+2017-05-11 03:05:43,058:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 03:05:43,058:DEBUG:About to wait on key /esi-worker/heat_stacks, index None
+2017-05-11 03:05:43,058:DEBUG:Issuing read for key /esi-worker/heat_stacks with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 03:05:43,059:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 03:05:43,066:DEBUG:"GET /v2/keys/esi-worker/heat_stacks?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 03:05:43,313:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/esi-worker/heat_stacks/v2.0/ese_logical_ports/9c601c38-a854-459d-aec2-433873b3a4e6],
+ value=[{
+    "stack_id": "ese_logical_port_9c601c38-a854-459d-aec2-433873b3a4e6", 
+    "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f", 
+    "stack_status": "CREATE_COMPLETE", 
+    "output": [
+        {
+            "output_value": "cccccccc-cccc-cccc-cccc-cccccccccccc", 
+            "description": "A unique id for the logical interface", 
+            "output_key": "id"
+        }, 
+        {
+            "output_value": null, 
+            "output_error": "'ContrailLogicalInterface' object has no attribute 'li_uuid'", 
+            "description": "The name of the logical interface.", 
+            "output_key": "name"
+        }
+    ], 
+    "status_reason": "Stack CREATE completed successfully", 
+    "id": "ese_logical_port:9c601c38-a854-459d-aec2-433873b3a4e6"
+}]
+2017-05-11 03:05:43,313:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 03:05:43,313:DEBUG:About to wait on key /esi-worker/heat_stacks, index None
+2017-05-11 03:05:43,313:DEBUG:Issuing read for key /esi-worker/heat_stacks with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 03:05:43,313:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 03:05:43,315:DEBUG:"GET /v2/keys/esi-worker/heat_stacks?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 03:05:56,436:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/esi-worker/heat_stacks/v2.0/common_function_gateways/5c241c51-2003-407a-a239-689fabd19022],
+ value=[{
+    "stack_id": "common_function_gateway_5c241c51-2003-407a-a239-689fabd19022", 
+    "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f", 
+    "stack_status": "CREATE_COMPLETE", 
+    "output": [], 
+    "status_reason": "Stack CREATE completed successfully", 
+    "id": "common_function_gateway:5c241c51-2003-407a-a239-689fabd19022"
+}]
+2017-05-11 03:05:56,436:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 03:05:56,437:DEBUG:About to wait on key /esi-worker/heat_stacks, index None
+2017-05-11 03:05:56,437:DEBUG:Issuing read for key /esi-worker/heat_stacks with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 03:05:56,437:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 03:05:56,438:DEBUG:"GET /v2/keys/esi-worker/heat_stacks?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 03:06:06,868:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/esi-worker/heat_stacks/v2.0/ports/327f59b7-df38-4d8f-97db-d320defcab76],
+ value=[{
+    "stack_id": "port_327f59b7-df38-4d8f-97db-d320defcab76", 
+    "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f", 
+    "stack_status": "UPDATE_COMPLETE", 
+    "output": [
+        {
+            "output_value": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb", 
+            "description": "Virtual network.", 
+            "output_key": "virtual_network"
+        }, 
+        {
+            "output_value": "default-domain:admin:327f59b7-df38-4d8f-97db-d320defcab76", 
+            "description": "Fully Qualified Name of the VMI", 
+            "output_key": "fq_name"
+        }, 
+        {
+            "output_value": "327f59b7-df38-4d8f-97db-d320defcab76", 
+            "description": "A unique id for the virtual machine interface.", 
+            "output_key": "id"
+        }, 
+        {
+            "output_value": "null", 
+            "description": "Virtual machine allowed address pairs.", 
+            "output_key": "allowed_address_pairs"
+        }, 
+        {
+            "output_value": "xx:xx:xx:xx:xx:xx", 
+            "description": "Virtual machine interface mac address.", 
+            "output_key": "mac_address"
+        }
+    ], 
+    "status_reason": "Stack successfully updated", 
+    "id": "port:327f59b7-df38-4d8f-97db-d320defcab76"
+}]
+2017-05-11 03:06:06,868:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 03:06:06,868:DEBUG:About to wait on key /esi-worker/heat_stacks, index None
+2017-05-11 03:06:06,869:DEBUG:Issuing read for key /esi-worker/heat_stacks with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 03:06:06,869:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 03:06:06,870:DEBUG:"GET /v2/keys/esi-worker/heat_stacks?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 03:06:06,900:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/esi-worker/heat_stacks/v2.0/ports/a778c668-6ccb-4d46-9ec3-956693262d63],
+ value=[{
+    "stack_id": "port_a778c668-6ccb-4d46-9ec3-956693262d63", 
+    "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f", 
+    "stack_status": "UPDATE_COMPLETE", 
+    "output": [
+        {
+            "output_value": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb", 
+            "description": "Virtual network.", 
+            "output_key": "virtual_network"
+        }, 
+        {
+            "output_value": "default-domain:admin:a778c668-6ccb-4d46-9ec3-956693262d63", 
+            "description": "Fully Qualified Name of the VMI", 
+            "output_key": "fq_name"
+        }, 
+        {
+            "output_value": "a778c668-6ccb-4d46-9ec3-956693262d63", 
+            "description": "A unique id for the virtual machine interface.", 
+            "output_key": "id"
+        }, 
+        {
+            "output_value": "null", 
+            "description": "Virtual machine allowed address pairs.", 
+            "output_key": "allowed_address_pairs"
+        }, 
+        {
+            "output_value": "xx:xx:xx:xx:xx:xx", 
+            "description": "Virtual machine interface mac address.", 
+            "output_key": "mac_address"
+        }
+    ], 
+    "status_reason": "Stack successfully updated", 
+    "id": "port:a778c668-6ccb-4d46-9ec3-956693262d63"
+}]
+2017-05-11 03:06:06,901:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 03:06:06,901:DEBUG:About to wait on key /esi-worker/heat_stacks, index None
+2017-05-11 03:06:06,901:DEBUG:Issuing read for key /esi-worker/heat_stacks with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 03:06:06,901:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 03:06:06,902:DEBUG:"GET /v2/keys/esi-worker/heat_stacks?recursive=true&wait=true HTTP/1.1" 200 None

@@ -1,0 +1,123 @@
+1. Logical_Network
+ ————————————————————————————————————————————————————————————————---------------------------------
+ resource                monitoring (state)                    monitoring (metrics)
+ ————————————————————————————————————————————————————————————————---------------------------------
+ Ese Device              : monitor_snmp_device                 :
+ Physical Port           : -                                   : -
+ Ese Physical Port       : monitor_physical_port               : snmp_metrics
+ Network                 : monitor_virtual_network             : -
+ Subnet                  : -                                   : -
+ Port                    : monitor_logical_port                : snmp_metrics
+                         : monitor_virtual_machine_interface   : virtual_machine_interface_metrics
+ ————————————————————————————————————————————————————————————————---------------------------------
+
+
+2. Common Function Gateway
+ ————————————————————————————————————————————————————————————————---------------------------------
+ resource                monitoring (state)                    monitoring (metrics)
+ ————————————————————————————————————————————————————————————————---------------------------------
+ Ese Device              : monitor_snmp_device                 : snmp_metrics
+ Ese Physical Port       : monitor_physical_port               : snmp_metrics
+ Edge Router             : monitor_snmp_device                 : snmp_metrics
+ Ha Router               : -                                   : -
+ Er Physical Interface   : monitor_physical_port               : snmp_metrics
+ Ha Interface            : -                                   : -
+ Common Function Pool    : -                                   : -
+ Common Function         : -                                   : -
+ Common Function Gateway : monitor_virtual_network             : -
+                         : monitor_igs_interface               : -
+                         : monitor_logical_port                : snmp_metrics
+                         : monitor_virtual_machine_interface   : virtual_machine_interface_metrics
+ ————————————————————————————————————————————————————————————————---------------------------------
+
+                         
+3. Internet Gateway
+ ————————————————————————————————————————————————————————————————---------------------------------
+ resource                monitoring (state)                    monitoring (metrics)
+ ————————————————————————————————————————————————————————————————---------------------------------
+ Ese Device              : monitor_snmp_device                 : snmp_metrics
+ Ese Physical Port       : monitor_physical_port               : snmp_metrics
+ Edge Router             : monitor_snmp_device                 : snmp_metrics
+ Ha Router               : -                                   : -
+ Er Physical Interface   : monitor_physical_port               : snmp_metrics
+ Ha Interface            : -                                   : -
+ Internet Service        : -                                   : -
+ Qos Option              : -                                   : -
+ Public Ip Pool          : -                                   : -
+ Internet Gateway        : monitor_igs_counter                 : igs_counter_metrics
+ Public Ip               : -                                   : -
+ Network                 : monitor_virtual_network             : -
+ Subnet                  : -                                   : -
+ Gw Interface            : monitor_igs_interface               : -
+                         : monitor_logical_port                : -
+                         : monitor_virtual_machine_interface   : -
+ Static Route            : -                                   : -
+ ————————————————————————————————————————————————————————————————---------------------------------
+
+
+4. Vpn Gateway
+ ————————————————————————————————————————————————————————————————---------------------------------
+ resource                monitoring (state)                    monitoring (metrics)
+ ————————————————————————————————————————————————————————————————---------------------------------
+ Ese Device              : monitor_snmp_device                 : snmp_metrics
+ Ese Physical Port       : monitor_physical_port               : snmp_metrics
+ Edge Router             : monitor_snmp_device                 : snmp_metrics
+ Ha Router               : -                                   : -
+ Er Physical Interface   : monitor_physical_port               : snmp_metrics
+ Ha Interface            : -                                   : -
+ Vpn Service             : -                                   : -
+ Qos Option              : -                                   : -
+ Vpn Gateway             : -                                   : -
+ Vpn Interface           : monitor_logical_port                : -
+                         : monitor_vpn_interface               : -
+ Network                 : monitor_virtual_network             : -
+ Subnet                  : -                                   : -
+ Gw Interface            : monitor_igs_interface               : -
+                         : monitor_logical_port                : -
+                         : monitor_virtual_machine_interface   : -
+ Static Route            : -                                   : -
+ ————————————————————————————————————————————————————————————————---------------------------------
+
+
+5. Firewall
+ ————————————————————————————————————————————————————————————————---------------------------------
+ resource                monitoring (state)                    monitoring (metrics)
+ ————————————————————————————————————————————————————————————————---------------------------------
+ Network (dummy-net)     : monitor_virtual_network             : -
+ Subnet (dummy-net)      : -                                   : -
+ Network (admin-net)     : monitor_virtual_network             : -
+ Subnet (admin-net)      : -                                   : -
+ Vnf Template            : -                                   : -
+ Vnf Plan                : -                                   : -
+ Firewall Plan           : -                                   : -
+ Firewall                : monitor_nova_vm                     : -
+                         : monitor_snmp_device                 : snmp_metrics
+                         : monitor_physical_port               : snmp_metrics
+ Network (user-net)      : monitor_virtual_network             : -
+ Subnet (user-net)       : -                                   : -
+ Firewall Interface      : monitor_nova_vm                     : -
+                         : monitor_snmp_device                 : snmp_metrics
+                         : monitor_physical_port               : snmp_metrics
+ ————————————————————————————————————————————————————————————————---------------------------------
+
+
+6. Load_balancer
+ ————————————————————————————————————————————————————————————————---------------------------------
+ resource                monitoring (state)                    monitoring (metrics)
+ ————————————————————————————————————————————————————————————————---------------------------------
+ Network (dummy-net)     : monitor_virtual_network             : -
+ Subnet (dummy-net)      : -                                   : -
+ Network (admin-net)     : monitor_virtual_network             : -
+ Subnet (admin-net)      : -                                   : -
+ Vnf Template            : -                                   : -
+ Vnf Plan                : -                                   : -
+ Loadbalancer Plan       : -                                   : -
+ Loadbalancer            : monitor_nova_vm                     : -
+                         : monitor_snmp_device                 : snmp_metrics
+                         : monitor_physical_port               : snmp_metrics
+ Network (user-net)      : monitor_virtual_network             : -
+ Subnet (user-net)       : -                                   : -
+ Loadbalancer Interface  : monitor_nova_vm                     : -
+                         : monitor_snmp_device                 : snmp_metrics
+                         : monitor_physical_port               : snmp_metrics
+ ————————————————————————————————————————————————————————————————---------------------------------

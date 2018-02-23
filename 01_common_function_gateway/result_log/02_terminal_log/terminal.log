@@ -1,0 +1,2241 @@
+root@client:/tools/rest-api-for-esi# python gohan-api-common-function-gateways.py 
+### Create Ese Device ###
+name:[QFX-NW02], id:[9f05b260-26ca-46f7-98c3-ad88e411a989]
+--------------------------------------------------------------------------------
+http_request     http_response    response_time   method   code   status
+--------------------------------------------------------------------------------
+03:04:03.334607  03:04:03.455612  0.121005        POST     201    PENDING_CREATE
+03:04:03.456802  03:04:03.564738  0.107936         GET     200    PENDING_CREATE
+03:04:04.565710  03:04:04.641164  0.075454         GET     200    PENDING_CREATE
+03:04:05.642351  03:04:05.724087  0.081736         GET     200    PENDING_CREATE
+03:04:06.725290  03:04:06.800490  0.075200         GET     200    ACTIVE
+--------------------------------------------------------------------------------
+Turn Around Time : 3.465883
+
+[localhost] local: gohan client ese_device show --output-format json 9f05b260-26ca-46f7-98c3-ad88e411a989
+{
+    "ese_device": {
+        "description": "",
+        "existing": "existing",
+        "flavor": null,
+        "hostname": "QFX-NW02",
+        "id": "9f05b260-26ca-46f7-98c3-ad88e411a989",
+        "location": null,
+        "management_ip_address": "10.161.0.34",
+        "name": "QFX-NW02",
+        "password": "password",
+        "public_ip_address": "10.161.0.34",
+        "status": "ACTIVE",
+        "tags": {},
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "tor_agent_names": null,
+        "tsn_names": null,
+        "type": "tor",
+        "username": "esi"
+    }
+}
+
+##########################################
+### checking heat-stack (ese_devices) ####
+##########################################
+[localhost] local: etcdctl -o "json" --peers "http://etcd-server:2379" get /esi-worker/heat_stacks/v2.0/ese_devices/9f05b260-26ca-46f7-98c3-ad88e411a989
+[localhost] local: heat stack-show ese_device_9f05b260-26ca-46f7-98c3-ad88e411a989
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                       |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                          |
+| creation_time         | 2017-05-11T03:04:04Z                                                                                                                                        |
+| description           | ESE Device (existing) template                                                                                                                              |
+| disable_rollback      | True                                                                                                                                                        |
+| id                    | 51374b73-2350-45db-bfcd-4c5021dfd890                                                                                                                        |
+| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/ese_device_9f05b260-26ca-46f7-98c3-ad88e411a989/51374b73-2350-45db-bfcd-4c5021dfd890 (self) |
+| notification_topics   | []                                                                                                                                                          |
+| outputs               | [                                                                                                                                                           |
+|                       |   {                                                                                                                                                         |
+|                       |     "output_value": [                                                                                                                                       |
+|                       |       "default-global-system-config",                                                                                                                       |
+|                       |       "QFX-NW02"                                                                                                                                            |
+|                       |     ],                                                                                                                                                      |
+|                       |     "description": "The FQ name of the physical router.",                                                                                                   |
+|                       |     "output_key": "fq_name"                                                                                                                                 |
+|                       |   },                                                                                                                                                        |
+|                       |   {                                                                                                                                                         |
+|                       |     "output_value": "physical_router",                                                                                                                      |
+|                       |     "description": "A unique id for the physical router.",                                                                                                  |
+|                       |     "output_key": "id"                                                                                                                                      |
+|                       |   },                                                                                                                                                        |
+|                       |   {                                                                                                                                                         |
+|                       |     "output_value": "dummy",                                                                                                                                |
+|                       |     "description": "The name of the physical router.",                                                                                                      |
+|                       |     "output_key": "name"                                                                                                                                    |
+|                       |   }                                                                                                                                                         |
+|                       | ]                                                                                                                                                           |
+| parameters            | {                                                                                                                                                           |
+|                       |   "hostname": "QFX-NW02",                                                                                                                                   |
+|                       |   "OS::stack_id": "51374b73-2350-45db-bfcd-4c5021dfd890",                                                                                                   |
+|                       |   "OS::stack_name": "ese_device_9f05b260-26ca-46f7-98c3-ad88e411a989",                                                                                      |
+|                       |   "name": "QFX-NW02"                                                                                                                                        |
+|                       | }                                                                                                                                                           |
+| parent                | None                                                                                                                                                        |
+| stack_name            | ese_device_9f05b260-26ca-46f7-98c3-ad88e411a989                                                                                                             |
+| stack_owner           | admin                                                                                                                                                       |
+| stack_status          | CREATE_COMPLETE                                                                                                                                             |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                         |
+| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                            |
+| template_description  | ESE Device (existing) template                                                                                                                              |
+| timeout_mins          | 10                                                                                                                                                          |
+| updated_time          | None                                                                                                                                                        |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[localhost] local: heat template-show ese_device_9f05b260-26ca-46f7-98c3-ad88e411a989
+description: 'ESE Device (existing) template
+
+  '
+heat_template_version: '2013-05-23'
+outputs:
+  fq_name:
+    description: The FQ name of the physical router.
+    value:
+      get_attr: [physical_router, fq_name]
+  id:
+    description: A unique id for the physical router.
+    value: {get_resource: physical_router}
+  name:
+    description: The name of the physical router.
+    value:
+      get_attr: [physical_router, name]
+parameters:
+  hostname: {description: Name of host (vrouter) to create router on, label: Hostname,
+    type: string}
+  name: {description: Name of the physical router that will be created., label: Physical
+      Router Name, type: string}
+resources:
+  physical_router:
+    properties:
+      fq_name:
+      - default-global-system-config
+      - {get_param: hostname}
+      resource_type: physical_router
+    type: OS::Contrail::ExistingResource
+
+### Create Ese Physical Port ###
+name:[xe-0/0/3], id:[976156ef-05b4-47f4-9497-a36531563a08]
+--------------------------------------------------------------------------------
+http_request     http_response    response_time   method   code   status
+--------------------------------------------------------------------------------
+03:04:09.453639  03:04:09.612874  0.159235        POST     201    PENDING_CREATE
+03:04:09.613648  03:04:09.704544  0.090896         GET     200    PENDING_CREATE
+03:04:10.705129  03:04:10.781628  0.076499         GET     200    PENDING_CREATE
+03:04:11.782977  03:04:11.901738  0.118761         GET     200    PENDING_CREATE
+03:04:12.902951  03:04:12.980186  0.077235         GET     200    ACTIVE
+--------------------------------------------------------------------------------
+Turn Around Time : 3.526547
+
+[localhost] local: gohan client ese_physical_port show --output-format json 976156ef-05b4-47f4-9497-a36531563a08
+{
+    "ese_physical_port": {
+        "connected_port_id": "",
+        "connected_port_owner": "mx_downlink",
+        "description": "",
+        "ese_device_id": "9f05b260-26ca-46f7-98c3-ad88e411a989",
+        "existing": "new",
+        "id": "976156ef-05b4-47f4-9497-a36531563a08",
+        "name": "xe-0/0/3",
+        "status": "ACTIVE",
+        "tags": {},
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+    }
+}
+
+#################################################
+### checking heat-stack (ese_physical_ports) ####
+#################################################
+[localhost] local: etcdctl -o "json" --peers "http://etcd-server:2379" get /esi-worker/heat_stacks/v2.0/ese_physical_ports/976156ef-05b4-47f4-9497-a36531563a08
+[localhost] local: heat stack-show ese_physical_port_976156ef-05b4-47f4-9497-a36531563a08
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                              |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                                 |
+| creation_time         | 2017-05-11T03:04:10Z                                                                                                                                               |
+| description           | Physical port template                                                                                                                                             |
+| disable_rollback      | True                                                                                                                                                               |
+| id                    | 58d5471e-c74b-478b-b998-18979d838573                                                                                                                               |
+| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/ese_physical_port_976156ef-05b4-47f4-9497-a36531563a08/58d5471e-c74b-478b-b998-18979d838573 (self) |
+| notification_topics   | []                                                                                                                                                                 |
+| outputs               | [                                                                                                                                                                  |
+|                       |   {                                                                                                                                                                |
+|                       |     "output_value": "dddddddd-dddd-dddd-dddd-dddddddddddd",                                                                                                        |
+|                       |     "description": "A unique id for the physical interface",                                                                                                       |
+|                       |     "output_key": "id"                                                                                                                                             |
+|                       |   },                                                                                                                                                               |
+|                       |   {                                                                                                                                                                |
+|                       |     "output_value": null,                                                                                                                                          |
+|                       |     "output_error": "'ContrailPhysicalInterface' object has no attribute 'pi_uuid'",                                                                               |
+|                       |     "description": "The name of the physical interface.",                                                                                                          |
+|                       |     "output_key": "name"                                                                                                                                           |
+|                       |   }                                                                                                                                                                |
+|                       | ]                                                                                                                                                                  |
+| parameters            | {                                                                                                                                                                  |
+|                       |   "physical_port_name": "xe-0/0/3",                                                                                                                                |
+|                       |   "OS::stack_id": "58d5471e-c74b-478b-b998-18979d838573",                                                                                                          |
+|                       |   "OS::stack_name": "ese_physical_port_976156ef-05b4-47f4-9497-a36531563a08",                                                                                      |
+|                       |   "physical_device": "physical_router"                                                                                                                             |
+|                       | }                                                                                                                                                                  |
+| parent                | None                                                                                                                                                               |
+| stack_name            | ese_physical_port_976156ef-05b4-47f4-9497-a36531563a08                                                                                                             |
+| stack_owner           | admin                                                                                                                                                              |
+| stack_status          | CREATE_COMPLETE                                                                                                                                                    |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                                |
+| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                                   |
+| template_description  | Physical port template                                                                                                                                             |
+| timeout_mins          | 10                                                                                                                                                                 |
+| updated_time          | None                                                                                                                                                               |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[localhost] local: heat template-show ese_physical_port_976156ef-05b4-47f4-9497-a36531563a08
+description: 'Physical port template
+
+  '
+heat_template_version: '2013-05-23'
+outputs:
+  id:
+    description: A unique id for the physical interface
+    value: {get_resource: physical_interface}
+  name:
+    description: The name of the physical interface.
+    value:
+      get_attr: [physical_interface, name]
+parameters:
+  physical_device: {description: Id of the physical device on which physical port
+      will be created., label: Physical Device Id, type: string}
+  physical_port_name: {description: Name of the physical port., label: Physical Interface
+      Name, type: string}
+resources:
+  physical_interface:
+    properties:
+      name: {get_param: physical_port_name}
+      physical_router: {get_param: physical_device}
+    type: OS::Contrail::PhysicalInterface
+
+### Create Ese Physical Port ###
+name:[xe-0/0/4], id:[5b2dee2e-7420-4cd4-b270-5081eb9eb371]
+--------------------------------------------------------------------------------
+http_request     http_response    response_time   method   code   status
+--------------------------------------------------------------------------------
+03:04:15.337752  03:04:15.556514  0.218762        POST     201    PENDING_CREATE
+03:04:15.556913  03:04:15.667878  0.110965         GET     200    PENDING_CREATE
+03:04:16.669071  03:04:16.764439  0.095368         GET     200    PENDING_CREATE
+03:04:17.764831  03:04:17.892642  0.127811         GET     200    PENDING_CREATE
+03:04:18.892850  03:04:18.993621  0.100771         GET     200    ACTIVE
+--------------------------------------------------------------------------------
+Turn Around Time : 3.655869
+
+[localhost] local: gohan client ese_physical_port show --output-format json 5b2dee2e-7420-4cd4-b270-5081eb9eb371
+{
+    "ese_physical_port": {
+        "connected_port_id": "",
+        "connected_port_owner": "mx_downlink",
+        "description": "",
+        "ese_device_id": "9f05b260-26ca-46f7-98c3-ad88e411a989",
+        "existing": "new",
+        "id": "5b2dee2e-7420-4cd4-b270-5081eb9eb371",
+        "name": "xe-0/0/4",
+        "status": "ACTIVE",
+        "tags": {},
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+    }
+}
+
+#################################################
+### checking heat-stack (ese_physical_ports) ####
+#################################################
+[localhost] local: etcdctl -o "json" --peers "http://etcd-server:2379" get /esi-worker/heat_stacks/v2.0/ese_physical_ports/5b2dee2e-7420-4cd4-b270-5081eb9eb371
+[localhost] local: heat stack-show ese_physical_port_5b2dee2e-7420-4cd4-b270-5081eb9eb371
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                              |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                                 |
+| creation_time         | 2017-05-11T03:04:16Z                                                                                                                                               |
+| description           | Physical port template                                                                                                                                             |
+| disable_rollback      | True                                                                                                                                                               |
+| id                    | 8e99a795-1815-478f-a013-d7104358e887                                                                                                                               |
+| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/ese_physical_port_5b2dee2e-7420-4cd4-b270-5081eb9eb371/8e99a795-1815-478f-a013-d7104358e887 (self) |
+| notification_topics   | []                                                                                                                                                                 |
+| outputs               | [                                                                                                                                                                  |
+|                       |   {                                                                                                                                                                |
+|                       |     "output_value": "dddddddd-dddd-dddd-dddd-dddddddddddd",                                                                                                        |
+|                       |     "description": "A unique id for the physical interface",                                                                                                       |
+|                       |     "output_key": "id"                                                                                                                                             |
+|                       |   },                                                                                                                                                               |
+|                       |   {                                                                                                                                                                |
+|                       |     "output_value": null,                                                                                                                                          |
+|                       |     "output_error": "'ContrailPhysicalInterface' object has no attribute 'pi_uuid'",                                                                               |
+|                       |     "description": "The name of the physical interface.",                                                                                                          |
+|                       |     "output_key": "name"                                                                                                                                           |
+|                       |   }                                                                                                                                                                |
+|                       | ]                                                                                                                                                                  |
+| parameters            | {                                                                                                                                                                  |
+|                       |   "physical_port_name": "xe-0/0/4",                                                                                                                                |
+|                       |   "OS::stack_id": "8e99a795-1815-478f-a013-d7104358e887",                                                                                                          |
+|                       |   "OS::stack_name": "ese_physical_port_5b2dee2e-7420-4cd4-b270-5081eb9eb371",                                                                                      |
+|                       |   "physical_device": "physical_router"                                                                                                                             |
+|                       | }                                                                                                                                                                  |
+| parent                | None                                                                                                                                                               |
+| stack_name            | ese_physical_port_5b2dee2e-7420-4cd4-b270-5081eb9eb371                                                                                                             |
+| stack_owner           | admin                                                                                                                                                              |
+| stack_status          | CREATE_COMPLETE                                                                                                                                                    |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                                |
+| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                                   |
+| template_description  | Physical port template                                                                                                                                             |
+| timeout_mins          | 10                                                                                                                                                                 |
+| updated_time          | None                                                                                                                                                               |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[localhost] local: heat template-show ese_physical_port_5b2dee2e-7420-4cd4-b270-5081eb9eb371
+description: 'Physical port template
+
+  '
+heat_template_version: '2013-05-23'
+outputs:
+  id:
+    description: A unique id for the physical interface
+    value: {get_resource: physical_interface}
+  name:
+    description: The name of the physical interface.
+    value:
+      get_attr: [physical_interface, name]
+parameters:
+  physical_device: {description: Id of the physical device on which physical port
+      will be created., label: Physical Device Id, type: string}
+  physical_port_name: {description: Name of the physical port., label: Physical Interface
+      Name, type: string}
+resources:
+  physical_interface:
+    properties:
+      name: {get_param: physical_port_name}
+      physical_router: {get_param: physical_device}
+    type: OS::Contrail::PhysicalInterface
+
+### Create Edge Router ###
+name:[vMX-router-02], id:[8aba84f9-4675-4d22-a231-e9eabde80818]
+--------------------------------------------------------------------------------
+http_request     http_response    response_time   method   code   status
+--------------------------------------------------------------------------------
+03:04:21.787533  03:04:21.892467  0.104934        POST     201    PENDING_CREATE
+03:04:21.892903  03:04:22.028159  0.135256         GET     200    PENDING_CREATE
+03:04:23.029420  03:04:23.128608  0.099188         GET     200    ACTIVE
+--------------------------------------------------------------------------------
+Turn Around Time : 1.341075
+
+[localhost] local: gohan client edge_router show --output-format json 8aba84f9-4675-4d22-a231-e9eabde80818
+{
+    "edge_router": {
+        "autonomous_system": "65101",
+        "description": "MX80 #2",
+        "id": "8aba84f9-4675-4d22-a231-e9eabde80818",
+        "ip": "10.79.5.185",
+        "login": "esi",
+        "name": "vMX-router-02",
+        "password": "esiesi0000",
+        "ssh_port": 830,
+        "status": "ACTIVE",
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+    }
+}
+
+### Create Edge Router ###
+name:[vMX-router-01], id:[769b5e3b-3320-41ec-9be0-4567b50f1aab]
+--------------------------------------------------------------------------------
+http_request     http_response    response_time   method   code   status
+--------------------------------------------------------------------------------
+03:04:23.698026  03:04:23.795276  0.097250        POST     201    PENDING_CREATE
+03:04:23.795556  03:04:23.914444  0.118888         GET     200    PENDING_CREATE
+03:04:24.915695  03:04:25.009369  0.093674         GET     200    ACTIVE
+--------------------------------------------------------------------------------
+Turn Around Time : 1.311343
+
+[localhost] local: gohan client edge_router show --output-format json 769b5e3b-3320-41ec-9be0-4567b50f1aab
+{
+    "edge_router": {
+        "autonomous_system": "65101",
+        "description": "MX80 #1",
+        "id": "769b5e3b-3320-41ec-9be0-4567b50f1aab",
+        "ip": "10.79.5.184",
+        "login": "esi",
+        "name": "vMX-router-01",
+        "password": "esiesi0000",
+        "ssh_port": 830,
+        "status": "ACTIVE",
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+    }
+}
+
+### Create Ha Router ###
+name:[sample-ha-router], id:[3a3d7a43-d749-44e8-90bc-de7b37d1d258]
+--------------------------------------------------------------------------------
+http_request     http_response    response_time   method   code   status
+--------------------------------------------------------------------------------
+03:04:25.577591  03:04:25.814911  0.237320        POST     201    PENDING_CREATE
+03:04:25.815488  03:04:26.189164  0.373676         GET     200    PENDING_CREATE
+03:04:27.189415  03:04:27.281465  0.092050         GET     200    ACTIVE
+--------------------------------------------------------------------------------
+Turn Around Time : 1.703874
+
+[localhost] local: gohan client ha_router show --output-format json 3a3d7a43-d749-44e8-90bc-de7b37d1d258
+{
+    "ha_router": {
+        "available_gateways": 500,
+        "description": "sample_ha_router",
+        "id": "3a3d7a43-d749-44e8-90bc-de7b37d1d258",
+        "maximum_gateways": 500,
+        "name": "sample-ha-router",
+        "primary_router_id": "8aba84f9-4675-4d22-a231-e9eabde80818",
+        "secondary_router_id": "769b5e3b-3320-41ec-9be0-4567b50f1aab",
+        "status": "ACTIVE",
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+    }
+}
+
+### Create Er Physical Interface ###
+name:[ae0], id:[a752c6c0-2075-4e7f-9040-5fcefcad0252]
+--------------------------------------------------------------------------------
+http_request     http_response    response_time   method   code   status
+--------------------------------------------------------------------------------
+03:04:27.803556  03:04:28.056994  0.253438        POST     201    PENDING_CREATE
+03:04:28.057497  03:04:28.160102  0.102605         GET     200    PENDING_CREATE
+03:04:29.160823  03:04:29.252727  0.091904         GET     200    ACTIVE
+--------------------------------------------------------------------------------
+Turn Around Time : 1.449171
+
+[localhost] local: gohan client er_physical_interface show --output-format json a752c6c0-2075-4e7f-9040-5fcefcad0252
+{
+    "er_physical_interface": {
+        "connected_ese_port_id": "976156ef-05b4-47f4-9497-a36531563a08",
+        "description": "",
+        "device_id": "8aba84f9-4675-4d22-a231-e9eabde80818",
+        "id": "a752c6c0-2075-4e7f-9040-5fcefcad0252",
+        "name": "ae0",
+        "status": "ACTIVE",
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+    }
+}
+
+### Create Er Physical Interface ###
+name:[ae0], id:[96c3629b-9bfb-4d54-adc1-750d024c2858]
+--------------------------------------------------------------------------------
+http_request     http_response    response_time   method   code   status
+--------------------------------------------------------------------------------
+03:04:29.832950  03:04:30.110712  0.277762        POST     201    PENDING_CREATE
+03:04:30.111347  03:04:30.318869  0.207522         GET     200    PENDING_CREATE
+03:04:31.320637  03:04:31.424429  0.103792         GET     200    ACTIVE
+--------------------------------------------------------------------------------
+Turn Around Time : 1.591479
+
+[localhost] local: gohan client er_physical_interface show --output-format json 96c3629b-9bfb-4d54-adc1-750d024c2858
+{
+    "er_physical_interface": {
+        "connected_ese_port_id": "5b2dee2e-7420-4cd4-b270-5081eb9eb371",
+        "description": "",
+        "device_id": "769b5e3b-3320-41ec-9be0-4567b50f1aab",
+        "id": "96c3629b-9bfb-4d54-adc1-750d024c2858",
+        "name": "ae0",
+        "status": "ACTIVE",
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+    }
+}
+
+### Create Ha Interface ###
+name:[sample-ha-router-downlink], id:[372ed357-e622-41fb-a613-076d332838e2]
+--------------------------------------------------------------------------------
+http_request     http_response    response_time   method   code   status
+--------------------------------------------------------------------------------
+03:04:32.010378  03:04:32.707150  0.696772        POST     201    PENDING_CREATE
+03:04:32.707748  03:04:32.843908  0.136160         GET     200    PENDING_CREATE
+03:04:33.845167  03:04:33.942014  0.096847         GET     200    ACTIVE
+--------------------------------------------------------------------------------
+Turn Around Time : 1.931636
+
+[localhost] local: gohan client ha_interface show --output-format json 372ed357-e622-41fb-a613-076d332838e2
+{
+    "ha_interface": {
+        "admin_state_up": true,
+        "available_be_bandwidth": 0,
+        "available_ga_bandwidth": 0,
+        "description": "",
+        "gateway_instances_count": 0,
+        "ha_router_id": "3a3d7a43-d749-44e8-90bc-de7b37d1d258",
+        "id": "372ed357-e622-41fb-a613-076d332838e2",
+        "link_type": "downlink",
+        "maximum_be_bandwidth": 0,
+        "maximum_ga_bandwidth": 0,
+        "name": "sample-ha-router-downlink",
+        "primary_interface_id": "a752c6c0-2075-4e7f-9040-5fcefcad0252",
+        "restricted_vlans": "0-1024,4094",
+        "secondary_interface_id": "96c3629b-9bfb-4d54-adc1-750d024c2858",
+        "status": "ACTIVE",
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "vlan_ids_available": 3069,
+        "vlan_pool_state": "//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM="
+    }
+}
+
+### Create Common Function Pool ###
+name:[common_function_pool], id:[cca32fd7-2430-4acc-87e9-a7b527e9918d]
+-----------------------------------------------------------------
+http_request     http_response    response_time   method   code
+-----------------------------------------------------------------
+03:04:44.532500  03:04:44.648175  0.115675        POST     201
+03:04:44.648902  03:04:44.762535  0.113633         GET     200
+-----------------------------------------------------------------
+Turn Around Time : 0.230035
+
+[localhost] local: gohan client common_function_pool show --output-format json cca32fd7-2430-4acc-87e9-a7b527e9918d
+{
+    "common_function_pool": {
+        "common_function_pool_state": "AAD//w==",
+        "description": "sample common function pool",
+        "dnat_group_name": "DNAT-RULE",
+        "dnat_pool_group_name": "DNAT-POOL",
+        "downlink_interfaces": [
+            "372ed357-e622-41fb-a613-076d332838e2"
+        ],
+        "id": "cca32fd7-2430-4acc-87e9-a7b527e9918d",
+        "link_local_cidr": "169.254.0.0/17",
+        "link_local_netmask": 17,
+        "logical_tunnel_interface_name": "lt-0/0/0",
+        "name": "common_function_pool",
+        "service_interface_name": "ms-0/2/0",
+        "service_vrf_name": "SHARED-RESOURCE",
+        "snapt_group_name": "SNAPT-RULE",
+        "snapt_pool_group_name": "SNAPT-POOL",
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "vrrp_config": [
+            {
+                "primary_ip": "169.254.1.251",
+                "secondary_ip": "169.254.1.252",
+                "vrid": 41
+            },
+            {
+                "primary_ip": "169.254.1.253",
+                "secondary_ip": "169.254.1.254",
+                "vrid": 42
+            }
+        ],
+        "vrrp_group_name": "IF-USER-VRRP-ACT"
+    }
+}
+
+### Create Common Function ###
+name:[common_function1], id:[18c64ec9-78c2-43ac-ae0d-48fa9b6c0858]
+--------------------------------------------------------------------------------
+http_request     http_response    response_time   method   code   status
+--------------------------------------------------------------------------------
+03:04:55.347682  03:04:55.543464  0.195782        POST     201    PENDING_CREATE
+03:04:55.543827  03:04:55.714120  0.170293         GET     200    ACTIVE
+--------------------------------------------------------------------------------
+Turn Around Time : 0.366438
+
+[localhost] local: gohan client common_function show --output-format json 18c64ec9-78c2-43ac-ae0d-48fa9b6c0858
+{
+    "common_function": {
+        "common_function_number": 1,
+        "common_function_pool_id": "cca32fd7-2430-4acc-87e9-a7b527e9918d",
+        "description": "",
+        "ha_router_id": "3a3d7a43-d749-44e8-90bc-de7b37d1d258",
+        "id": "18c64ec9-78c2-43ac-ae0d-48fa9b6c0858",
+        "link_local_ip_address": "169.254.1.227",
+        "name": "common_function1",
+        "primary_vrrp_ip": "169.254.1.251",
+        "secondary_vrrp_ip": "169.254.1.252",
+        "shared_ip_address": "100.64.0.127",
+        "status": "ACTIVE",
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "vrid": 41
+    }
+}
+
+### Create Common Function ###
+name:[common_function2], id:[c1be08ee-7cf2-4c84-8fe7-7e891d17bc71]
+--------------------------------------------------------------------------------
+http_request     http_response    response_time   method   code   status
+--------------------------------------------------------------------------------
+03:05:06.195062  03:05:06.385400  0.190338        POST     201    PENDING_CREATE
+03:05:06.385769  03:05:06.528650  0.142881         GET     200    PENDING_CREATE
+03:05:07.529950  03:05:07.630246  0.100296         GET     200    ACTIVE
+--------------------------------------------------------------------------------
+Turn Around Time : 1.435184
+
+[localhost] local: gohan client common_function show --output-format json c1be08ee-7cf2-4c84-8fe7-7e891d17bc71
+{
+    "common_function": {
+        "common_function_number": 2,
+        "common_function_pool_id": "cca32fd7-2430-4acc-87e9-a7b527e9918d",
+        "description": "",
+        "ha_router_id": "3a3d7a43-d749-44e8-90bc-de7b37d1d258",
+        "id": "c1be08ee-7cf2-4c84-8fe7-7e891d17bc71",
+        "link_local_ip_address": "169.254.1.228",
+        "name": "common_function2",
+        "primary_vrrp_ip": "169.254.1.253",
+        "secondary_vrrp_ip": "169.254.1.254",
+        "shared_ip_address": "100.64.0.128",
+        "status": "ACTIVE",
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "vrid": 42
+    }
+}
+
+### Create Nat Ip Pool ###
+name:[sample-nat-ip-pool], id:[75733e12-47f7-49ea-9939-2819df6c8253]
+-----------------------------------------------------------------
+http_request     http_response    response_time   method   code
+-----------------------------------------------------------------
+03:05:19.311612  03:05:19.563771  0.252159        POST     201
+03:05:19.564011  03:05:19.670465  0.106454         GET     200
+-----------------------------------------------------------------
+Turn Around Time : 0.358853
+
+[localhost] local: gohan client nat_ip_pool show --output-format json 75733e12-47f7-49ea-9939-2819df6c8253
+{
+    "nat_ip_pool": {
+        "common_function_pool_id": "cca32fd7-2430-4acc-87e9-a7b527e9918d",
+        "description": "",
+        "ha_router_id": "3a3d7a43-d749-44e8-90bc-de7b37d1d258",
+        "id": "75733e12-47f7-49ea-9939-2819df6c8253",
+        "ip_allocation_state": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/8=",
+        "ip_ranges": [
+            {
+                "end": "100.64.0.254",
+                "start": "100.64.0.10"
+            }
+        ],
+        "name": "sample-nat-ip-pool",
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+    }
+}
+
+### Create Common Function Gateway ###
+name:[T0011CF000], id:[5c241c51-2003-407a-a239-689fabd19022]
+--------------------------------------------------------------------------------
+http_request     http_response    response_time   method   code   status
+--------------------------------------------------------------------------------
+03:05:30.167600  03:05:31.468206  1.300606        POST     201    PENDING_CREATE
+[localhost] local: gohan client port list --output-format json
+########################################################
+### checking heat-stack (ports) for CREATE_COMPLETE ####
+########################################################
+[localhost] local: etcdctl -o "json" --peers "http://etcd-server:2379" get /esi-worker/heat_stacks/v2.0/ports/327f59b7-df38-4d8f-97db-d320defcab76
+[localhost] local: heat stack-show port_327f59b7-df38-4d8f-97db-d320defcab76
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                 |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                    |
+| creation_time         | 2017-05-11T03:05:37Z                                                                                                                                  |
+| description           | Virtual Machine Interface Template                                                                                                                    |
+| disable_rollback      | True                                                                                                                                                  |
+| id                    | 67472096-f3b3-48d1-962c-23ea4912b1d3                                                                                                                  |
+| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/port_327f59b7-df38-4d8f-97db-d320defcab76/67472096-f3b3-48d1-962c-23ea4912b1d3 (self) |
+| notification_topics   | []                                                                                                                                                    |
+| outputs               | [                                                                                                                                                     |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",                                                                                           |
+|                       |     "description": "Virtual network.",                                                                                                                |
+|                       |     "output_key": "virtual_network"                                                                                                                   |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "default-domain:admin:327f59b7-df38-4d8f-97db-d320defcab76",                                                                      |
+|                       |     "description": "Fully Qualified Name of the VMI",                                                                                                 |
+|                       |     "output_key": "fq_name"                                                                                                                           |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "327f59b7-df38-4d8f-97db-d320defcab76",                                                                                           |
+|                       |     "description": "A unique id for the virtual machine interface.",                                                                                  |
+|                       |     "output_key": "id"                                                                                                                                |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "null",                                                                                                                           |
+|                       |     "description": "Virtual machine allowed address pairs.",                                                                                          |
+|                       |     "output_key": "allowed_address_pairs"                                                                                                             |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "xx:xx:xx:xx:xx:xx",                                                                                                              |
+|                       |     "description": "Virtual machine interface mac address.",                                                                                          |
+|                       |     "output_key": "mac_address"                                                                                                                       |
+|                       |   }                                                                                                                                                   |
+|                       | ]                                                                                                                                                     |
+| parameters            | {                                                                                                                                                     |
+|                       |   "virtual_machine": "5c241c51-2003-407a-a239-689fabd19022",                                                                                          |
+|                       |   "name": "327f59b7-df38-4d8f-97db-d320defcab76",                                                                                                     |
+|                       |   "OS::stack_name": "port_327f59b7-df38-4d8f-97db-d320defcab76",                                                                                      |
+|                       |   "admin_state_up": "True",                                                                                                                           |
+|                       |   "virtual_machine_interface_allowed_address_pairs": "null",                                                                                          |
+|                       |   "virtual_machine_interface_mac_address": "fa:16:3e:e5:f6:39",                                                                                       |
+|                       |   "OS::stack_id": "67472096-f3b3-48d1-962c-23ea4912b1d3",                                                                                             |
+|                       |   "device_owner": "network:common_function_gateway",                                                                                                  |
+|                       |   "virtual_network": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",                                                                                          |
+|                       |   "uuid": "327f59b7-df38-4d8f-97db-d320defcab76"                                                                                                      |
+|                       | }                                                                                                                                                     |
+| parent                | None                                                                                                                                                  |
+| stack_name            | port_327f59b7-df38-4d8f-97db-d320defcab76                                                                                                             |
+| stack_owner           | admin                                                                                                                                                 |
+| stack_status          | CREATE_COMPLETE                                                                                                                                       |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                   |
+| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                      |
+| template_description  | Virtual Machine Interface Template                                                                                                                    |
+| timeout_mins          | 10                                                                                                                                                    |
+| updated_time          | None                                                                                                                                                  |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[localhost] local: heat template-show port_327f59b7-df38-4d8f-97db-d320defcab76
+description: 'Virtual Machine Interface Template
+
+  '
+heat_template_version: '2013-05-23'
+outputs:
+  allowed_address_pairs:
+    description: Virtual machine allowed address pairs.
+    value:
+      get_attr: [virtual_machine_interface, virtual_machine_interface_allowed_address_pairs]
+  fq_name:
+    description: Fully Qualified Name of the VMI
+    value:
+      get_attr: [virtual_machine_interface, fq_name]
+  id:
+    description: A unique id for the virtual machine interface.
+    value: {get_resource: virtual_machine_interface}
+  mac_address:
+    description: Virtual machine interface mac address.
+    value:
+      get_attr: [virtual_machine_interface, virtual_machine_interface_mac_addresses]
+  virtual_network:
+    description: Virtual network.
+    value:
+      get_attr: [virtual_machine_interface, virtual_networks]
+parameters:
+  admin_state_up: {default: true, label: Admin state up, type: boolean}
+  device_owner: {default: '', label: Device Owner, type: string}
+  name: {description: A unique id for the Physical Interface., label: Physical Interface
+      ID, type: string}
+  uuid: {description: A unique id for the Virtual Machine Interface., label: Backend
+      Virtual Machine Interface UUID, type: string}
+  virtual_machine: {default: '', label: Virtual Machine., type: string}
+  virtual_machine_interface_allowed_address_pairs: {label: Virtual machine interface
+      allowed address pairs., type: json}
+  virtual_machine_interface_mac_address: {default: 'fe:ff:ff:ff:ff:ff', label: Virtual
+      machine interface mac address., type: string}
+  virtual_network: {label: Virtual Network., type: string}
+resources:
+  instance_ip_0:
+    properties:
+      ip_address: 169.254.0.3
+      name:
+        str_replace:
+          params:
+            '%ip%': 169.254.0.3
+            '%name%': {get_param: name}
+            '%zone%': e1353d56-b05a-43a9-b924-383ab0d64d7b
+          template: '%name%_%zone%_%ip%'
+      network_id: {get_param: virtual_network}
+      subnet_id: 9e61b626-a866-4ba5-b1c7-01935fdac3f4
+      virtual_machine_interfaces:
+      - {get_resource: virtual_machine_interface}
+    type: OS::Contrail::InstanceIp
+  virtual_machine_interface:
+    properties:
+      admin_state_up: {get_param: admin_state_up}
+      device_owner: {get_param: device_owner}
+      name: {get_param: name}
+      uuid: {get_param: uuid}
+      virtual_machine: {get_param: virtual_machine}
+      virtual_machine_interface_allowed_address_pairs: {get_param: virtual_machine_interface_allowed_address_pairs}
+      virtual_machine_interface_mac_addresses:
+      - {get_param: virtual_machine_interface_mac_address}
+      virtual_networks:
+      - {get_param: virtual_network}
+    type: OS::Contrail::VirtualMachineInterface
+
+########################################################
+### checking heat-stack (ports) for CREATE_COMPLETE ####
+########################################################
+[localhost] local: etcdctl -o "json" --peers "http://etcd-server:2379" get /esi-worker/heat_stacks/v2.0/ports/a778c668-6ccb-4d46-9ec3-956693262d63
+[localhost] local: heat stack-show port_a778c668-6ccb-4d46-9ec3-956693262d63
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                 |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                    |
+| creation_time         | 2017-05-11T03:05:37Z                                                                                                                                  |
+| description           | Virtual Machine Interface Template                                                                                                                    |
+| disable_rollback      | True                                                                                                                                                  |
+| id                    | 8bde5310-5c31-4494-9121-4ca5351f2d83                                                                                                                  |
+| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/port_a778c668-6ccb-4d46-9ec3-956693262d63/8bde5310-5c31-4494-9121-4ca5351f2d83 (self) |
+| notification_topics   | []                                                                                                                                                    |
+| outputs               | [                                                                                                                                                     |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",                                                                                           |
+|                       |     "description": "Virtual network.",                                                                                                                |
+|                       |     "output_key": "virtual_network"                                                                                                                   |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "default-domain:admin:a778c668-6ccb-4d46-9ec3-956693262d63",                                                                      |
+|                       |     "description": "Fully Qualified Name of the VMI",                                                                                                 |
+|                       |     "output_key": "fq_name"                                                                                                                           |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "a778c668-6ccb-4d46-9ec3-956693262d63",                                                                                           |
+|                       |     "description": "A unique id for the virtual machine interface.",                                                                                  |
+|                       |     "output_key": "id"                                                                                                                                |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "null",                                                                                                                           |
+|                       |     "description": "Virtual machine allowed address pairs.",                                                                                          |
+|                       |     "output_key": "allowed_address_pairs"                                                                                                             |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "xx:xx:xx:xx:xx:xx",                                                                                                              |
+|                       |     "description": "Virtual machine interface mac address.",                                                                                          |
+|                       |     "output_key": "mac_address"                                                                                                                       |
+|                       |   }                                                                                                                                                   |
+|                       | ]                                                                                                                                                     |
+| parameters            | {                                                                                                                                                     |
+|                       |   "virtual_machine": "5c241c51-2003-407a-a239-689fabd19022",                                                                                          |
+|                       |   "name": "a778c668-6ccb-4d46-9ec3-956693262d63",                                                                                                     |
+|                       |   "OS::stack_name": "port_a778c668-6ccb-4d46-9ec3-956693262d63",                                                                                      |
+|                       |   "admin_state_up": "True",                                                                                                                           |
+|                       |   "virtual_machine_interface_allowed_address_pairs": "null",                                                                                          |
+|                       |   "virtual_machine_interface_mac_address": "fa:16:3e:0c:b0:eb",                                                                                       |
+|                       |   "OS::stack_id": "8bde5310-5c31-4494-9121-4ca5351f2d83",                                                                                             |
+|                       |   "device_owner": "network:common_function_gateway",                                                                                                  |
+|                       |   "virtual_network": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",                                                                                          |
+|                       |   "uuid": "a778c668-6ccb-4d46-9ec3-956693262d63"                                                                                                      |
+|                       | }                                                                                                                                                     |
+| parent                | None                                                                                                                                                  |
+| stack_name            | port_a778c668-6ccb-4d46-9ec3-956693262d63                                                                                                             |
+| stack_owner           | admin                                                                                                                                                 |
+| stack_status          | CREATE_COMPLETE                                                                                                                                       |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                   |
+| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                      |
+| template_description  | Virtual Machine Interface Template                                                                                                                    |
+| timeout_mins          | 10                                                                                                                                                    |
+| updated_time          | None                                                                                                                                                  |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[localhost] local: heat template-show port_a778c668-6ccb-4d46-9ec3-956693262d63
+description: 'Virtual Machine Interface Template
+
+  '
+heat_template_version: '2013-05-23'
+outputs:
+  allowed_address_pairs:
+    description: Virtual machine allowed address pairs.
+    value:
+      get_attr: [virtual_machine_interface, virtual_machine_interface_allowed_address_pairs]
+  fq_name:
+    description: Fully Qualified Name of the VMI
+    value:
+      get_attr: [virtual_machine_interface, fq_name]
+  id:
+    description: A unique id for the virtual machine interface.
+    value: {get_resource: virtual_machine_interface}
+  mac_address:
+    description: Virtual machine interface mac address.
+    value:
+      get_attr: [virtual_machine_interface, virtual_machine_interface_mac_addresses]
+  virtual_network:
+    description: Virtual network.
+    value:
+      get_attr: [virtual_machine_interface, virtual_networks]
+parameters:
+  admin_state_up: {default: true, label: Admin state up, type: boolean}
+  device_owner: {default: '', label: Device Owner, type: string}
+  name: {description: A unique id for the Physical Interface., label: Physical Interface
+      ID, type: string}
+  uuid: {description: A unique id for the Virtual Machine Interface., label: Backend
+      Virtual Machine Interface UUID, type: string}
+  virtual_machine: {default: '', label: Virtual Machine., type: string}
+  virtual_machine_interface_allowed_address_pairs: {label: Virtual machine interface
+      allowed address pairs., type: json}
+  virtual_machine_interface_mac_address: {default: 'fe:ff:ff:ff:ff:ff', label: Virtual
+      machine interface mac address., type: string}
+  virtual_network: {label: Virtual Network., type: string}
+resources:
+  instance_ip_0:
+    properties:
+      ip_address: 169.254.0.4
+      name:
+        str_replace:
+          params:
+            '%ip%': 169.254.0.4
+            '%name%': {get_param: name}
+            '%zone%': e1353d56-b05a-43a9-b924-383ab0d64d7b
+          template: '%name%_%zone%_%ip%'
+      network_id: {get_param: virtual_network}
+      subnet_id: 9e61b626-a866-4ba5-b1c7-01935fdac3f4
+      virtual_machine_interfaces:
+      - {get_resource: virtual_machine_interface}
+    type: OS::Contrail::InstanceIp
+  virtual_machine_interface:
+    properties:
+      admin_state_up: {get_param: admin_state_up}
+      device_owner: {get_param: device_owner}
+      name: {get_param: name}
+      uuid: {get_param: uuid}
+      virtual_machine: {get_param: virtual_machine}
+      virtual_machine_interface_allowed_address_pairs: {get_param: virtual_machine_interface_allowed_address_pairs}
+      virtual_machine_interface_mac_addresses:
+      - {get_param: virtual_machine_interface_mac_address}
+      virtual_networks:
+      - {get_param: virtual_network}
+    type: OS::Contrail::VirtualMachineInterface
+
+03:05:52.381533  03:05:52.481615  0.100082         GET     200    PENDING_CREATE
+03:05:53.482043  03:05:53.588790  0.106747         GET     200    PENDING_CREATE
+03:05:54.590133  03:05:54.685036  0.094903         GET     200    PENDING_CREATE
+03:05:55.686066  03:05:55.780838  0.094772         GET     200    PENDING_CREATE
+03:05:56.782015  03:05:56.906776  0.124761         GET     200    ACTIVE
+--------------------------------------------------------------------------------
+Turn Around Time : 26.739176
+
+[localhost] local: gohan client common_function_gateway show --output-format json 5c241c51-2003-407a-a239-689fabd19022
+{
+    "common_function_gateway": {
+        "common_function_pool_id": "cca32fd7-2430-4acc-87e9-a7b527e9918d",
+        "common_functions": [
+            {
+                "common_function_id": "18c64ec9-78c2-43ac-ae0d-48fa9b6c0858"
+            },
+            {
+                "common_function_id": "c1be08ee-7cf2-4c84-8fe7-7e891d17bc71"
+            }
+        ],
+        "description": "",
+        "downlink_interface_id": "372ed357-e622-41fb-a613-076d332838e2",
+        "id": "5c241c51-2003-407a-a239-689fabd19022",
+        "logical_tunnel_unit_service": "11025",
+        "logical_tunnel_unit_user": "1025",
+        "name": "T0011CF000",
+        "nat_ip": "100.64.0.10",
+        "network_id": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",
+        "primary_logical_interface_name": "ae0.1025",
+        "secondary_logical_interface_name": "ae0.1025",
+        "status": "ACTIVE",
+        "subnet_id": "e1353d56-b05a-43a9-b924-383ab0d64d7b",
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "vlan_id": "1025",
+        "vrf_name": "vrf_gw_sample-ha-router-downlink_1025"
+    }
+}
+
+#######################################################
+### checking heat-stack (common_function_gateways) ####
+#######################################################
+[localhost] local: etcdctl -o "json" --peers "http://etcd-server:2379" get /esi-worker/heat_stacks/v2.0/common_function_gateways/5c241c51-2003-407a-a239-689fabd19022
+[localhost] local: heat stack-show common_function_gateway_5c241c51-2003-407a-a239-689fabd19022
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                                    |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                                       |
+| creation_time         | 2017-05-11T03:05:37Z                                                                                                                                                     |
+| description           | Common Function Gateway                                                                                                                                                  |
+| disable_rollback      | True                                                                                                                                                                     |
+| id                    | 1d03f6d9-3d61-44b0-a250-247c0b50cf70                                                                                                                                     |
+| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/common_function_gateway_5c241c51-2003-407a-a239-689fabd19022/1d03f6d9-3d61-44b0-a250-247c0b50cf70 (self) |
+| notification_topics   | []                                                                                                                                                                       |
+| outputs               | []                                                                                                                                                                       |
+| parameters            | {                                                                                                                                                                        |
+|                       |   "primary_device_ip": "10.79.5.185",                                                                                                                                    |
+|                       |   "OS::stack_id": "1d03f6d9-3d61-44b0-a250-247c0b50cf70",                                                                                                                |
+|                       |   "OS::stack_name": "common_function_gateway_5c241c51-2003-407a-a239-689fabd19022",                                                                                      |
+|                       |   "primary_device_logical_downlink_interface": "ae0.1025",                                                                                                               |
+|                       |   "secondary_device_logical_downlink_interface": "ae0.1025",                                                                                                             |
+|                       |   "secondary_device_port": "830",                                                                                                                                        |
+|                       |   "secondary_device_password": "esiesi0000",                                                                                                                             |
+|                       |   "primary_device_password": "esiesi0000",                                                                                                                               |
+|                       |   "primary_device_username": "esi",                                                                                                                                      |
+|                       |   "primary_device_physical_downlink_interface": "ae0",                                                                                                                   |
+|                       |   "primary_device_port": "830",                                                                                                                                          |
+|                       |   "secondary_device_physical_downlink_interface": "ae0",                                                                                                                 |
+|                       |   "secondary_device_ip": "10.79.5.184",                                                                                                                                  |
+|                       |   "secondary_device_username": "esi"                                                                                                                                     |
+|                       | }                                                                                                                                                                        |
+| parent                | None                                                                                                                                                                     |
+| stack_name            | common_function_gateway_5c241c51-2003-407a-a239-689fabd19022                                                                                                             |
+| stack_owner           | admin                                                                                                                                                                    |
+| stack_status          | CREATE_COMPLETE                                                                                                                                                          |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                                      |
+| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                                         |
+| template_description  | Common Function Gateway                                                                                                                                                  |
+| timeout_mins          | 60                                                                                                                                                                       |
+| updated_time          | None                                                                                                                                                                     |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[localhost] local: heat template-show common_function_gateway_5c241c51-2003-407a-a239-689fabd19022
+description: 'Common Function Gateway
+
+  '
+heat_template_version: '2013-05-23'
+parameters:
+  primary_device_ip: {description: Ip address that will be used to establish ssh connection
+      to the Primary Device., label: Ip address of the device., type: string}
+  primary_device_logical_downlink_interface: {description: Name of the created logical
+      downlink interface on the Primary device, label: Logical Interface name, type: string}
+  primary_device_password: {description: Password of the user which will be used to
+      log onto the Primary Device., label: Users password., type: string}
+  primary_device_physical_downlink_interface: {description: Physical port on the Primary
+      device on which the logical downlink port will be configured, label: Underlying
+      physical interface, type: string}
+  primary_device_port: {description: Port that will be used to establish ssh connection
+      to the Primary Device., label: Port of the ssh connection., type: number}
+  primary_device_username: {description: Name of the user which will be used to log
+      onto the Primary Device., label: User name to log on to device., type: string}
+  secondary_device_ip: {description: Ip address that will be used to establish ssh
+      connection to the Secondary Device., label: Ip address of the device., type: string}
+  secondary_device_logical_downlink_interface: {description: Name of the created logical
+      downlink interface on the Secondary device, label: Logical Interface name, type: string}
+  secondary_device_password: {description: Password of the user which will be used
+      to log onto the Secondary Device., label: Users password., type: string}
+  secondary_device_physical_downlink_interface: {description: Physical port on the
+      Secondary device on which the logical downlink port will be configured, label: Underlying
+      physical interface, type: string}
+  secondary_device_port: {description: Port that will be used to establish ssh connection
+      to the Secondary Device., label: Port of the ssh connection., type: number}
+  secondary_device_username: {description: Name of the user which will be used to
+      log onto the Secondary Device., label: User name to log on to device., type: string}
+resources:
+  netconf_configure_primary:
+    properties:
+      configs:
+      - config: 'nat-rules vrf_gw_sample-ha-router-downlink_1025-SNAPT;
+
+          nat-rules vrf_gw_sample-ha-router-downlink_1025-DNAT;
+
+          interface-service service-interface ms-0/2/0.1025;
+
+          '
+        path:
+        - {config_type: tag, tag: services, xml_type: tag}
+        - {config_type: named_tag, name: vrf_gw_sample-ha-router-downlink_1025, tag: service-set,
+          xml_type: named_tag}
+      - config: 'apply-groups SNAPT-POOL;
+
+          address 100.64.0.10/32;
+
+          '
+        path:
+        - {config_type: tag, tag: services, xml_type: tag}
+        - {config_type: tag, tag: nat, xml_type: tag}
+        - {config_type: named_tag, name: vrf_gw_sample-ha-router-downlink_1025-SNAPT-POOL,
+          tag: pool, xml_type: named_tag}
+      - config: 'apply-groups SNAPT-RULE;
+
+          term source then translated source-pool vrf_gw_sample-ha-router-downlink_1025-SNAPT-POOL;
+
+          '
+        path:
+        - {config_type: tag, tag: services, xml_type: tag}
+        - {config_type: tag, tag: nat, xml_type: tag}
+        - {config_type: named_tag, name: vrf_gw_sample-ha-router-downlink_1025-SNAPT,
+          tag: rule, xml_type: named_tag}
+      - config: 'apply-groups DNAT-POOL-1;
+
+          '
+        path:
+        - {config_type: tag, tag: services, xml_type: tag}
+        - {config_type: tag, tag: nat, xml_type: tag}
+        - {config_type: named_tag, name: vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-1,
+          tag: pool, xml_type: named_tag}
+      - config: 'apply-groups DNAT-POOL-2;
+
+          '
+        path:
+        - {config_type: tag, tag: services, xml_type: tag}
+        - {config_type: tag, tag: nat, xml_type: tag}
+        - {config_type: named_tag, name: vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-2,
+          tag: pool, xml_type: named_tag}
+      - config: 'apply-groups DNAT-RULE;
+
+
+          term 1 then translated destination-pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-1;
+
+
+          term 2 then translated destination-pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-2;
+
+          '
+        path:
+        - {config_type: tag, tag: services, xml_type: tag}
+        - {config_type: tag, tag: nat, xml_type: tag}
+        - {config_type: named_tag, name: vrf_gw_sample-ha-router-downlink_1025-DNAT,
+          tag: rule, xml_type: named_tag}
+      - config: 'peer-unit 11025;
+
+          family inet service input service-set vrf_gw_sample-ha-router-downlink_1025;
+
+          family inet service output service-set vrf_gw_sample-ha-router-downlink_1025;
+
+          '
+        path:
+        - {config_type: tag, tag: interfaces, xml_type: tag}
+        - {config_type: name, name: lt-0/0/0, tag: interface, xml_type: named_tag}
+        - {config_type: named_tag, name: 1025, tag: unit, xml_type: named_tag}
+      - config: 'peer-unit 1025;
+
+          '
+        path:
+        - {config_type: tag, tag: interfaces, xml_type: tag}
+        - {config_type: name, name: lt-0/0/0, tag: interface, xml_type: named_tag}
+        - {config_type: named_tag, name: 11025, tag: unit, xml_type: named_tag}
+      - config: 'family inet;
+
+          '
+        path:
+        - {config_type: tag, tag: interfaces, xml_type: tag}
+        - {config_type: name, name: ms-0/2/0, tag: interface, xml_type: named_tag}
+        - {config_type: named_tag, name: 1025, tag: unit, xml_type: named_tag}
+      - config: 'apply-groups IF-USER-VRRP-ACT;
+
+          description vrf_gw_sample-ha-router-downlink_1025;
+
+          vlan-id 1025;
+
+          family inet service input service-set vrf_gw_sample-ha-router-downlink_1025;
+
+          family inet service output service-set vrf_gw_sample-ha-router-downlink_1025;
+
+          '
+        path:
+        - {config_type: tag, tag: interfaces, xml_type: tag}
+        - config_type: name
+          name: {get_param: primary_device_physical_downlink_interface}
+          tag: interface
+          xml_type: named_tag
+        - {config_type: named_tag, name: 1025, tag: unit, xml_type: named_tag}
+      - config: ''
+        path:
+        - {config_type: tag, tag: routing-instances, xml_type: tag}
+        - {config_type: name, name: SHARED-RESOURCE, tag: instance, xml_type: named_tag}
+        - {config_type: named_tag, name: lt-0/0/0.11025, tag: interface, xml_type: named_tag}
+      - config: next-hop lt-0/0/0.11025;
+        path:
+        - {config_type: tag, tag: routing-instances, xml_type: tag}
+        - {config_type: name, name: SHARED-RESOURCE, tag: instance, xml_type: named_tag}
+        - {config_type: tag, tag: routing-options, xml_type: tag}
+        - {config_type: tag, tag: static, xml_type: tag}
+        - {config_type: named_tag, name: 100.64.0.10/32, tag: route, xml_type: named_tag}
+      - config:
+          str_replace:
+            params:
+              $DOWNLINK_INTERFACE: {get_param: primary_device_logical_downlink_interface}
+            template: 'instance-type virtual-router;
+
+              interface lt-0/0/0.1025;
+
+              interface ms-0/2/0.1025;
+
+              interface $DOWNLINK_INTERFACE;
+
+              routing-options static route 0.0.0.0/0 next-hop lt-0/0/0.1025;
+
+              '
+        path:
+        - {config_type: tag, tag: routing-instances, xml_type: tag}
+        - {config_type: name, name: vrf_gw_sample-ha-router-downlink_1025, tag: instance,
+          xml_type: named_tag}
+      device_ip: {get_param: primary_device_ip}
+      lock_timeout: 3000
+      password: {get_param: primary_device_password}
+      port: {get_param: primary_device_port}
+      username: {get_param: primary_device_username}
+    type: OS::Contrail::NetconfNamedConfigs
+  netconf_configure_secondary:
+    properties:
+      configs:
+      - config: 'nat-rules vrf_gw_sample-ha-router-downlink_1025-SNAPT;
+
+          nat-rules vrf_gw_sample-ha-router-downlink_1025-DNAT;
+
+          interface-service service-interface ms-0/2/0.1025;
+
+          '
+        path:
+        - {config_type: tag, tag: services, xml_type: tag}
+        - {config_type: named_tag, name: vrf_gw_sample-ha-router-downlink_1025, tag: service-set,
+          xml_type: named_tag}
+      - config: 'apply-groups SNAPT-POOL;
+
+          address 100.64.0.10/32;
+
+          '
+        path:
+        - {config_type: tag, tag: services, xml_type: tag}
+        - {config_type: tag, tag: nat, xml_type: tag}
+        - {config_type: named_tag, name: vrf_gw_sample-ha-router-downlink_1025-SNAPT-POOL,
+          tag: pool, xml_type: named_tag}
+      - config: 'apply-groups SNAPT-RULE;
+
+          term source then translated source-pool vrf_gw_sample-ha-router-downlink_1025-SNAPT-POOL;
+
+          '
+        path:
+        - {config_type: tag, tag: services, xml_type: tag}
+        - {config_type: tag, tag: nat, xml_type: tag}
+        - {config_type: named_tag, name: vrf_gw_sample-ha-router-downlink_1025-SNAPT,
+          tag: rule, xml_type: named_tag}
+      - config: 'apply-groups DNAT-POOL-1;
+
+          '
+        path:
+        - {config_type: tag, tag: services, xml_type: tag}
+        - {config_type: tag, tag: nat, xml_type: tag}
+        - {config_type: named_tag, name: vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-1,
+          tag: pool, xml_type: named_tag}
+      - config: 'apply-groups DNAT-POOL-2;
+
+          '
+        path:
+        - {config_type: tag, tag: services, xml_type: tag}
+        - {config_type: tag, tag: nat, xml_type: tag}
+        - {config_type: named_tag, name: vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-2,
+          tag: pool, xml_type: named_tag}
+      - config: 'apply-groups DNAT-RULE;
+
+
+          term 1 then translated destination-pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-1;
+
+
+          term 2 then translated destination-pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-2;
+
+          '
+        path:
+        - {config_type: tag, tag: services, xml_type: tag}
+        - {config_type: tag, tag: nat, xml_type: tag}
+        - {config_type: named_tag, name: vrf_gw_sample-ha-router-downlink_1025-DNAT,
+          tag: rule, xml_type: named_tag}
+      - config: 'peer-unit 11025;
+
+          family inet service input service-set vrf_gw_sample-ha-router-downlink_1025;
+
+          family inet service output service-set vrf_gw_sample-ha-router-downlink_1025;
+
+          '
+        path:
+        - {config_type: tag, tag: interfaces, xml_type: tag}
+        - {config_type: name, name: lt-0/0/0, tag: interface, xml_type: named_tag}
+        - {config_type: named_tag, name: 1025, tag: unit, xml_type: named_tag}
+      - config: 'peer-unit 1025;
+
+          '
+        path:
+        - {config_type: tag, tag: interfaces, xml_type: tag}
+        - {config_type: name, name: lt-0/0/0, tag: interface, xml_type: named_tag}
+        - {config_type: named_tag, name: 11025, tag: unit, xml_type: named_tag}
+      - config: 'family inet;
+
+          '
+        path:
+        - {config_type: tag, tag: interfaces, xml_type: tag}
+        - {config_type: name, name: ms-0/2/0, tag: interface, xml_type: named_tag}
+        - {config_type: named_tag, name: 1025, tag: unit, xml_type: named_tag}
+      - config: 'apply-groups IF-USER-VRRP-ACT;
+
+          description vrf_gw_sample-ha-router-downlink_1025;
+
+          vlan-id 1025;
+
+          family inet service input service-set vrf_gw_sample-ha-router-downlink_1025;
+
+          family inet service output service-set vrf_gw_sample-ha-router-downlink_1025;
+
+          '
+        path:
+        - {config_type: tag, tag: interfaces, xml_type: tag}
+        - config_type: name
+          name: {get_param: secondary_device_physical_downlink_interface}
+          tag: interface
+          xml_type: named_tag
+        - {config_type: named_tag, name: 1025, tag: unit, xml_type: named_tag}
+      - config: ''
+        path:
+        - {config_type: tag, tag: routing-instances, xml_type: tag}
+        - {config_type: name, name: SHARED-RESOURCE, tag: instance, xml_type: named_tag}
+        - {config_type: named_tag, name: lt-0/0/0.11025, tag: interface, xml_type: named_tag}
+      - config: next-hop lt-0/0/0.11025;
+        path:
+        - {config_type: tag, tag: routing-instances, xml_type: tag}
+        - {config_type: name, name: SHARED-RESOURCE, tag: instance, xml_type: named_tag}
+        - {config_type: tag, tag: routing-options, xml_type: tag}
+        - {config_type: tag, tag: static, xml_type: tag}
+        - {config_type: named_tag, name: 100.64.0.10/32, tag: route, xml_type: named_tag}
+      - config:
+          str_replace:
+            params:
+              $DOWNLINK_INTERFACE: {get_param: secondary_device_logical_downlink_interface}
+            template: 'instance-type virtual-router;
+
+              interface lt-0/0/0.1025;
+
+              interface ms-0/2/0.1025;
+
+              interface $DOWNLINK_INTERFACE;
+
+              routing-options static route 0.0.0.0/0 next-hop lt-0/0/0.1025;
+
+              '
+        path:
+        - {config_type: tag, tag: routing-instances, xml_type: tag}
+        - {config_type: name, name: vrf_gw_sample-ha-router-downlink_1025, tag: instance,
+          xml_type: named_tag}
+      device_ip: {get_param: secondary_device_ip}
+      lock_timeout: 3000
+      password: {get_param: secondary_device_password}
+      port: {get_param: secondary_device_port}
+      username: {get_param: secondary_device_username}
+    type: OS::Contrail::NetconfNamedConfigs
+
+[localhost] local: gohan client network list --output-format json
+[localhost] local: gohan client network show --output-format json f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57
+{
+    "network": {
+        "admin_state_up": true,
+        "description": "",
+        "id": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",
+        "name": "common_function_gw_access_5c241c51-2003-407a-a239-689fabd19022",
+        "plane": "data",
+        "shared": false,
+        "status": "ACTIVE",
+        "subnets": [
+            "e1353d56-b05a-43a9-b924-383ab0d64d7b"
+        ],
+        "tags": {},
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+    }
+}
+
+#######################################
+### checking heat-stack (networks) ####
+#######################################
+[localhost] local: etcdctl -o "json" --peers "http://etcd-server:2379" get /esi-worker/heat_stacks/v2.0/networks/f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57
+[localhost] local: heat stack-show network_f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57
++-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                    |
++-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                       |
+| creation_time         | 2017-05-11T03:05:32Z                                                                                                                                     |
+| description           | Network template                                                                                                                                         |
+| disable_rollback      | True                                                                                                                                                     |
+| id                    | 6acb55ff-74c1-4313-abba-5ee189be64f2                                                                                                                     |
+| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/network_f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57/6acb55ff-74c1-4313-abba-5ee189be64f2 (self) |
+| notification_topics   | []                                                                                                                                                       |
+| outputs               | [                                                                                                                                                        |
+|                       |   {                                                                                                                                                      |
+|                       |     "output_value": "[]",                                                                                                                                |
+|                       |     "description": "The name of the virtual network.",                                                                                                   |
+|                       |     "output_key": "route_targets"                                                                                                                        |
+|                       |   },                                                                                                                                                     |
+|                       |   {                                                                                                                                                      |
+|                       |     "output_value": "default-domain:admin:f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",                                                                         |
+|                       |     "description": "The FQ name of the virtual network.",                                                                                                |
+|                       |     "output_key": "fq_name"                                                                                                                              |
+|                       |   },                                                                                                                                                     |
+|                       |   {                                                                                                                                                      |
+|                       |     "output_value": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",                                                                                              |
+|                       |     "description": "A unique id for the virtual network.",                                                                                               |
+|                       |     "output_key": "id"                                                                                                                                   |
+|                       |   },                                                                                                                                                     |
+|                       |   {                                                                                                                                                      |
+|                       |     "output_value": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",                                                                                              |
+|                       |     "description": "The name of the virtual network.",                                                                                                   |
+|                       |     "output_key": "name"                                                                                                                                 |
+|                       |   }                                                                                                                                                      |
+|                       | ]                                                                                                                                                        |
+| parameters            | {                                                                                                                                                        |
+|                       |   "forwarding_mode": "l2_l3",                                                                                                                            |
+|                       |   "allow_transit": "False",                                                                                                                              |
+|                       |   "name": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",                                                                                                        |
+|                       |   "OS::stack_name": "network_f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",                                                                                      |
+|                       |   "admin_state_up": "True",                                                                                                                              |
+|                       |   "OS::stack_id": "6acb55ff-74c1-4313-abba-5ee189be64f2",                                                                                                |
+|                       |   "external": "True",                                                                                                                                    |
+|                       |   "shared": "False",                                                                                                                                     |
+|                       |   "route_targets": "",                                                                                                                                   |
+|                       |   "uuid": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57"                                                                                                         |
+|                       | }                                                                                                                                                        |
+| parent                | None                                                                                                                                                     |
+| stack_name            | network_f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57                                                                                                             |
+| stack_owner           | admin                                                                                                                                                    |
+| stack_status          | CREATE_COMPLETE                                                                                                                                          |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                      |
+| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                         |
+| template_description  | Network template                                                                                                                                         |
+| timeout_mins          | 10                                                                                                                                                       |
+| updated_time          | None                                                                                                                                                     |
++-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[localhost] local: heat template-show network_f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57
+description: 'Network template
+
+  '
+heat_template_version: '2013-05-23'
+outputs:
+  fq_name:
+    description: The FQ name of the virtual network.
+    value:
+      get_attr: [network, fq_name]
+  id:
+    description: A unique id for the virtual network.
+    value: {get_resource: network}
+  name:
+    description: The name of the virtual network.
+    value:
+      get_attr: [network, name]
+  route_targets:
+    description: The name of the virtual network.
+    value:
+      get_attr: [network, route_targets]
+parameters:
+  admin_state_up: {default: true, label: Admin state up, type: boolean}
+  allow_transit: {default: false, label: Allow Transit, type: boolean}
+  external: {default: true, label: External Network, type: boolean}
+  forwarding_mode: {default: l2_l3, description: Forwarding Mode., label: Forwarding
+      Mode, type: string}
+  name: {description: Name of the virtual network that will be created., label: Virtual
+      Network Name, type: string}
+  route_targets:
+    default: []
+    label: Route Targets list
+    type: comma_delimited_list
+  shared: {default: false, label: Shared Network, type: boolean}
+  uuid: {default: '', description: UUID of the virtual network that will be created.,
+    label: Virtual Network UUID, type: string}
+resources:
+  network:
+    properties:
+      admin_state_up: {get_param: admin_state_up}
+      forwarding_mode: {get_param: forwarding_mode}
+      name: {get_param: name}
+      route_targets: {get_param: route_targets}
+      shared: {get_param: shared}
+      uuid: {get_param: uuid}
+    type: OS::Contrail::VirtualNetwork
+
+[localhost] local: gohan client network show --output-format json f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57
+[localhost] local: gohan client subnet show --output-format json e1353d56-b05a-43a9-b924-383ab0d64d7b
+{
+    "subnet": {
+        "allocation_pools": [
+            {
+                "end": "169.254.127.254",
+                "start": "169.254.0.2"
+            }
+        ],
+        "cidr": "169.254.0.0/17",
+        "description": "",
+        "dhcp_server_address": "169.254.0.2",
+        "dns_nameservers": [],
+        "enable_dhcp": true,
+        "gateway_ip": null,
+        "host_routes": [],
+        "id": "e1353d56-b05a-43a9-b924-383ab0d64d7b",
+        "ip_version": 4,
+        "ipv6_address_mode": null,
+        "ipv6_ra_mode": null,
+        "name": "common_function_gw_access_subnet_5c241c51-2003-407a-a239-689fabd19022",
+        "network_id": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",
+        "ntp_servers": [],
+        "status": "ACTIVE",
+        "tags": {},
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+    }
+}
+
+[localhost] local: gohan client port list --output-format json
+[localhost] local: gohan client port show --output-format json bbaac433-1023-4660-88f0-ccd8c2c26c89
+{
+    "port": {
+        "admin_state_up": true,
+        "allowed_address_pairs": [],
+        "attached": false,
+        "binding:vif_type": "vrouter",
+        "description": "DHCP Server Port",
+        "device_id": "e1353d56-b05a-43a9-b924-383ab0d64d7b",
+        "device_owner": "network:dhcp",
+        "ese_logical_port_id": null,
+        "fake_delete": false,
+        "fixed_ips": [
+            {
+                "ip_address": "169.254.0.2",
+                "subnet_id": "e1353d56-b05a-43a9-b924-383ab0d64d7b"
+            }
+        ],
+        "id": "bbaac433-1023-4660-88f0-ccd8c2c26c89",
+        "mac_address": "00:00:5e:00:01:00",
+        "managed_by_service": false,
+        "name": "dhcp-server-port",
+        "network_id": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",
+        "segmentation_id": null,
+        "segmentation_type": null,
+        "status": "ACTIVE",
+        "tags": {},
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+    }
+}
+
+######################################
+### checking heat-stack (subnets) ####
+######################################
+[localhost] local: etcdctl -o "json" --peers "http://etcd-server:2379" get /esi-worker/heat_stacks/v2.0/subnets/e1353d56-b05a-43a9-b924-383ab0d64d7b
+[localhost] local: heat stack-show subnet_e1353d56-b05a-43a9-b924-383ab0d64d7b
++-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                   |
++-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                      |
+| creation_time         | 2017-05-11T03:05:34Z                                                                                                                                    |
+| description           | Subnet template                                                                                                                                         |
+| disable_rollback      | True                                                                                                                                                    |
+| id                    | ad399461-7f17-4d5c-a825-67c298f59bd8                                                                                                                    |
+| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/subnet_e1353d56-b05a-43a9-b924-383ab0d64d7b/ad399461-7f17-4d5c-a825-67c298f59bd8 (self) |
+| notification_topics   | []                                                                                                                                                      |
+| outputs               | [                                                                                                                                                       |
+|                       |   {                                                                                                                                                     |
+|                       |     "output_value": "169.254.0.0/17",                                                                                                                   |
+|                       |     "description": "IP prefix of local subnet.",                                                                                                        |
+|                       |     "output_key": "ip_prefix"                                                                                                                           |
+|                       |   },                                                                                                                                                    |
+|                       |   {                                                                                                                                                     |
+|                       |     "output_value": "e1353d56-b05a-43a9-b924-383ab0d64d7b",                                                                                             |
+|                       |     "description": "The name of the local subnet.",                                                                                                     |
+|                       |     "output_key": "name"                                                                                                                                |
+|                       |   },                                                                                                                                                    |
+|                       |   {                                                                                                                                                     |
+|                       |     "output_value": "0.0.0.0",                                                                                                                          |
+|                       |     "description": "Default gateway of local subnet.",                                                                                                  |
+|                       |     "output_key": "default_gateway"                                                                                                                     |
+|                       |   },                                                                                                                                                    |
+|                       |   {                                                                                                                                                     |
+|                       |     "output_value": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",                                                                                             |
+|                       |     "description": "A unique id for the network.",                                                                                                      |
+|                       |     "output_key": "network_id"                                                                                                                          |
+|                       |   },                                                                                                                                                    |
+|                       |   {                                                                                                                                                     |
+|                       |     "output_value": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",                                                                                             |
+|                       |     "description": "IPAM this local subnet uses.",                                                                                                      |
+|                       |     "output_key": "ipam"                                                                                                                                |
+|                       |   },                                                                                                                                                    |
+|                       |   {                                                                                                                                                     |
+|                       |     "output_value": "9e61b626-a866-4ba5-b1c7-01935fdac3f4",                                                                                             |
+|                       |     "description": "A unique id for the local subnet.",                                                                                                 |
+|                       |     "output_key": "id"                                                                                                                                  |
+|                       |   }                                                                                                                                                     |
+|                       | ]                                                                                                                                                       |
+| parameters            | {                                                                                                                                                       |
+|                       |   "OS::stack_name": "subnet_e1353d56-b05a-43a9-b924-383ab0d64d7b",                                                                                      |
+|                       |   "enable_dhcp": "True",                                                                                                                                |
+|                       |   "network_id": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",                                                                                                 |
+|                       |   "ipam": "default-domain:default-project:default-network-ipam",                                                                                        |
+|                       |   "dns_nameservers": "",                                                                                                                                |
+|                       |   "dhcp_server_address": "169.254.0.2",                                                                                                                 |
+|                       |   "OS::stack_id": "ad399461-7f17-4d5c-a825-67c298f59bd8",                                                                                               |
+|                       |   "ntp_servers": "",                                                                                                                                    |
+|                       |   "allocation_pools": "[{u'start': u'169.254.0.2', u'end': u'169.254.127.254'}]",                                                                       |
+|                       |   "gateway_ip": "0.0.0.0",                                                                                                                              |
+|                       |   "host_routes": "[]",                                                                                                                                  |
+|                       |   "cidr": "169.254.0.0/17",                                                                                                                             |
+|                       |   "name": "e1353d56-b05a-43a9-b924-383ab0d64d7b"                                                                                                        |
+|                       | }                                                                                                                                                       |
+| parent                | None                                                                                                                                                    |
+| stack_name            | subnet_e1353d56-b05a-43a9-b924-383ab0d64d7b                                                                                                             |
+| stack_owner           | admin                                                                                                                                                   |
+| stack_status          | CREATE_COMPLETE                                                                                                                                         |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                     |
+| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                        |
+| template_description  | Subnet template                                                                                                                                         |
+| timeout_mins          | 10                                                                                                                                                      |
+| updated_time          | None                                                                                                                                                    |
++-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[localhost] local: heat template-show subnet_e1353d56-b05a-43a9-b924-383ab0d64d7b
+description: 'Subnet template
+
+  '
+heat_template_version: '2013-05-23'
+outputs:
+  default_gateway:
+    description: Default gateway of local subnet.
+    value:
+      get_attr: [subnet, default_gateway]
+  id:
+    description: A unique id for the local subnet.
+    value: {get_resource: subnet}
+  ip_prefix:
+    description: IP prefix of local subnet.
+    value:
+      get_attr: [subnet, ip_prefix]
+  ipam:
+    description: IPAM this local subnet uses.
+    value:
+      get_attr: [subnet, ipam]
+  name:
+    description: The name of the local subnet.
+    value:
+      get_attr: [subnet, name]
+  network_id:
+    description: A unique id for the network.
+    value:
+      get_attr: [subnet, network_id]
+parameters:
+  allocation_pools:
+    default: []
+    description: Allocation Pools
+    label: Allocation Pools
+    type: string
+  cidr: {description: IP prefix of the local subnet that will be created., label: Local
+      Subnet IP prefix, type: string}
+  dhcp_server_address: {default: 0.0.0.0, description: DHCP Server address, label: DHCP
+      Server address, type: string}
+  dns_nameservers:
+    default: []
+    description: DNS Nameservers List
+    label: DNS Nameservers List
+    type: comma_delimited_list
+  enable_dhcp: {default: true, description: Enable DHCP, label: Enable DHCP, type: boolean}
+  gateway_ip: {default: 0.0.0.0, description: Default gateway for the local subnet
+      that will be created., label: Default Gateway, type: string}
+  host_routes:
+    default: []
+    description: Host Routes
+    label: Host Routes
+    type: json
+  ipam: {default: '', description: IPAM for the local subnet that will be created.,
+    label: IP Address Management, type: string}
+  name: {description: Name of the local subnet that will be created., label: Local
+      Subnet Name, type: string}
+  network_id: {description: ID of the network for which subnet will be created., label: Network
+      ID, type: string}
+  ntp_servers:
+    default: []
+    description: NTP Nameservers List
+    label: NTP Nameservers List
+    type: comma_delimited_list
+resources:
+  subnet:
+    properties:
+      allocation_pools: {get_param: allocation_pools}
+      default_gateway: {get_param: gateway_ip}
+      dns_nameservers: {get_param: dns_nameservers}
+      dns_server_address: {get_param: dhcp_server_address}
+      enable_dhcp: {get_param: enable_dhcp}
+      gateway_is_vrouter: false
+      host_routes: {get_param: host_routes}
+      ip_prefix: {get_param: cidr}
+      ipam: {get_param: ipam}
+      name: {get_param: name}
+      network_id: {get_param: network_id}
+      ntp_servers: {get_param: ntp_servers}
+    type: OS::Contrail::VnSubnet
+
+[localhost] local: gohan client ese_logical_port list --output-format json
+[localhost] local: gohan client ese_logical_port show --output-format json 9c601c38-a854-459d-aec2-433873b3a4e6
+{
+    "ese_logical_port": {
+        "common_function_gateway_id": "5c241c51-2003-407a-a239-689fabd19022",
+        "connected_resource": "common_function_gateway",
+        "description": "ESE Logical port for Port a778c668-6ccb-4d46-9ec3-956693262d63",
+        "ese_physical_port_id": "5b2dee2e-7420-4cd4-b270-5081eb9eb371",
+        "gw_interface_id": null,
+        "id": "9c601c38-a854-459d-aec2-433873b3a4e6",
+        "name": "xe-0/0/4.1025",
+        "network_id": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",
+        "port_ids": [
+            "a778c668-6ccb-4d46-9ec3-956693262d63"
+        ],
+        "status": "ACTIVE",
+        "tags": {},
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "type": "L2",
+        "vlan_id": 1025
+    }
+}
+
+################################################
+### checking heat-stack (ese_logical_ports) ####
+################################################
+[localhost] local: etcdctl -o "json" --peers "http://etcd-server:2379" get /esi-worker/heat_stacks/v2.0/ese_logical_ports/9c601c38-a854-459d-aec2-433873b3a4e6
+[localhost] local: heat stack-show ese_logical_port_9c601c38-a854-459d-aec2-433873b3a4e6
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                             |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                                |
+| creation_time         | 2017-05-11T03:05:41Z                                                                                                                                              |
+| description           | Logical port template                                                                                                                                             |
+| disable_rollback      | True                                                                                                                                                              |
+| id                    | 5d685308-e709-48c4-8343-d031aceee0b4                                                                                                                              |
+| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/ese_logical_port_9c601c38-a854-459d-aec2-433873b3a4e6/5d685308-e709-48c4-8343-d031aceee0b4 (self) |
+| notification_topics   | []                                                                                                                                                                |
+| outputs               | [                                                                                                                                                                 |
+|                       |   {                                                                                                                                                               |
+|                       |     "output_value": "cccccccc-cccc-cccc-cccc-cccccccccccc",                                                                                                       |
+|                       |     "description": "A unique id for the logical interface",                                                                                                       |
+|                       |     "output_key": "id"                                                                                                                                            |
+|                       |   },                                                                                                                                                              |
+|                       |   {                                                                                                                                                               |
+|                       |     "output_value": null,                                                                                                                                         |
+|                       |     "output_error": "'ContrailLogicalInterface' object has no attribute 'li_uuid'",                                                                               |
+|                       |     "description": "The name of the logical interface.",                                                                                                          |
+|                       |     "output_key": "name"                                                                                                                                          |
+|                       |   }                                                                                                                                                               |
+|                       | ]                                                                                                                                                                 |
+| parameters            | {                                                                                                                                                                 |
+|                       |   "logical_port_type": "L2",                                                                                                                                      |
+|                       |   "physical_port_id": "dddddddd-dddd-dddd-dddd-dddddddddddd",                                                                                                     |
+|                       |   "OS::stack_id": "5d685308-e709-48c4-8343-d031aceee0b4",                                                                                                         |
+|                       |   "OS::stack_name": "ese_logical_port_9c601c38-a854-459d-aec2-433873b3a4e6",                                                                                      |
+|                       |   "virtual_machine_interface_ids": "a778c668-6ccb-4d46-9ec3-956693262d63",                                                                                        |
+|                       |   "logical_port_name": "xe-0/0/4.1025",                                                                                                                           |
+|                       |   "logical_port_vlan_id": "1025"                                                                                                                                  |
+|                       | }                                                                                                                                                                 |
+| parent                | None                                                                                                                                                              |
+| stack_name            | ese_logical_port_9c601c38-a854-459d-aec2-433873b3a4e6                                                                                                             |
+| stack_owner           | admin                                                                                                                                                             |
+| stack_status          | CREATE_COMPLETE                                                                                                                                                   |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                               |
+| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                                  |
+| template_description  | Logical port template                                                                                                                                             |
+| timeout_mins          | 10                                                                                                                                                                |
+| updated_time          | None                                                                                                                                                              |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[localhost] local: heat template-show ese_logical_port_9c601c38-a854-459d-aec2-433873b3a4e6
+description: 'Logical port template
+
+  '
+heat_template_version: '2013-05-23'
+outputs:
+  id:
+    description: A unique id for the logical interface
+    value: {get_resource: logical_interface}
+  name:
+    description: The name of the logical interface.
+    value:
+      get_attr: [logical_interface, name]
+parameters:
+  logical_port_name: {description: Name of the logical port., label: Logical Port
+      Name, type: string}
+  logical_port_type: {description: Type of the logical port., label: Logical Port
+      Type, type: string}
+  logical_port_vlan_id: {default: 0, description: VLAN id to use for logical port
+      creation., label: VLAN id for Logical Port, type: number}
+  physical_port_id: {description: A unique id for the Physical Interface., label: Physical
+      Interface ID, type: string}
+  virtual_machine_interface_ids: {description: Virtual Machine Interface ID., label: Virtual
+      Machine Interface ID, type: comma_delimited_list}
+resources:
+  logical_interface:
+    properties:
+      name: {get_param: logical_port_name}
+      physical_interface: {get_param: physical_port_id}
+      type: {get_param: logical_port_type}
+      virtual_machine_interfaces: {get_param: virtual_machine_interface_ids}
+      vlan: {get_param: logical_port_vlan_id}
+    type: OS::Contrail::LogicalInterface
+
+[localhost] local: gohan client port show --output-format json a778c668-6ccb-4d46-9ec3-956693262d63
+{
+    "port": {
+        "admin_state_up": true,
+        "allowed_address_pairs": [],
+        "attached": true,
+        "binding:vif_type": "vrouter",
+        "description": "",
+        "device_id": "5c241c51-2003-407a-a239-689fabd19022",
+        "device_owner": "network:common_function_gateway",
+        "ese_logical_port_id": "9c601c38-a854-459d-aec2-433873b3a4e6",
+        "fake_delete": false,
+        "fixed_ips": [
+            {
+                "ip_address": "169.254.0.4",
+                "subnet_id": "e1353d56-b05a-43a9-b924-383ab0d64d7b"
+            }
+        ],
+        "id": "a778c668-6ccb-4d46-9ec3-956693262d63",
+        "mac_address": "fa:16:3e:0c:b0:eb",
+        "managed_by_service": true,
+        "name": "common_function_gw_5c241c51-2003-407a-a239-689fabd19022_secondary_port:5b2dee2e-7420-4cd4-b270-5081eb9eb371",
+        "network_id": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",
+        "segmentation_id": 1025,
+        "segmentation_type": "vlan",
+        "status": "ACTIVE",
+        "tags": {},
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+    }
+}
+
+########################################################
+### checking heat-stack (ports) for UPDATE_COMPLETE ####
+########################################################
+[localhost] local: etcdctl -o "json" --peers "http://etcd-server:2379" get /esi-worker/heat_stacks/v2.0/ports/a778c668-6ccb-4d46-9ec3-956693262d63
+[localhost] local: heat stack-show port_a778c668-6ccb-4d46-9ec3-956693262d63
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                 |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                    |
+| creation_time         | 2017-05-11T03:05:37Z                                                                                                                                  |
+| description           | Virtual Machine Interface Template                                                                                                                    |
+| disable_rollback      | True                                                                                                                                                  |
+| id                    | 8bde5310-5c31-4494-9121-4ca5351f2d83                                                                                                                  |
+| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/port_a778c668-6ccb-4d46-9ec3-956693262d63/8bde5310-5c31-4494-9121-4ca5351f2d83 (self) |
+| notification_topics   | []                                                                                                                                                    |
+| outputs               | [                                                                                                                                                     |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",                                                                                           |
+|                       |     "description": "Virtual network.",                                                                                                                |
+|                       |     "output_key": "virtual_network"                                                                                                                   |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "default-domain:admin:a778c668-6ccb-4d46-9ec3-956693262d63",                                                                      |
+|                       |     "description": "Fully Qualified Name of the VMI",                                                                                                 |
+|                       |     "output_key": "fq_name"                                                                                                                           |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "a778c668-6ccb-4d46-9ec3-956693262d63",                                                                                           |
+|                       |     "description": "A unique id for the virtual machine interface.",                                                                                  |
+|                       |     "output_key": "id"                                                                                                                                |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "null",                                                                                                                           |
+|                       |     "description": "Virtual machine allowed address pairs.",                                                                                          |
+|                       |     "output_key": "allowed_address_pairs"                                                                                                             |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "xx:xx:xx:xx:xx:xx",                                                                                                              |
+|                       |     "description": "Virtual machine interface mac address.",                                                                                          |
+|                       |     "output_key": "mac_address"                                                                                                                       |
+|                       |   }                                                                                                                                                   |
+|                       | ]                                                                                                                                                     |
+| parameters            | {                                                                                                                                                     |
+|                       |   "virtual_machine": "5c241c51-2003-407a-a239-689fabd19022",                                                                                          |
+|                       |   "name": "a778c668-6ccb-4d46-9ec3-956693262d63",                                                                                                     |
+|                       |   "OS::stack_name": "port_a778c668-6ccb-4d46-9ec3-956693262d63",                                                                                      |
+|                       |   "admin_state_up": "True",                                                                                                                           |
+|                       |   "virtual_machine_interface_allowed_address_pairs": "null",                                                                                          |
+|                       |   "virtual_machine_interface_mac_address": "fa:16:3e:0c:b0:eb",                                                                                       |
+|                       |   "OS::stack_id": "8bde5310-5c31-4494-9121-4ca5351f2d83",                                                                                             |
+|                       |   "device_owner": "network:common_function_gateway",                                                                                                  |
+|                       |   "virtual_network": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",                                                                                          |
+|                       |   "uuid": "a778c668-6ccb-4d46-9ec3-956693262d63"                                                                                                      |
+|                       | }                                                                                                                                                     |
+| parent                | None                                                                                                                                                  |
+| stack_name            | port_a778c668-6ccb-4d46-9ec3-956693262d63                                                                                                             |
+| stack_owner           | admin                                                                                                                                                 |
+| stack_status          | UPDATE_COMPLETE                                                                                                                                       |
+| stack_status_reason   | Stack successfully updated                                                                                                                            |
+| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                      |
+| template_description  | Virtual Machine Interface Template                                                                                                                    |
+| timeout_mins          | 10                                                                                                                                                    |
+| updated_time          | 2017-05-11T03:05:58Z                                                                                                                                  |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[localhost] local: heat template-show port_a778c668-6ccb-4d46-9ec3-956693262d63
+description: 'Virtual Machine Interface Template
+
+  '
+heat_template_version: '2013-05-23'
+outputs:
+  allowed_address_pairs:
+    description: Virtual machine allowed address pairs.
+    value:
+      get_attr: [virtual_machine_interface, virtual_machine_interface_allowed_address_pairs]
+  fq_name:
+    description: Fully Qualified Name of the VMI
+    value:
+      get_attr: [virtual_machine_interface, fq_name]
+  id:
+    description: A unique id for the virtual machine interface.
+    value: {get_resource: virtual_machine_interface}
+  mac_address:
+    description: Virtual machine interface mac address.
+    value:
+      get_attr: [virtual_machine_interface, virtual_machine_interface_mac_addresses]
+  virtual_network:
+    description: Virtual network.
+    value:
+      get_attr: [virtual_machine_interface, virtual_networks]
+parameters:
+  admin_state_up: {default: true, label: Admin state up, type: boolean}
+  device_owner: {default: '', label: Device Owner, type: string}
+  name: {description: A unique id for the Physical Interface., label: Physical Interface
+      ID, type: string}
+  uuid: {description: A unique id for the Virtual Machine Interface., label: Backend
+      Virtual Machine Interface UUID, type: string}
+  virtual_machine: {default: '', label: Virtual Machine., type: string}
+  virtual_machine_interface_allowed_address_pairs: {label: Virtual machine interface
+      allowed address pairs., type: json}
+  virtual_machine_interface_mac_address: {default: 'fe:ff:ff:ff:ff:ff', label: Virtual
+      machine interface mac address., type: string}
+  virtual_network: {label: Virtual Network., type: string}
+resources:
+  instance_ip_0:
+    properties:
+      ip_address: 169.254.0.4
+      name:
+        str_replace:
+          params:
+            '%ip%': 169.254.0.4
+            '%name%': {get_param: name}
+            '%zone%': e1353d56-b05a-43a9-b924-383ab0d64d7b
+          template: '%name%_%zone%_%ip%'
+      network_id: {get_param: virtual_network}
+      subnet_id: 9e61b626-a866-4ba5-b1c7-01935fdac3f4
+      virtual_machine_interfaces:
+      - {get_resource: virtual_machine_interface}
+    type: OS::Contrail::InstanceIp
+  virtual_machine_interface:
+    properties:
+      admin_state_up: {get_param: admin_state_up}
+      device_owner: {get_param: device_owner}
+      name: {get_param: name}
+      uuid: {get_param: uuid}
+      virtual_machine: {get_param: virtual_machine}
+      virtual_machine_interface_allowed_address_pairs: {get_param: virtual_machine_interface_allowed_address_pairs}
+      virtual_machine_interface_mac_addresses:
+      - {get_param: virtual_machine_interface_mac_address}
+      virtual_networks:
+      - {get_param: virtual_network}
+    type: OS::Contrail::VirtualMachineInterface
+
+[localhost] local: gohan client ese_logical_port show --output-format json b04853c4-6ebf-441f-9093-ea4b844c4bc7
+{
+    "ese_logical_port": {
+        "common_function_gateway_id": "5c241c51-2003-407a-a239-689fabd19022",
+        "connected_resource": "common_function_gateway",
+        "description": "ESE Logical port for Port 327f59b7-df38-4d8f-97db-d320defcab76",
+        "ese_physical_port_id": "976156ef-05b4-47f4-9497-a36531563a08",
+        "gw_interface_id": null,
+        "id": "b04853c4-6ebf-441f-9093-ea4b844c4bc7",
+        "name": "xe-0/0/3.1025",
+        "network_id": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",
+        "port_ids": [
+            "327f59b7-df38-4d8f-97db-d320defcab76"
+        ],
+        "status": "ACTIVE",
+        "tags": {},
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "type": "L2",
+        "vlan_id": 1025
+    }
+}
+
+################################################
+### checking heat-stack (ese_logical_ports) ####
+################################################
+[localhost] local: etcdctl -o "json" --peers "http://etcd-server:2379" get /esi-worker/heat_stacks/v2.0/ese_logical_ports/b04853c4-6ebf-441f-9093-ea4b844c4bc7
+[localhost] local: heat stack-show ese_logical_port_b04853c4-6ebf-441f-9093-ea4b844c4bc7
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                             |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                                |
+| creation_time         | 2017-05-11T03:05:41Z                                                                                                                                              |
+| description           | Logical port template                                                                                                                                             |
+| disable_rollback      | True                                                                                                                                                              |
+| id                    | abccbf4c-c184-4b1a-8da1-a125c702bde4                                                                                                                              |
+| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/ese_logical_port_b04853c4-6ebf-441f-9093-ea4b844c4bc7/abccbf4c-c184-4b1a-8da1-a125c702bde4 (self) |
+| notification_topics   | []                                                                                                                                                                |
+| outputs               | [                                                                                                                                                                 |
+|                       |   {                                                                                                                                                               |
+|                       |     "output_value": "cccccccc-cccc-cccc-cccc-cccccccccccc",                                                                                                       |
+|                       |     "description": "A unique id for the logical interface",                                                                                                       |
+|                       |     "output_key": "id"                                                                                                                                            |
+|                       |   },                                                                                                                                                              |
+|                       |   {                                                                                                                                                               |
+|                       |     "output_value": null,                                                                                                                                         |
+|                       |     "output_error": "'ContrailLogicalInterface' object has no attribute 'li_uuid'",                                                                               |
+|                       |     "description": "The name of the logical interface.",                                                                                                          |
+|                       |     "output_key": "name"                                                                                                                                          |
+|                       |   }                                                                                                                                                               |
+|                       | ]                                                                                                                                                                 |
+| parameters            | {                                                                                                                                                                 |
+|                       |   "logical_port_type": "L2",                                                                                                                                      |
+|                       |   "physical_port_id": "dddddddd-dddd-dddd-dddd-dddddddddddd",                                                                                                     |
+|                       |   "OS::stack_id": "abccbf4c-c184-4b1a-8da1-a125c702bde4",                                                                                                         |
+|                       |   "OS::stack_name": "ese_logical_port_b04853c4-6ebf-441f-9093-ea4b844c4bc7",                                                                                      |
+|                       |   "virtual_machine_interface_ids": "327f59b7-df38-4d8f-97db-d320defcab76",                                                                                        |
+|                       |   "logical_port_name": "xe-0/0/3.1025",                                                                                                                           |
+|                       |   "logical_port_vlan_id": "1025"                                                                                                                                  |
+|                       | }                                                                                                                                                                 |
+| parent                | None                                                                                                                                                              |
+| stack_name            | ese_logical_port_b04853c4-6ebf-441f-9093-ea4b844c4bc7                                                                                                             |
+| stack_owner           | admin                                                                                                                                                             |
+| stack_status          | CREATE_COMPLETE                                                                                                                                                   |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                               |
+| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                                  |
+| template_description  | Logical port template                                                                                                                                             |
+| timeout_mins          | 10                                                                                                                                                                |
+| updated_time          | None                                                                                                                                                              |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[localhost] local: heat template-show ese_logical_port_b04853c4-6ebf-441f-9093-ea4b844c4bc7
+description: 'Logical port template
+
+  '
+heat_template_version: '2013-05-23'
+outputs:
+  id:
+    description: A unique id for the logical interface
+    value: {get_resource: logical_interface}
+  name:
+    description: The name of the logical interface.
+    value:
+      get_attr: [logical_interface, name]
+parameters:
+  logical_port_name: {description: Name of the logical port., label: Logical Port
+      Name, type: string}
+  logical_port_type: {description: Type of the logical port., label: Logical Port
+      Type, type: string}
+  logical_port_vlan_id: {default: 0, description: VLAN id to use for logical port
+      creation., label: VLAN id for Logical Port, type: number}
+  physical_port_id: {description: A unique id for the Physical Interface., label: Physical
+      Interface ID, type: string}
+  virtual_machine_interface_ids: {description: Virtual Machine Interface ID., label: Virtual
+      Machine Interface ID, type: comma_delimited_list}
+resources:
+  logical_interface:
+    properties:
+      name: {get_param: logical_port_name}
+      physical_interface: {get_param: physical_port_id}
+      type: {get_param: logical_port_type}
+      virtual_machine_interfaces: {get_param: virtual_machine_interface_ids}
+      vlan: {get_param: logical_port_vlan_id}
+    type: OS::Contrail::LogicalInterface
+
+[localhost] local: gohan client port show --output-format json 327f59b7-df38-4d8f-97db-d320defcab76
+{
+    "port": {
+        "admin_state_up": true,
+        "allowed_address_pairs": [],
+        "attached": true,
+        "binding:vif_type": "vrouter",
+        "description": "",
+        "device_id": "5c241c51-2003-407a-a239-689fabd19022",
+        "device_owner": "network:common_function_gateway",
+        "ese_logical_port_id": "b04853c4-6ebf-441f-9093-ea4b844c4bc7",
+        "fake_delete": false,
+        "fixed_ips": [
+            {
+                "ip_address": "169.254.0.3",
+                "subnet_id": "e1353d56-b05a-43a9-b924-383ab0d64d7b"
+            }
+        ],
+        "id": "327f59b7-df38-4d8f-97db-d320defcab76",
+        "mac_address": "fa:16:3e:e5:f6:39",
+        "managed_by_service": true,
+        "name": "common_function_gw_5c241c51-2003-407a-a239-689fabd19022_primary_port:976156ef-05b4-47f4-9497-a36531563a08",
+        "network_id": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",
+        "segmentation_id": 1025,
+        "segmentation_type": "vlan",
+        "status": "ACTIVE",
+        "tags": {},
+        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+    }
+}
+
+########################################################
+### checking heat-stack (ports) for UPDATE_COMPLETE ####
+########################################################
+[localhost] local: etcdctl -o "json" --peers "http://etcd-server:2379" get /esi-worker/heat_stacks/v2.0/ports/327f59b7-df38-4d8f-97db-d320defcab76
+[localhost] local: heat stack-show port_327f59b7-df38-4d8f-97db-d320defcab76
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                 |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                    |
+| creation_time         | 2017-05-11T03:05:37Z                                                                                                                                  |
+| description           | Virtual Machine Interface Template                                                                                                                    |
+| disable_rollback      | True                                                                                                                                                  |
+| id                    | 67472096-f3b3-48d1-962c-23ea4912b1d3                                                                                                                  |
+| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/port_327f59b7-df38-4d8f-97db-d320defcab76/67472096-f3b3-48d1-962c-23ea4912b1d3 (self) |
+| notification_topics   | []                                                                                                                                                    |
+| outputs               | [                                                                                                                                                     |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",                                                                                           |
+|                       |     "description": "Virtual network.",                                                                                                                |
+|                       |     "output_key": "virtual_network"                                                                                                                   |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "default-domain:admin:327f59b7-df38-4d8f-97db-d320defcab76",                                                                      |
+|                       |     "description": "Fully Qualified Name of the VMI",                                                                                                 |
+|                       |     "output_key": "fq_name"                                                                                                                           |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "327f59b7-df38-4d8f-97db-d320defcab76",                                                                                           |
+|                       |     "description": "A unique id for the virtual machine interface.",                                                                                  |
+|                       |     "output_key": "id"                                                                                                                                |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "null",                                                                                                                           |
+|                       |     "description": "Virtual machine allowed address pairs.",                                                                                          |
+|                       |     "output_key": "allowed_address_pairs"                                                                                                             |
+|                       |   },                                                                                                                                                  |
+|                       |   {                                                                                                                                                   |
+|                       |     "output_value": "xx:xx:xx:xx:xx:xx",                                                                                                              |
+|                       |     "description": "Virtual machine interface mac address.",                                                                                          |
+|                       |     "output_key": "mac_address"                                                                                                                       |
+|                       |   }                                                                                                                                                   |
+|                       | ]                                                                                                                                                     |
+| parameters            | {                                                                                                                                                     |
+|                       |   "virtual_machine": "5c241c51-2003-407a-a239-689fabd19022",                                                                                          |
+|                       |   "name": "327f59b7-df38-4d8f-97db-d320defcab76",                                                                                                     |
+|                       |   "OS::stack_name": "port_327f59b7-df38-4d8f-97db-d320defcab76",                                                                                      |
+|                       |   "admin_state_up": "True",                                                                                                                           |
+|                       |   "virtual_machine_interface_allowed_address_pairs": "null",                                                                                          |
+|                       |   "virtual_machine_interface_mac_address": "fa:16:3e:e5:f6:39",                                                                                       |
+|                       |   "OS::stack_id": "67472096-f3b3-48d1-962c-23ea4912b1d3",                                                                                             |
+|                       |   "device_owner": "network:common_function_gateway",                                                                                                  |
+|                       |   "virtual_network": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",                                                                                          |
+|                       |   "uuid": "327f59b7-df38-4d8f-97db-d320defcab76"                                                                                                      |
+|                       | }                                                                                                                                                     |
+| parent                | None                                                                                                                                                  |
+| stack_name            | port_327f59b7-df38-4d8f-97db-d320defcab76                                                                                                             |
+| stack_owner           | admin                                                                                                                                                 |
+| stack_status          | UPDATE_COMPLETE                                                                                                                                       |
+| stack_status_reason   | Stack successfully updated                                                                                                                            |
+| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                      |
+| template_description  | Virtual Machine Interface Template                                                                                                                    |
+| timeout_mins          | 10                                                                                                                                                    |
+| updated_time          | 2017-05-11T03:05:57Z                                                                                                                                  |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+[localhost] local: heat template-show port_327f59b7-df38-4d8f-97db-d320defcab76
+description: 'Virtual Machine Interface Template
+
+  '
+heat_template_version: '2013-05-23'
+outputs:
+  allowed_address_pairs:
+    description: Virtual machine allowed address pairs.
+    value:
+      get_attr: [virtual_machine_interface, virtual_machine_interface_allowed_address_pairs]
+  fq_name:
+    description: Fully Qualified Name of the VMI
+    value:
+      get_attr: [virtual_machine_interface, fq_name]
+  id:
+    description: A unique id for the virtual machine interface.
+    value: {get_resource: virtual_machine_interface}
+  mac_address:
+    description: Virtual machine interface mac address.
+    value:
+      get_attr: [virtual_machine_interface, virtual_machine_interface_mac_addresses]
+  virtual_network:
+    description: Virtual network.
+    value:
+      get_attr: [virtual_machine_interface, virtual_networks]
+parameters:
+  admin_state_up: {default: true, label: Admin state up, type: boolean}
+  device_owner: {default: '', label: Device Owner, type: string}
+  name: {description: A unique id for the Physical Interface., label: Physical Interface
+      ID, type: string}
+  uuid: {description: A unique id for the Virtual Machine Interface., label: Backend
+      Virtual Machine Interface UUID, type: string}
+  virtual_machine: {default: '', label: Virtual Machine., type: string}
+  virtual_machine_interface_allowed_address_pairs: {label: Virtual machine interface
+      allowed address pairs., type: json}
+  virtual_machine_interface_mac_address: {default: 'fe:ff:ff:ff:ff:ff', label: Virtual
+      machine interface mac address., type: string}
+  virtual_network: {label: Virtual Network., type: string}
+resources:
+  instance_ip_0:
+    properties:
+      ip_address: 169.254.0.3
+      name:
+        str_replace:
+          params:
+            '%ip%': 169.254.0.3
+            '%name%': {get_param: name}
+            '%zone%': e1353d56-b05a-43a9-b924-383ab0d64d7b
+          template: '%name%_%zone%_%ip%'
+      network_id: {get_param: virtual_network}
+      subnet_id: 9e61b626-a866-4ba5-b1c7-01935fdac3f4
+      virtual_machine_interfaces:
+      - {get_resource: virtual_machine_interface}
+    type: OS::Contrail::InstanceIp
+  virtual_machine_interface:
+    properties:
+      admin_state_up: {get_param: admin_state_up}
+      device_owner: {get_param: device_owner}
+      name: {get_param: name}
+      uuid: {get_param: uuid}
+      virtual_machine: {get_param: virtual_machine}
+      virtual_machine_interface_allowed_address_pairs: {get_param: virtual_machine_interface_allowed_address_pairs}
+      virtual_machine_interface_mac_addresses:
+      - {get_param: virtual_machine_interface_mac_address}
+      virtual_networks:
+      - {get_param: virtual_network}
+    type: OS::Contrail::VirtualMachineInterface
+
+[localhost] local: gohan client resource_mapping list --output-format json
+{
+    "resource_mappings": [
+        {
+            "created": 1.494471943e+09,
+            "deleted": null,
+            "id": "4863701c-dbb4-41bf-888f-bd4ff0a10c36",
+            "mapped_id": "10.161.0.34-xe-0/0/3.1025",
+            "relation": "baremetal",
+            "resource_id": "327f59b7-df38-4d8f-97db-d320defcab76",
+            "resource_type": "port",
+            "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        },
+        {
+            "created": 1.494471934e+09,
+            "deleted": null,
+            "id": "829e1b5e-5078-4d92-bca3-4f138d289842",
+            "mapped_id": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",
+            "relation": "instance",
+            "resource_id": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",
+            "resource_type": "network",
+            "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        },
+        {
+            "created": 1.494471943e+09,
+            "deleted": null,
+            "id": "e68344d7-c627-4a92-94e8-a09366b9762c",
+            "mapped_id": "10.161.0.34-xe-0/0/4.1025",
+            "relation": "baremetal",
+            "resource_id": "a778c668-6ccb-4d46-9ec3-956693262d63",
+            "resource_type": "port",
+            "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        }
+    ]
+}
+
+[localhost] local: gohan client billing_resource list --output-format json
+{
+    "billing_resources": [
+        {
+            "config_version": 1,
+            "ended": null,
+            "id": "0613a7ba-47ff-4655-9488-54ed8912443a",
+            "info": {},
+            "parent_billing_id": null,
+            "resource_id": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",
+            "resource_type": "network",
+            "started": 1.494471934e+09,
+            "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+            "unique_resource_id": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57"
+        }
+    ]
+}
+
+root@client:/tools/rest-api-for-esi# 
+root@client:/tools/rest-api-for-esi# 
+root@client:/tools/rest-api-for-esi# 
+root@client:/tools/rest-api-for-esi# heat stack-list
++--------------------------------------+--------------------------------------------------------------+-----------------+----------------------+
+| id                                   | stack_name                                                   | stack_status    | creation_time        |
++--------------------------------------+--------------------------------------------------------------+-----------------+----------------------+
+| 51374b73-2350-45db-bfcd-4c5021dfd890 | ese_device_9f05b260-26ca-46f7-98c3-ad88e411a989              | CREATE_COMPLETE | 2017-05-11T03:04:04Z |
+| 58d5471e-c74b-478b-b998-18979d838573 | ese_physical_port_976156ef-05b4-47f4-9497-a36531563a08       | CREATE_COMPLETE | 2017-05-11T03:04:10Z |
+| 8e99a795-1815-478f-a013-d7104358e887 | ese_physical_port_5b2dee2e-7420-4cd4-b270-5081eb9eb371       | CREATE_COMPLETE | 2017-05-11T03:04:16Z |
+| 6acb55ff-74c1-4313-abba-5ee189be64f2 | network_f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57                 | CREATE_COMPLETE | 2017-05-11T03:05:32Z |
+| ad399461-7f17-4d5c-a825-67c298f59bd8 | subnet_e1353d56-b05a-43a9-b924-383ab0d64d7b                  | CREATE_COMPLETE | 2017-05-11T03:05:34Z |
+| 1d03f6d9-3d61-44b0-a250-247c0b50cf70 | common_function_gateway_5c241c51-2003-407a-a239-689fabd19022 | CREATE_COMPLETE | 2017-05-11T03:05:37Z |
+| 67472096-f3b3-48d1-962c-23ea4912b1d3 | port_327f59b7-df38-4d8f-97db-d320defcab76                    | UPDATE_COMPLETE | 2017-05-11T03:05:37Z |
+| 8bde5310-5c31-4494-9121-4ca5351f2d83 | port_a778c668-6ccb-4d46-9ec3-956693262d63                    | UPDATE_COMPLETE | 2017-05-11T03:05:37Z |
+| 5d685308-e709-48c4-8343-d031aceee0b4 | ese_logical_port_9c601c38-a854-459d-aec2-433873b3a4e6        | CREATE_COMPLETE | 2017-05-11T03:05:41Z |
+| abccbf4c-c184-4b1a-8da1-a125c702bde4 | ese_logical_port_b04853c4-6ebf-441f-9093-ea4b844c4bc7        | CREATE_COMPLETE | 2017-05-11T03:05:41Z |
++--------------------------------------+--------------------------------------------------------------+-----------------+----------------------+

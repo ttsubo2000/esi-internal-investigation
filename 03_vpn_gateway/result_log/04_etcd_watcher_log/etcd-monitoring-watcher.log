@@ -1,0 +1,237 @@
+2017-05-11 04:56:46,043:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 04:56:46,043:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 04:56:46,043:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 04:56:46,044:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 04:56:46,059:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:00:22,322:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/ese_devices/5314fffc-6c86-4410-a64b-5386286ac629],
+ value=[{
+    "switch": "UP", 
+    "version": 1
+}]
+2017-05-11 05:00:22,322:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:00:22,322:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:00:22,323:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:00:22,323:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:00:22,324:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:00:32,405:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/ese_physical_ports/eec156b0-7317-48dd-b76c-019c0758e99d],
+ value=[{
+    "version": 1, 
+    "port": "UP"
+}]
+2017-05-11 05:00:32,405:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:00:32,405:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:00:32,405:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:00:32,406:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:00:32,408:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:00:32,413:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/ese_physical_ports/176ec475-e9e8-4605-8b41-802fbc6220c1],
+ value=[{
+    "version": 1, 
+    "port": "UP"
+}]
+2017-05-11 05:00:32,413:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:00:32,413:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:00:32,414:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:00:32,414:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:00:32,418:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:00:42,317:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/edge_routers/792c7a6d-19b5-4d6f-b9f6-1e5b1eb45198],
+ value=[{
+    "router": "UP", 
+    "version": 1
+}]
+2017-05-11 05:00:42,317:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:00:42,318:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:00:42,318:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:00:42,318:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:00:42,323:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:00:42,347:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/edge_routers/3ca3a59a-4f92-4a8a-9ec1-1c55a97c794e],
+ value=[{
+    "router": "UP", 
+    "version": 1
+}]
+2017-05-11 05:00:42,348:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:00:42,348:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:00:42,348:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:00:42,349:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:00:42,350:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:00:47,420:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/er_physical_interfaces/6e8f473f-47ec-4b54-8f0f-d459d440393b],
+ value=[{
+    "interface": "UP", 
+    "version": 1
+}]
+2017-05-11 05:00:47,420:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:00:47,420:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:00:47,420:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:00:47,421:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:00:47,422:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:00:47,430:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/er_physical_interfaces/8ff57ce4-55f9-40d4-82ed-1f00c9051678],
+ value=[{
+    "interface": "UP", 
+    "version": 1
+}]
+2017-05-11 05:00:47,430:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:00:47,431:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:00:47,431:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:00:47,432:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:00:47,433:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:00:52,400:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/er_physical_interfaces/6b160a8d-fdad-4fe7-aaed-3ff5f729d6c8],
+ value=[{
+    "interface": "UP", 
+    "version": 1
+}]
+2017-05-11 05:00:52,401:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:00:52,401:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:00:52,401:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:00:52,401:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:00:52,402:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:00:52,417:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/er_physical_interfaces/f87c6efe-f590-4c29-8fc9-2f914e1eb362],
+ value=[{
+    "interface": "UP", 
+    "version": 1
+}]
+2017-05-11 05:00:52,417:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:00:52,418:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:00:52,418:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:00:52,418:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:00:52,421:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:01:52,512:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/networks/bb69041d-c654-4e9f-a763-afd4333275bc],
+ value=[{
+    "version": 1, 
+    "network": "UP"
+}]
+2017-05-11 05:01:52,512:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:01:52,513:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:01:52,513:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:01:52,513:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:01:52,515:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:02:02,587:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/vpn_interfaces/0bea303d-b6eb-4edc-83ef-e32f915d3047],
+ value=[{
+    "version": 1, 
+    "primary": "ESTABLISHED", 
+    "secondary": "ESTABLISHED"
+}]
+2017-05-11 05:02:02,587:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:02:02,587:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:02:02,588:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:02:02,588:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:02:02,590:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:02:57,511:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/ports/67d9f139-b5be-4082-a090-3a1a9cbf1df8],
+ value=[{
+    "version": 2, 
+    "vmi": "UP"
+}]
+2017-05-11 05:02:57,511:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:02:57,511:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:02:57,511:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:02:57,512:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:02:57,513:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:02:57,543:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/ports/33907bcb-8689-425d-a700-fe8acfd94aed],
+ value=[{
+    "version": 2, 
+    "vmi": "UP"
+}]
+2017-05-11 05:02:57,544:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:02:57,544:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:02:57,544:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:02:57,545:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:02:57,546:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:03:32,396:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/ese_logical_ports/ecb4c4ac-3ebc-4045-a27c-52fecc93bac5],
+ value=[{
+    "logical_port": "UP", 
+    "version": 1
+}]
+2017-05-11 05:03:32,397:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:03:32,397:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:03:32,397:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:03:32,397:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:03:32,400:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:03:32,406:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/ese_logical_ports/ef450536-01c9-4380-a34d-a1ae56e0447e],
+ value=[{
+    "logical_port": "UP", 
+    "version": 1
+}]
+2017-05-11 05:03:32,406:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:03:32,406:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:03:32,406:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:03:32,407:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:03:32,408:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:03:42,570:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/gw_interfaces/fbd7d07e-9e84-4ad7-ab85-36d46adb9435],
+ value=[{
+    "version": 1, 
+    "primary": "MASTER", 
+    "secondary": "BACKUP"
+}]
+2017-05-11 05:03:42,570:DEBUG:New etcd client created for etcd-server:2379/v2
+2017-05-11 05:03:42,571:DEBUG:About to wait on key /monitoring, index None
+2017-05-11 05:03:42,571:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2017-05-11 05:03:42,571:INFO:Starting new HTTP connection (1): etcd-server
+2017-05-11 05:03:42,573:DEBUG:"GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2017-05-11 05:13:42,670:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2017-05-11 05:13:42,670:DEBUG:Reconnection disabled, giving up.
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/hubs/hub.py", line 457, in fire_timers
+    timer()
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/hubs/timer.py", line 58, in __call__
+    cb(*args, **kw)
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/greenthread.py", line 214, in main
+    result = function(*args, **kwargs)
+  File "/tools/etcd-watcher-for-esi/python-etcd-watch.py", line 15, in _consume_loop
+    result = client.watch(key_info, recursive=True)
+  File "/usr/local/lib/python2.7/dist-packages/etcd/client.py", line 655, in watch
+    recursive=recursive)
+  File "/usr/local/lib/python2.7/dist-packages/etcd/client.py", line 481, in read
+    timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/etcd/client.py", line 788, in api_execute
+    cause=e
+EtcdConnectionFailed: Connection to etcd failed due to ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+Traceback (most recent call last):
+  File "/tools/etcd-watcher-for-esi/python-etcd-watch.py", line 48, in <module>
+    thread.wait()
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/greenthread.py", line 175, in wait
+    return self._exit_event.wait()
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/event.py", line 121, in wait
+    return hubs.get_hub().switch()
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/hubs/hub.py", line 294, in switch
+    return self.greenlet.switch()
+  File "/usr/local/lib/python2.7/dist-packages/eventlet/greenthread.py", line 214, in main
+    result = function(*args, **kwargs)
+  File "/tools/etcd-watcher-for-esi/python-etcd-watch.py", line 15, in _consume_loop
+    result = client.watch(key_info, recursive=True)
+  File "/usr/local/lib/python2.7/dist-packages/etcd/client.py", line 655, in watch
+    recursive=recursive)
+  File "/usr/local/lib/python2.7/dist-packages/etcd/client.py", line 481, in read
+    timeout=timeout)
+  File "/usr/local/lib/python2.7/dist-packages/etcd/client.py", line 788, in api_execute
+    cause=e
+etcd.EtcdConnectionFailed: Connection to etcd failed due to ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)

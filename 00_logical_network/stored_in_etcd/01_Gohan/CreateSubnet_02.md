@@ -1,11 +1,5 @@
 # Stored data in etcd: Create Subnet
 
-These are stored data for "heat_templates" in etcd.
-
-* port
-
-### Checking stored data at the point of (1) in etcd
-
 ```
 /config/v2.0/ports/3836f376-21ad-4ec2-975b-b7f0c671c5c8
 {
@@ -38,18 +32,5 @@ These are stored data for "heat_templates" in etcd.
     }, 
     "version": 1, 
     "marked_for_deletion": false
-}
-```
-
-### Checking stored data at the point of (5) in etcd
-
-```
-/state/v2.0/ports/3836f376-21ad-4ec2-975b-b7f0c671c5c8
-{
-    "state": {
-        "worker_state": "READ_COMPLETE"
-    }, 
-    "version": 1, 
-    "error": ""
 }
 ```

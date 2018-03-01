@@ -21,4 +21,3 @@ First of all, you can see the overview of resources model of "Logical Network".
 * [05: Subnet](05_subnet.md)
 * [06: Port](06_port.md)
 
-

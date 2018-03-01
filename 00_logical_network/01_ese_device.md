@@ -6,21 +6,12 @@ You can see the relations of "Ese Device" as following.
 ![Ese Device](resource/gohan_investigate_for_logicalnetwork.002.png)
 
 
-## 1.1. Stored data in etcd after initinalizing gohan
+## 1.1. Gohan
 
 ![scope](../images/ESI_Sequence_diagram.002.png)
 
-These are stored data for "heat_templates" in etcd.
-
-* [Checking stored data for "ese_device_existing"](../heat_template/ese_device_existing.md)
-
-
-
-## 1.2. HTTP Methods for RESTful between Gohan and Client
-
-![scope](../images/ESI_Sequence_diagram.003.png)
-
-This is JSON data for "Create Ese Device" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Ese Device" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -29,52 +20,88 @@ POST /v2.0/ese_devices
 ```
 {
     "ese_device": {
-        "username": "esi", 
-        "public_ip_address": "10.161.0.33", 
-        "existing": "existing", 
-        "tenant_id": "ae69b52f46ba480bb9636f62736436f4", 
-        "hostname": "QFX-NW01", 
-        "name": "QFX-NW01", 
-        "password": "***", 
-        "type": "tor", 
+        "username": "esi",
+        "public_ip_address": "10.161.0.33",
+        "existing": "existing",
+        "tenant_id": "ae69b52f46ba480bb9636f62736436f4",
+        "hostname": "QFX-NW01",
+        "name": "QFX-NW01",
+        "password": "***",
+        "type": "tor",
         "management_ip_address": "10.161.0.33"
     }
 }
 ```
+After processing, Gohan has stored data for "Create Ese Device" in etcd.
+
+* [Checking stored data for creating "ese_device"](stored_in_etcd/01_Gohan/CreateEseDevice_01.md)
 
 
+## 1.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-## 1.3. Stored data in etcd after receiving HTTP Methods for RESTful
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
+
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Create Ese Device" in etcd, ResourceReader has fetched heat_templates in etcd.
+
+* [Checking stored data for "ese_device_existing"](../heat_template/ese_device_existing.md)
+
+
+## 1.3. JobManager
 
 ![scope](../images/ESI_Sequence_diagram.004.png)
 
-These are stored data for "Create Ese Device" in etcd.
+### Outline
+After converting resource_data to job_data, JobManager has stored it in etcd.
 
-* [Checking stored data for creating "ese_device"](stored_in_etcd/CreateEseDevice_01.md)
+* [Checking stored data for creating "ese_device"](stored_in_etcd/02_JobManager/CreateEseDevice_01.md)
 
 
-
-## 1.4. Stored heat-stack via heat-api
+## 1.4. HeatWorker
 
 ![scope](../images/ESI_Sequence_diagram.005.png)
 
-These are stored heat-stacks for "Create Ese Device" in heat-engine.
+### Outline
+After fetching job_data, HeatWorker has handled job_data.
+And then, HeatWorker has stored the result of handling job_data.
+
+* [Checking stored data for creating "ese_device"](stored_in_etcd/03_HeatWorker/CreateEseDevice_01.md)
+
+
+## 1.5. Heat
+
+![scope](../images/ESI_Sequence_diagram.006.png)
+
+### Outline
+Heat has conducted some tasks for "Create Ese Device".
+As a result, Heat has stored heat-stacks for "Create Ese Device".
 
 * [Checking heat-stack of "ese_device"](heat-stack/CreateEseDevice_01.md)
 
 
+## 1.6. CollectorAgent
 
-## 1.5. HTTP Methods for RESTful between heat-engine and CollectorAgent
+![scope](../images/ESI_Sequence_diagram.007.png)
 
-![scope](../images/ESI_Sequence_diagram.006.png)
-
-This is JSON data for "Create Ese Device" between heat-engine and CollectorAgent
+### Outline
+CollectorAgent has conducted some tasks for "Create Ese Device" based heat-stacks via Heat.
+As a result, CollectorAgent has responded the result of status information as handling tasks.
 
 * [Checking monitoring of "ese_devices"](collector_agents/CreateEseDevice_01.md)
 
+And then, CollectorAgent has stored the result of status information.
+
+* [Checking stored data for creating "ese_device"](stored_in_etcd/04_CollectorAgent/CreateEseDevice_01.md)
 
 
-## 1.6. Stored resource in gohan
+## 1.7. Stored resource in gohan
 As a result, checking resources regarding of "Ese Device" in gohan.
 
 * Checking the target of resources via gohan client

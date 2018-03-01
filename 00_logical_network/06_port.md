@@ -6,22 +6,12 @@ You can see the relations of "Port" as following.
 ![Port](resource/gohan_investigate_for_logicalnetwork.007.png)
 
 
-## 6.1. Stored data in etcd after initinalizing gohan
+## 6.1. Gohan
 
 ![scope](../images/ESI_Sequence_diagram.002.png)
 
-These are stored data for "heat_templates" in etcd.
-
-* [Checking stored data for "port"](../heat_template/port.md)
-* [Checking stored data for "ese_logical_port"](../heat_template/ese_logical_port.md)
-
-
-
-## 6.2. HTTP Methods for RESTful between Gohan and Client
-
-![scope](../images/ESI_Sequence_diagram.003.png)
-
-This is JSON data for "Create Port" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Port" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -30,60 +20,103 @@ POST /v2.0/ports
 ```
 {
     "port": {
-        "name": "sample-port", 
-        "network_id": "35bc496f-3c0e-46b4-a5c0-33810e8e7263", 
-        "segmentation_id": 1003, 
+        "name": "sample-port",
+        "network_id": "35bc496f-3c0e-46b4-a5c0-33810e8e7263",
+        "segmentation_id": 1003,
         "fixed_ips": [
             {
-                "subnet_id": "3cfa93ac-251a-4a60-9434-ff4c88bf3655", 
+                "subnet_id": "3cfa93ac-251a-4a60-9434-ff4c88bf3655",
                 "ip_address": "192.168.200.101"
             }
-        ], 
-        "device_owner": "physical_port", 
-        "tenant_id": "ae69b52f46ba480bb9636f62736436f4", 
-        "segmentation_type": "vlan", 
+        ],
+        "device_owner": "physical_port",
+        "tenant_id": "ae69b52f46ba480bb9636f62736436f4",
+        "segmentation_type": "vlan",
         "device_id": "7ff183de-0188-46bf-b7d0-68d08ad2b54f"
     }
 }
 ```
+After processing, Gohan has stored data for "Create Port" in etcd.
+
+* [Checking stored data for creating "port (192.168.200.101 / device_owner:"physical_port" / attached:false"](stored_in_etcd/01_Gohan/CreatePort_01.md)
+* [Checking stored data for creating "ese_logical_port"](stored_in_etcd/01_Gohan/CreatePort_02.md)
+* [Checking stored data for updating "port (192.168.200.101 / device_owner:"physical_port" / attached:true"](stored_in_etcd/01_Gohan/CreatePort_03.md)
 
 
+## 6.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-## 6.3. Stored data in etcd after receiving HTTP Methods for RESTful
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
+
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Create Ese Device" in etcd, ResourceReader has fetched heat_templates in etcd.
+
+* [Checking stored data for "port"](../heat_template/port.md)
+* [Checking stored data for "ese_logical_port"](../heat_template/ese_logical_port.md)
+
+
+## 6.3. JobManager
 
 ![scope](../images/ESI_Sequence_diagram.004.png)
 
-These are stored data for "Create Port" in etcd.
+### Outline
+After converting resource_data to job_data, JobManager has stored it in etcd.
 
-* [Checking stored data for creating "port (192.168.200.101 / device_owner:"physical_port" / attached:false"](stored_in_etcd/CreatePort_01.md)
-* [Checking stored data for creating "ese_logical_port"](stored_in_etcd/CreatePort_02.md)
-* [Checking stored data for updating "port (192.168.200.101 / device_owner:"physical_port" / attached:true"](stored_in_etcd/CreatePort_03.md)
+* [Checking stored data for creating "port (192.168.200.101 / device_owner:"physical_port" / attached:false"](stored_in_etcd/02_JobManager/CreatePort_01.md)
+* [Checking stored data for creating "ese_logical_port"](stored_in_etcd/02_JobManager/CreatePort_02.md)
+* [Checking stored data for updating "port (192.168.200.101 / device_owner:"physical_port" / attached:true"](stored_in_etcd/02_JobManager/CreatePort_03.md)
 
 
-
-## 6.4. Stored heat-stack via heat-api
+## 6.4. HeatWorker
 
 ![scope](../images/ESI_Sequence_diagram.005.png)
 
-These are stored heat-stacks for "Create Port" in heat-engine.
+### Outline
+After fetching job_data, HeatWorker has handled job_data.
+And then, HeatWorker has stored the result of handling job_data.
+
+* [Checking stored data for creating "port (192.168.200.101 / device_owner:"physical_port" / attached:false"](stored_in_etcd/03_HeatWorker/CreatePort_01.md)
+* [Checking stored data for creating "ese_logical_port"](stored_in_etcd/03_HeatWorker/CreatePort_02.md)
+* [Checking stored data for updating "port (192.168.200.101 / device_owner:"physical_port" / attached:true"](stored_in_etcd/03_HeatWorker/CreatePort_03.md)
+
+
+## 6.5. Heat
+
+![scope](../images/ESI_Sequence_diagram.006.png)
+
+### Outline
+Heat has conducted some tasks for "Create Port".
+As a result, Heat has stored heat-stacks for "Create Port".
 
 * [Checking heat-stack of "ese_logical_port"](heat-stack/CreatePort_01.md)
 * [Checking heat-stack of "port (192.168.200.101)"](heat-stack/CreatePort_02.md)
 
 
+## 6.6. CollectorAgent
 
-## 6.5. HTTP Methods for RESTful between heat-engine and CollectorAgent
+![scope](../images/ESI_Sequence_diagram.007.png)
 
-![scope](../images/ESI_Sequence_diagram.006.png)
-
-This is JSON data for "Create Port" between heat-engine and CollectorAgent
+### Outline
+CollectorAgent has conducted some tasks for "Create Ese Device" based heat-stacks via Heat.
+As a result, CollectorAgent has responded the result of status information as handling tasks.
 
 * [Checking monitoring of "ese_logical_port"](collector_agents/CreatePort_01.md)
 * [Checking monitoring of "port"](collector_agents/CreatePort_02.md)
 
+And then, CollectorAgent has stored the result of status information.
+
+* [Checking stored data for creating "port (192.168.200.101 / device_owner:"physical_port" / attached:false"](stored_in_etcd/04_CollectorAgent/CreatePort_01.md)
+* [Checking stored data for creating "ese_logical_port"](stored_in_etcd/04_CollectorAgent/CreatePort_02.md)
+* [Checking stored data for updating "port (192.168.200.101 / device_owner:"physical_port" / attached:true"](stored_in_etcd/04_CollectorAgent/CreatePort_03.md)
 
 
-## 6.6. Stored resource in gohan
+## 6.7. Stored resource in gohan
 As a result, checking resources regarding of "Port" in gohan.
 
 * Checking the target of resources via gohan client

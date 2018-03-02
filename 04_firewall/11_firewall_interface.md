@@ -1,4 +1,4 @@
-[Return to Previous Page](00_fire_wall.md)
+[Return to Previous Page](00_firewall.md)
 
 # 11. Clarification of interface in Sequence Diagram "Update Firewall Interface"
 You can see the relations of "Firewall Interface" as following.
@@ -6,24 +6,14 @@ You can see the relations of "Firewall Interface" as following.
 ![Firewall Interface](resource/gohan_investigate_for_firewall.012.png)
 
 
-## 11.1. Stored data in etcd after initinalizing gohan
+## 11.1. Gohan
 
 ![scope](../images/ESI_Sequence_diagram.002.png)
 
-These are stored data for "heat_templates" in etcd.
+### Outline
+First of all, Gohan has received JSON data for "Create Firewall Interface" in HTTP Methods from client.
 
-* [Checking stored data for "port"](../heat_template/port.md)
-* [Checking stored data for "vnf_instance"](../heat_template/vnf_instance.md)
-* [Checking stored data for "firewall_config"](../heat_template/firewall_config.md)
-* [Checking stored data for "firewall_interface"](../heat_template/firewall_interface.md)
-
-
-
-## 11.2. HTTP Methods for RESTful between Gohan and Client
-
-![scope](sequence/gohan_esi_investigating_for_firewall.003.png)
-
-This is JSON data for "Update Firewall Interface" in HTTP Methods from client.
+* Checking JSON data at post method
 ```
 PUT /v2.0/firewall_interfaces/3543155d-0d9a-43a3-ae77-3479cf8a0e4a
 ```
@@ -34,14 +24,102 @@ PUT /v2.0/firewall_interfaces/3543155d-0d9a-43a3-ae77-3479cf8a0e4a
     }
 }
 ```
+After processing, Gohan has stored data for "Update Firewall Interface" in etcd.
+
+* [Checking stored data for creating "port (10.98.76.3   / device_owner:"")"](stored_in_etcd/01_Gohan/UpdateFirewallInterface_01.md)
+* [Checking stored data for updating "vnf_interface (slot_number:1)"](stored_in_etcd/01_Gohan/UpdateFirewallInterface_02.md)
+* [Checking stored data for updating "vnf_instance"](stored_in_etcd/01_Gohan/UpdateFirewallInterface_03.md)
+* [Checking stored data for updating "firewall_interface (dp0s4 / slot_number:1 / 10.98.76.3)"](stored_in_etcd/01_Gohan/UpdateFirewallInterface_04.md)
+* [Checking stored data for updating "firewall"](stored_in_etcd/01_Gohan/UpdateFirewallInterface_05.md)
+* [Checking stored data for deleting "port (10.121.232.3 / device_owner:"compute:nova")"](stored_in_etcd/01_Gohan/UpdateFirewallInterface_06.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:""             / attached:false)"](stored_in_etcd/01_Gohan/UpdateFirewallInterface_07.md)
+* [Checking stored data for updating "port (10.98.76.3   / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/01_Gohan/UpdateFirewallInterface_08.md)
+* [Checking stored data for updating "port (10.98.76.3   / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/01_Gohan/UpdateFirewallInterface_09.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/01_Gohan/UpdateFirewallInterface_10.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/01_Gohan/UpdateFirewallInterface_11.md)
 
 
+## 11.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-## 11.3. HTTP Methods for RESTful between Gohan and Nova-compute
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
+
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Update Firewall Interface" in etcd, ResourceReader has fetched heat_templates in etcd.
+
+* [Checking stored data for "port"](../heat_template/port.md)
+* [Checking stored data for "vnf_instance"](../heat_template/vnf_instance.md)
+* [Checking stored data for "firewall_config"](../heat_template/firewall_config.md)
+* [Checking stored data for "firewall_interface"](../heat_template/firewall_interface.md)
+
+
+## 11.3. JobManager
+
+![scope](../images/ESI_Sequence_diagram.004.png)
+
+### Outline
+After converting resource_data to job_data, JobManager has stored it in etcd.
+
+* [Checking stored data for creating "port (10.98.76.3   / device_owner:"")"](stored_in_etcd/02_JobManager/UpdateFirewallInterface_01.md)
+* [Checking stored data for updating "vnf_instance"](stored_in_etcd/02_JobManager/UpdateFirewallInterface_03.md)
+* [Checking stored data for updating "firewall_interface (dp0s4 / slot_number:1 / 10.98.76.3)"](stored_in_etcd/02_JobManager/UpdateFirewallInterface_04.md)
+* [Checking stored data for updating "firewall"](stored_in_etcd/02_JobManager/UpdateFirewallInterface_05.md)
+* [Checking stored data for deleting "port (10.121.232.3 / device_owner:"compute:nova")"](stored_in_etcd/02_JobManager/UpdateFirewallInterface_06.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:""             / attached:false)"](stored_in_etcd/02_JobManager/UpdateFirewallInterface_07.md)
+* [Checking stored data for updating "port (10.98.76.3   / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/02_JobManager/UpdateFirewallInterface_08.md)
+* [Checking stored data for updating "port (10.98.76.3   / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/02_JobManager/UpdateFirewallInterface_09.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/02_JobManager/UpdateFirewallInterface_10.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/02_JobManager/UpdateFirewallInterface_11.md)
+
+
+## 11.4. HeatWorker
+
+![scope](../images/ESI_Sequence_diagram.005.png)
+
+### Outline
+After fetching job_data, HeatWorker has handled job_data.
+And then, HeatWorker has stored the result of handling job_data.
+
+* [Checking stored data for creating "port (10.98.76.3   / device_owner:"")"](stored_in_etcd/03_HeatWorker/UpdateFirewallInterface_01.md)
+* [Checking stored data for updating "vnf_instance"](stored_in_etcd/03_HeatWorker/UpdateFirewallInterface_03.md)
+* [Checking stored data for updating "firewall_interface (dp0s4 / slot_number:1 / 10.98.76.3)"](stored_in_etcd/03_HeatWorker/UpdateFirewallInterface_04.md)
+* [Checking stored data for updating "firewall"](stored_in_etcd/03_HeatWorker/UpdateFirewallInterface_05.md)
+* [Checking stored data for deleting "port (10.121.232.3 / device_owner:"compute:nova")"](stored_in_etcd/03_HeatWorker/UpdateFirewallInterface_06.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:""             / attached:false)"](stored_in_etcd/03_HeatWorker/UpdateFirewallInterface_07.md)
+* [Checking stored data for updating "port (10.98.76.3   / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/03_HeatWorker/UpdateFirewallInterface_08.md)
+* [Checking stored data for updating "port (10.98.76.3   / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/03_HeatWorker/UpdateFirewallInterface_09.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/03_HeatWorker/UpdateFirewallInterface_10.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/03_HeatWorker/UpdateFirewallInterface_11.md)
+
+
+## 11.5. Heat
+
+![scope](../images/ESI_Sequence_diagram.006.png)
+
+### Outline
+Heat has conducted some tasks for "Update Firewall Interface".
+As a result, Heat has stored heat-stacks for "Update Firewall Interface".
+
+* [Checking heat-stack of "vnf_instance""](heat-stack/UpdateFirewallInterface_01.md)
+* [Checking heat-stack of "firewall"](heat-stack/UpdateFirewallInterface_02.md)
+* [Checking heat-stack of "firewall_interface (dp0s3)"](heat-stack/UpdateFirewallInterface_03.md)
+* [Checking heat-stack of "firewall_interface (dp0s4)"](heat-stack/UpdateFirewallInterface_04.md)
+* [Checking heat-stack of "firewall_interface (dp0s5)"](heat-stack/UpdateFirewallInterface_05.md)
+* [Checking heat-stack of "port (10.98.76.3)"](heat-stack/UpdateFirewallInterface_06.md)
+* [Checking heat-stack of "port (100.64.193.3)"](heat-stack/UpdateFirewallInterface_07.md)
+* [Checking heat-stack of "port (10.121.232.4)"](heat-stack/UpdateFirewallInterface_08.md)
+
+
+## 11.6. ESI-Interface between Gohan/heat-engine and Nova-compute
 
 ![scope](sequence/gohan_esi_investigating_for_firewall.004.png)
 
-This is JSON data for "Update Firewall Interface" in HTTP Methods.
 
 ### (1) Stopping vnf-instace in nova-comoute
 * from heat to nova
@@ -131,47 +209,13 @@ POST /v2/0f40dffa48614d9baa7eaac7e7532099/servers/2e555b09-e0d7-4cce-8854-c481a2
 ```
 
 
-## 11.4. Stored data in etcd after receiving HTTP Methods for RESTful
+## 11.7. CollectorAgent
 
-![scope](../images/ESI_Sequence_diagram.004.png)
+![scope](../images/ESI_Sequence_diagram.007.png)
 
-These are stored data for "Update Firewall Interface" in etcd.
-
-* [Checking stored data for creating "port (10.98.76.3   / device_owner:"")"](stored_in_etcd/UpdateFirewallInterface_01.md)
-* [Checking stored data for updating "vnf_interface (slot_number:1)"](stored_in_etcd/UpdateFirewallInterface_02.md)
-* [Checking stored data for updating "vnf_instance"](stored_in_etcd/UpdateFirewallInterface_03.md)
-* [Checking stored data for updating "firewall_interface (dp0s4 / slot_number:1 / 10.98.76.3)"](stored_in_etcd/UpdateFirewallInterface_04.md)
-* [Checking stored data for updating "firewall"](stored_in_etcd/UpdateFirewallInterface_05.md)
-* [Checking stored data for deleting "port (10.121.232.3 / device_owner:"compute:nova")"](stored_in_etcd/UpdateFirewallInterface_06.md)
-* [Checking stored data for updating "port (10.121.232.4 / device_owner:""             / attached:false)"](stored_in_etcd/UpdateFirewallInterface_07.md)
-* [Checking stored data for updating "port (10.98.76.3   / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/UpdateFirewallInterface_08.md)
-* [Checking stored data for updating "port (10.98.76.3   / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/UpdateFirewallInterface_09.md)
-* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/UpdateFirewallInterface_10.md)
-* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/UpdateFirewallInterface_11.md)
-
-
-
-## 11.5. Stored heat-stack via heat-api
-
-![scope](../images/ESI_Sequence_diagram.005.png)
-
-These are stored heat-stacks for "Update Firewall Interface" in heat-engine.
-
-* [Checking heat-stack of "vnf_instance""](heat-stack/UpdateFirewallInterface_01.md)
-* [Checking heat-stack of "firewall"](heat-stack/UpdateFirewallInterface_02.md)
-* [Checking heat-stack of "firewall_interface (dp0s3)"](heat-stack/UpdateFirewallInterface_03.md)
-* [Checking heat-stack of "firewall_interface (dp0s4)"](heat-stack/UpdateFirewallInterface_04.md)
-* [Checking heat-stack of "firewall_interface (dp0s5)"](heat-stack/UpdateFirewallInterface_05.md)
-* [Checking heat-stack of "port (10.98.76.3)"](heat-stack/UpdateFirewallInterface_06.md)
-* [Checking heat-stack of "port (100.64.193.3)"](heat-stack/UpdateFirewallInterface_07.md)
-* [Checking heat-stack of "port (10.121.232.4)"](heat-stack/UpdateFirewallInterface_08.md)
-
-
-## 11.6. HTTP Methods for RESTful between heat-engine and CollectorAgent
-
-![scope](../images/ESI_Sequence_diagram.006.png)
-
-This is JSON data for "Update Firewall Interface" between heat-engine and CollectorAgent
+### Outline
+CollectorAgent has conducted some tasks for "Update Firewall Interface" based heat-stacks via Heat.
+As a result, CollectorAgent has responded the result of status information as handling tasks.
 
 * [Checking monitoring of "vnf_instance"](collector_agents/UpdateFirewallInterface_01.md)
 * [Checking monitoring of "firewall_config"](collector_agents/UpdateFirewallInterface_02.md)
@@ -179,8 +223,16 @@ This is JSON data for "Update Firewall Interface" between heat-engine and Collec
 * [Checking monitoring of "port (10.98.76.3)"](collector_agents/UpdateFirewallInterface_04.md)
 * [Checking monitoring of "port (10.121.232.4)"](collector_agents/UpdateFirewallInterface_05.md)
 
+And then, CollectorAgent has stored the result of status information.
 
-## 11.7. Stored resource in gohan
+* [Checking stored data for updating "vnf_instance"](stored_in_etcd/04_CollectorAgent/UpdateFirewallInterface_03.md)
+* [Checking stored data for updating "firewall_interface (dp0s4 / slot_number:1 / 10.98.76.3)"](stored_in_etcd/04_CollectorAgent/UpdateFirewallInterface_04.md)
+* [Checking stored data for updating "firewall"](stored_in_etcd/04_CollectorAgent/UpdateFirewallInterface_05.md)
+* [Checking stored data for updating "port (10.98.76.3   / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/04_CollectorAgent/UpdateFirewallInterface_09.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/04_CollectorAgent/UpdateFirewallInterface_11.md)
+
+
+## 11.8. Stored resource in gohan
 As a result, checking resources regarding of "Firewall Interface" in gohan.
 
 * Checking the target of resources via gohan client
@@ -659,4 +711,4 @@ $ gohan client vnf_interface list --output-format json
 }
 ```
 
-[Return to Previous Page](00_fire_wall.md)
+[Return to Previous Page](00_firewall.md)

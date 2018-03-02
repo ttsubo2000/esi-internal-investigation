@@ -1,4 +1,4 @@
-[Return to Previous Page](00_fire_wall.md)
+[Return to Previous Page](00_firewall.md)
 
 # 8. Clarification of interface in Sequence Diagram "Create Firewall"
 You can see the relations of "Firewall" as following.
@@ -6,24 +6,14 @@ You can see the relations of "Firewall" as following.
 ![Firewall](resource/gohan_investigate_for_firewall.009.png)
 
 
-## 8.1. Stored data in etcd after initinalizing gohan
+## 8.1. Gohan
 
 ![scope](../images/ESI_Sequence_diagram.002.png)
 
-These are stored data for "heat_templates" in etcd.
+### Outline
+First of all, Gohan has received JSON data for "Create Firewall" in HTTP Methods from client.
 
-* [Checking stored data for "port"](../heat_template/port.md)
-* [Checking stored data for "vnf_instance"](../heat_template/vnf_instance.md)
-* [Checking stored data for "firewall_config"](../heat_template/firewall_config.md)
-* [Checking stored data for "firewall_interface"](../heat_template/firewall_interface.md)
-
-
-
-## 8.2. HTTP Methods for RESTful between Gohan and Client
-
-![scope](sequence/gohan_esi_investigating_for_firewall.001.png)
-
-This is JSON data for "Create Firewall" in HTTP Methods from client.
+* Checking JSON data at post method
 ```
 POST /v2.0/firewalls
 ```
@@ -37,14 +27,116 @@ POST /v2.0/firewalls
     }
 }
 ```
+After processing, Gohan has stored data for "Create Firewall" in etcd.
+
+* [Checking stored data for creating "port (100.64.193.3 / device_owner:"")"](stored_in_etcd/01_Gohan/CreateFirewall_01.md)
+* [Checking stored data for creating "port (10.121.232.3 / device_owner:"")"](stored_in_etcd/01_Gohan/CreateFirewall_02.md)
+* [Checking stored data for creating "port (10.121.232.4 / device_owner:"")"](stored_in_etcd/01_Gohan/CreateFirewall_03.md)
+* [Checking stored data for creating "vnf_instance"](stored_in_etcd/01_Gohan/CreateFirewall_04.md)
+* [Checking stored data for creating "vnf_interface (slot_number:0)"](stored_in_etcd/01_Gohan/CreateFirewall_05.md)
+* [Checking stored data for creating "vnf_interface (slot_number:1)"](stored_in_etcd/01_Gohan/CreateFirewall_06.md)
+* [Checking stored data for creating "vnf_interface (slot_number:2)"](stored_in_etcd/01_Gohan/CreateFirewall_07.md)
+* [Checking stored data for creating "firewall"](stored_in_etcd/01_Gohan/CreateFirewall_08.md)
+* [Checking stored data for creating "firewall_interface (dp0s5 / slot_number:2)"](stored_in_etcd/01_Gohan/CreateFirewall_09.md)
+* [Checking stored data for creating "firewall_interface (dp0s4 / slot_number:1)"](stored_in_etcd/01_Gohan/CreateFirewall_10.md)
+* [Checking stored data for creating "firewall_interface (dp0s3 / slot_number:0)"](stored_in_etcd/01_Gohan/CreateFirewall_11.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/01_Gohan/CreateFirewall_12.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/01_Gohan/CreateFirewall_13.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/01_Gohan/CreateFirewall_14.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/01_Gohan/CreateFirewall_15.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/01_Gohan/CreateFirewall_16.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/01_Gohan/CreateFirewall_17.md)
 
 
+## 8.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-## 8.3. HTTP Methods for RESTful between Gohan and Nova-compute
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
+
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Create Firewall" in etcd, ResourceReader has fetched heat_templates in etcd.
+
+* [Checking stored data for "port"](../heat_template/port.md)
+* [Checking stored data for "vnf_instance"](../heat_template/vnf_instance.md)
+* [Checking stored data for "firewall_config"](../heat_template/firewall_config.md)
+* [Checking stored data for "firewall_interface"](../heat_template/firewall_interface.md)
+
+
+## 8.3. JobManager
+
+![scope](../images/ESI_Sequence_diagram.004.png)
+
+### Outline
+After converting resource_data to job_data, JobManager has stored it in etcd.
+
+* [Checking stored data for creating "port (100.64.193.3 / device_owner:"")"](stored_in_etcd/02_JobManager/CreateFirewall_01.md)
+* [Checking stored data for creating "port (10.121.232.3 / device_owner:"")"](stored_in_etcd/02_JobManager/CreateFirewall_02.md)
+* [Checking stored data for creating "port (10.121.232.4 / device_owner:"")"](stored_in_etcd/02_JobManager/CreateFirewall_03.md)
+* [Checking stored data for creating "vnf_instance"](stored_in_etcd/02_JobManager/CreateFirewall_04.md)
+* [Checking stored data for creating "firewall"](stored_in_etcd/02_JobManager/CreateFirewall_08.md)
+* [Checking stored data for creating "firewall_interface (dp0s5 / slot_number:2)"](stored_in_etcd/02_JobManager/CreateFirewall_09.md)
+* [Checking stored data for creating "firewall_interface (dp0s4 / slot_number:1)"](stored_in_etcd/02_JobManager/CreateFirewall_10.md)
+* [Checking stored data for creating "firewall_interface (dp0s3 / slot_number:0)"](stored_in_etcd/02_JobManager/CreateFirewall_11.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/02_JobManager/CreateFirewall_12.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/02_JobManager/CreateFirewall_13.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/02_JobManager/CreateFirewall_14.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/02_JobManager/CreateFirewall_15.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/02_JobManager/CreateFirewall_16.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/02_JobManager/CreateFirewall_17.md)
+
+
+## 8.4. HeatWorker
+
+![scope](../images/ESI_Sequence_diagram.005.png)
+
+### Outline
+After fetching job_data, HeatWorker has handled job_data.
+And then, HeatWorker has stored the result of handling job_data.
+
+* [Checking stored data for creating "port (100.64.193.3 / device_owner:"")"](stored_in_etcd/03_HeatWorker/CreateFirewall_01.md)
+* [Checking stored data for creating "port (10.121.232.3 / device_owner:"")"](stored_in_etcd/03_HeatWorker/CreateFirewall_02.md)
+* [Checking stored data for creating "port (10.121.232.4 / device_owner:"")"](stored_in_etcd/03_HeatWorker/CreateFirewall_03.md)
+* [Checking stored data for creating "vnf_instance"](stored_in_etcd/03_HeatWorker/CreateFirewall_04.md)
+* [Checking stored data for creating "firewall"](stored_in_etcd/03_HeatWorker/CreateFirewall_08.md)
+* [Checking stored data for creating "firewall_interface (dp0s5 / slot_number:2)"](stored_in_etcd/03_HeatWorker/CreateFirewall_09.md)
+* [Checking stored data for creating "firewall_interface (dp0s4 / slot_number:1)"](stored_in_etcd/03_HeatWorker/CreateFirewall_10.md)
+* [Checking stored data for creating "firewall_interface (dp0s3 / slot_number:0)"](stored_in_etcd/03_HeatWorker/CreateFirewall_11.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/03_HeatWorker/CreateFirewall_12.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/03_HeatWorker/CreateFirewall_13.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/03_HeatWorker/CreateFirewall_14.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/03_HeatWorker/CreateFirewall_15.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/03_HeatWorker/CreateFirewall_16.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/03_HeatWorker/CreateFirewall_17.md)
+
+
+## 8.5. Heat
+
+![scope](../images/ESI_Sequence_diagram.006.png)
+
+### Outline
+Heat has conducted some tasks for "Create Firewall".
+As a result, Heat has stored heat-stacks for "Create Firewall".
+
+* [Checking heat-stack of "vnf_instance"](heat-stack/CreateFirewall_01.md)
+* [Checking heat-stack of "firewall"](heat-stack/CreateFirewall_02.md)
+* [Checking heat-stack of "firewall_interface (dp0s3)"](heat-stack/CreateFirewall_03.md)
+* [Checking heat-stack of "firewall_interface (dp0s4)"](heat-stack/CreateFirewall_04.md)
+* [Checking heat-stack of "firewall_interface (dp0s5)"](heat-stack/CreateFirewall_05.md)
+* [Checking heat-stack of "port (100.64.193.3)"](heat-stack/CreateFirewall_06.md)
+* [Checking heat-stack of "port (10.121.232.3)"](heat-stack/CreateFirewall_07.md)
+* [Checking heat-stack of "port (10.121.232.4)"](heat-stack/CreateFirewall_08.md)
+
+
+## 8.6. ESI-Interface between Gohan/heat-engine and Nova-compute
 
 ![scope](sequence/gohan_esi_investigating_for_firewall.002.png)
 
-This is JSON data for "Create Firewall" in HTTP Methods.
 
 ### (1) Creating vnf-instance in nova-comoute
 * from heat to nova
@@ -150,54 +242,13 @@ POST /v2/0f40dffa48614d9baa7eaac7e7532099/servers/2e555b09-e0d7-4cce-8854-c481a2
 ```
 
 
-## 8.4. Stored data in etcd after receiving HTTP Methods for RESTful
+## 8.7. CollectorAgent
 
-![scope](../images/ESI_Sequence_diagram.004.png)
+![scope](../images/ESI_Sequence_diagram.007.png)
 
-These are stored data for "Create Firewall" in etcd.
-
-* [Checking stored data for creating "port (100.64.193.3 / device_owner:"")"](stored_in_etcd/CreateFirewall_01.md)
-* [Checking stored data for creating "port (10.121.232.3 / device_owner:"")"](stored_in_etcd/CreateFirewall_02.md)
-* [Checking stored data for creating "port (10.121.232.4 / device_owner:"")"](stored_in_etcd/CreateFirewall_03.md)
-* [Checking stored data for creating "vnf_instance"](stored_in_etcd/CreateFirewall_04.md)
-* [Checking stored data for creating "vnf_interface (slot_number:0)"](stored_in_etcd/CreateFirewall_05.md)
-* [Checking stored data for creating "vnf_interface (slot_number:1)"](stored_in_etcd/CreateFirewall_06.md)
-* [Checking stored data for creating "vnf_interface (slot_number:2)"](stored_in_etcd/CreateFirewall_07.md)
-* [Checking stored data for creating "firewall"](stored_in_etcd/CreateFirewall_08.md)
-* [Checking stored data for creating "firewall_interface (dp0s5 / slot_number:2)"](stored_in_etcd/CreateFirewall_09.md)
-* [Checking stored data for creating "firewall_interface (dp0s4 / slot_number:1)"](stored_in_etcd/CreateFirewall_10.md)
-* [Checking stored data for creating "firewall_interface (dp0s3 / slot_number:0)"](stored_in_etcd/CreateFirewall_11.md)
-* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/CreateFirewall_12.md)
-* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/CreateFirewall_13.md)
-* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/CreateFirewall_14.md)
-* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/CreateFirewall_15.md)
-* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/CreateFirewall_16.md)
-* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/CreateFirewall_17.md)
-
-
-
-## 8.5. Stored heat-stack via heat-api
-
-![scope](../images/ESI_Sequence_diagram.005.png)
-
-These are stored heat-stacks for "Create Firewall" in heat-engine.
-
-* [Checking heat-stack of "vnf_instance"](heat-stack/CreateFirewall_01.md) 
-* [Checking heat-stack of "firewall"](heat-stack/CreateFirewall_02.md)
-* [Checking heat-stack of "firewall_interface (dp0s3)"](heat-stack/CreateFirewall_03.md)
-* [Checking heat-stack of "firewall_interface (dp0s4)"](heat-stack/CreateFirewall_04.md)
-* [Checking heat-stack of "firewall_interface (dp0s5)"](heat-stack/CreateFirewall_05.md)
-* [Checking heat-stack of "port (100.64.193.3)"](heat-stack/CreateFirewall_06.md)
-* [Checking heat-stack of "port (10.121.232.3)"](heat-stack/CreateFirewall_07.md)
-* [Checking heat-stack of "port (10.121.232.4)"](heat-stack/CreateFirewall_08.md)
-
-
-
-## 8.6. HTTP Methods for RESTful between heat-engine and CollectorAgent
-
-![scope](../images/ESI_Sequence_diagram.006.png)
-
-This is JSON data for "Create Firewall" between heat-engine and CollectorAgent
+### Outline
+CollectorAgent has conducted some tasks for "Create Firewall" based heat-stacks via Heat.
+As a result, CollectorAgent has responded the result of status information as handling tasks.
 
 * [Checking monitoring of "vnf_instance"](collector_agents/CreateFirewall_01.md)
 * [Checking monitoring of "firewall_config"](collector_agents/CreateFirewall_02.md)
@@ -208,9 +259,19 @@ This is JSON data for "Create Firewall" between heat-engine and CollectorAgent
 * [Checking monitoring of "port"](collector_agents/CreateFirewall_07.md)
 * [Checking monitoring of "port"](collector_agents/CreateFirewall_08.md)
 
+And then, CollectorAgent has stored the result of status information.
+
+* [Checking stored data for creating "vnf_instance"](stored_in_etcd/04_CollectorAgent/CreateFirewall_04.md)
+* [Checking stored data for creating "firewall"](stored_in_etcd/04_CollectorAgent/CreateFirewall_08.md)
+* [Checking stored data for creating "firewall_interface (dp0s5 / slot_number:2)"](stored_in_etcd/04_CollectorAgent/CreateFirewall_09.md)
+* [Checking stored data for creating "firewall_interface (dp0s4 / slot_number:1)"](stored_in_etcd/04_CollectorAgent/CreateFirewall_10.md)
+* [Checking stored data for creating "firewall_interface (dp0s3 / slot_number:0)"](stored_in_etcd/04_CollectorAgent/CreateFirewall_11.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/04_CollectorAgent/CreateFirewall_13.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/04_CollectorAgent/CreateFirewall_15.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/04_CollectorAgent/CreateFirewall_17.md)
 
 
-## 8.7. Stored resource in gohan
+## 8.8. Stored resource in gohan
 As a result, checking resources regarding of "Firewall" in gohan.
 
 * Checking the target of resources via gohan client
@@ -722,4 +783,4 @@ $ gohan client firewall_interface list --output-format json
 }
 ```
 
-[Return to Previous Page](00_fire_wall.md)
+[Return to Previous Page](00_firewall.md)

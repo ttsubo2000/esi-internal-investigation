@@ -1,4 +1,4 @@
-[Return to Previous Page](00_fire_wall.md)
+[Return to Previous Page](00_firewall.md)
 
 # 7. Clarification of interface in Sequence Diagram "Create Firewall Plan"
 You can see the relations of "Firewall Plan" as following.
@@ -6,12 +6,12 @@ You can see the relations of "Firewall Plan" as following.
 ![Firewall Plan](resource/gohan_investigate_for_firewall.008.png)
 
 
+## 7.1. Gohan
 
-## 7.1. HTTP Methods for RESTful between Gohan and Client
+![scope](../images/ESI_Sequence_diagram.002.png)
 
-![scope](../images/ESI_Sequence_diagram.003.png)
-
-This is JSON data for "Create Firewall Plan" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Firewall Plan" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -30,17 +30,27 @@ POST /v2.0/firewall_plans
     }
 }
 ```
+After processing, Gohan has stored data for "Create Firewall Plan" in etcd
+
+* [Checking stored data for creating "firewall_plan"](stored_in_etcd/01_Gohan/CreateFirewallPlan_01.md)
 
 
+## 7.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-## 7.2. Stored data in etcd after receiving HTTP Methods for RESTful
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
 
-![scope](../images/ESI_Sequence_diagram.004.png)
+![scope](../images/ESI_Sequence_diagram.003.png)
 
-These are stored data for "Create Firewall Plan" in etcd.
+### Outline
+After fetching resource_data for "Create Firewall Plan" in etcd, ResourceReader has not fetched heat_templates in etcd because of non_workable_resource.
+And then, ResourceReader has stored data as finishing resource
 
-* [Checking stored data for creating "firewall_plan"](stored_in_etcd/CreateFirewallPlan_01.md)
-
+* [Checking stored data for creating "firewall_plan"](stored_in_etcd/00_ResourceReader/CreateFirewallPlan_01.md)
 
 
 ## 7.3. Stored resource in gohan
@@ -65,4 +75,4 @@ $ gohan client firewall_plan show --output-format json 40520774-4f10-4e8c-90fa-5
 }
 ```
 
-[Return to Previous Page](00_fire_wall.md)
+[Return to Previous Page](00_firewall.md)

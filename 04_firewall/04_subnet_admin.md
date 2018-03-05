@@ -27,10 +27,12 @@ POST /v2.0/subnets
         "ip_version": 4,
         "cidr": "100.64.193.0/24",
         "network_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554",
-        "host_routes": [{
-            "destination": "172.26.10.0/24",
-            "nexthop": "100.64.193.1"
-        }]
+        "host_routes": [
+            {
+                "destination": "172.26.10.0/24",
+                "nexthop": "100.64.193.1"
+            }
+        ]
     }
 }
 ```

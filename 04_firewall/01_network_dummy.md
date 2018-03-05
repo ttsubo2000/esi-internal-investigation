@@ -83,7 +83,6 @@ As a result, Heat has stored heat-stacks for "Create Network".
 * [Checking heat-stack of "network"](heat-stack/CreateNetwork1_01.md)
 
 
-
 ## 1.6. Stored resource in gohan
 As a result, checking resources regarding of "Network" in gohan.
 

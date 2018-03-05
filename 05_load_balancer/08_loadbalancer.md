@@ -6,26 +6,14 @@ You can see the relations of "Loadbalancer" as following.
 ![Loadbalancer](resource/gohan_investigate_for_loadbalancer.009.png)
 
 
-## 8.1. Stored data in etcd after initinalizing gohan
+## 8.1. Gohan
 
 ![scope](../images/ESI_Sequence_diagram.002.png)
 
-These are stored data for "heat_templates" in etcd.
+### Outline
+First of all, Gohan has received JSON data for "Create Loadbalancer" in HTTP Methods from client.
 
-* [Checking stored data for "port"](../heat_template/port.md)
-* [Checking stored data for "vnf_instance"](../heat_template/vnf_instance.md)
-* [Checking stored data for "load_balancer_conf"](../heat_template/load_balancer_conf.md)
-* [Checking stored data for "load_balancer"](../heat_template/load_balancer.md)
-* [Checking stored data for "load_balancer_interface"](../heat_template/load_balancer_interface.md)
-* [Checking stored data for "load_balancer_syslog_server"](../heat_template/load_balancer_syslog_server.md)
-
-
-
-## 8.2. HTTP Methods for RESTful between Gohan and Client
-
-![scope](sequence/gohan_esi_investigating_for_loadbalance.001.png)
-
-This is JSON data for "Create Loadbalancer" in HTTP Methods from client.
+* Checking JSON data at post method
 ```
 POST /v2.0/load_balancers
 ```
@@ -38,14 +26,123 @@ POST /v2.0/load_balancers
     }
 }
 ```
+After processing, Gohan has stored data for "Create Loadbalancer" in etcd.
+
+* [Checking stored data for creating "port (100.64.193.3 / device_owner:"")"](stored_in_etcd/01_Gohan/CreateLoadbalancer_01.md)
+* [Checking stored data for creating "port (10.121.232.3 / device_owner:"")"](stored_in_etcd/01_Gohan/CreateLoadbalancer_02.md)
+* [Checking stored data for creating "port (10.121.232.4 / device_owner:"")"](stored_in_etcd/01_Gohan/CreateLoadbalancer_03.md)
+* [Checking stored data for creating "vnf_instance"](stored_in_etcd/01_Gohan/CreateLoadbalancer_04.md)
+* [Checking stored data for creating "vnf_interface (slot_number:0)"](stored_in_etcd/01_Gohan/CreateLoadbalancer_05.md)
+* [Checking stored data for creating "vnf_interface (slot_number:1)"](stored_in_etcd/01_Gohan/CreateLoadbalancer_06.md)
+* [Checking stored data for creating "vnf_interface (slot_number:2)"](stored_in_etcd/01_Gohan/CreateLoadbalancer_07.md)
+* [Checking stored data for creating "port (100.64.193.4 / device_owner:"")"](stored_in_etcd/01_Gohan/CreateLoadbalancer_08.md)
+* [Checking stored data for creating "load_balancer_conf"](stored_in_etcd/01_Gohan/CreateLoadbalancer_09.md)
+* [Checking stored data for creating "load_balancer"](stored_in_etcd/01_Gohan/CreateLoadbalancer_10.md)
+* [Checking stored data for creating "load_balancer_interface ("Interface 1/1" / slot_number:1)"](stored_in_etcd/01_Gohan/CreateLoadbalancer_11.md)
+* [Checking stored data for creating "load_balancer_interface ("Interface 1/2" / slot_number:2)"](stored_in_etcd/01_Gohan/CreateLoadbalancer_12.md)
+* [Checking stored data for creating "load_balancer_interface ("Interface 0/1" / slot_number:0)"](stored_in_etcd/01_Gohan/CreateLoadbalancer_13.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/01_Gohan/CreateLoadbalancer_14.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/01_Gohan/CreateLoadbalancer_15.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/01_Gohan/CreateLoadbalancer_16.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/01_Gohan/CreateLoadbalancer_17.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/01_Gohan/CreateLoadbalancer_18.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/01_Gohan/CreateLoadbalancer_19.md)
 
 
+## 8.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-## 8.3. HTTP Methods for RESTful between Gohan and Nova-compute
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
+
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Create Loadbalancer" in etcd, ResourceReader has fetched heat_templates in etcd.
+
+* [Checking stored data for "port"](../heat_template/port.md)
+* [Checking stored data for "vnf_instance"](../heat_template/vnf_instance.md)
+* [Checking stored data for "load_balancer_conf"](../heat_template/load_balancer_conf.md)
+* [Checking stored data for "load_balancer"](../heat_template/load_balancer.md)
+* [Checking stored data for "load_balancer_interface"](../heat_template/load_balancer_interface.md)
+* [Checking stored data for "load_balancer_syslog_server"](../heat_template/load_balancer_syslog_server.md)
+
+
+## 8.3. JobManager
+
+![scope](../images/ESI_Sequence_diagram.004.png)
+
+### Outline
+After converting resource_data to job_data, JobManager has stored it in etcd.
+
+* [Checking stored data for creating "port (100.64.193.3 / device_owner:"")"](stored_in_etcd/02_JobManager/CreateLoadbalancer_01.md)
+* [Checking stored data for creating "port (10.121.232.3 / device_owner:"")"](stored_in_etcd/02_JobManager/CreateLoadbalancer_02.md)
+* [Checking stored data for creating "port (10.121.232.4 / device_owner:"")"](stored_in_etcd/02_JobManager/CreateLoadbalancer_03.md)
+* [Checking stored data for creating "vnf_instance"](stored_in_etcd/02_JobManager/CreateLoadbalancer_04.md)
+* [Checking stored data for creating "load_balancer_conf"](stored_in_etcd/02_JobManager/CreateLoadbalancer_09.md)
+* [Checking stored data for creating "load_balancer"](stored_in_etcd/02_JobManager/CreateLoadbalancer_10.md)
+* [Checking stored data for creating "load_balancer_interface ("Interface 1/1" / slot_number:1)"](stored_in_etcd/02_JobManager/CreateLoadbalancer_11.md)
+* [Checking stored data for creating "load_balancer_interface ("Interface 1/2" / slot_number:2)"](stored_in_etcd/02_JobManager/CreateLoadbalancer_12.md)
+* [Checking stored data for creating "load_balancer_interface ("Interface 0/1" / slot_number:0)"](stored_in_etcd/02_JobManager/CreateLoadbalancer_13.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/02_JobManager/CreateLoadbalancer_14.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/02_JobManager/CreateLoadbalancer_15.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/02_JobManager/CreateLoadbalancer_16.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/02_JobManager/CreateLoadbalancer_17.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/02_JobManager/CreateLoadbalancer_18.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/02_JobManager/CreateLoadbalancer_19.md)
+
+
+## 8.4. HeatWorker
+
+![scope](../images/ESI_Sequence_diagram.005.png)
+
+### Outline
+After fetching job_data, HeatWorker has handled job_data.
+And then, HeatWorker has stored the result of handling job_data.
+
+* [Checking stored data for creating "port (100.64.193.3 / device_owner:"")"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_01.md)
+* [Checking stored data for creating "port (10.121.232.3 / device_owner:"")"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_02.md)
+* [Checking stored data for creating "port (10.121.232.4 / device_owner:"")"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_03.md)
+* [Checking stored data for creating "vnf_instance"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_04.md)
+* [Checking stored data for creating "load_balancer_conf"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_09.md)
+* [Checking stored data for creating "load_balancer"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_10.md)
+* [Checking stored data for creating "load_balancer_interface ("Interface 1/1" / slot_number:1)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_11.md)
+* [Checking stored data for creating "load_balancer_interface ("Interface 1/2" / slot_number:2)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_12.md)
+* [Checking stored data for creating "load_balancer_interface ("Interface 0/1" / slot_number:0)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_13.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_14.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_15.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_16.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_17.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_18.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_19.md)
+
+
+## 8.5. Heat
+
+![scope](../images/ESI_Sequence_diagram.006.png)
+
+### Outline
+Heat has conducted some tasks for "Create Loadbalancer".
+As a result, Heat has stored heat-stacks for "Create Loadbalancer".
+
+* [Checking heat-stack of "vnf_instance"](heat-stack/CreateLoadbalancer_01.md)
+* [Checking heat-stack of "load_balancer_conf"](heat-stack/CreateLoadbalancer_02.md)
+* [Checking heat-stack of "load_balancer"](heat-stack/CreateLoadbalancer_03.md)
+* [Checking heat-stack of "load_balancer_interface (Interface 0/1)"](heat-stack/CreateLoadbalancer_04.md)
+* [Checking heat-stack of "load_balancer_interface (Interface 1/1)"](heat-stack/CreateLoadbalancer_05.md)
+* [Checking heat-stack of "load_balancer_interface (Interface 1/2)"](heat-stack/CreateLoadbalancer_06.md)
+* [Checking heat-stack of "port (10.121.232.4)"](heat-stack/CreateLoadbalancer_07.md)
+* [Checking heat-stack of "port (10.121.232.3)"](heat-stack/CreateLoadbalancer_08.md)
+* [Checking heat-stack of "port (100.64.193.3)"](heat-stack/CreateLoadbalancer_09.md)
+
+
+## 8.6. ESI-Interface between Gohan/heat-engine and Nova-compute
 
 ![scope](sequence/gohan_esi_investigating_for_loadbalance.002.png)
 
-This is JSON data for "Create Loadbalancer" in HTTP Methods.
 
 ### (1) Creating vnf-instance in nova-comoute
 * from heat to nova
@@ -151,57 +248,13 @@ POST /v2/fe3a4a1a72c04479bb6c19c2c0ccba4c/servers/47531b14-72e9-439d-8949-fd9414
 ```
 
 
-## 8.4. Stored data in etcd after receiving HTTP Methods for RESTful
+## 8.7. CollectorAgent
 
-![scope](../images/ESI_Sequence_diagram.004.png)
+![scope](../images/ESI_Sequence_diagram.007.png)
 
-These are stored data for "Create Loadbalancer" in etcd.
-
-* [Checking stored data for creating "port (100.64.193.3 / device_owner:"")"](stored_in_etcd/CreateLoadbalancer_01.md)
-* [Checking stored data for creating "port (10.121.232.3 / device_owner:"")"](stored_in_etcd/CreateLoadbalancer_02.md)
-* [Checking stored data for creating "port (10.121.232.4 / device_owner:"")"](stored_in_etcd/CreateLoadbalancer_03.md)
-* [Checking stored data for creating "vnf_instance"](stored_in_etcd/CreateLoadbalancer_04.md)
-* [Checking stored data for creating "vnf_interface (slot_number:0)"](stored_in_etcd/CreateLoadbalancer_05.md)
-* [Checking stored data for creating "vnf_interface (slot_number:1)"](stored_in_etcd/CreateLoadbalancer_06.md)
-* [Checking stored data for creating "vnf_interface (slot_number:2)"](stored_in_etcd/CreateLoadbalancer_07.md)
-* [Checking stored data for creating "port (100.64.193.4 / device_owner:"")"](stored_in_etcd/CreateLoadbalancer_08.md)
-* [Checking stored data for creating "load_balancer_conf"](stored_in_etcd/CreateLoadbalancer_09.md)
-* [Checking stored data for creating "load_balancer"](stored_in_etcd/CreateLoadbalancer_10.md)
-* [Checking stored data for creating "load_balancer_interface ("Interface 1/1" / slot_number:1)"](stored_in_etcd/CreateLoadbalancer_11.md)
-* [Checking stored data for creating "load_balancer_interface ("Interface 1/2" / slot_number:2)"](stored_in_etcd/CreateLoadbalancer_12.md)
-* [Checking stored data for creating "load_balancer_interface ("Interface 0/1" / slot_number:0)"](stored_in_etcd/CreateLoadbalancer_13.md)
-* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/CreateLoadbalancer_14.md)
-* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/CreateLoadbalancer_15.md)
-* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/CreateLoadbalancer_16.md)
-* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/CreateLoadbalancer_17.md)
-* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:false)"](stored_in_etcd/CreateLoadbalancer_18.md)
-* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/CreateLoadbalancer_19.md)
-
-
-
-## 8.5. Stored heat-stack via heat-api
-
-![scope](../images/ESI_Sequence_diagram.005.png)
-
-These are stored heat-stacks for "Create Loadbalancer" in heat-engine.
-
-* [Checking heat-stack of "vnf_instance"](heat-stack/CreateLoadbalancer_01.md)
-* [Checking heat-stack of "load_balancer_conf"](heat-stack/CreateLoadbalancer_02.md)
-* [Checking heat-stack of "load_balancer"](heat-stack/CreateLoadbalancer_03.md)
-* [Checking heat-stack of "load_balancer_interface (Interface 0/1)"](heat-stack/CreateLoadbalancer_04.md)
-* [Checking heat-stack of "load_balancer_interface (Interface 1/1)"](heat-stack/CreateLoadbalancer_05.md)
-* [Checking heat-stack of "load_balancer_interface (Interface 1/2)"](heat-stack/CreateLoadbalancer_06.md)
-* [Checking heat-stack of "port (10.121.232.4)"](heat-stack/CreateLoadbalancer_07.md)
-* [Checking heat-stack of "port (10.121.232.3)"](heat-stack/CreateLoadbalancer_08.md)
-* [Checking heat-stack of "port (100.64.193.3)"](heat-stack/CreateLoadbalancer_09.md)
-
-
-
-## 8.6. HTTP Methods for RESTful between heat-engine and CollectorAgent
-
-![scope](../images/ESI_Sequence_diagram.006.png)
-
-This is JSON data for "Create Loadbalancer" between heat-engine and CollectorAgent
+### Outline
+CollectorAgent has conducted some tasks for "Create Loadbalancer" based heat-stacks via Heat.
+As a result, CollectorAgent has responded the result of status information as handling tasks.
 
 * [Checking monitoring of "vnf_instance"](collector_agents/CreateLoadbalancer_01.md)
 * [Checking monitoring of "load_balancer"](collector_agents/CreateLoadbalancer_02.md)
@@ -212,9 +265,19 @@ This is JSON data for "Create Loadbalancer" between heat-engine and CollectorAge
 * [Checking monitoring of "port (10.121.232.3)"](collector_agents/CreateLoadbalancer_07.md)
 * [Checking monitoring of "port (10.121.232.4)"](collector_agents/CreateLoadbalancer_08.md)
 
+And then, CollectorAgent has stored the result of status information.
+
+* [Checking stored data for creating "vnf_instance"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_04.md)
+* [Checking stored data for creating "load_balancer"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_10.md)
+* [Checking stored data for creating "load_balancer_interface ("Interface 1/1" / slot_number:1)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_11.md)
+* [Checking stored data for creating "load_balancer_interface ("Interface 1/2" / slot_number:2)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_12.md)
+* [Checking stored data for creating "load_balancer_interface ("Interface 0/1" / slot_number:0)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_13.md)
+* [Checking stored data for updating "port (100.64.193.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_15.md)
+* [Checking stored data for updating "port (10.121.232.3 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_17.md)
+* [Checking stored data for updating "port (10.121.232.4 / device_owner:"compute:nova" / attached:true)"](stored_in_etcd/03_HeatWorker/CreateLoadbalancer_19.md)
 
 
-## 8.7. Stored resource in gohan
+## 8.8. Stored resource in gohan
 As a result, checking resources regarding of "Loadbalancer" in gohan.
 
 * Checking the target of resources via gohan client

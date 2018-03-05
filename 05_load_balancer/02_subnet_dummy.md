@@ -6,22 +6,12 @@ You can see the relations of "Subnet" as following.
 ![Subnet](resource/gohan_investigate_for_loadbalancer.003.png)
 
 
-## 2.1. Stored data in etcd after initinalizing gohan
+## 2.1. Gohan
 
 ![scope](../images/ESI_Sequence_diagram.002.png)
 
-These are stored data for "heat_templates" in etcd.
-
-* [Checking stored data for "subnet"](../heat_template/subnet.md)
-* [Checking stored data for "port"](../heat_template/port.md)
-
-
-
-## 2.2. HTTP Methods for RESTful between Gohan and Client
-
-![scope](../images/ESI_Sequence_diagram.003.png)
-
-This is JSON data for "Create Subnet" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Subnet" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -40,31 +30,66 @@ POST /v2.0/subnets
     }
 }
 ```
+After processing, Gohan has stored data for "Create Subnet" in etcd.
+
+* [Checking stored data for creating "subnet"](stored_in_etcd/01_Gohan/CreateSubnet1_01.md)
+* [Checking stored data for creating "port(dhcp)"](stored_in_etcd/01_Gohan/CreateSubnet1_02.md)
 
 
+## 2.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-## 2.3. Stored data in etcd after receiving HTTP Methods for RESTful
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
+
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Create Subnet" in etcd, ResourceReader has fetched heat_templates in etcd.
+
+* [Checking stored data for "subnet"](../heat_template/subnet.md)
+
+And then, ResourceReader has stored data as finishing resource
+
+* [Checking stored data for creating "port(dhcp)"](stored_in_etcd/00_ResourceReader/CreateSubnet1_02.md)
+
+
+## 2.3. JobManager
 
 ![scope](../images/ESI_Sequence_diagram.004.png)
 
-These are stored data for "Create Subnet" in etcd.
+### Outline
+After converting resource_data to job_data, JobManager has stored it in etcd.
 
-* [Checking stored data for creating "subnet"](stored_in_etcd/CreateSubnet1_01.md)
-* [Checking stored data for creating "port(dhcp)"](stored_in_etcd/CreateSubnet1_02.md)
+* [Checking stored data for creating "subnet"](stored_in_etcd/02_JobManager/CreateSubnet1_01.md)
 
 
-
-## 2.4. Stored heat-stack via heat-api
+## 2.4. HeatWorker
 
 ![scope](../images/ESI_Sequence_diagram.005.png)
 
-These are stored heat-stacks for "Create Subnet" in heat-engine.
+### Outline
+After fetching job_data, HeatWorker has handled job_data.
+And then, HeatWorker has stored the result of handling job_data.
+
+* [Checking stored data for creating "subnet"](stored_in_etcd/03_HeatWorker/CreateSubnet1_01.md)
+
+
+## 2.5. Heat
+
+![scope](../images/ESI_Sequence_diagram.006.png)
+
+### Outline
+Heat has conducted some tasks for "Create Subnet".
+As a result, Heat has stored heat-stacks for "Create Subnet".
 
 * [Checking heat-stack of "subnet"](heat-stack/CreateSubnet1_01.md)
 
 
-
-## 2.5. Stored resource in gohan
+## 2.6. Stored resource in gohan
 As a result, checking resources regarding of "Subnet" in gohan.
 
 * Checking the target of resources via gohan client

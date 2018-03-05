@@ -11,7 +11,7 @@ You can see the relations of "Firewall Interface" as following.
 ![scope](../images/ESI_Sequence_diagram.002.png)
 
 ### Outline
-First of all, Gohan has received JSON data for "Create Firewall Interface" in HTTP Methods from client.
+First of all, Gohan has received JSON data for "Update Firewall Interface" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```

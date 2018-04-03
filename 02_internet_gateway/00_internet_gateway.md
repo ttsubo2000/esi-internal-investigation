@@ -1,7 +1,18 @@
 [Return to Top Page](../README.md)
 
-# Gohan and Heat-api Interfaces for Internet Gateway 
-This section is for the purpose of documenting interfaces between gohan and esi-worker.
+# ESI interface for Internet Gateway 
+This section is for the purpose of documenting ESI interface.
+
+* Initinalizing gohan ...
+* Receiving HTTP Methods for Creating Resource ...
+
+![scope](../images/ESI_Sequence_diagram.001.png)
+
+
+# Resource model for Loginal Network
+First of all, you can see the overview of resources model of "Internet Gateway".
+
+![Overview](resource/gohan_investigate_for_inetgw.001.png)
 
 * [01: Ese Device](01_ese_device.md)
 * [02: Ese Physical Port](02_ese_physical_port.md)
@@ -18,9 +29,4 @@ This section is for the purpose of documenting interfaces between gohan and esi-
 * [13: Subnet](13_subnet.md)
 * [14: Gw Interface](14_gw_interface.md)
 * [15: Static Route](15_static_route.md)
-
-# Resource model for Internet Gateway
-First of all, you can see the overview of resources model of "Internet Gateway".
-
-![Overview](resource/gohan_investigate_for_inetgw.001.png)
 

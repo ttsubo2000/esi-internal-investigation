@@ -1,8 +1,6 @@
 # heat_template: firewall_config
 This is heat_template of "firewall_config" which is provided by gohan via etcd
 
-![scope](../images/esi_interface.002.png)
-
 ### (1) Stored data in etcd
 These are stored data for "heat_templates" in etcd.
 ```

@@ -5,28 +5,13 @@ You can see the relations of "Gw Interface" as following.
 
 ![Gw Interface](resource/gohan_investigate_for_inetgw.015.png)
 
-## 14.1. Sequence Diagram between gohan and etcd
-This is a diagram that has been described as interfaces for "Gw Interface" between gohan and etcd.
 
-* Initinalizing gohan ...
-* Receiving HTTP Methods for Creating Resource ...
+## 14.1. Gohan
 
-![Create Gw Interface1](diag/ESI_Sequence_Diagram_for_Internet_Gateway.017.png)
-![Create Gw Interface2](diag/ESI_Sequence_Diagram_for_Internet_Gateway.018.png)
+![scope](../images/ESI_Sequence_diagram.002.png)
 
-## 14.2. Stored data in etcd after initinalizing gohan
-These are stored data for "heat_templates" in etcd.
-
-* [Checking stored data for "gw_interface_internet"](../heat_template/gw_interface_internet.md)
-* [Checking stored data for "port"](../heat_template/port.md)
-* [Checking stored data for "ese_logical_port"](../heat_template/ese_logical_port.md)
-* [Checking stored data for "gw_interface_monitoring"](../heat_template/gw_interface_monitoring.md)
-* [Checking stored data for "port_monitoring"](../heat_template/port_monitoring.md)
-* [Checking stored data for "ese_logical_port_monitoring"](../heat_template/ese_logical_port_monitoring.md)
-
-
-## 14.3. HTTP Methods for RESTful between Gohan and Client
-This is JSON data for "Create Gw Interface" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Gw Interface" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -39,55 +24,119 @@ POST /v2.0/gw_interfaces
         "gw_vipv4": "172.16.101.151",
         "name": "sample-gw-interface",
         "netmask": 24,
-        "network_id": "52d7bef8-aa17-45c3-b63e-6a0e504603f0",
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e",
         "primary_ipv4": "172.16.101.152",
         "secondary_ipv4": "172.16.101.153",
         "service_type": "internet",
         "vrid": 20,
-        "internet_gw_id": "429e24b5-a2f0-4fb8-b467-e335857e9476",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "internet_gw_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9",
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d"
     }
 }
 ```
-![scope](../images/esi_interface.004.png)
+After processing, Gohan has stored data for "Create Gw Interface" in etcd.
+
+* [Checking stored data for creating "gw_interface"](stored_in_etcd/01_Gohan/CreateGwInterface_01.md)
+* [Checking stored data for creating "port (172.16.101.151,152 / device_owner:"network:gw_interface" / attached:false)"](stored_in_etcd/01_Gohan/CreateGwInterface_02.md)
+* [Checking stored data for creating "ese_logical_port (xe-0/0/3.1025)"](stored_in_etcd/01_Gohan/CreateGwInterface_03.md)
+* [Checking stored data for creating "port (172.16.101.153 / device_owner:"network:gw_interface" / attached:false)"](stored_in_etcd/01_Gohan/CreateGwInterface_04.md)
+* [Checking stored data for creating "ese_logical_port (xe-0/0/4.1025)"](stored_in_etcd/01_Gohan/CreateGwInterface_05.md)
+* [Checking stored data for creating "port (172.16.101.153 / device_owner:"network:gw_interface" / attached:true)"](stored_in_etcd/01_Gohan/CreateGwInterface_06.md)
+* [Checking stored data for creating "port (172.16.101.151,152 / device_owner:"network:gw_interface" / attached:true)"](stored_in_etcd/01_Gohan/CreateGwInterface_07.md)
 
 
-## 14.4. Stored data in etcd after receiving HTTP Methods for RESTful
-These are stored data for "Create Gw Interface" in etcd.
+## 14.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-* [Checking stored data for creating "gw_interface"](stored_in_etcd/CreateGwInterface_01.md)
-* [Checking stored data for creating "port"](stored_in_etcd/CreateGwInterface_02.md)
-* [Checking stored data for creating "ese_logical_port"](stored_in_etcd/CreateGwInterface_03.md)
-* [Checking stored data for creating "port"](stored_in_etcd/CreateGwInterface_04.md)
-* [Checking stored data for creating "ese_logical_port"](stored_in_etcd/CreateGwInterface_05.md)
-* [Checking stored data for creating "port"](stored_in_etcd/CreateGwInterface_06.md)
-* [Checking stored data for creating "port"](stored_in_etcd/CreateGwInterface_07.md)
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
 
-![scope](../images/esi_interface.005.png)
+![scope](../images/ESI_Sequence_diagram.003.png)
 
+### Outline
+After fetching resource_data for "Create Gw Interface" in etcd, ResourceReader has fetched heat_templates in etcd.
 
-## 14.5. Stored heat-stack via heat-api
-These are stored heat-stacks for "Create Gw Interface" in heat-engine.
-
-* [Checking heat-stack of "gw_interface" for creating at "(a)" in section "14.1."](heat-stack/CreateGwInterface_01.md)
-* [Checking heat-stack of "port" for creating at "(b)" in section "14.1."](heat-stack/CreateGwInterface_02.md)
-* [Checking heat-stack of "port" for creating at "(c)" in section "14.1."](heat-stack/CreateGwInterface_03.md)
-* [Checking heat-stack of "ese_logical_port" for creating at "(d)" in section "14.1."](heat-stack/CreateGwInterface_04.md)
-* [Checking heat-stack of "ese_logical_port" for creating at "(e)" in section "14.1."](heat-stack/CreateGwInterface_05.md)
-* [Checking heat-stack of "port" for updating at "(f)" in section "14.1."](heat-stack/CreateGwInterface_06.md)
-* [Checking heat-stack of "port" for updating at "(g)" in section "14.1."](heat-stack/CreateGwInterface_07.md)
-
-![scope](../images/esi_interface.006.png)
+* [Checking stored data for "gw_interface_internet"](../heat_template/gw_interface_internet.md)
+* [Checking stored data for "port"](../heat_template/port.md)
+* [Checking stored data for "ese_logical_port"](../heat_template/ese_logical_port.md)
 
 
-## 14.6. Stored resource for monitoring in Kafka
-This is JSON data for "Create Gw Interface" between monitoring-worker and kafka
+## 14.3. JobManager
 
-* [Checking the topic "monitor_igs_interface" for monitoring "gw_interface"](stored_in_kafka/CreateGwInterface_01.md)
-* [Checking the topic "monitor_logical_port" for monitoring "ese_logical_port"](stored_in_kafka/CreateGwInterface_02.md)
-* [Checking the topic "monitor_virtual_machine_interface" for monitoring "port"](stored_in_kafka/CreateGwInterface_03.md)
+![scope](../images/ESI_Sequence_diagram.004.png)
 
-![scope](../images/esi_interface.007.png)
+### Outline
+After converting resource_data to job_data, JobManager has stored it in etcd.
+
+* [Checking stored data for creating "gw_interface"](stored_in_etcd/02_JobManager/CreateGwInterface_01.md)
+* [Checking stored data for creating "port (172.16.101.151,152 / device_owner:"network:gw_interface" / attached:false)"](stored_in_etcd/02_JobManager/CreateGwInterface_02.md)
+* [Checking stored data for creating "ese_logical_port (xe-0/0/3.1025)"](stored_in_etcd/02_JobManager/CreateGwInterface_03.md)
+* [Checking stored data for creating "port (172.16.101.153 / device_owner:"network:gw_interface" / attached:false)"](stored_in_etcd/02_JobManager/CreateGwInterface_04.md)
+* [Checking stored data for creating "ese_logical_port (xe-0/0/4.1025)"](stored_in_etcd/02_JobManager/CreateGwInterface_05.md)
+* [Checking stored data for creating "port (172.16.101.153 / device_owner:"network:gw_interface" / attached:true)"](stored_in_etcd/02_JobManager/CreateGwInterface_06.md)
+* [Checking stored data for creating "port (172.16.101.151,152 / device_owner:"network:gw_interface" / attached:true)"](stored_in_etcd/02_JobManager/CreateGwInterface_07.md)
+
+
+## 14.4. HeatWorker
+
+![scope](../images/ESI_Sequence_diagram.005.png)
+
+### Outline
+After fetching job_data, HeatWorker has handled job_data.
+And then, HeatWorker has stored the result of handling job_data.
+
+* [Checking stored data for creating "gw_interface"](stored_in_etcd/03_HeatWorker/CreateGwInterface_01.md)
+* [Checking stored data for creating "port (172.16.101.151,152 / device_owner:"network:gw_interface" / attached:false)"](stored_in_etcd/03_HeatWorker/CreateGwInterface_02.md)
+* [Checking stored data for creating "ese_logical_port (xe-0/0/3.1025)"](stored_in_etcd/03_HeatWorker/CreateGwInterface_03.md)
+* [Checking stored data for creating "port (172.16.101.153 / device_owner:"network:gw_interface" / attached:false)"](stored_in_etcd/03_HeatWorker/CreateGwInterface_04.md)
+* [Checking stored data for creating "ese_logical_port (xe-0/0/4.1025)"](stored_in_etcd/03_HeatWorker/CreateGwInterface_05.md)
+* [Checking stored data for creating "port (172.16.101.153 / device_owner:"network:gw_interface" / attached:true)"](stored_in_etcd/03_HeatWorker/CreateGwInterface_06.md)
+* [Checking stored data for creating "port (172.16.101.151,152 / device_owner:"network:gw_interface" / attached:true)"](stored_in_etcd/03_HeatWorker/CreateGwInterface_07.md)
+
+
+
+## 14.5. Heat
+
+![scope](../images/ESI_Sequence_diagram.006.png)
+
+### Outline
+Heat has conducted some tasks for "Create Gw Interface".
+As a result, Heat has stored heat-stacks for "Create Gw Interface".
+
+* [Checking heat-stack of "gw_interface"](heat-stack/CreateGwInterface_01.md)
+* [Checking heat-stack of "ese_logical_port"](heat-stack/CreateGwInterface_02.md)
+* [Checking heat-stack of "ese_logical_port"](heat-stack/CreateGwInterface_03.md)
+* [Checking heat-stack of "port"](heat-stack/CreateGwInterface_04.md)
+* [Checking heat-stack of "port"](heat-stack/CreateGwInterface_05.md)
+
+
+## 14.6. CollectorAgent
+
+![scope](../images/ESI_Sequence_diagram.007.png)
+
+### Outline
+CollectorAgent has conducted some tasks for "Create Gw Interface" based heat-stacks via Heat.
+As a result, CollectorAgent has responded the result of status information as handling tasks.
+
+* [Checking monitoring of "gw_interface"](collector_agents/CreateGwInterface_01.md)
+* [Checking monitoring of "port"](collector_agents/CreateGwInterface_02.md)
+* [Checking monitoring of "port"](collector_agents/CreateGwInterface_03.md)
+* [Checking monitoring of "ese_logical_port"](collector_agents/CreateGwInterface_04.md)
+* [Checking monitoring of "ese_logical_port"](collector_agents/CreateGwInterface_05.md)
+* [Checking monitoring of "port"](collector_agents/CreateGwInterface_06.md)
+* [Checking monitoring of "port"](collector_agents/CreateGwInterface_07.md)
+
+And then, CollectorAgent has stored the result of status information.
+
+* [Checking stored data for creating "gw_interface"](stored_in_etcd/04_CollectorAgent/CreateGwInterface_01.md)
+* [Checking stored data for creating "ese_logical_port (xe-0/0/3.1025)"](stored_in_etcd/04_CollectorAgent/CreateGwInterface_03.md)
+* [Checking stored data for creating "ese_logical_port (xe-0/0/4.1025)"](stored_in_etcd/04_CollectorAgent/CreateGwInterface_05.md)
+* [Checking stored data for creating "port (172.16.101.153 / device_owner:"network:gw_interface" / attached:true)"](stored_in_etcd/04_CollectorAgent/CreateGwInterface_06.md)
+* [Checking stored data for creating "port (172.16.101.151,152 / device_owner:"network:gw_interface" / attached:true)"](stored_in_etcd/04_CollectorAgent/CreateGwInterface_07.md)
+
 
 
 ## 14.7. Applying JUNOS Configurations via netconf
@@ -95,6 +144,8 @@ Checking configuration in Edge Router
 
 * MX-1
 ```
+[edit]
+root@vMX-1# show | compare rollback 2
 [edit interfaces ae0 unit 1025 family inet]
 +       address 172.16.101.153/24 {
 +           vrrp-group 20 {
@@ -102,7 +153,8 @@ Checking configuration in Edge Router
 +               priority 100;
 +           }
 +       }
-
+```
+```
 [edit routing-instances vrf_gw_sample-ha-router-downlink_1025]
 +    protocols {
 +        bgp {
@@ -119,6 +171,8 @@ Checking configuration in Edge Router
 
 * MX-2
 ```
+[edit]
+root@vMX-2# show | compare rollback 2
 [edit interfaces ae0 unit 1025 family inet]
 +       address 172.16.101.152/24 {
 +           vrrp-group 20 {
@@ -126,7 +180,8 @@ Checking configuration in Edge Router
 +               priority 105;
 +           }
 +       }
-
+```
+```
 [edit routing-instances vrf_gw_sample-ha-router-downlink_1025]
 +    protocols {
 +        bgp {
@@ -146,19 +201,23 @@ As a result, checking resources regarding of "Gw Interface" in gohan.
 
 * Checking the target of resources via gohan client
 ```
-$ gohan client gw_interface show --output-format json b9618566-14ea-4505-8eae-8fdb4b6a0ec1
-{
+$ gohan client gw_interface show --output-format json ce8831fd-d30c-41e3-95de-feaee0b95405
+{   
     "gw_interface": {
         "aws_gw_id": null,
+        "azure_gw_id": null,
         "description": "Sample Gw-interface",
+        "gcp_gw_id": null,
         "gw_vipv4": "172.16.101.151",
         "gw_vipv6": null,
-        "id": "b9618566-14ea-4505-8eae-8fdb4b6a0ec1",
+        "id": "ce8831fd-d30c-41e3-95de-feaee0b95405",
         "interdc_gw_id": null,
-        "internet_gw_id": "429e24b5-a2f0-4fb8-b467-e335857e9476",
+        "internet_gw_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9",
         "name": "sample-gw-interface",
         "netmask": 24,
-        "network_id": "52d7bef8-aa17-45c3-b63e-6a0e504603f0",
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e",
+        "operational_state": "UP",
+        "orchestration_state": "CREATE_COMPLETE",
         "primary_ipv4": "172.16.101.152",
         "primary_ipv6": null,
         "public_ip_id": null,
@@ -166,144 +225,40 @@ $ gohan client gw_interface show --output-format json b9618566-14ea-4505-8eae-8f
         "secondary_ipv6": null,
         "service_type": "internet",
         "status": "ACTIVE",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d",
         "vpn_gw_id": null,
         "vrid": 20
     }
 }
 ```
-* Checking resource_mapping via gohan client
-```
-$ gohan client resource_mapping list --output-format json
-{
-    "resource_mappings": [
-
-        ... (snip)
-
-        {
-            "created": 1.494476757e+09,
-            "deleted": null,
-            "id": "132e577f-b4ee-4ed1-8736-9f6d95caf41a",
-            "mapped_id": "10.79.5.185-ae0.1025",
-            "relation": "internet_primary",
-            "resource_id": "b9618566-14ea-4505-8eae-8fdb4b6a0ec1",
-            "resource_type": "gw_interface",
-            "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
-        },
-        {
-            "created": 1.494476757e+09,
-            "deleted": null,
-            "id": "28146326-7873-403b-a4e4-dcbb88120814",
-            "mapped_id": "10.79.5.184-ae0.1025",
-            "relation": "internet_secondary",
-            "resource_id": "b9618566-14ea-4505-8eae-8fdb4b6a0ec1",
-            "resource_type": "gw_interface",
-            "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
-        },
-        {
-            "created": 1.494476763e+09,
-            "deleted": null,
-            "id": "5bfe4c2c-4028-4342-b7f3-5f23c7decf0f",
-            "mapped_id": "10.161.0.34-xe-0/0/4.1025",
-            "relation": "baremetal",
-            "resource_id": "7abe783f-4837-417d-b76f-771ec4d38b97",
-            "resource_type": "port",
-            "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
-        },
-        {
-            "created": 1.494476763e+09,
-            "deleted": null,
-            "id": "bba0ee42-7e4a-45ed-a6d3-49a1a7e3c706",
-            "mapped_id": "10.161.0.34-xe-0/0/3.1025",
-            "relation": "baremetal",
-            "resource_id": "b411d930-df4c-4766-ae66-d0aed9d27c76",
-            "resource_type": "port",
-            "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
-        }
-    ]
-}
-```
 * Checking another resources via gohan client
 ```
-$ gohan client ese_logical_port show --output-format json 3ce86e39-7a81-46f8-b0c4-62a4776746f1
-{
+$ gohan client ese_logical_port show --output-format json 02112bb1-389c-4ff8-9354-94ab43459892
+{   
     "ese_logical_port": {
         "common_function_gateway_id": null,
         "connected_resource": "gw_interface",
-        "description": "ESE Logical port for Port 7abe783f-4837-417d-b76f-771ec4d38b97",
-        "ese_physical_port_id": "8a4bbfe0-5aae-42f5-8b94-c4c14b9e7306",
-        "gw_interface_id": "b9618566-14ea-4505-8eae-8fdb4b6a0ec1",
-        "id": "3ce86e39-7a81-46f8-b0c4-62a4776746f1",
-        "name": "xe-0/0/4.1025",
-        "network_id": "52d7bef8-aa17-45c3-b63e-6a0e504603f0",
-        "port_ids": [
-            "7abe783f-4837-417d-b76f-771ec4d38b97"
-        ],
-        "status": "ACTIVE",
-        "tags": {},
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
-        "type": "L2",
-        "vlan_id": 1025
-    }
-}
-```
-```
-$ gohan client port show --output-format json 7abe783f-4837-417d-b76f-771ec4d38b97
-{
-    "port": {
-        "admin_state_up": true,
-        "allowed_address_pairs": [],
-        "attached": true,
-        "binding:vif_type": "vrouter",
-        "description": "",
-        "device_id": "b9618566-14ea-4505-8eae-8fdb4b6a0ec1",
-        "device_owner": "network:gw_interface",
-        "ese_logical_port_id": "3ce86e39-7a81-46f8-b0c4-62a4776746f1",
-        "fake_delete": false,
-        "fixed_ips": [
-            {
-                "ip_address": "172.16.101.153",
-                "subnet_id": "a510f785-7758-4ce5-8fd4-c107d11b8e40"
-            }
-        ],
-        "id": "7abe783f-4837-417d-b76f-771ec4d38b97",
-        "mac_address": "fa:16:3e:f8:45:26",
-        "managed_by_service": true,
-        "name": "Port for : 8a4bbfe0-5aae-42f5-8b94-c4c14b9e7306",
-        "network_id": "52d7bef8-aa17-45c3-b63e-6a0e504603f0",
-        "segmentation_id": 1025,
-        "segmentation_type": "vlan",
-        "status": "ACTIVE",
-        "tags": {},
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
-    }
-}
-```
-```
-$ gohan client ese_logical_port show --output-format json b1cf2461-ecb9-4923-966e-e61211f8b03c
-{
-    "ese_logical_port": {
-        "common_function_gateway_id": null,
-        "connected_resource": "gw_interface",
-        "description": "ESE Logical port for Port b411d930-df4c-4766-ae66-d0aed9d27c76",
-        "ese_physical_port_id": "97fcdf3a-81a4-41a5-8ae6-52c431fc5a5c",
-        "gw_interface_id": "b9618566-14ea-4505-8eae-8fdb4b6a0ec1",
-        "id": "b1cf2461-ecb9-4923-966e-e61211f8b03c",
+        "description": "ESE Logical port for Port f3867a99-de18-4512-8e94-f9aaa7b05c3a",
+        "ese_physical_port_id": "887fecdd-956b-47fa-a348-8940c53a5bf9",
+        "gw_interface_id": "ce8831fd-d30c-41e3-95de-feaee0b95405",
+        "id": "02112bb1-389c-4ff8-9354-94ab43459892",
         "name": "xe-0/0/3.1025",
-        "network_id": "52d7bef8-aa17-45c3-b63e-6a0e504603f0",
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e",
+        "operational_state": "UP",
+        "orchestration_state": "CREATE_COMPLETE",
         "port_ids": [
-            "b411d930-df4c-4766-ae66-d0aed9d27c76"
+            "f3867a99-de18-4512-8e94-f9aaa7b05c3a"
         ],
         "status": "ACTIVE",
         "tags": {},
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d",
         "type": "L2",
         "vlan_id": 1025
     }
 }
 ```
 ```
-$ gohan client port show --output-format json b411d930-df4c-4766-ae66-d0aed9d27c76
+$ gohan client port show --output-format json f3867a99-de18-4512-8e94-f9aaa7b05c3a
 {
     "port": {
         "admin_state_up": true,
@@ -311,32 +266,169 @@ $ gohan client port show --output-format json b411d930-df4c-4766-ae66-d0aed9d27c
         "attached": true,
         "binding:vif_type": "vrouter",
         "description": "",
-        "device_id": "b9618566-14ea-4505-8eae-8fdb4b6a0ec1",
+        "device_id": "ce8831fd-d30c-41e3-95de-feaee0b95405",
         "device_owner": "network:gw_interface",
-        "ese_logical_port_id": "b1cf2461-ecb9-4923-966e-e61211f8b03c",
+        "ese_logical_port_id": "02112bb1-389c-4ff8-9354-94ab43459892",
         "fake_delete": false,
         "fixed_ips": [
             {
                 "ip_address": "172.16.101.151",
-                "subnet_id": "a510f785-7758-4ce5-8fd4-c107d11b8e40"
+                "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
             },
             {
                 "ip_address": "172.16.101.152",
-                "subnet_id": "a510f785-7758-4ce5-8fd4-c107d11b8e40"
+                "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
             }
         ],
-        "id": "b411d930-df4c-4766-ae66-d0aed9d27c76",
-        "mac_address": "fa:16:3e:49:3c:12",
+        "id": "f3867a99-de18-4512-8e94-f9aaa7b05c3a",
+        "mac_address": "fa:16:3e:c5:2b:92",
         "managed_by_service": true,
-        "name": "Port for : 97fcdf3a-81a4-41a5-8ae6-52c431fc5a5c",
-        "network_id": "52d7bef8-aa17-45c3-b63e-6a0e504603f0",
+        "name": "Port for : 887fecdd-956b-47fa-a348-8940c53a5bf9",
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e",
+        "operational_state": "UP",
+        "orchestration_state": "UPDATE_COMPLETE",
+        "security_groups": [],
         "segmentation_id": 1025,
         "segmentation_type": "vlan",
         "status": "ACTIVE",
         "tags": {},
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d"
     }
 }
 ```
+```
+$ gohan client ese_logical_port show --output-format json aabc9b64-ec2c-4894-a6a8-ee0ea429c066
+{   
+    "ese_logical_port": {
+        "common_function_gateway_id": null,
+        "connected_resource": "gw_interface",
+        "description": "ESE Logical port for Port ce965922-538a-4335-9644-7a98dce9fb47",
+        "ese_physical_port_id": "6b29894f-8694-4865-92c1-2e78360e65a6",
+        "gw_interface_id": "ce8831fd-d30c-41e3-95de-feaee0b95405",
+        "id": "aabc9b64-ec2c-4894-a6a8-ee0ea429c066",
+        "name": "xe-0/0/4.1025",
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e",
+        "operational_state": "UP",
+        "orchestration_state": "CREATE_COMPLETE",
+        "port_ids": [
+            "ce965922-538a-4335-9644-7a98dce9fb47"
+        ],
+        "status": "ACTIVE",
+        "tags": {},
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d",
+        "type": "L2",
+        "vlan_id": 1025
+    }
+}
+```
+```
+$ gohan client port show --output-format json ce965922-538a-4335-9644-7a98dce9fb47
+{
+    "port": {
+        "admin_state_up": true,
+        "allowed_address_pairs": [],
+        "attached": true,
+        "binding:vif_type": "vrouter",
+        "description": "",
+        "device_id": "ce8831fd-d30c-41e3-95de-feaee0b95405",
+        "device_owner": "network:gw_interface",
+        "ese_logical_port_id": "aabc9b64-ec2c-4894-a6a8-ee0ea429c066",
+        "fake_delete": false,
+        "fixed_ips": [
+            {
+                "ip_address": "172.16.101.153",
+                "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
+            }
+        ],
+        "id": "ce965922-538a-4335-9644-7a98dce9fb47",
+        "mac_address": "fa:16:3e:41:7c:23",
+        "managed_by_service": true,
+        "name": "Port for : 6b29894f-8694-4865-92c1-2e78360e65a6",
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e",
+        "operational_state": "FAIL",
+        "orchestration_state": "UPDATE_COMPLETE",
+        "security_groups": [],
+        "segmentation_id": 1025,
+        "segmentation_type": "vlan",
+        "status": "MONITORING_UNAVAILABLE",
+        "tags": {},
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d"
+    }
+}
+```
+* Checking another resources via neutron client
+```
+$ neutron port-list
++--------------------------------------+-------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+| id                                   | name                                            | mac_address       | fixed_ips                                                                             |
++--------------------------------------+-------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+  ...
+| ce965922-538a-4335-9644-7a98dce9fb47 | Port for : 6b29894f-8694-4865-92c1-2e78360e65a6 | fa:16:3e:41:7c:23 | {"subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", "ip_address": "172.16.101.153"} |
+| f3867a99-de18-4512-8e94-f9aaa7b05c3a | Port for : 887fecdd-956b-47fa-a348-8940c53a5bf9 | fa:16:3e:c5:2b:92 | {"subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", "ip_address": "172.16.101.151"} |
+|                                      |                                                 |                   | {"subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", "ip_address": "172.16.101.152"} |
++--------------------------------------+-------------------------------------------------+-------------------+---------------------------------------------------------------------------------------+
+```
+```
+$ neutron port-show ce965922-538a-4335-9644-7a98dce9fb47
++-----------------------+---------------------------------------------------------------------------------------+
+| Field                 | Value                                                                                 |
++-----------------------+---------------------------------------------------------------------------------------+
+| admin_state_up        | True                                                                                  |
+| allowed_address_pairs |                                                                                       |
+| attached              | True                                                                                  |
+| binding:vif_type      | vrouter                                                                               |
+| description           |                                                                                       |
+| device_id             | ce8831fd-d30c-41e3-95de-feaee0b95405                                                  |
+| device_owner          | network:gw_interface                                                                  |
+| ese_logical_port_id   | aabc9b64-ec2c-4894-a6a8-ee0ea429c066                                                  |
+| fake_delete           | False                                                                                 |
+| fixed_ips             | {"subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", "ip_address": "172.16.101.153"} |
+| id                    | ce965922-538a-4335-9644-7a98dce9fb47                                                  |
+| mac_address           | fa:16:3e:41:7c:23                                                                     |
+| managed_by_service    | True                                                                                  |
+| name                  | Port for : 6b29894f-8694-4865-92c1-2e78360e65a6                                       |
+| network_id            | 6e557507-1c2a-49b1-ba90-5f616a1f1f3e                                                  |
+| operational_state     | FAIL                                                                                  |
+| orchestration_state   | UPDATE_COMPLETE                                                                       |
+| security_groups       |                                                                                       |
+| segmentation_id       | 1025                                                                                  |
+| segmentation_type     | vlan                                                                                  |
+| status                | MONITORING_UNAVAILABLE                                                                |
+| tags                  | {}                                                                                    |
+| tenant_id             | 06d6b792b31c40daa546fb0f4e35980d                                                      |
++-----------------------+---------------------------------------------------------------------------------------+
+```
+```
+$ neutron port-show f3867a99-de18-4512-8e94-f9aaa7b05c3a
++-----------------------+---------------------------------------------------------------------------------------+
+| Field                 | Value                                                                                 |
++-----------------------+---------------------------------------------------------------------------------------+
+| admin_state_up        | True                                                                                  |
+| allowed_address_pairs |                                                                                       |
+| attached              | True                                                                                  |
+| binding:vif_type      | vrouter                                                                               |
+| description           |                                                                                       |
+| device_id             | ce8831fd-d30c-41e3-95de-feaee0b95405                                                  |
+| device_owner          | network:gw_interface                                                                  |
+| ese_logical_port_id   | 02112bb1-389c-4ff8-9354-94ab43459892                                                  |
+| fake_delete           | False                                                                                 |
+| fixed_ips             | {"subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", "ip_address": "172.16.101.151"} |
+|                       | {"subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", "ip_address": "172.16.101.152"} |
+| id                    | f3867a99-de18-4512-8e94-f9aaa7b05c3a                                                  |
+| mac_address           | fa:16:3e:c5:2b:92                                                                     |
+| managed_by_service    | True                                                                                  |
+| name                  | Port for : 887fecdd-956b-47fa-a348-8940c53a5bf9                                       |
+| network_id            | 6e557507-1c2a-49b1-ba90-5f616a1f1f3e                                                  |
+| operational_state     | UP                                                                                    |
+| orchestration_state   | UPDATE_COMPLETE                                                                       |
+| security_groups       |                                                                                       |
+| segmentation_id       | 1025                                                                                  |
+| segmentation_type     | vlan                                                                                  |
+| status                | ACTIVE                                                                                |
+| tags                  | {}                                                                                    |
+| tenant_id             | 06d6b792b31c40daa546fb0f4e35980d                                                      |
++-----------------------+---------------------------------------------------------------------------------------+
+```
+
 
 [Return to Previous Page](00_internet_gateway.md)

@@ -1,11 +1,9 @@
 nc: connect to 127.0.0.1 port 16010 (tcp) failed: Connection refused
 nc: connect to 127.0.0.1 port 16010 (tcp) failed: Connection refused
 nc: connect to 127.0.0.1 port 16010 (tcp) failed: Connection refused
-nc: connect to 127.0.0.1 port 16010 (tcp) failed: Connection refused
-nc: connect to 127.0.0.1 port 16010 (tcp) failed: Connection refused
 Connection to 127.0.0.1 16010 port [tcp/*] succeeded!
 *** hbase master connection have done
-2018-03-30 00:52:42,661 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2018-04-04 04:51:00,680 WARN  [main] util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
 HBase Shell; enter 'help<RETURN>' for list of supported commands.
 Type "exit<RETURN>" to leave the HBase Shell
 Version 1.1.0.1, r4de7d45cb593f98ae5d020080cbc7116d3e9d9a0, Sun May 17 12:52:10 PDT 2015
@@ -13,25 +11,25 @@ Version 1.1.0.1, r4de7d45cb593f98ae5d020080cbc7116d3e9d9a0, Sun May 17 12:52:10 
 create 'tsdb-uid',
   {NAME => 'id', COMPRESSION => 'NONE', BLOOMFILTER => 'ROW'},
   {NAME => 'name', COMPRESSION => 'NONE', BLOOMFILTER => 'ROW'}
-0 row(s) in 2.4250 seconds
+0 row(s) in 1.7780 seconds
 
 Hbase::Table - tsdb-uid
 
 create 'tsdb',
   {NAME => 't', VERSIONS => 1, COMPRESSION => 'NONE', BLOOMFILTER => 'ROW'}
-0 row(s) in 1.2100 seconds
+0 row(s) in 1.2410 seconds
 
 Hbase::Table - tsdb
   
 create 'tsdb-tree',
   {NAME => 't', VERSIONS => 1, COMPRESSION => 'NONE', BLOOMFILTER => 'ROW'}
-0 row(s) in 1.2110 seconds
+0 row(s) in 1.2280 seconds
 
 Hbase::Table - tsdb-tree
   
 create 'tsdb-meta',
   {NAME => 'name', COMPRESSION => 'NONE', BLOOMFILTER => 'ROW'}
-0 row(s) in 1.2090 seconds
+0 row(s) in 1.2290 seconds
 
 Hbase::Table - tsdb-meta
 *** Start OpenTSDB ...

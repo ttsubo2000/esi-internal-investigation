@@ -2,47 +2,47 @@
 
 Checking heat-stack of "static_route" via heatclient.
 ```
-$ heat stack-show static_route_3ecf06a5-014e-48b0-841c-6ad812e69132
-+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Property              | Value                                                                                                                                                         |
-+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| capabilities          | []                                                                                                                                                            |
-| creation_time         | 2017-01-08T12:40:22Z                                                                                                                                          |
-| description           | Internet Gateway Static Route                                                                                                                                 |
-| disable_rollback      | True                                                                                                                                                          |
-| id                    | 4bc09665-1557-41b3-a9ad-621d49276980                                                                                                                          |
-| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/static_route_3ecf06a5-014e-48b0-841c-6ad812e69132/4bc09665-1557-41b3-a9ad-621d49276980 (self) |
-| notification_topics   | []                                                                                                                                                            |
-| outputs               | []                                                                                                                                                            |
-| parameters            | {                                                                                                                                                             |
-|                       |   "primary_device_ip": "172.23.16.66",                                                                                                                        |
-|                       |   "OS::stack_id": "4bc09665-1557-41b3-a9ad-621d49276980",                                                                                                     |
-|                       |   "OS::stack_name": "static_route_3ecf06a5-014e-48b0-841c-6ad812e69132",                                                                                      |
-|                       |   "route": "203.0.112.0/28",                                                                                                                                  |
-|                       |   "secondary_device_port": "830",                                                                                                                             |
-|                       |   "secondary_device_password": "esiesi0000",                                                                                                                  |
-|                       |   "primary_device_password": "esiesi0000",                                                                                                                    |
-|                       |   "next_hop": "172.16.101.1",                                                                                                                                 |
-|                       |   "vrf_name": "vrf_gw_sample-ha-router-downlink_1025",                                                                                                        |
-|                       |   "primary_device_username": "esi",                                                                                                                           |
-|                       |   "primary_device_port": "830",                                                                                                                               |
-|                       |   "secondary_device_ip": "172.23.16.65",                                                                                                                      |
-|                       |   "secondary_device_username": "esi"                                                                                                                          |
-|                       | }                                                                                                                                                             |
-| parent                | None                                                                                                                                                          |
-| stack_name            | static_route_3ecf06a5-014e-48b0-841c-6ad812e69132                                                                                                             |
-| stack_owner           | admin                                                                                                                                                         |
-| stack_status          | CREATE_COMPLETE                                                                                                                                               |
-| stack_status_reason   | Stack CREATE completed successfully                                                                                                                           |
-| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                              |
-| template_description  | Internet Gateway Static Route                                                                                                                                 |
-| timeout_mins          | 60                                                                                                                                                            |
-| updated_time          | None                                                                                                                                                          |
-+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+$ heat stack-show static_route_d0aa20b1-9302-4b43-a3c1-9edce0811af8
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                                                      |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                                                         |
+| creation_time         | 2018-04-04T05:04:08Z                                                                                                                                                                       |
+| description           | Internet Gateway Static Route                                                                                                                                                              |
+| disable_rollback      | True                                                                                                                                                                                       |
+| id                    | 23ab509a-cba3-49eb-b11f-ce88e6d262a6                                                                                                                                                       |
+| links                 | http://heat-server.monitoringrefactordocker_default:8004/v1/06d6b792b31c40daa546fb0f4e35980d/stacks/static_route_d0aa20b1-9302-4b43-a3c1-9edce0811af8/23ab509a-cba3-49eb-b11f-ce88e6d262a6 |
+| notification_topics   | []                                                                                                                                                                                         |
+| outputs               | []                                                                                                                                                                                         |
+| parameters            | {                                                                                                                                                                                          |
+|                       |   "primary_device_ip": "10.79.5.185",                                                                                                                                                      |
+|                       |   "OS::stack_id": "23ab509a-cba3-49eb-b11f-ce88e6d262a6",                                                                                                                                  |
+|                       |   "OS::stack_name": "static_route_d0aa20b1-9302-4b43-a3c1-9edce0811af8",                                                                                                                   |
+|                       |   "route": "203.0.112.0/28",                                                                                                                                                               |
+|                       |   "secondary_device_port": "830",                                                                                                                                                          |
+|                       |   "secondary_device_password": "******",                                                                                                                                                   |
+|                       |   "primary_device_password": "******",                                                                                                                                                     |
+|                       |   "next_hop": "172.16.101.1",                                                                                                                                                              |
+|                       |   "vrf_name": "vrf_gw_sample-ha-router-downlink_1025",                                                                                                                                     |
+|                       |   "primary_device_username": "esi",                                                                                                                                                        |
+|                       |   "primary_device_port": "830",                                                                                                                                                            |
+|                       |   "secondary_device_ip": "10.79.5.184",                                                                                                                                                    |
+|                       |   "secondary_device_username": "esi"                                                                                                                                                       |
+|                       | }                                                                                                                                                                                          |
+| parent                | None                                                                                                                                                                                       |
+| stack_name            | static_route_d0aa20b1-9302-4b43-a3c1-9edce0811af8                                                                                                                                          |
+| stack_owner           | admin                                                                                                                                                                                      |
+| stack_status          | CREATE_COMPLETE                                                                                                                                                                            |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                                                        |
+| stack_user_project_id | 06d6b792b31c40daa546fb0f4e35980d                                                                                                                                                           |
+| template_description  | Internet Gateway Static Route                                                                                                                                                              |
+| timeout_mins          | 60                                                                                                                                                                                         |
+| updated_time          | None                                                                                                                                                                                       |
++-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 Checking heat-template of "static_route" via heatclient.
 ```
-$ heat template-show static_route_3ecf06a5-014e-48b0-841c-6ad812e69132
+$ heat template-show static_route_d0aa20b1-9302-4b43-a3c1-9edce0811af8
 description: 'Internet Gateway Static Route
 
   '
@@ -52,7 +52,7 @@ parameters:
   primary_device_ip: {description: Ip address that will be used to establish ssh connection
       to the Primary Device., label: Ip address of the device., type: string}
   primary_device_password: {description: Password of the user which will be used to
-      log onto the Primary Device., label: Users password., type: string}
+      log onto the Primary Device., hidden: true, label: Users password., type: string}
   primary_device_port: {description: Port that will be used to establish ssh connection
       to the Primary Device., label: Port of the ssh connection., type: number}
   primary_device_username: {description: Name of the user which will be used to log
@@ -61,7 +61,7 @@ parameters:
   secondary_device_ip: {description: Ip address that will be used to establish ssh
       connection to the Secondary Device., label: Ip address of the device., type: string}
   secondary_device_password: {description: Password of the user which will be used
-      to log onto the Secondary Device., label: Users password., type: string}
+      to log onto the Secondary Device., hidden: true, label: Users password., type: string}
   secondary_device_port: {description: Port that will be used to establish ssh connection
       to the Secondary Device., label: Port of the ssh connection., type: number}
   secondary_device_username: {description: Name of the user which will be used to
@@ -97,6 +97,7 @@ resources:
       username: {get_param: primary_device_username}
     type: OS::Contrail::NetconfNamedConfigs
   netconf_configure_secondary:
+    depends_on: netconf_configure_primary
     properties:
       configs:
       - config:

@@ -1,24 +1,24 @@
-2018-03-30 00:52:52,473:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:52:52,473:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 00:52:52,473:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:52:52,474:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:52:52,475:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:55:46,302:DEBUG:
+2018-04-04 04:51:36,527:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:51:36,527:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:51:36,527:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:51:36,528:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:51:36,531:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:26,284:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/ese_devices/f5429afc-cf7e-41c4-91ee-36ec403a9695],
+ action=[set], key=[/esi-worker/job_state/v2.0/ese_devices/3fb53223-b614-46b6-92e8-25c3bcbed214],
  value=[{}]
-2018-03-30 00:55:46,302:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:55:46,303:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 00:55:46,303:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:55:46,303:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:55:46,303:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:55:51,053:DEBUG:
+2018-04-04 04:52:26,284:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:26,285:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:52:26,285:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:26,286:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:26,287:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:32,249:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ese_devices/f5429afc-cf7e-41c4-91ee-36ec403a9695],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ese_devices/3fb53223-b614-46b6-92e8-25c3bcbed214],
  value=[{
     "heat_outputs": [
         {
-            "output_value": "cc19c36a-a5ed-4dce-be0d-dc228f8b1c00", 
+            "output_value": "bd8bbbcc-b175-4ea2-bfce-9821677d4da4", 
             "description": "Monitoring Target ID", 
             "output_key": "monitoring_target_id"
         }, 
@@ -36,7 +36,7 @@
             "output_key": "id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/cc19c36a-a5ed-4dce-be0d-dc228f8b1c00", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/bd8bbbcc-b175-4ea2-bfce-9821677d4da4", 
             "description": "Monitoring Process Link", 
             "output_key": "monitoring_link"
         }, 
@@ -48,36 +48,36 @@
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 00:55:51,053:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:55:51,053:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 00:55:51,053:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:55:51,054:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:55:51,054:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:55:51,254:DEBUG:
+2018-04-04 04:52:32,250:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:32,250:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:52:32,250:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:32,251:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:32,253:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:32,296:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ese_devices/f5429afc-cf7e-41c4-91ee-36ec403a9695],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ese_devices/3fb53223-b614-46b6-92e8-25c3bcbed214],
  value=[]
-2018-03-30 00:55:51,254:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:55:51,254:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 00:55:51,254:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:55:51,255:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:55:51,255:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:56:53,719:DEBUG:
+2018-04-04 04:52:32,296:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:32,296:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:52:32,296:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:32,297:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:32,298:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:53:37,560:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/ese_physical_ports/7861b62a-55fe-4e98-9bfc-10bf19052d9a],
+ action=[set], key=[/esi-worker/job_state/v2.0/ese_physical_ports/887fecdd-956b-47fa-a348-8940c53a5bf9],
  value=[{}]
-2018-03-30 00:56:53,719:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:56:53,719:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 00:56:53,719:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:56:53,719:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:56:53,720:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:56:57,819:DEBUG:
+2018-04-04 04:53:37,560:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:53:37,561:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:53:37,561:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:53:37,562:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:53:37,563:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:53:41,423:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ese_physical_ports/7861b62a-55fe-4e98-9bfc-10bf19052d9a],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ese_physical_ports/887fecdd-956b-47fa-a348-8940c53a5bf9],
  value=[{
     "heat_outputs": [
         {
-            "output_value": "c80300f1-641c-4cbc-bd93-d65cef324cfb", 
+            "output_value": "f6c72cbd-294e-4894-87b5-c98c67554265", 
             "description": "Monitoring Target ID", 
             "output_key": "monitoring_target_id"
         }, 
@@ -87,7 +87,7 @@
             "output_key": "id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/c80300f1-641c-4cbc-bd93-d65cef324cfb", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/f6c72cbd-294e-4894-87b5-c98c67554265", 
             "description": "Monitoring Process Link", 
             "output_key": "monitoring_link"
         }, 
@@ -99,36 +99,36 @@
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 00:56:57,820:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:56:57,820:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 00:56:57,820:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:56:57,820:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:56:57,820:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:56:57,953:DEBUG:
+2018-04-04 04:53:41,423:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:53:41,423:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:53:41,423:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:53:41,424:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:53:41,425:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:53:41,464:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ese_physical_ports/7861b62a-55fe-4e98-9bfc-10bf19052d9a],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ese_physical_ports/887fecdd-956b-47fa-a348-8940c53a5bf9],
  value=[]
-2018-03-30 00:56:57,954:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:56:57,954:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 00:56:57,954:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:56:57,954:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:56:57,955:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:57:58,033:DEBUG:
+2018-04-04 04:53:41,464:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:53:41,464:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:53:41,464:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:53:41,465:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:53:41,467:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:54:43,212:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/ese_physical_ports/76001683-a8bb-4c68-8c87-7b63ea7bd5cd],
+ action=[set], key=[/esi-worker/job_state/v2.0/ese_physical_ports/6b29894f-8694-4865-92c1-2e78360e65a6],
  value=[{}]
-2018-03-30 00:57:58,033:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:57:58,033:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 00:57:58,033:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:57:58,033:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:57:58,034:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:58:02,133:DEBUG:
+2018-04-04 04:54:43,213:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:54:43,213:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:54:43,213:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:54:43,214:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:54:43,216:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:54:47,377:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ese_physical_ports/76001683-a8bb-4c68-8c87-7b63ea7bd5cd],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ese_physical_ports/6b29894f-8694-4865-92c1-2e78360e65a6],
  value=[{
     "heat_outputs": [
         {
-            "output_value": "2b9fc4b0-a261-4218-a9fc-7b449642836b", 
+            "output_value": "02761d5d-f2ae-4806-bff6-df5851f514ed", 
             "description": "Monitoring Target ID", 
             "output_key": "monitoring_target_id"
         }, 
@@ -138,7 +138,7 @@
             "output_key": "id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/2b9fc4b0-a261-4218-a9fc-7b449642836b", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/02761d5d-f2ae-4806-bff6-df5851f514ed", 
             "description": "Monitoring Process Link", 
             "output_key": "monitoring_link"
         }, 
@@ -150,277 +150,277 @@
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 00:58:02,133:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:58:02,133:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 00:58:02,133:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:58:02,133:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:58:02,133:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:58:02,292:DEBUG:
+2018-04-04 04:54:47,377:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:54:47,377:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:54:47,377:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:54:47,378:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:54:47,379:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:54:47,424:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ese_physical_ports/76001683-a8bb-4c68-8c87-7b63ea7bd5cd],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ese_physical_ports/6b29894f-8694-4865-92c1-2e78360e65a6],
  value=[]
-2018-03-30 00:58:02,292:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:58:02,292:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 00:58:02,292:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:58:02,293:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:58:02,293:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:58:58,083:DEBUG:
+2018-04-04 04:54:47,424:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:54:47,425:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:54:47,425:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:54:47,425:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:54:47,426:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:55:43,539:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/edge_routers/2a28fdaa-651b-4558-8825-891b93329123],
+ action=[set], key=[/esi-worker/job_state/v2.0/edge_routers/cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78],
  value=[{}]
-2018-03-30 00:58:58,083:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:58:58,083:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 00:58:58,083:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:58:58,084:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:58:58,084:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:59:01,323:DEBUG:
+2018-04-04 04:55:43,540:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:55:43,540:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:55:43,541:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:55:43,542:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:55:43,545:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:55:46,009:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/edge_routers/2a28fdaa-651b-4558-8825-891b93329123],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/edge_routers/cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78],
  value=[{
     "heat_outputs": [
         {
-            "output_value": "7440aa4b-dedc-43ed-ad2d-b60f00f1247d", 
+            "output_value": "9363d0ec-e347-482c-8d0d-da1d8e11ad73", 
             "description": "Monitoring Target ID", 
             "output_key": "monitoring_target_id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/7440aa4b-dedc-43ed-ad2d-b60f00f1247d", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/9363d0ec-e347-482c-8d0d-da1d8e11ad73", 
             "description": "Monitoring Process Link", 
             "output_key": "monitoring_link"
         }
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 00:59:01,323:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:59:01,323:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 00:59:01,323:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:59:01,323:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:59:01,324:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:59:01,499:DEBUG:
+2018-04-04 04:55:46,009:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:55:46,009:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:55:46,009:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:55:46,010:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:55:46,011:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:55:46,058:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/edge_routers/2a28fdaa-651b-4558-8825-891b93329123],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/edge_routers/cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78],
  value=[]
-2018-03-30 00:59:01,499:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:59:01,499:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 00:59:01,499:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:59:01,500:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:59:01,500:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:00:00,308:DEBUG:
+2018-04-04 04:55:46,058:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:55:46,058:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:55:46,058:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:55:46,059:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:55:46,061:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:56:47,891:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/edge_routers/43119898-9a76-400c-abdc-8d3ec2113b5d],
+ action=[set], key=[/esi-worker/job_state/v2.0/edge_routers/ca43aedb-bc30-4355-a931-7bb1d9040659],
  value=[{}]
-2018-03-30 01:00:00,308:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:00:00,308:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:00:00,308:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:00:00,308:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:00:00,309:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:00:02,346:DEBUG:
+2018-04-04 04:56:47,891:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:56:47,891:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:56:47,891:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:56:47,892:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:56:47,893:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:56:50,391:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/edge_routers/43119898-9a76-400c-abdc-8d3ec2113b5d],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/edge_routers/ca43aedb-bc30-4355-a931-7bb1d9040659],
  value=[{
     "heat_outputs": [
         {
-            "output_value": "b2f3a36a-9427-44bc-a403-664a5a65862a", 
+            "output_value": "538cfead-67e3-4e5b-87a4-ad8f32b14366", 
             "description": "Monitoring Target ID", 
             "output_key": "monitoring_target_id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/b2f3a36a-9427-44bc-a403-664a5a65862a", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/538cfead-67e3-4e5b-87a4-ad8f32b14366", 
             "description": "Monitoring Process Link", 
             "output_key": "monitoring_link"
         }
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 01:00:02,346:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:00:02,346:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:00:02,346:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:00:02,346:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:00:02,347:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:00:02,488:DEBUG:
+2018-04-04 04:56:50,391:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:56:50,391:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:56:50,391:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:56:50,392:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:56:50,395:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:56:50,445:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/edge_routers/43119898-9a76-400c-abdc-8d3ec2113b5d],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/edge_routers/ca43aedb-bc30-4355-a931-7bb1d9040659],
  value=[]
-2018-03-30 01:00:02,488:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:00:02,488:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:00:02,489:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:00:02,489:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:00:02,489:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:01:03,795:DEBUG:
+2018-04-04 04:56:50,446:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:56:50,446:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:56:50,446:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:56:50,447:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:56:50,448:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:57:54,788:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/er_physical_interfaces/7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d],
+ action=[set], key=[/esi-worker/job_state/v2.0/er_physical_interfaces/53712736-354c-4374-be82-6f07bea9d1bd],
  value=[{}]
-2018-03-30 01:01:03,795:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:01:03,795:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:01:03,795:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:01:03,795:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:01:03,796:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:01:06,806:DEBUG:
+2018-04-04 04:57:54,788:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:57:54,789:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:57:54,789:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:57:54,789:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:57:54,790:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:57:57,226:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/er_physical_interfaces/7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/er_physical_interfaces/53712736-354c-4374-be82-6f07bea9d1bd],
  value=[{
     "heat_outputs": [
         {
-            "output_value": "cf06cbe6-5e6d-4e4a-a754-ce7c876edca4", 
+            "output_value": "c38b03bf-0c61-44ff-9dec-599c9951df58", 
             "description": "Monitoring Target ID", 
             "output_key": "monitoring_target_id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/cf06cbe6-5e6d-4e4a-a754-ce7c876edca4", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/c38b03bf-0c61-44ff-9dec-599c9951df58", 
             "description": "Monitoring Process Link", 
             "output_key": "monitoring_link"
         }
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 01:01:06,806:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:01:06,806:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:01:06,806:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:01:06,806:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:01:06,807:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:01:06,973:DEBUG:
+2018-04-04 04:57:57,226:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:57:57,227:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:57:57,227:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:57:57,227:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:57:57,228:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:57:57,277:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/er_physical_interfaces/7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/er_physical_interfaces/53712736-354c-4374-be82-6f07bea9d1bd],
  value=[]
-2018-03-30 01:01:06,973:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:01:06,973:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:01:06,973:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:01:06,974:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:01:06,974:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:02:06,066:DEBUG:
+2018-04-04 04:57:57,278:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:57:57,278:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:57:57,278:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:57:57,278:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:57:57,282:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:58:59,575:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/er_physical_interfaces/372f28d1-8fb2-4bb1-9b42-cfc30515735a],
+ action=[set], key=[/esi-worker/job_state/v2.0/er_physical_interfaces/d108a472-81ab-43a0-8c49-e0d1a46e6128],
  value=[{}]
-2018-03-30 01:02:06,066:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:02:06,066:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:02:06,066:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:02:06,066:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:02:06,067:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:02:09,104:DEBUG:
+2018-04-04 04:58:59,575:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:58:59,575:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:58:59,575:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:58:59,576:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:58:59,578:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:59:01,961:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/er_physical_interfaces/372f28d1-8fb2-4bb1-9b42-cfc30515735a],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/er_physical_interfaces/d108a472-81ab-43a0-8c49-e0d1a46e6128],
  value=[{
     "heat_outputs": [
         {
-            "output_value": "333a52fa-a1b8-49b2-ae49-a68e0ef37448", 
+            "output_value": "79b7fc42-ebaf-4c34-adeb-20b43803a4fc", 
             "description": "Monitoring Target ID", 
             "output_key": "monitoring_target_id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/333a52fa-a1b8-49b2-ae49-a68e0ef37448", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/79b7fc42-ebaf-4c34-adeb-20b43803a4fc", 
             "description": "Monitoring Process Link", 
             "output_key": "monitoring_link"
         }
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 01:02:09,104:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:02:09,105:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:02:09,105:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:02:09,105:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:02:09,105:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:02:09,284:DEBUG:
+2018-04-04 04:59:01,961:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:59:01,961:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:59:01,961:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:59:01,962:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:59:01,964:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:59:02,045:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/er_physical_interfaces/372f28d1-8fb2-4bb1-9b42-cfc30515735a],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/er_physical_interfaces/d108a472-81ab-43a0-8c49-e0d1a46e6128],
  value=[]
-2018-03-30 01:02:09,284:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:02:09,284:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:02:09,284:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:02:09,285:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:02:09,285:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:03:32,295:DEBUG:
+2018-04-04 04:59:02,045:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:59:02,046:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 04:59:02,046:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:59:02,046:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:59:02,048:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:00:29,206:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/internet_gateways/d4e4e75c-8c02-420f-9eda-fa5771c3bad6],
+ action=[set], key=[/esi-worker/job_state/v2.0/internet_gateways/f6e8c695-c4c1-4a93-9b7e-1663aee6dec9],
  value=[{}]
-2018-03-30 01:03:32,295:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:03:32,295:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:03:32,295:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:03:32,295:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:03:32,296:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:03:49,067:DEBUG:
+2018-04-04 05:00:29,206:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:00:29,207:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:00:29,207:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:00:29,208:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:00:29,213:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:00:49,620:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/internet_gateways/d4e4e75c-8c02-420f-9eda-fa5771c3bad6],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/internet_gateways/f6e8c695-c4c1-4a93-9b7e-1663aee6dec9],
  value=[{
     "heat_outputs": [
         {
-            "output_value": "082e613f-f9d2-4713-9a0a-238c5271d48f", 
+            "output_value": "ca354a39-f48c-4698-9cdd-9e106e2a5bf4", 
             "description": "Monitoring Target ID", 
             "output_key": "primary_monitoring_target_id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/cc9ebe89-fd84-4b9e-b3ed-e1c32fc21c20", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/e4609dae-5c88-494a-bdb5-19187026ccfc", 
             "description": "Monitoring Process Link", 
             "output_key": "secondary_monitoring_link"
         }, 
         {
-            "output_value": "cc9ebe89-fd84-4b9e-b3ed-e1c32fc21c20", 
+            "output_value": "e4609dae-5c88-494a-bdb5-19187026ccfc", 
             "description": "Monitoring Target ID", 
             "output_key": "secondary_monitoring_target_id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/082e613f-f9d2-4713-9a0a-238c5271d48f", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/ca354a39-f48c-4698-9cdd-9e106e2a5bf4", 
             "description": "Monitoring Process Link", 
             "output_key": "primary_monitoring_link"
         }
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 01:03:49,068:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:03:49,068:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:03:49,068:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:03:49,068:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:03:49,068:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:03:49,277:DEBUG:
+2018-04-04 05:00:49,621:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:00:49,621:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:00:49,621:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:00:49,622:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:00:49,624:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:00:49,714:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/internet_gateways/d4e4e75c-8c02-420f-9eda-fa5771c3bad6],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/internet_gateways/f6e8c695-c4c1-4a93-9b7e-1663aee6dec9],
  value=[]
-2018-03-30 01:03:49,277:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:03:49,277:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:03:49,277:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:03:49,277:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:03:49,278:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:01,837:DEBUG:
+2018-04-04 05:00:49,714:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:00:49,714:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:00:49,714:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:00:49,715:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:00:49,718:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:03,852:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/public_ips/6f583980-3f9e-458f-8f68-f42a7adfb211],
+ action=[set], key=[/esi-worker/job_state/v2.0/public_ips/d5622781-f06a-4fad-b800-b577a05ad8b2],
  value=[{}]
-2018-03-30 01:04:01,837:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:01,837:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:04:01,837:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:01,837:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:01,838:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:09,079:DEBUG:
+2018-04-04 05:01:03,852:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:03,852:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:01:03,852:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:03,853:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:03,856:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:13,193:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/public_ips/6f583980-3f9e-458f-8f68-f42a7adfb211],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/public_ips/d5622781-f06a-4fad-b800-b577a05ad8b2],
  value=[{
     "heat_outputs": [], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 01:04:09,080:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:09,080:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:04:09,080:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:09,080:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:09,080:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:09,422:DEBUG:
+2018-04-04 05:01:13,193:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:13,194:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:01:13,194:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:13,194:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:13,196:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:13,257:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/public_ips/6f583980-3f9e-458f-8f68-f42a7adfb211],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/public_ips/d5622781-f06a-4fad-b800-b577a05ad8b2],
  value=[]
-2018-03-30 01:04:09,422:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:09,422:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:04:09,422:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:09,422:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:09,424:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:21,740:DEBUG:
+2018-04-04 05:01:13,257:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:13,257:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:01:13,258:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:13,258:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:13,261:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:27,526:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/networks/73f88c22-ae22-4fb7-86b3-9acb141b8809],
+ action=[set], key=[/esi-worker/job_state/v2.0/networks/6e557507-1c2a-49b1-ba90-5f616a1f1f3e],
  value=[{}]
-2018-03-30 01:04:21,740:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:21,740:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:04:21,740:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:21,740:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:21,741:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:24,879:DEBUG:
+2018-04-04 05:01:27,527:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:27,527:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:01:27,527:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:27,527:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:27,529:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:30,209:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/networks/73f88c22-ae22-4fb7-86b3-9acb141b8809],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/networks/6e557507-1c2a-49b1-ba90-5f616a1f1f3e],
  value=[{
     "heat_outputs": [
         {
@@ -429,49 +429,49 @@
             "output_key": "route_targets"
         }, 
         {
-            "output_value": "default-domain:usertenant:73f88c22-ae22-4fb7-86b3-9acb141b8809", 
+            "output_value": "default-domain:usertenant:6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
             "description": "The FQ name of the virtual network.", 
             "output_key": "fq_name"
         }, 
         {
-            "output_value": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
+            "output_value": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
             "description": "A unique id for the virtual network.", 
             "output_key": "id"
         }, 
         {
-            "output_value": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
+            "output_value": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
             "description": "The name of the virtual network.", 
             "output_key": "name"
         }
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 01:04:24,879:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:24,879:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:04:24,879:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:24,879:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:24,880:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:25,072:DEBUG:
+2018-04-04 05:01:30,209:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:30,209:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:01:30,209:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:30,210:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:30,211:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:30,259:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/networks/73f88c22-ae22-4fb7-86b3-9acb141b8809],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/networks/6e557507-1c2a-49b1-ba90-5f616a1f1f3e],
  value=[]
-2018-03-30 01:04:25,072:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:25,072:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:04:25,072:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:25,072:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:25,075:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:37,873:DEBUG:
+2018-04-04 05:01:30,260:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:30,260:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:01:30,262:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:30,262:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:30,265:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:44,993:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/subnets/8fca93d6-5f0b-413d-98e0-74c3d1bacf07],
+ action=[set], key=[/esi-worker/job_state/v2.0/subnets/67877f2d-0547-4cea-a6ce-2e3b937aa31b],
  value=[{}]
-2018-03-30 01:04:37,874:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:37,874:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:04:37,874:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:37,874:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:37,874:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:41,004:DEBUG:
+2018-04-04 05:01:44,993:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:44,994:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:01:44,994:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:44,994:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:44,996:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:47,844:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/subnets/8fca93d6-5f0b-413d-98e0-74c3d1bacf07],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/subnets/67877f2d-0547-4cea-a6ce-2e3b937aa31b],
  value=[{
     "heat_outputs": [
         {
@@ -480,7 +480,7 @@
             "output_key": "ip_prefix"
         }, 
         {
-            "output_value": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+            "output_value": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
             "description": "The name of the local subnet.", 
             "output_key": "name"
         }, 
@@ -490,7 +490,7 @@
             "output_key": "default_gateway"
         }, 
         {
-            "output_value": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
+            "output_value": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
             "description": "A unique id for the network.", 
             "output_key": "network_id"
         }, 
@@ -500,89 +500,89 @@
             "output_key": "ipam"
         }, 
         {
-            "output_value": "a93e21d9-d8ad-4ea8-aaf0-7a03a7024f67", 
+            "output_value": "4cc11376-ba13-4cc8-b7a6-f886f4a031d1", 
             "description": "A unique id for the local subnet.", 
             "output_key": "id"
         }
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 01:04:41,004:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:41,005:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:04:41,005:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:41,005:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:41,006:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:41,347:DEBUG:
+2018-04-04 05:01:47,844:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:47,845:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:01:47,845:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:47,845:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:47,846:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:47,894:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/subnets/8fca93d6-5f0b-413d-98e0-74c3d1bacf07],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/subnets/67877f2d-0547-4cea-a6ce-2e3b937aa31b],
  value=[]
-2018-03-30 01:04:41,348:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:41,348:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:04:41,348:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:41,348:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:41,349:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:54,244:DEBUG:
+2018-04-04 05:01:47,895:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:47,895:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:01:47,895:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:47,895:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:47,901:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:03,514:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/gw_interfaces/d84ce543-bc58-4844-b861-4a6d79fb2e48],
+ action=[set], key=[/esi-worker/job_state/v2.0/gw_interfaces/ce8831fd-d30c-41e3-95de-feaee0b95405],
  value=[{}]
-2018-03-30 01:04:54,244:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:54,245:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:04:54,245:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:54,245:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:54,246:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:10,338:DEBUG:
+2018-04-04 05:02:03,514:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:03,514:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:03,514:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:03,515:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:03,516:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:23,336:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/gw_interfaces/d84ce543-bc58-4844-b861-4a6d79fb2e48],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/gw_interfaces/ce8831fd-d30c-41e3-95de-feaee0b95405],
  value=[{
     "heat_outputs": [
         {
-            "output_value": "23957481-7625-47c9-9dfd-770dcca7b8af", 
+            "output_value": "921a9234-0ae4-44f5-89b0-2f68dcaaae5b", 
             "description": "Monitoring Target ID", 
             "output_key": "monitoring_target_id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/23957481-7625-47c9-9dfd-770dcca7b8af", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/921a9234-0ae4-44f5-89b0-2f68dcaaae5b", 
             "description": "Monitoring Process Link", 
             "output_key": "monitoring_link"
         }
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 01:05:10,338:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:10,338:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:10,338:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:10,338:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:10,339:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:10,594:DEBUG:
+2018-04-04 05:02:23,336:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:23,337:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:23,337:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:23,337:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:23,338:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:23,389:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/gw_interfaces/d84ce543-bc58-4844-b861-4a6d79fb2e48],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/gw_interfaces/ce8831fd-d30c-41e3-95de-feaee0b95405],
  value=[]
-2018-03-30 01:05:10,594:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:10,594:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:10,594:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:10,595:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:10,596:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:10,773:DEBUG:
+2018-04-04 05:02:23,389:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:23,389:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:23,389:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:23,390:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:23,391:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:23,440:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/ports/4fca361d-fdaf-4b92-81a8-a4cdd767cad4],
+ action=[set], key=[/esi-worker/job_state/v2.0/ports/ce965922-538a-4335-9644-7a98dce9fb47],
  value=[{}]
-2018-03-30 01:05:10,773:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:10,773:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:10,773:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:10,773:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:10,773:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:10,865:DEBUG:
+2018-04-04 05:02:23,441:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:23,441:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:23,441:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:23,441:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:23,444:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:23,469:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/ports/7413e81d-f895-4527-ba5d-a86ffb663258],
+ action=[set], key=[/esi-worker/job_state/v2.0/ports/f3867a99-de18-4512-8e94-f9aaa7b05c3a],
  value=[{}]
-2018-03-30 01:05:10,865:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:10,866:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:10,866:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:10,866:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:10,868:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:16,171:DEBUG:
+2018-04-04 05:02:23,469:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:23,469:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:23,469:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:23,470:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:23,471:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:28,192:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ports/4fca361d-fdaf-4b92-81a8-a4cdd767cad4],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ports/ce965922-538a-4335-9644-7a98dce9fb47],
  value=[{
     "heat_outputs": [
         {
@@ -623,14 +623,32 @@
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 01:05:16,171:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:16,171:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:16,172:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:16,172:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:16,172:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:16,376:DEBUG:
+2018-04-04 05:02:28,192:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:28,193:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:28,193:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:28,193:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:28,195:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:28,268:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ports/7413e81d-f895-4527-ba5d-a86ffb663258],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ports/ce965922-538a-4335-9644-7a98dce9fb47],
+ value=[]
+2018-04-04 05:02:28,268:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:28,269:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:28,269:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:28,269:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:28,270:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:28,319:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/esi-worker/job_state/v2.0/ese_logical_ports/aabc9b64-ec2c-4894-a6a8-ee0ea429c066],
+ value=[{}]
+2018-04-04 05:02:28,320:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:28,320:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:28,320:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:28,321:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:28,322:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:29,319:DEBUG:
+*** Consume stored data in etcd ***
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ports/f3867a99-de18-4512-8e94-f9aaa7b05c3a],
  value=[{
     "heat_outputs": [
         {
@@ -671,54 +689,36 @@
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 01:05:16,376:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:16,376:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:16,376:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:16,376:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:16,377:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:16,556:DEBUG:
+2018-04-04 05:02:29,319:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:29,319:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:29,320:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:29,320:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:29,322:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:29,395:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ports/4fca361d-fdaf-4b92-81a8-a4cdd767cad4],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ports/f3867a99-de18-4512-8e94-f9aaa7b05c3a],
  value=[]
-2018-03-30 01:05:16,556:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:16,556:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:16,556:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:16,557:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:16,557:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:16,631:DEBUG:
+2018-04-04 05:02:29,395:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:29,395:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:29,395:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:29,396:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:29,397:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:29,434:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ports/7413e81d-f895-4527-ba5d-a86ffb663258],
- value=[]
-2018-03-30 01:05:16,632:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:16,632:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:16,632:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:16,632:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:16,632:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:16,749:DEBUG:
-*** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/ese_logical_ports/d87b39f3-d117-46b4-ad1d-5b606d651b4f],
+ action=[set], key=[/esi-worker/job_state/v2.0/ese_logical_ports/02112bb1-389c-4ff8-9354-94ab43459892],
  value=[{}]
-2018-03-30 01:05:16,749:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:16,749:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:16,749:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:16,749:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:16,750:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:16,857:DEBUG:
+2018-04-04 05:02:29,434:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:29,434:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:29,434:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:29,435:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:29,436:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:32,827:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/ese_logical_ports/ecf42487-2aef-4e27-931c-8517b1632d49],
- value=[{}]
-2018-03-30 01:05:16,858:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:16,858:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:16,858:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:16,858:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:16,858:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:21,136:DEBUG:
-*** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ese_logical_ports/d87b39f3-d117-46b4-ad1d-5b606d651b4f],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ese_logical_ports/aabc9b64-ec2c-4894-a6a8-ee0ea429c066],
  value=[{
     "heat_outputs": [
         {
-            "output_value": "8b3e197f-0e6c-4440-92b7-652d5cdaf733", 
+            "output_value": "81ea42e1-779e-4c1e-8f19-82d6019ee14c", 
             "description": "Monitoring Target ID", 
             "output_key": "monitoring_target_id"
         }, 
@@ -728,7 +728,7 @@
             "output_key": "id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/8b3e197f-0e6c-4440-92b7-652d5cdaf733", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/81ea42e1-779e-4c1e-8f19-82d6019ee14c", 
             "description": "Monitoring Process Link", 
             "output_key": "monitoring_link"
         }, 
@@ -740,27 +740,36 @@
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 01:05:21,136:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:21,136:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:21,136:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:21,137:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:21,137:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:21,363:DEBUG:
+2018-04-04 05:02:32,827:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:32,828:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:32,828:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:32,828:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:32,829:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:32,867:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ese_logical_ports/d87b39f3-d117-46b4-ad1d-5b606d651b4f],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ese_logical_ports/aabc9b64-ec2c-4894-a6a8-ee0ea429c066],
  value=[]
-2018-03-30 01:05:21,363:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:21,363:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:21,363:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:21,363:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:21,364:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:21,539:DEBUG:
+2018-04-04 05:02:32,867:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:32,868:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:32,868:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:32,868:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:32,872:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:33,036:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ese_logical_ports/ecf42487-2aef-4e27-931c-8517b1632d49],
+ action=[set], key=[/esi-worker/job_state/v2.0/ports/ce965922-538a-4335-9644-7a98dce9fb47],
+ value=[{}]
+2018-04-04 05:02:33,036:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:33,036:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:33,036:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:33,037:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:33,038:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:34,200:DEBUG:
+*** Consume stored data in etcd ***
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ese_logical_ports/02112bb1-389c-4ff8-9354-94ab43459892],
  value=[{
     "heat_outputs": [
         {
-            "output_value": "403bcdd8-8542-4d56-92f8-58b0f524aa7b", 
+            "output_value": "501b16b0-8059-4263-9e40-06aabfa1d72f", 
             "description": "Monitoring Target ID", 
             "output_key": "monitoring_target_id"
         }, 
@@ -770,7 +779,7 @@
             "output_key": "id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/403bcdd8-8542-4d56-92f8-58b0f524aa7b", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/501b16b0-8059-4263-9e40-06aabfa1d72f", 
             "description": "Monitoring Process Link", 
             "output_key": "monitoring_link"
         }, 
@@ -782,41 +791,32 @@
     ], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 01:05:21,539:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:21,539:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:21,539:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:21,539:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:21,539:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:21,656:DEBUG:
+2018-04-04 05:02:34,201:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:34,201:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:34,201:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:34,201:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:34,203:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:34,284:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/ports/4fca361d-fdaf-4b92-81a8-a4cdd767cad4],
- value=[{}]
-2018-03-30 01:05:21,656:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:21,656:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:21,656:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:21,656:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:21,657:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:21,764:DEBUG:
-*** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ese_logical_ports/ecf42487-2aef-4e27-931c-8517b1632d49],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ese_logical_ports/02112bb1-389c-4ff8-9354-94ab43459892],
  value=[]
-2018-03-30 01:05:21,764:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:21,764:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:21,764:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:21,765:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:21,765:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:22,217:DEBUG:
+2018-04-04 05:02:34,285:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:34,285:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:34,285:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:34,285:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:34,290:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:34,421:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/ports/7413e81d-f895-4527-ba5d-a86ffb663258],
+ action=[set], key=[/esi-worker/job_state/v2.0/ports/f3867a99-de18-4512-8e94-f9aaa7b05c3a],
  value=[{}]
-2018-03-30 01:05:22,217:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:22,217:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:22,217:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:22,217:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:22,219:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:33,201:DEBUG:
+2018-04-04 05:02:34,422:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:34,422:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:34,422:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:34,422:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:34,424:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:44,661:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ports/4fca361d-fdaf-4b92-81a8-a4cdd767cad4],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ports/ce965922-538a-4335-9644-7a98dce9fb47],
  value=[{
     "heat_outputs": [
         {
@@ -832,7 +832,7 @@
             "output_key": "allowed_address_pairs"
         }, 
         {
-            "output_value": "7d83904d-f8d6-401a-85ee-2c3f3275685d", 
+            "output_value": "1650b87a-0a56-4ef0-a411-42a4c6efc185", 
             "description": "Monitoring Target ID", 
             "output_key": "monitoring_target_id"
         }, 
@@ -860,30 +860,30 @@
             "output_key": "id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/7d83904d-f8d6-401a-85ee-2c3f3275685d", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/1650b87a-0a56-4ef0-a411-42a4c6efc185", 
             "description": "Monitoring Process Link", 
             "output_key": "monitoring_link"
         }
     ], 
     "orchestration_state": "UPDATE_COMPLETE"
 }]
-2018-03-30 01:05:33,201:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:33,201:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:33,201:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:33,202:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:33,202:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:33,386:DEBUG:
+2018-04-04 05:02:44,661:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:44,661:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:44,661:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:44,662:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:44,663:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:44,701:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ports/4fca361d-fdaf-4b92-81a8-a4cdd767cad4],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ports/ce965922-538a-4335-9644-7a98dce9fb47],
  value=[]
-2018-03-30 01:05:33,386:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:33,386:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:33,386:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:33,386:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:33,387:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:33,603:DEBUG:
+2018-04-04 05:02:44,701:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:44,702:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:44,702:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:44,702:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:44,704:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:45,781:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ports/7413e81d-f895-4527-ba5d-a86ffb663258],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/ports/f3867a99-de18-4512-8e94-f9aaa7b05c3a],
  value=[{
     "heat_outputs": [
         {
@@ -899,7 +899,7 @@
             "output_key": "allowed_address_pairs"
         }, 
         {
-            "output_value": "3eb90fa9-0c66-4bde-bb09-98883e40471f", 
+            "output_value": "1b86504e-571f-4d8f-a3c5-a960a747e093", 
             "description": "Monitoring Target ID", 
             "output_key": "monitoring_target_id"
         }, 
@@ -927,59 +927,59 @@
             "output_key": "id"
         }, 
         {
-            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/3eb90fa9-0c66-4bde-bb09-98883e40471f", 
+            "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/1b86504e-571f-4d8f-a3c5-a960a747e093", 
             "description": "Monitoring Process Link", 
             "output_key": "monitoring_link"
         }
     ], 
     "orchestration_state": "UPDATE_COMPLETE"
 }]
-2018-03-30 01:05:33,603:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:33,603:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:33,603:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:33,604:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:33,604:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:33,813:DEBUG:
+2018-04-04 05:02:45,781:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:45,782:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:45,782:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:45,783:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:45,784:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:45,822:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ports/7413e81d-f895-4527-ba5d-a86ffb663258],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/ports/f3867a99-de18-4512-8e94-f9aaa7b05c3a],
  value=[]
-2018-03-30 01:05:33,813:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:33,813:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:05:33,813:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:33,813:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:33,814:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:06:45,333:DEBUG:
+2018-04-04 05:02:45,823:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:45,823:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:02:45,823:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:45,823:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:45,825:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:04:07,788:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/esi-worker/job_state/v2.0/static_routes/07967b57-33c3-44b9-b1e7-47d85c840011],
+ action=[set], key=[/esi-worker/job_state/v2.0/static_routes/d0aa20b1-9302-4b43-a3c1-9edce0811af8],
  value=[{}]
-2018-03-30 01:06:45,333:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:06:45,334:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:06:45,334:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:06:45,334:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:06:45,334:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:06:58,838:DEBUG:
+2018-04-04 05:04:07,789:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:04:07,789:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:04:07,789:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:04:07,790:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:04:07,791:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:04:25,058:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/static_routes/07967b57-33c3-44b9-b1e7-47d85c840011],
+ action=[compareAndSwap], key=[/esi-worker/job_state/v2.0/static_routes/d0aa20b1-9302-4b43-a3c1-9edce0811af8],
  value=[{
     "heat_outputs": [], 
     "orchestration_state": "CREATE_COMPLETE"
 }]
-2018-03-30 01:06:58,838:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:06:58,838:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:06:58,838:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:06:58,838:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:06:58,838:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:06:58,997:DEBUG:
+2018-04-04 05:04:25,058:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:04:25,058:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:04:25,058:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:04:25,059:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:04:25,060:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:04:25,106:DEBUG:
 *** Consume stored data in etcd ***
- action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/static_routes/07967b57-33c3-44b9-b1e7-47d85c840011],
+ action=[compareAndDelete], key=[/esi-worker/job_state/v2.0/static_routes/d0aa20b1-9302-4b43-a3c1-9edce0811af8],
  value=[]
-2018-03-30 01:06:58,997:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:06:58,997:DEBUG:About to wait on key /esi-worker/job_state, index None
-2018-03-30 01:06:58,997:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:06:58,997:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:06:58,998:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:21:59,086:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
-2018-03-30 01:21:59,086:DEBUG:Reconnection disabled, giving up.
+2018-04-04 05:04:25,106:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:04:25,106:DEBUG:About to wait on key /esi-worker/job_state, index None
+2018-04-04 05:04:25,106:DEBUG:Issuing read for key /esi-worker/job_state with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:04:25,107:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:04:25,108:DEBUG:http://etcd-server:2379 "GET /v2/keys/esi-worker/job_state?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:19:25,210:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2018-04-04 05:19:25,216:DEBUG:Reconnection disabled, giving up.
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/eventlet/hubs/hub.py", line 346, in fire_timers
     timer()

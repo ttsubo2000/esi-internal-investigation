@@ -1,9 +1,9 @@
-2018-03-30 00:52:52,816:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:52:52,816:DEBUG:About to wait on key /config, index None
-2018-03-30 00:52:52,816:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:52:52,816:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:52:52,817:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:35,570:DEBUG:
+2018-04-04 04:51:35,512:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:51:35,512:DEBUG:About to wait on key /config, index None
+2018-04-04 04:51:35,512:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:51:35,513:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:51:35,516:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,580:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/network],
  value=[{
@@ -22,12 +22,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:35,570:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:35,570:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:35,570:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:35,570:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:35,571:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:35,660:DEBUG:
+2018-04-04 04:52:13,581:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,581:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,581:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,582:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,583:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,611:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/subnet],
  value=[{
@@ -54,12 +54,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:35,660:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:35,660:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:35,660:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:35,660:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:35,661:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:35,847:DEBUG:
+2018-04-04 04:52:13,611:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,612:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,612:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,612:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,614:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,632:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/port],
  value=[{
@@ -150,12 +150,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:35,847:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:35,847:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:35,847:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:35,847:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:35,848:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:35,973:DEBUG:
+2018-04-04 04:52:13,632:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,632:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,633:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,633:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,634:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,658:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/ese_physical_port_existing],
  value=[{
@@ -177,12 +177,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:35,973:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:35,973:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:35,973:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:35,973:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:35,974:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:36,068:DEBUG:
+2018-04-04 04:52:13,658:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,658:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,658:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,659:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,663:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,677:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/ese_physical_port_new],
  value=[{
@@ -204,12 +204,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:36,068:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:36,069:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:36,069:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:36,069:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:36,069:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:36,198:DEBUG:
+2018-04-04 04:52:13,677:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,677:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,677:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,678:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,679:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,699:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/ese_logical_port],
  value=[{
@@ -246,12 +246,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:36,198:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:36,198:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:36,198:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:36,198:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:36,199:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:36,367:DEBUG:
+2018-04-04 04:52:13,700:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,700:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,700:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,700:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,702:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,721:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/local_subnet],
  value=[{
@@ -268,12 +268,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:36,367:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:36,367:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:36,367:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:36,367:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:36,368:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:36,534:DEBUG:
+2018-04-04 04:52:13,722:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,722:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,722:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,722:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,723:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,745:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/ese_device_existing],
  value=[{
@@ -295,12 +295,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:36,534:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:36,534:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:36,534:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:36,534:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:36,537:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:36,658:DEBUG:
+2018-04-04 04:52:13,746:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,746:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,746:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,746:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,748:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,766:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/ese_device_new],
  value=[{
@@ -329,12 +329,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:36,658:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:36,658:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:36,658:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:36,659:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:36,659:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:36,842:DEBUG:
+2018-04-04 04:52:13,766:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,767:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,767:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,767:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,768:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,787:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/edge_router],
  value=[{
@@ -354,12 +354,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:36,842:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:36,842:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:36,842:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:36,842:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:36,843:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:36,942:DEBUG:
+2018-04-04 04:52:13,787:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,787:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,787:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,787:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,789:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,806:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/er_physical_interface],
  value=[{
@@ -380,12 +380,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:36,942:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:36,943:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:36,943:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:36,943:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:36,943:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:37,137:DEBUG:
+2018-04-04 04:52:13,806:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,806:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,806:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,807:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,808:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,828:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/internet_gateway],
  value=[{
@@ -432,12 +432,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:37,137:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:37,137:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:37,137:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:37,137:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:37,138:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:37,342:DEBUG:
+2018-04-04 04:52:13,828:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,829:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,829:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,829:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,830:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,849:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/static_route_internet],
  value=[{
@@ -474,12 +474,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:37,342:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:37,343:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:37,343:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:37,343:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:37,343:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:37,444:DEBUG:
+2018-04-04 04:52:13,849:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,849:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,849:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,849:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,851:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,907:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/gw_interface_internet],
  value=[{
@@ -541,12 +541,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:37,444:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:37,444:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:37,444:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:37,445:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:37,445:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:37,544:DEBUG:
+2018-04-04 04:52:13,908:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,908:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,908:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,909:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,910:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:13,948:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/qos_option_internet],
  value=[{
@@ -578,12 +578,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:37,544:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:37,544:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:37,544:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:37,544:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:37,545:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:37,686:DEBUG:
+2018-04-04 04:52:13,948:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:13,948:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:13,948:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:13,949:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:13,950:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,013:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/public_ip],
  value=[{
@@ -610,12 +610,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:37,686:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:37,686:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:37,686:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:37,687:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:37,688:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:37,879:DEBUG:
+2018-04-04 04:52:14,013:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,014:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,014:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,014:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,016:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,074:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/qos_option_vpn],
  value=[{
@@ -647,12 +647,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:37,879:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:37,879:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:37,879:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:37,880:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:37,881:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:38,023:DEBUG:
+2018-04-04 04:52:14,075:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,075:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,075:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,075:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,077:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,140:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/vpn_gateway],
  value=[{
@@ -691,12 +691,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:38,023:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:38,023:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:38,023:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:38,023:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:38,024:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:38,115:DEBUG:
+2018-04-04 04:52:14,141:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,141:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,141:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,141:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,143:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,187:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/gw_interface_vpn],
  value=[{
@@ -750,12 +750,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:38,115:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:38,116:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:38,116:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:38,116:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:38,116:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:38,231:DEBUG:
+2018-04-04 04:52:14,187:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,188:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,188:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,188:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,189:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,242:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/static_route_vpn],
  value=[{
@@ -782,12 +782,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:38,231:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:38,231:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:38,231:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:38,231:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:38,232:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:38,406:DEBUG:
+2018-04-04 04:52:14,243:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,243:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,243:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,243:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,245:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,309:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/vpn_interface],
  value=[{
@@ -832,12 +832,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:38,406:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:38,406:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:38,407:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:38,407:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:38,407:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:38,524:DEBUG:
+2018-04-04 04:52:14,309:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,310:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,310:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,310:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,312:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,327:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/qos_option_aws],
  value=[{
@@ -869,12 +869,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:38,524:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:38,524:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:38,524:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:38,525:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:38,525:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:38,633:DEBUG:
+2018-04-04 04:52:14,327:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,328:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,328:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,328:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,329:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,345:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/aws_gateway],
  value=[{
@@ -913,12 +913,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:38,633:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:38,633:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:38,633:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:38,633:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:38,634:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:38,791:DEBUG:
+2018-04-04 04:52:14,346:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,346:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,346:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,346:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,348:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,364:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/gw_interface_aws],
  value=[{
@@ -972,12 +972,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:38,791:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:38,791:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:38,791:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:38,791:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:38,792:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:38,908:DEBUG:
+2018-04-04 04:52:14,365:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,365:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,365:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,365:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,367:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,380:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/static_route_aws],
  value=[{
@@ -1004,12 +1004,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:38,909:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:38,909:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:38,909:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:38,909:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:38,909:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:39,021:DEBUG:
+2018-04-04 04:52:14,380:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,380:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,380:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,381:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,382:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,400:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/aws_interface],
  value=[{
@@ -1054,12 +1054,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:39,021:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:39,022:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:39,022:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:39,022:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:39,022:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:39,151:DEBUG:
+2018-04-04 04:52:14,400:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,400:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,400:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,401:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,402:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,418:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/qos_option_azure],
  value=[{
@@ -1091,12 +1091,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:39,151:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:39,151:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:39,151:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:39,151:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:39,152:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:39,284:DEBUG:
+2018-04-04 04:52:14,418:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,418:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,418:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,419:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,420:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,437:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/azure_gateway],
  value=[{
@@ -1135,12 +1135,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:39,284:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:39,284:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:39,284:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:39,285:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:39,285:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:39,386:DEBUG:
+2018-04-04 04:52:14,437:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,437:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,437:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,438:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,439:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,456:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/gw_interface_azure],
  value=[{
@@ -1194,12 +1194,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:39,386:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:39,386:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:39,386:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:39,386:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:39,387:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:39,502:DEBUG:
+2018-04-04 04:52:14,456:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,457:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,457:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,458:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,461:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,473:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/static_route_azure],
  value=[{
@@ -1226,12 +1226,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:39,503:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:39,503:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:39,503:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:39,503:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:39,504:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:39,612:DEBUG:
+2018-04-04 04:52:14,473:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,473:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,473:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,474:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,475:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,486:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/azure_interface],
  value=[{
@@ -1276,12 +1276,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:39,612:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:39,612:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:39,612:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:39,612:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:39,613:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:39,720:DEBUG:
+2018-04-04 04:52:14,486:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,487:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,487:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,488:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,489:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,505:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/qos_option_gcp],
  value=[{
@@ -1313,12 +1313,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:39,720:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:39,720:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:39,720:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:39,720:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:39,721:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:39,894:DEBUG:
+2018-04-04 04:52:14,506:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,507:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,507:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,508:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,510:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,522:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/gcp_gateway],
  value=[{
@@ -1357,12 +1357,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:39,894:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:39,894:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:39,894:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:39,895:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:39,895:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:39,997:DEBUG:
+2018-04-04 04:52:14,522:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,523:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,523:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,523:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,524:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,551:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/gw_interface_gcp],
  value=[{
@@ -1416,12 +1416,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:39,997:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:39,997:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:39,997:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:39,997:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:39,998:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:40,171:DEBUG:
+2018-04-04 04:52:14,552:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,552:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,552:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,552:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,554:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,573:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/static_route_gcp],
  value=[{
@@ -1448,12 +1448,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:40,172:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:40,172:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:40,172:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:40,172:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:40,172:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:40,313:DEBUG:
+2018-04-04 04:52:14,573:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,573:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,573:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,574:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,575:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,597:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/gcp_interface],
  value=[{
@@ -1497,12 +1497,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:40,313:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:40,313:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:40,313:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:40,313:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:40,314:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:40,398:DEBUG:
+2018-04-04 04:52:14,597:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,598:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,598:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,598:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,599:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,618:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/common_function_gateway],
  value=[{
@@ -1707,12 +1707,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:40,398:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:40,398:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:40,398:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:40,399:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:40,399:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:40,498:DEBUG:
+2018-04-04 04:52:14,619:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,619:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,619:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,620:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,621:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,641:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/common_function],
  value=[{
@@ -1826,12 +1826,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:40,498:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:40,498:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:40,498:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:40,499:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:40,499:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:40,565:DEBUG:
+2018-04-04 04:52:14,641:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,642:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,642:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,643:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,644:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,663:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/qos_option_interdc],
  value=[{
@@ -1932,12 +1932,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:40,565:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:40,565:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:40,565:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:40,566:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:40,566:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:40,657:DEBUG:
+2018-04-04 04:52:14,663:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,664:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,664:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,665:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,667:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,681:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/interdc_gateway],
  value=[{
@@ -2104,12 +2104,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:40,657:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:40,657:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:40,657:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:40,657:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:40,658:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:40,725:DEBUG:
+2018-04-04 04:52:14,681:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,681:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,682:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,682:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,683:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,698:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/interdc_interface],
  value=[{
@@ -2303,12 +2303,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:40,725:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:40,725:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:40,725:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:40,725:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:40,726:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:40,883:DEBUG:
+2018-04-04 04:52:14,698:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,698:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,698:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,699:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,700:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,720:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/gw_interface_interdc],
  value=[{
@@ -2499,12 +2499,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:40,883:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:40,883:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:40,883:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:40,883:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:40,884:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:40,975:DEBUG:
+2018-04-04 04:52:14,720:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,721:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,721:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,721:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,723:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,746:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/static_route_interdc],
  value=[{
@@ -2606,12 +2606,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:40,975:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:40,975:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:40,975:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:40,975:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:40,976:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:41,042:DEBUG:
+2018-04-04 04:52:14,746:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,747:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,747:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,747:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,749:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,764:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/quotas/default],
  value=[{
@@ -2638,12 +2638,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:41,042:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:41,042:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:41,042:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:41,043:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:41,043:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:41,108:DEBUG:
+2018-04-04 04:52:14,764:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,765:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,765:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,765:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,766:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,778:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/reserve_addresses/default],
  value=[{
@@ -2658,12 +2658,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:41,108:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:41,108:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:41,109:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:41,109:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:41,109:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:41,209:DEBUG:
+2018-04-04 04:52:14,778:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,779:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,779:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,779:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,781:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,796:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/vnf_instance],
  value=[{
@@ -2691,12 +2691,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:41,209:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:41,209:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:41,209:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:41,209:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:41,210:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:41,359:DEBUG:
+2018-04-04 04:52:14,796:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,797:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,797:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,797:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,798:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,821:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/firewall_config],
  value=[{
@@ -2760,12 +2760,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:41,359:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:41,359:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:41,359:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:41,359:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:41,360:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:41,460:DEBUG:
+2018-04-04 04:52:14,822:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,822:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,822:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,822:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,826:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,838:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/firewall_interface],
  value=[{
@@ -2802,12 +2802,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:41,460:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:41,460:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:41,460:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:41,460:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:41,461:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:41,561:DEBUG:
+2018-04-04 04:52:14,838:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,839:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,839:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,839:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,840:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,862:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/load_balancer_conf],
  value=[{
@@ -2893,12 +2893,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:41,561:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:41,561:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:41,561:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:41,561:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:41,562:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:41,694:DEBUG:
+2018-04-04 04:52:14,862:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,863:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,863:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,863:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,865:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,884:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/load_balancer_syslog_server],
  value=[{
@@ -2984,12 +2984,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:41,694:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:41,694:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:41,694:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:41,695:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:41,695:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:41,835:DEBUG:
+2018-04-04 04:52:14,884:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,885:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,885:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,885:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,886:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,900:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/load_balancer],
  value=[{
@@ -3028,12 +3028,12 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:41,835:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:41,836:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:41,836:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:41,836:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:41,836:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:41,936:DEBUG:
+2018-04-04 04:52:14,900:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,901:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,901:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,901:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,903:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:14,914:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/config/v2.0/heat_templates/load_balancer_interface],
  value=[{
@@ -3070,32 +3070,32 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:53:41,936:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:41,936:DEBUG:About to wait on key /config, index None
-2018-03-30 00:53:41,936:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:41,937:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:41,937:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:55:46,010:DEBUG:
+2018-04-04 04:52:14,914:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:14,914:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:14,915:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:14,915:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:14,916:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:26,137:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/common/v1.0/tenants/20511c5aef804417a03bf14ed8aea3b8],
+ action=[set], key=[/config/common/v1.0/tenants/06d6b792b31c40daa546fb0f4e35980d],
  value=[{
     "body": {
         "status": "active", 
         "delete_retries": 0, 
         "end_time": "", 
-        "id": "20511c5aef804417a03bf14ed8aea3b8"
+        "id": "06d6b792b31c40daa546fb0f4e35980d"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:55:46,010:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:55:46,011:DEBUG:About to wait on key /config, index None
-2018-03-30 00:55:46,011:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:55:46,011:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:55:46,012:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:55:46,084:DEBUG:
+2018-04-04 04:52:26,137:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:26,138:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:26,138:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:26,138:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:26,140:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:26,175:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/ese_devices/f5429afc-cf7e-41c4-91ee-36ec403a9695],
+ action=[set], key=[/config/v2.0/ese_devices/3fb53223-b614-46b6-92e8-25c3bcbed214],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
@@ -3108,228 +3108,228 @@
         "hostname": "QFX-NW02", 
         "name": "QFX-NW02", 
         "orchestration_state": "CREATE_IN_PROGRESS", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "existing": "existing", 
         "type": "tor", 
-        "id": "f5429afc-cf7e-41c4-91ee-36ec403a9695", 
+        "id": "3fb53223-b614-46b6-92e8-25c3bcbed214", 
         "management_ip_address": "10.161.0.34"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:55:46,084:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:55:46,084:DEBUG:About to wait on key /config, index None
-2018-03-30 00:55:46,084:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:55:46,085:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:55:46,085:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:56:53,512:DEBUG:
+2018-04-04 04:52:26,175:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:26,176:DEBUG:About to wait on key /config, index None
+2018-04-04 04:52:26,176:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:26,178:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:26,183:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:53:37,487:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/ese_physical_ports/7861b62a-55fe-4e98-9bfc-10bf19052d9a],
+ action=[set], key=[/config/v2.0/ese_physical_ports/887fecdd-956b-47fa-a348-8940c53a5bf9],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
         "connected_port_owner": "mx_downlink", 
         "name": "xe-0/0/3", 
         "tags": {}, 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "existing": "new", 
         "connected_port_id": "", 
         "orchestration_state": "CREATE_IN_PROGRESS", 
-        "ese_device_id": "f5429afc-cf7e-41c4-91ee-36ec403a9695", 
+        "ese_device_id": "3fb53223-b614-46b6-92e8-25c3bcbed214", 
         "operational_state": "NO_STATE", 
-        "id": "7861b62a-55fe-4e98-9bfc-10bf19052d9a", 
+        "id": "887fecdd-956b-47fa-a348-8940c53a5bf9", 
         "description": ""
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:56:53,512:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:56:53,513:DEBUG:About to wait on key /config, index None
-2018-03-30 00:56:53,513:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:56:53,513:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:56:53,513:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:57:57,821:DEBUG:
+2018-04-04 04:53:37,487:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:53:37,488:DEBUG:About to wait on key /config, index None
+2018-04-04 04:53:37,488:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:53:37,488:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:53:37,491:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:54:43,144:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/ese_physical_ports/76001683-a8bb-4c68-8c87-7b63ea7bd5cd],
+ action=[set], key=[/config/v2.0/ese_physical_ports/6b29894f-8694-4865-92c1-2e78360e65a6],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
         "connected_port_owner": "mx_downlink", 
         "name": "xe-0/0/4", 
         "tags": {}, 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "existing": "new", 
         "connected_port_id": "", 
         "orchestration_state": "CREATE_IN_PROGRESS", 
-        "ese_device_id": "f5429afc-cf7e-41c4-91ee-36ec403a9695", 
+        "ese_device_id": "3fb53223-b614-46b6-92e8-25c3bcbed214", 
         "operational_state": "NO_STATE", 
-        "id": "76001683-a8bb-4c68-8c87-7b63ea7bd5cd", 
+        "id": "6b29894f-8694-4865-92c1-2e78360e65a6", 
         "description": ""
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:57:57,821:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:57:57,821:DEBUG:About to wait on key /config, index None
-2018-03-30 00:57:57,821:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:57:57,821:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:57:57,822:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:58:57,883:DEBUG:
+2018-04-04 04:54:43,144:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:54:43,144:DEBUG:About to wait on key /config, index None
+2018-04-04 04:54:43,149:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:54:43,150:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:54:43,152:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:55:43,449:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/edge_routers/2a28fdaa-651b-4558-8825-891b93329123],
+ action=[set], key=[/config/v2.0/edge_routers/cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
         "password": "esiesi0000", 
         "name": "vMX-router-02", 
         "ssh_port": 830, 
-        "ip": "192.168.100.102", 
+        "ip": "10.79.5.185", 
         "autonomous_system": "65101", 
         "orchestration_state": "CREATE_IN_PROGRESS", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "login": "esi", 
         "operational_state": "NO_STATE", 
-        "id": "2a28fdaa-651b-4558-8825-891b93329123", 
+        "id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78", 
         "description": "MX80 #2"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:58:57,883:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:58:57,884:DEBUG:About to wait on key /config, index None
-2018-03-30 00:58:57,884:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:58:57,884:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:58:57,884:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:59:59,949:DEBUG:
+2018-04-04 04:55:43,449:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:55:43,449:DEBUG:About to wait on key /config, index None
+2018-04-04 04:55:43,450:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:55:43,450:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:55:43,453:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:56:47,817:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/edge_routers/43119898-9a76-400c-abdc-8d3ec2113b5d],
+ action=[set], key=[/config/v2.0/edge_routers/ca43aedb-bc30-4355-a931-7bb1d9040659],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
         "password": "esiesi0000", 
         "name": "vMX-router-01", 
         "ssh_port": 830, 
-        "ip": "192.168.100.101", 
+        "ip": "10.79.5.184", 
         "autonomous_system": "65101", 
         "orchestration_state": "CREATE_IN_PROGRESS", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "login": "esi", 
         "operational_state": "NO_STATE", 
-        "id": "43119898-9a76-400c-abdc-8d3ec2113b5d", 
+        "id": "ca43aedb-bc30-4355-a931-7bb1d9040659", 
         "description": "MX80 #1"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 00:59:59,949:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:59:59,949:DEBUG:About to wait on key /config, index None
-2018-03-30 00:59:59,949:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:59:59,950:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:59:59,952:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:01:02,073:DEBUG:
+2018-04-04 04:56:47,817:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:56:47,817:DEBUG:About to wait on key /config, index None
+2018-04-04 04:56:47,817:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:56:47,818:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:56:47,820:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:57:52,710:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/ha_routers/420b119a-c91e-4426-b4b4-80b5a7010910],
+ action=[set], key=[/config/v2.0/ha_routers/add04ae7-e48a-4583-a726-bed5f3b748c4],
  value=[{
     "body": {
         "maximum_gateways": 500, 
         "status": "PENDING_CREATE", 
-        "primary_router_id": "2a28fdaa-651b-4558-8825-891b93329123", 
-        "secondary_router_id": "43119898-9a76-400c-abdc-8d3ec2113b5d", 
+        "primary_router_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78", 
+        "secondary_router_id": "ca43aedb-bc30-4355-a931-7bb1d9040659", 
         "description": "sample_ha_router", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "available_gateways": 500, 
-        "id": "420b119a-c91e-4426-b4b4-80b5a7010910", 
+        "id": "add04ae7-e48a-4583-a726-bed5f3b748c4", 
         "name": "sample-ha-router"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:01:02,074:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:01:02,074:DEBUG:About to wait on key /config, index None
-2018-03-30 01:01:02,074:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:01:02,074:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:01:02,075:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:01:03,520:DEBUG:
+2018-04-04 04:57:52,712:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:57:52,714:DEBUG:About to wait on key /config, index None
+2018-04-04 04:57:52,714:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:57:52,714:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:57:52,717:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:57:54,709:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/er_physical_interfaces/7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d],
+ action=[set], key=[/config/v2.0/er_physical_interfaces/53712736-354c-4374-be82-6f07bea9d1bd],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
-        "connected_ese_port_id": "7861b62a-55fe-4e98-9bfc-10bf19052d9a", 
+        "connected_ese_port_id": "887fecdd-956b-47fa-a348-8940c53a5bf9", 
         "description": "", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "operational_state": "NO_STATE", 
         "orchestration_state": "CREATE_IN_PROGRESS", 
-        "device_id": "2a28fdaa-651b-4558-8825-891b93329123", 
-        "id": "7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d", 
+        "device_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78", 
+        "id": "53712736-354c-4374-be82-6f07bea9d1bd", 
         "name": "ae0"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:01:03,520:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:01:03,521:DEBUG:About to wait on key /config, index None
-2018-03-30 01:01:03,521:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:01:03,521:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:01:03,521:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:02:05,791:DEBUG:
+2018-04-04 04:57:54,709:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:57:54,709:DEBUG:About to wait on key /config, index None
+2018-04-04 04:57:54,710:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:57:54,710:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:57:54,716:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:58:59,506:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/er_physical_interfaces/372f28d1-8fb2-4bb1-9b42-cfc30515735a],
+ action=[set], key=[/config/v2.0/er_physical_interfaces/d108a472-81ab-43a0-8c49-e0d1a46e6128],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
-        "connected_ese_port_id": "76001683-a8bb-4c68-8c87-7b63ea7bd5cd", 
+        "connected_ese_port_id": "6b29894f-8694-4865-92c1-2e78360e65a6", 
         "description": "", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "operational_state": "NO_STATE", 
         "orchestration_state": "CREATE_IN_PROGRESS", 
-        "device_id": "43119898-9a76-400c-abdc-8d3ec2113b5d", 
-        "id": "372f28d1-8fb2-4bb1-9b42-cfc30515735a", 
+        "device_id": "ca43aedb-bc30-4355-a931-7bb1d9040659", 
+        "id": "d108a472-81ab-43a0-8c49-e0d1a46e6128", 
         "name": "ae0"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:02:05,791:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:02:05,791:DEBUG:About to wait on key /config, index None
-2018-03-30 01:02:05,791:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:02:05,791:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:02:05,794:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:03:08,099:DEBUG:
+2018-04-04 04:58:59,506:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:58:59,506:DEBUG:About to wait on key /config, index None
+2018-04-04 04:58:59,506:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:58:59,507:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:58:59,508:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:00:04,570:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/ha_interfaces/54a252d3-8248-45b1-b67e-2f13e00b5005],
+ action=[set], key=[/config/v2.0/ha_interfaces/2595e193-84a8-49dc-aa2e-7a68c60ea11e],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
-        "secondary_interface_id": "372f28d1-8fb2-4bb1-9b42-cfc30515735a", 
+        "secondary_interface_id": "d108a472-81ab-43a0-8c49-e0d1a46e6128", 
         "gateway_instances_count": 0, 
         "description": "", 
         "vlan_ids_available": 3069, 
         "admin_state_up": true, 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "available_be_bandwidth": 500, 
         "vlan_pool_state": "//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM=", 
         "maximum_be_bandwidth": 500, 
         "restricted_vlans": "0-1024,4094", 
         "available_ga_bandwidth": 500, 
-        "ha_router_id": "420b119a-c91e-4426-b4b4-80b5a7010910", 
-        "primary_interface_id": "7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d", 
+        "ha_router_id": "add04ae7-e48a-4583-a726-bed5f3b748c4", 
+        "primary_interface_id": "53712736-354c-4374-be82-6f07bea9d1bd", 
         "maximum_ga_bandwidth": 500, 
-        "id": "54a252d3-8248-45b1-b67e-2f13e00b5005", 
+        "id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e", 
         "link_type": "downlink", 
         "name": "sample-ha-router-downlink"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:03:08,099:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:03:08,099:DEBUG:About to wait on key /config, index None
-2018-03-30 01:03:08,099:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:03:08,100:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:03:08,101:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:03:19,520:DEBUG:
+2018-04-04 05:00:04,570:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:00:04,571:DEBUG:About to wait on key /config, index None
+2018-04-04 05:00:04,571:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:00:04,571:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:00:04,574:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:00:16,456:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/internet_services/e8a97c54-3446-4a55-9e3f-f9045cd97b24],
+ action=[set], key=[/config/v2.0/internet_services/986a140f-81da-4e5c-afc3-26f463a85786],
  value=[{
     "body": {
         "vrf_export_policy": "INSTANCE-USER_OUT", 
@@ -3338,7 +3338,7 @@
         "zone": "jp1-zone1", 
         "default_static_routes_per_gateway": 32, 
         "ga_forwarding_class": "FC-INET-GA", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "inet_out_filter": "INET_OUT", 
         "secondary_ibgp_config_group": "InetGW1-RI-IBGP", 
         "vrf_config": "", 
@@ -3347,186 +3347,186 @@
         "uplink_import_policy": "INSTANCE-MASTER_IN", 
         "primary_vrrp_config_group": "InetGW1-VRRP", 
         "downlink_interfaces": [
-            "54a252d3-8248-45b1-b67e-2f13e00b5005"
+            "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
         ], 
         "be_forwarding_class": "FC-INET-BE", 
         "neighbour_prefix": "BGP-VIRTUAL-ROUTER-PEERS", 
         "inet_in_filter": "INET_IN", 
-        "id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24", 
+        "id": "986a140f-81da-4e5c-afc3-26f463a85786", 
         "vrf_import_policy": "INSTANCE-USER_IN", 
         "minimal_submask_length": 26
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:03:19,521:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:03:19,521:DEBUG:About to wait on key /config, index None
-2018-03-30 01:03:19,521:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:03:19,521:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:03:19,521:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:03:29,987:DEBUG:
+2018-04-04 05:00:16,456:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:00:16,457:DEBUG:About to wait on key /config, index None
+2018-04-04 05:00:16,457:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:00:16,457:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:00:16,459:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:00:27,321:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/qos_options/e6a65b22-6f74-4c9c-af6a-a393e70c66ac],
+ action=[set], key=[/config/v2.0/qos_options/0e6b35d9-d74d-4d3a-922a-d79b9df9b78c],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
         "qos_type": "guarantee", 
         "outgoing_policer_name": "10M-GA-DOWN-INET", 
         "description": "", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
-        "internet_service_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
+        "internet_service_id": "986a140f-81da-4e5c-afc3-26f463a85786", 
         "incoming_policer_name": "10M-GA-UP-INET", 
         "bandwidth": "10", 
         "outgoing_policer_config": "if-exceeding { bandwidth-limit 10m; burst-size-limit 187500000; } then discard;", 
         "incoming_policer_config": "action { loss-priority high then discard; } single-rate { color-blind; committed-information-rate 10m; committed-burst-size 187500000; excess-burst-size 187500000; }", 
         "orchestration_state": "CREATE_IN_PROGRESS", 
         "service_type": "internet", 
-        "ha_router_id": "420b119a-c91e-4426-b4b4-80b5a7010910", 
-        "id": "e6a65b22-6f74-4c9c-af6a-a393e70c66ac", 
+        "ha_router_id": "add04ae7-e48a-4583-a726-bed5f3b748c4", 
+        "id": "0e6b35d9-d74d-4d3a-922a-d79b9df9b78c", 
         "name": "10Mbps-Guaranteed"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:03:29,987:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:03:29,987:DEBUG:About to wait on key /config, index None
-2018-03-30 01:03:29,987:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:03:29,987:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:03:29,988:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:03:31,489:DEBUG:
+2018-04-04 05:00:27,321:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:00:27,321:DEBUG:About to wait on key /config, index None
+2018-04-04 05:00:27,321:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:00:27,322:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:00:27,324:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:00:28,172:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/public_ip_pools/874dd765-93d7-454f-8f8d-0c6f7e8bcac2],
+ action=[set], key=[/config/v2.0/public_ip_pools/c8072205-8aec-4fb5-9437-03900c14127a],
  value=[{
     "body": {
         "pool_state": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==", 
         "addresses_available": 512, 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
-        "internet_service_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
+        "internet_service_id": "986a140f-81da-4e5c-afc3-26f463a85786", 
         "ip_version": 4, 
-        "ha_router_id": "420b119a-c91e-4426-b4b4-80b5a7010910", 
+        "ha_router_id": "add04ae7-e48a-4583-a726-bed5f3b748c4", 
         "submask_length": 23, 
         "subnet_ip": "203.0.112.0", 
-        "id": "874dd765-93d7-454f-8f8d-0c6f7e8bcac2"
+        "id": "c8072205-8aec-4fb5-9437-03900c14127a"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:03:31,489:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:03:31,489:DEBUG:About to wait on key /config, index None
-2018-03-30 01:03:31,489:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:03:31,489:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:03:31,490:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:03:32,058:DEBUG:
+2018-04-04 05:00:28,173:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:00:28,173:DEBUG:About to wait on key /config, index None
+2018-04-04 05:00:28,173:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:00:28,173:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:00:28,175:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:00:29,109:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/internet_gateways/d4e4e75c-8c02-420f-9eda-fa5771c3bad6],
+ action=[set], key=[/config/v2.0/internet_gateways/f6e8c695-c4c1-4a93-9b7e-1663aee6dec9],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
         "secondary_logical_interface_name": "ae0.1025", 
         "name": "sample-internet-gateway", 
         "primary_logical_interface_name": "ae0.1025", 
-        "downlink_interface_id": "54a252d3-8248-45b1-b67e-2f13e00b5005", 
-        "internet_service_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24", 
-        "qos_option_id": "e6a65b22-6f74-4c9c-af6a-a393e70c66ac", 
+        "downlink_interface_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e", 
+        "internet_service_id": "986a140f-81da-4e5c-afc3-26f463a85786", 
+        "qos_option_id": "0e6b35d9-d74d-4d3a-922a-d79b9df9b78c", 
         "vrf_name": "vrf_gw_sample-ha-router-downlink_1025", 
         "maximum_static_routes": 32, 
         "orchestration_state": "CREATE_IN_PROGRESS", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
-        "id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
+        "id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9", 
         "vlan_id": "1025", 
         "description": "Sample Internet-gateway"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:03:32,058:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:03:32,058:DEBUG:About to wait on key /config, index None
-2018-03-30 01:03:32,058:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:03:32,058:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:03:32,059:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:01,478:DEBUG:
+2018-04-04 05:00:29,110:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:00:29,110:DEBUG:About to wait on key /config, index None
+2018-04-04 05:00:29,110:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:00:29,111:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:00:29,113:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:03,713:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/public_ip_pools/874dd765-93d7-454f-8f8d-0c6f7e8bcac2],
+ action=[set], key=[/config/v2.0/public_ip_pools/c8072205-8aec-4fb5-9437-03900c14127a],
  value=[{
     "body": {
         "pool_state": "UQEAAQAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==", 
         "addresses_available": 496, 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
-        "internet_service_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
+        "internet_service_id": "986a140f-81da-4e5c-afc3-26f463a85786", 
         "ip_version": 4, 
-        "ha_router_id": "420b119a-c91e-4426-b4b4-80b5a7010910", 
+        "ha_router_id": "add04ae7-e48a-4583-a726-bed5f3b748c4", 
         "submask_length": 23, 
         "subnet_ip": "203.0.112.0", 
-        "id": "874dd765-93d7-454f-8f8d-0c6f7e8bcac2"
+        "id": "c8072205-8aec-4fb5-9437-03900c14127a"
     }, 
     "version": 2, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:04:01,478:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:01,478:DEBUG:About to wait on key /config, index None
-2018-03-30 01:04:01,478:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:01,478:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:01,481:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:01,578:DEBUG:
+2018-04-04 05:01:03,713:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:03,713:DEBUG:About to wait on key /config, index None
+2018-04-04 05:01:03,714:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:03,714:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:03,720:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:03,750:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/public_ips/6f583980-3f9e-458f-8f68-f42a7adfb211],
+ action=[set], key=[/config/v2.0/public_ips/d5622781-f06a-4fad-b800-b577a05ad8b2],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
         "description": "Sample Public-Ip", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
-        "ip_pool_id": "874dd765-93d7-454f-8f8d-0c6f7e8bcac2", 
-        "id": "6f583980-3f9e-458f-8f68-f42a7adfb211", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
+        "ip_pool_id": "c8072205-8aec-4fb5-9437-03900c14127a", 
+        "id": "d5622781-f06a-4fad-b800-b577a05ad8b2", 
         "orchestration_state": "CREATE_IN_PROGRESS", 
         "cidr": "203.0.112.0", 
         "submask_length": 28, 
-        "internet_gw_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6", 
+        "internet_gw_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9", 
         "name": "sample-public_ip"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:04:01,578:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:01,578:DEBUG:About to wait on key /config, index None
-2018-03-30 01:04:01,578:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:01,578:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:01,578:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:21,499:DEBUG:
+2018-04-04 05:01:03,751:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:03,751:DEBUG:About to wait on key /config, index None
+2018-04-04 05:01:03,751:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:03,751:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:03,757:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:27,446:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/networks/73f88c22-ae22-4fb7-86b3-9acb141b8809],
+ action=[set], key=[/config/v2.0/networks/6e557507-1c2a-49b1-ba90-5f616a1f1f3e],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
         "subnets": [], 
         "description": "Sample Network", 
         "admin_state_up": true, 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "tags": {}, 
         "plane": "data", 
         "orchestration_state": "CREATE_IN_PROGRESS", 
         "shared": false, 
-        "id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
+        "id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
         "name": "sample-network"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:04:21,499:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:21,499:DEBUG:About to wait on key /config, index None
-2018-03-30 01:04:21,499:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:21,499:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:21,499:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:37,573:DEBUG:
+2018-04-04 05:01:27,447:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:27,447:DEBUG:About to wait on key /config, index None
+2018-04-04 05:01:27,447:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:27,447:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:27,449:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:44,907:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/subnets/8fca93d6-5f0b-413d-98e0-74c3d1bacf07],
+ action=[set], key=[/config/v2.0/subnets/67877f2d-0547-4cea-a6ce-2e3b937aa31b],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
         "description": "Sample Subnet", 
         "enable_dhcp": true, 
         "tags": {}, 
-        "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "dns_nameservers": [], 
         "dhcp_server_address": "172.16.101.2", 
         "ntp_servers": [], 
@@ -3541,28 +3541,28 @@
         "ip_version": 4, 
         "host_routes": [], 
         "cidr": "172.16.101.0/24", 
-        "id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+        "id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
         "name": "sample-subnet"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:04:37,573:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:37,573:DEBUG:About to wait on key /config, index None
-2018-03-30 01:04:37,573:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:37,574:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:37,575:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:37,681:DEBUG:
+2018-04-04 05:01:44,907:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:44,907:DEBUG:About to wait on key /config, index None
+2018-04-04 05:01:44,907:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:44,908:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:44,910:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:44,943:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/ports/33bbb900-1405-44e8-8b2e-3482e0b43a36],
+ action=[set], key=[/config/v2.0/ports/9dc6550a-f4a0-4be0-9e52-f780501926a8],
  value=[{
     "body": {
         "status": "ACTIVE", 
         "description": "DHCP Server Port", 
         "allowed_address_pairs": [], 
         "admin_state_up": true, 
-        "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "managed_by_service": false, 
         "attached": false, 
         "name": "dhcp-server-port", 
@@ -3575,54 +3575,54 @@
         "host_routes": [], 
         "fixed_ips": [
             {
-                "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                 "ip_address": "172.16.101.2"
             }
         ], 
-        "id": "33bbb900-1405-44e8-8b2e-3482e0b43a36", 
+        "id": "9dc6550a-f4a0-4be0-9e52-f780501926a8", 
         "security_groups": [], 
-        "device_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+        "device_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:04:37,681:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:37,681:DEBUG:About to wait on key /config, index None
-2018-03-30 01:04:37,681:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:37,681:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:37,682:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:53,891:DEBUG:
+2018-04-04 05:01:44,943:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:44,944:DEBUG:About to wait on key /config, index None
+2018-04-04 05:01:44,944:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:44,944:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:44,949:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:03,360:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/gw_interfaces/d84ce543-bc58-4844-b861-4a6d79fb2e48],
+ action=[set], key=[/config/v2.0/gw_interfaces/ce8831fd-d30c-41e3-95de-feaee0b95405],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
         "secondary_ipv4": "172.16.101.153", 
         "gw_vipv4": "172.16.101.151", 
         "description": "Sample Gw-interface", 
-        "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
-        "internet_gw_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6", 
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
+        "internet_gw_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9", 
         "vrid": 20, 
         "primary_ipv4": "172.16.101.152", 
         "operational_state": "NO_STATE", 
         "netmask": 24, 
         "orchestration_state": "CREATE_IN_PROGRESS", 
         "service_type": "internet", 
-        "id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+        "id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
         "name": "sample-gw-interface"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:04:53,891:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:53,891:DEBUG:About to wait on key /config, index None
-2018-03-30 01:04:53,891:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:53,891:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:53,892:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:54,015:DEBUG:
+2018-04-04 05:02:03,360:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:03,364:DEBUG:About to wait on key /config, index None
+2018-04-04 05:02:03,364:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:03,364:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:03,368:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:03,386:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/ports/7413e81d-f895-4527-ba5d-a86ffb663258],
+ action=[set], key=[/config/v2.0/ports/f3867a99-de18-4512-8e94-f9aaa7b05c3a],
  value=[{
     "body": {
         "allowed_address_pairs": [], 
@@ -3630,27 +3630,27 @@
         "fake_delete": false, 
         "fixed_ips": [
             {
-                "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                 "ip_address": "172.16.101.151"
             }, 
             {
-                "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                 "ip_address": "172.16.101.152"
             }
         ], 
-        "id": "7413e81d-f895-4527-ba5d-a86ffb663258", 
+        "id": "f3867a99-de18-4512-8e94-f9aaa7b05c3a", 
         "security_groups": [], 
         "binding:vif_type": "vrouter", 
-        "mac_address": "fa:16:3e:19:71:4b", 
+        "mac_address": "fa:16:3e:c5:2b:92", 
         "status": "PENDING_CREATE", 
         "description": "", 
         "tags": {}, 
         "segmentation_id": 1025, 
-        "device_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
-        "name": "Port for : 7861b62a-55fe-4e98-9bfc-10bf19052d9a", 
+        "device_id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
+        "name": "Port for : 887fecdd-956b-47fa-a348-8940c53a5bf9", 
         "admin_state_up": true, 
-        "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "managed_by_service": true, 
         "attached": false, 
         "operational_state": "NO_STATE", 
@@ -3660,45 +3660,45 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:04:54,015:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:54,015:DEBUG:About to wait on key /config, index None
-2018-03-30 01:04:54,015:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:54,015:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:54,016:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:54,099:DEBUG:
+2018-04-04 05:02:03,386:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:03,386:DEBUG:About to wait on key /config, index None
+2018-04-04 05:02:03,386:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:03,386:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:03,388:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:03,433:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/ese_logical_ports/ecf42487-2aef-4e27-931c-8517b1632d49],
+ action=[set], key=[/config/v2.0/ese_logical_ports/02112bb1-389c-4ff8-9354-94ab43459892],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
         "name": "xe-0/0/3.1025", 
         "tags": {}, 
-        "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-        "gw_interface_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+        "gw_interface_id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
         "port_ids": [
-            "7413e81d-f895-4527-ba5d-a86ffb663258"
+            "f3867a99-de18-4512-8e94-f9aaa7b05c3a"
         ], 
         "operational_state": "NO_STATE", 
         "orchestration_state": "CREATE_IN_PROGRESS", 
-        "ese_physical_port_id": "7861b62a-55fe-4e98-9bfc-10bf19052d9a", 
+        "ese_physical_port_id": "887fecdd-956b-47fa-a348-8940c53a5bf9", 
         "connected_resource": "gw_interface", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "type": "L2", 
-        "id": "ecf42487-2aef-4e27-931c-8517b1632d49", 
+        "id": "02112bb1-389c-4ff8-9354-94ab43459892", 
         "vlan_id": 1025, 
-        "description": "ESE Logical port for Port 7413e81d-f895-4527-ba5d-a86ffb663258"
+        "description": "ESE Logical port for Port f3867a99-de18-4512-8e94-f9aaa7b05c3a"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:04:54,099:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:54,099:DEBUG:About to wait on key /config, index None
-2018-03-30 01:04:54,099:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:54,099:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:54,100:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:54,174:DEBUG:
+2018-04-04 05:02:03,434:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:03,434:DEBUG:About to wait on key /config, index None
+2018-04-04 05:02:03,434:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:03,434:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:03,439:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:03,455:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/ports/4fca361d-fdaf-4b92-81a8-a4cdd767cad4],
+ action=[set], key=[/config/v2.0/ports/ce965922-538a-4335-9644-7a98dce9fb47],
  value=[{
     "body": {
         "allowed_address_pairs": [], 
@@ -3706,23 +3706,23 @@
         "fake_delete": false, 
         "fixed_ips": [
             {
-                "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                 "ip_address": "172.16.101.153"
             }
         ], 
-        "id": "4fca361d-fdaf-4b92-81a8-a4cdd767cad4", 
+        "id": "ce965922-538a-4335-9644-7a98dce9fb47", 
         "security_groups": [], 
         "binding:vif_type": "vrouter", 
-        "mac_address": "fa:16:3e:b1:3d:bf", 
+        "mac_address": "fa:16:3e:41:7c:23", 
         "status": "PENDING_CREATE", 
         "description": "", 
         "tags": {}, 
         "segmentation_id": 1025, 
-        "device_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
-        "name": "Port for : 76001683-a8bb-4c68-8c87-7b63ea7bd5cd", 
+        "device_id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
+        "name": "Port for : 6b29894f-8694-4865-92c1-2e78360e65a6", 
         "admin_state_up": true, 
-        "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "managed_by_service": true, 
         "attached": false, 
         "operational_state": "NO_STATE", 
@@ -3732,70 +3732,70 @@
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:04:54,174:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:54,175:DEBUG:About to wait on key /config, index None
-2018-03-30 01:04:54,175:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:54,175:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:54,176:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:54,283:DEBUG:
+2018-04-04 05:02:03,455:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:03,455:DEBUG:About to wait on key /config, index None
+2018-04-04 05:02:03,455:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:03,456:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:03,457:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:03,489:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/ese_logical_ports/d87b39f3-d117-46b4-ad1d-5b606d651b4f],
+ action=[set], key=[/config/v2.0/ese_logical_ports/aabc9b64-ec2c-4894-a6a8-ee0ea429c066],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
         "name": "xe-0/0/4.1025", 
         "tags": {}, 
-        "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-        "gw_interface_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+        "gw_interface_id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
         "port_ids": [
-            "4fca361d-fdaf-4b92-81a8-a4cdd767cad4"
+            "ce965922-538a-4335-9644-7a98dce9fb47"
         ], 
         "operational_state": "NO_STATE", 
         "orchestration_state": "CREATE_IN_PROGRESS", 
-        "ese_physical_port_id": "76001683-a8bb-4c68-8c87-7b63ea7bd5cd", 
+        "ese_physical_port_id": "6b29894f-8694-4865-92c1-2e78360e65a6", 
         "connected_resource": "gw_interface", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "type": "L2", 
-        "id": "d87b39f3-d117-46b4-ad1d-5b606d651b4f", 
+        "id": "aabc9b64-ec2c-4894-a6a8-ee0ea429c066", 
         "vlan_id": 1025, 
-        "description": "ESE Logical port for Port 4fca361d-fdaf-4b92-81a8-a4cdd767cad4"
+        "description": "ESE Logical port for Port ce965922-538a-4335-9644-7a98dce9fb47"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:04:54,283:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:54,283:DEBUG:About to wait on key /config, index None
-2018-03-30 01:04:54,283:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:54,284:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:54,284:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:21,363:DEBUG:
+2018-04-04 05:02:03,489:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:03,489:DEBUG:About to wait on key /config, index None
+2018-04-04 05:02:03,489:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:03,489:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:03,491:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:32,952:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/ports/4fca361d-fdaf-4b92-81a8-a4cdd767cad4],
+ action=[set], key=[/config/v2.0/ports/ce965922-538a-4335-9644-7a98dce9fb47],
  value=[{
     "body": {
-        "ese_logical_port_id": "d87b39f3-d117-46b4-ad1d-5b606d651b4f", 
+        "ese_logical_port_id": "aabc9b64-ec2c-4894-a6a8-ee0ea429c066", 
         "allowed_address_pairs": [], 
         "device_owner": "network:gw_interface", 
         "fake_delete": false, 
         "fixed_ips": [
             {
-                "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                 "ip_address": "172.16.101.153"
             }
         ], 
-        "id": "4fca361d-fdaf-4b92-81a8-a4cdd767cad4", 
+        "id": "ce965922-538a-4335-9644-7a98dce9fb47", 
         "security_groups": [], 
         "binding:vif_type": "vrouter", 
-        "mac_address": "fa:16:3e:b1:3d:bf", 
+        "mac_address": "fa:16:3e:41:7c:23", 
         "status": "PENDING_CREATE", 
         "description": "", 
         "tags": {}, 
         "segmentation_id": 1025, 
-        "device_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
-        "name": "Port for : 76001683-a8bb-4c68-8c87-7b63ea7bd5cd", 
+        "device_id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
+        "name": "Port for : 6b29894f-8694-4865-92c1-2e78360e65a6", 
         "admin_state_up": true, 
-        "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "managed_by_service": true, 
         "attached": true, 
         "operational_state": "NO_STATE", 
@@ -3805,43 +3805,43 @@
     "version": 2, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:05:21,363:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:21,363:DEBUG:About to wait on key /config, index None
-2018-03-30 01:05:21,363:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:21,364:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:21,366:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:21,765:DEBUG:
+2018-04-04 05:02:32,952:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:32,952:DEBUG:About to wait on key /config, index None
+2018-04-04 05:02:32,952:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:32,953:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:32,955:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:34,338:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/ports/7413e81d-f895-4527-ba5d-a86ffb663258],
+ action=[set], key=[/config/v2.0/ports/f3867a99-de18-4512-8e94-f9aaa7b05c3a],
  value=[{
     "body": {
-        "ese_logical_port_id": "ecf42487-2aef-4e27-931c-8517b1632d49", 
+        "ese_logical_port_id": "02112bb1-389c-4ff8-9354-94ab43459892", 
         "allowed_address_pairs": [], 
         "device_owner": "network:gw_interface", 
         "fake_delete": false, 
         "fixed_ips": [
             {
-                "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                 "ip_address": "172.16.101.151"
             }, 
             {
-                "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                 "ip_address": "172.16.101.152"
             }
         ], 
-        "id": "7413e81d-f895-4527-ba5d-a86ffb663258", 
+        "id": "f3867a99-de18-4512-8e94-f9aaa7b05c3a", 
         "security_groups": [], 
         "binding:vif_type": "vrouter", 
-        "mac_address": "fa:16:3e:19:71:4b", 
+        "mac_address": "fa:16:3e:c5:2b:92", 
         "status": "PENDING_CREATE", 
         "description": "", 
         "tags": {}, 
         "segmentation_id": 1025, 
-        "device_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
-        "name": "Port for : 7861b62a-55fe-4e98-9bfc-10bf19052d9a", 
+        "device_id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
+        "name": "Port for : 887fecdd-956b-47fa-a348-8940c53a5bf9", 
         "admin_state_up": true, 
-        "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+        "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
         "managed_by_service": true, 
         "attached": true, 
         "operational_state": "NO_STATE", 
@@ -3851,38 +3851,38 @@
     "version": 2, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:05:21,765:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:21,765:DEBUG:About to wait on key /config, index None
-2018-03-30 01:05:21,765:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:21,765:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:21,766:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:06:44,892:DEBUG:
+2018-04-04 05:02:34,338:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:34,338:DEBUG:About to wait on key /config, index None
+2018-04-04 05:02:34,338:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:34,339:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:34,340:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:04:07,647:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/config/v2.0/static_routes/07967b57-33c3-44b9-b1e7-47d85c840011],
+ action=[set], key=[/config/v2.0/static_routes/d0aa20b1-9302-4b43-a3c1-9edce0811af8],
  value=[{
     "body": {
         "status": "PENDING_CREATE", 
         "destination": "203.0.112.0/28", 
         "description": "Sample Static-route", 
-        "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
-        "internet_gw_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6", 
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
+        "internet_gw_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9", 
         "nexthop": "172.16.101.1", 
         "orchestration_state": "CREATE_IN_PROGRESS", 
-        "public_ip_id": "6f583980-3f9e-458f-8f68-f42a7adfb211", 
+        "public_ip_id": "d5622781-f06a-4fad-b800-b577a05ad8b2", 
         "service_type": "internet", 
-        "id": "07967b57-33c3-44b9-b1e7-47d85c840011", 
+        "id": "d0aa20b1-9302-4b43-a3c1-9edce0811af8", 
         "name": "sample-static-route"
     }, 
     "version": 1, 
     "marked_for_deletion": false
 }]
-2018-03-30 01:06:44,892:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:06:44,892:DEBUG:About to wait on key /config, index None
-2018-03-30 01:06:44,892:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:06:44,893:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:06:44,893:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:21:44,984:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
-2018-03-30 01:21:44,984:DEBUG:Reconnection disabled, giving up.
+2018-04-04 05:04:07,647:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:04:07,647:DEBUG:About to wait on key /config, index None
+2018-04-04 05:04:07,647:DEBUG:Issuing read for key /config with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:04:07,651:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:04:07,654:DEBUG:http://etcd-server:2379 "GET /v2/keys/config?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:19:07,757:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2018-04-04 05:19:07,758:DEBUG:Reconnection disabled, giving up.
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/eventlet/hubs/hub.py", line 346, in fire_timers
     timer()

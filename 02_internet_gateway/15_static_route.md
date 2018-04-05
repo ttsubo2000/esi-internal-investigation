@@ -5,22 +5,13 @@ You can see the relations of "Static Route" as following.
 
 ![Static Route](resource/gohan_investigate_for_inetgw.016.png)
 
-## 15.1. Sequence Diagram between gohan and etcd
-This is a diagram that has been described as interfaces for "Static Route" between gohan and etcd.
 
-* Initinalizing gohan ...
-* Receiving HTTP Methods for Creating Resource ...
+## 15.1. Gohan
 
-![Create Static Route](diag/ESI_Sequence_Diagram_for_Internet_Gateway.019.png)
+![scope](../images/ESI_Sequence_diagram.002.png)
 
-## 15.2. Stored data in etcd after initinalizing gohan
-These are stored data for "heat_templates" in etcd.
-
-* [Checking stored data for "static_route_internet"](../heat_template/static_route_internet.md)
-
-
-## 15.3. HTTP Methods for RESTful between Gohan and Client
-This is JSON data for "Create Static Route" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Static Route" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -34,28 +25,64 @@ POST /v2.0/static_routes
         "name": "sample-static-route",
         "nexthop": "172.16.101.1",
         "service_type": "internet",
-        "internet_gw_id": "8b9ba87a-5b28-4c67-ba04-4f1d436960f8",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "internet_gw_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9",
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d"
     }
 }
 ```
-![scope](../images/esi_interface.004.png)
+After processing, Gohan has stored data for "Create Static Route" in etcd.
+
+* [Checking stored data for creating "static_route"](stored_in_etcd/01_Gohan/CreateStaticRoute_01.md)
 
 
-## 15.4. Stored data in etcd after receiving HTTP Methods for RESTful
-These are stored data for "Create Static Route" in etcd.
+## 15.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-* [Checking stored data for creating "static_route"](stored_in_etcd/CreateStaticRoute_01.md)
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
 
-![scope](../images/esi_interface.005.png)
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Create Static Route" in etcd, ResourceReader has fetched heat_templates in etcd.
+
+* [Checking stored data for "static_route_internet"](../heat_template/static_route_internet.md)
 
 
-## 15.5. Stored heat-stack via heat-api
-These are stored heat-stacks for "Create Static Route" in heat-engine.
+## 15.3. JobManager
+
+![scope](../images/ESI_Sequence_diagram.004.png)
+
+### Outline
+After converting resource_data to job_data, JobManager has stored it in etcd.
+
+* [Checking stored data for creating "static_route"](stored_in_etcd/02_JobManager/CreateStaticRoute_01.md)
+
+
+## 15.4. HeatWorker
+
+![scope](../images/ESI_Sequence_diagram.005.png)
+
+### Outline
+After fetching job_data, HeatWorker has handled job_data.
+And then, HeatWorker has stored the result of handling job_data.
+
+* [Checking stored data for creating "static_route"](stored_in_etcd/03_HeatWorker/CreateStaticRoute_01.md)
+
+
+## 15.5. Heat
+
+![scope](../images/ESI_Sequence_diagram.006.png)
+
+### Outline
+Heat has conducted some tasks for "Create Static Route".
+As a result, Heat has stored heat-stacks for "Create Static Route".
 
 * [Checking heat-stack of "static_route"](heat-stack/CreateStaticRoute_01.md)
 
-![scope](../images/esi_interface.006.png)
 
 ## 15.6. Applying JUNOS Configurations via netconf
 Checking configuration in Edge Router
@@ -81,26 +108,29 @@ Checking configuration in Edge Router
 ```
 
 
-## 15.7. Stored resource in gohan
+## 15.6. Stored resource in gohan
 As a result, checking resources regarding of "Static Route" in gohan.
 
 * Checking the target of resources via gohan client
 ```
-$ gohan client static_route show --output-format json 3ecf06a5-014e-48b0-841c-6ad812e69132
+$ gohan client static_route show --output-format json d0aa20b1-9302-4b43-a3c1-9edce0811af8
 {
     "static_route": {
         "aws_gw_id": null,
+        "azure_gw_id": null,
         "description": "Sample Static-route",
         "destination": "203.0.112.0/28",
-        "id": "3ecf06a5-014e-48b0-841c-6ad812e69132",
+        "gcp_gw_id": null,
+        "id": "d0aa20b1-9302-4b43-a3c1-9edce0811af8",
         "interdc_gw_id": null,
-        "internet_gw_id": "8b9ba87a-5b28-4c67-ba04-4f1d436960f8",
+        "internet_gw_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9",
         "name": "sample-static-route",
         "nexthop": "172.16.101.1",
-        "public_ip_id": "07ff3a4e-f968-481e-8ee2-378a73b8f2a2",
+        "orchestration_state": "CREATE_COMPLETE",
+        "public_ip_id": "d5622781-f06a-4fad-b800-b577a05ad8b2",
         "service_type": "internet",
         "status": "ACTIVE",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d",
         "vpn_gw_id": null
     }
 }

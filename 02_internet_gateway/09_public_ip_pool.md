@@ -5,15 +5,13 @@ You can see the relations of "Public Ip Pool" as following.
 
 ![Public Ip Pool](resource/gohan_investigate_for_inetgw.010.png)
 
-## 9.1. Sequence Diagram between gohan and etcd
-This is a diagram that has been described as interfaces for "Public Ip Pool" between gohan and etcd.
 
-* Receiving HTTP Methods for Creating Resource ...
+## 9.1. Gohan
 
-![Create Public Ip Pool](diag/ESI_Sequence_Diagram_for_Internet_Gateway.012.png)
+![scope](../images/ESI_Sequence_diagram.002.png)
 
-## 9.2. HTTP Methods for RESTful between Gohan and Client
-This is JSON data for "Create Public Ip Pool" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Public Ip Pool" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -22,43 +20,55 @@ POST /v2.0/public_ip_pools
 ```
 {
     "public_ip_pool": {
-        "ha_router_id": "d4286c1d-86e7-42d3-9d84-a4d9daa3ae17",
-        "internet_service_id": "848e04de-733d-4f98-8971-bdb3b83e0296",
+        "ha_router_id": "add04ae7-e48a-4583-a726-bed5f3b748c4",
+        "internet_service_id": "986a140f-81da-4e5c-afc3-26f463a85786",
         "ip_version": 4,
         "submask_length": 23,
         "subnet_ip": "203.0.112.0",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d"
     }
 }
 ```
-![scope](../images/esi_interface.004.png)
+After processing, Gohan has stored data for "Create Public Ip Pool" in etcd
+
+* [Checking stored data for creating "public_ip_pool"](stored_in_etcd/01_Gohan/CreatePublicIpPool_01.md)
 
 
-## 9.3. Stored data in etcd after receiving HTTP Methods for RESTful
-These are stored data for "Create Public Ip Pool" in etcd.
+## 9.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-* [Checking stored data for creating "public_ip_pool"](stored_in_etcd/CreatePublicIpPool_01.md)
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
 
-![scope](../images/esi_interface.005.png)
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Create Public Ip Pool" in etcd, ResourceReader has not fetched heat_templates in etcd because of non_workable_resource.
+And then, ResourceReader has stored data as finishing resource
+
+* [Checking stored data for creating "public_ip_pool"](stored_in_etcd/00_ResourceReader/CreatePublicIpPool_01.md)
 
 
-## 9.4. Stored resource in gohan
+## 9.3. Stored resource in gohan
 As a result, checking resources regarding of "Public Ip Pool" in gohan.
 
 * Checking the target of resources via gohan client
 ```
-$ gohan client public_ip_pool show --output-format json 5cd14f90-cf3c-4aeb-b30a-227b3c936761
+$ gohan client public_ip_pool show --output-format json c8072205-8aec-4fb5-9437-03900c14127a
 {
     "public_ip_pool": {
         "addresses_available": 512,
-        "ha_router_id": "d4286c1d-86e7-42d3-9d84-a4d9daa3ae17",
-        "id": "5cd14f90-cf3c-4aeb-b30a-227b3c936761",
-        "internet_service_id": "848e04de-733d-4f98-8971-bdb3b83e0296",
+        "ha_router_id": "add04ae7-e48a-4583-a726-bed5f3b748c4",
+        "id": "c8072205-8aec-4fb5-9437-03900c14127a",
+        "internet_service_id": "986a140f-81da-4e5c-afc3-26f463a85786",
         "ip_version": 4,
         "pool_state": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
         "submask_length": 23,
         "subnet_ip": "203.0.112.0",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d"
     }
 }
 ```

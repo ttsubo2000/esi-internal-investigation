@@ -1,27 +1,27 @@
-2018-03-30 00:52:52,027:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:52:52,027:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 00:52:52,027:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:52:52,027:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:52:52,306:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:53:47,044:DEBUG:
+2018-04-04 04:51:36,051:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:51:36,051:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:51:36,051:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:51:36,052:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:51:36,055:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:00,632:DEBUG:
 *** Consume stored data in etcd ***
  action=[set], key=[/jobs/all],
  value=[]
-2018-03-30 00:53:47,044:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:53:47,044:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 00:53:47,044:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:53:47,045:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:53:47,045:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:55:46,185:DEBUG:
+2018-04-04 04:52:00,633:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:00,633:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:52:00,633:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:00,634:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:00,636:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:26,239:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:ese_device:f5429afc-cf7e-41c4-91ee-36ec403a9695:1:dfb4c],
+ action=[set], key=[/jobs/all/create:heat_worker:ese_device:3fb53223-b614-46b6-92e8-25c3bcbed214:1:sb69v],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "f5429afc-cf7e-41c4-91ee-36ec403a9695", 
+        "resource_id": "3fb53223-b614-46b6-92e8-25c3bcbed214", 
         "handler": "heat_worker", 
-        "job_name": "ese_device:f5429afc-cf7e-41c4-91ee-36ec403a9695:1", 
+        "job_name": "ese_device:3fb53223-b614-46b6-92e8-25c3bcbed214:1", 
         "dependency": [], 
         "version": 1, 
         "params": [
@@ -40,7 +40,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }, 
             {
@@ -64,7 +64,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "f5429afc-cf7e-41c4-91ee-36ec403a9695", 
+                "value": "3fb53223-b614-46b6-92e8-25c3bcbed214", 
                 "param": "gohan_id"
             }
         ], 
@@ -72,7 +72,7 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:ese_device:f5429afc-cf7e-41c4-91ee-36ec403a9695:1:dfb4c", 
+        "id": "create:heat_worker:ese_device:3fb53223-b614-46b6-92e8-25c3bcbed214:1:sb69v", 
         "resource_input": {
             "status": "PENDING_CREATE", 
             "username": "esi", 
@@ -80,43 +80,43 @@
             "name": "QFX-NW02", 
             "tags": {}, 
             "existing": "existing", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
             "hostname": "QFX-NW02", 
             "operational_state": "NO_STATE", 
             "management_ip_address": "10.161.0.34", 
             "orchestration_state": "CREATE_IN_PROGRESS", 
             "password": "password", 
             "type": "tor", 
-            "id": "f5429afc-cf7e-41c4-91ee-36ec403a9695", 
+            "id": "3fb53223-b614-46b6-92e8-25c3bcbed214", 
             "public_ip_address": "10.161.0.34"
         }
     }, 
     0
 ]]
-2018-03-30 00:55:46,185:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:55:46,186:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 00:55:46,186:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:55:46,186:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:55:46,186:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:55:51,254:DEBUG:
+2018-04-04 04:52:26,239:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:26,239:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:52:26,240:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:26,243:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:26,251:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:52:32,304:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:ese_device:f5429afc-cf7e-41c4-91ee-36ec403a9695:1:dfb4c],
+ action=[delete], key=[/jobs/all/create:heat_worker:ese_device:3fb53223-b614-46b6-92e8-25c3bcbed214:1:sb69v],
  value=[]
-2018-03-30 00:55:51,254:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:55:51,254:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 00:55:51,254:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:55:51,255:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:55:51,255:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:56:53,619:DEBUG:
+2018-04-04 04:52:32,304:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:52:32,305:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:52:32,305:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:52:32,305:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:52:32,307:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:53:37,526:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:ese_physical_port:7861b62a-55fe-4e98-9bfc-10bf19052d9a:1:yiyuh],
+ action=[set], key=[/jobs/all/create:heat_worker:ese_physical_port:887fecdd-956b-47fa-a348-8940c53a5bf9:1:hapn7],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "7861b62a-55fe-4e98-9bfc-10bf19052d9a", 
+        "resource_id": "887fecdd-956b-47fa-a348-8940c53a5bf9", 
         "handler": "heat_worker", 
-        "job_name": "ese_physical_port:7861b62a-55fe-4e98-9bfc-10bf19052d9a:1", 
+        "job_name": "ese_physical_port:887fecdd-956b-47fa-a348-8940c53a5bf9:1", 
         "dependency": [], 
         "version": 1, 
         "params": [
@@ -129,14 +129,14 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }, 
             {
                 "resources": [
                     {
                         "resource_type": "ese_device", 
-                        "resource_id": "f5429afc-cf7e-41c4-91ee-36ec403a9695"
+                        "resource_id": "3fb53223-b614-46b6-92e8-25c3bcbed214"
                     }
                 ], 
                 "type": "value", 
@@ -147,14 +147,14 @@
                 "resources": [
                     {
                         "resource_type": "ese_device", 
-                        "resource_id": "f5429afc-cf7e-41c4-91ee-36ec403a9695"
+                        "resource_id": "3fb53223-b614-46b6-92e8-25c3bcbed214"
                     }
                 ], 
                 "type": "output_key", 
                 "value": {
                     "output_key": "id", 
                     "resource_type": "ese_device", 
-                    "resource_id": "f5429afc-cf7e-41c4-91ee-36ec403a9695"
+                    "resource_id": "3fb53223-b614-46b6-92e8-25c3bcbed214"
                 }, 
                 "param": "physical_device"
             }, 
@@ -173,7 +173,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "7861b62a-55fe-4e98-9bfc-10bf19052d9a", 
+                "value": "887fecdd-956b-47fa-a348-8940c53a5bf9", 
                 "param": "gohan_id"
             }
         ], 
@@ -181,48 +181,48 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:ese_physical_port:7861b62a-55fe-4e98-9bfc-10bf19052d9a:1:yiyuh", 
+        "id": "create:heat_worker:ese_physical_port:887fecdd-956b-47fa-a348-8940c53a5bf9:1:hapn7", 
         "resource_input": {
             "status": "PENDING_CREATE", 
             "connected_port_owner": "mx_downlink", 
             "tags": {}, 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
             "description": "", 
             "existing": "new", 
             "connected_port_id": "", 
             "orchestration_state": "CREATE_IN_PROGRESS", 
-            "ese_device_id": "f5429afc-cf7e-41c4-91ee-36ec403a9695", 
+            "ese_device_id": "3fb53223-b614-46b6-92e8-25c3bcbed214", 
             "operational_state": "NO_STATE", 
-            "id": "7861b62a-55fe-4e98-9bfc-10bf19052d9a", 
+            "id": "887fecdd-956b-47fa-a348-8940c53a5bf9", 
             "name": "xe-0/0/3"
         }
     }, 
     0
 ]]
-2018-03-30 00:56:53,619:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:56:53,619:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 00:56:53,619:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:56:53,619:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:56:53,620:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:56:57,953:DEBUG:
+2018-04-04 04:53:37,526:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:53:37,527:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:53:37,527:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:53:37,527:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:53:37,530:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:53:41,473:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:ese_physical_port:7861b62a-55fe-4e98-9bfc-10bf19052d9a:1:yiyuh],
+ action=[delete], key=[/jobs/all/create:heat_worker:ese_physical_port:887fecdd-956b-47fa-a348-8940c53a5bf9:1:hapn7],
  value=[]
-2018-03-30 00:56:57,954:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:56:57,954:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 00:56:57,954:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:56:57,954:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:56:57,955:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:57:57,916:DEBUG:
+2018-04-04 04:53:41,473:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:53:41,474:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:53:41,474:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:53:41,474:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:53:41,475:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:54:43,180:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:ese_physical_port:76001683-a8bb-4c68-8c87-7b63ea7bd5cd:1:o9rht],
+ action=[set], key=[/jobs/all/create:heat_worker:ese_physical_port:6b29894f-8694-4865-92c1-2e78360e65a6:1:xkegm],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "76001683-a8bb-4c68-8c87-7b63ea7bd5cd", 
+        "resource_id": "6b29894f-8694-4865-92c1-2e78360e65a6", 
         "handler": "heat_worker", 
-        "job_name": "ese_physical_port:76001683-a8bb-4c68-8c87-7b63ea7bd5cd:1", 
+        "job_name": "ese_physical_port:6b29894f-8694-4865-92c1-2e78360e65a6:1", 
         "dependency": [], 
         "version": 1, 
         "params": [
@@ -235,14 +235,14 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }, 
             {
                 "resources": [
                     {
                         "resource_type": "ese_device", 
-                        "resource_id": "f5429afc-cf7e-41c4-91ee-36ec403a9695"
+                        "resource_id": "3fb53223-b614-46b6-92e8-25c3bcbed214"
                     }
                 ], 
                 "type": "value", 
@@ -253,14 +253,14 @@
                 "resources": [
                     {
                         "resource_type": "ese_device", 
-                        "resource_id": "f5429afc-cf7e-41c4-91ee-36ec403a9695"
+                        "resource_id": "3fb53223-b614-46b6-92e8-25c3bcbed214"
                     }
                 ], 
                 "type": "output_key", 
                 "value": {
                     "output_key": "id", 
                     "resource_type": "ese_device", 
-                    "resource_id": "f5429afc-cf7e-41c4-91ee-36ec403a9695"
+                    "resource_id": "3fb53223-b614-46b6-92e8-25c3bcbed214"
                 }, 
                 "param": "physical_device"
             }, 
@@ -279,7 +279,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "76001683-a8bb-4c68-8c87-7b63ea7bd5cd", 
+                "value": "6b29894f-8694-4865-92c1-2e78360e65a6", 
                 "param": "gohan_id"
             }
         ], 
@@ -287,55 +287,55 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:ese_physical_port:76001683-a8bb-4c68-8c87-7b63ea7bd5cd:1:o9rht", 
+        "id": "create:heat_worker:ese_physical_port:6b29894f-8694-4865-92c1-2e78360e65a6:1:xkegm", 
         "resource_input": {
             "status": "PENDING_CREATE", 
             "connected_port_owner": "mx_downlink", 
             "tags": {}, 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
             "description": "", 
             "existing": "new", 
             "connected_port_id": "", 
             "orchestration_state": "CREATE_IN_PROGRESS", 
-            "ese_device_id": "f5429afc-cf7e-41c4-91ee-36ec403a9695", 
+            "ese_device_id": "3fb53223-b614-46b6-92e8-25c3bcbed214", 
             "operational_state": "NO_STATE", 
-            "id": "76001683-a8bb-4c68-8c87-7b63ea7bd5cd", 
+            "id": "6b29894f-8694-4865-92c1-2e78360e65a6", 
             "name": "xe-0/0/4"
         }
     }, 
     0
 ]]
-2018-03-30 00:57:57,916:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:57:57,916:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 00:57:57,916:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:57:57,916:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:57:57,917:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:58:02,292:DEBUG:
+2018-04-04 04:54:43,180:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:54:43,181:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:54:43,181:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:54:43,181:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:54:43,183:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:54:47,439:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:ese_physical_port:76001683-a8bb-4c68-8c87-7b63ea7bd5cd:1:o9rht],
+ action=[delete], key=[/jobs/all/create:heat_worker:ese_physical_port:6b29894f-8694-4865-92c1-2e78360e65a6:1:xkegm],
  value=[]
-2018-03-30 00:58:02,292:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:58:02,292:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 00:58:02,292:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:58:02,292:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:58:02,292:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:58:57,983:DEBUG:
+2018-04-04 04:54:47,440:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:54:47,440:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:54:47,440:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:54:47,440:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:54:47,442:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:55:43,494:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:edge_router:2a28fdaa-651b-4558-8825-891b93329123:1:u1k89],
+ action=[set], key=[/jobs/all/create:heat_worker:edge_router:cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78:1:a4a0e],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123", 
+        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78", 
         "handler": "heat_worker", 
-        "job_name": "edge_router:2a28fdaa-651b-4558-8825-891b93329123:1", 
+        "job_name": "edge_router:cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78:1", 
         "dependency": [], 
         "version": 1, 
         "params": [
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "2a28fdaa-651b-4558-8825-891b93329123", 
+                "value": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78", 
                 "param": "gohan_id"
             }, 
             {
@@ -347,7 +347,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "192.168.100.102", 
+                "value": "10.79.5.185", 
                 "param": "device_ip"
             }, 
             {
@@ -359,7 +359,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }
         ], 
@@ -367,16 +367,16 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:edge_router:2a28fdaa-651b-4558-8825-891b93329123:1:u1k89", 
+        "id": "create:heat_worker:edge_router:cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78:1:a4a0e", 
         "resource_input": {
             "status": "PENDING_CREATE", 
             "name": "vMX-router-02", 
             "ssh_port": 830, 
-            "ip": "192.168.100.102", 
+            "ip": "10.79.5.185", 
             "operational_state": "NO_STATE", 
             "orchestration_state": "CREATE_IN_PROGRESS", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
-            "id": "2a28fdaa-651b-4558-8825-891b93329123", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
+            "id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78", 
             "login": "esi", 
             "password": "esiesi0000", 
             "autonomous_system": "65101", 
@@ -385,37 +385,37 @@
     }, 
     0
 ]]
-2018-03-30 00:58:57,983:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:58:57,983:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 00:58:57,983:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:58:57,983:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:58:57,984:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 00:59:01,499:DEBUG:
+2018-04-04 04:55:43,495:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:55:43,495:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:55:43,495:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:55:43,496:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:55:43,498:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:55:46,058:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:edge_router:2a28fdaa-651b-4558-8825-891b93329123:1:u1k89],
+ action=[delete], key=[/jobs/all/create:heat_worker:edge_router:cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78:1:a4a0e],
  value=[]
-2018-03-30 00:59:01,499:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 00:59:01,499:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 00:59:01,499:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 00:59:01,500:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 00:59:01,500:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:00:00,074:DEBUG:
+2018-04-04 04:55:46,059:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:55:46,059:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:55:46,059:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:55:46,059:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:55:46,061:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:56:47,849:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:edge_router:43119898-9a76-400c-abdc-8d3ec2113b5d:1:bov3q],
+ action=[set], key=[/jobs/all/create:heat_worker:edge_router:ca43aedb-bc30-4355-a931-7bb1d9040659:1:t7my3],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d", 
+        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659", 
         "handler": "heat_worker", 
-        "job_name": "edge_router:43119898-9a76-400c-abdc-8d3ec2113b5d:1", 
+        "job_name": "edge_router:ca43aedb-bc30-4355-a931-7bb1d9040659:1", 
         "dependency": [], 
         "version": 1, 
         "params": [
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "43119898-9a76-400c-abdc-8d3ec2113b5d", 
+                "value": "ca43aedb-bc30-4355-a931-7bb1d9040659", 
                 "param": "gohan_id"
             }, 
             {
@@ -427,7 +427,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "192.168.100.101", 
+                "value": "10.79.5.184", 
                 "param": "device_ip"
             }, 
             {
@@ -439,7 +439,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }
         ], 
@@ -447,16 +447,16 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:edge_router:43119898-9a76-400c-abdc-8d3ec2113b5d:1:bov3q", 
+        "id": "create:heat_worker:edge_router:ca43aedb-bc30-4355-a931-7bb1d9040659:1:t7my3", 
         "resource_input": {
             "status": "PENDING_CREATE", 
             "name": "vMX-router-01", 
             "ssh_port": 830, 
-            "ip": "192.168.100.101", 
+            "ip": "10.79.5.184", 
             "operational_state": "NO_STATE", 
             "orchestration_state": "CREATE_IN_PROGRESS", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
-            "id": "43119898-9a76-400c-abdc-8d3ec2113b5d", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
+            "id": "ca43aedb-bc30-4355-a931-7bb1d9040659", 
             "login": "esi", 
             "password": "esiesi0000", 
             "autonomous_system": "65101", 
@@ -465,48 +465,48 @@
     }, 
     0
 ]]
-2018-03-30 01:00:00,074:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:00:00,074:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:00:00,074:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:00:00,074:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:00:00,075:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:00:02,489:DEBUG:
+2018-04-04 04:56:47,849:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:56:47,849:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:56:47,849:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:56:47,850:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:56:47,852:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:56:50,456:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:edge_router:43119898-9a76-400c-abdc-8d3ec2113b5d:1:bov3q],
+ action=[delete], key=[/jobs/all/create:heat_worker:edge_router:ca43aedb-bc30-4355-a931-7bb1d9040659:1:t7my3],
  value=[]
-2018-03-30 01:00:02,489:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:00:02,489:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:00:02,489:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:00:02,489:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:00:02,490:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:01:03,662:DEBUG:
+2018-04-04 04:56:50,456:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:56:50,457:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:56:50,457:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:56:50,457:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:56:50,459:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:57:54,748:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:er_physical_interface:7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d:1:3mga1],
+ action=[set], key=[/jobs/all/create:heat_worker:er_physical_interface:53712736-354c-4374-be82-6f07bea9d1bd:1:4i1bo],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d", 
+        "resource_id": "53712736-354c-4374-be82-6f07bea9d1bd", 
         "handler": "heat_worker", 
-        "job_name": "er_physical_interface:7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d:1", 
+        "job_name": "er_physical_interface:53712736-354c-4374-be82-6f07bea9d1bd:1", 
         "dependency": [], 
         "version": 1, 
         "params": [
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }, 
             {
                 "resources": [
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
-                "value": "192.168.100.102", 
+                "value": "10.79.5.185", 
                 "param": "device_ip"
             }, 
             {
@@ -530,7 +530,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d", 
+                "value": "53712736-354c-4374-be82-6f07bea9d1bd", 
                 "param": "gohan_id"
             }
         ], 
@@ -538,63 +538,63 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:er_physical_interface:7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d:1:3mga1", 
+        "id": "create:heat_worker:er_physical_interface:53712736-354c-4374-be82-6f07bea9d1bd:1:4i1bo", 
         "resource_input": {
             "status": "PENDING_CREATE", 
-            "connected_ese_port_id": "7861b62a-55fe-4e98-9bfc-10bf19052d9a", 
+            "connected_ese_port_id": "887fecdd-956b-47fa-a348-8940c53a5bf9", 
             "description": "", 
             "name": "ae0", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
             "operational_state": "NO_STATE", 
             "orchestration_state": "CREATE_IN_PROGRESS", 
-            "id": "7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d", 
-            "device_id": "2a28fdaa-651b-4558-8825-891b93329123"
+            "id": "53712736-354c-4374-be82-6f07bea9d1bd", 
+            "device_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
         }
     }, 
     0
 ]]
-2018-03-30 01:01:03,662:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:01:03,662:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:01:03,662:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:01:03,663:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:01:03,663:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:01:06,973:DEBUG:
+2018-04-04 04:57:54,748:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:57:54,749:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:57:54,749:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:57:54,749:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:57:54,751:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:57:57,279:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:er_physical_interface:7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d:1:3mga1],
+ action=[delete], key=[/jobs/all/create:heat_worker:er_physical_interface:53712736-354c-4374-be82-6f07bea9d1bd:1:4i1bo],
  value=[]
-2018-03-30 01:01:06,973:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:01:06,973:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:01:06,973:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:01:06,974:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:01:06,974:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:02:05,882:DEBUG:
+2018-04-04 04:57:57,280:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:57:57,280:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:57:57,280:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:57:57,281:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:57:57,282:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:58:59,544:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:er_physical_interface:372f28d1-8fb2-4bb1-9b42-cfc30515735a:1:dhby6],
+ action=[set], key=[/jobs/all/create:heat_worker:er_physical_interface:d108a472-81ab-43a0-8c49-e0d1a46e6128:1:jo3rt],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "372f28d1-8fb2-4bb1-9b42-cfc30515735a", 
+        "resource_id": "d108a472-81ab-43a0-8c49-e0d1a46e6128", 
         "handler": "heat_worker", 
-        "job_name": "er_physical_interface:372f28d1-8fb2-4bb1-9b42-cfc30515735a:1", 
+        "job_name": "er_physical_interface:d108a472-81ab-43a0-8c49-e0d1a46e6128:1", 
         "dependency": [], 
         "version": 1, 
         "params": [
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }, 
             {
                 "resources": [
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
-                "value": "192.168.100.101", 
+                "value": "10.79.5.184", 
                 "param": "device_ip"
             }, 
             {
@@ -618,7 +618,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "372f28d1-8fb2-4bb1-9b42-cfc30515735a", 
+                "value": "d108a472-81ab-43a0-8c49-e0d1a46e6128", 
                 "param": "gohan_id"
             }
         ], 
@@ -626,45 +626,45 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:er_physical_interface:372f28d1-8fb2-4bb1-9b42-cfc30515735a:1:dhby6", 
+        "id": "create:heat_worker:er_physical_interface:d108a472-81ab-43a0-8c49-e0d1a46e6128:1:jo3rt", 
         "resource_input": {
             "status": "PENDING_CREATE", 
-            "connected_ese_port_id": "76001683-a8bb-4c68-8c87-7b63ea7bd5cd", 
+            "connected_ese_port_id": "6b29894f-8694-4865-92c1-2e78360e65a6", 
             "description": "", 
             "name": "ae0", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
             "operational_state": "NO_STATE", 
             "orchestration_state": "CREATE_IN_PROGRESS", 
-            "id": "372f28d1-8fb2-4bb1-9b42-cfc30515735a", 
-            "device_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+            "id": "d108a472-81ab-43a0-8c49-e0d1a46e6128", 
+            "device_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
         }
     }, 
     0
 ]]
-2018-03-30 01:02:05,882:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:02:05,882:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:02:05,882:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:02:05,883:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:02:05,883:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:02:09,284:DEBUG:
+2018-04-04 04:58:59,544:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:58:59,545:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:58:59,545:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:58:59,545:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:58:59,547:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 04:59:02,062:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:er_physical_interface:372f28d1-8fb2-4bb1-9b42-cfc30515735a:1:dhby6],
+ action=[delete], key=[/jobs/all/create:heat_worker:er_physical_interface:d108a472-81ab-43a0-8c49-e0d1a46e6128:1:jo3rt],
  value=[]
-2018-03-30 01:02:09,284:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:02:09,284:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:02:09,284:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:02:09,284:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:02:09,285:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:03:32,149:DEBUG:
+2018-04-04 04:59:02,062:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 04:59:02,062:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 04:59:02,062:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 04:59:02,063:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 04:59:02,065:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:00:29,166:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:internet_gateway:d4e4e75c-8c02-420f-9eda-fa5771c3bad6:1:kbzvs],
+ action=[set], key=[/jobs/all/create:heat_worker:internet_gateway:f6e8c695-c4c1-4a93-9b7e-1663aee6dec9:1:5duk4],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6", 
+        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9", 
         "handler": "heat_worker", 
-        "job_name": "internet_gateway:d4e4e75c-8c02-420f-9eda-fa5771c3bad6:1", 
+        "job_name": "internet_gateway:f6e8c695-c4c1-4a93-9b7e-1663aee6dec9:1", 
         "dependency": [], 
         "version": 1, 
         "params": [
@@ -672,7 +672,7 @@
                 "resources": [
                     {
                         "resource_type": "internet_service", 
-                        "resource_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24"
+                        "resource_id": "986a140f-81da-4e5c-afc3-26f463a85786"
                     }
                 ], 
                 "type": "value", 
@@ -683,11 +683,11 @@
                 "resources": [
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "er_physical_interface", 
-                        "resource_id": "372f28d1-8fb2-4bb1-9b42-cfc30515735a"
+                        "resource_id": "d108a472-81ab-43a0-8c49-e0d1a46e6128"
                     }
                 ], 
                 "type": "value", 
@@ -710,15 +710,15 @@
                 "resources": [
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
@@ -728,14 +728,14 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6", 
+                "value": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9", 
                 "param": "gohan_id"
             }, 
             {
                 "resources": [
                     {
                         "resource_type": "internet_service", 
-                        "resource_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24"
+                        "resource_id": "986a140f-81da-4e5c-afc3-26f463a85786"
                     }
                 ], 
                 "type": "value", 
@@ -752,7 +752,7 @@
                 "resources": [
                     {
                         "resource_type": "internet_service", 
-                        "resource_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24"
+                        "resource_id": "986a140f-81da-4e5c-afc3-26f463a85786"
                     }
                 ], 
                 "type": "value", 
@@ -763,7 +763,7 @@
                 "resources": [
                     {
                         "resource_type": "qos_option", 
-                        "resource_id": "e6a65b22-6f74-4c9c-af6a-a393e70c66ac"
+                        "resource_id": "0e6b35d9-d74d-4d3a-922a-d79b9df9b78c"
                     }
                 ], 
                 "type": "value", 
@@ -774,7 +774,7 @@
                 "resources": [
                     {
                         "resource_type": "internet_service", 
-                        "resource_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24"
+                        "resource_id": "986a140f-81da-4e5c-afc3-26f463a85786"
                     }
                 ], 
                 "type": "value", 
@@ -785,19 +785,19 @@
                 "resources": [
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
-                "value": "192.168.100.102", 
+                "value": "10.79.5.185", 
                 "param": "primary_device_ip"
             }, 
             {
@@ -810,7 +810,7 @@
                 "resources": [
                     {
                         "resource_type": "internet_service", 
-                        "resource_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24"
+                        "resource_id": "986a140f-81da-4e5c-afc3-26f463a85786"
                     }
                 ], 
                 "type": "value", 
@@ -821,15 +821,15 @@
                 "resources": [
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
@@ -852,7 +852,7 @@
                 "resources": [
                     {
                         "resource_type": "internet_service", 
-                        "resource_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24"
+                        "resource_id": "986a140f-81da-4e5c-afc3-26f463a85786"
                     }
                 ], 
                 "type": "value", 
@@ -869,11 +869,11 @@
                 "resources": [
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "er_physical_interface", 
-                        "resource_id": "7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d"
+                        "resource_id": "53712736-354c-4374-be82-6f07bea9d1bd"
                     }
                 ], 
                 "type": "value", 
@@ -884,7 +884,7 @@
                 "resources": [
                     {
                         "resource_type": "internet_service", 
-                        "resource_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24"
+                        "resource_id": "986a140f-81da-4e5c-afc3-26f463a85786"
                     }
                 ], 
                 "type": "value", 
@@ -895,7 +895,7 @@
                 "resources": [
                     {
                         "resource_type": "qos_option", 
-                        "resource_id": "e6a65b22-6f74-4c9c-af6a-a393e70c66ac"
+                        "resource_id": "0e6b35d9-d74d-4d3a-922a-d79b9df9b78c"
                     }
                 ], 
                 "type": "value", 
@@ -911,22 +911,22 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }, 
             {
                 "resources": [
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
@@ -937,15 +937,15 @@
                 "resources": [
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
@@ -968,7 +968,7 @@
                 "resources": [
                     {
                         "resource_type": "internet_service", 
-                        "resource_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24"
+                        "resource_id": "986a140f-81da-4e5c-afc3-26f463a85786"
                     }
                 ], 
                 "type": "value", 
@@ -979,15 +979,15 @@
                 "resources": [
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
@@ -998,15 +998,15 @@
                 "resources": [
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
@@ -1017,19 +1017,19 @@
                 "resources": [
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
-                "value": "192.168.100.101", 
+                "value": "10.79.5.184", 
                 "param": "secondary_device_ip"
             }
         ], 
@@ -1037,50 +1037,50 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:internet_gateway:d4e4e75c-8c02-420f-9eda-fa5771c3bad6:1:kbzvs", 
+        "id": "create:heat_worker:internet_gateway:f6e8c695-c4c1-4a93-9b7e-1663aee6dec9:1:5duk4", 
         "resource_input": {
             "status": "PENDING_CREATE", 
             "secondary_logical_interface_name": "ae0.1025", 
             "name": "sample-internet-gateway", 
             "primary_logical_interface_name": "ae0.1025", 
-            "downlink_interface_id": "54a252d3-8248-45b1-b67e-2f13e00b5005", 
-            "internet_service_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24", 
-            "qos_option_id": "e6a65b22-6f74-4c9c-af6a-a393e70c66ac", 
+            "downlink_interface_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e", 
+            "internet_service_id": "986a140f-81da-4e5c-afc3-26f463a85786", 
+            "qos_option_id": "0e6b35d9-d74d-4d3a-922a-d79b9df9b78c", 
             "vrf_name": "vrf_gw_sample-ha-router-downlink_1025", 
             "maximum_static_routes": 32, 
             "orchestration_state": "CREATE_IN_PROGRESS", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
-            "id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
+            "id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9", 
             "vlan_id": "1025", 
             "description": "Sample Internet-gateway"
         }
     }, 
     0
 ]]
-2018-03-30 01:03:32,150:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:03:32,150:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:03:32,150:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:03:32,150:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:03:32,151:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:03:49,277:DEBUG:
+2018-04-04 05:00:29,166:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:00:29,166:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:00:29,166:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:00:29,167:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:00:29,170:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:00:49,714:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:internet_gateway:d4e4e75c-8c02-420f-9eda-fa5771c3bad6:1:kbzvs],
+ action=[delete], key=[/jobs/all/create:heat_worker:internet_gateway:f6e8c695-c4c1-4a93-9b7e-1663aee6dec9:1:5duk4],
  value=[]
-2018-03-30 01:03:49,277:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:03:49,277:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:03:49,277:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:03:49,278:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:03:49,278:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:01,729:DEBUG:
+2018-04-04 05:00:49,714:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:00:49,715:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:00:49,715:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:00:49,716:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:00:49,718:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:03,801:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:public_ip:6f583980-3f9e-458f-8f68-f42a7adfb211:1:4sigm],
+ action=[set], key=[/jobs/all/create:heat_worker:public_ip:d5622781-f06a-4fad-b800-b577a05ad8b2:1:91crv],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "6f583980-3f9e-458f-8f68-f42a7adfb211", 
+        "resource_id": "d5622781-f06a-4fad-b800-b577a05ad8b2", 
         "handler": "heat_worker", 
-        "job_name": "public_ip:6f583980-3f9e-458f-8f68-f42a7adfb211:1", 
+        "job_name": "public_ip:d5622781-f06a-4fad-b800-b577a05ad8b2:1", 
         "dependency": [], 
         "version": 1, 
         "params": [
@@ -1088,19 +1088,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
@@ -1111,19 +1111,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
@@ -1134,19 +1134,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
@@ -1157,23 +1157,23 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
-                "value": "192.168.100.102", 
+                "value": "10.79.5.185", 
                 "param": "primary_device_ip"
             }, 
             {
@@ -1198,19 +1198,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
@@ -1221,19 +1221,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
@@ -1244,19 +1244,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
@@ -1267,30 +1267,30 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
-                "value": "192.168.100.101", 
+                "value": "10.79.5.184", 
                 "param": "secondary_device_ip"
             }, 
             {
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }
                 ], 
                 "type": "value", 
@@ -1302,53 +1302,53 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:public_ip:6f583980-3f9e-458f-8f68-f42a7adfb211:1:4sigm", 
+        "id": "create:heat_worker:public_ip:d5622781-f06a-4fad-b800-b577a05ad8b2:1:91crv", 
         "resource_input": {
             "status": "PENDING_CREATE", 
             "description": "Sample Public-Ip", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
-            "ip_pool_id": "874dd765-93d7-454f-8f8d-0c6f7e8bcac2", 
-            "internet_gw_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
+            "ip_pool_id": "c8072205-8aec-4fb5-9437-03900c14127a", 
+            "internet_gw_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9", 
             "orchestration_state": "CREATE_IN_PROGRESS", 
             "cidr": "203.0.112.0", 
             "submask_length": 28, 
-            "id": "6f583980-3f9e-458f-8f68-f42a7adfb211", 
+            "id": "d5622781-f06a-4fad-b800-b577a05ad8b2", 
             "name": "sample-public_ip"
         }
     }, 
     0
 ]]
-2018-03-30 01:04:01,729:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:01,729:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:04:01,729:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:01,729:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:01,730:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:09,422:DEBUG:
+2018-04-04 05:01:03,801:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:03,802:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:01:03,802:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:03,802:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:03,804:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:13,265:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:public_ip:6f583980-3f9e-458f-8f68-f42a7adfb211:1:4sigm],
+ action=[delete], key=[/jobs/all/create:heat_worker:public_ip:d5622781-f06a-4fad-b800-b577a05ad8b2:1:91crv],
  value=[]
-2018-03-30 01:04:09,422:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:09,422:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:04:09,422:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:09,422:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:09,423:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:21,638:DEBUG:
+2018-04-04 05:01:13,266:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:13,266:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:01:13,266:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:13,267:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:13,268:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:27,483:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:network:73f88c22-ae22-4fb7-86b3-9acb141b8809:1:521i5],
+ action=[set], key=[/jobs/all/create:heat_worker:network:6e557507-1c2a-49b1-ba90-5f616a1f1f3e:1:tlbso],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
+        "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
         "handler": "heat_worker", 
-        "job_name": "network:73f88c22-ae22-4fb7-86b3-9acb141b8809:1", 
+        "job_name": "network:6e557507-1c2a-49b1-ba90-5f616a1f1f3e:1", 
         "dependency": [], 
         "version": 1, 
         "params": [
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
+                "value": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
                 "param": "uuid"
             }, 
             {
@@ -1360,7 +1360,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
+                "value": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
                 "param": "name"
             }, 
             {
@@ -1374,54 +1374,54 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:network:73f88c22-ae22-4fb7-86b3-9acb141b8809:1:521i5", 
+        "id": "create:heat_worker:network:6e557507-1c2a-49b1-ba90-5f616a1f1f3e:1:tlbso", 
         "resource_input": {
             "status": "PENDING_CREATE", 
             "subnets": [], 
             "description": "Sample Network", 
             "tags": {}, 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
             "admin_state_up": true, 
             "plane": "data", 
             "orchestration_state": "CREATE_IN_PROGRESS", 
             "shared": false, 
-            "id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
+            "id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
             "name": "sample-network"
         }
     }, 
     0
 ]]
-2018-03-30 01:04:21,638:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:21,638:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:04:21,638:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:21,638:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:21,639:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:25,072:DEBUG:
+2018-04-04 05:01:27,484:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:27,484:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:01:27,484:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:27,485:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:27,486:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:30,260:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:network:73f88c22-ae22-4fb7-86b3-9acb141b8809:1:521i5],
+ action=[delete], key=[/jobs/all/create:heat_worker:network:6e557507-1c2a-49b1-ba90-5f616a1f1f3e:1:tlbso],
  value=[]
-2018-03-30 01:04:25,072:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:25,072:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:04:25,072:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:25,072:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:25,075:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:37,717:DEBUG:
+2018-04-04 05:01:30,261:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:30,261:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:01:30,261:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:30,261:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:30,264:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:44,956:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:subnet:8fca93d6-5f0b-413d-98e0-74c3d1bacf07:1:g47sk],
+ action=[set], key=[/jobs/all/create:heat_worker:subnet:67877f2d-0547-4cea-a6ce-2e3b937aa31b:1:gqv2s],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+        "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
         "handler": "heat_worker", 
-        "job_name": "subnet:8fca93d6-5f0b-413d-98e0-74c3d1bacf07:1", 
+        "job_name": "subnet:67877f2d-0547-4cea-a6ce-2e3b937aa31b:1", 
         "dependency": [], 
         "version": 1, 
         "params": [
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                "value": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                 "param": "name"
             }, 
             {
@@ -1434,14 +1434,14 @@
                 "resources": [
                     {
                         "resource_type": "network", 
-                        "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809"
+                        "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
                     }
                 ], 
                 "type": "output_key", 
                 "value": {
                     "output_key": "id", 
                     "resource_type": "network", 
-                    "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809"
+                    "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
                 }, 
                 "param": "network_id"
             }, 
@@ -1509,14 +1509,14 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:subnet:8fca93d6-5f0b-413d-98e0-74c3d1bacf07:1:g47sk", 
+        "id": "create:heat_worker:subnet:67877f2d-0547-4cea-a6ce-2e3b937aa31b:1:gqv2s", 
         "resource_input": {
             "status": "PENDING_CREATE", 
             "description": "Sample Subnet", 
             "enable_dhcp": true, 
             "tags": {}, 
-            "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+            "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
             "dns_nameservers": [], 
             "dhcp_server_address": "172.16.101.2", 
             "ntp_servers": [], 
@@ -1531,36 +1531,36 @@
             "ip_version": 4, 
             "host_routes": [], 
             "cidr": "172.16.101.0/24", 
-            "id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+            "id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
             "name": "sample-subnet"
         }
     }, 
     0
 ]]
-2018-03-30 01:04:37,717:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:37,718:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:04:37,718:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:37,718:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:37,718:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:41,347:DEBUG:
+2018-04-04 05:01:44,956:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:44,956:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:01:44,956:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:44,957:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:44,958:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:01:47,896:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:subnet:8fca93d6-5f0b-413d-98e0-74c3d1bacf07:1:g47sk],
+ action=[delete], key=[/jobs/all/create:heat_worker:subnet:67877f2d-0547-4cea-a6ce-2e3b937aa31b:1:gqv2s],
  value=[]
-2018-03-30 01:04:41,348:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:41,348:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:04:41,348:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:41,348:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:41,348:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:54,053:DEBUG:
+2018-04-04 05:01:47,897:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:01:47,897:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:01:47,897:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:01:47,898:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:01:47,900:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:03,436:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:gw_interface:d84ce543-bc58-4844-b861-4a6d79fb2e48:1:rt8tq],
+ action=[set], key=[/jobs/all/create:heat_worker:gw_interface:ce8831fd-d30c-41e3-95de-feaee0b95405:1:y9zyx],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+        "resource_id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
         "handler": "heat_worker", 
-        "job_name": "gw_interface:d84ce543-bc58-4844-b861-4a6d79fb2e48:1", 
+        "job_name": "gw_interface:ce8831fd-d30c-41e3-95de-feaee0b95405:1", 
         "dependency": [], 
         "version": 1, 
         "params": [
@@ -1568,15 +1568,15 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "er_physical_interface", 
-                        "resource_id": "372f28d1-8fb2-4bb1-9b42-cfc30515735a"
+                        "resource_id": "d108a472-81ab-43a0-8c49-e0d1a46e6128"
                     }
                 ], 
                 "type": "value", 
@@ -1587,11 +1587,11 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "internet_service", 
-                        "resource_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24"
+                        "resource_id": "986a140f-81da-4e5c-afc3-26f463a85786"
                     }
                 ], 
                 "type": "value", 
@@ -1602,19 +1602,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
@@ -1630,7 +1630,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+                "value": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
                 "param": "gohan_id"
             }, 
             {
@@ -1649,23 +1649,23 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
-                "value": "192.168.100.102", 
+                "value": "10.79.5.185", 
                 "param": "primary_device_ip"
             }, 
             {
@@ -1678,19 +1678,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
@@ -1701,7 +1701,7 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }
                 ], 
                 "type": "value", 
@@ -1712,7 +1712,7 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }
                 ], 
                 "type": "value", 
@@ -1729,7 +1729,7 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }
                 ], 
                 "type": "value", 
@@ -1740,15 +1740,15 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "er_physical_interface", 
-                        "resource_id": "7dd45d1b-1ca1-4735-9a3e-8b7e09125e0d"
+                        "resource_id": "53712736-354c-4374-be82-6f07bea9d1bd"
                     }
                 ], 
                 "type": "value", 
@@ -1783,36 +1783,36 @@
                 "resources": [
                     {
                         "resource_type": "network", 
-                        "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809"
+                        "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
                     }
                 ], 
                 "type": "value", 
-                "value": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
+                "value": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
                 "param": "jinja_force_dependency"
             }, 
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }, 
             {
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
@@ -1823,19 +1823,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
@@ -1852,7 +1852,7 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }
                 ], 
                 "type": "value", 
@@ -1863,19 +1863,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
@@ -1892,11 +1892,11 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "internet_service", 
-                        "resource_id": "e8a97c54-3446-4a55-9e3f-f9045cd97b24"
+                        "resource_id": "986a140f-81da-4e5c-afc3-26f463a85786"
                     }
                 ], 
                 "type": "value", 
@@ -1907,19 +1907,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
@@ -1930,23 +1930,23 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
-                "value": "192.168.100.101", 
+                "value": "10.79.5.184", 
                 "param": "secondary_device_ip"
             }
         ], 
@@ -1954,44 +1954,44 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:gw_interface:d84ce543-bc58-4844-b861-4a6d79fb2e48:1:rt8tq", 
+        "id": "create:heat_worker:gw_interface:ce8831fd-d30c-41e3-95de-feaee0b95405:1:y9zyx", 
         "resource_input": {
             "status": "PENDING_CREATE", 
             "secondary_ipv4": "172.16.101.153", 
             "gw_vipv4": "172.16.101.151", 
             "description": "Sample Gw-interface", 
-            "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
-            "internet_gw_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6", 
+            "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
+            "internet_gw_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9", 
             "vrid": 20, 
             "primary_ipv4": "172.16.101.152", 
             "operational_state": "NO_STATE", 
             "netmask": 24, 
             "orchestration_state": "CREATE_IN_PROGRESS", 
             "service_type": "internet", 
-            "id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+            "id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
             "name": "sample-gw-interface"
         }
     }, 
     0
 ]]
-2018-03-30 01:04:54,053:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:54,053:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:04:54,053:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:54,053:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:54,054:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:54,283:DEBUG:
+2018-04-04 05:02:03,437:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:03,437:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:03,437:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:03,437:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:03,440:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:03,531:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:port:7413e81d-f895-4527-ba5d-a86ffb663258:1:ghhjj],
+ action=[set], key=[/jobs/all/create:heat_worker:port:f3867a99-de18-4512-8e94-f9aaa7b05c3a:1:wrrh0],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "7413e81d-f895-4527-ba5d-a86ffb663258", 
+        "resource_id": "f3867a99-de18-4512-8e94-f9aaa7b05c3a", 
         "handler": "heat_worker", 
-        "job_name": "port:7413e81d-f895-4527-ba5d-a86ffb663258:1", 
+        "job_name": "port:f3867a99-de18-4512-8e94-f9aaa7b05c3a:1", 
         "dependency": [
-            "create:heat_worker:gw_interface:d84ce543-bc58-4844-b861-4a6d79fb2e48:1:rt8tq"
+            "create:heat_worker:gw_interface:ce8831fd-d30c-41e3-95de-feaee0b95405:1:y9zyx"
         ], 
         "version": 1, 
         "params": [
@@ -2005,27 +2005,27 @@
                 "resources": [
                     {
                         "resource_type": "network", 
-                        "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809"
+                        "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
                     }
                 ], 
                 "type": "output_key", 
                 "value": {
                     "output_key": "id", 
                     "resource_type": "network", 
-                    "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809"
+                    "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
                 }, 
                 "param": "virtual_network"
             }, 
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+                "value": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
                 "param": "virtual_machine"
             }, 
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "7413e81d-f895-4527-ba5d-a86ffb663258", 
+                "value": "f3867a99-de18-4512-8e94-f9aaa7b05c3a", 
                 "param": "name"
             }, 
             {
@@ -2037,7 +2037,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }, 
             {
@@ -2055,7 +2055,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "fa:16:3e:19:71:4b", 
+                "value": "fa:16:3e:c5:2b:92", 
                 "param": "virtual_machine_interface_mac_address"
             }, 
             {
@@ -2080,11 +2080,11 @@
                 "resources": [
                     {
                         "resource_type": "gw_interface", 
-                        "resource_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48"
+                        "resource_id": "ce8831fd-d30c-41e3-95de-feaee0b95405"
                     }
                 ], 
                 "type": "value", 
-                "value": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+                "value": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
                 "param": "jinja_force_dependency_gw_interface"
             }, 
             {
@@ -2092,11 +2092,11 @@
                 "type": "value", 
                 "value": [
                     {
-                        "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                        "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                         "ip_address": "172.16.101.151"
                     }, 
                     {
-                        "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                        "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                         "ip_address": "172.16.101.152"
                     }
                 ], 
@@ -2118,11 +2118,11 @@
                 "resources": [
                     {
                         "resource_type": "subnet", 
-                        "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                        "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                     }, 
                     {
                         "resource_type": "subnet", 
-                        "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                        "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                     }
                 ], 
                 "type": "list", 
@@ -2133,7 +2133,7 @@
                         "value": {
                             "output_key": "id", 
                             "resource_type": "subnet", 
-                            "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                            "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                         }, 
                         "resources": []
                     }, 
@@ -2143,7 +2143,7 @@
                         "value": {
                             "output_key": "id", 
                             "resource_type": "subnet", 
-                            "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                            "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                         }, 
                         "resources": []
                     }
@@ -2153,7 +2153,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "7413e81d-f895-4527-ba5d-a86ffb663258", 
+                "value": "f3867a99-de18-4512-8e94-f9aaa7b05c3a", 
                 "param": "uuid"
             }
         ], 
@@ -2161,34 +2161,34 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:port:7413e81d-f895-4527-ba5d-a86ffb663258:1:ghhjj", 
+        "id": "create:heat_worker:port:f3867a99-de18-4512-8e94-f9aaa7b05c3a:1:wrrh0", 
         "resource_input": {
             "allowed_address_pairs": [], 
             "device_owner": "network:gw_interface", 
             "fake_delete": false, 
             "fixed_ips": [
                 {
-                    "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                    "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                     "ip_address": "172.16.101.151"
                 }, 
                 {
-                    "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                    "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                     "ip_address": "172.16.101.152"
                 }
             ], 
-            "id": "7413e81d-f895-4527-ba5d-a86ffb663258", 
+            "id": "f3867a99-de18-4512-8e94-f9aaa7b05c3a", 
             "security_groups": [], 
             "binding:vif_type": "vrouter", 
-            "mac_address": "fa:16:3e:19:71:4b", 
+            "mac_address": "fa:16:3e:c5:2b:92", 
             "status": "PENDING_CREATE", 
             "description": "", 
             "tags": {}, 
             "segmentation_id": 1025, 
-            "device_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
-            "name": "Port for : 7861b62a-55fe-4e98-9bfc-10bf19052d9a", 
+            "device_id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
+            "name": "Port for : 887fecdd-956b-47fa-a348-8940c53a5bf9", 
             "managed_by_service": true, 
-            "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+            "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
             "admin_state_up": true, 
             "attached": false, 
             "operational_state": "NO_STATE", 
@@ -2198,23 +2198,23 @@
     }, 
     0
 ]]
-2018-03-30 01:04:54,283:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:54,284:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:04:54,284:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:54,284:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:54,284:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:54,459:DEBUG:
+2018-04-04 05:02:03,531:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:03,531:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:03,531:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:03,532:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:03,533:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:03,577:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:ese_logical_port:ecf42487-2aef-4e27-931c-8517b1632d49:1:14txm],
+ action=[set], key=[/jobs/all/create:heat_worker:ese_logical_port:02112bb1-389c-4ff8-9354-94ab43459892:1:7a64g],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "ecf42487-2aef-4e27-931c-8517b1632d49", 
+        "resource_id": "02112bb1-389c-4ff8-9354-94ab43459892", 
         "handler": "heat_worker", 
-        "job_name": "ese_logical_port:ecf42487-2aef-4e27-931c-8517b1632d49:1", 
+        "job_name": "ese_logical_port:02112bb1-389c-4ff8-9354-94ab43459892:1", 
         "dependency": [
-            "create:heat_worker:port:7413e81d-f895-4527-ba5d-a86ffb663258:1:ghhjj"
+            "create:heat_worker:port:f3867a99-de18-4512-8e94-f9aaa7b05c3a:1:wrrh0"
         ], 
         "version": 1, 
         "params": [
@@ -2233,18 +2233,18 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }, 
             {
                 "resources": [
                     {
                         "resource_type": "ese_physical_port", 
-                        "resource_id": "7861b62a-55fe-4e98-9bfc-10bf19052d9a"
+                        "resource_id": "887fecdd-956b-47fa-a348-8940c53a5bf9"
                     }, 
                     {
                         "resource_type": "ese_device", 
-                        "resource_id": "f5429afc-cf7e-41c4-91ee-36ec403a9695"
+                        "resource_id": "3fb53223-b614-46b6-92e8-25c3bcbed214"
                     }
                 ], 
                 "type": "value", 
@@ -2261,7 +2261,7 @@
                 "resources": [], 
                 "type": "value", 
                 "value": [
-                    "7413e81d-f895-4527-ba5d-a86ffb663258"
+                    "f3867a99-de18-4512-8e94-f9aaa7b05c3a"
                 ], 
                 "param": "jinja_port_ids"
             }, 
@@ -2275,7 +2275,7 @@
                 "resources": [
                     {
                         "resource_type": "port", 
-                        "resource_id": "7413e81d-f895-4527-ba5d-a86ffb663258"
+                        "resource_id": "f3867a99-de18-4512-8e94-f9aaa7b05c3a"
                     }
                 ], 
                 "type": "list", 
@@ -2286,7 +2286,7 @@
                         "value": {
                             "output_key": "id", 
                             "resource_type": "port", 
-                            "resource_id": "7413e81d-f895-4527-ba5d-a86ffb663258"
+                            "resource_id": "f3867a99-de18-4512-8e94-f9aaa7b05c3a"
                         }, 
                         "resources": []
                     }
@@ -2302,21 +2302,21 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "ecf42487-2aef-4e27-931c-8517b1632d49", 
+                "value": "02112bb1-389c-4ff8-9354-94ab43459892", 
                 "param": "gohan_id"
             }, 
             {
                 "resources": [
                     {
                         "resource_type": "ese_physical_port", 
-                        "resource_id": "7861b62a-55fe-4e98-9bfc-10bf19052d9a"
+                        "resource_id": "887fecdd-956b-47fa-a348-8940c53a5bf9"
                     }
                 ], 
                 "type": "output_key", 
                 "value": {
                     "output_key": "id", 
                     "resource_type": "ese_physical_port", 
-                    "resource_id": "7861b62a-55fe-4e98-9bfc-10bf19052d9a"
+                    "resource_id": "887fecdd-956b-47fa-a348-8940c53a5bf9"
                 }, 
                 "param": "physical_port_id"
             }
@@ -2325,46 +2325,46 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:ese_logical_port:ecf42487-2aef-4e27-931c-8517b1632d49:1:14txm", 
+        "id": "create:heat_worker:ese_logical_port:02112bb1-389c-4ff8-9354-94ab43459892:1:7a64g", 
         "resource_input": {
             "status": "PENDING_CREATE", 
             "name": "xe-0/0/3.1025", 
             "tags": {}, 
-            "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-            "gw_interface_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+            "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+            "gw_interface_id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
             "port_ids": [
-                "7413e81d-f895-4527-ba5d-a86ffb663258"
+                "f3867a99-de18-4512-8e94-f9aaa7b05c3a"
             ], 
             "operational_state": "NO_STATE", 
             "vlan_id": 1025, 
-            "ese_physical_port_id": "7861b62a-55fe-4e98-9bfc-10bf19052d9a", 
+            "ese_physical_port_id": "887fecdd-956b-47fa-a348-8940c53a5bf9", 
             "orchestration_state": "CREATE_IN_PROGRESS", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
             "type": "L2", 
-            "id": "ecf42487-2aef-4e27-931c-8517b1632d49", 
+            "id": "02112bb1-389c-4ff8-9354-94ab43459892", 
             "connected_resource": "gw_interface", 
-            "description": "ESE Logical port for Port 7413e81d-f895-4527-ba5d-a86ffb663258"
+            "description": "ESE Logical port for Port f3867a99-de18-4512-8e94-f9aaa7b05c3a"
         }
     }, 
     0
 ]]
-2018-03-30 01:04:54,460:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:54,460:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:04:54,460:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:54,460:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:54,460:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:54,695:DEBUG:
+2018-04-04 05:02:03,577:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:03,578:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:03,578:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:03,578:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:03,579:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:03,646:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:port:4fca361d-fdaf-4b92-81a8-a4cdd767cad4:1:ue9pj],
+ action=[set], key=[/jobs/all/create:heat_worker:port:ce965922-538a-4335-9644-7a98dce9fb47:1:39xjr],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "4fca361d-fdaf-4b92-81a8-a4cdd767cad4", 
+        "resource_id": "ce965922-538a-4335-9644-7a98dce9fb47", 
         "handler": "heat_worker", 
-        "job_name": "port:4fca361d-fdaf-4b92-81a8-a4cdd767cad4:1", 
+        "job_name": "port:ce965922-538a-4335-9644-7a98dce9fb47:1", 
         "dependency": [
-            "create:heat_worker:gw_interface:d84ce543-bc58-4844-b861-4a6d79fb2e48:1:rt8tq"
+            "create:heat_worker:gw_interface:ce8831fd-d30c-41e3-95de-feaee0b95405:1:y9zyx"
         ], 
         "version": 1, 
         "params": [
@@ -2378,27 +2378,27 @@
                 "resources": [
                     {
                         "resource_type": "network", 
-                        "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809"
+                        "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
                     }
                 ], 
                 "type": "output_key", 
                 "value": {
                     "output_key": "id", 
                     "resource_type": "network", 
-                    "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809"
+                    "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
                 }, 
                 "param": "virtual_network"
             }, 
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+                "value": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
                 "param": "virtual_machine"
             }, 
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "4fca361d-fdaf-4b92-81a8-a4cdd767cad4", 
+                "value": "ce965922-538a-4335-9644-7a98dce9fb47", 
                 "param": "name"
             }, 
             {
@@ -2410,7 +2410,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }, 
             {
@@ -2428,7 +2428,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "fa:16:3e:b1:3d:bf", 
+                "value": "fa:16:3e:41:7c:23", 
                 "param": "virtual_machine_interface_mac_address"
             }, 
             {
@@ -2453,11 +2453,11 @@
                 "resources": [
                     {
                         "resource_type": "gw_interface", 
-                        "resource_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48"
+                        "resource_id": "ce8831fd-d30c-41e3-95de-feaee0b95405"
                     }
                 ], 
                 "type": "value", 
-                "value": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+                "value": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
                 "param": "jinja_force_dependency_gw_interface"
             }, 
             {
@@ -2465,7 +2465,7 @@
                 "type": "value", 
                 "value": [
                     {
-                        "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                        "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                         "ip_address": "172.16.101.153"
                     }
                 ], 
@@ -2487,7 +2487,7 @@
                 "resources": [
                     {
                         "resource_type": "subnet", 
-                        "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                        "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                     }
                 ], 
                 "type": "list", 
@@ -2498,7 +2498,7 @@
                         "value": {
                             "output_key": "id", 
                             "resource_type": "subnet", 
-                            "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                            "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                         }, 
                         "resources": []
                     }
@@ -2508,7 +2508,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "4fca361d-fdaf-4b92-81a8-a4cdd767cad4", 
+                "value": "ce965922-538a-4335-9644-7a98dce9fb47", 
                 "param": "uuid"
             }
         ], 
@@ -2516,30 +2516,30 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:port:4fca361d-fdaf-4b92-81a8-a4cdd767cad4:1:ue9pj", 
+        "id": "create:heat_worker:port:ce965922-538a-4335-9644-7a98dce9fb47:1:39xjr", 
         "resource_input": {
             "allowed_address_pairs": [], 
             "device_owner": "network:gw_interface", 
             "fake_delete": false, 
             "fixed_ips": [
                 {
-                    "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                    "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                     "ip_address": "172.16.101.153"
                 }
             ], 
-            "id": "4fca361d-fdaf-4b92-81a8-a4cdd767cad4", 
+            "id": "ce965922-538a-4335-9644-7a98dce9fb47", 
             "security_groups": [], 
             "binding:vif_type": "vrouter", 
-            "mac_address": "fa:16:3e:b1:3d:bf", 
+            "mac_address": "fa:16:3e:41:7c:23", 
             "status": "PENDING_CREATE", 
             "description": "", 
             "tags": {}, 
             "segmentation_id": 1025, 
-            "device_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
-            "name": "Port for : 76001683-a8bb-4c68-8c87-7b63ea7bd5cd", 
+            "device_id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
+            "name": "Port for : 6b29894f-8694-4865-92c1-2e78360e65a6", 
             "managed_by_service": true, 
-            "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+            "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
             "admin_state_up": true, 
             "attached": false, 
             "operational_state": "NO_STATE", 
@@ -2549,23 +2549,23 @@
     }, 
     0
 ]]
-2018-03-30 01:04:54,695:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:54,695:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:04:54,695:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:54,695:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:54,696:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:04:55,032:DEBUG:
+2018-04-04 05:02:03,646:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:03,646:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:03,646:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:03,647:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:03,648:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:03,698:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:ese_logical_port:d87b39f3-d117-46b4-ad1d-5b606d651b4f:1:llb22],
+ action=[set], key=[/jobs/all/create:heat_worker:ese_logical_port:aabc9b64-ec2c-4894-a6a8-ee0ea429c066:1:f6hf7],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "d87b39f3-d117-46b4-ad1d-5b606d651b4f", 
+        "resource_id": "aabc9b64-ec2c-4894-a6a8-ee0ea429c066", 
         "handler": "heat_worker", 
-        "job_name": "ese_logical_port:d87b39f3-d117-46b4-ad1d-5b606d651b4f:1", 
+        "job_name": "ese_logical_port:aabc9b64-ec2c-4894-a6a8-ee0ea429c066:1", 
         "dependency": [
-            "create:heat_worker:port:4fca361d-fdaf-4b92-81a8-a4cdd767cad4:1:ue9pj"
+            "create:heat_worker:port:ce965922-538a-4335-9644-7a98dce9fb47:1:39xjr"
         ], 
         "version": 1, 
         "params": [
@@ -2584,18 +2584,18 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }, 
             {
                 "resources": [
                     {
                         "resource_type": "ese_physical_port", 
-                        "resource_id": "76001683-a8bb-4c68-8c87-7b63ea7bd5cd"
+                        "resource_id": "6b29894f-8694-4865-92c1-2e78360e65a6"
                     }, 
                     {
                         "resource_type": "ese_device", 
-                        "resource_id": "f5429afc-cf7e-41c4-91ee-36ec403a9695"
+                        "resource_id": "3fb53223-b614-46b6-92e8-25c3bcbed214"
                     }
                 ], 
                 "type": "value", 
@@ -2612,7 +2612,7 @@
                 "resources": [], 
                 "type": "value", 
                 "value": [
-                    "4fca361d-fdaf-4b92-81a8-a4cdd767cad4"
+                    "ce965922-538a-4335-9644-7a98dce9fb47"
                 ], 
                 "param": "jinja_port_ids"
             }, 
@@ -2626,7 +2626,7 @@
                 "resources": [
                     {
                         "resource_type": "port", 
-                        "resource_id": "4fca361d-fdaf-4b92-81a8-a4cdd767cad4"
+                        "resource_id": "ce965922-538a-4335-9644-7a98dce9fb47"
                     }
                 ], 
                 "type": "list", 
@@ -2637,7 +2637,7 @@
                         "value": {
                             "output_key": "id", 
                             "resource_type": "port", 
-                            "resource_id": "4fca361d-fdaf-4b92-81a8-a4cdd767cad4"
+                            "resource_id": "ce965922-538a-4335-9644-7a98dce9fb47"
                         }, 
                         "resources": []
                     }
@@ -2653,21 +2653,21 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "d87b39f3-d117-46b4-ad1d-5b606d651b4f", 
+                "value": "aabc9b64-ec2c-4894-a6a8-ee0ea429c066", 
                 "param": "gohan_id"
             }, 
             {
                 "resources": [
                     {
                         "resource_type": "ese_physical_port", 
-                        "resource_id": "76001683-a8bb-4c68-8c87-7b63ea7bd5cd"
+                        "resource_id": "6b29894f-8694-4865-92c1-2e78360e65a6"
                     }
                 ], 
                 "type": "output_key", 
                 "value": {
                     "output_key": "id", 
                     "resource_type": "ese_physical_port", 
-                    "resource_id": "76001683-a8bb-4c68-8c87-7b63ea7bd5cd"
+                    "resource_id": "6b29894f-8694-4865-92c1-2e78360e65a6"
                 }, 
                 "param": "physical_port_id"
             }
@@ -2676,80 +2676,80 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:ese_logical_port:d87b39f3-d117-46b4-ad1d-5b606d651b4f:1:llb22", 
+        "id": "create:heat_worker:ese_logical_port:aabc9b64-ec2c-4894-a6a8-ee0ea429c066:1:f6hf7", 
         "resource_input": {
             "status": "PENDING_CREATE", 
             "name": "xe-0/0/4.1025", 
             "tags": {}, 
-            "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-            "gw_interface_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+            "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+            "gw_interface_id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
             "port_ids": [
-                "4fca361d-fdaf-4b92-81a8-a4cdd767cad4"
+                "ce965922-538a-4335-9644-7a98dce9fb47"
             ], 
             "operational_state": "NO_STATE", 
             "vlan_id": 1025, 
-            "ese_physical_port_id": "76001683-a8bb-4c68-8c87-7b63ea7bd5cd", 
+            "ese_physical_port_id": "6b29894f-8694-4865-92c1-2e78360e65a6", 
             "orchestration_state": "CREATE_IN_PROGRESS", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
             "type": "L2", 
-            "id": "d87b39f3-d117-46b4-ad1d-5b606d651b4f", 
+            "id": "aabc9b64-ec2c-4894-a6a8-ee0ea429c066", 
             "connected_resource": "gw_interface", 
-            "description": "ESE Logical port for Port 4fca361d-fdaf-4b92-81a8-a4cdd767cad4"
+            "description": "ESE Logical port for Port ce965922-538a-4335-9644-7a98dce9fb47"
         }
     }, 
     0
 ]]
-2018-03-30 01:04:55,032:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:04:55,032:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:04:55,032:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:04:55,032:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:04:55,033:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:10,595:DEBUG:
+2018-04-04 05:02:03,698:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:03,698:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:03,698:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:03,699:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:03,700:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:23,397:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:gw_interface:d84ce543-bc58-4844-b861-4a6d79fb2e48:1:rt8tq],
+ action=[delete], key=[/jobs/all/create:heat_worker:gw_interface:ce8831fd-d30c-41e3-95de-feaee0b95405:1:y9zyx],
  value=[]
-2018-03-30 01:05:10,595:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:10,595:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:05:10,595:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:10,596:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:10,596:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:16,556:DEBUG:
+2018-04-04 05:02:23,397:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:23,397:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:23,397:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:23,398:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:23,399:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:28,262:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:port:4fca361d-fdaf-4b92-81a8-a4cdd767cad4:1:ue9pj],
+ action=[delete], key=[/jobs/all/create:heat_worker:port:ce965922-538a-4335-9644-7a98dce9fb47:1:39xjr],
  value=[]
-2018-03-30 01:05:16,556:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:16,556:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:05:16,556:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:16,557:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:16,557:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:16,798:DEBUG:
+2018-04-04 05:02:28,262:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:28,263:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:28,263:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:28,263:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:28,265:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:29,366:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:port:7413e81d-f895-4527-ba5d-a86ffb663258:1:ghhjj],
+ action=[delete], key=[/jobs/all/create:heat_worker:port:f3867a99-de18-4512-8e94-f9aaa7b05c3a:1:wrrh0],
  value=[]
-2018-03-30 01:05:16,798:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:16,798:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:05:16,798:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:16,798:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:16,799:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:21,362:DEBUG:
+2018-04-04 05:02:29,366:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:29,366:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:29,366:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:29,367:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:29,369:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:32,880:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:ese_logical_port:d87b39f3-d117-46b4-ad1d-5b606d651b4f:1:llb22],
+ action=[delete], key=[/jobs/all/create:heat_worker:ese_logical_port:aabc9b64-ec2c-4894-a6a8-ee0ea429c066:1:f6hf7],
  value=[]
-2018-03-30 01:05:21,363:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:21,363:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:05:21,363:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:21,363:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:21,364:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:21,514:DEBUG:
+2018-04-04 05:02:32,880:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:32,880:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:32,880:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:32,881:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:32,884:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:32,989:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/modify:heat_worker:port:4fca361d-fdaf-4b92-81a8-a4cdd767cad4:2:6ud3s],
+ action=[set], key=[/jobs/all/modify:heat_worker:port:ce965922-538a-4335-9644-7a98dce9fb47:2:loltx],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "4fca361d-fdaf-4b92-81a8-a4cdd767cad4", 
+        "resource_id": "ce965922-538a-4335-9644-7a98dce9fb47", 
         "handler": "heat_worker", 
-        "job_name": "port:4fca361d-fdaf-4b92-81a8-a4cdd767cad4:2", 
+        "job_name": "port:ce965922-538a-4335-9644-7a98dce9fb47:2", 
         "dependency": [], 
         "version": 2, 
         "params": [
@@ -2763,31 +2763,31 @@
                 "resources": [
                     {
                         "resource_type": "network", 
-                        "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809"
+                        "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
                     }, 
                     {
                         "resource_type": "network", 
-                        "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809"
+                        "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
                     }
                 ], 
                 "type": "output_key", 
                 "value": {
                     "output_key": "id", 
                     "resource_type": "network", 
-                    "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809"
+                    "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
                 }, 
                 "param": "virtual_network"
             }, 
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+                "value": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
                 "param": "virtual_machine"
             }, 
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "4fca361d-fdaf-4b92-81a8-a4cdd767cad4", 
+                "value": "ce965922-538a-4335-9644-7a98dce9fb47", 
                 "param": "name"
             }, 
             {
@@ -2799,7 +2799,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }, 
             {
@@ -2817,7 +2817,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "fa:16:3e:b1:3d:bf", 
+                "value": "fa:16:3e:41:7c:23", 
                 "param": "virtual_machine_interface_mac_address"
             }, 
             {
@@ -2842,15 +2842,15 @@
                 "resources": [
                     {
                         "resource_type": "gw_interface", 
-                        "resource_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48"
+                        "resource_id": "ce8831fd-d30c-41e3-95de-feaee0b95405"
                     }, 
                     {
                         "resource_type": "gw_interface", 
-                        "resource_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48"
+                        "resource_id": "ce8831fd-d30c-41e3-95de-feaee0b95405"
                     }
                 ], 
                 "type": "value", 
-                "value": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+                "value": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
                 "param": "jinja_force_dependency_gw_interface"
             }, 
             {
@@ -2858,7 +2858,7 @@
                 "type": "value", 
                 "value": [
                     {
-                        "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                        "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                         "ip_address": "172.16.101.153"
                     }
                 ], 
@@ -2880,11 +2880,11 @@
                 "resources": [
                     {
                         "resource_type": "subnet", 
-                        "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                        "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                     }, 
                     {
                         "resource_type": "subnet", 
-                        "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                        "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                     }
                 ], 
                 "type": "list", 
@@ -2895,7 +2895,7 @@
                         "value": {
                             "output_key": "id", 
                             "resource_type": "subnet", 
-                            "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                            "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                         }, 
                         "resources": []
                     }
@@ -2905,7 +2905,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "4fca361d-fdaf-4b92-81a8-a4cdd767cad4", 
+                "value": "ce965922-538a-4335-9644-7a98dce9fb47", 
                 "param": "uuid"
             }
         ], 
@@ -2913,31 +2913,31 @@
         "action": "modify", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "modify:heat_worker:port:4fca361d-fdaf-4b92-81a8-a4cdd767cad4:2:6ud3s", 
+        "id": "modify:heat_worker:port:ce965922-538a-4335-9644-7a98dce9fb47:2:loltx", 
         "resource_input": {
-            "ese_logical_port_id": "d87b39f3-d117-46b4-ad1d-5b606d651b4f", 
+            "ese_logical_port_id": "aabc9b64-ec2c-4894-a6a8-ee0ea429c066", 
             "allowed_address_pairs": [], 
             "device_owner": "network:gw_interface", 
             "fake_delete": false, 
             "fixed_ips": [
                 {
-                    "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                    "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                     "ip_address": "172.16.101.153"
                 }
             ], 
-            "id": "4fca361d-fdaf-4b92-81a8-a4cdd767cad4", 
+            "id": "ce965922-538a-4335-9644-7a98dce9fb47", 
             "security_groups": [], 
             "binding:vif_type": "vrouter", 
-            "mac_address": "fa:16:3e:b1:3d:bf", 
+            "mac_address": "fa:16:3e:41:7c:23", 
             "status": "PENDING_CREATE", 
             "description": "", 
             "tags": {}, 
             "segmentation_id": 1025, 
-            "device_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
-            "name": "Port for : 76001683-a8bb-4c68-8c87-7b63ea7bd5cd", 
+            "device_id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
+            "name": "Port for : 6b29894f-8694-4865-92c1-2e78360e65a6", 
             "managed_by_service": true, 
-            "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+            "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
             "admin_state_up": true, 
             "attached": true, 
             "operational_state": "NO_STATE", 
@@ -2947,30 +2947,30 @@
     }, 
     0
 ]]
-2018-03-30 01:05:21,514:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:21,514:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:05:21,514:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:21,514:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:21,515:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:21,767:DEBUG:
+2018-04-04 05:02:32,989:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:32,989:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:32,989:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:32,990:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:32,991:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:34,286:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:ese_logical_port:ecf42487-2aef-4e27-931c-8517b1632d49:1:14txm],
+ action=[delete], key=[/jobs/all/create:heat_worker:ese_logical_port:02112bb1-389c-4ff8-9354-94ab43459892:1:7a64g],
  value=[]
-2018-03-30 01:05:21,767:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:21,768:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:05:21,768:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:21,768:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:21,771:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:21,950:DEBUG:
+2018-04-04 05:02:34,287:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:34,287:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:34,287:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:34,289:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:34,291:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:34,389:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/modify:heat_worker:port:7413e81d-f895-4527-ba5d-a86ffb663258:2:vnnqf],
+ action=[set], key=[/jobs/all/modify:heat_worker:port:f3867a99-de18-4512-8e94-f9aaa7b05c3a:2:37sxp],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "7413e81d-f895-4527-ba5d-a86ffb663258", 
+        "resource_id": "f3867a99-de18-4512-8e94-f9aaa7b05c3a", 
         "handler": "heat_worker", 
-        "job_name": "port:7413e81d-f895-4527-ba5d-a86ffb663258:2", 
+        "job_name": "port:f3867a99-de18-4512-8e94-f9aaa7b05c3a:2", 
         "dependency": [], 
         "version": 2, 
         "params": [
@@ -2984,31 +2984,31 @@
                 "resources": [
                     {
                         "resource_type": "network", 
-                        "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809"
+                        "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
                     }, 
                     {
                         "resource_type": "network", 
-                        "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809"
+                        "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
                     }
                 ], 
                 "type": "output_key", 
                 "value": {
                     "output_key": "id", 
                     "resource_type": "network", 
-                    "resource_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809"
+                    "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
                 }, 
                 "param": "virtual_network"
             }, 
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+                "value": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
                 "param": "virtual_machine"
             }, 
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "7413e81d-f895-4527-ba5d-a86ffb663258", 
+                "value": "f3867a99-de18-4512-8e94-f9aaa7b05c3a", 
                 "param": "name"
             }, 
             {
@@ -3020,7 +3020,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "20511c5aef804417a03bf14ed8aea3b8", 
+                "value": "06d6b792b31c40daa546fb0f4e35980d", 
                 "param": "tenant_id"
             }, 
             {
@@ -3038,7 +3038,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "fa:16:3e:19:71:4b", 
+                "value": "fa:16:3e:c5:2b:92", 
                 "param": "virtual_machine_interface_mac_address"
             }, 
             {
@@ -3063,15 +3063,15 @@
                 "resources": [
                     {
                         "resource_type": "gw_interface", 
-                        "resource_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48"
+                        "resource_id": "ce8831fd-d30c-41e3-95de-feaee0b95405"
                     }, 
                     {
                         "resource_type": "gw_interface", 
-                        "resource_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48"
+                        "resource_id": "ce8831fd-d30c-41e3-95de-feaee0b95405"
                     }
                 ], 
                 "type": "value", 
-                "value": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
+                "value": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
                 "param": "jinja_force_dependency_gw_interface"
             }, 
             {
@@ -3079,11 +3079,11 @@
                 "type": "value", 
                 "value": [
                     {
-                        "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                        "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                         "ip_address": "172.16.101.151"
                     }, 
                     {
-                        "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                        "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                         "ip_address": "172.16.101.152"
                     }
                 ], 
@@ -3105,19 +3105,19 @@
                 "resources": [
                     {
                         "resource_type": "subnet", 
-                        "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                        "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                     }, 
                     {
                         "resource_type": "subnet", 
-                        "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                        "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                     }, 
                     {
                         "resource_type": "subnet", 
-                        "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                        "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                     }, 
                     {
                         "resource_type": "subnet", 
-                        "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                        "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                     }
                 ], 
                 "type": "list", 
@@ -3128,7 +3128,7 @@
                         "value": {
                             "output_key": "id", 
                             "resource_type": "subnet", 
-                            "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                            "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                         }, 
                         "resources": []
                     }, 
@@ -3138,7 +3138,7 @@
                         "value": {
                             "output_key": "id", 
                             "resource_type": "subnet", 
-                            "resource_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07"
+                            "resource_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b"
                         }, 
                         "resources": []
                     }
@@ -3148,7 +3148,7 @@
             {
                 "resources": [], 
                 "type": "value", 
-                "value": "7413e81d-f895-4527-ba5d-a86ffb663258", 
+                "value": "f3867a99-de18-4512-8e94-f9aaa7b05c3a", 
                 "param": "uuid"
             }
         ], 
@@ -3156,35 +3156,35 @@
         "action": "modify", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "modify:heat_worker:port:7413e81d-f895-4527-ba5d-a86ffb663258:2:vnnqf", 
+        "id": "modify:heat_worker:port:f3867a99-de18-4512-8e94-f9aaa7b05c3a:2:37sxp", 
         "resource_input": {
-            "ese_logical_port_id": "ecf42487-2aef-4e27-931c-8517b1632d49", 
+            "ese_logical_port_id": "02112bb1-389c-4ff8-9354-94ab43459892", 
             "allowed_address_pairs": [], 
             "device_owner": "network:gw_interface", 
             "fake_delete": false, 
             "fixed_ips": [
                 {
-                    "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                    "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                     "ip_address": "172.16.101.151"
                 }, 
                 {
-                    "subnet_id": "8fca93d6-5f0b-413d-98e0-74c3d1bacf07", 
+                    "subnet_id": "67877f2d-0547-4cea-a6ce-2e3b937aa31b", 
                     "ip_address": "172.16.101.152"
                 }
             ], 
-            "id": "7413e81d-f895-4527-ba5d-a86ffb663258", 
+            "id": "f3867a99-de18-4512-8e94-f9aaa7b05c3a", 
             "security_groups": [], 
             "binding:vif_type": "vrouter", 
-            "mac_address": "fa:16:3e:19:71:4b", 
+            "mac_address": "fa:16:3e:c5:2b:92", 
             "status": "PENDING_CREATE", 
             "description": "", 
             "tags": {}, 
             "segmentation_id": 1025, 
-            "device_id": "d84ce543-bc58-4844-b861-4a6d79fb2e48", 
-            "name": "Port for : 7861b62a-55fe-4e98-9bfc-10bf19052d9a", 
+            "device_id": "ce8831fd-d30c-41e3-95de-feaee0b95405", 
+            "name": "Port for : 887fecdd-956b-47fa-a348-8940c53a5bf9", 
             "managed_by_service": true, 
-            "network_id": "73f88c22-ae22-4fb7-86b3-9acb141b8809", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
+            "network_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
             "admin_state_up": true, 
             "attached": true, 
             "operational_state": "NO_STATE", 
@@ -3194,39 +3194,39 @@
     }, 
     0
 ]]
-2018-03-30 01:05:21,950:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:21,950:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:05:21,950:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:21,950:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:21,951:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:33,386:DEBUG:
+2018-04-04 05:02:34,389:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:34,390:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:34,390:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:34,390:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:34,392:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:44,709:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/modify:heat_worker:port:4fca361d-fdaf-4b92-81a8-a4cdd767cad4:2:6ud3s],
+ action=[delete], key=[/jobs/all/modify:heat_worker:port:ce965922-538a-4335-9644-7a98dce9fb47:2:loltx],
  value=[]
-2018-03-30 01:05:33,386:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:33,386:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:05:33,386:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:33,386:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:33,387:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:05:33,813:DEBUG:
+2018-04-04 05:02:44,709:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:44,709:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:44,710:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:44,710:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:44,712:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:02:45,841:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/modify:heat_worker:port:7413e81d-f895-4527-ba5d-a86ffb663258:2:vnnqf],
+ action=[delete], key=[/jobs/all/modify:heat_worker:port:f3867a99-de18-4512-8e94-f9aaa7b05c3a:2:37sxp],
  value=[]
-2018-03-30 01:05:33,813:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:05:33,813:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:05:33,813:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:05:33,813:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:05:33,814:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:06:45,041:DEBUG:
+2018-04-04 05:02:45,841:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:02:45,842:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:02:45,842:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:02:45,842:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:02:45,844:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:04:07,757:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/jobs/all/create:heat_worker:static_route:07967b57-33c3-44b9-b1e7-47d85c840011:1:8fk39],
+ action=[set], key=[/jobs/all/create:heat_worker:static_route:d0aa20b1-9302-4b43-a3c1-9edce0811af8:1:jnu3v],
  value=[[
     "heat_worker", 
     {
         "is_first": true, 
-        "resource_id": "07967b57-33c3-44b9-b1e7-47d85c840011", 
+        "resource_id": "d0aa20b1-9302-4b43-a3c1-9edce0811af8", 
         "handler": "heat_worker", 
-        "job_name": "static_route:07967b57-33c3-44b9-b1e7-47d85c840011:1", 
+        "job_name": "static_route:d0aa20b1-9302-4b43-a3c1-9edce0811af8:1", 
         "dependency": [], 
         "version": 1, 
         "params": [
@@ -3234,19 +3234,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
@@ -3257,11 +3257,11 @@
                 "resources": [
                     {
                         "resource_type": "public_ip", 
-                        "resource_id": "6f583980-3f9e-458f-8f68-f42a7adfb211"
+                        "resource_id": "d5622781-f06a-4fad-b800-b577a05ad8b2"
                     }
                 ], 
                 "type": "value", 
-                "value": "6f583980-3f9e-458f-8f68-f42a7adfb211", 
+                "value": "d5622781-f06a-4fad-b800-b577a05ad8b2", 
                 "param": "jinja_dummy_dependency"
             }, 
             {
@@ -3274,19 +3274,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
@@ -3297,19 +3297,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
@@ -3320,23 +3320,23 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
-                "value": "192.168.100.102", 
+                "value": "10.79.5.185", 
                 "param": "primary_device_ip"
             }, 
             {
@@ -3355,7 +3355,7 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }
                 ], 
                 "type": "value", 
@@ -3366,19 +3366,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
@@ -3389,19 +3389,19 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "2a28fdaa-651b-4558-8825-891b93329123"
+                        "resource_id": "cbe0fe23-8461-4a71-a7cc-a3a1d8c1fd78"
                     }
                 ], 
                 "type": "value", 
@@ -3412,42 +3412,42 @@
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
-                "value": "192.168.100.101", 
+                "value": "10.79.5.184", 
                 "param": "secondary_device_ip"
             }, 
             {
                 "resources": [
                     {
                         "resource_type": "internet_gateway", 
-                        "resource_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6"
+                        "resource_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9"
                     }, 
                     {
                         "resource_type": "ha_interface", 
-                        "resource_id": "54a252d3-8248-45b1-b67e-2f13e00b5005"
+                        "resource_id": "2595e193-84a8-49dc-aa2e-7a68c60ea11e"
                     }, 
                     {
                         "resource_type": "ha_router", 
-                        "resource_id": "420b119a-c91e-4426-b4b4-80b5a7010910"
+                        "resource_id": "add04ae7-e48a-4583-a726-bed5f3b748c4"
                     }, 
                     {
                         "resource_type": "edge_router", 
-                        "resource_id": "43119898-9a76-400c-abdc-8d3ec2113b5d"
+                        "resource_id": "ca43aedb-bc30-4355-a931-7bb1d9040659"
                     }
                 ], 
                 "type": "value", 
@@ -3459,39 +3459,39 @@
         "action": "create", 
         "is_last": true, 
         "on_failure": "fail", 
-        "id": "create:heat_worker:static_route:07967b57-33c3-44b9-b1e7-47d85c840011:1:8fk39", 
+        "id": "create:heat_worker:static_route:d0aa20b1-9302-4b43-a3c1-9edce0811af8:1:jnu3v", 
         "resource_input": {
             "status": "PENDING_CREATE", 
             "nexthop": "172.16.101.1", 
             "description": "Sample Static-route", 
-            "tenant_id": "20511c5aef804417a03bf14ed8aea3b8", 
-            "internet_gw_id": "d4e4e75c-8c02-420f-9eda-fa5771c3bad6", 
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d", 
+            "internet_gw_id": "f6e8c695-c4c1-4a93-9b7e-1663aee6dec9", 
             "destination": "203.0.112.0/28", 
             "orchestration_state": "CREATE_IN_PROGRESS", 
-            "public_ip_id": "6f583980-3f9e-458f-8f68-f42a7adfb211", 
+            "public_ip_id": "d5622781-f06a-4fad-b800-b577a05ad8b2", 
             "service_type": "internet", 
-            "id": "07967b57-33c3-44b9-b1e7-47d85c840011", 
+            "id": "d0aa20b1-9302-4b43-a3c1-9edce0811af8", 
             "name": "sample-static-route"
         }
     }, 
     0
 ]]
-2018-03-30 01:06:45,041:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:06:45,041:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:06:45,041:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:06:45,041:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:06:45,042:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:06:58,997:DEBUG:
+2018-04-04 05:04:07,757:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:04:07,758:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:04:07,758:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:04:07,758:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:04:07,760:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:04:25,118:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/jobs/all/create:heat_worker:static_route:07967b57-33c3-44b9-b1e7-47d85c840011:1:8fk39],
+ action=[delete], key=[/jobs/all/create:heat_worker:static_route:d0aa20b1-9302-4b43-a3c1-9edce0811af8:1:jnu3v],
  value=[]
-2018-03-30 01:06:58,997:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-03-30 01:06:58,997:DEBUG:About to wait on key /jobs/all, index None
-2018-03-30 01:06:58,997:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-03-30 01:06:58,997:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-03-30 01:06:58,998:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
-2018-03-30 01:21:59,097:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
-2018-03-30 01:21:59,097:DEBUG:Reconnection disabled, giving up.
+2018-04-04 05:04:25,118:DEBUG:New etcd client created for etcd-server:2379/v2
+2018-04-04 05:04:25,118:DEBUG:About to wait on key /jobs/all, index None
+2018-04-04 05:04:25,118:DEBUG:Issuing read for key /jobs/all with args {'recursive': True, 'timeout': None, 'wait': True}
+2018-04-04 05:04:25,119:DEBUG:Starting new HTTP connection (1): etcd-server
+2018-04-04 05:04:25,120:DEBUG:http://etcd-server:2379 "GET /v2/keys/jobs/all?recursive=true&wait=true HTTP/1.1" 200 None
+2018-04-04 05:19:25,222:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2018-04-04 05:19:25,223:DEBUG:Reconnection disabled, giving up.
 Traceback (most recent call last):
   File "/usr/local/lib/python2.7/dist-packages/eventlet/hubs/hub.py", line 346, in fire_timers
     timer()

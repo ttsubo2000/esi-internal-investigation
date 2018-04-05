@@ -1,16 +1,44 @@
-root@vMX-2# rollback ?
+root@vMX-2# rollback ?  
 Possible completions:
   <[Enter]>            Execute this command
-  0                    2018-03-30 10:06:50 JST by esi via netconf 
-  1                    2018-03-30 10:04:57 JST by esi via netconf 
-  2                    2018-03-30 10:04:02 JST by esi via netconf 
-  3                    2018-03-30 10:03:36 JST by esi via netconf 
-  4                    2018-03-30 09:45:22 JST by root via cli 
-  5                    2018-02-11 07:29:10 JST by root via cli 
-  6                    2018-02-11 07:28:48 JST by root via cli 
-  7                    2018-02-11 07:21:33 JST by root via other 
-  |                    Pipe through a command
-[edit]
+  0                    2018-04-04 14:01:43 JST by esi via netconf 
+  1                    2018-04-04 13:59:39 JST by esi via netconf 
+  2                    2018-04-04 13:58:36 JST by esi via netconf 
+  3                    2018-04-04 13:58:05 JST by esi via netconf 
+  4                    2017-05-11 14:27:46 JST by root via cli 
+  5                    2017-05-11 14:03:08 JST by esi via netconf 
+  6                    2017-05-11 14:02:02 JST by esi via netconf 
+  7                    2017-05-11 14:00:14 JST by esi via netconf 
+  8                    2017-05-11 13:59:42 JST by esi via netconf 
+  9                    2017-05-11 13:45:24 JST by root via cli 
+  10                   2017-05-11 13:26:28 JST by esi via netconf 
+  11                   2017-05-11 13:25:12 JST by esi via netconf 
+  12                   2017-05-11 13:24:06 JST by esi via netconf 
+  13                   2017-05-11 13:23:39 JST by esi via netconf 
+  14                   2017-05-11 13:18:11 JST by root via cli 
+  15                   2017-05-11 13:17:31 JST by esi via netconf 
+  16                   2017-05-11 13:16:20 JST by esi via netconf 
+  17                   2017-05-11 13:15:51 JST by esi via netconf 
+  18                   2017-05-11 13:11:31 JST by root via cli 
+  19                   2017-05-11 13:10:03 JST by esi via netconf 
+  20                   2017-05-11 13:08:51 JST by esi via netconf 
+  21                   2017-05-11 13:08:22 JST by esi via netconf 
+  22                   2017-05-11 12:18:27 JST by root via cli 
+  23                   2017-05-11 12:05:11 JST by esi via netconf 
+  24                   2017-05-11 11:59:15 JST by root via cli 
+  25                   2017-05-11 11:58:32 JST by esi via netconf 
+  26                   2017-05-09 16:24:11 JST by root via cli 
+  27                   2017-05-09 16:19:40 JST by esi via netconf 
+  28                   2017-05-09 16:11:35 JST by root via cli 
+  29                   2017-05-09 16:08:27 JST by root via cli 
+  30                   2017-05-09 15:45:43 JST by root via cli 
+  31                   2017-05-09 15:42:54 JST by root via cli 
+  32                   2017-05-09 15:39:42 JST by esi via netconf 
+  33                   2017-05-09 15:39:05 JST by esi via netconf 
+  34                   2017-05-09 15:38:34 JST by esi via netconf 
+  35                   2017-05-09 15:09:03 JST by root via cli 
+  36                   2017-05-09 15:01:08 JST by root via cli 
+[edit]                                  
 root@vMX-2# show | compare rollback 1 
 [edit routing-instances vrf_gw_sample-ha-router-downlink_1025 routing-options]
 +     static {
@@ -115,6 +143,20 @@ root@vMX-2# show | compare rollback 4
 +   }
 
 [edit]
+root@vMX-2# exit 
+The configuration has been changed but not committed
+Exit with uncommitted changes? [yes,no] (yes) yes 
+
+Exiting configuration mode
+
+root@vMX-2> show |display
+                 ^
+syntax error, expecting <command>.
+root@vMX-2> configure         
+Entering configuration mode
+The configuration has been changed but not committed
+
+[edit]
 root@vMX-2# show |display set 
 set version 16.1R1.7
 set groups VPNGW1-VRRP interfaces <*> unit <*> family inet address <*> vrrp-group <*> fast-interval 10000
@@ -173,7 +215,7 @@ set system login user esi authentication encrypted-password "$5$kstEcbSM$RY9H7ew
 set system services ssh root-login allow
 set system services netconf ssh port 830
 set system services web-management http interface fxp0.0
-set system syslog user * any emergency
+set system syslog user * any emergency  
 set system syslog file messages any notice
 set system syslog file messages authorization info
 set system syslog file interactive-commands interactive-commands any
@@ -191,7 +233,7 @@ set interfaces ae0 unit 1025 description inet_gw
 set interfaces ae0 unit 1025 vlan-id 1025
 set interfaces ae0 unit 1025 family inet filter input FILTER_10M-GA-UP-INET
 set interfaces ae0 unit 1025 family inet filter output FILTER_10M-GA-DOWN-INET
-set interfaces fxp0 unit 0 family inet address 192.168.100.102/24
+set interfaces fxp0 unit 0 family inet address 10.79.5.185/24
 set interfaces lo0 unit 0 family inet address 10.0.0.2/32
 set routing-options static route 0.0.0.0/0 next-hop 10.79.5.1
 set routing-options autonomous-system 65101
@@ -308,57 +350,30 @@ set routing-instances vrf_gw_sample-ha-router-downlink_1025 routing-options inst
 set routing-instances vrf_gw_sample-ha-router-downlink_1025 routing-options instance-export INSTANCE-USER_OUT
 
 [edit]
-root@vMX-2# exit 
+root@vMX-2# show bgp
+                 ^
+syntax error.
+root@vMX-2# exit              
 The configuration has been changed but not committed
 Exit with uncommitted changes? [yes,no] (yes) yes 
 
 Exiting configuration mode
 
 root@vMX-2> show bgp neighbor 
-Peer: 172.16.101.153+51706 AS 65101 Local: 172.16.101.152+179 AS 65101
+Peer: 172.16.101.153+179 AS 65101 Local: 172.16.101.152 AS 65101
   Group: inet-gw-group         Routing-Instance: vrf_gw_sample-ha-router-downlink_1025
   Forwarding routing-instance: vrf_gw_sample-ha-router-downlink_1025  
-  Type: Internal    State: Established    Flags: <Sync>
-  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Type: Internal    State: Connect        Flags: <>
+  Last State: Active        Last Event: ConnectRetry
   Last Error: None
   Export: [ BGP-InetGW2-RI_OUT ] Import: [ BGP-InetGW2-RI_IN ]
   Options: <Preference LocalAddress HoldTime PeerAS Refresh>
   Local Address: 172.16.101.152 Holdtime: 30 Preference: 170
   Number of flaps: 0
-  Peer ID: 172.16.101.153  Local ID: 172.16.101.152    Active Holdtime: 30
-  Keepalive Interval: 10         Group index: 0    Peer index: 0   
-  I/O Session Thread: bgpio-0 State: Enabled
-  BFD: disabled, down
-  NLRI for restart configured on peer: inet-unicast
-  NLRI advertised by peer: inet-unicast
-  NLRI for this session: inet-unicast
-  Peer supports Refresh capability (2)
-  Stale routes from peer are kept for: 300
-  Peer does not support Restarter functionality
-  Restart flag received from the peer: Notification
-  NLRI that restart is negotiated for: inet-unicast
-  NLRI of received end-of-rib markers: inet-unicast
-  NLRI of all end-of-rib markers sent: inet-unicast
-  Peer does not support LLGR Restarter functionality
-  Peer supports 4 byte AS extension (peer-as 65101)
-  Peer does not support Addpath
-  Table vrf_gw_sample-ha-router-downlink_1025.inet.0 Bit: 20000
-    RIB State: BGP restart is complete
-    RIB State: VPN restart is complete
-    Send state: in sync
-    Active prefixes:              0
-    Received prefixes:            0
-    Accepted prefixes:            0
-    Suppressed due to damping:    0
-    Advertised prefixes:          0
-  Last traffic (seconds): Received 4155 Sent 1079 Checked 4155
-  Input messages:  Total 122	Updates 1	Refreshes 0	Octets 2366
-  Output messages: Total 121	Updates 0	Refreshes 0	Octets 2303
-  Output Queue[1]: 0            (vrf_gw_sample-ha-router-downlink_1025.inet.0, inet-unicast)
 
 root@vMX-2> show vrrp 
 Interface     State       Group   VR state VR Mode   Timer    Type   Address
-ae0.1025      up             20   master   Active      A  1.782 lcl    172.16.101.152 
+ae0.1025      up             20   master   Active      A  5.385 lcl    172.16.101.152 
                                                                 vip    172.16.101.151 
 
 root@vMX-2> 

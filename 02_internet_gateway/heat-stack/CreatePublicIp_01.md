@@ -2,47 +2,47 @@
 
 Checking heat-stack of "public_ip" via heatclient.
 ```
-$ heat stack-show public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735
-+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Property              | Value                                                                                                                                                      |
-+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| capabilities          | []                                                                                                                                                         |
-| creation_time         | 2017-05-11T04:24:38Z                                                                                                                                       |
-| description           | QoS Option                                                                                                                                                 |
-| disable_rollback      | True                                                                                                                                                       |
-| id                    | e929ecde-bd23-4e03-a261-eb994c1027f4                                                                                                                       |
-| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735/e929ecde-bd23-4e03-a261-eb994c1027f4 (self) |
-| notification_topics   | []                                                                                                                                                         |
-| outputs               | []                                                                                                                                                         |
-| parameters            | {                                                                                                                                                          |
-|                       |   "primary_device_ip": "10.79.5.185",                                                                                                                      |
-|                       |   "OS::stack_id": "e929ecde-bd23-4e03-a261-eb994c1027f4",                                                                                                  |
-|                       |   "OS::stack_name": "public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735",                                                                                      |
-|                       |   "secondary_device_port": "830",                                                                                                                          |
-|                       |   "secondary_device_password": "esiesi0000",                                                                                                               |
-|                       |   "ip_mask": "28",                                                                                                                                         |
-|                       |   "primary_device_password": "esiesi0000",                                                                                                                 |
-|                       |   "ip_cidr": "203.0.112.0",                                                                                                                                |
-|                       |   "primary_device_username": "esi",                                                                                                                        |
-|                       |   "secondary_device_username": "esi",                                                                                                                      |
-|                       |   "primary_device_port": "830",                                                                                                                            |
-|                       |   "secondary_device_ip": "10.79.5.184",                                                                                                                    |
-|                       |   "prefix_list_name": "vrf_gw_sample-ha-router-downlink_1025_prefix"                                                                                       |
-|                       | }                                                                                                                                                          |
-| parent                | None                                                                                                                                                       |
-| stack_name            | public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735                                                                                                             |
-| stack_owner           | admin                                                                                                                                                      |
-| stack_status          | CREATE_COMPLETE                                                                                                                                            |
-| stack_status_reason   | Stack CREATE completed successfully                                                                                                                        |
-| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                           |
-| template_description  | QoS Option                                                                                                                                                 |
-| timeout_mins          | 60                                                                                                                                                         |
-| updated_time          | None                                                                                                                                                       |
-+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+
+$ heat stack-show public_ip_d5622781-f06a-4fad-b800-b577a05ad8b2
++-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                                                   |
++-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                                                      |
+| creation_time         | 2018-04-04T05:01:04Z                                                                                                                                                                    |
+| description           | QoS Option                                                                                                                                                                              |
+| disable_rollback      | True                                                                                                                                                                                    |
+| id                    | 96d6707c-565e-4175-9690-40dfd081cf0e                                                                                                                                                    |
+| links                 | http://heat-server.monitoringrefactordocker_default:8004/v1/06d6b792b31c40daa546fb0f4e35980d/stacks/public_ip_d5622781-f06a-4fad-b800-b577a05ad8b2/96d6707c-565e-4175-9690-40dfd081cf0e |
+| notification_topics   | []                                                                                                                                                                                      |
+| outputs               | []                                                                                                                                                                                      |
+| parameters            | {                                                                                                                                                                                       |
+|                       |   "primary_device_ip": "10.79.5.185",                                                                                                                                                   |
+|                       |   "OS::stack_id": "96d6707c-565e-4175-9690-40dfd081cf0e",                                                                                                                               |
+|                       |   "OS::stack_name": "public_ip_d5622781-f06a-4fad-b800-b577a05ad8b2",                                                                                                                   |
+|                       |   "secondary_device_port": "830",                                                                                                                                                       |
+|                       |   "secondary_device_password": "******",                                                                                                                                                |
+|                       |   "ip_mask": "28",                                                                                                                                                                      |
+|                       |   "primary_device_password": "******",                                                                                                                                                  |
+|                       |   "ip_cidr": "203.0.112.0",                                                                                                                                                             |
+|                       |   "primary_device_username": "esi",                                                                                                                                                     |
+|                       |   "secondary_device_username": "esi",                                                                                                                                                   |
+|                       |   "primary_device_port": "830",                                                                                                                                                         |
+|                       |   "secondary_device_ip": "10.79.5.184",                                                                                                                                                 |
+|                       |   "prefix_list_name": "vrf_gw_sample-ha-router-downlink_1025_prefix"                                                                                                                    |
+|                       | }                                                                                                                                                                                       |
+| parent                | None                                                                                                                                                                                    |
+| stack_name            | public_ip_d5622781-f06a-4fad-b800-b577a05ad8b2                                                                                                                                          |
+| stack_owner           | admin                                                                                                                                                                                   |
+| stack_status          | CREATE_COMPLETE                                                                                                                                                                         |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                                                     |
+| stack_user_project_id | 06d6b792b31c40daa546fb0f4e35980d                                                                                                                                                        |
+| template_description  | QoS Option                                                                                                                                                                              |
+| timeout_mins          | 60                                                                                                                                                                                      |
+| updated_time          | None                                                                                                                                                                                    |
++-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 Checking heat-template of "public_ip" via heatclient.
 ```
-$ heat template-show public_ip_bc6f2c6d-59be-4f56-a2d7-96ab578c0735
+$ heat template-show public_ip_d5622781-f06a-4fad-b800-b577a05ad8b2
 description: 'QoS Option
 
   '
@@ -54,7 +54,7 @@ parameters:
   primary_device_ip: {description: Ip address that will be used to establish ssh connection
       to the Primary Device., label: Ip address of the device., type: string}
   primary_device_password: {description: Password of the user which will be used to
-      log onto the Primary Device., label: Users password., type: string}
+      log onto the Primary Device., hidden: true, label: Users password., type: string}
   primary_device_port: {description: Port that will be used to establish ssh connection
       to the Primary Device., label: Port of the ssh connection., type: number}
   primary_device_username: {description: Name of the user which will be used to log
@@ -62,7 +62,7 @@ parameters:
   secondary_device_ip: {description: Ip address that will be used to establish ssh
       connection to the Secondary Device., label: Ip address of the device., type: string}
   secondary_device_password: {description: Password of the user which will be used
-      to log onto the Secondary Device., label: Users password., type: string}
+      to log onto the Secondary Device., hidden: true, label: Users password., type: string}
   secondary_device_port: {description: Port that will be used to establish ssh connection
       to the Secondary Device., label: Port of the ssh connection., type: number}
   secondary_device_username: {description: Name of the user which will be used to
@@ -96,6 +96,7 @@ resources:
       username: {get_param: primary_device_username}
     type: OS::Contrail::NetconfNamedConfigs
   netconf_configure_secondary:
+    depends_on: netconf_configure_primary
     properties:
       configs:
       - config: ''

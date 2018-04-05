@@ -5,23 +5,13 @@ You can see the relations of "Network" as following.
 
 ![Network](resource/gohan_investigate_for_inetgw.013.png)
 
-## 12.1. Sequence Diagram between gohan and etcd
-This is a diagram that has been described as interfaces for "Network" between gohan and etcd.
 
-* Initinalizing gohan ...
-* Receiving HTTP Methods for Creating Resource ...
+## 12.1. Gohan
 
-![Create Network](diag/ESI_Sequence_Diagram_for_Internet_Gateway.015.png)
+![scope](../images/ESI_Sequence_diagram.002.png)
 
-## 12.2. Stored data in etcd after initinalizing gohan
-These are stored data for "heat_templates" in etcd.
-
-* [Checking stored data for "network"](../heat_template/network.md)
-* [Checking stored data for "network_monitoring"](../heat_template/network_monitoring.md)
-
-
-## 12.3. HTTP Methods for RESTful between Gohan and Client
-This is JSON data for "Create Network" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Network" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -35,77 +25,84 @@ POST /v2.0/networks
         "name": "sample-network",
         "plane": "data",
         "tags": {},
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d"
     }
 }
 ```
-![scope](../images/esi_interface.004.png)
+After processing, Gohan has stored data for "Network" in etcd.
+
+* [Checking stored data for creating "network"](stored_in_etcd/01_Gohan/CreateNetwork_01.md)
 
 
-## 12.4. Stored data in etcd after receiving HTTP Methods for RESTful
-These are stored data for "Create Network" in etcd.
+## 12.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-* [Checking stored data for creating "network"](stored_in_etcd/CreateNetwork_01.md)
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
 
-![scope](../images/esi_interface.005.png)
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Network" in etcd, ResourceReader has fetched heat_templates in etcd.
+
+* [Checking stored data for "network"](../heat_template/network.md)
 
 
-## 12.5. Stored heat-stack via heat-api
-These are stored heat-stacks for "Create Network" in heat-engine.
+## 12.3. JobManager
+
+![scope](../images/ESI_Sequence_diagram.004.png)
+
+### Outline
+After converting resource_data to job_data, JobManager has stored it in etcd.
+
+* [Checking stored data for creating "network"](stored_in_etcd/02_JobManager/CreateNetwork_01.md)
+
+
+## 12.4. HeatWorker
+
+![scope](../images/ESI_Sequence_diagram.005.png)
+
+### Outline
+After fetching job_data, HeatWorker has handled job_data.
+And then, HeatWorker has stored the result of handling job_data.
+
+* [Checking stored data for creating "network"](stored_in_etcd/03_HeatWorker/CreateNetwork_01.md)
+
+
+## 12.5. Heat
+
+![scope](../images/ESI_Sequence_diagram.006.png)
+
+### Outline
+Heat has conducted some tasks for "Create Network".
+As a result, Heat has stored heat-stacks for "Create Network".
 
 * [Checking heat-stack of "network"](heat-stack/CreateNetwork_01.md)
 
-![scope](../images/esi_interface.006.png)
 
-
-## 12.6. Stored resource for monitoring in Kafka
-This is JSON data for "Create Network" between monitoring-worker and kafka
-
-* [Checking the topic "monitor_virtual_network" for monitoring "network"](stored_in_kafka/CreateNetwork_01.md)
-
-![scope](../images/esi_interface.007.png)
-
-
-## 12.7. Stored resource in gohan
+## 12.6. Stored resource in gohan
 As a result, checking resources regarding of "Network" in gohan.
 
 * Checking the target of resources via gohan client
 ```
-$ gohan client network show --output-format json 52d7bef8-aa17-45c3-b63e-6a0e504603f0
+$ gohan client network show --output-format json 6e557507-1c2a-49b1-ba90-5f616a1f1f3e
 {
     "network": {
         "admin_state_up": true,
         "description": "Sample Network",
-        "id": "52d7bef8-aa17-45c3-b63e-6a0e504603f0",
+        "id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e",
         "name": "sample-network",
+        "orchestration_state": "CREATE_COMPLETE",
         "plane": "data",
         "shared": false,
         "status": "ACTIVE",
         "subnets": [],
         "tags": {},
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "06d6b792b31c40daa546fb0f4e35980d"
     }
-}
-```
-* Checking resource_mapping via gohan client
-```
-$ gohan client resource_mapping list --output-format json
-{
-    "resource_mappings": [
-
-        ... (snip)
-
-        {
-            "created": 1.494476703e+09,
-            "deleted": null,
-            "id": "f6a5fc1b-695d-4921-923a-92af07f52c2b",
-            "mapped_id": "52d7bef8-aa17-45c3-b63e-6a0e504603f0",
-            "relation": "instance",
-            "resource_id": "52d7bef8-aa17-45c3-b63e-6a0e504603f0",
-            "resource_type": "network",
-            "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
-        }
-    ]
 }
 ```
 * Checking billing_resource via gohan client
@@ -119,14 +116,14 @@ $ gohan client billing_resource list --output-format json
         {
             "config_version": 1,
             "ended": null,
-            "id": "b4165f07-3b67-438d-a398-4add6a499a04",
+            "id": "fc6dc454-4214-4573-9fbd-e2b5311a7d57",
             "info": {},
             "parent_billing_id": null,
-            "resource_id": "52d7bef8-aa17-45c3-b63e-6a0e504603f0",
+            "resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e",
             "resource_type": "network",
-            "started": 1.494476703e+09,
-            "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
-            "unique_resource_id": "52d7bef8-aa17-45c3-b63e-6a0e504603f0"
+            "started": 1.52281809e+09,
+            "tenant_id": "06d6b792b31c40daa546fb0f4e35980d",
+            "unique_resource_id": "6e557507-1c2a-49b1-ba90-5f616a1f1f3e"
         }
     ]
 }

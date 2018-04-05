@@ -1,15 +1,44 @@
-root@vMX-1# rollback ?
+root@vMX-1# rollback ?  
 Possible completions:
   <[Enter]>            Execute this command
-  0                    2018-03-30 10:06:54 JST by esi via netconf 
-  1                    2018-03-30 10:05:03 JST by esi via netconf 
-  2                    2018-03-30 10:04:05 JST by esi via netconf 
-  3                    2018-03-30 10:03:43 JST by esi via netconf 
-  4                    2018-03-30 09:47:32 JST by root via cli 
-  5                    2018-02-11 07:24:16 JST by root via cli 
-  6                    2018-02-11 07:20:01 JST by root via other 
-  |                    Pipe through a command
-[edit]
+  0                    2018-04-04 14:01:55 JST by esi via netconf 
+  1                    2018-04-04 13:59:52 JST by esi via netconf 
+  2                    2018-04-04 13:58:43 JST by esi via netconf 
+  3                    2018-04-04 13:58:18 JST by esi via netconf 
+  4                    2017-05-11 14:28:02 JST by root via cli 
+  5                    2017-05-11 14:03:17 JST by esi via netconf 
+  6                    2017-05-11 14:01:55 JST by esi via netconf 
+  7                    2017-05-11 14:00:22 JST by esi via netconf 
+  8                    2017-05-11 13:59:51 JST by esi via netconf 
+  9                    2017-05-11 13:45:15 JST by root via cli 
+  10                   2017-05-11 13:26:37 JST by esi via netconf 
+  11                   2017-05-11 13:25:21 JST by esi via netconf 
+  12                   2017-05-11 13:24:11 JST by esi via netconf 
+  13                   2017-05-11 13:23:48 JST by esi via netconf 
+  14                   2017-05-11 13:18:18 JST by root via cli 
+  15                   2017-05-11 13:17:25 JST by esi via netconf 
+  16                   2017-05-11 13:16:25 JST by esi via netconf 
+  17                   2017-05-11 13:16:01 JST by esi via netconf 
+  18                   2017-05-11 13:11:37 JST by root via cli 
+  19                   2017-05-11 13:09:58 JST by esi via netconf 
+  20                   2017-05-11 13:08:56 JST by esi via netconf 
+  21                   2017-05-11 13:08:31 JST by esi via netconf 
+  22                   2017-05-11 12:18:45 JST by root via cli 
+  23                   2017-05-11 12:05:21 JST by esi via netconf 
+  24                   2017-05-11 11:59:09 JST by root via cli 
+  25                   2017-05-11 11:58:24 JST by esi via netconf 
+  26                   2017-05-09 16:24:03 JST by root via cli 
+  27                   2017-05-09 16:19:32 JST by esi via netconf 
+  28                   2017-05-09 16:11:16 JST by root via cli 
+  29                   2017-05-09 16:08:13 JST by root via cli 
+  30                   2017-05-09 15:44:41 JST by root via cli 
+  31                   2017-05-09 15:42:39 JST by root via cli 
+  32                   2017-05-09 15:39:52 JST by esi via netconf 
+  33                   2017-05-09 15:39:13 JST by esi via netconf 
+  34                   2017-05-09 15:38:43 JST by esi via netconf 
+  35                   2017-05-09 15:08:58 JST by root via cli 
+  36                   2017-05-09 15:01:14 JST by root via cli 
+[edit]                                  
 root@vMX-1# show | compare rollback 1 
 [edit routing-instances vrf_gw_sample-ha-router-downlink_1025 routing-options]
 +     static {
@@ -172,7 +201,7 @@ set system login user esi authentication encrypted-password "$5$cQ22aL2p$c0xhoYO
 set system services ssh root-login allow
 set system services netconf ssh port 830
 set system services web-management http interface fxp0.0
-set system syslog user * any emergency
+set system syslog user * any emergency  
 set system syslog file messages any notice
 set system syslog file messages authorization info
 set system syslog file interactive-commands interactive-commands any
@@ -190,7 +219,7 @@ set interfaces ae0 unit 1025 description inet_gw
 set interfaces ae0 unit 1025 vlan-id 1025
 set interfaces ae0 unit 1025 family inet filter input FILTER_10M-GA-UP-INET
 set interfaces ae0 unit 1025 family inet filter output FILTER_10M-GA-DOWN-INET
-set interfaces fxp0 unit 0 family inet address 192.168.100.101/24
+set interfaces fxp0 unit 0 family inet address 10.79.5.184/24
 set interfaces lo0 unit 0 family inet address 10.0.0.1/32
 set routing-options static route 0.0.0.0/0 next-hop 10.79.5.1
 set routing-options autonomous-system 65101
@@ -306,6 +335,10 @@ set routing-instances vrf_gw_sample-ha-router-downlink_1025 interface ae0.1025
 set routing-instances vrf_gw_sample-ha-router-downlink_1025 routing-options instance-import INSTANCE-USER_IN
 set routing-instances vrf_gw_sample-ha-router-downlink_1025 routing-options instance-export INSTANCE-USER_OUT
 
+[edit]
+root@vMX-1# show bgp
+                 ^
+syntax error.
 root@vMX-1# exit              
 The configuration has been changed but not committed
 Exit with uncommitted changes? [yes,no] (yes) yes 
@@ -313,51 +346,20 @@ Exit with uncommitted changes? [yes,no] (yes) yes
 Exiting configuration mode
 
 root@vMX-1> show bgp neighbor 
-Peer: 172.16.101.152+179 AS 65101 Local: 172.16.101.153+51706 AS 65101
+Peer: 172.16.101.152+179 AS 65101 Local: 172.16.101.153 AS 65101
   Group: inet-gw-group         Routing-Instance: vrf_gw_sample-ha-router-downlink_1025
   Forwarding routing-instance: vrf_gw_sample-ha-router-downlink_1025  
-  Type: Internal    State: Established    Flags: <Sync>
-  Last State: OpenConfirm   Last Event: RecvKeepAlive
+  Type: Internal    State: Connect        Flags: <>
+  Last State: Active        Last Event: ConnectRetry
   Last Error: None
   Export: [ BGP-InetGW1-RI_OUT ] Import: [ BGP-InetGW1-RI_IN ]
   Options: <Preference LocalAddress HoldTime PeerAS Refresh>
   Local Address: 172.16.101.153 Holdtime: 30 Preference: 170
   Number of flaps: 0
-  Peer ID: 172.16.101.152  Local ID: 172.16.101.153    Active Holdtime: 30
-  Keepalive Interval: 10         Group index: 0    Peer index: 0   
-  I/O Session Thread: bgpio-0 State: Enabled
-  BFD: disabled, down
-  NLRI for restart configured on peer: inet-unicast
-  NLRI advertised by peer: inet-unicast
-  NLRI for this session: inet-unicast
-  Peer supports Refresh capability (2)
-  Stale routes from peer are kept for: 300
-  Peer does not support Restarter functionality
-  Restart flag received from the peer: Notification
-  NLRI that restart is negotiated for: inet-unicast
-  NLRI of received end-of-rib markers: inet-unicast
-  NLRI of all end-of-rib markers sent: inet-unicast
-  Peer does not support LLGR Restarter functionality
-  Peer supports 4 byte AS extension (peer-as 65101)
-  Peer does not support Addpath
-  Table vrf_gw_sample-ha-router-downlink_1025.inet.0 Bit: 20000
-    RIB State: BGP restart is complete
-    RIB State: VPN restart is complete
-    Send state: in sync
-    Active prefixes:              0
-    Received prefixes:            0
-    Accepted prefixes:            0
-    Suppressed due to damping:    0
-    Advertised prefixes:          0
-  Last traffic (seconds): Received 4182 Sent 837  Checked 4182
-  Input messages:  Total 95	Updates 1	Refreshes 0 	Octets 1809
-  Output messages: Total 95	Updates 0	Refreshes 0 	Octets 1809
-  Output Queue[1]: 0            (vrf_gw_sample-ha-router-downlink_1025.inet.0, inet-unicast)
 
 root@vMX-1> show vrrp 
 Interface     State       Group   VR state VR Mode   Timer    Type   Address
-ae0.1025      up             20   backup   Active      D  35.189lcl    172.16.101.153 
+ae0.1025      up             20   master   Active      A  3.821 lcl    172.16.101.153 
                                                                 vip    172.16.101.151 
-                                                                mas    172.16.101.152 
 
 root@vMX-1> 

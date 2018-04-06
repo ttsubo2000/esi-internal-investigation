@@ -87,18 +87,7 @@ As a result, Heat has stored heat-stacks for "Create Public Ip".
 * [Checking heat-stack of "public_ip"](heat-stack/CreatePublicIp_01.md)
 
 
-## 11.6. CollectorAgent
-
-![scope](../images/ESI_Sequence_diagram.007.png)
-
-### Outline
-CollectorAgent has conducted some tasks for "Create Public Ip" based heat-stacks via Heat.
-As a result, CollectorAgent has responded the result of status information as handling tasks.
-
-* [Checking monitoring of "public_ip"](collector_agents/CreatePublicIp_01.md)
-
-
-## 11.7. Applying JUNOS Configurations via netconf
+## 11.6. Applying JUNOS Configurations via netconf
 Checking configuration in Edge Router
 
 * MX-1
@@ -118,7 +107,7 @@ Checking configuration in Edge Router
 ```
 
 
-## 11.8. Stored resource in gohan
+## 11.7. Stored resource in gohan
 As a result, checking resources regarding of "Public Ip" in gohan.
 
 * Checking the target of resources via gohan client

@@ -122,12 +122,10 @@ CollectorAgent has conducted some tasks for "Create Gw Interface" based heat-sta
 As a result, CollectorAgent has responded the result of status information as handling tasks.
 
 * [Checking monitoring of "gw_interface"](collector_agents/CreateGwInterface_01.md)
-* [Checking monitoring of "port"](collector_agents/CreateGwInterface_02.md)
-* [Checking monitoring of "port"](collector_agents/CreateGwInterface_03.md)
-* [Checking monitoring of "ese_logical_port"](collector_agents/CreateGwInterface_04.md)
-* [Checking monitoring of "ese_logical_port"](collector_agents/CreateGwInterface_05.md)
-* [Checking monitoring of "port"](collector_agents/CreateGwInterface_06.md)
-* [Checking monitoring of "port"](collector_agents/CreateGwInterface_07.md)
+* [Checking monitoring of "ese_logical_port"](collector_agents/CreateGwInterface_02.md)
+* [Checking monitoring of "ese_logical_port"](collector_agents/CreateGwInterface_03.md)
+* [Checking monitoring of "port"](collector_agents/CreateGwInterface_04.md)
+* [Checking monitoring of "port"](collector_agents/CreateGwInterface_05.md)
 
 And then, CollectorAgent has stored the result of status information.
 

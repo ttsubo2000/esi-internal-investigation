@@ -92,6 +92,7 @@ CollectorAgent has conducted some tasks for "Create Internet Gateway" based heat
 As a result, CollectorAgent has responded the result of status information as handling tasks.
 
 * [Checking monitoring of "internet_gateway"](collector_agents/CreateInternetGateway_01.md)
+* [Checking monitoring of "internet_gateway"](collector_agents/CreateInternetGateway_02.md)
 
 
 ## 10.7. Applying JUNOS Configurations via netconf

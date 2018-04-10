@@ -1,0 +1,977 @@
+2018-04-09 04:41:14.339 23 DEBUG nova.servicegroup.api [-] ServiceGroup driver defined as an instance of db __new__ /usr/lib/python2.7/dist-packages/nova/servicegroup/api.py:65
+2018-04-09 04:41:15.909 23 INFO nova.openstack.common.periodic_task [-] Skipping periodic task _periodic_update_dns because its interval is negative
+2018-04-09 04:41:16.222 23 INFO nova.virt.driver [-] Loading compute driver 'fake.FakeDriver'
+2018-04-09 04:41:16.256 23 INFO oslo.messaging._drivers.impl_rabbit [req-83658db3-5cda-4bc5-a46e-42130b02cfc0 ] Connecting to AMQP server on 127.0.0.1:5672
+2018-04-09 04:41:16.310 23 ERROR oslo.messaging._drivers.impl_rabbit [req-83658db3-5cda-4bc5-a46e-42130b02cfc0 ] AMQP server on 127.0.0.1:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 1 seconds.
+2018-04-09 04:41:17.322 23 INFO oslo.messaging._drivers.impl_rabbit [req-83658db3-5cda-4bc5-a46e-42130b02cfc0 ] Delaying reconnect for 1.0 seconds...
+2018-04-09 04:41:18.324 23 INFO oslo.messaging._drivers.impl_rabbit [req-83658db3-5cda-4bc5-a46e-42130b02cfc0 ] Connecting to AMQP server on 127.0.0.1:5672
+2018-04-09 04:41:18.332 23 ERROR oslo.messaging._drivers.impl_rabbit [req-83658db3-5cda-4bc5-a46e-42130b02cfc0 ] AMQP server on 127.0.0.1:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 3 seconds.
+2018-04-09 04:41:21.338 23 INFO oslo.messaging._drivers.impl_rabbit [req-83658db3-5cda-4bc5-a46e-42130b02cfc0 ] Delaying reconnect for 1.0 seconds...
+2018-04-09 04:41:22.340 23 INFO oslo.messaging._drivers.impl_rabbit [req-83658db3-5cda-4bc5-a46e-42130b02cfc0 ] Connecting to AMQP server on 127.0.0.1:5672
+2018-04-09 04:41:22.347 23 ERROR oslo.messaging._drivers.impl_rabbit [req-83658db3-5cda-4bc5-a46e-42130b02cfc0 ] AMQP server on 127.0.0.1:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 5 seconds.
+2018-04-09 04:41:29.200 91 DEBUG nova.servicegroup.api [-] ServiceGroup driver defined as an instance of db __new__ /usr/lib/python2.7/dist-packages/nova/servicegroup/api.py:65
+2018-04-09 04:41:30.343 91 INFO nova.openstack.common.periodic_task [-] Skipping periodic task _periodic_update_dns because its interval is negative
+2018-04-09 04:41:30.533 91 INFO nova.virt.driver [-] Loading compute driver 'fake.FakeDriver'
+2018-04-09 04:41:30.547 91 INFO oslo.messaging._drivers.impl_rabbit [req-af6204b0-02ce-49fd-a034-12f9c33385ba ] Connecting to AMQP server on 127.0.0.1:5672
+2018-04-09 04:41:30.641 91 ERROR oslo.messaging._drivers.impl_rabbit [req-af6204b0-02ce-49fd-a034-12f9c33385ba ] AMQP server on 127.0.0.1:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 1 seconds.
+2018-04-09 04:41:31.643 91 INFO oslo.messaging._drivers.impl_rabbit [req-af6204b0-02ce-49fd-a034-12f9c33385ba ] Delaying reconnect for 1.0 seconds...
+2018-04-09 04:41:32.644 91 INFO oslo.messaging._drivers.impl_rabbit [req-af6204b0-02ce-49fd-a034-12f9c33385ba ] Connecting to AMQP server on 127.0.0.1:5672
+2018-04-09 04:41:32.651 91 ERROR oslo.messaging._drivers.impl_rabbit [req-af6204b0-02ce-49fd-a034-12f9c33385ba ] AMQP server on 127.0.0.1:5672 is unreachable: [Errno 111] ECONNREFUSED. Trying again in 3 seconds.
+2018-04-09 04:41:35.652 91 INFO oslo.messaging._drivers.impl_rabbit [req-af6204b0-02ce-49fd-a034-12f9c33385ba ] Delaying reconnect for 1.0 seconds...
+2018-04-09 04:41:36.654 91 INFO oslo.messaging._drivers.impl_rabbit [req-af6204b0-02ce-49fd-a034-12f9c33385ba ] Connecting to AMQP server on 127.0.0.1:5672
+2018-04-09 04:41:36.667 91 INFO oslo.messaging._drivers.impl_rabbit [req-af6204b0-02ce-49fd-a034-12f9c33385ba ] Connected to AMQP server on 127.0.0.1:5672
+2018-04-09 04:41:36.671 91 INFO oslo.messaging._drivers.impl_rabbit [req-af6204b0-02ce-49fd-a034-12f9c33385ba ] Connecting to AMQP server on 127.0.0.1:5672
+2018-04-09 04:41:36.680 91 INFO oslo.messaging._drivers.impl_rabbit [req-af6204b0-02ce-49fd-a034-12f9c33385ba ] Connected to AMQP server on 127.0.0.1:5672
+2018-04-09 04:41:36.702 91 DEBUG nova.openstack.common.service [-] Full set of CONF: _wait_for_exit_or_signal /usr/lib/python2.7/dist-packages/nova/openstack/common/service.py:167
+2018-04-09 04:41:36.703 91 DEBUG nova.openstack.common.service [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1979
+2018-04-09 04:41:36.704 91 DEBUG nova.openstack.common.service [-] Configuration options gathered from: log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1980
+2018-04-09 04:41:36.704 91 DEBUG nova.openstack.common.service [-] command line args: ['--config-file=/etc/nova/nova.conf', '--log-file=/log/nova-compute.log'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1981
+2018-04-09 04:41:36.705 91 DEBUG nova.openstack.common.service [-] config files: ['/etc/nova/nova.conf'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1982
+2018-04-09 04:41:36.705 91 DEBUG nova.openstack.common.service [-] ================================================================================ log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1983
+2018-04-09 04:41:36.706 91 DEBUG nova.openstack.common.service [-] allow_instance_snapshots       = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.707 91 DEBUG nova.openstack.common.service [-] allow_migrate_to_same_host     = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.707 91 DEBUG nova.openstack.common.service [-] allow_resize_to_same_host      = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.708 91 DEBUG nova.openstack.common.service [-] amqp_auto_delete               = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.708 91 DEBUG nova.openstack.common.service [-] amqp_durable_queues            = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.709 91 DEBUG nova.openstack.common.service [-] api_paste_config               = api-paste.ini log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.710 91 DEBUG nova.openstack.common.service [-] api_rate_limit                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.710 91 DEBUG nova.openstack.common.service [-] auth_strategy                  = keystone log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.711 91 DEBUG nova.openstack.common.service [-] auto_assign_floating_ip        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.711 91 DEBUG nova.openstack.common.service [-] backdoor_port                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.712 91 DEBUG nova.openstack.common.service [-] bandwidth_poll_interval        = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.713 91 DEBUG nova.openstack.common.service [-] bindir                         = /usr/local/bin log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.713 91 DEBUG nova.openstack.common.service [-] block_device_allocate_retries  = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.714 91 DEBUG nova.openstack.common.service [-] block_device_allocate_retries_interval = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.714 91 DEBUG nova.openstack.common.service [-] boot_script_template           = /usr/lib/python2.7/dist-packages/nova/cloudpipe/bootscript.template log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.715 91 DEBUG nova.openstack.common.service [-] ca_file                        = cacert.pem log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.716 91 DEBUG nova.openstack.common.service [-] ca_path                        = /usr/lib/python2.7/dist-packages/CA log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.716 91 DEBUG nova.openstack.common.service [-] cert_manager                   = nova.cert.manager.CertManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.717 91 DEBUG nova.openstack.common.service [-] client_socket_timeout          = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.717 91 DEBUG nova.openstack.common.service [-] cnt_vpn_clients                = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.718 91 DEBUG nova.openstack.common.service [-] compute_available_monitors     = ['nova.compute.monitors.all_monitors'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.719 91 DEBUG nova.openstack.common.service [-] compute_driver                 = fake.FakeDriver log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.719 91 DEBUG nova.openstack.common.service [-] compute_manager                = nova.compute.manager.ComputeManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.720 91 DEBUG nova.openstack.common.service [-] compute_monitors               = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.720 91 DEBUG nova.openstack.common.service [-] compute_resources              = ['vcpu'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.721 91 DEBUG nova.openstack.common.service [-] compute_stats_class            = nova.compute.stats.Stats log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.722 91 DEBUG nova.openstack.common.service [-] compute_topic                  = compute log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.722 91 DEBUG nova.openstack.common.service [-] config_dir                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.723 91 DEBUG nova.openstack.common.service [-] config_file                    = ['/etc/nova/nova.conf'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.723 91 DEBUG nova.openstack.common.service [-] console_host                   = nova-server log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.724 91 DEBUG nova.openstack.common.service [-] console_manager                = nova.console.manager.ConsoleProxyManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.724 91 DEBUG nova.openstack.common.service [-] console_topic                  = console log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.725 91 DEBUG nova.openstack.common.service [-] consoleauth_manager            = nova.consoleauth.manager.ConsoleAuthManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.726 91 DEBUG nova.openstack.common.service [-] consoleauth_topic              = consoleauth log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.726 91 DEBUG nova.openstack.common.service [-] control_exchange               = nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.727 91 DEBUG nova.openstack.common.service [-] create_unique_mac_address_attempts = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.727 91 DEBUG nova.openstack.common.service [-] crl_file                       = crl.pem log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.728 91 DEBUG nova.openstack.common.service [-] db_driver                      = nova.db log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.728 91 DEBUG nova.openstack.common.service [-] debug                          = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.729 91 DEBUG nova.openstack.common.service [-] default_access_ip_network_name = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.730 91 DEBUG nova.openstack.common.service [-] default_availability_zone      = nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.730 91 DEBUG nova.openstack.common.service [-] default_ephemeral_format       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.731 91 DEBUG nova.openstack.common.service [-] default_flavor                 = m1.small log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.732 91 DEBUG nova.openstack.common.service [-] default_floating_pool          = nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.732 91 DEBUG nova.openstack.common.service [-] default_log_levels             = ['amqp=WARN', 'amqplib=WARN', 'boto=WARN', 'qpid=WARN', 'sqlalchemy=WARN', 'suds=INFO', 'oslo.messaging=INFO', 'iso8601=WARN', 'requests.packages.urllib3.connectionpool=WARN', 'urllib3.connectionpool=WARN', 'websocket=WARN', 'keystonemiddleware=WARN', 'routes.middleware=WARN', 'stevedore=WARN'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.733 91 DEBUG nova.openstack.common.service [-] default_notification_level     = INFO log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.733 91 DEBUG nova.openstack.common.service [-] default_publisher_id           = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.734 91 DEBUG nova.openstack.common.service [-] default_schedule_zone          = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.735 91 DEBUG nova.openstack.common.service [-] defer_iptables_apply           = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.735 91 DEBUG nova.openstack.common.service [-] dhcp_domain                    = novalocal log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.736 91 DEBUG nova.openstack.common.service [-] dhcp_lease_time                = 86400 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.736 91 DEBUG nova.openstack.common.service [-] dhcpbridge                     = /usr/local/bin/nova-dhcpbridge log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.737 91 DEBUG nova.openstack.common.service [-] dhcpbridge_flagfile            = ['/etc/nova/nova-dhcpbridge.conf'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.738 91 DEBUG nova.openstack.common.service [-] disable_process_locking        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.738 91 DEBUG nova.openstack.common.service [-] dmz_cidr                       = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.739 91 DEBUG nova.openstack.common.service [-] dmz_mask                       = 255.255.255.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.739 91 DEBUG nova.openstack.common.service [-] dmz_net                        = 10.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.740 91 DEBUG nova.openstack.common.service [-] dns_server                     = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.740 91 DEBUG nova.openstack.common.service [-] dns_update_periodic_interval   = -1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.741 91 DEBUG nova.openstack.common.service [-] dnsmasq_config_file            =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.742 91 DEBUG nova.openstack.common.service [-] ec2_listen                     = 0.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.742 91 DEBUG nova.openstack.common.service [-] ec2_listen_port                = 8773 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.743 91 DEBUG nova.openstack.common.service [-] ec2_private_dns_show_ip        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.743 91 DEBUG nova.openstack.common.service [-] ec2_strict_validation          = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.744 91 DEBUG nova.openstack.common.service [-] ec2_timestamp_expiry           = 300 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.745 91 DEBUG nova.openstack.common.service [-] ec2_workers                    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.745 91 DEBUG nova.openstack.common.service [-] enable_instance_password       = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.746 91 DEBUG nova.openstack.common.service [-] enable_new_services            = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.746 91 DEBUG nova.openstack.common.service [-] enabled_apis                   = ['osapi_compute', 'metadata'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.747 91 DEBUG nova.openstack.common.service [-] enabled_ssl_apis               = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.748 91 DEBUG nova.openstack.common.service [-] fake_call                      = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.748 91 DEBUG nova.openstack.common.service [-] fake_network                   = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.749 91 DEBUG nova.openstack.common.service [-] fake_rabbit                    = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.749 91 DEBUG nova.openstack.common.service [-] fatal_deprecations             = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.750 91 DEBUG nova.openstack.common.service [-] fatal_exception_format_errors  = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.750 91 DEBUG nova.openstack.common.service [-] fixed_ip_disassociate_timeout  = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.751 91 DEBUG nova.openstack.common.service [-] fixed_range_v6                 = fd00::/48 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.752 91 DEBUG nova.openstack.common.service [-] flat_injected                  = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.752 91 DEBUG nova.openstack.common.service [-] flat_interface                 = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.753 91 DEBUG nova.openstack.common.service [-] flat_network_bridge            = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.753 91 DEBUG nova.openstack.common.service [-] flat_network_dns               = 8.8.4.4 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.754 91 DEBUG nova.openstack.common.service [-] floating_ip_dns_manager        = nova.network.noop_dns_driver.NoopDNSDriver log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.754 91 DEBUG nova.openstack.common.service [-] force_dhcp_release             = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.755 91 DEBUG nova.openstack.common.service [-] force_snat_range               = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.756 91 DEBUG nova.openstack.common.service [-] forward_bridge_interface       = ['all'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.756 91 DEBUG nova.openstack.common.service [-] gateway                        = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.757 91 DEBUG nova.openstack.common.service [-] gateway_v6                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.757 91 DEBUG nova.openstack.common.service [-] heal_instance_info_cache_interval = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.758 91 DEBUG nova.openstack.common.service [-] host                           = nova-server log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.758 91 DEBUG nova.openstack.common.service [-] image_cache_manager_interval   = 2400 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.759 91 DEBUG nova.openstack.common.service [-] image_cache_subdirectory_name  = _base log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.760 91 DEBUG nova.openstack.common.service [-] injected_network_template      = /usr/lib/python2.7/dist-packages/nova/virt/interfaces.template log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.760 91 DEBUG nova.openstack.common.service [-] instance_build_timeout         = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.761 91 DEBUG nova.openstack.common.service [-] instance_delete_interval       = 300 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.762 91 DEBUG nova.openstack.common.service [-] instance_dns_domain            =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.762 91 DEBUG nova.openstack.common.service [-] instance_dns_manager           = nova.network.noop_dns_driver.NoopDNSDriver log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.763 91 DEBUG nova.openstack.common.service [-] instance_format                = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.763 91 DEBUG nova.openstack.common.service [-] instance_name_template         = instance-%08x log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.764 91 DEBUG nova.openstack.common.service [-] instance_usage_audit           = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.764 91 DEBUG nova.openstack.common.service [-] instance_usage_audit_period    = month log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.765 91 DEBUG nova.openstack.common.service [-] instance_uuid_format           = [instance: %(uuid)s]  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.766 91 DEBUG nova.openstack.common.service [-] instances_path                 = /usr/lib/python2.7/dist-packages/instances log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.766 91 DEBUG nova.openstack.common.service [-] internal_service_availability_zone = internal log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.767 91 DEBUG nova.openstack.common.service [-] iptables_bottom_regex          =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.767 91 DEBUG nova.openstack.common.service [-] iptables_drop_action           = DROP log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.768 91 DEBUG nova.openstack.common.service [-] iptables_top_regex             =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.769 91 DEBUG nova.openstack.common.service [-] ipv6_backend                   = rfc2462 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.769 91 DEBUG nova.openstack.common.service [-] key_file                       = private/cakey.pem log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.770 91 DEBUG nova.openstack.common.service [-] keys_path                      = /usr/lib/python2.7/dist-packages/keys log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.771 91 DEBUG nova.openstack.common.service [-] keystone_ec2_url               = http://localhost:5000/v2.0/ec2tokens log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.771 91 DEBUG nova.openstack.common.service [-] kombu_reconnect_delay          = 1.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.772 91 DEBUG nova.openstack.common.service [-] kombu_ssl_ca_certs             =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.772 91 DEBUG nova.openstack.common.service [-] kombu_ssl_certfile             =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.773 91 DEBUG nova.openstack.common.service [-] kombu_ssl_keyfile              =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.773 91 DEBUG nova.openstack.common.service [-] kombu_ssl_version              =  log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.774 91 DEBUG nova.openstack.common.service [-] l3_lib                         = nova.network.l3.LinuxNetL3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.774 91 DEBUG nova.openstack.common.service [-] linuxnet_interface_driver      = nova.network.linux_net.LinuxOVSInterfaceDriver log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.775 91 DEBUG nova.openstack.common.service [-] linuxnet_ovs_integration_bridge = br-int log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.776 91 DEBUG nova.openstack.common.service [-] live_migration_retry_count     = 30 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.776 91 DEBUG nova.openstack.common.service [-] lock_path                      = /var/lock/nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.777 91 DEBUG nova.openstack.common.service [-] lockout_attempts               = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.777 91 DEBUG nova.openstack.common.service [-] lockout_minutes                = 15 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.778 91 DEBUG nova.openstack.common.service [-] lockout_window                 = 15 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.778 91 DEBUG nova.openstack.common.service [-] log_config_append              = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.779 91 DEBUG nova.openstack.common.service [-] log_date_format                = %Y-%m-%d %H:%M:%S log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.780 91 DEBUG nova.openstack.common.service [-] log_dir                        = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.780 91 DEBUG nova.openstack.common.service [-] log_file                       = /log/nova-compute.log log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.781 91 DEBUG nova.openstack.common.service [-] log_format                     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.781 91 DEBUG nova.openstack.common.service [-] logging_context_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [%(request_id)s %(user_identity)s] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.782 91 DEBUG nova.openstack.common.service [-] logging_debug_format_suffix    = %(funcName)s %(pathname)s:%(lineno)d log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.782 91 DEBUG nova.openstack.common.service [-] logging_default_format_string  = %(asctime)s.%(msecs)03d %(process)d %(levelname)s %(name)s [-] %(instance)s%(message)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.783 91 DEBUG nova.openstack.common.service [-] logging_exception_prefix       = %(asctime)s.%(msecs)03d %(process)d TRACE %(name)s %(instance)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.784 91 DEBUG nova.openstack.common.service [-] max_age                        = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.784 91 DEBUG nova.openstack.common.service [-] max_header_line                = 16384 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.785 91 DEBUG nova.openstack.common.service [-] max_local_block_devices        = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.786 91 DEBUG nova.openstack.common.service [-] maximum_instance_delete_attempts = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.786 91 DEBUG nova.openstack.common.service [-] memcached_servers              = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.786 91 DEBUG nova.openstack.common.service [-] metadata_host                  = 172.23.0.11 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.787 91 DEBUG nova.openstack.common.service [-] metadata_listen                = 0.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.787 91 DEBUG nova.openstack.common.service [-] metadata_listen_port           = 8775 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.788 91 DEBUG nova.openstack.common.service [-] metadata_manager               = nova.api.manager.MetadataManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.788 91 DEBUG nova.openstack.common.service [-] metadata_port                  = 8775 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.789 91 DEBUG nova.openstack.common.service [-] metadata_workers               = 4 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.789 91 DEBUG nova.openstack.common.service [-] migrate_max_retries            = -1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.789 91 DEBUG nova.openstack.common.service [-] monkey_patch                   = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.790 91 DEBUG nova.openstack.common.service [-] monkey_patch_modules           = ['nova.api.ec2.cloud:nova.notifications.notify_decorator', 'nova.compute.api:nova.notifications.notify_decorator'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.790 91 DEBUG nova.openstack.common.service [-] multi_host                     = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.791 91 DEBUG nova.openstack.common.service [-] multi_instance_display_name_template = %(name)s-%(uuid)s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.791 91 DEBUG nova.openstack.common.service [-] my_ip                          = 172.23.0.11 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.792 91 DEBUG nova.openstack.common.service [-] network_allocate_retries       = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.792 91 DEBUG nova.openstack.common.service [-] network_api_class              = nova.network.neutronv2.api.API log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.793 91 DEBUG nova.openstack.common.service [-] network_device_mtu             = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.793 91 DEBUG nova.openstack.common.service [-] network_driver                 = nova.network.linux_net log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.793 91 DEBUG nova.openstack.common.service [-] network_manager                = nova.network.manager.VlanManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.794 91 DEBUG nova.openstack.common.service [-] network_size                   = 256 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.794 91 DEBUG nova.openstack.common.service [-] network_topic                  = network log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.795 91 DEBUG nova.openstack.common.service [-] networks_path                  = /usr/lib/python2.7/dist-packages/networks log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.795 91 DEBUG nova.openstack.common.service [-] non_inheritable_image_properties = ['cache_in_nova', 'bittorrent'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.796 91 DEBUG nova.openstack.common.service [-] notification_driver            = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.796 91 DEBUG nova.openstack.common.service [-] notification_topics            = ['notifications'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.796 91 DEBUG nova.openstack.common.service [-] notify_api_faults              = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.797 91 DEBUG nova.openstack.common.service [-] notify_on_state_change         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.797 91 DEBUG nova.openstack.common.service [-] novncproxy_base_url            = http://127.0.0.1:6080/vnc_auto.html log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.797 91 DEBUG nova.openstack.common.service [-] null_kernel                    = nokernel log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.798 91 DEBUG nova.openstack.common.service [-] num_networks                   = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.798 91 DEBUG nova.openstack.common.service [-] osapi_compute_ext_list         = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.799 91 DEBUG nova.openstack.common.service [-] osapi_compute_extension        = ['nova.api.openstack.compute.contrib.standard_extensions'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.799 91 DEBUG nova.openstack.common.service [-] osapi_compute_link_prefix      = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.799 91 DEBUG nova.openstack.common.service [-] osapi_compute_listen           = 0.0.0.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.800 91 DEBUG nova.openstack.common.service [-] osapi_compute_listen_port      = 8774 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.800 91 DEBUG nova.openstack.common.service [-] osapi_compute_workers          = 4 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.800 91 DEBUG nova.openstack.common.service [-] osapi_glance_link_prefix       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.801 91 DEBUG nova.openstack.common.service [-] osapi_max_limit                = 1000 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.801 91 DEBUG nova.openstack.common.service [-] ovs_vsctl_timeout              = 120 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.801 91 DEBUG nova.openstack.common.service [-] password_length                = 12 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.802 91 DEBUG nova.openstack.common.service [-] pci_alias                      = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.802 91 DEBUG nova.openstack.common.service [-] pci_passthrough_whitelist      = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.802 91 DEBUG nova.openstack.common.service [-] periodic_enable                = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.803 91 DEBUG nova.openstack.common.service [-] periodic_fuzzy_delay           = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.803 91 DEBUG nova.openstack.common.service [-] policy_default_rule            = default log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.804 91 DEBUG nova.openstack.common.service [-] policy_file                    = policy.json log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.804 91 DEBUG nova.openstack.common.service [-] preallocate_images             = none log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.804 91 DEBUG nova.openstack.common.service [-] project_cert_subject           = /C=US/ST=California/O=OpenStack/OU=NovaDev/CN=project-ca-%.16s-%s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.805 91 DEBUG nova.openstack.common.service [-] public_interface               = eth0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.805 91 DEBUG nova.openstack.common.service [-] publish_errors                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.805 91 DEBUG nova.openstack.common.service [-] pybasedir                      = /usr/lib/python2.7/dist-packages log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.806 91 DEBUG nova.openstack.common.service [-] quota_cores                    = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.806 91 DEBUG nova.openstack.common.service [-] quota_driver                   = nova.quota.DbQuotaDriver log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.807 91 DEBUG nova.openstack.common.service [-] quota_fixed_ips                = -1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.807 91 DEBUG nova.openstack.common.service [-] quota_floating_ips             = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.807 91 DEBUG nova.openstack.common.service [-] quota_injected_file_content_bytes = 10240 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.808 91 DEBUG nova.openstack.common.service [-] quota_injected_file_path_length = 255 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.808 91 DEBUG nova.openstack.common.service [-] quota_injected_files           = 5 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.808 91 DEBUG nova.openstack.common.service [-] quota_instances                = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.809 91 DEBUG nova.openstack.common.service [-] quota_key_pairs                = 100 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.809 91 DEBUG nova.openstack.common.service [-] quota_metadata_items           = 128 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.809 91 DEBUG nova.openstack.common.service [-] quota_ram                      = 51200 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.810 91 DEBUG nova.openstack.common.service [-] quota_security_group_rules     = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.810 91 DEBUG nova.openstack.common.service [-] quota_security_groups          = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.810 91 DEBUG nova.openstack.common.service [-] quota_server_group_members     = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.811 91 DEBUG nova.openstack.common.service [-] quota_server_groups            = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.811 91 DEBUG nova.openstack.common.service [-] rabbit_ha_queues               = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.811 91 DEBUG nova.openstack.common.service [-] rabbit_host                    = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.812 91 DEBUG nova.openstack.common.service [-] rabbit_hosts                   = ['127.0.0.1:5672'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.812 91 DEBUG nova.openstack.common.service [-] rabbit_login_method            = AMQPLAIN log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.812 91 DEBUG nova.openstack.common.service [-] rabbit_max_retries             = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.813 91 DEBUG nova.openstack.common.service [-] rabbit_password                = **** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.813 91 DEBUG nova.openstack.common.service [-] rabbit_port                    = 5672 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.813 91 DEBUG nova.openstack.common.service [-] rabbit_retry_backoff           = 2 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.814 91 DEBUG nova.openstack.common.service [-] rabbit_retry_interval          = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.814 91 DEBUG nova.openstack.common.service [-] rabbit_use_ssl                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.814 91 DEBUG nova.openstack.common.service [-] rabbit_userid                  = guest log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.815 91 DEBUG nova.openstack.common.service [-] rabbit_virtual_host            = / log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.815 91 DEBUG nova.openstack.common.service [-] reboot_timeout                 = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.815 91 DEBUG nova.openstack.common.service [-] reclaim_instance_interval      = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.816 91 DEBUG nova.openstack.common.service [-] remove_unused_base_images      = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.816 91 DEBUG nova.openstack.common.service [-] remove_unused_original_minimum_age_seconds = 86400 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.816 91 DEBUG nova.openstack.common.service [-] report_interval                = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.817 91 DEBUG nova.openstack.common.service [-] rescue_timeout                 = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.817 91 DEBUG nova.openstack.common.service [-] reservation_expire             = 86400 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.818 91 DEBUG nova.openstack.common.service [-] reserved_host_disk_mb          = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.818 91 DEBUG nova.openstack.common.service [-] reserved_host_memory_mb        = 512 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.818 91 DEBUG nova.openstack.common.service [-] resize_confirm_window          = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.819 91 DEBUG nova.openstack.common.service [-] resume_guests_state_on_host_boot = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.819 91 DEBUG nova.openstack.common.service [-] rootwrap_config                = /etc/nova/rootwrap.conf log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.819 91 DEBUG nova.openstack.common.service [-] routing_source_ip              = 172.23.0.11 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.820 91 DEBUG nova.openstack.common.service [-] rpc_backend                    = rabbit log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.820 91 DEBUG nova.openstack.common.service [-] rpc_conn_pool_size             = 30 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.820 91 DEBUG nova.openstack.common.service [-] rpc_response_timeout           = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.821 91 DEBUG nova.openstack.common.service [-] run_external_periodic_tasks    = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.821 91 DEBUG nova.openstack.common.service [-] running_deleted_instance_action = reap log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.821 91 DEBUG nova.openstack.common.service [-] running_deleted_instance_poll_interval = 1800 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.822 91 DEBUG nova.openstack.common.service [-] running_deleted_instance_timeout = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.822 91 DEBUG nova.openstack.common.service [-] scheduler_host_manager         = nova.scheduler.host_manager.HostManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.823 91 DEBUG nova.openstack.common.service [-] scheduler_manager              = nova.scheduler.manager.SchedulerManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.823 91 DEBUG nova.openstack.common.service [-] scheduler_max_attempts         = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.823 91 DEBUG nova.openstack.common.service [-] scheduler_topic                = scheduler log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.824 91 DEBUG nova.openstack.common.service [-] security_group_api             = nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.824 91 DEBUG nova.openstack.common.service [-] send_arp_for_ha                = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.824 91 DEBUG nova.openstack.common.service [-] send_arp_for_ha_count          = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.825 91 DEBUG nova.openstack.common.service [-] service_down_time              = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.825 91 DEBUG nova.openstack.common.service [-] servicegroup_driver            = db log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.826 91 DEBUG nova.openstack.common.service [-] share_dhcp_address             = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.826 91 DEBUG nova.openstack.common.service [-] shelved_offload_time           = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.826 91 DEBUG nova.openstack.common.service [-] shelved_poll_interval          = 3600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.827 91 DEBUG nova.openstack.common.service [-] shutdown_timeout               = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.827 91 DEBUG nova.openstack.common.service [-] snapshot_name_template         = snapshot-%s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.827 91 DEBUG nova.openstack.common.service [-] ssl_ca_file                    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.828 91 DEBUG nova.openstack.common.service [-] ssl_cert_file                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.828 91 DEBUG nova.openstack.common.service [-] ssl_key_file                   = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.828 91 DEBUG nova.openstack.common.service [-] state_path                     = /usr/lib/python2.7/dist-packages log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.829 91 DEBUG nova.openstack.common.service [-] sync_power_state_concurrency   = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.829 91 DEBUG nova.openstack.common.service [-] sync_power_state_interval      = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.829 91 DEBUG nova.openstack.common.service [-] syslog_connect_retries         = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.830 91 DEBUG nova.openstack.common.service [-] syslog_log_facility            = LOG_USER log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.830 91 DEBUG nova.openstack.common.service [-] tcp_keepidle                   = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.830 91 DEBUG nova.openstack.common.service [-] teardown_unused_network_gateway = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.831 91 DEBUG nova.openstack.common.service [-] tempdir                        = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.831 91 DEBUG nova.openstack.common.service [-] transport_url                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.832 91 DEBUG nova.openstack.common.service [-] until_refresh                  = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.832 91 DEBUG nova.openstack.common.service [-] update_dns_entries             = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.832 91 DEBUG nova.openstack.common.service [-] use_cow_images                 = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.833 91 DEBUG nova.openstack.common.service [-] use_forwarded_for              = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.833 91 DEBUG nova.openstack.common.service [-] use_ipv6                       = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.833 91 DEBUG nova.openstack.common.service [-] use_network_dns_servers        = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.834 91 DEBUG nova.openstack.common.service [-] use_project_ca                 = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.834 91 DEBUG nova.openstack.common.service [-] use_single_default_gateway     = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.834 91 DEBUG nova.openstack.common.service [-] use_stderr                     = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.835 91 DEBUG nova.openstack.common.service [-] use_syslog                     = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.835 91 DEBUG nova.openstack.common.service [-] use_syslog_rfc_format          = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.835 91 DEBUG nova.openstack.common.service [-] user_cert_subject              = /C=US/ST=California/O=OpenStack/OU=NovaDev/CN=%.16s-%.16s-%s log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.836 91 DEBUG nova.openstack.common.service [-] vcpu_pin_set                   = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.836 91 DEBUG nova.openstack.common.service [-] verbose                        = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.837 91 DEBUG nova.openstack.common.service [-] vif_plugging_is_fatal          = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.837 91 DEBUG nova.openstack.common.service [-] vif_plugging_timeout           = 300 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.837 91 DEBUG nova.openstack.common.service [-] vlan_interface                 = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.838 91 DEBUG nova.openstack.common.service [-] vlan_start                     = 100 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.838 91 DEBUG nova.openstack.common.service [-] vnc_enabled                    = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.838 91 DEBUG nova.openstack.common.service [-] vnc_keymap                     = en-us log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.839 91 DEBUG nova.openstack.common.service [-] vncserver_listen               = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.839 91 DEBUG nova.openstack.common.service [-] vncserver_proxyclient_address  = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.839 91 DEBUG nova.openstack.common.service [-] volume_api_class               = nova.volume.cinder.API log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.840 91 DEBUG nova.openstack.common.service [-] volume_usage_poll_interval     = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.840 91 DEBUG nova.openstack.common.service [-] vpn_flavor                     = m1.tiny log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.841 91 DEBUG nova.openstack.common.service [-] vpn_image_id                   = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.841 91 DEBUG nova.openstack.common.service [-] vpn_ip                         = 172.23.0.11 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.841 91 DEBUG nova.openstack.common.service [-] vpn_key_suffix                 = -vpn log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.842 91 DEBUG nova.openstack.common.service [-] vpn_start                      = 1000 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.842 91 DEBUG nova.openstack.common.service [-] wsgi_default_pool_size         = 1000 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.842 91 DEBUG nova.openstack.common.service [-] wsgi_keep_alive                = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.843 91 DEBUG nova.openstack.common.service [-] wsgi_log_format                = %(client_ip)s "%(request_line)s" status: %(status_code)s len: %(body_length)s time: %(wall_seconds).7f log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.843 91 DEBUG nova.openstack.common.service [-] xvpvncproxy_base_url           = http://127.0.0.1:6081/console log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:1992
+2018-04-09 04:41:36.844 91 DEBUG nova.openstack.common.service [-] ephemeral_storage_encryption.cipher = aes-xts-plain64 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.844 91 DEBUG nova.openstack.common.service [-] ephemeral_storage_encryption.enabled = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.844 91 DEBUG nova.openstack.common.service [-] ephemeral_storage_encryption.key_size = 512 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.845 91 DEBUG nova.openstack.common.service [-] osapi_v3.enabled               = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.845 91 DEBUG nova.openstack.common.service [-] osapi_v3.extensions_blacklist  = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.845 91 DEBUG nova.openstack.common.service [-] osapi_v3.extensions_whitelist  = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.846 91 DEBUG nova.openstack.common.service [-] rdp.enabled                    = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.846 91 DEBUG nova.openstack.common.service [-] rdp.html5_proxy_base_url       = http://127.0.0.1:6083/ log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.847 91 DEBUG nova.openstack.common.service [-] conductor.manager              = nova.conductor.manager.ConductorManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.847 91 DEBUG nova.openstack.common.service [-] conductor.topic                = conductor log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.847 91 DEBUG nova.openstack.common.service [-] conductor.use_local            = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.848 91 DEBUG nova.openstack.common.service [-] conductor.workers              = 4 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.848 91 DEBUG nova.openstack.common.service [-] database.backend               = sqlalchemy log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.848 91 DEBUG nova.openstack.common.service [-] database.connection            = **** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.849 91 DEBUG nova.openstack.common.service [-] database.connection_debug      = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.849 91 DEBUG nova.openstack.common.service [-] database.connection_trace      = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.850 91 DEBUG nova.openstack.common.service [-] database.db_inc_retry_interval = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.850 91 DEBUG nova.openstack.common.service [-] database.db_max_retries        = 20 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.850 91 DEBUG nova.openstack.common.service [-] database.db_max_retry_interval = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.851 91 DEBUG nova.openstack.common.service [-] database.db_retry_interval     = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.851 91 DEBUG nova.openstack.common.service [-] database.idle_timeout          = 3600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.851 91 DEBUG nova.openstack.common.service [-] database.max_overflow          = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.852 91 DEBUG nova.openstack.common.service [-] database.max_pool_size         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.852 91 DEBUG nova.openstack.common.service [-] database.max_retries           = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.852 91 DEBUG nova.openstack.common.service [-] database.min_pool_size         = 1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.853 91 DEBUG nova.openstack.common.service [-] database.mysql_sql_mode        = TRADITIONAL log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.853 91 DEBUG nova.openstack.common.service [-] database.pool_timeout          = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.854 91 DEBUG nova.openstack.common.service [-] database.retry_interval        = 10 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.854 91 DEBUG nova.openstack.common.service [-] database.slave_connection      = **** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.854 91 DEBUG nova.openstack.common.service [-] database.sqlite_db             = nova.sqlite log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.855 91 DEBUG nova.openstack.common.service [-] database.sqlite_synchronous    = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.855 91 DEBUG nova.openstack.common.service [-] database.use_db_reconnect      = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.855 91 DEBUG nova.openstack.common.service [-] database.use_tpool             = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.856 91 DEBUG nova.openstack.common.service [-] upgrade_levels.baseapi         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.856 91 DEBUG nova.openstack.common.service [-] upgrade_levels.cells           = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.857 91 DEBUG nova.openstack.common.service [-] upgrade_levels.compute         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.857 91 DEBUG nova.openstack.common.service [-] upgrade_levels.conductor       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.858 91 DEBUG nova.openstack.common.service [-] upgrade_levels.console         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.858 91 DEBUG nova.openstack.common.service [-] upgrade_levels.consoleauth     = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.858 91 DEBUG nova.openstack.common.service [-] upgrade_levels.network         = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.859 91 DEBUG nova.openstack.common.service [-] upgrade_levels.scheduler       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.859 91 DEBUG nova.openstack.common.service [-] cells.bandwidth_update_interval = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.859 91 DEBUG nova.openstack.common.service [-] cells.call_timeout             = 60 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.860 91 DEBUG nova.openstack.common.service [-] cells.capabilities             = ['hypervisor=xenserver;kvm', 'os=linux;windows'] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.860 91 DEBUG nova.openstack.common.service [-] cells.cell_type                = compute log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.861 91 DEBUG nova.openstack.common.service [-] cells.enable                   = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.861 91 DEBUG nova.openstack.common.service [-] cells.manager                  = nova.cells.manager.CellsManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.861 91 DEBUG nova.openstack.common.service [-] cells.mute_child_interval      = 300 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.862 91 DEBUG nova.openstack.common.service [-] cells.name                     = nova log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.862 91 DEBUG nova.openstack.common.service [-] cells.reserve_percent          = 10.0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.862 91 DEBUG nova.openstack.common.service [-] cells.topic                    = cells log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.863 91 DEBUG nova.openstack.common.service [-] keymgr.api_class               = nova.keymgr.conf_key_mgr.ConfKeyManager log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.864 91 DEBUG nova.openstack.common.service [-] serial_console.base_url        = ws://127.0.0.1:6083/ log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.864 91 DEBUG nova.openstack.common.service [-] serial_console.enabled         = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.864 91 DEBUG nova.openstack.common.service [-] serial_console.listen          = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.865 91 DEBUG nova.openstack.common.service [-] serial_console.port_range      = 10000:20000 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.865 91 DEBUG nova.openstack.common.service [-] serial_console.proxyclient_address = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.865 91 DEBUG nova.openstack.common.service [-] ssl.ca_file                    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.866 91 DEBUG nova.openstack.common.service [-] ssl.cert_file                  = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.866 91 DEBUG nova.openstack.common.service [-] ssl.key_file                   = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.867 91 DEBUG nova.openstack.common.service [-] cinder.api_insecure            = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.867 91 DEBUG nova.openstack.common.service [-] cinder.ca_certificates_file    = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.867 91 DEBUG nova.openstack.common.service [-] cinder.catalog_info            = volume:cinder:publicURL log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.868 91 DEBUG nova.openstack.common.service [-] cinder.cross_az_attach         = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.868 91 DEBUG nova.openstack.common.service [-] cinder.endpoint_template       = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.869 91 DEBUG nova.openstack.common.service [-] cinder.http_retries            = 3 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.869 91 DEBUG nova.openstack.common.service [-] cinder.http_timeout            = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.869 91 DEBUG nova.openstack.common.service [-] cinder.os_region_name          = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.870 91 DEBUG nova.openstack.common.service [-] glance.allowed_direct_url_schemes = [] log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.870 91 DEBUG nova.openstack.common.service [-] glance.api_insecure            = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.870 91 DEBUG nova.openstack.common.service [-] glance.api_servers             = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.871 91 DEBUG nova.openstack.common.service [-] glance.host                    = glance-server.monitoringrefactordocker_default log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.871 91 DEBUG nova.openstack.common.service [-] glance.num_retries             = 0 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.871 91 DEBUG nova.openstack.common.service [-] glance.port                    = 9292 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.872 91 DEBUG nova.openstack.common.service [-] glance.protocol                = http log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.872 91 DEBUG nova.openstack.common.service [-] workarounds.destroy_after_evacuate = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.873 91 DEBUG nova.openstack.common.service [-] remote_debug.host              = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.873 91 DEBUG nova.openstack.common.service [-] remote_debug.port              = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.873 91 DEBUG nova.openstack.common.service [-] neutron.admin_auth_url         = http://keystone-server.monitoringrefactordocker_default:5000/v2.0/ log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.874 91 DEBUG nova.openstack.common.service [-] neutron.admin_password         = **** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.874 91 DEBUG nova.openstack.common.service [-] neutron.admin_tenant_id        = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.875 91 DEBUG nova.openstack.common.service [-] neutron.admin_tenant_name      = admin log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.875 91 DEBUG nova.openstack.common.service [-] neutron.admin_user_id          = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.875 91 DEBUG nova.openstack.common.service [-] neutron.admin_username         = admin log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.876 91 DEBUG nova.openstack.common.service [-] neutron.allow_duplicate_networks = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.876 91 DEBUG nova.openstack.common.service [-] neutron.api_insecure           = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.876 91 DEBUG nova.openstack.common.service [-] neutron.auth_strategy          = keystone log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.877 91 DEBUG nova.openstack.common.service [-] neutron.ca_certificates_file   = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.877 91 DEBUG nova.openstack.common.service [-] neutron.extension_sync_interval = 600 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.878 91 DEBUG nova.openstack.common.service [-] neutron.ovs_bridge             = br-int log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.878 91 DEBUG nova.openstack.common.service [-] neutron.region_name            = None log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.878 91 DEBUG nova.openstack.common.service [-] neutron.url                    = http://gohan-server.monitoringrefactordocker_default:9998 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.879 91 DEBUG nova.openstack.common.service [-] neutron.url_timeout            = 30 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.879 91 DEBUG nova.openstack.common.service [-] spice.agent_enabled            = True log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.879 91 DEBUG nova.openstack.common.service [-] spice.enabled                  = False log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.880 91 DEBUG nova.openstack.common.service [-] spice.html5proxy_base_url      = http://127.0.0.1:6082/spice_auto.html log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.880 91 DEBUG nova.openstack.common.service [-] spice.keymap                   = en-us log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.880 91 DEBUG nova.openstack.common.service [-] spice.server_listen            = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.881 91 DEBUG nova.openstack.common.service [-] spice.server_proxyclient_address = 127.0.0.1 log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2000
+2018-04-09 04:41:36.881 91 DEBUG nova.openstack.common.service [-] ******************************************************************************** log_opt_values /usr/lib/python2.7/dist-packages/oslo/config/cfg.py:2002
+2018-04-09 04:41:36.882 91 AUDIT nova.service [-] Starting compute node (version 2014.2.4)
+2018-04-09 04:41:37.008 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:41:37.009 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:41:37.009 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:41:37.010 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:41:37.010 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:41:37.010 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:41:37.011 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:41:37.011 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:41:37.038 91 WARNING nova.compute.resource_tracker [-] No compute node record for nova-server:nova-server
+2018-04-09 04:41:37.077 91 INFO nova.compute.resource_tracker [-] Compute_service record created for nova-server:nova-server
+2018-04-09 04:41:37.139 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:41:37.139 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:41:37.139 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:41:37.140 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:41:37.172 91 INFO nova.scheduler.client.report [-] Compute_service record updated for ('nova-server', 'nova-server')
+2018-04-09 04:41:37.173 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:41:37.173 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:41:37.174 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:41:37.231 91 DEBUG nova.service [-] Creating RPC server for service compute start /usr/lib/python2.7/dist-packages/nova/service.py:186
+2018-04-09 04:41:37.234 91 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 127.0.0.1:5672
+2018-04-09 04:41:37.244 91 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 127.0.0.1:5672
+2018-04-09 04:41:37.254 91 DEBUG nova.service [-] Join ServiceGroup membership for this service compute start /usr/lib/python2.7/dist-packages/nova/service.py:204
+2018-04-09 04:41:37.254 91 DEBUG nova.servicegroup.api [-] Join new ServiceGroup member nova-server to the compute group, service = <nova.service.Service object at 0x7efdc7a88590> join /usr/lib/python2.7/dist-packages/nova/servicegroup/api.py:109
+2018-04-09 04:41:37.255 91 DEBUG nova.servicegroup.drivers.db [-] DB_Driver: join new ServiceGroup member nova-server to the compute group, service = <nova.service.Service object at 0x7efdc7a88590> join /usr/lib/python2.7/dist-packages/nova/servicegroup/drivers/db.py:46
+2018-04-09 04:41:48.258 91 DEBUG nova.openstack.common.periodic_task [req-d5f8b75c-4849-4775-b1e7-74b1687faf0e None] Running periodic task ComputeManager._sync_power_states run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:41:48.287 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 40.97 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:42:29.255 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:42:29.256 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.01 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:42:29.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:42:29.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:42:29.263 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:42:29.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:42:29.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:42:29.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:42:29.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:42:29.267 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:42:29.267 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:42:29.268 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:42:29.319 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:42:29.319 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:42:29.319 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:42:29.320 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:42:29.321 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:42:29.321 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:42:29.322 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:42:29.399 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:42:29.400 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:42:29.401 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:42:29.402 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:42:29.402 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:42:29.403 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:42:29.404 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:42:29.404 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:42:29.405 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:42:29.431 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:42:29.432 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 59.85 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:43:29.283 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:43:29.284 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:43:29.284 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:43:29.284 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:43:29.285 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:43:29.285 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:43:29.285 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:43:29.286 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:43:29.286 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:43:29.336 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:43:29.336 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:43:29.337 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:43:29.337 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:43:29.337 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:43:29.338 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:43:29.338 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:43:29.391 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:43:29.391 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:43:29.392 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:43:29.392 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:43:29.393 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:43:29.413 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:43:29.413 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.87 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:43:30.285 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:43:30.285 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:43:30.286 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.98 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:43:31.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:43:31.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:43:31.263 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:43:31.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:43:31.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 59.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:44:30.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:44:30.263 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:44:30.263 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:44:30.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:44:30.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:44:30.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:44:30.265 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:44:30.265 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:44:30.265 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:44:30.329 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:44:30.330 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:44:30.330 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:44:30.330 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:44:30.330 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:44:30.331 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:44:30.331 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:44:30.394 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:44:30.395 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:44:30.396 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:44:30.396 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:44:30.417 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:44:30.417 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.86 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:44:31.276 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:44:31.277 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:44:31.278 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.98 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:44:32.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:44:32.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:44:32.263 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:44:33.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:44:33.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:44:33.264 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:44:33.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 57.99 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:45:31.255 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:45:31.255 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.01 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:45:31.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:45:31.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:45:32.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:45:32.264 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:45:32.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:45:32.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:45:32.266 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:45:32.267 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:45:32.267 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:45:32.268 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:45:32.268 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:45:32.287 91 INFO oslo.messaging._drivers.impl_rabbit [-] Connecting to AMQP server on 127.0.0.1:5672
+2018-04-09 04:45:32.302 91 INFO oslo.messaging._drivers.impl_rabbit [-] Connected to AMQP server on 127.0.0.1:5672
+2018-04-09 04:45:32.339 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:45:32.340 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:45:32.340 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:45:32.340 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:45:32.341 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:45:32.341 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:45:32.342 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:45:32.409 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:45:32.410 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:45:32.411 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:45:32.412 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:45:32.412 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:45:32.444 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:45:32.445 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.85 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:45:33.297 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:45:33.298 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:45:33.299 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:45:33.299 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:45:33.300 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 55.96 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:46:29.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._run_pending_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:46:29.263 91 DEBUG nova.compute.manager [-] Cleaning up deleted instances _run_pending_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6348
+2018-04-09 04:46:29.285 91 DEBUG nova.compute.manager [-] There are 0 instances to clean _run_pending_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6357
+2018-04-09 04:46:29.286 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._cleanup_incomplete_migrations run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:46:29.286 91 DEBUG nova.compute.manager [-] Cleaning up deleted instances with incomplete migration  _cleanup_incomplete_migrations /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6383
+2018-04-09 04:46:29.307 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.97 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:46:31.276 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:46:31.277 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.99 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:46:32.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:46:32.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:46:33.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:46:33.264 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:46:33.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:46:33.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:46:33.266 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:46:33.267 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:46:33.267 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:46:33.268 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:46:33.268 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:46:33.317 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:46:33.318 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:46:33.318 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:46:33.319 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:46:33.319 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:46:33.319 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:46:33.320 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:46:33.369 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:46:33.369 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.89 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:46:34.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:46:34.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:46:34.264 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:46:34.264 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:46:34.264 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:46:34.289 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:46:34.290 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:46:35.288 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:46:35.289 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:46:35.290 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:46:35.291 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 57.96 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:47:33.256 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:47:33.257 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.01 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:47:33.264 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:47:33.265 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:47:34.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:47:34.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:47:34.264 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:47:34.264 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:47:34.265 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:47:34.287 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:47:34.287 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:47:35.286 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:47:35.287 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:47:35.287 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:47:35.288 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:47:35.288 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:47:35.288 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:47:35.289 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:47:35.289 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:47:35.289 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:47:35.335 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:47:35.336 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:47:35.337 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:47:35.337 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:47:35.338 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:47:35.338 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:47:35.339 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:47:35.395 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.87 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:47:36.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:47:36.265 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:47:36.265 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:47:36.266 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:47:36.266 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 56.99 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:48:33.254 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:48:33.256 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.01 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:48:34.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:48:34.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:48:34.264 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:48:34.264 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:48:34.264 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:48:34.287 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:48:34.288 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:48:35.287 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:48:35.287 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.97 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:48:36.264 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:48:36.265 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:48:37.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:48:37.263 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:48:37.263 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:48:37.263 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:48:37.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:48:37.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:48:37.265 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:48:37.265 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:48:37.265 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:48:37.307 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:48:37.308 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:48:37.309 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:48:37.310 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:48:37.310 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:48:37.311 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:48:37.311 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:48:37.361 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:48:37.361 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:48:37.362 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.90 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:48:38.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:48:38.263 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 55.99 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:49:34.254 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:49:34.255 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.01 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:49:34.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:49:34.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:49:34.262 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:49:34.263 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:49:34.290 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:49:34.290 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:49:35.291 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:49:35.292 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.97 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:49:36.264 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:49:36.265 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:49:37.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:49:37.264 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:49:37.264 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:49:37.265 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:49:38.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:49:38.263 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:49:39.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:49:39.264 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:49:39.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:49:39.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:49:39.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:49:39.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:49:39.266 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:49:39.266 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:49:39.266 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:49:39.317 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:49:39.318 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:49:39.318 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:49:39.318 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:49:39.319 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:49:39.319 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:49:39.319 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:49:39.418 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 55.84 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:50:35.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:50:35.263 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.99 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:50:36.254 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:50:36.255 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.01 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:50:36.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:50:36.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:50:36.263 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:50:36.263 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:50:36.283 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:50:36.284 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 2.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:50:38.284 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:50:38.285 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:50:38.285 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.98 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:50:39.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:50:39.264 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:50:39.264 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:50:39.265 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 2.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:50:41.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:50:41.264 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:50:41.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:50:41.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:50:41.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:50:41.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:50:41.265 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:50:41.266 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:50:41.266 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:50:41.313 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:50:41.314 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:50:41.315 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:50:41.316 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:50:41.316 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:50:41.317 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:50:41.317 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:50:41.373 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 47.89 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:51:29.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_bandwidth_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:51:29.264 91 INFO nova.compute.manager [-] Updating bandwidth usage cache
+2018-04-09 04:51:29.291 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.97 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:51:31.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._cleanup_incomplete_migrations run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:51:31.264 91 DEBUG nova.compute.manager [-] Cleaning up deleted instances with incomplete migration  _cleanup_incomplete_migrations /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6383
+2018-04-09 04:51:31.276 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 4.99 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:51:36.267 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:51:36.267 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:51:36.268 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.99 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:51:37.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:51:37.263 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:51:37.263 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:51:37.292 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:51:37.293 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:51:38.293 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:51:38.293 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:51:38.294 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.97 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:51:39.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:51:39.264 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:51:39.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:51:40.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._run_pending_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:51:40.264 91 DEBUG nova.compute.manager [-] Cleaning up deleted instances _run_pending_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6348
+2018-04-09 04:51:40.287 91 DEBUG nova.compute.manager [-] There are 0 instances to clean _run_pending_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6357
+2018-04-09 04:51:40.288 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:51:41.287 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:51:41.288 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:51:41.288 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.97 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:51:42.264 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:51:42.265 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:51:42.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:51:42.266 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:51:42.266 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:51:42.267 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:51:42.268 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:51:42.268 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:51:42.269 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:51:42.337 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:51:42.337 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:51:42.338 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:51:42.338 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:51:42.339 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:51:42.339 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:51:42.339 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:51:42.421 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 5.84 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:51:48.260 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._sync_power_states run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:51:48.282 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 47.97 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:52:36.257 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:52:36.258 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:52:36.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:52:36.263 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:52:37.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:52:37.263 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:52:37.264 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:52:37.287 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:52:37.288 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:52:38.288 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:52:38.288 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.97 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:52:39.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:52:39.263 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:52:40.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:52:40.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:52:41.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:52:41.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:52:41.264 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:52:41.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 2.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:52:43.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:52:43.264 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:52:43.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:52:43.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:52:43.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:52:43.266 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:52:43.266 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:52:43.267 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:52:43.267 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:52:43.315 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:52:43.316 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:52:43.318 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:52:43.319 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:52:43.319 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:52:43.320 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:52:43.320 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:52:43.370 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 52.89 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:53:36.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:53:36.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.99 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:53:37.255 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:53:37.255 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.01 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:53:38.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:53:38.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:53:39.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:53:39.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:53:39.263 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:53:39.263 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:53:39.289 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:53:39.290 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 2.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:53:41.290 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:53:41.291 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.97 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:53:42.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:53:42.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:53:42.264 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:53:42.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:53:43.265 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:53:43.266 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:53:43.266 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:53:43.267 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:53:43.267 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:53:43.268 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:53:43.268 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:53:43.269 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:53:43.269 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:53:43.319 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:53:43.320 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:53:43.320 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:53:43.321 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:53:43.321 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:53:43.322 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:53:43.322 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:53:43.377 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 53.88 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:54:37.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:54:37.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:54:38.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:54:38.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.99 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:54:39.255 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:54:39.255 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.01 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:54:40.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:54:40.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:54:40.263 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:54:40.263 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:54:40.288 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:54:40.289 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:54:41.289 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:54:41.289 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 2.97 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:54:44.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:54:44.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:54:44.263 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:54:44.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:54:45.264 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:54:45.265 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:54:45.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:54:45.267 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:54:45.267 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:54:45.268 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:54:45.268 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:54:45.269 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:54:45.269 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:54:45.317 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:54:45.318 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:54:45.318 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:54:45.319 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:54:45.319 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:54:45.319 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:54:45.320 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:54:45.373 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 52.89 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:55:38.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:55:38.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 2.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:55:40.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:55:40.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:55:40.264 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:55:40.264 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:55:40.264 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:55:40.287 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:55:40.288 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.99 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:55:41.278 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:55:41.280 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.98 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:55:43.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:55:43.264 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 2.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:55:45.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:55:45.263 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:55:45.263 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:55:46.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:55:46.264 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:55:46.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:55:46.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:55:46.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:55:46.265 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:55:46.266 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:55:46.266 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:55:46.266 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:55:46.313 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:55:46.314 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:55:46.314 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:55:46.315 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:55:46.316 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:55:46.316 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:55:46.317 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:55:46.369 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:55:46.369 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 45.89 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:56:32.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._cleanup_incomplete_migrations run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:56:32.264 91 DEBUG nova.compute.manager [-] Cleaning up deleted instances with incomplete migration  _cleanup_incomplete_migrations /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6383
+2018-04-09 04:56:32.276 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 8.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:56:40.276 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_unconfirmed_resizes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:56:40.277 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rescued_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:56:40.277 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 1.98 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:56:42.255 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._check_instance_build_time run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:56:42.255 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.01 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:56:42.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_rebooting_instances run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:56:42.262 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._heal_instance_info_cache run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:56:42.263 91 DEBUG nova.compute.manager [-] Starting heal instance info cache _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5394
+2018-04-09 04:56:42.263 91 DEBUG nova.compute.manager [-] Rebuilding the list of instances to heal _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5398
+2018-04-09 04:56:42.285 91 DEBUG nova.compute.manager [-] Didn't find any instances for network info cache update. _heal_instance_info_cache /usr/lib/python2.7/dist-packages/nova/compute/manager.py:5465
+2018-04-09 04:56:42.285 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 3.00 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:56:45.285 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._instance_usage_audit run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:56:45.286 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.98 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:56:46.263 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager.update_available_resource run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:56:46.263 91 AUDIT nova.compute.resource_tracker [-] Auditing locally available compute resources
+2018-04-09 04:56:46.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free ram (MB): 800000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:488
+2018-04-09 04:56:46.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free disk (GB): 600000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:489
+2018-04-09 04:56:46.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: free VCPUs: 1000 _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:494
+2018-04-09 04:56:46.264 91 DEBUG nova.compute.resource_tracker [-] Hypervisor: no assignable PCI devices _report_hypervisor_resource_view /usr/lib/python2.7/dist-packages/nova/compute/resource_tracker.py:503
+2018-04-09 04:56:46.265 91 DEBUG nova.openstack.common.lockutils [-] Created new semaphore "compute_resources" internal_lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:206
+2018-04-09 04:56:46.265 91 DEBUG nova.openstack.common.lockutils [-] Acquired semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:229
+2018-04-09 04:56:46.265 91 DEBUG nova.openstack.common.lockutils [-] Got semaphore / lock "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:271
+2018-04-09 04:56:46.317 91 AUDIT nova.compute.resource_tracker [-] Total physical ram (MB): 800000, total allocated virtual ram (MB): 512
+2018-04-09 04:56:46.318 91 AUDIT nova.compute.resource_tracker [-] Free disk (GB): 600000
+2018-04-09 04:56:46.318 91 AUDIT nova.compute.resource_tracker [-] Total usable vcpus: 1000, total allocated vcpus: 0
+2018-04-09 04:56:46.318 91 AUDIT nova.compute.resource_tracker [-] PCI stats: []
+2018-04-09 04:56:46.319 91 INFO nova.compute.resource_tracker [-] Compute_service record updated for nova-server:nova-server
+2018-04-09 04:56:46.319 91 DEBUG nova.openstack.common.lockutils [-] Releasing semaphore "compute_resources" lock /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:238
+2018-04-09 04:56:46.319 91 DEBUG nova.openstack.common.lockutils [-] Semaphore / lock released "_update_available_resource" inner /usr/lib/python2.7/dist-packages/nova/openstack/common/lockutils.py:275
+2018-04-09 04:56:46.378 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._run_pending_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:56:46.379 91 DEBUG nova.compute.manager [-] Cleaning up deleted instances _run_pending_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6348
+2018-04-09 04:56:46.404 91 DEBUG nova.compute.manager [-] There are 0 instances to clean _run_pending_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6357
+2018-04-09 04:56:46.405 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 0.88 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132
+2018-04-09 04:56:47.288 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._poll_volume_usage run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:56:47.289 91 DEBUG nova.openstack.common.periodic_task [-] Running periodic task ComputeManager._reclaim_queued_deletes run_periodic_tasks /usr/lib/python2.7/dist-packages/nova/openstack/common/periodic_task.py:193
+2018-04-09 04:56:47.289 91 DEBUG nova.compute.manager [-] CONF.reclaim_instance_interval <= 0, skipping... _reclaim_queued_deletes /usr/lib/python2.7/dist-packages/nova/compute/manager.py:6057
+2018-04-09 04:56:47.290 91 DEBUG nova.openstack.common.loopingcall [-] Dynamic looping call <bound method Service.periodic_tasks of <nova.service.Service object at 0x7efdc7a88590>> sleeping for 52.97 seconds _inner /usr/lib/python2.7/dist-packages/nova/openstack/common/loopingcall.py:132

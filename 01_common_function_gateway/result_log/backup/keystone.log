@@ -1,0 +1,2 @@
+2018-04-09 04:39:48.531 19 WARNING keystone.openstack.common.versionutils [-] Deprecated: keystone.middleware.core.XmlBodyMiddleware is deprecated as of Icehouse in favor of support for "application/json" only and may be removed in Kilo.
+2018-04-09 04:40:19.782 402 WARNING keystone.openstack.common.versionutils [-] Deprecated: keystone.middleware.core.XmlBodyMiddleware is deprecated as of Icehouse in favor of support for "application/json" only and may be removed in Kilo.

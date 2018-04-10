@@ -5,18 +5,13 @@ You can see the relations of "Common Function" as following.
 
 ![Common Function](resource/gohan_investigate_for_commfuncgw.009.png)
 
-## 8.1. Sequence Diagram between gohan and etcd
-This is a diagram that has been described as interfaces for "Common Function" between gohan and etcd.
 
-* Initinalizing gohan (but no use) ...
-* Receiving HTTP Methods for Creating Resource ...
+## 8.1. Gohan
 
-![Create Common Function1](diag/ESI_Sequence_Diagram_for_Common_Function_Gateway.011.png)
-![Create Common Function2](diag/ESI_Sequence_Diagram_for_Common_Function_Gateway.012.png)
+![scope](../images/ESI_Sequence_diagram.002.png)
 
-
-## 8.2. HTTP Methods for RESTful between Gohan and Client
-This is JSON data for "Create Common Function" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Common Function" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -25,11 +20,11 @@ POST /v2.0/common_functions
 ```
 {
     "common_function": {
-        "common_function_pool_id": "cca32fd7-2430-4acc-87e9-a7b527e9918d",
+        "common_function_pool_id": "2d4a700d-bf94-4217-9a3c-4217a16c951f",
         "link_local_ip_address": "169.254.1.227",
         "name": "common_function1",
         "shared_ip_address": "100.64.0.127",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "c583ce78843344adbe5fd20f13620274"
     }
 }
 ```
@@ -40,68 +35,85 @@ POST /v2.0/common_functions
 ```
 {
     "common_function": {
-        "common_function_pool_id": "cca32fd7-2430-4acc-87e9-a7b527e9918d",
+        "common_function_pool_id": "2d4a700d-bf94-4217-9a3c-4217a16c951f",
         "link_local_ip_address": "169.254.1.228",
         "name": "common_function2",
         "shared_ip_address": "100.64.0.128",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "c583ce78843344adbe5fd20f13620274"
     }
 }
 ```
-![scope](../images/esi_interface.004.png)
+After processing, Gohan has stored data for "Create Common Function" in etcd.
+
+* [Checking stored data for creating "common_function_number1"](stored_in_etcd/01_Gohan/CreateCommonFunction_01.md)
+* [Checking stored data for creating "common_function_number1"](stored_in_etcd/01_Gohan/CreateCommonFunction_02.md)
+* [Checking stored data for creating "common_function_number2"](stored_in_etcd/01_Gohan/CreateCommonFunction_03.md)
+* [Checking stored data for creating "common_function_number2"](stored_in_etcd/01_Gohan/CreateCommonFunction_04.md)
 
 
-## 8.3. Stored data in etcd after receiving HTTP Methods for RESTful
-These are stored data for "Create Common Function" in etcd.
+## 8.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-* [Checking stored data for creating "common_function_number1"](stored_in_etcd/CreateCommonFunction_01.md)
-* [Checking stored data for creating "common_function_number1"](stored_in_etcd/CreateCommonFunction_02.md)
-* [Checking stored data for creating "common_function_number2"](stored_in_etcd/CreateCommonFunction_03.md)
-* [Checking stored data for creating "common_function_number2"](stored_in_etcd/CreateCommonFunction_04.md)
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
 
-![scope](../images/esi_interface.005.png)
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Create Common Function" in etcd, ResourceReader has not fetched heat_templates in etcd because of non_workable_resource.
+And then, ResourceReader has stored data as finishing resource
+
+* [Checking stored data for creating "common_function_number1"](stored_in_etcd/00_ResourceReader/CreateCommonFunction_01.md)
+* [Checking stored data for creating "common_function_number1"](stored_in_etcd/00_ResourceReader/CreateCommonFunction_02.md)
+* [Checking stored data for creating "common_function_number2"](stored_in_etcd/00_ResourceReader/CreateCommonFunction_03.md)
+* [Checking stored data for creating "common_function_number2"](stored_in_etcd/00_ResourceReader/CreateCommonFunction_04.md)
 
 
-## 8.4. Stored resource in gohan
+## 8.3. Stored resource in gohan
 As a result, checking resources regarding of "Common Function" in gohan.
 
 * Checking the target of resources via gohan client
 ```
-$ gohan client common_function show --output-format json 18c64ec9-78c2-43ac-ae0d-48fa9b6c0858
+$ gohan client common_function show --output-format json 637aa51a-f54f-4723-bc5f-9fb8942dfc8b
 {
     "common_function": {
         "common_function_number": 1,
-        "common_function_pool_id": "cca32fd7-2430-4acc-87e9-a7b527e9918d",
+        "common_function_pool_id": "2d4a700d-bf94-4217-9a3c-4217a16c951f",
         "description": "",
-        "ha_router_id": "3a3d7a43-d749-44e8-90bc-de7b37d1d258",
-        "id": "18c64ec9-78c2-43ac-ae0d-48fa9b6c0858",
+        "ha_router_id": "e16529c4-ffb8-4346-b850-af3c93564604",
+        "id": "637aa51a-f54f-4723-bc5f-9fb8942dfc8b",
         "link_local_ip_address": "169.254.1.227",
         "name": "common_function1",
+        "orchestration_state": "SYNC_COMPLETE",
         "primary_vrrp_ip": "169.254.1.251",
         "secondary_vrrp_ip": "169.254.1.252",
         "shared_ip_address": "100.64.0.127",
         "status": "ACTIVE",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "tenant_id": "c583ce78843344adbe5fd20f13620274",
         "vrid": 41
     }
 }
 ```
 ```
-$ gohan client common_function show --output-format json c1be08ee-7cf2-4c84-8fe7-7e891d17bc71
+$ gohan client common_function show --output-format json b7ff279d-a7ee-4714-b77c-bcd2f0e51996
 {
     "common_function": {
         "common_function_number": 2,
-        "common_function_pool_id": "cca32fd7-2430-4acc-87e9-a7b527e9918d",
+        "common_function_pool_id": "2d4a700d-bf94-4217-9a3c-4217a16c951f",
         "description": "",
-        "ha_router_id": "3a3d7a43-d749-44e8-90bc-de7b37d1d258",
-        "id": "c1be08ee-7cf2-4c84-8fe7-7e891d17bc71",
+        "ha_router_id": "e16529c4-ffb8-4346-b850-af3c93564604",
+        "id": "b7ff279d-a7ee-4714-b77c-bcd2f0e51996",
         "link_local_ip_address": "169.254.1.228",
         "name": "common_function2",
+        "orchestration_state": "SYNC_COMPLETE",
         "primary_vrrp_ip": "169.254.1.253",
         "secondary_vrrp_ip": "169.254.1.254",
         "shared_ip_address": "100.64.0.128",
         "status": "ACTIVE",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "tenant_id": "c583ce78843344adbe5fd20f13620274",
         "vrid": 42
     }
 }

@@ -1,7 +1,18 @@
 [Return to Top Page](../README.md)
 
-# Gohan and Heat-api Interfaces for Common Function Gateway 
-This section is for the purpose of documenting interfaces between gohan and esi-worker.
+# ESI interface for Common Function Gateway
+This section is for the purpose of documenting ESI interface.
+
+* Initinalizing gohan ...
+* Receiving HTTP Methods for Creating Resource ...
+
+![scope](../images/ESI_Sequence_diagram.001.png)
+
+
+# Resource model for Common Function Gateway
+First of all, you can see the overview of resources model of "Common Function Gateway".
+
+![Overview](resource/gohan_investigate_for_commfuncgw.001.png)
 
 * [01: Ese Device](01_ese_device.md)
 * [02: Ese Physical Port](02_ese_physical_port.md)
@@ -13,9 +24,4 @@ This section is for the purpose of documenting interfaces between gohan and esi-
 * [08: Common Function](08_common_function.md)
 * [09: Nat Ip Pool](09_nat_ip_pool.md)
 * [10: Common Function Gateway](10_common_function_gateway.md)
-
-# Resource model for Common Function Gateway
-First of all, you can see the overview of resources model of "Common Function Gateway".
-
-![Overview](resource/gohan_investigate_for_commfuncgw.001.png)
 

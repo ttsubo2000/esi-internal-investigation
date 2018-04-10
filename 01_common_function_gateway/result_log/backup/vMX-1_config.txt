@@ -1,0 +1,148 @@
+root@vMX-1# rollback ?
+Possible completions:
+  <[Enter]>            Execute this command
+  0                    2018-04-09 13:47:33 JST by esi via netconf 
+  1                    2018-04-09 10:29:16 JST by root via cli 
+  2                    2018-04-09 10:20:45 JST by esi via netconf 
+  3                    2018-04-09 10:18:43 JST by esi via netconf 
+  4                    2018-04-09 10:17:35 JST by esi via netconf 
+  5                    2018-04-09 10:17:10 JST by esi via netconf 
+  6                    2018-04-09 09:58:49 JST by root via cli 
+  7                    2018-04-09 09:38:22 JST by root via cli 
+  8                    2018-04-09 09:30:42 JST by esi via netconf 
+  9                    2018-04-09 09:30:17 JST by esi via netconf 
+  10                   2018-04-04 14:18:59 JST by root via cli 
+  11                   2018-04-04 14:01:55 JST by esi via netconf 
+  12                   2018-04-04 13:59:52 JST by esi via netconf 
+  13                   2018-04-04 13:58:43 JST by esi via netconf 
+  14                   2018-04-04 13:58:18 JST by esi via netconf 
+  15                   2017-05-11 14:28:02 JST by root via cli 
+  16                   2017-05-11 14:03:17 JST by esi via netconf 
+  17                   2017-05-11 14:01:55 JST by esi via netconf 
+  18                   2017-05-11 14:00:22 JST by esi via netconf 
+  19                   2017-05-11 13:59:51 JST by esi via netconf 
+  20                   2017-05-11 13:45:15 JST by root via cli 
+  21                   2017-05-11 13:26:37 JST by esi via netconf 
+  22                   2017-05-11 13:25:21 JST by esi via netconf 
+  23                   2017-05-11 13:24:11 JST by esi via netconf 
+  24                   2017-05-11 13:23:48 JST by esi via netconf 
+  25                   2017-05-11 13:18:18 JST by root via cli 
+  26                   2017-05-11 13:17:25 JST by esi via netconf 
+  27                   2017-05-11 13:16:25 JST by esi via netconf 
+  28                   2017-05-11 13:16:01 JST by esi via netconf 
+  29                   2017-05-11 13:11:37 JST by root via cli 
+  30                   2017-05-11 13:09:58 JST by esi via netconf 
+  31                   2017-05-11 13:08:56 JST by esi via netconf 
+  32                   2017-05-11 13:08:31 JST by esi via netconf 
+  33                   2017-05-11 12:18:45 JST by root via cli 
+  34                   2017-05-11 12:05:21 JST by esi via netconf 
+  35                   2017-05-11 11:59:09 JST by root via cli 
+  36                   2017-05-11 11:58:24 JST by esi via netconf 
+[edit]                                  
+root@vMX-1# show | compare rollback 1 
+[edit]
++  services {
++      service-set vrf_gw_sample-ha-router-downlink_1025 {
++          nat-rules vrf_gw_sample-ha-router-downlink_1025-SNAPT;
++          nat-rules vrf_gw_sample-ha-router-downlink_1025-DNAT;
++          interface-service {
++              service-interface ms-0/2/0.1025;
++          }
++      }
++      nat {
++          pool vrf_gw_sample-ha-router-downlink_1025-SNAPT-POOL {
++              apply-groups SNAPT-POOL;
++              address 100.64.0.10/32;
++          }
++          pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-1 {
++              apply-groups DNAT-POOL-1;
++          }
++          pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-2 {
++              apply-groups DNAT-POOL-2;
++          }
++          rule vrf_gw_sample-ha-router-downlink_1025-SNAPT {
++              apply-groups SNAPT-RULE;
++              term source {
++                  then {
++                      translated {
++                          source-pool vrf_gw_sample-ha-router-downlink_1025-SNAPT-POOL;
++                      }
++                  }
++              }
++          }
++          rule vrf_gw_sample-ha-router-downlink_1025-DNAT {
++              apply-groups DNAT-RULE;
++              term 1 {
++                  then {
++                      translated {
++                          destination-pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-1;
++                      }
++                  }
++              }
++              term 2 {                 
++                  then {
++                      translated {
++                          destination-pool vrf_gw_sample-ha-router-downlink_1025-DNAT-POOL-2;
++                      }
++                  }
++              }
++          }
++      }
++  }
+[edit interfaces]
++   lt-0/0/0 {
++       unit 1025 {
++           peer-unit 11025;
++           family inet {
++               service {
++                   input {
++                       service-set vrf_gw_sample-ha-router-downlink_1025;
++                   }
++                   output {
++                       service-set vrf_gw_sample-ha-router-downlink_1025;
++                   }
++               }
++           }
++       }
++       unit 11025 {
++           peer-unit 1025;
++       }
++   }
++   ms-0/2/0 {
++       unit 1025 {
++           family inet;
++       }
++   }
+[edit interfaces ae0 unit 1025]
+-    apply-groups InetGW2-VRRP;
++    apply-groups [ InetGW2-VRRP IF-USER-VRRP-ACT ];
+-    description inet_gw;
++    description vrf_gw_sample-ha-router-downlink_1025;
+[edit interfaces ae0 unit 1025 family inet]
++       service {
++           input {
++               service-set vrf_gw_sample-ha-router-downlink_1025;
++           }
++           output {
++               service-set vrf_gw_sample-ha-router-downlink_1025;
++           }
++       }
+[edit routing-instances]
++   SHARED-RESOURCE {
++       interface lt-0/0/0.11025;
++       routing-options {
++           static {
++               route 100.64.0.10/32 next-hop lt-0/0/0.11025;
++           }
++       }
++   }
+[edit routing-instances vrf_gw_sample-ha-router-downlink_1025]
++    interface lt-0/0/0.1025;
++    interface ms-0/2/0.1025;
+[edit routing-instances vrf_gw_sample-ha-router-downlink_1025 routing-options]
++     static {
++         route 0.0.0.0/0 next-hop lt-0/0/0.1025;
++     }
+
+[edit]
+

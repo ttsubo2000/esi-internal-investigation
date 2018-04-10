@@ -5,16 +5,13 @@ You can see the relations of "Nat Ip Pool" as following.
 
 ![Common Function Tool](resource/gohan_investigate_for_commfuncgw.010.png)
 
-## 9.1. Sequence Diagram between gohan and etcd
-This is a diagram that has been described as interfaces for "Nat Ip Pool" between gohan and etcd.
 
-* Receiving HTTP Methods for Creating Resource ...
+## 9.1. Gohan
 
-![Create Common Function Pool](diag/ESI_Sequence_Diagram_for_Common_Function_Gateway.013.png)
+![scope](../images/ESI_Sequence_diagram.002.png)
 
-
-## 9.2. HTTP Methods for RESTful between Gohan and Client
-This is JSON data for "Create Nat Ip Pool" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Nat Ip Pool" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -23,44 +20,57 @@ POST /v2.0/nat_ip_pools
 ```
 {
     "nat_ip_pool": {
-        "common_function_pool_id": "cca32fd7-2430-4acc-87e9-a7b527e9918d",
+        "common_function_pool_id": "2d4a700d-bf94-4217-9a3c-4217a16c951f",
         "description": "",
-        "ha_router_id": "3a3d7a43-d749-44e8-90bc-de7b37d1d258",
+        "ha_router_id": "e16529c4-ffb8-4346-b850-af3c93564604",
         "ip_ranges": [
-          {
-            "end": "100.64.0.254",
-            "start": "100.64.0.10"
-          }
+            {
+                "end": "100.64.0.254",
+                "start": "100.64.0.10"
+            }
         ],
         "name": "sample-nat-ip-pool",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "c583ce78843344adbe5fd20f13620274"
     }
 }
 ```
-![scope](../images/esi_interface.004.png)
+After processing, Gohan has stored data for "Create Nat Ip Pool" in etcd
+
+* [Checking stored data for creating "nat_ip_pool1"](stored_in_etcd/01_Gohan/CreateNatIpPool_01.md)
+* [Checking stored data for creating "nat_ip_pool2"](stored_in_etcd/01_Gohan/CreateNatIpPool_02.md)
 
 
-## 9.3. Stored data in etcd after receiving HTTP Methods for RESTful
-These are stored data for "Create Nat Ip Pool" in etcd.
+## 9.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-* [Checking stored data for creating "nat_ip_pool1"](stored_in_etcd/CreateNatIpPool_01.md)
-* [Checking stored data for creating "nat_ip_pool2"](stored_in_etcd/CreateNatIpPool_02.md)
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
 
-![scope](../images/esi_interface.005.png)
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Create Nat Ip Pool" in etcd, ResourceReader has not fetched heat_templates in etcd because of non_workable_resource.
+And then, ResourceReader has stored data as finishing resource
+
+* [Checking stored data for creating "nat_ip_pool1"](stored_in_etcd/00_ResourceReader/CreateNatIpPool_01.md)
+* [Checking stored data for creating "nat_ip_pool2"](stored_in_etcd/00_ResourceReader/CreateNatIpPool_02.md)
 
 
-## 9.4. Stored resource in gohan
+## 9.3. Stored resource in gohan
 As a result, checking resources regarding of "Nat Ip Pool" in gohan.
 
 * Checking the target of resources via gohan client
 ```
-$ gohan client nat_ip_pool show --output-format json 75733e12-47f7-49ea-9939-2819df6c8253
+$ gohan client nat_ip_pool show --output-format json 8403ebb4-d81a-486e-8ba0-75613b936e8e
 {
     "nat_ip_pool": {
-        "common_function_pool_id": "cca32fd7-2430-4acc-87e9-a7b527e9918d",
+        "common_function_pool_id": "2d4a700d-bf94-4217-9a3c-4217a16c951f",
         "description": "",
-        "ha_router_id": "3a3d7a43-d749-44e8-90bc-de7b37d1d258",
-        "id": "75733e12-47f7-49ea-9939-2819df6c8253",
+        "ha_router_id": "e16529c4-ffb8-4346-b850-af3c93564604",
+        "id": "8403ebb4-d81a-486e-8ba0-75613b936e8e",
         "ip_allocation_state": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB/8=",
         "ip_ranges": [
             {
@@ -69,7 +79,7 @@ $ gohan client nat_ip_pool show --output-format json 75733e12-47f7-49ea-9939-281
             }
         ],
         "name": "sample-nat-ip-pool",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "c583ce78843344adbe5fd20f13620274"
     }
 }
 ```

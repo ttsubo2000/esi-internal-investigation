@@ -10,5 +10,6 @@ This section is for the purpose of documenting ESI interface.
 * [LoadBalancer](05_load_balancer/00_load_balancer.md) (nextgen-v1.15.0-rc0)
 
 ## (3) Gateway
+* [Common Function Gateway](01_common_function_gateway/00_common_function_gateway.md) (nextgen-v1.15.0)
 * [Internet Gateway](02_internet_gateway/00_internet_gateway.md) (nextgen-v1.15.0)
 

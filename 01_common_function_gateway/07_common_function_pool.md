@@ -5,16 +5,13 @@ You can see the relations of "Common Function Pool" as following.
 
 ![Common Function Tool](resource/gohan_investigate_for_commfuncgw.008.png)
 
-## 7.1. Sequence Diagram between gohan and etcd
-This is a diagram that has been described as interfaces for "Common Function Pool" between gohan and etcd.
 
-* Receiving HTTP Methods for Creating Resource ...
+## 7.1. Gohan
 
-![Create Common Function Pool](diag/ESI_Sequence_Diagram_for_Common_Function_Gateway.010.png)
+![scope](../images/ESI_Sequence_diagram.002.png)
 
-
-## 7.2. HTTP Methods for RESTful between Gohan and Client
-This is JSON data for "Create Common Function Pool" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Common Function Pool" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -27,7 +24,7 @@ POST /v2.0/common_function_pools
         "dnat_group_name": "DNAT-RULE",
         "dnat_pool_group_name": "DNAT-POOL",
         "downlink_interfaces": [
-            "372ed357-e622-41fb-a613-076d332838e2"
+            "16f6433d-0864-4d24-809d-c1b8e878280c"
         ],
         "link_local_cidr": "169.254.0.0/17",
         "logical_tunnel_interface_name": "lt-0/0/0",
@@ -36,7 +33,7 @@ POST /v2.0/common_function_pools
         "service_vrf_name": "SHARED-RESOURCE",
         "snapt_group_name": "SNAPT-RULE",
         "snapt_pool_group_name": "SNAPT-POOL",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "tenant_id": "c583ce78843344adbe5fd20f13620274",
         "vrrp_config": [
             {
                 "primary_ip": "169.254.1.251",
@@ -53,23 +50,35 @@ POST /v2.0/common_function_pools
     }
 }
 ```
-![scope](../images/esi_interface.004.png)
+After processing, Gohan has stored data for "Create Common Function Pool" in etcd
+
+* [Checking stored data for creating "common_function_pool"](stored_in_etcd/01_Gohan/CreateCommonFunctionPool_01.md)
 
 
-## 7.3. Stored data in etcd after receiving HTTP Methods for RESTful
-These are stored data for "Create Common Function Pool" in etcd.
+## 7.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-* [Checking stored data for creating "common_function_pool"](stored_in_etcd/CreateCommonFunctionPool_01.md)
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
 
-![scope](../images/esi_interface.005.png)
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Create Ha Interface" in etcd, ResourceReader has not fetched heat_templates in etcd because of non_workable_resource.
+And then, ResourceReader has stored data as finishing resource
+
+* [Checking stored data for creating "common_function_pool"](stored_in_etcd/00_ResourceReader/CreateCommonFunctionPool_01.md)
 
 
-## 7.4. Stored resource in gohan
+## 7.3. Stored resource in gohan
 As a result, checking resources regarding of "Common Function Pool" in gohan.
 
 * Checking the target of resources via gohan client
 ```
-$ gohan client common_function_pool show --output-format json cca32fd7-2430-4acc-87e9-a7b527e9918d
+$ gohan client common_function_pool show --output-format json 2d4a700d-bf94-4217-9a3c-4217a16c951f
 {
     "common_function_pool": {
         "common_function_pool_state": "AAD//w==",
@@ -77,9 +86,9 @@ $ gohan client common_function_pool show --output-format json cca32fd7-2430-4acc
         "dnat_group_name": "DNAT-RULE",
         "dnat_pool_group_name": "DNAT-POOL",
         "downlink_interfaces": [
-            "372ed357-e622-41fb-a613-076d332838e2"
+            "16f6433d-0864-4d24-809d-c1b8e878280c"
         ],
-        "id": "cca32fd7-2430-4acc-87e9-a7b527e9918d",
+        "id": "2d4a700d-bf94-4217-9a3c-4217a16c951f",
         "link_local_cidr": "169.254.0.0/17",
         "link_local_netmask": 17,
         "logical_tunnel_interface_name": "lt-0/0/0",
@@ -88,7 +97,7 @@ $ gohan client common_function_pool show --output-format json cca32fd7-2430-4acc
         "service_vrf_name": "SHARED-RESOURCE",
         "snapt_group_name": "SNAPT-RULE",
         "snapt_pool_group_name": "SNAPT-POOL",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "tenant_id": "c583ce78843344adbe5fd20f13620274",
         "vrrp_config": [
             {
                 "primary_ip": "169.254.1.251",

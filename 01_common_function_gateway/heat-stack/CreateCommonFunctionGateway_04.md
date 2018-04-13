@@ -1,135 +1,139 @@
-# HTTP Methods for creating heat-stack: Virtual Machine Interface
+# HTTP Methods for creating heat-stack: Logical port
 
-Checking heat-stack of "port" via heatclient.
+Checking heat-stack of "ese_logical_port" via heatclient.
 ```
-$ heat stack-show port_327f59b7-df38-4d8f-97db-d320defcab76
-+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Property              | Value                                                                                                                                                 |
-+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-| capabilities          | []                                                                                                                                                    |
-| creation_time         | 2017-05-11T03:05:37Z                                                                                                                                  |
-| description           | Virtual Machine Interface Template                                                                                                                    |
-| disable_rollback      | True                                                                                                                                                  |
-| id                    | 67472096-f3b3-48d1-962c-23ea4912b1d3                                                                                                                  |
-| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/port_327f59b7-df38-4d8f-97db-d320defcab76/67472096-f3b3-48d1-962c-23ea4912b1d3 (self) |
-| notification_topics   | []                                                                                                                                                    |
-| outputs               | [                                                                                                                                                     |
-|                       |   {                                                                                                                                                   |
-|                       |     "output_value": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",                                                                                           |
-|                       |     "description": "Virtual network.",                                                                                                                |
-|                       |     "output_key": "virtual_network"                                                                                                                   |
-|                       |   },                                                                                                                                                  |
-|                       |   {                                                                                                                                                   |
-|                       |     "output_value": "default-domain:admin:327f59b7-df38-4d8f-97db-d320defcab76",                                                                      |
-|                       |     "description": "Fully Qualified Name of the VMI",                                                                                                 |
-|                       |     "output_key": "fq_name"                                                                                                                           |
-|                       |   },                                                                                                                                                  |
-|                       |   {                                                                                                                                                   |
-|                       |     "output_value": "327f59b7-df38-4d8f-97db-d320defcab76",                                                                                           |
-|                       |     "description": "A unique id for the virtual machine interface.",                                                                                  |
-|                       |     "output_key": "id"                                                                                                                                |
-|                       |   },                                                                                                                                                  |
-|                       |   {                                                                                                                                                   |
-|                       |     "output_value": "null",                                                                                                                           |
-|                       |     "description": "Virtual machine allowed address pairs.",                                                                                          |
-|                       |     "output_key": "allowed_address_pairs"                                                                                                             |
-|                       |   },                                                                                                                                                  |
-|                       |   {                                                                                                                                                   |
-|                       |     "output_value": "xx:xx:xx:xx:xx:xx",                                                                                                              |
-|                       |     "description": "Virtual machine interface mac address.",                                                                                          |
-|                       |     "output_key": "mac_address"                                                                                                                       |
-|                       |   }                                                                                                                                                   |
-|                       | ]                                                                                                                                                     |
-| parameters            | {                                                                                                                                                     |
-|                       |   "virtual_machine": "5c241c51-2003-407a-a239-689fabd19022",                                                                                          |
-|                       |   "name": "327f59b7-df38-4d8f-97db-d320defcab76",                                                                                                     |
-|                       |   "OS::stack_name": "port_327f59b7-df38-4d8f-97db-d320defcab76",                                                                                      |
-|                       |   "admin_state_up": "True",                                                                                                                           |
-|                       |   "virtual_machine_interface_allowed_address_pairs": "null",                                                                                          |
-|                       |   "virtual_machine_interface_mac_address": "fa:16:3e:e5:f6:39",                                                                                       |
-|                       |   "OS::stack_id": "67472096-f3b3-48d1-962c-23ea4912b1d3",                                                                                             |
-|                       |   "device_owner": "network:common_function_gateway",                                                                                                  |
-|                       |   "virtual_network": "f2de53ae-bc76-46f2-b2ae-a7eefa9d6e57",                                                                                          |
-|                       |   "uuid": "327f59b7-df38-4d8f-97db-d320defcab76"                                                                                                      |
-|                       | }                                                                                                                                                     |
-| parent                | None                                                                                                                                                  |
-| stack_name            | port_327f59b7-df38-4d8f-97db-d320defcab76                                                                                                             |
-| stack_owner           | admin                                                                                                                                                 |
-| stack_status          | CREATE_COMPLETE                                                                                                                                       |
-| stack_status_reason   | Stack CREATE completed successfully                                                                                                                   |
-| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                      |
-| template_description  | Virtual Machine Interface Template                                                                                                                    |
-| timeout_mins          | 10                                                                                                                                                    |
-| updated_time          | None                                                                                                                                                  |
-+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+$ heat stack-show ese_logical_port_be66c7e0-b222-4e76-bf81-af75e8cf1824
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                                                          |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                                                             |
+| creation_time         | 2018-04-09T04:50:06Z                                                                                                                                                                           |
+| description           | Logical port template                                                                                                                                                                          |
+| disable_rollback      | True                                                                                                                                                                                           |
+| id                    | af4cb4c8-1af6-427f-9119-4b001b7e8d73                                                                                                                                                           |
+| links                 | http://heat-server.monitoringrefactordocker_default:8004/v1/c583ce78843344adbe5fd20f13620274/stacks/ese_logical_port_be66c7e0-b222-4e76-bf81-af75e8cf1824/af4cb4c8-1af6-427f-9119-4b001b7e8d73 |
+| notification_topics   | []                                                                                                                                                                                             |
+| outputs               | [                                                                                                                                                                                              |
+|                       |   {                                                                                                                                                                                            |
+|                       |     "output_value": "bdc2f00e-073d-49d6-ac27-43782568b081",                                                                                                                                    |
+|                       |     "description": "Monitoring Target ID",                                                                                                                                                     |
+|                       |     "output_key": "monitoring_target_id"                                                                                                                                                       |
+|                       |   },                                                                                                                                                                                           |
+|                       |   {                                                                                                                                                                                            |
+|                       |     "output_value": "46b0cd68-d0fb-4d72-9def-830164f9e215",                                                                                                                                    |
+|                       |     "description": "A unique id for the logical interface",                                                                                                                                    |
+|                       |     "output_key": "id"                                                                                                                                                                         |
+|                       |   },                                                                                                                                                                                           |
+|                       |   {                                                                                                                                                                                            |
+|                       |     "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/bdc2f00e-073d-49d6-ac27-43782568b081",                                                           |
+|                       |     "description": "Monitoring Process Link",                                                                                                                                                  |
+|                       |     "output_key": "monitoring_link"                                                                                                                                                            |
+|                       |   },                                                                                                                                                                                           |
+|                       |   {                                                                                                                                                                                            |
+|                       |     "output_value": "xe-0/0/38.0",                                                                                                                                                             |
+|                       |     "description": "The name of the logical interface.",                                                                                                                                       |
+|                       |     "output_key": "name"                                                                                                                                                                       |
+|                       |   }                                                                                                                                                                                            |
+|                       | ]                                                                                                                                                                                              |
+| parameters            | {                                                                                                                                                                                              |
+|                       |   "logical_port_type": "L2",                                                                                                                                                                   |
+|                       |   "logical_port_vlan_id": "1025",                                                                                                                                                              |
+|                       |   "OS::stack_name": "ese_logical_port_be66c7e0-b222-4e76-bf81-af75e8cf1824",                                                                                                                   |
+|                       |   "virtual_machine_interface_ids": "f68d0924-ef20-4c1b-ac45-0e6b879af5e7",                                                                                                                     |
+|                       |   "device_ip": "10.161.0.34",                                                                                                                                                                  |
+|                       |   "OS::stack_id": "af4cb4c8-1af6-427f-9119-4b001b7e8d73",                                                                                                                                      |
+|                       |   "version": "1",                                                                                                                                                                              |
+|                       |   "tenant_id": "c583ce78843344adbe5fd20f13620274",                                                                                                                                             |
+|                       |   "logical_port_name": "xe-0/0/3.1025",                                                                                                                                                        |
+|                       |   "gohan_id": "be66c7e0-b222-4e76-bf81-af75e8cf1824",                                                                                                                                          |
+|                       |   "physical_port_id": "06bfe521-07f0-4931-9f8c-318c3ad8114e"                                                                                                                                   |
+|                       | }                                                                                                                                                                                              |
+| parent                | None                                                                                                                                                                                           |
+| stack_name            | ese_logical_port_be66c7e0-b222-4e76-bf81-af75e8cf1824                                                                                                                                          |
+| stack_owner           | admin                                                                                                                                                                                          |
+| stack_status          | CREATE_COMPLETE                                                                                                                                                                                |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                                                            |
+| stack_user_project_id | c583ce78843344adbe5fd20f13620274                                                                                                                                                               |
+| template_description  | Logical port template                                                                                                                                                                          |
+| timeout_mins          | 6                                                                                                                                                                                              |
+| updated_time          | None                                                                                                                                                                                           |
++-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
-Checking heat-template of "port" via heatclient.
+Checking heat-template of "ese_logical_port" via heatclient.
 ```
-$ heat template-show port_327f59b7-df38-4d8f-97db-d320defcab76
-description: 'Virtual Machine Interface Template
+$ heat template-show ese_logical_port_be66c7e0-b222-4e76-bf81-af75e8cf1824
+description: 'Logical port template
 
   '
 heat_template_version: '2013-05-23'
 outputs:
-  allowed_address_pairs:
-    description: Virtual machine allowed address pairs.
-    value:
-      get_attr: [virtual_machine_interface, virtual_machine_interface_allowed_address_pairs]
-  fq_name:
-    description: Fully Qualified Name of the VMI
-    value:
-      get_attr: [virtual_machine_interface, fq_name]
   id:
-    description: A unique id for the virtual machine interface.
-    value: {get_resource: virtual_machine_interface}
-  mac_address:
-    description: Virtual machine interface mac address.
+    description: A unique id for the logical interface
+    value: {get_resource: logical_interface}
+  monitoring_link:
+    description: Monitoring Process Link
     value:
-      get_attr: [virtual_machine_interface, virtual_machine_interface_mac_addresses]
-  virtual_network:
-    description: Virtual network.
+      get_attr: [interface_monitor, link]
+  monitoring_target_id:
+    description: Monitoring Target ID
+    value: {get_resource: interface_monitor}
+  name:
+    description: The name of the logical interface.
     value:
-      get_attr: [virtual_machine_interface, virtual_networks]
+      get_attr: [logical_interface, name]
 parameters:
-  admin_state_up: {default: true, label: Admin state up, type: boolean}
-  device_owner: {default: '', label: Device Owner, type: string}
-  name: {description: A unique id for the Physical Interface., label: Physical Interface
-      ID, type: string}
-  uuid: {description: A unique id for the Virtual Machine Interface., label: Backend
-      Virtual Machine Interface UUID, type: string}
-  virtual_machine: {default: '', label: Virtual Machine., type: string}
-  virtual_machine_interface_allowed_address_pairs: {label: Virtual machine interface
-      allowed address pairs., type: json}
-  virtual_machine_interface_mac_address: {default: 'fe:ff:ff:ff:ff:ff', label: Virtual
-      machine interface mac address., type: string}
-  virtual_network: {label: Virtual Network., type: string}
+  device_ip: {description: Device IP Address., label: Device IP Address, type: string}
+  gohan_id: {description: UUID of the ESE Physical Port, label: Gohan resource ID,
+    type: string}
+  logical_port_name: {description: Name of the logical port., label: Logical Port
+      Name, type: string}
+  logical_port_type: {description: Type of the logical port., label: Logical Port
+      Type, type: string}
+  logical_port_vlan_id: {default: 0, description: VLAN id to use for logical port
+      creation., label: VLAN id for Logical Port, type: number}
+  physical_port_id: {description: A unique id for the Physical Interface., label: Physical
+      Interface ID, type: string}
+  tenant_id: {label: Tenant ID, type: string}
+  version: {label: Config version, type: number}
+  virtual_machine_interface_ids: {description: Virtual Machine Interface ID., label: Virtual
+      Machine Interface ID, type: comma_delimited_list}
 resources:
-  instance_ip_0:
+  interface_monitor:
+    depends_on: logical_interface
     properties:
-      ip_address: 169.254.0.3
-      name:
-        str_replace:
-          params:
-            '%ip%': 169.254.0.3
-            '%name%': {get_param: name}
-            '%zone%': e1353d56-b05a-43a9-b924-383ab0d64d7b
-          template: '%name%_%zone%_%ip%'
-      network_id: {get_param: virtual_network}
-      subnet_id: 9e61b626-a866-4ba5-b1c7-01935fdac3f4
-      virtual_machine_interfaces:
-      - {get_resource: virtual_machine_interface}
-    type: OS::Contrail::InstanceIp
-  virtual_machine_interface:
+      field_name: logical_port
+      properties:
+        community_name: ESE_NODE_COMMUNITY
+        device_ip: {get_param: device_ip}
+        if_name: {get_param: logical_port_name}
+      resource_id: {get_param: gohan_id}
+      resource_type: ese_logical_ports
+      syncer_properties:
+        etcd:
+          status: {key: logical_port}
+        tsdb:
+          traffic.in:
+            metric: traffic.bytes
+            tags:
+            - direction: in
+              port_id: f84496b5-dc56-4727-87b1-aa06e2471737
+              resource_id: {get_param: gohan_id}
+          traffic.out:
+            metric: traffic.bytes
+            tags:
+            - direction: out
+              port_id: f84496b5-dc56-4727-87b1-aa06e2471737
+              resource_id: {get_param: gohan_id}
+      tenant_id: {get_param: tenant_id}
+      type: snmp_ports
+      version: {get_param: version}
+    type: ESI::Monitoring::MonitoringTarget
+  logical_interface:
     properties:
-      admin_state_up: {get_param: admin_state_up}
-      device_owner: {get_param: device_owner}
-      name: {get_param: name}
-      uuid: {get_param: uuid}
-      virtual_machine: {get_param: virtual_machine}
-      virtual_machine_interface_allowed_address_pairs: {get_param: virtual_machine_interface_allowed_address_pairs}
-      virtual_machine_interface_mac_addresses:
-      - {get_param: virtual_machine_interface_mac_address}
-      virtual_networks:
-      - {get_param: virtual_network}
-    type: OS::Contrail::VirtualMachineInterfac
+      name: {get_param: logical_port_name}
+      physical_interface: {get_param: physical_port_id}
+      type: {get_param: logical_port_type}
+      virtual_machine_interfaces: {get_param: virtual_machine_interface_ids}
+      vlan: {get_param: logical_port_vlan_id}
+    type: OS::Contrail::LogicalInterface
 ```

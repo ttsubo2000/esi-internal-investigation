@@ -2,59 +2,83 @@
 
 Checking heat-stack of "common_function_gateway" via heatclient.
 ```
-$ heat stack-show common_function_gateway_5c241c51-2003-407a-a239-689fabd19022
-+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Property              | Value                                                                                                                                                                    |
-+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| capabilities          | []                                                                                                                                                                       |
-| creation_time         | 2017-05-11T03:05:37Z                                                                                                                                                     |
-| description           | Common Function Gateway                                                                                                                                                  |
-| disable_rollback      | True                                                                                                                                                                     |
-| id                    | 1d03f6d9-3d61-44b0-a250-247c0b50cf70                                                                                                                                     |
-| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/common_function_gateway_5c241c51-2003-407a-a239-689fabd19022/1d03f6d9-3d61-44b0-a250-247c0b50cf70 (self) |
-| notification_topics   | []                                                                                                                                                                       |
-| outputs               | []                                                                                                                                                                       |
-| parameters            | {                                                                                                                                                                        |
-|                       |   "primary_device_ip": "10.79.5.185",                                                                                                                                    |
-|                       |   "OS::stack_id": "1d03f6d9-3d61-44b0-a250-247c0b50cf70",                                                                                                                |
-|                       |   "OS::stack_name": "common_function_gateway_5c241c51-2003-407a-a239-689fabd19022",                                                                                      |
-|                       |   "primary_device_logical_downlink_interface": "ae0.1025",                                                                                                               |
-|                       |   "secondary_device_logical_downlink_interface": "ae0.1025",                                                                                                             |
-|                       |   "secondary_device_port": "830",                                                                                                                                        |
-|                       |   "secondary_device_password": "esiesi0000",                                                                                                                             |
-|                       |   "primary_device_password": "esiesi0000",                                                                                                                               |
-|                       |   "primary_device_username": "esi",                                                                                                                                      |
-|                       |   "primary_device_physical_downlink_interface": "ae0",                                                                                                                   |
-|                       |   "primary_device_port": "830",                                                                                                                                          |
-|                       |   "secondary_device_physical_downlink_interface": "ae0",                                                                                                                 |
-|                       |   "secondary_device_ip": "10.79.5.184",                                                                                                                                  |
-|                       |   "secondary_device_username": "esi"                                                                                                                                     |
-|                       | }                                                                                                                                                                        |
-| parent                | None                                                                                                                                                                     |
-| stack_name            | common_function_gateway_5c241c51-2003-407a-a239-689fabd19022                                                                                                             |
-| stack_owner           | admin                                                                                                                                                                    |
-| stack_status          | CREATE_COMPLETE                                                                                                                                                          |
-| stack_status_reason   | Stack CREATE completed successfully                                                                                                                                      |
-| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                                         |
-| template_description  | Common Function Gateway                                                                                                                                                  |
-| timeout_mins          | 60                                                                                                                                                                       |
-| updated_time          | None                                                                                                                                                                     |
-+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+$ heat stack-show common_function_gateway_f649736d-1920-41eb-96af-d4e4fe192d0e
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                                                                 |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                                                                    |
+| creation_time         | 2018-04-09T04:49:59Z                                                                                                                                                                                  |
+| description           | Common Function Gateway                                                                                                                                                                               |
+| disable_rollback      | True                                                                                                                                                                                                  |
+| id                    | 8ccc6c5d-7757-4605-b34b-665ef8858cce                                                                                                                                                                  |
+| links                 | http://heat-server.monitoringrefactordocker_default:8004/v1/c583ce78843344adbe5fd20f13620274/stacks/common_function_gateway_f649736d-1920-41eb-96af-d4e4fe192d0e/8ccc6c5d-7757-4605-b34b-665ef8858cce |
+| notification_topics   | []                                                                                                                                                                                                    |
+| outputs               | [                                                                                                                                                                                                     |
+|                       |   {                                                                                                                                                                                                   |
+|                       |     "output_value": "cfb54c6f-43cf-4e35-aff8-e2c2ec8adc7e",                                                                                                                                           |
+|                       |     "description": "Monitoring Target ID",                                                                                                                                                            |
+|                       |     "output_key": "monitoring_target_id"                                                                                                                                                              |
+|                       |   },                                                                                                                                                                                                  |
+|                       |   {                                                                                                                                                                                                   |
+|                       |     "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/cfb54c6f-43cf-4e35-aff8-e2c2ec8adc7e",                                                                  |
+|                       |     "description": "Monitoring Process Link",                                                                                                                                                         |
+|                       |     "output_key": "monitoring_link"                                                                                                                                                                   |
+|                       |   }                                                                                                                                                                                                   |
+|                       | ]                                                                                                                                                                                                     |
+| parameters            | {                                                                                                                                                                                                     |
+|                       |   "primary_device_ip": "10.79.5.185",                                                                                                                                                                 |
+|                       |   "OS::stack_id": "8ccc6c5d-7757-4605-b34b-665ef8858cce",                                                                                                                                             |
+|                       |   "OS::stack_name": "common_function_gateway_f649736d-1920-41eb-96af-d4e4fe192d0e",                                                                                                                   |
+|                       |   "primary_device_logical_downlink_interface": "ae0.1025",                                                                                                                                            |
+|                       |   "secondary_device_logical_downlink_interface": "ae0.1025",                                                                                                                                          |
+|                       |   "secondary_device_port": "830",                                                                                                                                                                     |
+|                       |   "secondary_device_password": "******",                                                                                                                                                              |
+|                       |   "primary_device_password": "******",                                                                                                                                                                |
+|                       |   "version": "1",                                                                                                                                                                                     |
+|                       |   "primary_device_username": "esi",                                                                                                                                                                   |
+|                       |   "primary_device_physical_downlink_interface": "ae0",                                                                                                                                                |
+|                       |   "tenant_id": "c583ce78843344adbe5fd20f13620274",                                                                                                                                                    |
+|                       |   "gohan_id": "f649736d-1920-41eb-96af-d4e4fe192d0e",                                                                                                                                                 |
+|                       |   "primary_device_port": "830",                                                                                                                                                                       |
+|                       |   "secondary_device_physical_downlink_interface": "ae0",                                                                                                                                              |
+|                       |   "secondary_device_ip": "10.79.5.184",                                                                                                                                                               |
+|                       |   "secondary_device_username": "esi"                                                                                                                                                                  |
+|                       | }                                                                                                                                                                                                     |
+| parent                | None                                                                                                                                                                                                  |
+| stack_name            | common_function_gateway_f649736d-1920-41eb-96af-d4e4fe192d0e                                                                                                                                          |
+| stack_owner           | admin                                                                                                                                                                                                 |
+| stack_status          | CREATE_COMPLETE                                                                                                                                                                                       |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                                                                   |
+| stack_user_project_id | c583ce78843344adbe5fd20f13620274                                                                                                                                                                      |
+| template_description  | Common Function Gateway                                                                                                                                                                               |
+| timeout_mins          | 60                                                                                                                                                                                                    |
+| updated_time          | None                                                                                                                                                                                                  |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 Checking heat-template of "common_function_gateway" via heatclient.
 ```
-$ heat template-show common_function_gateway_5c241c51-2003-407a-a239-689fabd19022
+$ heat template-show common_function_gateway_f649736d-1920-41eb-96af-d4e4fe192d0e
 description: 'Common Function Gateway
 
   '
 heat_template_version: '2013-05-23'
+outputs:
+  monitoring_link:
+    description: Monitoring Process Link
+    value:
+      get_attr: [vrrp_monitor, link]
+  monitoring_target_id:
+    description: Monitoring Target ID
+    value: {get_resource: vrrp_monitor}
 parameters:
+  gohan_id: {description: UUID of the Common Function Gateway, label: Gohan resource
+      ID, type: string}
   primary_device_ip: {description: Ip address that will be used to establish ssh connection
       to the Primary Device., label: Ip address of the device., type: string}
   primary_device_logical_downlink_interface: {description: Name of the created logical
       downlink interface on the Primary device, label: Logical Interface name, type: string}
   primary_device_password: {description: Password of the user which will be used to
-      log onto the Primary Device., label: Users password., type: string}
+      log onto the Primary Device., hidden: true, label: Users password., type: string}
   primary_device_physical_downlink_interface: {description: Physical port on the Primary
       device on which the logical downlink port will be configured, label: Underlying
       physical interface, type: string}
@@ -67,7 +91,7 @@ parameters:
   secondary_device_logical_downlink_interface: {description: Name of the created logical
       downlink interface on the Secondary device, label: Logical Interface name, type: string}
   secondary_device_password: {description: Password of the user which will be used
-      to log onto the Secondary Device., label: Users password., type: string}
+      to log onto the Secondary Device., hidden: true, label: Users password., type: string}
   secondary_device_physical_downlink_interface: {description: Physical port on the
       Secondary device on which the logical downlink port will be configured, label: Underlying
       physical interface, type: string}
@@ -75,6 +99,8 @@ parameters:
       to the Secondary Device., label: Port of the ssh connection., type: number}
   secondary_device_username: {description: Name of the user which will be used to
       log onto the Secondary Device., label: User name to log on to device., type: string}
+  tenant_id: {label: Tenant ID, type: string}
+  version: {label: Config version, type: number}
 resources:
   netconf_configure_primary:
     properties:
@@ -221,6 +247,7 @@ resources:
       username: {get_param: primary_device_username}
     type: OS::Contrail::NetconfNamedConfigs
   netconf_configure_secondary:
+    depends_on: netconf_configure_primary
     properties:
       configs:
       - config: 'nat-rules vrf_gw_sample-ha-router-downlink_1025-SNAPT;
@@ -364,4 +391,35 @@ resources:
       port: {get_param: secondary_device_port}
       username: {get_param: secondary_device_username}
     type: OS::Contrail::NetconfNamedConfigs
+  vrrp_monitor:
+    depends_on: netconf_configure_secondary
+    properties:
+      field_name: status
+      properties:
+        primary:
+          host: {get_param: primary_device_ip}
+          interface: {get_param: primary_device_logical_downlink_interface}
+          login: {get_param: primary_device_username}
+          password: {get_param: primary_device_password}
+          port: {get_param: primary_device_port}
+        secondary:
+          host: {get_param: secondary_device_ip}
+          interface: {get_param: secondary_device_logical_downlink_interface}
+          login: {get_param: secondary_device_username}
+          password: {get_param: secondary_device_password}
+          port: {get_param: secondary_device_port}
+        vrid: [41, 42]
+      resource_id: {get_param: gohan_id}
+      resource_type: common_function_gateways
+      syncer_properties:
+        etcd:
+          hold_options:
+            positive_status: {primary_vrid1: MASTER, primary_vrid2: MASTER, secondary_vrid1: BACKUP,
+              secondary_vrid2: BACKUP}
+            time_seconds: 360
+          status: {key: status}
+      tenant_id: {get_param: tenant_id}
+      type: vrrp_pool
+      version: {get_param: version}
+    type: ESI::Monitoring::MonitoringTarget
 ```

@@ -115,12 +115,10 @@ As a result, Heat has stored heat-stacks for "Create Common Function Gateway".
 * [Checking heat-stack of "network"](heat-stack/CreateCommonFunctionGateway_01.md)
 * [Checking heat-stack of "subnet"](heat-stack/CreateCommonFunctionGateway_02.md)
 * [Checking heat-stack of "common_function_gateway"](heat-stack/CreateCommonFunctionGateway_03.md)
-* [Checking heat-stack of "port"](heat-stack/CreateCommonFunctionGateway_04.md)
-* [Checking heat-stack of "port"](heat-stack/CreateCommonFunctionGateway_05.md)
-* [Checking heat-stack of "ese_logical_port"](heat-stack/CreateCommonFunctionGateway_06.md)
-* [Checking heat-stack of "ese_logical_port"](heat-stack/CreateCommonFunctionGateway_07.md)
-* [Checking heat-stack of "port"](heat-stack/CreateCommonFunctionGateway_08.md)
-* [Checking heat-stack of "port"](heat-stack/CreateCommonFunctionGateway_09.md)
+* [Checking heat-stack of "ese_logical_port"](heat-stack/CreateCommonFunctionGateway_04.md)
+* [Checking heat-stack of "ese_logical_port"](heat-stack/CreateCommonFunctionGateway_05.md)
+* [Checking heat-stack of "port"](heat-stack/CreateCommonFunctionGateway_06.md)
+* [Checking heat-stack of "port"](heat-stack/CreateCommonFunctionGateway_07.md)
 
 
 ## 10.6. CollectorAgent
@@ -131,9 +129,9 @@ As a result, Heat has stored heat-stacks for "Create Common Function Gateway".
 CollectorAgent has conducted some tasks for "Create Common Function Gateway" based heat-stacks via Heat.
 As a result, CollectorAgent has responded the result of status information as handling tasks.
 
-* [Checking monitoring of "common_function_gateway"](heat-stack/CreateCommonFunctionGateway_01.md)
 * [Checking monitoring of "ese_logical_port"](collector_agents/CreateCommonFunctionGateway_02.md)
 * [Checking monitoring of "ese_logical_port"](collector_agents/CreateCommonFunctionGateway_03.md)
+* [Checking monitoring of "common_function_gateway"](collector_agents/CreateCommonFunctionGateway_01.md)
 * [Checking monitoring of "port"](collector_agents/CreateCommonFunctionGateway_04.md)
 * [Checking monitoring of "port"](collector_agents/CreateCommonFunctionGateway_05.md)
 

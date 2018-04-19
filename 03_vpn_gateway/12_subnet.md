@@ -5,24 +5,13 @@ You can see the relations of "Subnet" as following.
 
 ![Subnet](resource/gohan_investigate_for_vpngw.013.png)
 
-## 12.1. Sequence Diagram between gohan and etcd
-This is a diagram that has been described as interfaces for "Subnet" between gohan and etcd.
 
-* Initinalizing gohan ...
-* Receiving HTTP Methods for Creating Resource ...
+## 12.1. Gohan
 
-![Create Subnet](diag/ESI_Sequence_Diagram_for_VPN_Gateway.018.png)
+![scope](../images/ESI_Sequence_diagram.002.png)
 
-## 12.2. Stored data in etcd after initinalizing gohan
-These are stored data for "heat_templates" in etcd.
-
-* [Checking stored data for "subnet"](../heat_template/subnet.md)
-* [Checking stored data for "port"](../heat_template/port.md)
-* [Checking stored data for "port_monitoring"](../heat_template/port_monitoring.md)
-
-
-## 12.3. HTTP Methods for RESTful between Gohan and Client
-This is JSON data for "Create Subnet" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Subnet" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -33,32 +22,73 @@ POST /v2.0/subnets
     "subnet": {
         "description": "Sample Subnet",
         "name": "sample-subnet",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef",
         "tags": {},
         "ip_version": 4,
         "cidr": "172.16.101.0/24",
-        "network_id": "bb69041d-c654-4e9f-a763-afd4333275bc"
+        "network_id": "afa0d9d6-84dc-4755-9c6e-db2f23f9dde2"
     }
 }
 ```
-![scope](../images/esi_interface.004.png)
+After processing, Gohan has stored data for "Create Subnet" in etcd.
+
+* [Checking stored data for creating "subnet"](stored_in_etcd/01_Gohan/CreateSubnet_01.md)
+* [Checking stored data for creating "port(dhcp)"](stored_in_etcd/01_Gohan/CreateSubnet_02.md)
 
 
-## 12.4. Stored data in etcd after receiving HTTP Methods for RESTful
-These are stored data for "Create Subnet" in etcd.
+## 12.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-* [Checking stored data for creating "subnet"](stored_in_etcd/CreateSubnet_01.md)
-* [Checking stored data for creating "port(dhcp)"](stored_in_etcd/CreateSubnet_02.md)
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
 
-![scope](../images/esi_interface.005.png)
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Create Subnet" in etcd, ResourceReader has fetched heat_templates in etcd.
+
+* [Checking stored data for "subnet"](../heat_template/subnet.md)
+
+And then, ResourceReader has stored data as finishing resource
+
+* [Checking stored data for creating "port(dhcp)"](stored_in_etcd/00_ResourceReader/CreateSubnet_02.md)
 
 
-## 12.5. Stored heat-stack via heat-api
-These are stored heat-stacks for "Create Subnet" in heat-engine.
+## 12.3. JobManager
+
+![scope](../images/ESI_Sequence_diagram.004.png)
+
+### Outline
+After converting resource_data to job_data, JobManager has stored it in etcd.
+
+* [Checking stored data for creating "subnet"](stored_in_etcd/02_JobManager/CreateSubnet_01.md)
+
+
+
+## 12.4. HeatWorker
+
+![scope](../images/ESI_Sequence_diagram.005.png)
+
+### Outline
+After fetching job_data, HeatWorker has handled job_data.
+And then, HeatWorker has stored the result of handling job_data.
+
+* [Checking stored data for creating "subnet"](stored_in_etcd/03_HeatWorker/CreateSubnet_01.md)
+
+
+## 12.5. Heat
+
+![scope](../images/ESI_Sequence_diagram.006.png)
+
+### Outline
+Heat has conducted some tasks for "Create Subnet".
+As a result, Heat has stored heat-stacks for "Create Subnet".
 
 * [Checking heat-stack of "subnet"](heat-stack/CreateSubnet_01.md)
 
-![scope](../images/esi_interface.006.png)
 
 
 ## 12.6. Stored resource in gohan
@@ -66,7 +96,7 @@ As a result, checking resources regarding of "Subnet" in gohan.
 
 * Checking the target of resources via gohan client
 ```
-$ gohan client subnet show --output-format json b4f0c956-2fe0-4634-b7c8-22bfd8095aaf
+$ gohan client subnet show --output-format json e825f4e4-ba44-4d9e-9578-a31ad45bedda
 {
     "subnet": {
         "allocation_pools": [
@@ -82,22 +112,23 @@ $ gohan client subnet show --output-format json b4f0c956-2fe0-4634-b7c8-22bfd809
         "enable_dhcp": true,
         "gateway_ip": "172.16.101.1",
         "host_routes": [],
-        "id": "b4f0c956-2fe0-4634-b7c8-22bfd8095aaf",
+        "id": "e825f4e4-ba44-4d9e-9578-a31ad45bedda",
         "ip_version": 4,
         "ipv6_address_mode": null,
         "ipv6_ra_mode": null,
         "name": "sample-subnet",
-        "network_id": "bb69041d-c654-4e9f-a763-afd4333275bc",
+        "network_id": "afa0d9d6-84dc-4755-9c6e-db2f23f9dde2",
         "ntp_servers": [],
+        "orchestration_state": "CREATE_COMPLETE",
         "status": "ACTIVE",
         "tags": {},
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef"
     }
 }
 ```
 * Checking another resources via gohan client
 ```
-$ gohan client port show --output-format json 3388400c-5e25-4b97-8210-2a796927f2e7
+$ gohan client port show --output-format json 604f922d-489d-4170-9d6d-c09e657b2eb3
 {
     "port": {
         "admin_state_up": true,
@@ -105,26 +136,29 @@ $ gohan client port show --output-format json 3388400c-5e25-4b97-8210-2a796927f2
         "attached": false,
         "binding:vif_type": "vrouter",
         "description": "DHCP Server Port",
-        "device_id": "b4f0c956-2fe0-4634-b7c8-22bfd8095aaf",
+        "device_id": "e825f4e4-ba44-4d9e-9578-a31ad45bedda",
         "device_owner": "network:dhcp",
         "ese_logical_port_id": null,
         "fake_delete": false,
         "fixed_ips": [
             {
                 "ip_address": "172.16.101.2",
-                "subnet_id": "b4f0c956-2fe0-4634-b7c8-22bfd8095aaf"
+                "subnet_id": "e825f4e4-ba44-4d9e-9578-a31ad45bedda"
             }
         ],
-        "id": "3388400c-5e25-4b97-8210-2a796927f2e7",
+        "id": "604f922d-489d-4170-9d6d-c09e657b2eb3",
         "mac_address": "00:00:5e:00:01:00",
         "managed_by_service": false,
         "name": "dhcp-server-port",
-        "network_id": "bb69041d-c654-4e9f-a763-afd4333275bc",
+        "network_id": "afa0d9d6-84dc-4755-9c6e-db2f23f9dde2",
+        "operational_state": "",
+        "orchestration_state": "SYNC_COMPLETE",
+        "security_groups": [],
         "segmentation_id": null,
         "segmentation_type": null,
         "status": "ACTIVE",
         "tags": {},
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef"
     }
 }
 ```

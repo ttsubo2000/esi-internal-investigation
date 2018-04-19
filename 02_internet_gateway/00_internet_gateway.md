@@ -9,7 +9,7 @@ This section is for the purpose of documenting ESI interface.
 ![scope](../images/ESI_Sequence_diagram.001.png)
 
 
-# Resource model for Loginal Network
+# Resource model for Internet Gateway
 First of all, you can see the overview of resources model of "Internet Gateway".
 
 ![Overview](resource/gohan_investigate_for_inetgw.001.png)

@@ -5,15 +5,13 @@ You can see the relations of "Vpn Service" as following.
 
 ![Vpn Service](resource/gohan_investigate_for_vpngw.008.png)
 
-## 7.1. Sequence Diagram between gohan and etcd
-This is a diagram that has been described as interfaces for "Vpn Service" between gohan and etcd.
 
-* Receiving HTTP Methods for Creating Resource ...
+## 7.1. Gohan
 
-![Create Vpn Service](diag/ESI_Sequence_Diagram_for_VPN_Gateway.013.png)
+![scope](../images/ESI_Sequence_diagram.002.png)
 
-## 7.2. HTTP Methods for RESTful between Gohan and Client
-This is JSON data for "Create Vpn Service" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Vpn Service" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -24,7 +22,9 @@ POST /v2.0/vpn_services
     "vpn_service": {
         "be_forwarding_class": "FC-VPN-BE",
         "default_static_routes_per_gateway": 32,
-        "downlink_interfaces": ["a3a62a37-5657-4822-98e0-991ab63f0e96"],
+        "downlink_interfaces": [
+            "66bdfe91-b9e6-42f2-8942-bb4d4a67d5ba"
+        ],
         "ga_forwarding_class": "FC-VPN-GA",
         "name": "sample-vpn-service",
         "neighbour_prefix": "BGP-VIRTUAL-ROUTER-PEERS",
@@ -34,39 +34,53 @@ POST /v2.0/vpn_services
         "secondary_downlink_vrrp_config_group": "VPNGW2-VRRP",
         "secondary_ebgp_config_group": "VPNGW2-RI-EBGP",
         "secondary_ibgp_config_group": "VPNGW2-RI-IBGP",
-        "uplink_interfaces": ["5e552b8f-cd5a-454c-a224-33f7da0afa24"],
+        "uplink_interfaces": [
+            "c50006de-8afe-48fc-b7b8-37dc7617764a"
+        ],
         "zone": "jp1-zone1",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef"
     }
 }
 ```
-![scope](../images/esi_interface.004.png)
+After processing, Gohan has stored data for "Create Vpn Service" in etcd
+
+* [Checking stored data for creating "vpn_service"](stored_in_etcd/01_Gohan/CreateVpnService_01.md)
 
 
-## 7.3. Stored data in etcd after receiving HTTP Methods for RESTful
-These are stored data for "Create Vpn Service" in etcd.
+## 7.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-* [Checking stored data for creating "vpn_service"](stored_in_etcd/CreateVpnService_01.md)
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
 
-![scope](../images/esi_interface.005.png)
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Create Vpn Service" in etcd, ResourceReader has not fetched heat_templates in etcd because of non_workable_resource.
+And then, ResourceReader has stored data as finishing resource
+
+* [Checking stored data for creating "vpn_service"](stored_in_etcd/00_ResourceReader/CreateVpnService_01.md)
 
 
-## 7.4. Stored resource in gohan
+## 7.3. Stored resource in gohan
 As a result, checking resources regarding of "Vpn Service" in gohan.
 
 * Checking the target of resources via gohan client
 ```
-$ gohan client vpn_service show --output-format json 72b05fe5-88c6-4888-a6fb-feb793fffae8
+$ gohan client vpn_service show --output-format json c8d57f7e-b439-475e-a6fb-ee2594390177
 {
     "vpn_service": {
         "be_forwarding_class": "FC-VPN-BE",
         "default_static_routes_per_gateway": 32,
         "description": "",
         "downlink_interfaces": [
-            "a3a62a37-5657-4822-98e0-991ab63f0e96"
+            "66bdfe91-b9e6-42f2-8942-bb4d4a67d5ba"
         ],
         "ga_forwarding_class": "FC-VPN-GA",
-        "id": "72b05fe5-88c6-4888-a6fb-feb793fffae8",
+        "id": "c8d57f7e-b439-475e-a6fb-ee2594390177",
         "name": "sample-vpn-service",
         "neighbour_prefix": "BGP-VIRTUAL-ROUTER-PEERS",
         "primary_downlink_vrrp_config_group": "VPNGW1-VRRP",
@@ -75,9 +89,9 @@ $ gohan client vpn_service show --output-format json 72b05fe5-88c6-4888-a6fb-feb
         "secondary_downlink_vrrp_config_group": "VPNGW2-VRRP",
         "secondary_ebgp_config_group": "VPNGW2-RI-EBGP",
         "secondary_ibgp_config_group": "VPNGW2-RI-IBGP",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef",
         "uplink_interfaces": [
-            "5e552b8f-cd5a-454c-a224-33f7da0afa24"
+            "c50006de-8afe-48fc-b7b8-37dc7617764a"
         ],
         "vrf_config": null,
         "zone": "jp1-zone1"

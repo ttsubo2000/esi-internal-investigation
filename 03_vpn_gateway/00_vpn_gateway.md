@@ -1,7 +1,18 @@
 [Return to Top Page](../README.md)
 
-# Gohan and Heat-api Interfaces for VPN Gateway
-This section is for the purpose of documenting interfaces between gohan and esi-worker.
+# ESI interface for VPN Gateway
+This section is for the purpose of documenting ESI interface.
+
+* Initinalizing gohan ...
+* Receiving HTTP Methods for Creating Resource ...
+
+![scope](../images/ESI_Sequence_diagram.001.png)
+
+
+# Resource model for VPN Gateway
+First of all, you can see the overview of resources model of "VPN Gateway".
+
+![Overview](resource/gohan_investigate_for_vpngw.001.png)
 
 * [01: Ese Device](01_ese_device.md)
 * [02: Ese Physical Port](02_ese_physical_port.md)
@@ -18,7 +29,3 @@ This section is for the purpose of documenting interfaces between gohan and esi-
 * [13: Gw Interface](13_gw_interface.md)
 * [14: Static Route](14_static_route.md)
 
-# Resource model for VPN Gateway
-First of all, you can see the overview of resources model of "VPN Gateway".
-
-![Overview](resource/gohan_investigate_for_vpngw.001.png)

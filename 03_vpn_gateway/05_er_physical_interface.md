@@ -5,25 +5,13 @@ You can see the relations of "Create Er Physical Interface" as following.
 
 ![Er Physical Interface](resource/gohan_investigate_for_vpngw.006.png)
 
-## 5.1. Sequence Diagram between gohan and etcd
-This is a diagram that has been described as interfaces for "Er Physical Interface" between gohan and etcd.
 
-* Initinalizing gohan ...
-* Receiving HTTP Methods for Creating Resource ...
+## 5.1. Gohan
 
-![Create Er Physical Interface1](diag/ESI_Sequence_Diagram_for_VPN_Gateway.007.png)
-![Create Er Physical Interface2](diag/ESI_Sequence_Diagram_for_VPN_Gateway.008.png)
-![Create Er Physical Interface3](diag/ESI_Sequence_Diagram_for_VPN_Gateway.009.png)
-![Create Er Physical Interface4](diag/ESI_Sequence_Diagram_for_VPN_Gateway.010.png)
+![scope](../images/ESI_Sequence_diagram.002.png)
 
-## 5.2. Stored data in etcd after initinalizing gohan
-These are stored data for "heat_templates" in etcd.
-
-* [Checking stored data for "er_physical_interface_monitoring"](../heat_template/er_physical_interface_monitoring.md)
-
-
-## 5.3. HTTP Methods for RESTful between Gohan and Client
-This is JSON data for "Create Er Physical Interface" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Er Physical Interface" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -32,9 +20,9 @@ POST /v2.0/er_physical_interfaces
 ```
 {
     "er_physical_interface": {
-        "device_id": "792c7a6d-19b5-4d6f-b9f6-1e5b1eb45198",
+        "device_id": "7a35974a-a19f-49e2-b907-ad7fd8692975",
         "name": "ge-0/0/1",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef"
     }
 }
 ```
@@ -45,10 +33,10 @@ POST /v2.0/er_physical_interfaces
 ```
 {
     "er_physical_interface": {
-        "connected_ese_port_id": "eec156b0-7317-48dd-b76c-019c0758e99d",
-        "device_id": "792c7a6d-19b5-4d6f-b9f6-1e5b1eb45198",
+        "connected_ese_port_id": "0078808a-c28e-46e1-887d-8ec65f90c446",
+        "device_id": "7a35974a-a19f-49e2-b907-ad7fd8692975",
         "name": "ae0",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef"
     }
 }
 ```
@@ -59,10 +47,10 @@ POST /v2.0/er_physical_interfaces
 ```
 {
     "er_physical_interface": {
-        "connected_ese_port_id": "176ec475-e9e8-4605-8b41-802fbc6220c1",
-        "device_id": "3ca3a59a-4f92-4a8a-9ec1-1c55a97c794e",
+        "connected_ese_port_id": "a6e70af1-386b-4d79-943f-6f44e87f95b3",
+        "device_id": "b7e6d8ad-5377-4380-bbb4-1a62566cbd6d",
         "name": "ae0",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef"
     }
 }
 ```
@@ -73,91 +61,164 @@ POST /v2.0/er_physical_interfaces
 ```
 {
     "er_physical_interface": {
-        "device_id": "3ca3a59a-4f92-4a8a-9ec1-1c55a97c794e",
+        "device_id": "b7e6d8ad-5377-4380-bbb4-1a62566cbd6d",
         "name": "ge-0/0/1",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef"
     }
 }
 ```
-![scope](../images/esi_interface.004.png)
+After processing, Gohan has stored data for "Create Er Physical Interface" in etcd.
+
+* [Checking stored data for creating "ge-0/0/1"](stored_in_etcd/01_Gohan/CreateErPhysicalInterface_01.md)
+* [Checking stored data for creating "ae0"](stored_in_etcd/01_Gohan/CreateErPhysicalInterface_02.md)
+* [Checking stored data for creating "ae0"](stored_in_etcd/01_Gohan/CreateErPhysicalInterface_03.md)
+* [Checking stored data for creating "ge-0/0/1"](stored_in_etcd/01_Gohan/CreateErPhysicalInterface_04.md)
 
 
-## 5.4. Stored data in etcd after receiving HTTP Methods for RESTful
-These are stored data for "Create Er Physical Interface" in etcd.
+## 5.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-* [Checking stored data for creating "ge-0/0/1"](stored_in_etcd/CreateErPhysicalInterface_01.md)
-* [Checking stored data for creating "ae0"](stored_in_etcd/CreateErPhysicalInterface_02.md)
-* [Checking stored data for creating "ae0"](stored_in_etcd/CreateErPhysicalInterface_03.md)
-* [Checking stored data for creating "ge-0/0/1"](stored_in_etcd/CreateErPhysicalInterface_04.md)
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
 
-![scope](../images/esi_interface.005.png)
+![scope](../images/ESI_Sequence_diagram.003.png)
 
+### Outline
+After fetching resource_data for "Create Er Physical Interface" in etcd, ResourceReader has fetched heat_templates in etcd.
 
-## 5.5. Stored resource for monitoring in Kafka
-This is JSON data for "Create Er Physical Interface" between monitoring-worker and kafka
-
-* [Checking the topic "monitor_physical_port" for monitoring "er_physical_interface"](stored_in_kafka/CreateErPhysicalInterface_01.md)
-
-![scope](../images/esi_interface.007.png)
+* [Checking stored data for "er_physical_interface"](../heat_template/er_physical_interface.md)
 
 
-## 5.6. Stored resource in gohan
+## 5.3. JobManager
+
+![scope](../images/ESI_Sequence_diagram.004.png)
+
+### Outline
+After converting resource_data to job_data, JobManager has stored it in etcd.
+
+* [Checking stored data for creating "ge-0/0/1"](stored_in_etcd/02_JobManager/CreateErPhysicalInterface_01.md)
+* [Checking stored data for creating "ae0"](stored_in_etcd/02_JobManager/CreateErPhysicalInterface_02.md)
+* [Checking stored data for creating "ae0"](stored_in_etcd/02_JobManager/CreateErPhysicalInterface_03.md)
+* [Checking stored data for creating "ge-0/0/1"](stored_in_etcd/02_JobManager/CreateErPhysicalInterface_04.md)
+
+
+## 5.4. HeatWorker
+
+![scope](../images/ESI_Sequence_diagram.005.png)
+
+### Outline
+After fetching job_data, HeatWorker has handled job_data.
+And then, HeatWorker has stored the result of handling job_data.
+
+* [Checking stored data for creating "ge-0/0/1"](stored_in_etcd/03_HeatWorker/CreateErPhysicalInterface_01.md)
+* [Checking stored data for creating "ae0"](stored_in_etcd/03_HeatWorker/CreateErPhysicalInterface_02.md)
+* [Checking stored data for creating "ae0"](stored_in_etcd/03_HeatWorker/CreateErPhysicalInterface_03.md)
+* [Checking stored data for creating "ge-0/0/1"](stored_in_etcd/03_HeatWorker/CreateErPhysicalInterface_04.md)
+
+
+## 5.5. Heat
+
+![scope](../images/ESI_Sequence_diagram.006.png)
+
+### Outline
+Heat has conducted some tasks for "Create Er Physical Interface".
+As a result, Heat has stored heat-stacks for "Create Er Physical Interface".
+
+* [Checking heat-stack of "ge-0/0/1"](heat-stack/CreateErPhysicalInterface_01.md)
+* [Checking heat-stack of "ae0"](heat-stack/CreateErPhysicalInterface_02.md)
+* [Checking heat-stack of "ae0"](heat-stack/CreateErPhysicalInterface_03.md)
+* [Checking heat-stack of "ge-0/0/1"](heat-stack/CreateErPhysicalInterface_04.md)
+
+
+## 5.6. CollectorAgent
+
+![scope](../images/ESI_Sequence_diagram.007.png)
+
+### Outline
+CollectorAgent has conducted some tasks for "Create Er Physical Interface" based heat-stacks via Heat.
+As a result, CollectorAgent has responded the result of status information as handling tasks.
+
+* [Checking monitoring of "ge-0/0/1"](collector_agents/CreateErPhysicalInterface_01.md)
+* [Checking monitoring of "ae0"](collector_agents/CreateErPhysicalInterface_02.md)
+* [Checking monitoring of "ae0"](collector_agents/CreateErPhysicalInterface_03.md)
+* [Checking monitoring of "ge-0/0/1"](collector_agents/CreateErPhysicalInterface_04.md)
+
+And then, CollectorAgent has stored the result of status information.
+
+* [Checking stored data for creating "ge-0/0/1"](stored_in_etcd/04_CollectorAgent/CreateErPhysicalInterface_01.md)
+* [Checking stored data for creating "ae0"](stored_in_etcd/04_CollectorAgent/CreateErPhysicalInterface_02.md)
+* [Checking stored data for creating "ae0"](stored_in_etcd/04_CollectorAgent/CreateErPhysicalInterface_03.md)
+* [Checking stored data for creating "ge-0/0/1"](stored_in_etcd/04_CollectorAgent/CreateErPhysicalInterface_04.md)
+
+
+## 5.7. Stored resource in gohan
 As a result, checking resources regarding of "Er Physical Interface" in gohan.
 
 * Checking the target of resources via gohan client
 ```
-$ gohan client er_physical_interface show --output-format json 6e8f473f-47ec-4b54-8f0f-d459d440393b
+$ gohan client er_physical_interface show --output-format json f3ecf585-5c3b-445a-97a7-d8e124c99e16
 {
     "er_physical_interface": {
         "connected_ese_port_id": null,
         "description": "",
-        "device_id": "792c7a6d-19b5-4d6f-b9f6-1e5b1eb45198",
-        "id": "6e8f473f-47ec-4b54-8f0f-d459d440393b",
+        "device_id": "7a35974a-a19f-49e2-b907-ad7fd8692975",
+        "id": "f3ecf585-5c3b-445a-97a7-d8e124c99e16",
         "name": "ge-0/0/1",
+        "operational_state": "UP",
+        "orchestration_state": "CREATE_COMPLETE",
         "status": "ACTIVE",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef"
     }
 }
 ```
 ```
-$ gohan client er_physical_interface show --output-format json 8ff57ce4-55f9-40d4-82ed-1f00c9051678
+$ gohan client er_physical_interface show --output-format json 3118d6be-b1cb-472a-805f-7e1ec46aa5e7
 {
     "er_physical_interface": {
-        "connected_ese_port_id": "eec156b0-7317-48dd-b76c-019c0758e99d",
+        "connected_ese_port_id": "0078808a-c28e-46e1-887d-8ec65f90c446",
         "description": "",
-        "device_id": "792c7a6d-19b5-4d6f-b9f6-1e5b1eb45198",
-        "id": "8ff57ce4-55f9-40d4-82ed-1f00c9051678",
+        "device_id": "7a35974a-a19f-49e2-b907-ad7fd8692975",
+        "id": "3118d6be-b1cb-472a-805f-7e1ec46aa5e7",
         "name": "ae0",
+        "operational_state": "UP",
+        "orchestration_state": "CREATE_COMPLETE",
         "status": "ACTIVE",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef"
     }
 }
 ```
 ```
-$ gohan client er_physical_interface show --output-format json 6b160a8d-fdad-4fe7-aaed-3ff5f729d6c8
+$ gohan client er_physical_interface show --output-format json c8e2d558-02ee-4bf3-ba5b-958821a21043
 {
     "er_physical_interface": {
-        "connected_ese_port_id": "176ec475-e9e8-4605-8b41-802fbc6220c1",
+        "connected_ese_port_id": "a6e70af1-386b-4d79-943f-6f44e87f95b3",
         "description": "",
-        "device_id": "3ca3a59a-4f92-4a8a-9ec1-1c55a97c794e",
-        "id": "6b160a8d-fdad-4fe7-aaed-3ff5f729d6c8",
+        "device_id": "b7e6d8ad-5377-4380-bbb4-1a62566cbd6d",
+        "id": "c8e2d558-02ee-4bf3-ba5b-958821a21043",
         "name": "ae0",
+        "operational_state": "UP",
+        "orchestration_state": "CREATE_COMPLETE",
         "status": "ACTIVE",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef"
     }
 }
 ```
 ```
-$ gohan client er_physical_interface show --output-format json f87c6efe-f590-4c29-8fc9-2f914e1eb362
+$ gohan client er_physical_interface show --output-format json 2bc8e40d-ab01-4738-a4aa-e69d8fd30688
 {
     "er_physical_interface": {
         "connected_ese_port_id": null,
         "description": "",
-        "device_id": "3ca3a59a-4f92-4a8a-9ec1-1c55a97c794e",
-        "id": "f87c6efe-f590-4c29-8fc9-2f914e1eb362",
+        "device_id": "b7e6d8ad-5377-4380-bbb4-1a62566cbd6d",
+        "id": "2bc8e40d-ab01-4738-a4aa-e69d8fd30688",
         "name": "ge-0/0/1",
+        "operational_state": "UP",
+        "orchestration_state": "CREATE_COMPLETE",
         "status": "ACTIVE",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef"
     }
 }
 ```

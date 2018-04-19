@@ -142,7 +142,7 @@ $ gohan client ese_physical_port show --output-format json 887fecdd-956b-47fa-a3
 }
 ```
 ```
-$ client ese_physical_port show --output-format json 6b29894f-8694-4865-92c1-2e78360e65a6
+$ gohan client ese_physical_port show --output-format json 6b29894f-8694-4865-92c1-2e78360e65a6
 {
     "ese_physical_port": {
         "connected_port_id": "",

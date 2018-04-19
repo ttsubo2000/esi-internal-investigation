@@ -142,8 +142,6 @@ Checking configuration in Edge Router
 
 * MX-1
 ```
-[edit]
-root@vMX-1# show | compare rollback 2
 [edit interfaces ae0 unit 1025 family inet]
 +       address 172.16.101.153/24 {
 +           vrrp-group 20 {
@@ -169,8 +167,6 @@ root@vMX-1# show | compare rollback 2
 
 * MX-2
 ```
-[edit]
-root@vMX-2# show | compare rollback 2
 [edit interfaces ae0 unit 1025 family inet]
 +       address 172.16.101.152/24 {
 +           vrrp-group 20 {

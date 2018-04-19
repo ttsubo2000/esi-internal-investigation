@@ -5,23 +5,13 @@ You can see the relations of "Ha Interface" as following.
 
 ![Ha Interface](resource/gohan_investigate_for_vpngw.007.png)
 
-## 6.1. Sequence Diagram between gohan and etcd
-This is a diagram that has been described as interfaces for "Ha Interface" between gohan and etcd.
 
-* Initinalizing gohan ...
-* Receiving HTTP Methods for Creating Resource ...
+## 6.1. Gohan
 
-![Create Ha Interface1](diag/ESI_Sequence_Diagram_for_VPN_Gateway.011.png)
-![Create Ha Interface2](diag/ESI_Sequence_Diagram_for_VPN_Gateway.012.png)
+![scope](../images/ESI_Sequence_diagram.002.png)
 
-## 6.2. Stored data in etcd after initinalizing gohan
-These are stored data for "heat_templates" in etcd.
-
-* [Checking stored data for "ha_interface_monitoring"](../heat_template/ha_interface_monitoring.md)
-
-
-## 6.3. HTTP Methods for RESTful between Gohan and Client
-This is JSON data for "Create Ha Interface" in HTTP Methods from client.
+### Outline
+First of all, Gohan has received JSON data for "Create Ha Interface" in HTTP Methods from client.
 
 * Checking JSON data at post method
 ```
@@ -30,12 +20,12 @@ POST /v2.0/ha_interfaces
 ```
 {
     "ha_interface": {
-        "ha_router_id": "f01ed0a6-7094-4e54-b14b-94657fff1efb",
+        "ha_router_id": "8c233862-895f-4cca-b377-c353e733c768",
         "link_type": "uplink",
         "name": "sample-ha-router-uplink",
-        "primary_interface_id": "6e8f473f-47ec-4b54-8f0f-d459d440393b",
-        "secondary_interface_id": "f87c6efe-f590-4c29-8fc9-2f914e1eb362",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "primary_interface_id": "f3ecf585-5c3b-445a-97a7-d8e124c99e16",
+        "secondary_interface_id": "2bc8e40d-ab01-4738-a4aa-e69d8fd30688",
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef"
     }
 }
 ```
@@ -46,28 +36,41 @@ POST /v2.0/ha_interfaces
 ```
 {
     "ha_interface": {
-        "ha_router_id": "f01ed0a6-7094-4e54-b14b-94657fff1efb",
+        "ha_router_id": "8c233862-895f-4cca-b377-c353e733c768",
         "link_type": "downlink",
         "maximum_be_bandwidth": 500,
         "maximum_ga_bandwidth": 500,
         "name": "sample-ha-router-downlink",
-        "primary_interface_id": "8ff57ce4-55f9-40d4-82ed-1f00c9051678",
-        "secondary_interface_id": "6b160a8d-fdad-4fe7-aaed-3ff5f729d6c8",
+        "primary_interface_id": "3118d6be-b1cb-472a-805f-7e1ec46aa5e7",
+        "secondary_interface_id": "c8e2d558-02ee-4bf3-ba5b-958821a21043",
         "restricted_vlans": "0-1024,4094",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f"
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef"
     }
 }
 ```
-![scope](../images/esi_interface.004.png)
+After processing, Gohan has stored data for "Create Ha Interface" in etcd
+
+* [Checking stored data for creating "uplink"](stored_in_etcd/01_Gohan/CreateHaInterface_01.md)
+* [Checking stored data for creating "downlink"](stored_in_etcd/01_Gohan/CreateHaInterface_02.md)
 
 
-## 6.4. Stored data in etcd after receiving HTTP Methods for RESTful
-These are stored data for "Create Ha Interface" in etcd.
+## 6.2. ResourceReader
+When ResourceReader has started, it gets all of schemas from Gohan.
+After that, these schemas are converted as a template_mappings.
+And then, ResourceReader keeps storing template_mappings for following processing.
 
-* [Checking stored data for creating "uplink"](stored_in_etcd/CreateHaInterface_01.md)
-* [Checking stored data for creating "downlink"](stored_in_etcd/CreateHaInterface_02.md)
+### Reference
+* [Checking schemas in ResourceReader](../memo/schemas.txt)
+* [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
 
-![scope](../images/esi_interface.005.png)
+![scope](../images/ESI_Sequence_diagram.003.png)
+
+### Outline
+After fetching resource_data for "Create Ha Interface" in etcd, ResourceReader has not fetched heat_templates in etcd because of non_workable_resource.
+And then, ResourceReader has stored data as finishing resource
+
+* [Checking stored data for creating "uplink"](stored_in_etcd/00_ResourceReader/CreateHaInterface_01.md)
+* [Checking stored data for creating "downlink"](stored_in_etcd/00_ResourceReader/CreateHaInterface_02.md)
 
 
 ## 6.5. Stored resource in gohan
@@ -75,7 +78,7 @@ As a result, checking resources regarding of "Ha Interface" in gohan.
 
 * Checking the target of resources via gohan client
 ```
-$ gohan client ha_interface show --output-format json 5e552b8f-cd5a-454c-a224-33f7da0afa24
+$ gohan client ha_interface show --output-format json c50006de-8afe-48fc-b7b8-37dc7617764a
 {
     "ha_interface": {
         "admin_state_up": true,
@@ -83,24 +86,24 @@ $ gohan client ha_interface show --output-format json 5e552b8f-cd5a-454c-a224-33
         "available_ga_bandwidth": 0,
         "description": "",
         "gateway_instances_count": 0,
-        "ha_router_id": "f01ed0a6-7094-4e54-b14b-94657fff1efb",
-        "id": "5e552b8f-cd5a-454c-a224-33f7da0afa24",
+        "ha_router_id": "8c233862-895f-4cca-b377-c353e733c768",
+        "id": "c50006de-8afe-48fc-b7b8-37dc7617764a",
         "link_type": "uplink",
         "maximum_be_bandwidth": 0,
         "maximum_ga_bandwidth": 0,
         "name": "sample-ha-router-uplink",
-        "primary_interface_id": "6e8f473f-47ec-4b54-8f0f-d459d440393b",
+        "primary_interface_id": "f3ecf585-5c3b-445a-97a7-d8e124c99e16",
         "restricted_vlans": "",
-        "secondary_interface_id": "f87c6efe-f590-4c29-8fc9-2f914e1eb362",
+        "secondary_interface_id": "2bc8e40d-ab01-4738-a4aa-e69d8fd30688",
         "status": "ACTIVE",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef",
         "vlan_ids_available": 4093,
         "vlan_pool_state": "gAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAE="
     }
 }
 ```
 ```
-$ gohan client ha_interface show --output-format json a3a62a37-5657-4822-98e0-991ab63f0e96
+$ gohan client ha_interface show --output-format json 66bdfe91-b9e6-42f2-8942-bb4d4a67d5ba
 {
     "ha_interface": {
         "admin_state_up": true,
@@ -108,17 +111,17 @@ $ gohan client ha_interface show --output-format json a3a62a37-5657-4822-98e0-99
         "available_ga_bandwidth": 500,
         "description": "",
         "gateway_instances_count": 0,
-        "ha_router_id": "f01ed0a6-7094-4e54-b14b-94657fff1efb",
-        "id": "a3a62a37-5657-4822-98e0-991ab63f0e96",
+        "ha_router_id": "8c233862-895f-4cca-b377-c353e733c768",
+        "id": "66bdfe91-b9e6-42f2-8942-bb4d4a67d5ba",
         "link_type": "downlink",
         "maximum_be_bandwidth": 500,
         "maximum_ga_bandwidth": 500,
         "name": "sample-ha-router-downlink",
-        "primary_interface_id": "8ff57ce4-55f9-40d4-82ed-1f00c9051678",
+        "primary_interface_id": "3118d6be-b1cb-472a-805f-7e1ec46aa5e7",
         "restricted_vlans": "0-1024,4094",
-        "secondary_interface_id": "6b160a8d-fdad-4fe7-aaed-3ff5f729d6c8",
+        "secondary_interface_id": "c8e2d558-02ee-4bf3-ba5b-958821a21043",
         "status": "ACTIVE",
-        "tenant_id": "0b576f6f4cbf414f829cd12f008bf08f",
+        "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef",
         "vlan_ids_available": 3069,
         "vlan_pool_state": "//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAM="
     }

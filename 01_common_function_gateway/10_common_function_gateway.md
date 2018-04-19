@@ -226,20 +226,22 @@ Checking configuration in Edge Router
 +   }
 ```
 ```
-[edit interfaces ae0 unit 1025]
-+    apply-groups [ InetGW2-VRRP IF-USER-VRRP-ACT ];
-+    description vrf_gw_sample-ha-router-downlink_1025;
-```
-```
-[edit interfaces ae0 unit 1025 family inet]
-+       service {
-+           input {
-+               service-set vrf_gw_sample-ha-router-downlink_1025;
-+           }
-+           output {
-+               service-set vrf_gw_sample-ha-router-downlink_1025;
-+           }
-+       }
+[edit interfaces ae0]
++    unit 1025 {
++        apply-groups IF-USER-VRRP-ACT;
++        description vrf_gw_sample-ha-router-downlink_1025;
++        vlan-id 1025;
++        family inet {                  
++            service {
++                input {
++                    service-set vrf_gw_sample-ha-router-downlink_1025;
++                }
++                output {
++                    service-set vrf_gw_sample-ha-router-downlink_1025;
++                }
++            }
++        }
++    }
 ```
 ```
 [edit routing-instances]
@@ -251,17 +253,17 @@ Checking configuration in Edge Router
 +           }
 +       }
 +   }
-```
-```
-[edit routing-instances vrf_gw_sample-ha-router-downlink_1025]
-+    interface lt-0/0/0.1025;
-+    interface ms-0/2/0.1025;
-```
-```
-[edit routing-instances vrf_gw_sample-ha-router-downlink_1025 routing-options]
-+     static {
-+         route 0.0.0.0/0 next-hop lt-0/0/0.1025;
-+     }
++   vrf_gw_sample-ha-router-downlink_1025 {
++       instance-type virtual-router;
++       interface lt-0/0/0.1025;
++       interface ms-0/2/0.1025;
++       interface ae0.1025;
++       routing-options {
++           static {
++               route 0.0.0.0/0 next-hop lt-0/0/0.1025;
++           }
++       }
++   }
 
 [edit]
 ```
@@ -345,20 +347,22 @@ Checking configuration in Edge Router
 +   }
 ```
 ```
-[edit interfaces ae0 unit 1025]
-+    apply-groups [ InetGW1-VRRP IF-USER-VRRP-ACT ];
-+    description vrf_gw_sample-ha-router-downlink_1025;
-```
-```
-[edit interfaces ae0 unit 1025 family inet]
-+       service {
-+           input {
-+               service-set vrf_gw_sample-ha-router-downlink_1025;
-+           }
-+           output {
-+               service-set vrf_gw_sample-ha-router-downlink_1025;
-+           }
-+       }
+[edit interfaces ae0]
++    unit 1025 {
++        apply-groups IF-USER-VRRP-ACT;
++        description vrf_gw_sample-ha-router-downlink_1025;
++        vlan-id 1025;
++        family inet {                  
++            service {
++                input {
++                    service-set vrf_gw_sample-ha-router-downlink_1025;
++                }
++                output {
++                    service-set vrf_gw_sample-ha-router-downlink_1025;
++                }
++            }
++        }
++    }
 ```
 ```
 [edit routing-instances]
@@ -370,17 +374,17 @@ Checking configuration in Edge Router
 +           }
 +       }
 +   }
-```
-```
-[edit routing-instances vrf_gw_sample-ha-router-downlink_1025]
-+    interface lt-0/0/0.1025;
-+    interface ms-0/2/0.1025;
-```
-```
-[edit routing-instances vrf_gw_sample-ha-router-downlink_1025 routing-options]
-+     static {
-+         route 0.0.0.0/0 next-hop lt-0/0/0.1025;
-+     }
++   vrf_gw_sample-ha-router-downlink_1025 {
++       instance-type virtual-router;
++       interface lt-0/0/0.1025;
++       interface ms-0/2/0.1025;
++       interface ae0.1025;
++       routing-options {
++           static {
++               route 0.0.0.0/0 next-hop lt-0/0/0.1025;
++           }
++       }
++   }
 
 [edit]
 ```

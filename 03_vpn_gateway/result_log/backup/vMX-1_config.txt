@@ -1,0 +1,121 @@
+root@vMX-1# rollback ?
+Possible completions:
+  <[Enter]>            Execute this command
+  0                    2018-04-16 09:11:41 JST by esi via netconf 
+  1                    2018-04-16 09:09:36 JST by esi via netconf 
+  2                    2018-04-16 09:06:56 JST by esi via netconf 
+  3                    2018-04-16 09:06:24 JST by esi via netconf 
+  4                    2018-04-09 13:57:25 JST by root via cli 
+  5                    2018-04-09 13:47:33 JST by esi via netconf 
+  6                    2018-04-09 10:29:16 JST by root via cli 
+  7                    2018-04-09 10:20:45 JST by esi via netconf 
+  8                    2018-04-09 10:18:43 JST by esi via netconf 
+  9                    2018-04-09 10:17:35 JST by esi via netconf 
+  10                   2018-04-09 10:17:10 JST by esi via netconf 
+  11                   2018-04-09 09:58:49 JST by root via cli 
+  12                   2018-04-09 09:38:22 JST by root via cli 
+  13                   2018-04-09 09:30:42 JST by esi via netconf 
+  14                   2018-04-09 09:30:17 JST by esi via netconf 
+  15                   2018-04-04 14:18:59 JST by root via cli 
+  16                   2018-04-04 14:01:55 JST by esi via netconf 
+  17                   2018-04-04 13:59:52 JST by esi via netconf 
+  18                   2018-04-04 13:58:43 JST by esi via netconf 
+  19                   2018-04-04 13:58:18 JST by esi via netconf 
+  20                   2017-05-11 14:28:02 JST by root via cli 
+  21                   2017-05-11 14:03:17 JST by esi via netconf 
+  22                   2017-05-11 14:01:55 JST by esi via netconf 
+  23                   2017-05-11 14:00:22 JST by esi via netconf 
+  24                   2017-05-11 13:59:51 JST by esi via netconf 
+  25                   2017-05-11 13:45:15 JST by root via cli 
+  26                   2017-05-11 13:26:37 JST by esi via netconf 
+  27                   2017-05-11 13:25:21 JST by esi via netconf 
+  28                   2017-05-11 13:24:11 JST by esi via netconf 
+  29                   2017-05-11 13:23:48 JST by esi via netconf 
+  30                   2017-05-11 13:18:18 JST by root via cli 
+  31                   2017-05-11 13:17:25 JST by esi via netconf 
+  32                   2017-05-11 13:16:25 JST by esi via netconf 
+  33                   2017-05-11 13:16:01 JST by esi via netconf 
+  34                   2017-05-11 13:11:37 JST by root via cli 
+  35                   2017-05-11 13:09:58 JST by esi via netconf 
+  36                   2017-05-11 13:08:56 JST by esi via netconf 
+[edit]                                  
+root@vMX-1# show | compare rollback 1 
+[edit routing-instances vrf_gw_sample-ha-router-downlink_1025 routing-options]
++     static {
++         route 192.168.0.0/24 next-hop 172.16.101.1;
++     }
+
+[edit]
+root@vMX-1# rollback 1 
+load complete
+
+[edit]
+root@vMX-1# show | compare rollback 2    
+[edit interfaces ae0 unit 1025 family inet]
++       address 172.16.101.153/24 {
++           vrrp-group 20 {
++               virtual-address 172.16.101.151;
++               priority 100;
++           }
++       }
+[edit routing-instances vrf_gw_sample-ha-router-downlink_1025 protocols bgp]
+       group CloudGW1 { ... }
++      group inet-gw-group {
++          apply-groups VPNGW2-RI-IBGP;
++          local-address 172.16.101.153;
++          peer-as 65101;
++          neighbor 172.16.101.152;
++      }
+
+[edit]
+root@vMX-1# rollback 2                   
+load complete
+
+[edit]
+root@vMX-1# show | compare rollback 3    
+[edit interfaces ge-0/0/1 unit 122]
++     family inet {
++         address 192.168.8.6/30;
++     }
+[edit routing-instances vrf_gw_sample-ha-router-downlink_1025 routing-options]
++    router-id 192.168.8.6;
++    autonomous-system 65101;
+[edit routing-instances vrf_gw_sample-ha-router-downlink_1025]
++    protocols {
++        bgp {
++            group CloudGW1 {
++                apply-groups VPNGW2-RI-EBGP;
++                local-address 192.168.8.6;
++                peer-as 9598;
++                neighbor 192.168.8.5 {
++                    authentication-key "$9$ZUGkPF39pOR/C"; ## SECRET-DATA
++                }
++            }
++        }
++    }
+
+[edit]
+root@vMX-1# rollback 3                   
+load complete
+
+[edit]
+root@vMX-1# show | compare rollback 4    
+[edit interfaces ge-0/0/1]
++    unit 122 {
++        description CloudGW_vpn;
++        vlan-id 122;
++    }
+[edit interfaces ae0 unit 1025]
++    apply-groups [ InetGW2-VRRP VPNGW2-VRRP ];
++    description vpn_gw;
+[edit interfaces ae0 unit 1025 family inet filter]
++        input FILTER_10M-GA-UP-VPN;
++        output FILTER_10M-GA-DOWN-VPN;
+[edit routing-instances vrf_gw_sample-ha-router-downlink_1025]
++    interface ge-0/0/1.122;
+
+[edit]
+root@vMX-1# rollback 4                   
+load complete
+
+

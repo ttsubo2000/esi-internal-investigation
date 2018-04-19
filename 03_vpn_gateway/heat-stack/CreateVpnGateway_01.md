@@ -2,59 +2,59 @@
 
 Checking heat-stack of "vpn_gateway" via heatclient.
 ```
-$ heat stack-show vpn_gateway_4fab887d-8f73-40e6-b2d8-2426255231bf
-+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Property              | Value                                                                                                                                                        |
-+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| capabilities          | []                                                                                                                                                           |
-| creation_time         | 2017-05-11T05:00:10Z                                                                                                                                         |
-| description           | VPN Gateway                                                                                                                                                  |
-| disable_rollback      | True                                                                                                                                                         |
-| id                    | 8b8fd087-b322-41fb-8751-63042be0c8f7                                                                                                                         |
-| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/vpn_gateway_4fab887d-8f73-40e6-b2d8-2426255231bf/8b8fd087-b322-41fb-8751-63042be0c8f7 (self) |
-| notification_topics   | []                                                                                                                                                           |
-| outputs               | []                                                                                                                                                           |
-| parameters            | {                                                                                                                                                            |
-|                       |   "primary_device_logical_uplink_interface": "ge-0/0/1.122",                                                                                                 |
-|                       |   "primary_device_logical_downlink_interface": "ae0.1025",                                                                                                   |
-|                       |   "primary_device_password": "esiesi0000",                                                                                                                   |
-|                       |   "output_filter_name": "FILTER_10M-GA-DOWN-VPN",                                                                                                            |
-|                       |   "primary_device_ip": "10.79.5.185",                                                                                                                        |
-|                       |   "secondary_device_physical_downlink_interface": "ae0",                                                                                                     |
-|                       |   "secondary_device_username": "esi",                                                                                                                        |
-|                       |   "primary_device_physical_uplink_interface": "ge-0/0/1",                                                                                                    |
-|                       |   "secondary_device_logical_uplink_interface": "ge-0/0/1.122",                                                                                               |
-|                       |   "downlink_vlan": "1025",                                                                                                                                   |
-|                       |   "OS::stack_name": "vpn_gateway_4fab887d-8f73-40e6-b2d8-2426255231bf",                                                                                      |
-|                       |   "secondary_device_logical_downlink_interface": "ae0.1025",                                                                                                 |
-|                       |   "input_filter_name": "FILTER_10M-GA-UP-VPN",                                                                                                               |
-|                       |   "uplink_vlan": "122",                                                                                                                                      |
-|                       |   "OS::stack_id": "8b8fd087-b322-41fb-8751-63042be0c8f7",                                                                                                    |
-|                       |   "secondary_device_port": "830",                                                                                                                            |
-|                       |   "primary_downlink_vrrp_config_group": "VPNGW1-VRRP",                                                                                                       |
-|                       |   "secondary_device_password": "esiesi0000",                                                                                                                 |
-|                       |   "vrf_name": "vrf_gw_sample-ha-router-downlink_1025",                                                                                                       |
-|                       |   "primary_device_username": "esi",                                                                                                                          |
-|                       |   "primary_device_physical_downlink_interface": "ae0",                                                                                                       |
-|                       |   "secondary_downlink_vrrp_config_group": "VPNGW2-VRRP",                                                                                                     |
-|                       |   "primary_device_port": "830",                                                                                                                              |
-|                       |   "secondary_device_physical_uplink_interface": "ge-0/0/1",                                                                                                  |
-|                       |   "secondary_device_ip": "10.79.5.184"                                                                                                                       |
-|                       | }                                                                                                                                                            |
-| parent                | None                                                                                                                                                         |
-| stack_name            | vpn_gateway_4fab887d-8f73-40e6-b2d8-2426255231bf                                                                                                             |
-| stack_owner           | admin                                                                                                                                                        |
-| stack_status          | CREATE_COMPLETE                                                                                                                                              |
-| stack_status_reason   | Stack CREATE completed successfully                                                                                                                          |
-| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                             |
-| template_description  | VPN Gateway                                                                                                                                                  |
-| timeout_mins          | 60                                                                                                                                                           |
-| updated_time          | None                                                                                                                                                         |
-+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+$ heat stack-show vpn_gateway_b1da850c-3344-4de2-aa18-d96a30b54f69
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                                                     |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                                                        |
+| creation_time         | 2018-04-16T00:09:18Z                                                                                                                                                                      |
+| description           | VPN Gateway                                                                                                                                                                               |
+| disable_rollback      | True                                                                                                                                                                                      |
+| id                    | 63a31186-fe5f-4db2-84ab-6fb47054cb3e                                                                                                                                                      |
+| links                 | http://heat-server.monitoringrefactordocker_default:8004/v1/b3e3095c0a5b4383805efe9cf2a6b5ef/stacks/vpn_gateway_b1da850c-3344-4de2-aa18-d96a30b54f69/63a31186-fe5f-4db2-84ab-6fb47054cb3e |
+| notification_topics   | []                                                                                                                                                                                        |
+| outputs               | []                                                                                                                                                                                        |
+| parameters            | {                                                                                                                                                                                         |
+|                       |   "primary_device_logical_uplink_interface": "ge-0/0/1.122",                                                                                                                              |
+|                       |   "primary_device_logical_downlink_interface": "ae0.1025",                                                                                                                                |
+|                       |   "primary_device_password": "******",                                                                                                                                                    |
+|                       |   "output_filter_name": "FILTER_10M-GA-DOWN-VPN",                                                                                                                                         |
+|                       |   "primary_device_ip": "10.79.5.185",                                                                                                                                                     |
+|                       |   "secondary_device_physical_downlink_interface": "ae0",                                                                                                                                  |
+|                       |   "secondary_device_username": "esi",                                                                                                                                                     |
+|                       |   "primary_device_physical_uplink_interface": "ge-0/0/1",                                                                                                                                 |
+|                       |   "secondary_device_logical_uplink_interface": "ge-0/0/1.122",                                                                                                                            |
+|                       |   "downlink_vlan": "1025",                                                                                                                                                                |
+|                       |   "OS::stack_name": "vpn_gateway_b1da850c-3344-4de2-aa18-d96a30b54f69",                                                                                                                   |
+|                       |   "secondary_device_logical_downlink_interface": "ae0.1025",                                                                                                                              |
+|                       |   "input_filter_name": "FILTER_10M-GA-UP-VPN",                                                                                                                                            |
+|                       |   "uplink_vlan": "122",                                                                                                                                                                   |
+|                       |   "OS::stack_id": "63a31186-fe5f-4db2-84ab-6fb47054cb3e",                                                                                                                                 |
+|                       |   "secondary_device_port": "830",                                                                                                                                                         |
+|                       |   "primary_downlink_vrrp_config_group": "VPNGW1-VRRP",                                                                                                                                    |
+|                       |   "secondary_device_password": "******",                                                                                                                                                  |
+|                       |   "vrf_name": "vrf_gw_sample-ha-router-downlink_1025",                                                                                                                                    |
+|                       |   "primary_device_username": "esi",                                                                                                                                                       |
+|                       |   "primary_device_physical_downlink_interface": "ae0",                                                                                                                                    |
+|                       |   "secondary_downlink_vrrp_config_group": "VPNGW2-VRRP",                                                                                                                                  |
+|                       |   "primary_device_port": "830",                                                                                                                                                           |
+|                       |   "secondary_device_physical_uplink_interface": "ge-0/0/1",                                                                                                                               |
+|                       |   "secondary_device_ip": "10.79.5.184"                                                                                                                                                    |
+|                       | }                                                                                                                                                                                         |
+| parent                | None                                                                                                                                                                                      |
+| stack_name            | vpn_gateway_b1da850c-3344-4de2-aa18-d96a30b54f69                                                                                                                                          |
+| stack_owner           | admin                                                                                                                                                                                     |
+| stack_status          | CREATE_COMPLETE                                                                                                                                                                           |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                                                       |
+| stack_user_project_id | b3e3095c0a5b4383805efe9cf2a6b5ef                                                                                                                                                          |
+| template_description  | VPN Gateway                                                                                                                                                                               |
+| timeout_mins          | 60                                                                                                                                                                                        |
+| updated_time          | None                                                                                                                                                                                      |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 Checking heat-template of "vpn_gateway" via heatclient.
 ```
-$ heat template-show vpn_gateway_4fab887d-8f73-40e6-b2d8-2426255231bf
+$ heat template-show vpn_gateway_b1da850c-3344-4de2-aa18-d96a30b54f69
 description: 'VPN Gateway
 
   '
@@ -73,7 +73,7 @@ parameters:
   primary_device_logical_uplink_interface: {description: Name of the created logical
       uplink interface on the Primary device, label: Logical Interface name, type: string}
   primary_device_password: {description: Password of the user which will be used to
-      log onto the Primary Device., label: Users password., type: string}
+      log onto the Primary Device., hidden: true, label: Users password., type: string}
   primary_device_physical_downlink_interface: {description: Physical port on the Primary
       device on which the logical downlink port will be configured, label: Underlying
       physical interface, type: string}
@@ -93,7 +93,7 @@ parameters:
   secondary_device_logical_uplink_interface: {description: Name of the created logical
       uplink interface on the Secondary device, label: Logical Interface name, type: string}
   secondary_device_password: {description: Password of the user which will be used
-      to log onto the Secondary Device., label: Users password., type: string}
+      to log onto the Secondary Device., hidden: true, label: Users password., type: string}
   secondary_device_physical_downlink_interface: {description: Physical port on the
       Secondary device on which the logical downlink port will be configured, label: Underlying
       physical interface, type: string}
@@ -179,6 +179,7 @@ resources:
       username: {get_param: primary_device_username}
     type: OS::Contrail::NetconfNamedConfigs
   netconf_configure_secondary:
+    depends_on: netconf_configure_primary
     properties:
       configs:
       - config:

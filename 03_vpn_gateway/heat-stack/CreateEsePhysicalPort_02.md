@@ -2,50 +2,63 @@
 
 Checking heat-stack of "ese_physical_port" via heatclient.
 ```
-$ heat stack-show ese_physical_port_176ec475-e9e8-4605-8b41-802fbc6220c1
-+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Property              | Value                                                                                                                                                              |
-+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| capabilities          | []                                                                                                                                                                 |
-| creation_time         | 2017-05-11T04:59:32Z                                                                                                                                               |
-| description           | Physical port template                                                                                                                                             |
-| disable_rollback      | True                                                                                                                                                               |
-| id                    | 724e3e47-e401-4f3d-9fe1-a6f174c34e5d                                                                                                                               |
-| links                 | http://heat-api:8004/v1/0b576f6f4cbf414f829cd12f008bf08f/stacks/ese_physical_port_176ec475-e9e8-4605-8b41-802fbc6220c1/724e3e47-e401-4f3d-9fe1-a6f174c34e5d (self) |
-| notification_topics   | []                                                                                                                                                                 |
-| outputs               | [                                                                                                                                                                  |
-|                       |   {                                                                                                                                                                |
-|                       |     "output_value": "dddddddd-dddd-dddd-dddd-dddddddddddd",                                                                                                        |
-|                       |     "description": "A unique id for the physical interface",                                                                                                       |
-|                       |     "output_key": "id"                                                                                                                                             |
-|                       |   },                                                                                                                                                               |
-|                       |   {                                                                                                                                                                |
-|                       |     "output_value": null,                                                                                                                                          |
-|                       |     "output_error": "'ContrailPhysicalInterface' object has no attribute 'pi_uuid'",                                                                               |
-|                       |     "description": "The name of the physical interface.",                                                                                                          |
-|                       |     "output_key": "name"                                                                                                                                           |
-|                       |   }                                                                                                                                                                |
-|                       | ]                                                                                                                                                                  |
-| parameters            | {                                                                                                                                                                  |
-|                       |   "physical_port_name": "xe-0/0/4",                                                                                                                                |
-|                       |   "OS::stack_id": "724e3e47-e401-4f3d-9fe1-a6f174c34e5d",                                                                                                          |
-|                       |   "OS::stack_name": "ese_physical_port_176ec475-e9e8-4605-8b41-802fbc6220c1",                                                                                      |
-|                       |   "physical_device": "physical_router"                                                                                                                             |
-|                       | }                                                                                                                                                                  |
-| parent                | None                                                                                                                                                               |
-| stack_name            | ese_physical_port_176ec475-e9e8-4605-8b41-802fbc6220c1                                                                                                             |
-| stack_owner           | admin                                                                                                                                                              |
-| stack_status          | CREATE_COMPLETE                                                                                                                                                    |
-| stack_status_reason   | Stack CREATE completed successfully                                                                                                                                |
-| stack_user_project_id | 0b576f6f4cbf414f829cd12f008bf08f                                                                                                                                   |
-| template_description  | Physical port template                                                                                                                                             |
-| timeout_mins          | 10                                                                                                                                                                 |
-| updated_time          | None                                                                                                                                                               |
-+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+$ heat stack-show ese_physical_port_a6e70af1-386b-4d79-943f-6f44e87f95b3
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Property              | Value                                                                                                                                                                                           |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| capabilities          | []                                                                                                                                                                                              |
+| creation_time         | 2018-04-16T00:01:42Z                                                                                                                                                                            |
+| description           | Physical port template                                                                                                                                                                          |
+| disable_rollback      | True                                                                                                                                                                                            |
+| id                    | 20418531-0948-445f-95c6-f211f8b1dea7                                                                                                                                                            |
+| links                 | http://heat-server.monitoringrefactordocker_default:8004/v1/b3e3095c0a5b4383805efe9cf2a6b5ef/stacks/ese_physical_port_a6e70af1-386b-4d79-943f-6f44e87f95b3/20418531-0948-445f-95c6-f211f8b1dea7 |
+| notification_topics   | []                                                                                                                                                                                              |
+| outputs               | [                                                                                                                                                                                               |
+|                       |   {                                                                                                                                                                                             |
+|                       |     "output_value": "07d5e8ed-4695-49b4-8560-897b586b1b71",                                                                                                                                     |
+|                       |     "description": "Monitoring Target ID",                                                                                                                                                      |
+|                       |     "output_key": "monitoring_target_id"                                                                                                                                                        |
+|                       |   },                                                                                                                                                                                            |
+|                       |   {                                                                                                                                                                                             |
+|                       |     "output_value": "06bfe521-07f0-4931-9f8c-318c3ad8114e",                                                                                                                                     |
+|                       |     "description": "A unique id for the physical interface",                                                                                                                                    |
+|                       |     "output_key": "id"                                                                                                                                                                          |
+|                       |   },                                                                                                                                                                                            |
+|                       |   {                                                                                                                                                                                             |
+|                       |     "output_value": "http://collector-agents-se.monitoringrefactordocker_default:7070/targets/07d5e8ed-4695-49b4-8560-897b586b1b71",                                                            |
+|                       |     "description": "Monitoring Process Link",                                                                                                                                                   |
+|                       |     "output_key": "monitoring_link"                                                                                                                                                             |
+|                       |   },                                                                                                                                                                                            |
+|                       |   {                                                                                                                                                                                             |
+|                       |     "output_value": "xe-0/0/38",                                                                                                                                                                |
+|                       |     "description": "The name of the physical interface.",                                                                                                                                       |
+|                       |     "output_key": "name"                                                                                                                                                                        |
+|                       |   }                                                                                                                                                                                             |
+|                       | ]                                                                                                                                                                                               |
+| parameters            | {                                                                                                                                                                                               |
+|                       |   "physical_port_name": "xe-0/0/4",                                                                                                                                                             |
+|                       |   "OS::stack_id": "20418531-0948-445f-95c6-f211f8b1dea7",                                                                                                                                       |
+|                       |   "OS::stack_name": "ese_physical_port_a6e70af1-386b-4d79-943f-6f44e87f95b3",                                                                                                                   |
+|                       |   "tenant_id": "b3e3095c0a5b4383805efe9cf2a6b5ef",                                                                                                                                              |
+|                       |   "device_ip": "10.161.0.34",                                                                                                                                                                   |
+|                       |   "physical_device": "7e5c78fa-71c0-427e-947f-586b1fc3c470",                                                                                                                                    |
+|                       |   "version": "1",                                                                                                                                                                               |
+|                       |   "gohan_id": "a6e70af1-386b-4d79-943f-6f44e87f95b3"                                                                                                                                            |
+|                       | }                                                                                                                                                                                               |
+| parent                | None                                                                                                                                                                                            |
+| stack_name            | ese_physical_port_a6e70af1-386b-4d79-943f-6f44e87f95b3                                                                                                                                          |
+| stack_owner           | admin                                                                                                                                                                                           |
+| stack_status          | CREATE_COMPLETE                                                                                                                                                                                 |
+| stack_status_reason   | Stack CREATE completed successfully                                                                                                                                                             |
+| stack_user_project_id | b3e3095c0a5b4383805efe9cf2a6b5ef                                                                                                                                                                |
+| template_description  | Physical port template                                                                                                                                                                          |
+| timeout_mins          | 6                                                                                                                                                                                               |
+| updated_time          | None                                                                                                                                                                                            |
++-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ```
 Checking heat-template of "ese_physical_port" via heatclient.
 ```
-$ heat template-show ese_physical_port_176ec475-e9e8-4605-8b41-802fbc6220c1
+$ heat template-show ese_physical_port_a6e70af1-386b-4d79-943f-6f44e87f95b3
 description: 'Physical port template
 
   '
@@ -54,16 +67,45 @@ outputs:
   id:
     description: A unique id for the physical interface
     value: {get_resource: physical_interface}
+  monitoring_link:
+    description: Monitoring Process Link
+    value:
+      get_attr: [interface_monitor, link]
+  monitoring_target_id:
+    description: Monitoring Target ID
+    value: {get_resource: interface_monitor}
   name:
     description: The name of the physical interface.
     value:
       get_attr: [physical_interface, name]
 parameters:
+  device_ip: {description: Device IP Address., label: Device IP Address, type: string}
+  gohan_id: {description: UUID of the ESE Physical Port, label: Gohan resource ID,
+    type: string}
   physical_device: {description: Id of the physical device on which physical port
       will be created., label: Physical Device Id, type: string}
   physical_port_name: {description: Name of the physical port., label: Physical Interface
       Name, type: string}
+  tenant_id: {label: Tenant ID, type: string}
+  version: {label: Config version, type: number}
 resources:
+  interface_monitor:
+    depends_on: physical_interface
+    properties:
+      field_name: port
+      properties:
+        community_name: ESE_NODE_COMMUNITY
+        device_ip: {get_param: device_ip}
+        if_name: {get_param: physical_port_name}
+      resource_id: {get_param: gohan_id}
+      resource_type: ese_physical_ports
+      syncer_properties:
+        etcd:
+          status: {key: port}
+      tenant_id: {get_param: tenant_id}
+      type: snmp_ports_status
+      version: {get_param: version}
+    type: ESI::Monitoring::MonitoringTarget
   physical_interface:
     properties:
       name: {get_param: physical_port_name}

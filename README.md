@@ -12,4 +12,5 @@ This section is for the purpose of documenting ESI interface.
 ## (3) Gateway
 * [Common Function Gateway](01_common_function_gateway/00_common_function_gateway.md) (nextgen-v1.15.0)
 * [Internet Gateway](02_internet_gateway/00_internet_gateway.md) (nextgen-v1.15.0)
+* [Vpn Gateway](03_vpn_gateway/00_vpn_gateway.md) (nextgen-v1.15.0)
 

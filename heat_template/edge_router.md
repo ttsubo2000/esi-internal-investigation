@@ -23,11 +23,6 @@ These are stored data for "heat_templates" in etcd.
     "marked_for_deletion": false
 }
 ```
-You can see the retreiving of "template_file" as "Heat Template".
-
-* ESI::Monitoring::MonitoringTarget
-
-```
 heat_template_version: 2013-05-23
 
 description: >

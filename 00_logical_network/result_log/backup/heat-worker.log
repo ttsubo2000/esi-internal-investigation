@@ -1,26 +1,26 @@
-2018-02-15 06:51:42,503 [1;37mINFO[0m heat_worker - Registered gohan 2-step delete flag: marked_for_deletion (resources.py - 62)
-2018-02-15 06:51:42,504 [1;37mINFO[0m heat_worker - Gohan config path: /config (resources.py - 274)
-2018-02-15 06:51:42,505 [1;37mINFO[0m heat_worker - Gohan state path: /state (resources.py - 298)
-2018-02-15 06:51:42,567 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 1s. (gohan.py - 28)
-2018-02-15 06:51:43,574 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 2s. (gohan.py - 28)
-2018-02-15 06:51:45,579 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 4s. (gohan.py - 28)
-2018-02-15 06:51:49,587 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 8s. (gohan.py - 28)
+2019-02-01 00:26:26,258 [1;37mINFO[0m heat_worker - Registered gohan 2-step delete flag: marked_for_deletion (resources.py - 62)
+2019-02-01 00:26:26,259 [1;37mINFO[0m heat_worker - Gohan config path: /config (resources.py - 274)
+2019-02-01 00:26:26,260 [1;37mINFO[0m heat_worker - Gohan state path: /state (resources.py - 298)
+2019-02-01 00:26:26,387 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 1s. (gohan.py - 28)
+2019-02-01 00:26:27,390 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 2s. (gohan.py - 28)
+2019-02-01 00:26:29,396 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 4s. (gohan.py - 28)
+2019-02-01 00:26:33,402 [1;33mWARNING[0m heat_worker - Could not reach gohan. Retrying in 8s. (gohan.py - 28)
 ================================================
-2018-02-15 06:51:57,707 [1;34mDEBUG[0m heat_worker - Starting worker. (etcd_worker.py - 231)
-2018-02-15 06:51:57,708 [1;37mINFO[0m heat_worker - Worker started. (etcd_worker.py - 234)
-2018-02-15 06:51:57,708 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:51:57,709 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
-2018-02-15 06:52:27,721 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
-2018-02-15 06:52:27,726 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:52:27,727 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
-2018-02-15 06:52:48,048 [1;37mINFO[0m heat_worker - Reserved job: create:heat_worker:ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018:1:91uyh using id: e2e41d73-a7ce-42c0-9669-b9329b0d465a (job_queue.py - 245)
-2018-02-15 06:52:48,050 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:52:48,051 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
-2018-02-15 06:52:48,056 [1;34mDEBUG[0m heat_worker - ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 - Starting work on new ready job create:heat_worker:ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018:1:91uyh (etcd_worker.py - 108)
-2018-02-15 06:52:48,057 [1;34mDEBUG[0m heat_worker - ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 - Checking job status for ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 (heat_stacks_worker.py - 44)
-2018-02-15 06:52:48,453 [1;37mINFO[0m heat_worker - ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 - CREATE STARTED (heat_messenger.py - 92)
-2018-02-15 06:52:48,513 [1;37mINFO[0m heat_worker - ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 - Template id ese_device_existing resolved from mapping: ACese_device_&Pexisting (resources.py - 835)
-2018-02-15 06:52:48,518 [1;34mDEBUG[0m heat_worker - ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 - Heat template prepared: 
+2019-02-01 00:26:41,521 [1;34mDEBUG[0m heat_worker - Starting worker. (etcd_worker.py - 231)
+2019-02-01 00:26:41,521 [1;37mINFO[0m heat_worker - Worker started. (etcd_worker.py - 234)
+2019-02-01 00:26:41,522 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:26:41,522 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
+2019-02-01 00:27:11,548 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
+2019-02-01 00:27:11,549 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:27:11,549 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
+2019-02-01 00:27:15,606 [1;37mINFO[0m heat_worker - Reserved job: create:heat_worker:ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83:1:u052f using id: 17364004-38fa-4cfe-b9cd-ab463ce37b77 (job_queue.py - 245)
+2019-02-01 00:27:15,608 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:27:15,608 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
+2019-02-01 00:27:15,626 [1;34mDEBUG[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - Starting work on new ready job create:heat_worker:ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83:1:u052f (etcd_worker.py - 108)
+2019-02-01 00:27:15,627 [1;34mDEBUG[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - Checking job status for ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 (heat_stacks_worker.py - 44)
+2019-02-01 00:27:16,145 [1;37mINFO[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - CREATE STARTED (heat_messenger.py - 92)
+2019-02-01 00:27:16,248 [1;37mINFO[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - Template id ese_device_existing resolved from mapping: ACese_device_&Pexisting (resources.py - 835)
+2019-02-01 00:27:16,254 [1;34mDEBUG[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - Heat template prepared: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -94,11 +94,11 @@ outputs:
     description: Monitoring Process Link
     value: { get_attr: [device_monitor, link] }
  with parameters:
-{"device_ip": "10.161.0.33", "name": "QFX-NW01", "tenant_id": "ae69b52f46ba480bb9636f62736436f4", "hostname": "QFX-NW01", "version": 1, "gohan_id": "718148aa-4483-47d5-bbd1-a0e0738dc018"}, 
+{"device_ip": "10.161.0.33", "name": "sample-ese_device", "tenant_id": "4b4cb858859842a389d0b0c8eb567d59", "hostname": "QFX-NW01", "version": 1, "gohan_id": "61a05e50-71f9-495d-b1cc-74382dfaec83"}, 
  and heat timeout = 6, rollback = False, 
 using this jinja parameters: 
-{} (heat.py - 145)
-2018-02-15 06:52:48,519 [1;37mINFO[0m heat_worker - ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 - Creating a stack ese_device_718148aa-4483-47d5-bbd1-a0e0738dc018 with parameters: {u'device_ip': u'10.161.0.33', u'name': u'QFX-NW01', u'tenant_id': u'ae69b52f46ba480bb9636f62736436f4', u'hostname': u'QFX-NW01', u'version': 1, u'gohan_id': u'718148aa-4483-47d5-bbd1-a0e0738dc018'}, timeout_mins: 6, and template: 
+{} (heat.py - 280)
+2019-02-01 00:27:16,254 [1;37mINFO[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - Creating a stack ese_device_61a05e50-71f9-495d-b1cc-74382dfaec83 with parameters: {u'device_ip': u'10.161.0.33', u'name': u'sample-ese_device', u'tenant_id': u'4b4cb858859842a389d0b0c8eb567d59', u'hostname': u'QFX-NW01', u'version': 1, u'gohan_id': u'61a05e50-71f9-495d-b1cc-74382dfaec83'}, timeout_mins: 6, and template: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -170,28 +170,29 @@ outputs:
     value: { get_resource: device_monitor }
   monitoring_link:
     description: Monitoring Process Link
-    value: { get_attr: [device_monitor, link] } (heat.py - 162)
-2018-02-15 06:52:48,849 [1;37mINFO[0m heat_worker - ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 - Stack "ese_device_718148aa-4483-47d5-bbd1-a0e0738dc018" in status "CREATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:52:49,958 [1;37mINFO[0m heat_worker - ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 - Stack "ese_device_718148aa-4483-47d5-bbd1-a0e0738dc018" in status "CREATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:52:51,177 [1;37mINFO[0m heat_worker - ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 - Stack "ese_device_718148aa-4483-47d5-bbd1-a0e0738dc018" in status "CREATE_COMPLETE" (heat.py - 221)
-2018-02-15 06:52:51,178 [1;37mINFO[0m heat_worker - ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 - CREATED ese_device_718148aa-4483-47d5-bbd1-a0e0738dc018 (heat.py - 280)
-2018-02-15 06:52:51,496 [1;37mINFO[0m heat_worker - ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 - Job create finished with results {'heat_outputs': [{u'output_value': u'edd4b769-1665-429f-aef4-f428aca34a0b', u'description': u'Monitoring Target ID', u'output_key': u'monitoring_target_id'}, {u'output_value': [u'default-global-system-config', u'NWSDP-JNPR-02'], u'description': u'The FQ name of the physical router.', u'output_key': u'fq_name'}, {u'output_value': u'7e5c78fa-71c0-427e-947f-586b1fc3c470', u'description': u'A unique id for the physical router.', u'output_key': u'id'}, {u'output_value': u'http://collector-agents-se:7070/targets/edd4b769-1665-429f-aef4-f428aca34a0b', u'description': u'Monitoring Process Link', u'output_key': u'monitoring_link'}, {u'output_value': u'NWSDP-JNPR-02', u'description': u'The name of the physical router.', u'output_key': u'name'}], 'orchestration_state': u'CREATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
-2018-02-15 06:52:51,511 [1;37mINFO[0m heat_worker - ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 - Job create:heat_worker:ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018:1:91uyh finished. (job_queue.py - 266)
-2018-02-15 06:52:51,512 [1;37mINFO[0m heat_worker - ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 - Trying to delete internal process state for resource ese_device:718148aa-4483-47d5-bbd1-a0e0738dc018 (resources.py - 701)
-2018-02-15 06:53:18,058 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
-2018-02-15 06:53:18,060 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:53:18,062 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
-2018-02-15 06:53:48,072 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
-2018-02-15 06:53:48,076 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:53:48,078 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
-2018-02-15 06:53:59,371 [1;37mINFO[0m heat_worker - Reserved job: create:heat_worker:ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46:1:paaak using id: 3dd11869-61a6-4a1d-bfe1-3ee3c43a2be3 (job_queue.py - 245)
-2018-02-15 06:53:59,375 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:53:59,377 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
-2018-02-15 06:53:59,384 [1;34mDEBUG[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - Starting work on new ready job create:heat_worker:ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46:1:paaak (etcd_worker.py - 108)
-2018-02-15 06:53:59,385 [1;34mDEBUG[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - Checking job status for ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 (heat_stacks_worker.py - 44)
-2018-02-15 06:53:59,603 [1;37mINFO[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - CREATE STARTED (heat_messenger.py - 92)
-2018-02-15 06:53:59,661 [1;37mINFO[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - Template id ese_physical_port_existing resolved from mapping: ACese_physical_port_&Pexisting (resources.py - 835)
-2018-02-15 06:53:59,665 [1;34mDEBUG[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - Heat template prepared: 
+    value: { get_attr: [device_monitor, link] } (heat.py - 297)
+2019-02-01 00:27:16,650 [1;37mINFO[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - Stack "ese_device_61a05e50-71f9-495d-b1cc-74382dfaec83" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:27:17,717 [1;37mINFO[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - Stack "ese_device_61a05e50-71f9-495d-b1cc-74382dfaec83" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:27:18,795 [1;37mINFO[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - Stack "ese_device_61a05e50-71f9-495d-b1cc-74382dfaec83" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:27:20,049 [1;37mINFO[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - Stack "ese_device_61a05e50-71f9-495d-b1cc-74382dfaec83" in status "CREATE_COMPLETE" (heat.py - 356)
+2019-02-01 00:27:20,050 [1;37mINFO[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - CREATED ese_device_61a05e50-71f9-495d-b1cc-74382dfaec83 (heat.py - 414)
+2019-02-01 00:27:20,495 [1;37mINFO[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - Job create finished with results {'heat_outputs': [{u'output_value': u'259db18a-5c51-45d5-847e-9a05da626f80', u'description': u'Monitoring Target ID', u'output_key': u'monitoring_target_id'}, {u'output_value': [u'default-global-system-config', u'NWSDP-JNPR-02'], u'description': u'The FQ name of the physical router.', u'output_key': u'fq_name'}, {u'output_value': u'7e5c78fa-71c0-427e-947f-586b1fc3c470', u'description': u'A unique id for the physical router.', u'output_key': u'id'}, {u'output_value': u'http://collector-agents-se:7070/targets/259db18a-5c51-45d5-847e-9a05da626f80', u'description': u'Monitoring Process Link', u'output_key': u'monitoring_link'}, {u'output_value': u'NWSDP-JNPR-02', u'description': u'The name of the physical router.', u'output_key': u'name'}], 'orchestration_state': u'CREATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
+2019-02-01 00:27:20,544 [1;37mINFO[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - Job create:heat_worker:ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83:1:u052f finished. (job_queue.py - 266)
+2019-02-01 00:27:20,544 [1;37mINFO[0m heat_worker - ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 - Trying to delete internal process state for resource ese_device:61a05e50-71f9-495d-b1cc-74382dfaec83 (resources.py - 701)
+2019-02-01 00:27:45,618 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
+2019-02-01 00:27:45,618 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:27:45,619 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
+2019-02-01 00:28:15,632 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
+2019-02-01 00:28:15,633 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:28:15,633 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
+2019-02-01 00:28:37,353 [1;37mINFO[0m heat_worker - Reserved job: create:heat_worker:ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb:1:gbjt1 using id: 892a4039-5cd9-457d-9901-8b8b8ccd455c (job_queue.py - 245)
+2019-02-01 00:28:37,355 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:28:37,356 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
+2019-02-01 00:28:37,362 [1;34mDEBUG[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - Starting work on new ready job create:heat_worker:ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb:1:gbjt1 (etcd_worker.py - 108)
+2019-02-01 00:28:37,362 [1;34mDEBUG[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - Checking job status for ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb (heat_stacks_worker.py - 44)
+2019-02-01 00:28:37,606 [1;37mINFO[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - CREATE STARTED (heat_messenger.py - 92)
+2019-02-01 00:28:37,701 [1;37mINFO[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - Template id ese_physical_port_existing resolved from mapping: ACese_physical_port_&Pexisting (resources.py - 835)
+2019-02-01 00:28:37,705 [1;34mDEBUG[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - Heat template prepared: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -264,11 +265,11 @@ outputs:
     description: Monitoring Process Link
     value: { get_attr: [interface_monitor, link] }
  with parameters:
-{"physical_port_name": "xe-0/0/1", "physical_device_hostname": "QFX-NW01", "tenant_id": "ae69b52f46ba480bb9636f62736436f4", "device_ip": "10.161.0.33", "version": 1, "gohan_id": "24dd42cf-b343-47a9-966a-8f7486378c46"}, 
+{"physical_port_name": "xe-0/0/1", "physical_device_hostname": "QFX-NW01", "tenant_id": "4b4cb858859842a389d0b0c8eb567d59", "device_ip": "10.161.0.33", "version": 1, "gohan_id": "0915a040-2f84-44fc-9083-1e2f719ae2eb"}, 
  and heat timeout = 6, rollback = False, 
 using this jinja parameters: 
-{} (heat.py - 145)
-2018-02-15 06:53:59,667 [1;37mINFO[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - Creating a stack ese_physical_port_24dd42cf-b343-47a9-966a-8f7486378c46 with parameters: {u'physical_port_name': u'xe-0/0/1', u'physical_device_hostname': u'QFX-NW01', u'tenant_id': u'ae69b52f46ba480bb9636f62736436f4', u'device_ip': u'10.161.0.33', u'version': 1, u'gohan_id': u'24dd42cf-b343-47a9-966a-8f7486378c46'}, timeout_mins: 6, and template: 
+{} (heat.py - 280)
+2019-02-01 00:28:37,705 [1;37mINFO[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - Creating a stack ese_physical_port_0915a040-2f84-44fc-9083-1e2f719ae2eb with parameters: {u'physical_port_name': u'xe-0/0/1', u'physical_device_hostname': u'QFX-NW01', u'tenant_id': u'4b4cb858859842a389d0b0c8eb567d59', u'device_ip': u'10.161.0.33', u'version': 1, u'gohan_id': u'0915a040-2f84-44fc-9083-1e2f719ae2eb'}, timeout_mins: 6, and template: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -339,29 +340,29 @@ outputs:
     value: { get_resource: interface_monitor }
   monitoring_link:
     description: Monitoring Process Link
-    value: { get_attr: [interface_monitor, link] } (heat.py - 162)
-2018-02-15 06:53:59,953 [1;37mINFO[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - Stack "ese_physical_port_24dd42cf-b343-47a9-966a-8f7486378c46" in status "CREATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:54:01,047 [1;37mINFO[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - Stack "ese_physical_port_24dd42cf-b343-47a9-966a-8f7486378c46" in status "CREATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:54:02,143 [1;37mINFO[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - Stack "ese_physical_port_24dd42cf-b343-47a9-966a-8f7486378c46" in status "CREATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:54:03,325 [1;37mINFO[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - Stack "ese_physical_port_24dd42cf-b343-47a9-966a-8f7486378c46" in status "CREATE_COMPLETE" (heat.py - 221)
-2018-02-15 06:54:03,326 [1;37mINFO[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - CREATED ese_physical_port_24dd42cf-b343-47a9-966a-8f7486378c46 (heat.py - 280)
-2018-02-15 06:54:03,616 [1;37mINFO[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - Job create finished with results {'heat_outputs': [{u'output_value': u'a481c2c4-e9cd-41f3-8e27-3a4184119abf', u'description': u'Monitoring Target ID', u'output_key': u'monitoring_target_id'}, {u'output_value': u'5a79909b-2bf3-4e26-8a9c-0bf6bb175457', u'description': u'A unique id for the physical interface', u'output_key': u'id'}, {u'output_value': u'http://collector-agents-se:7070/targets/a481c2c4-e9cd-41f3-8e27-3a4184119abf', u'description': u'Monitoring Process Link', u'output_key': u'monitoring_link'}, {u'output_value': u'xe-0/0/38', u'description': u'The name of the physical interface.', u'output_key': u'name'}], 'orchestration_state': u'CREATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
-2018-02-15 06:54:03,640 [1;37mINFO[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - Job create:heat_worker:ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46:1:paaak finished. (job_queue.py - 266)
-2018-02-15 06:54:03,641 [1;37mINFO[0m heat_worker - ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 - Trying to delete internal process state for resource ese_physical_port:24dd42cf-b343-47a9-966a-8f7486378c46 (resources.py - 701)
-2018-02-15 06:54:29,386 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
-2018-02-15 06:54:29,388 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:54:29,389 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
-2018-02-15 06:54:59,404 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
-2018-02-15 06:54:59,408 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:54:59,410 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
-2018-02-15 06:55:04,429 [1;37mINFO[0m heat_worker - Reserved job: create:heat_worker:network:35bc496f-3c0e-46b4-a5c0-33810e8e7263:1:pp459 using id: 635b122d-1182-4723-b547-71e674632741 (job_queue.py - 245)
-2018-02-15 06:55:04,431 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:55:04,432 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
-2018-02-15 06:55:04,436 [1;34mDEBUG[0m heat_worker - network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 - Starting work on new ready job create:heat_worker:network:35bc496f-3c0e-46b4-a5c0-33810e8e7263:1:pp459 (etcd_worker.py - 108)
-2018-02-15 06:55:04,437 [1;34mDEBUG[0m heat_worker - network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 - Checking job status for network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 (heat_stacks_worker.py - 44)
-2018-02-15 06:55:04,639 [1;37mINFO[0m heat_worker - network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 - CREATE STARTED (heat_messenger.py - 92)
-2018-02-15 06:55:04,696 [1;37mINFO[0m heat_worker - network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 - Template id network resolved from mapping: Cnetwork (resources.py - 835)
-2018-02-15 06:55:04,699 [1;34mDEBUG[0m heat_worker - network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 - Heat template prepared: 
+    value: { get_attr: [interface_monitor, link] } (heat.py - 297)
+2019-02-01 00:28:38,069 [1;37mINFO[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - Stack "ese_physical_port_0915a040-2f84-44fc-9083-1e2f719ae2eb" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:28:39,126 [1;37mINFO[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - Stack "ese_physical_port_0915a040-2f84-44fc-9083-1e2f719ae2eb" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:28:40,180 [1;37mINFO[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - Stack "ese_physical_port_0915a040-2f84-44fc-9083-1e2f719ae2eb" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:28:41,357 [1;37mINFO[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - Stack "ese_physical_port_0915a040-2f84-44fc-9083-1e2f719ae2eb" in status "CREATE_COMPLETE" (heat.py - 356)
+2019-02-01 00:28:41,357 [1;37mINFO[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - CREATED ese_physical_port_0915a040-2f84-44fc-9083-1e2f719ae2eb (heat.py - 414)
+2019-02-01 00:28:41,617 [1;37mINFO[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - Job create finished with results {'heat_outputs': [{u'output_value': u'39ab4e06-ac66-4e84-81c5-93b888427955', u'description': u'Monitoring Target ID', u'output_key': u'monitoring_target_id'}, {u'output_value': u'5a79909b-2bf3-4e26-8a9c-0bf6bb175457', u'description': u'A unique id for the physical interface', u'output_key': u'id'}, {u'output_value': u'http://collector-agents-se:7070/targets/39ab4e06-ac66-4e84-81c5-93b888427955', u'description': u'Monitoring Process Link', u'output_key': u'monitoring_link'}, {u'output_value': u'xe-0/0/38', u'description': u'The name of the physical interface.', u'output_key': u'name'}], 'orchestration_state': u'CREATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
+2019-02-01 00:28:41,798 [1;37mINFO[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - Job create:heat_worker:ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb:1:gbjt1 finished. (job_queue.py - 266)
+2019-02-01 00:28:41,808 [1;37mINFO[0m heat_worker - ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb - Trying to delete internal process state for resource ese_physical_port:0915a040-2f84-44fc-9083-1e2f719ae2eb (resources.py - 701)
+2019-02-01 00:29:07,366 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
+2019-02-01 00:29:07,366 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:29:07,367 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
+2019-02-01 00:29:37,379 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
+2019-02-01 00:29:37,380 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:29:37,380 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
+2019-02-01 00:29:47,367 [1;37mINFO[0m heat_worker - Reserved job: create:heat_worker:network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1:1:5dp3q using id: 83648111-527c-428e-be53-76ccbb2bbb09 (job_queue.py - 245)
+2019-02-01 00:29:47,370 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:29:47,370 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
+2019-02-01 00:29:47,375 [1;34mDEBUG[0m heat_worker - network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 - Starting work on new ready job create:heat_worker:network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1:1:5dp3q (etcd_worker.py - 108)
+2019-02-01 00:29:47,376 [1;34mDEBUG[0m heat_worker - network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 - Checking job status for network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 (heat_stacks_worker.py - 44)
+2019-02-01 00:29:47,612 [1;37mINFO[0m heat_worker - network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 - CREATE STARTED (heat_messenger.py - 92)
+2019-02-01 00:29:47,723 [1;37mINFO[0m heat_worker - network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 - Template id network resolved from mapping: Cnetwork (resources.py - 835)
+2019-02-01 00:29:47,727 [1;34mDEBUG[0m heat_worker - network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 - Heat template prepared: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -428,11 +429,11 @@ outputs:
     description: The name of the virtual network.
     value: { get_attr: [network, route_targets] }
  with parameters:
-{"admin_state_up": true, "uuid": "35bc496f-3c0e-46b4-a5c0-33810e8e7263", "name": "35bc496f-3c0e-46b4-a5c0-33810e8e7263"}, 
+{"admin_state_up": true, "uuid": "b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1", "name": "b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1"}, 
  and heat timeout = 3, rollback = False, 
 using this jinja parameters: 
-{} (heat.py - 145)
-2018-02-15 06:55:04,700 [1;37mINFO[0m heat_worker - network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 - Creating a stack network_35bc496f-3c0e-46b4-a5c0-33810e8e7263 with parameters: {u'admin_state_up': True, u'uuid': u'35bc496f-3c0e-46b4-a5c0-33810e8e7263', u'name': u'35bc496f-3c0e-46b4-a5c0-33810e8e7263'}, timeout_mins: 3, and template: 
+{} (heat.py - 280)
+2019-02-01 00:29:47,727 [1;37mINFO[0m heat_worker - network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 - Creating a stack network_b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 with parameters: {u'admin_state_up': True, u'uuid': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1', u'name': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}, timeout_mins: 3, and template: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -497,21 +498,22 @@ outputs:
     value: { get_attr: [network, fq_name] }
   route_targets:
     description: The name of the virtual network.
-    value: { get_attr: [network, route_targets] } (heat.py - 162)
-2018-02-15 06:55:04,999 [1;37mINFO[0m heat_worker - network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 - Stack "network_35bc496f-3c0e-46b4-a5c0-33810e8e7263" in status "CREATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:06,209 [1;37mINFO[0m heat_worker - network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 - Stack "network_35bc496f-3c0e-46b4-a5c0-33810e8e7263" in status "CREATE_COMPLETE" (heat.py - 221)
-2018-02-15 06:55:06,210 [1;37mINFO[0m heat_worker - network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 - CREATED network_35bc496f-3c0e-46b4-a5c0-33810e8e7263 (heat.py - 280)
-2018-02-15 06:55:06,482 [1;37mINFO[0m heat_worker - network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 - Job create finished with results {'heat_outputs': [{u'output_value': [], u'description': u'The name of the virtual network.', u'output_key': u'route_targets'}, {u'output_value': u'default-domain:usertenant:35bc496f-3c0e-46b4-a5c0-33810e8e7263', u'description': u'The FQ name of the virtual network.', u'output_key': u'fq_name'}, {u'output_value': u'35bc496f-3c0e-46b4-a5c0-33810e8e7263', u'description': u'A unique id for the virtual network.', u'output_key': u'id'}, {u'output_value': u'35bc496f-3c0e-46b4-a5c0-33810e8e7263', u'description': u'The name of the virtual network.', u'output_key': u'name'}], 'orchestration_state': u'CREATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
-2018-02-15 06:55:06,495 [1;37mINFO[0m heat_worker - network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 - Job create:heat_worker:network:35bc496f-3c0e-46b4-a5c0-33810e8e7263:1:pp459 finished. (job_queue.py - 266)
-2018-02-15 06:55:06,497 [1;37mINFO[0m heat_worker - network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 - Trying to delete internal process state for resource network:35bc496f-3c0e-46b4-a5c0-33810e8e7263 (resources.py - 701)
-2018-02-15 06:55:10,309 [1;37mINFO[0m heat_worker - Reserved job: create:heat_worker:subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655:1:igwm1 using id: 6b106ee7-e635-4aab-9806-0fe0c26fc0b7 (job_queue.py - 245)
-2018-02-15 06:55:10,311 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:55:10,312 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
-2018-02-15 06:55:10,315 [1;34mDEBUG[0m heat_worker - subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 - Starting work on new ready job create:heat_worker:subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655:1:igwm1 (etcd_worker.py - 108)
-2018-02-15 06:55:10,316 [1;34mDEBUG[0m heat_worker - subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 - Checking job status for subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 (heat_stacks_worker.py - 44)
-2018-02-15 06:55:10,576 [1;37mINFO[0m heat_worker - subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 - CREATE STARTED (heat_messenger.py - 92)
-2018-02-15 06:55:10,636 [1;37mINFO[0m heat_worker - subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 - Template id subnet resolved from mapping: Csubnet (resources.py - 835)
-2018-02-15 06:55:10,641 [1;34mDEBUG[0m heat_worker - subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 - Heat template prepared: 
+    value: { get_attr: [network, route_targets] } (heat.py - 297)
+2019-02-01 00:29:48,179 [1;37mINFO[0m heat_worker - network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 - Stack "network_b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:29:49,234 [1;37mINFO[0m heat_worker - network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 - Stack "network_b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:29:50,418 [1;37mINFO[0m heat_worker - network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 - Stack "network_b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1" in status "CREATE_COMPLETE" (heat.py - 356)
+2019-02-01 00:29:50,418 [1;37mINFO[0m heat_worker - network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 - CREATED network_b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 (heat.py - 414)
+2019-02-01 00:29:50,674 [1;37mINFO[0m heat_worker - network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 - Job create finished with results {'heat_outputs': [{u'output_value': [], u'description': u'The name of the virtual network.', u'output_key': u'route_targets'}, {u'output_value': u'default-domain:usertenant:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1', u'description': u'The FQ name of the virtual network.', u'output_key': u'fq_name'}, {u'output_value': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1', u'description': u'A unique id for the virtual network.', u'output_key': u'id'}, {u'output_value': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1', u'description': u'The name of the virtual network.', u'output_key': u'name'}], 'orchestration_state': u'CREATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
+2019-02-01 00:29:50,721 [1;37mINFO[0m heat_worker - network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 - Job create:heat_worker:network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1:1:5dp3q finished. (job_queue.py - 266)
+2019-02-01 00:29:50,722 [1;37mINFO[0m heat_worker - network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 - Trying to delete internal process state for resource network:b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1 (resources.py - 701)
+2019-02-01 00:30:00,275 [1;37mINFO[0m heat_worker - Reserved job: create:heat_worker:subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe:1:gbmz4 using id: c7eac3e2-c11d-473a-95c3-e3562e5a2c0d (job_queue.py - 245)
+2019-02-01 00:30:00,277 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:30:00,277 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
+2019-02-01 00:30:00,287 [1;34mDEBUG[0m heat_worker - subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe - Starting work on new ready job create:heat_worker:subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe:1:gbmz4 (etcd_worker.py - 108)
+2019-02-01 00:30:00,288 [1;34mDEBUG[0m heat_worker - subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe - Checking job status for subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe (heat_stacks_worker.py - 44)
+2019-02-01 00:30:00,577 [1;37mINFO[0m heat_worker - subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe - CREATE STARTED (heat_messenger.py - 92)
+2019-02-01 00:30:00,670 [1;37mINFO[0m heat_worker - subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe - Template id subnet resolved from mapping: Csubnet (resources.py - 835)
+2019-02-01 00:30:00,678 [1;34mDEBUG[0m heat_worker - subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe - Heat template prepared: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -608,11 +610,11 @@ outputs:
     description: IPAM this local subnet uses.
     value: { get_attr: [subnet, ipam] }
  with parameters:
-{"name": "3cfa93ac-251a-4a60-9434-ff4c88bf3655", "enable_dhcp": true, "network_id": "35bc496f-3c0e-46b4-a5c0-33810e8e7263", "ipam": "default-domain:default-project:default-network-ipam", "dns_nameservers": [], "allocation_pools": [{"start": "192.168.200.2", "end": "192.168.200.254"}], "dhcp_server_address": "192.168.200.2", "ntp_servers": [], "gateway_ip": "192.168.200.1", "host_routes": [], "cidr": "192.168.200.0/24"}, 
+{"name": "215cb166-b0c5-4fbb-ad5f-948cb93119fe", "enable_dhcp": true, "network_id": "b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1", "ipam": "default-domain:default-project:default-network-ipam", "dns_nameservers": ["0.0.0.0"], "allocation_pools": [{"start": "192.168.200.2", "end": "192.168.200.254"}], "dhcp_server_address": "192.168.200.2", "ntp_servers": [], "gateway_ip": "192.168.200.1", "host_routes": [], "cidr": "192.168.200.0/24"}, 
  and heat timeout = 3, rollback = False, 
 using this jinja parameters: 
-{} (heat.py - 145)
-2018-02-15 06:55:10,642 [1;37mINFO[0m heat_worker - subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 - Creating a stack subnet_3cfa93ac-251a-4a60-9434-ff4c88bf3655 with parameters: {u'name': u'3cfa93ac-251a-4a60-9434-ff4c88bf3655', u'enable_dhcp': True, u'network_id': u'35bc496f-3c0e-46b4-a5c0-33810e8e7263', u'ipam': u'default-domain:default-project:default-network-ipam', u'dns_nameservers': [], u'allocation_pools': [{u'start': u'192.168.200.2', u'end': u'192.168.200.254'}], u'dhcp_server_address': u'192.168.200.2', u'ntp_servers': [], u'gateway_ip': u'192.168.200.1', u'host_routes': [], u'cidr': u'192.168.200.0/24'}, timeout_mins: 3, and template: 
+{} (heat.py - 280)
+2019-02-01 00:30:00,679 [1;37mINFO[0m heat_worker - subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe - Creating a stack subnet_215cb166-b0c5-4fbb-ad5f-948cb93119fe with parameters: {u'name': u'215cb166-b0c5-4fbb-ad5f-948cb93119fe', u'enable_dhcp': True, u'network_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1', u'ipam': u'default-domain:default-project:default-network-ipam', u'dns_nameservers': [u'0.0.0.0'], u'allocation_pools': [{u'start': u'192.168.200.2', u'end': u'192.168.200.254'}], u'dhcp_server_address': u'192.168.200.2', u'ntp_servers': [], u'gateway_ip': u'192.168.200.1', u'host_routes': [], u'cidr': u'192.168.200.0/24'}, timeout_mins: 3, and template: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -707,21 +709,22 @@ outputs:
     value: { get_attr: [subnet, default_gateway] }
   ipam:
     description: IPAM this local subnet uses.
-    value: { get_attr: [subnet, ipam] } (heat.py - 162)
-2018-02-15 06:55:10,926 [1;37mINFO[0m heat_worker - subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 - Stack "subnet_3cfa93ac-251a-4a60-9434-ff4c88bf3655" in status "CREATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:12,191 [1;37mINFO[0m heat_worker - subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 - Stack "subnet_3cfa93ac-251a-4a60-9434-ff4c88bf3655" in status "CREATE_COMPLETE" (heat.py - 221)
-2018-02-15 06:55:12,192 [1;37mINFO[0m heat_worker - subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 - CREATED subnet_3cfa93ac-251a-4a60-9434-ff4c88bf3655 (heat.py - 280)
-2018-02-15 06:55:12,560 [1;37mINFO[0m heat_worker - subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 - Job create finished with results {'heat_outputs': [{u'output_value': u'192.168.200.0/24', u'description': u'IP prefix of local subnet.', u'output_key': u'ip_prefix'}, {u'output_value': u'3cfa93ac-251a-4a60-9434-ff4c88bf3655', u'description': u'The name of the local subnet.', u'output_key': u'name'}, {u'output_value': u'192.168.200.1', u'description': u'Default gateway of local subnet.', u'output_key': u'default_gateway'}, {u'output_value': u'35bc496f-3c0e-46b4-a5c0-33810e8e7263', u'description': u'A unique id for the network.', u'output_key': u'network_id'}, {u'output_value': u'5a79909b-2bf3-4e26-8a9c-0bf6bb175457', u'description': u'IPAM this local subnet uses.', u'output_key': u'ipam'}, {u'output_value': u'15711909-5d0a-46c8-83f5-c739380ebbb9', u'description': u'A unique id for the local subnet.', u'output_key': u'id'}], 'orchestration_state': u'CREATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
-2018-02-15 06:55:12,575 [1;37mINFO[0m heat_worker - subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 - Job create:heat_worker:subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655:1:igwm1 finished. (job_queue.py - 266)
-2018-02-15 06:55:12,576 [1;37mINFO[0m heat_worker - subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 - Trying to delete internal process state for resource subnet:3cfa93ac-251a-4a60-9434-ff4c88bf3655 (resources.py - 701)
-2018-02-15 06:55:17,475 [1;37mINFO[0m heat_worker - Reserved job: create:heat_worker:port:fde61b02-9615-4e75-aac0-30a333657c1b:1:s23ew using id: 2b801bcc-8671-4540-8942-d6b8938f9a18 (job_queue.py - 245)
-2018-02-15 06:55:17,479 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:55:17,480 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
-2018-02-15 06:55:17,487 [1;34mDEBUG[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Starting work on new ready job create:heat_worker:port:fde61b02-9615-4e75-aac0-30a333657c1b:1:s23ew (etcd_worker.py - 108)
-2018-02-15 06:55:17,488 [1;34mDEBUG[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Checking job status for port:fde61b02-9615-4e75-aac0-30a333657c1b (heat_stacks_worker.py - 44)
-2018-02-15 06:55:17,745 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - CREATE STARTED (heat_messenger.py - 92)
-2018-02-15 06:55:17,806 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Template id port resolved from mapping: {u'else_mapping': {u'constant': u'port'}, u'if_mapping': {u'regexp': [{u'field': u'device_owner'}, {u'constant': u'network:dhcp|network:empty'}]}, u'then_mapping': {u'constant': None}} (resources.py - 835)
-2018-02-15 06:55:17,814 [1;34mDEBUG[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Heat template prepared: 
+    value: { get_attr: [subnet, ipam] } (heat.py - 297)
+2019-02-01 00:30:01,055 [1;37mINFO[0m heat_worker - subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe - Stack "subnet_215cb166-b0c5-4fbb-ad5f-948cb93119fe" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:02,109 [1;37mINFO[0m heat_worker - subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe - Stack "subnet_215cb166-b0c5-4fbb-ad5f-948cb93119fe" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:03,386 [1;37mINFO[0m heat_worker - subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe - Stack "subnet_215cb166-b0c5-4fbb-ad5f-948cb93119fe" in status "CREATE_COMPLETE" (heat.py - 356)
+2019-02-01 00:30:03,386 [1;37mINFO[0m heat_worker - subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe - CREATED subnet_215cb166-b0c5-4fbb-ad5f-948cb93119fe (heat.py - 414)
+2019-02-01 00:30:03,722 [1;37mINFO[0m heat_worker - subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe - Job create finished with results {'heat_outputs': [{u'output_value': u'192.168.200.0/24', u'description': u'IP prefix of local subnet.', u'output_key': u'ip_prefix'}, {u'output_value': u'215cb166-b0c5-4fbb-ad5f-948cb93119fe', u'description': u'The name of the local subnet.', u'output_key': u'name'}, {u'output_value': u'192.168.200.1', u'description': u'Default gateway of local subnet.', u'output_key': u'default_gateway'}, {u'output_value': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1', u'description': u'A unique id for the network.', u'output_key': u'network_id'}, {u'output_value': u'5a79909b-2bf3-4e26-8a9c-0bf6bb175457', u'description': u'IPAM this local subnet uses.', u'output_key': u'ipam'}, {u'output_value': u'622495a6-b651-4033-9d30-c634e4b08851', u'description': u'A unique id for the local subnet.', u'output_key': u'id'}], 'orchestration_state': u'CREATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
+2019-02-01 00:30:03,764 [1;37mINFO[0m heat_worker - subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe - Job create:heat_worker:subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe:1:gbmz4 finished. (job_queue.py - 266)
+2019-02-01 00:30:03,765 [1;37mINFO[0m heat_worker - subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe - Trying to delete internal process state for resource subnet:215cb166-b0c5-4fbb-ad5f-948cb93119fe (resources.py - 701)
+2019-02-01 00:30:13,607 [1;37mINFO[0m heat_worker - Reserved job: create:heat_worker:port:3a04e6ed-68fb-4534-8822-d5162d19f35a:1:0g0mv using id: 706b89df-4221-4102-ae01-7cbe8dbdc723 (job_queue.py - 245)
+2019-02-01 00:30:13,608 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:30:13,609 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
+2019-02-01 00:30:13,615 [1;34mDEBUG[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Starting work on new ready job create:heat_worker:port:3a04e6ed-68fb-4534-8822-d5162d19f35a:1:0g0mv (etcd_worker.py - 108)
+2019-02-01 00:30:13,615 [1;34mDEBUG[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Checking job status for port:3a04e6ed-68fb-4534-8822-d5162d19f35a (heat_stacks_worker.py - 44)
+2019-02-01 00:30:13,869 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - CREATE STARTED (heat_messenger.py - 92)
+2019-02-01 00:30:13,962 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Template id port resolved from mapping: {u'else_mapping': {u'constant': u'port'}, u'if_mapping': {u'regexp': [{u'field': u'device_owner'}, {u'constant': u'network:dhcp|network:empty'}]}, u'then_mapping': {u'constant': None}} (resources.py - 835)
+2019-02-01 00:30:13,975 [1;34mDEBUG[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Heat template prepared: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -794,10 +797,10 @@ resources:
           template: '%name%_%zone%_%ip%'
           params:
             "%name%": { get_param: name }
-            "%zone%": 3cfa93ac-251a-4a60-9434-ff4c88bf3655
+            "%zone%": 215cb166-b0c5-4fbb-ad5f-948cb93119fe
             "%ip%": 192.168.200.101
       ip_address: 192.168.200.101
-      subnet_id: 15711909-5d0a-46c8-83f5-c739380ebbb9
+      subnet_id: 622495a6-b651-4033-9d30-c634e4b08851
       network_id: { get_param: virtual_network }
       virtual_machine_interfaces: [ { get_resource: virtual_machine_interface } ]
 
@@ -822,11 +825,11 @@ outputs:
     value: { get_attr: [virtual_machine_interface, fq_name] }
 
  with parameters:
-{"virtual_machine": "7ff183de-0188-46bf-b7d0-68d08ad2b54f", "name": "fde61b02-9615-4e75-aac0-30a333657c1b", "admin_state_up": true, "tenant_id": "ae69b52f46ba480bb9636f62736436f4", "device_owner": "physical_port", "virtual_machine_interface_allowed_address_pairs": [], "virtual_machine_interface_mac_address": "fa:16:3e:67:26:46", "version": 1, "virtual_network": "35bc496f-3c0e-46b4-a5c0-33810e8e7263", "security_groups": [], "uuid": "fde61b02-9615-4e75-aac0-30a333657c1b"}, 
+{"virtual_machine": "c13acfa3-6780-4f53-90da-492dfd697e69", "name": "3a04e6ed-68fb-4534-8822-d5162d19f35a", "admin_state_up": true, "tenant_id": "4b4cb858859842a389d0b0c8eb567d59", "device_owner": "physical_port", "virtual_machine_interface_allowed_address_pairs": [], "virtual_machine_interface_mac_address": "fa:16:3e:e7:7c:0f", "version": 1, "virtual_network": "b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1", "security_groups": [], "uuid": "3a04e6ed-68fb-4534-8822-d5162d19f35a"}, 
  and heat timeout = 13, rollback = False, 
 using this jinja parameters: 
-{u'jinja_attached': False, u'jinja_force_dependency_gw_interface': None, u'jinja_fixed_ips': [{u'subnet_id': u'3cfa93ac-251a-4a60-9434-ff4c88bf3655', u'ip_address': u'192.168.200.101'}], u'jinja_force_dependency_cfg': None, u'jinja_device_owner': u'physical_port', u'jinja_subnets': [u'15711909-5d0a-46c8-83f5-c739380ebbb9']} (heat.py - 145)
-2018-02-15 06:55:17,815 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Creating a stack port_fde61b02-9615-4e75-aac0-30a333657c1b with parameters: {u'virtual_machine': u'7ff183de-0188-46bf-b7d0-68d08ad2b54f', u'name': u'fde61b02-9615-4e75-aac0-30a333657c1b', u'admin_state_up': True, u'tenant_id': u'ae69b52f46ba480bb9636f62736436f4', u'device_owner': u'physical_port', u'virtual_machine_interface_allowed_address_pairs': [], u'virtual_machine_interface_mac_address': u'fa:16:3e:67:26:46', u'version': 1, u'virtual_network': u'35bc496f-3c0e-46b4-a5c0-33810e8e7263', u'security_groups': [], u'uuid': u'fde61b02-9615-4e75-aac0-30a333657c1b'}, timeout_mins: 13, and template: 
+{u'jinja_attached': False, u'jinja_force_dependency_gw_interface': None, u'jinja_fixed_ips': [{u'subnet_id': u'215cb166-b0c5-4fbb-ad5f-948cb93119fe', u'ip_address': u'192.168.200.101'}], u'jinja_force_dependency_cfg': None, u'jinja_device_owner': u'physical_port', u'jinja_subnets': [u'622495a6-b651-4033-9d30-c634e4b08851']} (heat.py - 280)
+2019-02-01 00:30:13,975 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Creating a stack port_3a04e6ed-68fb-4534-8822-d5162d19f35a with parameters: {u'virtual_machine': u'c13acfa3-6780-4f53-90da-492dfd697e69', u'name': u'3a04e6ed-68fb-4534-8822-d5162d19f35a', u'admin_state_up': True, u'tenant_id': u'4b4cb858859842a389d0b0c8eb567d59', u'device_owner': u'physical_port', u'virtual_machine_interface_allowed_address_pairs': [], u'virtual_machine_interface_mac_address': u'fa:16:3e:e7:7c:0f', u'version': 1, u'virtual_network': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1', u'security_groups': [], u'uuid': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}, timeout_mins: 13, and template: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -899,10 +902,10 @@ resources:
           template: '%name%_%zone%_%ip%'
           params:
             "%name%": { get_param: name }
-            "%zone%": 3cfa93ac-251a-4a60-9434-ff4c88bf3655
+            "%zone%": 215cb166-b0c5-4fbb-ad5f-948cb93119fe
             "%ip%": 192.168.200.101
       ip_address: 192.168.200.101
-      subnet_id: 15711909-5d0a-46c8-83f5-c739380ebbb9
+      subnet_id: 622495a6-b651-4033-9d30-c634e4b08851
       network_id: { get_param: virtual_network }
       virtual_machine_interfaces: [ { get_resource: virtual_machine_interface } ]
 
@@ -925,22 +928,23 @@ outputs:
   fq_name:
     description: Fully Qualified Name of the VMI
     value: { get_attr: [virtual_machine_interface, fq_name] }
- (heat.py - 162)
-2018-02-15 06:55:18,108 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Stack "port_fde61b02-9615-4e75-aac0-30a333657c1b" in status "CREATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:19,229 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Stack "port_fde61b02-9615-4e75-aac0-30a333657c1b" in status "CREATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:20,442 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Stack "port_fde61b02-9615-4e75-aac0-30a333657c1b" in status "CREATE_COMPLETE" (heat.py - 221)
-2018-02-15 06:55:20,443 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - CREATED port_fde61b02-9615-4e75-aac0-30a333657c1b (heat.py - 280)
-2018-02-15 06:55:20,746 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Job create finished with results {'heat_outputs': [{u'output_value': [[u'default-domain', u'admin', u'b62eefe0-0872-478d-adfe-1a606320f0e7']], u'description': u'Virtual network.', u'output_key': u'virtual_network'}, {u'output_value': u'default-domain:admin:f68d0924-ef20-4c1b-ac45-0e6b879af5e7', u'description': u'Fully Qualified Name of the VMI', u'output_key': u'fq_name'}, {u'output_value': u'f68d0924-ef20-4c1b-ac45-0e6b879af5e7', u'description': u'A unique id for the virtual machine interface.', u'output_key': u'id'}, {u'output_value': {u'allowed_address_pair': []}, u'description': u'Virtual machine allowed address pairs.', u'output_key': u'allowed_address_pairs'}, {u'output_value': [u'fa:16:3e:f7:60:7f'], u'description': u'Virtual machine interface mac address.', u'output_key': u'mac_address'}], 'orchestration_state': u'CREATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
-2018-02-15 06:55:20,763 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Job create:heat_worker:port:fde61b02-9615-4e75-aac0-30a333657c1b:1:s23ew finished. (job_queue.py - 266)
-2018-02-15 06:55:20,776 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Trying to delete internal process state for resource port:fde61b02-9615-4e75-aac0-30a333657c1b (resources.py - 701)
-2018-02-15 06:55:20,797 [1;37mINFO[0m heat_worker - Reserved job: create:heat_worker:ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7:1:vcoy8 using id: 02d68e07-275b-4493-8348-a5b09d45c004 (job_queue.py - 245)
-2018-02-15 06:55:20,799 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:55:20,800 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
-2018-02-15 06:55:20,803 [1;34mDEBUG[0m heat_worker - ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 - Starting work on new ready job create:heat_worker:ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7:1:vcoy8 (etcd_worker.py - 108)
-2018-02-15 06:55:20,804 [1;34mDEBUG[0m heat_worker - ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 - Checking job status for ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 (heat_stacks_worker.py - 44)
-2018-02-15 06:55:21,010 [1;37mINFO[0m heat_worker - ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 - CREATE STARTED (heat_messenger.py - 92)
-2018-02-15 06:55:21,070 [1;37mINFO[0m heat_worker - ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 - Template id ese_logical_port resolved from mapping: Cese_logical_port (resources.py - 835)
-2018-02-15 06:55:21,076 [1;34mDEBUG[0m heat_worker - ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 - Heat template prepared: 
+ (heat.py - 297)
+2019-02-01 00:30:14,349 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Stack "port_3a04e6ed-68fb-4534-8822-d5162d19f35a" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:15,432 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Stack "port_3a04e6ed-68fb-4534-8822-d5162d19f35a" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:16,486 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Stack "port_3a04e6ed-68fb-4534-8822-d5162d19f35a" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:17,671 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Stack "port_3a04e6ed-68fb-4534-8822-d5162d19f35a" in status "CREATE_COMPLETE" (heat.py - 356)
+2019-02-01 00:30:17,672 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - CREATED port_3a04e6ed-68fb-4534-8822-d5162d19f35a (heat.py - 414)
+2019-02-01 00:30:17,928 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Job create finished with results {'heat_outputs': [{u'output_value': [[u'default-domain', u'admin', u'b62eefe0-0872-478d-adfe-1a606320f0e7']], u'description': u'Virtual network.', u'output_key': u'virtual_network'}, {u'output_value': u'default-domain:admin:f68d0924-ef20-4c1b-ac45-0e6b879af5e7', u'description': u'Fully Qualified Name of the VMI', u'output_key': u'fq_name'}, {u'output_value': u'f68d0924-ef20-4c1b-ac45-0e6b879af5e7', u'description': u'A unique id for the virtual machine interface.', u'output_key': u'id'}, {u'output_value': {u'allowed_address_pair': []}, u'description': u'Virtual machine allowed address pairs.', u'output_key': u'allowed_address_pairs'}, {u'output_value': [u'fa:16:3e:f7:60:7f'], u'description': u'Virtual machine interface mac address.', u'output_key': u'mac_address'}], 'orchestration_state': u'CREATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
+2019-02-01 00:30:17,981 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Job create:heat_worker:port:3a04e6ed-68fb-4534-8822-d5162d19f35a:1:0g0mv finished. (job_queue.py - 266)
+2019-02-01 00:30:17,983 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Trying to delete internal process state for resource port:3a04e6ed-68fb-4534-8822-d5162d19f35a (resources.py - 701)
+2019-02-01 00:30:18,064 [1;37mINFO[0m heat_worker - Reserved job: create:heat_worker:ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c:1:lxiiz using id: f67ff47d-d4d8-43c2-a716-aff4cdbbe17d (job_queue.py - 245)
+2019-02-01 00:30:18,067 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:30:18,067 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
+2019-02-01 00:30:18,082 [1;34mDEBUG[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - Starting work on new ready job create:heat_worker:ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c:1:lxiiz (etcd_worker.py - 108)
+2019-02-01 00:30:18,083 [1;34mDEBUG[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - Checking job status for ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c (heat_stacks_worker.py - 44)
+2019-02-01 00:30:18,345 [1;37mINFO[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - CREATE STARTED (heat_messenger.py - 92)
+2019-02-01 00:30:18,451 [1;37mINFO[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - Template id ese_logical_port resolved from mapping: Cese_logical_port (resources.py - 835)
+2019-02-01 00:30:18,459 [1;34mDEBUG[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - Heat template prepared: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -1010,13 +1014,18 @@ resources:
         etcd:
           status:
             key: logical_port
+          hold_options:
+            positive_status:
+              - UP
+              - DOWN
+            time_seconds: 30
         tsdb:
           traffic.in:
             metric: traffic.bytes
             tags:
               
               -  resource_id: { get_param: gohan_id }
-                 port_id: fde61b02-9615-4e75-aac0-30a333657c1b
+                 port_id: 3a04e6ed-68fb-4534-8822-d5162d19f35a
                  direction: in
               
           traffic.out:
@@ -1024,7 +1033,7 @@ resources:
             tags:
               
               -  resource_id: { get_param: gohan_id }
-                 port_id: fde61b02-9615-4e75-aac0-30a333657c1b
+                 port_id: 3a04e6ed-68fb-4534-8822-d5162d19f35a
                  direction: out
               
     depends_on: logical_interface
@@ -1043,11 +1052,11 @@ outputs:
     description: Monitoring Process Link
     value: { get_attr: [interface_monitor, link] }
  with parameters:
-{"logical_port_type": "L2", "logical_port_vlan_id": 1003, "tenant_id": "ae69b52f46ba480bb9636f62736436f4", "device_ip": "10.161.0.33", "version": 1, "virtual_machine_interface_ids": ["f68d0924-ef20-4c1b-ac45-0e6b879af5e7"], "logical_port_name": "xe-0/0/1.1003", "gohan_id": "ced1435d-6dfa-4dab-bb7c-19da4d8e48b7", "physical_port_id": "5a79909b-2bf3-4e26-8a9c-0bf6bb175457"}, 
+{"logical_port_type": "L2", "logical_port_vlan_id": 1003, "tenant_id": "4b4cb858859842a389d0b0c8eb567d59", "device_ip": "10.161.0.33", "version": 1, "virtual_machine_interface_ids": ["f68d0924-ef20-4c1b-ac45-0e6b879af5e7"], "logical_port_name": "xe-0/0/1.1003", "gohan_id": "74522211-c8db-41b6-8a35-4fac9656713c", "physical_port_id": "5a79909b-2bf3-4e26-8a9c-0bf6bb175457"}, 
  and heat timeout = 6, rollback = False, 
 using this jinja parameters: 
-{u'jinja_port_ids': [u'fde61b02-9615-4e75-aac0-30a333657c1b']} (heat.py - 145)
-2018-02-15 06:55:21,077 [1;37mINFO[0m heat_worker - ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 - Creating a stack ese_logical_port_ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 with parameters: {u'logical_port_type': u'L2', u'logical_port_vlan_id': 1003, u'tenant_id': u'ae69b52f46ba480bb9636f62736436f4', u'device_ip': u'10.161.0.33', u'version': 1, u'virtual_machine_interface_ids': [u'f68d0924-ef20-4c1b-ac45-0e6b879af5e7'], u'logical_port_name': u'xe-0/0/1.1003', u'gohan_id': u'ced1435d-6dfa-4dab-bb7c-19da4d8e48b7', u'physical_port_id': u'5a79909b-2bf3-4e26-8a9c-0bf6bb175457'}, timeout_mins: 6, and template: 
+{u'jinja_port_ids': [u'3a04e6ed-68fb-4534-8822-d5162d19f35a']} (heat.py - 280)
+2019-02-01 00:30:18,459 [1;37mINFO[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - Creating a stack ese_logical_port_74522211-c8db-41b6-8a35-4fac9656713c with parameters: {u'logical_port_type': u'L2', u'logical_port_vlan_id': 1003, u'tenant_id': u'4b4cb858859842a389d0b0c8eb567d59', u'device_ip': u'10.161.0.33', u'version': 1, u'virtual_machine_interface_ids': [u'f68d0924-ef20-4c1b-ac45-0e6b879af5e7'], u'logical_port_name': u'xe-0/0/1.1003', u'gohan_id': u'74522211-c8db-41b6-8a35-4fac9656713c', u'physical_port_id': u'5a79909b-2bf3-4e26-8a9c-0bf6bb175457'}, timeout_mins: 6, and template: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -1117,13 +1126,18 @@ resources:
         etcd:
           status:
             key: logical_port
+          hold_options:
+            positive_status:
+              - UP
+              - DOWN
+            time_seconds: 30
         tsdb:
           traffic.in:
             metric: traffic.bytes
             tags:
               
               -  resource_id: { get_param: gohan_id }
-                 port_id: fde61b02-9615-4e75-aac0-30a333657c1b
+                 port_id: 3a04e6ed-68fb-4534-8822-d5162d19f35a
                  direction: in
               
           traffic.out:
@@ -1131,7 +1145,7 @@ resources:
             tags:
               
               -  resource_id: { get_param: gohan_id }
-                 port_id: fde61b02-9615-4e75-aac0-30a333657c1b
+                 port_id: 3a04e6ed-68fb-4534-8822-d5162d19f35a
                  direction: out
               
     depends_on: logical_interface
@@ -1148,23 +1162,24 @@ outputs:
     value: { get_resource: interface_monitor }
   monitoring_link:
     description: Monitoring Process Link
-    value: { get_attr: [interface_monitor, link] } (heat.py - 162)
-2018-02-15 06:55:21,378 [1;37mINFO[0m heat_worker - ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 - Stack "ese_logical_port_ced1435d-6dfa-4dab-bb7c-19da4d8e48b7" in status "CREATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:22,502 [1;37mINFO[0m heat_worker - ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 - Stack "ese_logical_port_ced1435d-6dfa-4dab-bb7c-19da4d8e48b7" in status "CREATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:23,689 [1;37mINFO[0m heat_worker - ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 - Stack "ese_logical_port_ced1435d-6dfa-4dab-bb7c-19da4d8e48b7" in status "CREATE_COMPLETE" (heat.py - 221)
-2018-02-15 06:55:23,690 [1;37mINFO[0m heat_worker - ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 - CREATED ese_logical_port_ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 (heat.py - 280)
-2018-02-15 06:55:23,995 [1;37mINFO[0m heat_worker - ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 - Job create finished with results {'heat_outputs': [{u'output_value': u'9dcbbbbc-e9ea-4276-ba65-68ce8737e568', u'description': u'Monitoring Target ID', u'output_key': u'monitoring_target_id'}, {u'output_value': u'46b0cd68-d0fb-4d72-9def-830164f9e215', u'description': u'A unique id for the logical interface', u'output_key': u'id'}, {u'output_value': u'http://collector-agents-se:7070/targets/9dcbbbbc-e9ea-4276-ba65-68ce8737e568', u'description': u'Monitoring Process Link', u'output_key': u'monitoring_link'}, {u'output_value': u'xe-0/0/38.0', u'description': u'The name of the logical interface.', u'output_key': u'name'}], 'orchestration_state': u'CREATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
-2018-02-15 06:55:24,007 [1;37mINFO[0m heat_worker - ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 - Job create:heat_worker:ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7:1:vcoy8 finished. (job_queue.py - 266)
-2018-02-15 06:55:24,008 [1;37mINFO[0m heat_worker - ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 - Trying to delete internal process state for resource ese_logical_port:ced1435d-6dfa-4dab-bb7c-19da4d8e48b7 (resources.py - 701)
-2018-02-15 06:55:24,098 [1;37mINFO[0m heat_worker - Reserved job: modify:heat_worker:port:fde61b02-9615-4e75-aac0-30a333657c1b:2:frkcu using id: 0d10244b-7cd8-4779-83e1-7fddba31aed3 (job_queue.py - 245)
-2018-02-15 06:55:24,100 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:55:24,101 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
-2018-02-15 06:55:24,105 [1;34mDEBUG[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Starting work on new ready job modify:heat_worker:port:fde61b02-9615-4e75-aac0-30a333657c1b:2:frkcu (etcd_worker.py - 108)
-2018-02-15 06:55:24,107 [1;34mDEBUG[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Checking job status for port:fde61b02-9615-4e75-aac0-30a333657c1b (heat_stacks_worker.py - 44)
-2018-02-15 06:55:24,470 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Found stack with status CREATE_COMPLETE for port:fde61b02-9615-4e75-aac0-30a333657c1b (heat_stacks_worker.py - 55)
-2018-02-15 06:55:24,471 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - MODIFY STARTED (heat_messenger.py - 123)
-2018-02-15 06:55:25,040 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Template id port resolved from mapping: {u'else_mapping': {u'constant': u'port'}, u'if_mapping': {u'regexp': [{u'field': u'device_owner'}, {u'constant': u'network:dhcp|network:empty'}]}, u'then_mapping': {u'constant': None}} (resources.py - 835)
-2018-02-15 06:55:25,046 [1;34mDEBUG[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Heat template prepared: 
+    value: { get_attr: [interface_monitor, link] } (heat.py - 297)
+2019-02-01 00:30:18,927 [1;37mINFO[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - Stack "ese_logical_port_74522211-c8db-41b6-8a35-4fac9656713c" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:20,008 [1;37mINFO[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - Stack "ese_logical_port_74522211-c8db-41b6-8a35-4fac9656713c" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:21,072 [1;37mINFO[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - Stack "ese_logical_port_74522211-c8db-41b6-8a35-4fac9656713c" in status "CREATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:22,251 [1;37mINFO[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - Stack "ese_logical_port_74522211-c8db-41b6-8a35-4fac9656713c" in status "CREATE_COMPLETE" (heat.py - 356)
+2019-02-01 00:30:22,252 [1;37mINFO[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - CREATED ese_logical_port_74522211-c8db-41b6-8a35-4fac9656713c (heat.py - 414)
+2019-02-01 00:30:22,484 [1;37mINFO[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - Job create finished with results {'heat_outputs': [{u'output_value': u'17a787f7-e191-48c3-adaf-692a20a3768f', u'description': u'Monitoring Target ID', u'output_key': u'monitoring_target_id'}, {u'output_value': u'46b0cd68-d0fb-4d72-9def-830164f9e215', u'description': u'A unique id for the logical interface', u'output_key': u'id'}, {u'output_value': u'http://collector-agents-se:7070/targets/17a787f7-e191-48c3-adaf-692a20a3768f', u'description': u'Monitoring Process Link', u'output_key': u'monitoring_link'}, {u'output_value': u'xe-0/0/38.0', u'description': u'The name of the logical interface.', u'output_key': u'name'}], 'orchestration_state': u'CREATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
+2019-02-01 00:30:22,528 [1;37mINFO[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - Job create:heat_worker:ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c:1:lxiiz finished. (job_queue.py - 266)
+2019-02-01 00:30:22,529 [1;37mINFO[0m heat_worker - ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c - Trying to delete internal process state for resource ese_logical_port:74522211-c8db-41b6-8a35-4fac9656713c (resources.py - 701)
+2019-02-01 00:30:22,730 [1;37mINFO[0m heat_worker - Reserved job: modify:heat_worker:port:3a04e6ed-68fb-4534-8822-d5162d19f35a:2:28a9m using id: 99c76b95-73f2-42ff-a404-85279ba8d86c (job_queue.py - 245)
+2019-02-01 00:30:22,732 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:30:22,733 [1;34mDEBUG[0m heat_worker - 7 job slots available (etcd_worker.py - 213)
+2019-02-01 00:30:22,764 [1;34mDEBUG[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Starting work on new ready job modify:heat_worker:port:3a04e6ed-68fb-4534-8822-d5162d19f35a:2:28a9m (etcd_worker.py - 108)
+2019-02-01 00:30:22,764 [1;34mDEBUG[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Checking job status for port:3a04e6ed-68fb-4534-8822-d5162d19f35a (heat_stacks_worker.py - 44)
+2019-02-01 00:30:23,268 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Found stack with status CREATE_COMPLETE for port:3a04e6ed-68fb-4534-8822-d5162d19f35a (heat_stacks_worker.py - 55)
+2019-02-01 00:30:23,268 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - MODIFY STARTED (heat_messenger.py - 123)
+2019-02-01 00:30:23,865 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Template id port resolved from mapping: {u'else_mapping': {u'constant': u'port'}, u'if_mapping': {u'regexp': [{u'field': u'device_owner'}, {u'constant': u'network:dhcp|network:empty'}]}, u'then_mapping': {u'constant': None}} (resources.py - 835)
+2019-02-01 00:30:23,875 [1;34mDEBUG[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Heat template prepared: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -1237,10 +1252,10 @@ resources:
           template: '%name%_%zone%_%ip%'
           params:
             "%name%": { get_param: name }
-            "%zone%": 3cfa93ac-251a-4a60-9434-ff4c88bf3655
+            "%zone%": 215cb166-b0c5-4fbb-ad5f-948cb93119fe
             "%ip%": 192.168.200.101
       ip_address: 192.168.200.101
-      subnet_id: 15711909-5d0a-46c8-83f5-c739380ebbb9
+      subnet_id: 622495a6-b651-4033-9d30-c634e4b08851
       network_id: { get_param: virtual_network }
       virtual_machine_interfaces: [ { get_resource: virtual_machine_interface } ]
 
@@ -1261,14 +1276,19 @@ resources:
         etcd:
           status:
             key: vmi
+          hold_options:
+            positive_status:
+              - UP
+              - DOWN
+            time_seconds: 210
         tsdb:
           traffic.in:
-            metric: traffic.contrail_bytes
+            metric: traffic.bps
             tags:
               resource_id: { get_param: uuid }
               direction: in
           traffic.out:
-            metric: traffic.contrail_bytes
+            metric: traffic.bps
             tags:
               resource_id: { get_param: uuid }
               direction: out
@@ -1300,11 +1320,11 @@ outputs:
     value: { get_attr: [vmi_monitor, link] }
 
  with parameters:
-{"virtual_machine": "7ff183de-0188-46bf-b7d0-68d08ad2b54f", "name": "fde61b02-9615-4e75-aac0-30a333657c1b", "admin_state_up": true, "tenant_id": "ae69b52f46ba480bb9636f62736436f4", "device_owner": "physical_port", "virtual_machine_interface_allowed_address_pairs": [], "virtual_machine_interface_mac_address": "fa:16:3e:67:26:46", "version": 2, "virtual_network": "35bc496f-3c0e-46b4-a5c0-33810e8e7263", "security_groups": [], "uuid": "fde61b02-9615-4e75-aac0-30a333657c1b"}, 
+{"virtual_machine": "c13acfa3-6780-4f53-90da-492dfd697e69", "name": "3a04e6ed-68fb-4534-8822-d5162d19f35a", "admin_state_up": true, "tenant_id": "4b4cb858859842a389d0b0c8eb567d59", "device_owner": "physical_port", "virtual_machine_interface_allowed_address_pairs": [], "virtual_machine_interface_mac_address": "fa:16:3e:e7:7c:0f", "version": 2, "virtual_network": "b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1", "security_groups": [], "uuid": "3a04e6ed-68fb-4534-8822-d5162d19f35a"}, 
  and heat timeout = 13, rollback = False, 
 using this jinja parameters: 
-{u'jinja_attached': True, u'jinja_force_dependency_gw_interface': None, u'jinja_fixed_ips': [{u'subnet_id': u'3cfa93ac-251a-4a60-9434-ff4c88bf3655', u'ip_address': u'192.168.200.101'}], u'jinja_force_dependency_cfg': None, u'jinja_device_owner': u'physical_port', u'jinja_subnets': [u'15711909-5d0a-46c8-83f5-c739380ebbb9']} (heat.py - 145)
-2018-02-15 06:55:25,048 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Updating a stack port_fde61b02-9615-4e75-aac0-30a333657c1b with parameters: {u'virtual_machine': u'7ff183de-0188-46bf-b7d0-68d08ad2b54f', u'name': u'fde61b02-9615-4e75-aac0-30a333657c1b', u'admin_state_up': True, u'tenant_id': u'ae69b52f46ba480bb9636f62736436f4', u'device_owner': u'physical_port', u'virtual_machine_interface_allowed_address_pairs': [], u'virtual_machine_interface_mac_address': u'fa:16:3e:67:26:46', u'version': 2, u'virtual_network': u'35bc496f-3c0e-46b4-a5c0-33810e8e7263', u'security_groups': [], u'uuid': u'fde61b02-9615-4e75-aac0-30a333657c1b'}, timeout_mins: 13, and template: 
+{u'jinja_attached': True, u'jinja_force_dependency_gw_interface': None, u'jinja_fixed_ips': [{u'subnet_id': u'215cb166-b0c5-4fbb-ad5f-948cb93119fe', u'ip_address': u'192.168.200.101'}], u'jinja_force_dependency_cfg': None, u'jinja_device_owner': u'physical_port', u'jinja_subnets': [u'622495a6-b651-4033-9d30-c634e4b08851']} (heat.py - 280)
+2019-02-01 00:30:23,876 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Updating a stack port_3a04e6ed-68fb-4534-8822-d5162d19f35a with parameters: {u'virtual_machine': u'c13acfa3-6780-4f53-90da-492dfd697e69', u'name': u'3a04e6ed-68fb-4534-8822-d5162d19f35a', u'admin_state_up': True, u'tenant_id': u'4b4cb858859842a389d0b0c8eb567d59', u'device_owner': u'physical_port', u'virtual_machine_interface_allowed_address_pairs': [], u'virtual_machine_interface_mac_address': u'fa:16:3e:e7:7c:0f', u'version': 2, u'virtual_network': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1', u'security_groups': [], u'uuid': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}, timeout_mins: 13, and template: 
 heat_template_version: 2013-05-23
 
 description: >
@@ -1377,10 +1397,10 @@ resources:
           template: '%name%_%zone%_%ip%'
           params:
             "%name%": { get_param: name }
-            "%zone%": 3cfa93ac-251a-4a60-9434-ff4c88bf3655
+            "%zone%": 215cb166-b0c5-4fbb-ad5f-948cb93119fe
             "%ip%": 192.168.200.101
       ip_address: 192.168.200.101
-      subnet_id: 15711909-5d0a-46c8-83f5-c739380ebbb9
+      subnet_id: 622495a6-b651-4033-9d30-c634e4b08851
       network_id: { get_param: virtual_network }
       virtual_machine_interfaces: [ { get_resource: virtual_machine_interface } ]
 
@@ -1401,14 +1421,19 @@ resources:
         etcd:
           status:
             key: vmi
+          hold_options:
+            positive_status:
+              - UP
+              - DOWN
+            time_seconds: 210
         tsdb:
           traffic.in:
-            metric: traffic.contrail_bytes
+            metric: traffic.bps
             tags:
               resource_id: { get_param: uuid }
               direction: in
           traffic.out:
-            metric: traffic.contrail_bytes
+            metric: traffic.bps
             tags:
               resource_id: { get_param: uuid }
               direction: out
@@ -1438,41 +1463,38 @@ outputs:
   monitoring_link:
     description: Monitoring Process Link
     value: { get_attr: [vmi_monitor, link] }
- (heat.py - 186)
-2018-02-15 06:55:25,275 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Stack "port_fde61b02-9615-4e75-aac0-30a333657c1b" in status "UPDATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:26,361 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Stack "port_fde61b02-9615-4e75-aac0-30a333657c1b" in status "UPDATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:27,459 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Stack "port_fde61b02-9615-4e75-aac0-30a333657c1b" in status "UPDATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:28,546 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Stack "port_fde61b02-9615-4e75-aac0-30a333657c1b" in status "UPDATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:29,639 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Stack "port_fde61b02-9615-4e75-aac0-30a333657c1b" in status "UPDATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:30,735 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Stack "port_fde61b02-9615-4e75-aac0-30a333657c1b" in status "UPDATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:31,857 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Stack "port_fde61b02-9615-4e75-aac0-30a333657c1b" in status "UPDATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:32,951 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Stack "port_fde61b02-9615-4e75-aac0-30a333657c1b" in status "UPDATE_IN_PROGRESS" (heat.py - 221)
-2018-02-15 06:55:34,151 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Stack "port_fde61b02-9615-4e75-aac0-30a333657c1b" in status "UPDATE_COMPLETE" (heat.py - 221)
-2018-02-15 06:55:34,152 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - MODIFIED port_fde61b02-9615-4e75-aac0-30a333657c1b (heat.py - 329)
-2018-02-15 06:55:34,466 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Job modify finished with results {'heat_outputs': [{u'output_value': u'default-domain:admin:f68d0924-ef20-4c1b-ac45-0e6b879af5e7', u'description': u'Fully Qualified Name of the VMI', u'output_key': u'fq_name'}, {u'output_value': {u'allowed_address_pair': []}, u'description': u'Virtual machine allowed address pairs.', u'output_key': u'allowed_address_pairs'}, {u'output_value': u'31ac332f-d172-4a39-8fa5-976ada238eff', u'description': u'Monitoring Target ID', u'output_key': u'monitoring_target_id'}, {u'output_value': [u'fa:16:3e:f7:60:7f'], u'description': u'Virtual machine interface mac address.', u'output_key': u'mac_address'}, {u'output_value': [[u'default-domain', u'admin', u'b62eefe0-0872-478d-adfe-1a606320f0e7']], u'description': u'Virtual network.', u'output_key': u'virtual_network'}, {u'output_value': u'f68d0924-ef20-4c1b-ac45-0e6b879af5e7', u'description': u'A unique id for the virtual machine interface.', u'output_key': u'id'}, {u'output_value': u'http://collector-agents-se:7070/targets/31ac332f-d172-4a39-8fa5-976ada238eff', u'description': u'Monitoring Process Link', u'output_key': u'monitoring_link'}], 'orchestration_state': u'UPDATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
-2018-02-15 06:55:34,480 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Job modify:heat_worker:port:fde61b02-9615-4e75-aac0-30a333657c1b:2:frkcu finished. (job_queue.py - 266)
-2018-02-15 06:55:34,481 [1;37mINFO[0m heat_worker - port:fde61b02-9615-4e75-aac0-30a333657c1b - Trying to delete internal process state for resource port:fde61b02-9615-4e75-aac0-30a333657c1b (resources.py - 701)
-2018-02-15 06:55:54,106 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
-2018-02-15 06:55:54,110 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:55:54,112 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
-2018-02-15 06:56:24,123 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
-2018-02-15 06:56:24,125 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:56:24,127 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
-2018-02-15 06:56:54,139 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
-2018-02-15 06:56:54,143 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:56:54,144 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
-2018-02-15 06:57:24,155 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
-2018-02-15 06:57:24,156 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:57:24,158 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
-2018-02-15 06:57:54,170 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
-2018-02-15 06:57:54,173 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:57:54,175 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
-2018-02-15 06:58:24,183 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
-2018-02-15 06:58:24,185 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:58:24,187 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
-2018-02-15 06:58:54,198 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
-2018-02-15 06:58:54,200 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:58:54,201 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
-2018-02-15 06:59:24,214 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
-2018-02-15 06:59:24,216 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
-2018-02-15 06:59:24,218 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
+ (heat.py - 321)
+2019-02-01 00:30:24,117 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Stack "port_3a04e6ed-68fb-4534-8822-d5162d19f35a" in status "UPDATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:25,202 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Stack "port_3a04e6ed-68fb-4534-8822-d5162d19f35a" in status "UPDATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:26,263 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Stack "port_3a04e6ed-68fb-4534-8822-d5162d19f35a" in status "UPDATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:27,399 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Stack "port_3a04e6ed-68fb-4534-8822-d5162d19f35a" in status "UPDATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:28,498 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Stack "port_3a04e6ed-68fb-4534-8822-d5162d19f35a" in status "UPDATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:29,565 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Stack "port_3a04e6ed-68fb-4534-8822-d5162d19f35a" in status "UPDATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:30,622 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Stack "port_3a04e6ed-68fb-4534-8822-d5162d19f35a" in status "UPDATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:31,687 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Stack "port_3a04e6ed-68fb-4534-8822-d5162d19f35a" in status "UPDATE_IN_PROGRESS" (heat.py - 356)
+2019-02-01 00:30:32,912 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Stack "port_3a04e6ed-68fb-4534-8822-d5162d19f35a" in status "UPDATE_COMPLETE" (heat.py - 356)
+2019-02-01 00:30:32,913 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - MODIFIED port_3a04e6ed-68fb-4534-8822-d5162d19f35a (heat.py - 463)
+2019-02-01 00:30:33,190 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Job modify finished with results {'heat_outputs': [{u'output_value': u'default-domain:admin:f68d0924-ef20-4c1b-ac45-0e6b879af5e7', u'description': u'Fully Qualified Name of the VMI', u'output_key': u'fq_name'}, {u'output_value': {u'allowed_address_pair': []}, u'description': u'Virtual machine allowed address pairs.', u'output_key': u'allowed_address_pairs'}, {u'output_value': u'bb927b26-ba6b-4049-9b55-54af3e1ea997', u'description': u'Monitoring Target ID', u'output_key': u'monitoring_target_id'}, {u'output_value': [u'fa:16:3e:f7:60:7f'], u'description': u'Virtual machine interface mac address.', u'output_key': u'mac_address'}, {u'output_value': [[u'default-domain', u'admin', u'b62eefe0-0872-478d-adfe-1a606320f0e7']], u'description': u'Virtual network.', u'output_key': u'virtual_network'}, {u'output_value': u'f68d0924-ef20-4c1b-ac45-0e6b879af5e7', u'description': u'A unique id for the virtual machine interface.', u'output_key': u'id'}, {u'output_value': u'http://collector-agents-se:7070/targets/bb927b26-ba6b-4049-9b55-54af3e1ea997', u'description': u'Monitoring Process Link', u'output_key': u'monitoring_link'}], 'orchestration_state': u'UPDATE_COMPLETE', 'error': None} (heat_stacks_worker.py - 103)
+2019-02-01 00:30:33,247 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Job modify:heat_worker:port:3a04e6ed-68fb-4534-8822-d5162d19f35a:2:28a9m finished. (job_queue.py - 266)
+2019-02-01 00:30:33,248 [1;37mINFO[0m heat_worker - port:3a04e6ed-68fb-4534-8822-d5162d19f35a - Trying to delete internal process state for resource port:3a04e6ed-68fb-4534-8822-d5162d19f35a (resources.py - 701)
+2019-02-01 00:30:52,740 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
+2019-02-01 00:30:52,741 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:30:52,741 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
+2019-02-01 00:31:22,751 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
+2019-02-01 00:31:22,752 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:31:22,752 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
+2019-02-01 00:31:52,763 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
+2019-02-01 00:31:52,764 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:31:52,764 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
+2019-02-01 00:32:22,776 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
+2019-02-01 00:32:22,777 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:32:22,777 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
+2019-02-01 00:32:52,790 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
+2019-02-01 00:32:52,790 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:32:52,790 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
+2019-02-01 00:33:22,803 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
+2019-02-01 00:33:22,804 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:33:22,804 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)
+2019-02-01 00:33:52,809 [1;34mDEBUG[0m heat_worker - GetJob timeout. (etcd_worker.py - 227)
+2019-02-01 00:33:52,810 [1;34mDEBUG[0m heat_worker - Waiting for a job. (etcd_worker.py - 218)
+2019-02-01 00:33:52,810 [1;34mDEBUG[0m heat_worker - 8 job slots available (etcd_worker.py - 213)

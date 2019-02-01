@@ -1,0 +1,493 @@
+ * Serving Flask app "mockapi" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2019-02-01 00:26:26,687:INFO: * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
+2019-02-01 00:29:50,803:DEBUG:*** request data=[{u'tenant_id': u'4b4cb858859842a389d0b0c8eb567d59', u'resource_name': u'sample-network', u'namespace': u'logical-network', u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]
+2019-02-01 00:29:50,803:INFO:172.20.0.6 - - [01/Feb/2019 00:29:50] "POST /v2/resources HTTP/1.1" 200 -
+2019-02-01 00:29:51,880:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:24:51.793516Z', u'time': u'2019-02-01T00:29:51.793471Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:29:51Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:29:51,881:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:29:51,881:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:29:51,881:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:29:51,881:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:29:56,911:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:24:56.881464Z', u'time': u'2019-02-01T00:29:56.881444Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:29:56Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:29:56,911:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:29:56,911:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:29:56,912:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:29:56,912:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:30:01,942:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:01.912273Z', u'time': u'2019-02-01T00:30:01.912255Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:30:01Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:30:01,942:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:30:01,942:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:01,942:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:01,942:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:30:06,968:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:06.942694Z', u'time': u'2019-02-01T00:30:06.942676Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:30:06Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:30:06,968:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:30:06,968:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:06,969:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:06,969:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:30:11,994:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:11.969292Z', u'time': u'2019-02-01T00:30:11.969265Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:30:11Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:30:11,995:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:30:11,995:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:11,995:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:11,995:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:30:17,026:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:16.995690Z', u'time': u'2019-02-01T00:30:16.995670Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:30:17Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:30:17,027:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:30:17,027:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:17,027:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:17,027:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:30:22,055:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:22.027534Z', u'time': u'2019-02-01T00:30:22.027513Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:30:22Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:30:22,055:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:30:22,055:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:22,055:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:22,055:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:30:27,083:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:27.055817Z', u'time': u'2019-02-01T00:30:27.055797Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:30:27Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:30:27,084:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:30:27,084:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:27,084:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:27,084:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:30:32,114:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:32.084554Z', u'time': u'2019-02-01T00:30:32.084528Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:30:32Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:30:32,114:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:30:32,114:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:32,114:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:32,114:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:30:33,404:DEBUG:*** request data=[{u'tenant_id': u'4b4cb858859842a389d0b0c8eb567d59', u'parent_resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1', u'namespace': u'logical-network-port', u'resource_name': u'sample-port', u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]
+2019-02-01 00:30:33,405:INFO:172.20.0.6 - - [01/Feb/2019 00:30:33] "POST /v2/resources HTTP/1.1" 200 -
+2019-02-01 00:30:37,148:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:37.115117Z', u'time': u'2019-02-01T00:30:37.115098Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:30:37Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:30:37,148:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:30:37,148:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:37,148:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:37,148:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:30:37,174:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:37.149025Z', u'time': u'2019-02-01T00:30:37.149013Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': []}]
+2019-02-01 00:30:37,174:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:30:37,174:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:30:37,175:DEBUG: -> Actual_resource_id=[[]]
+2019-02-01 00:30:37,175:ERROR:*** Get Port_status : Failed!!
+2019-02-01 00:30:42,206:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:42.175353Z', u'time': u'2019-02-01T00:30:42.175331Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:30:42Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:30:42,206:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:30:42,206:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:42,206:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:42,206:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:30:42,322:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:42.206575Z', u'time': u'2019-02-01T00:30:42.206564Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': []}]
+2019-02-01 00:30:42,322:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:30:42,322:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:30:42,322:DEBUG: -> Actual_resource_id=[[]]
+2019-02-01 00:30:42,322:ERROR:*** Get Port_status : Failed!!
+2019-02-01 00:30:43,473:INFO:172.20.0.6 - - [01/Feb/2019 00:30:43] "POST /v2/resources HTTP/1.1" 409 -
+2019-02-01 00:30:47,351:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:47.323062Z', u'time': u'2019-02-01T00:30:47.323031Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:30:47Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:30:47,351:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:30:47,352:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:47,352:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:47,352:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:30:47,379:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:47.352284Z', u'time': u'2019-02-01T00:30:47.352275Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': []}]
+2019-02-01 00:30:47,379:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:30:47,379:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:30:47,379:DEBUG: -> Actual_resource_id=[[]]
+2019-02-01 00:30:47,379:ERROR:*** Get Port_status : Failed!!
+2019-02-01 00:30:52,408:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:52.379863Z', u'time': u'2019-02-01T00:30:52.379847Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:30:52Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:30:52,408:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:30:52,408:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:52,408:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:52,408:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:30:52,435:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:52.409005Z', u'time': u'2019-02-01T00:30:52.408995Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': []}]
+2019-02-01 00:30:52,435:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:30:52,435:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:30:52,435:DEBUG: -> Actual_resource_id=[[]]
+2019-02-01 00:30:52,435:ERROR:*** Get Port_status : Failed!!
+2019-02-01 00:30:53,541:INFO:172.20.0.6 - - [01/Feb/2019 00:30:53] "POST /v2/resources HTTP/1.1" 409 -
+2019-02-01 00:30:57,481:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:57.436050Z', u'time': u'2019-02-01T00:30:57.436025Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:30:57Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:30:57,481:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:30:57,482:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:57,482:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:30:57,482:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:30:57,511:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:25:57.482523Z', u'time': u'2019-02-01T00:30:57.482509Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': []}]
+2019-02-01 00:30:57,512:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:30:57,512:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:30:57,512:DEBUG: -> Actual_resource_id=[[]]
+2019-02-01 00:30:57,512:ERROR:*** Get Port_status : Failed!!
+2019-02-01 00:31:02,537:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:02.512480Z', u'time': u'2019-02-01T00:31:02.512463Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:31:02Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:31:02,538:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:31:02,538:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:02,538:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:02,538:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:31:02,562:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:02.538477Z', u'time': u'2019-02-01T00:31:02.538466Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': []}]
+2019-02-01 00:31:02,562:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:31:02,562:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:02,562:DEBUG: -> Actual_resource_id=[[]]
+2019-02-01 00:31:02,562:ERROR:*** Get Port_status : Failed!!
+2019-02-01 00:31:03,607:INFO:172.20.0.6 - - [01/Feb/2019 00:31:03] "POST /v2/resources HTTP/1.1" 409 -
+2019-02-01 00:31:07,589:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:07.563275Z', u'time': u'2019-02-01T00:31:07.563254Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:31:07Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:31:07,589:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:31:07,589:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:07,589:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:07,589:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:31:07,614:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:07.589725Z', u'time': u'2019-02-01T00:31:07.589715Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': []}]
+2019-02-01 00:31:07,614:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:31:07,614:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:07,614:DEBUG: -> Actual_resource_id=[[]]
+2019-02-01 00:31:07,614:ERROR:*** Get Port_status : Failed!!
+2019-02-01 00:31:12,642:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:12.614807Z', u'time': u'2019-02-01T00:31:12.614789Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:31:12Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:31:12,642:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:31:12,642:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:12,643:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:12,643:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:31:12,670:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:12.643390Z', u'time': u'2019-02-01T00:31:12.643380Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': []}]
+2019-02-01 00:31:12,670:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:31:12,670:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:12,670:DEBUG: -> Actual_resource_id=[[]]
+2019-02-01 00:31:12,670:ERROR:*** Get Port_status : Failed!!
+2019-02-01 00:31:13,677:INFO:172.20.0.6 - - [01/Feb/2019 00:31:13] "POST /v2/resources HTTP/1.1" 409 -
+2019-02-01 00:31:17,699:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:17.670881Z', u'time': u'2019-02-01T00:31:17.670855Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:31:17Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:31:17,700:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:31:17,700:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:17,700:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:17,700:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:31:17,726:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:17.700498Z', u'time': u'2019-02-01T00:31:17.700487Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': []}]
+2019-02-01 00:31:17,727:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:31:17,727:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:17,727:DEBUG: -> Actual_resource_id=[[]]
+2019-02-01 00:31:17,727:ERROR:*** Get Port_status : Failed!!
+2019-02-01 00:31:22,754:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:22.727470Z', u'time': u'2019-02-01T00:31:22.727452Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:31:22Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:31:22,754:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:31:22,754:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:22,754:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:22,754:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:31:22,781:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:22.754780Z', u'time': u'2019-02-01T00:31:22.754770Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:31:22Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:31:22,781:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:31:22,781:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:22,781:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:22,781:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:31:23,760:INFO:172.20.0.6 - - [01/Feb/2019 00:31:23] "POST /v2/resources HTTP/1.1" 409 -
+2019-02-01 00:31:27,809:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:27.781735Z', u'time': u'2019-02-01T00:31:27.781717Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:31:27Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:31:27,809:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:31:27,810:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:27,810:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:27,810:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:31:27,838:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:27.810272Z', u'time': u'2019-02-01T00:31:27.810262Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:31:27Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:31:27,838:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:31:27,838:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:27,838:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:27,838:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:31:32,865:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:32.839059Z', u'time': u'2019-02-01T00:31:32.839041Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:31:32Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:31:32,865:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:31:32,865:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:32,865:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:32,865:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:31:32,889:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:32.865993Z', u'time': u'2019-02-01T00:31:32.865983Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:31:32Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:31:32,890:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:31:32,890:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:32,890:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:32,890:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:31:33,832:INFO:172.20.0.6 - - [01/Feb/2019 00:31:33] "POST /v2/resources HTTP/1.1" 409 -
+2019-02-01 00:31:37,915:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:37.890736Z', u'time': u'2019-02-01T00:31:37.890707Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:31:37Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:31:37,916:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:31:37,916:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:37,916:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:37,916:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:31:37,940:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:37.916467Z', u'time': u'2019-02-01T00:31:37.916456Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:31:37Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:31:37,940:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:31:37,940:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:37,940:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:37,940:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:31:42,965:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:42.940677Z', u'time': u'2019-02-01T00:31:42.940658Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:31:42Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:31:42,965:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:31:42,965:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:42,965:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:42,965:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:31:42,995:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:42.965740Z', u'time': u'2019-02-01T00:31:42.965729Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:31:42Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:31:42,995:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:31:42,995:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:42,995:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:42,995:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:31:43,900:INFO:172.20.0.6 - - [01/Feb/2019 00:31:43] "POST /v2/resources HTTP/1.1" 409 -
+2019-02-01 00:31:48,030:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:47.995898Z', u'time': u'2019-02-01T00:31:47.995871Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:31:48Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:31:48,031:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:31:48,031:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:48,031:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:48,031:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:31:48,064:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:48.031562Z', u'time': u'2019-02-01T00:31:48.031549Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:31:48Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:31:48,064:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:31:48,064:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:48,064:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:48,064:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:31:53,093:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:53.065052Z', u'time': u'2019-02-01T00:31:53.065034Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:31:53Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:31:53,093:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:31:53,093:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:53,093:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:53,093:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:31:53,120:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:53.093728Z', u'time': u'2019-02-01T00:31:53.093717Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:31:53Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:31:53,120:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:31:53,121:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:53,121:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:53,121:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:31:53,979:INFO:172.20.0.6 - - [01/Feb/2019 00:31:53] "POST /v2/resources HTTP/1.1" 409 -
+2019-02-01 00:31:58,148:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:58.121402Z', u'time': u'2019-02-01T00:31:58.121381Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:31:58Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:31:58,149:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:31:58,149:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:58,149:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:31:58,149:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:31:58,177:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:26:58.149440Z', u'time': u'2019-02-01T00:31:58.149429Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:31:58Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:31:58,177:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:31:58,177:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:58,177:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:31:58,177:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:32:03,208:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:03.178265Z', u'time': u'2019-02-01T00:32:03.178238Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:32:03Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:32:03,208:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:32:03,208:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:03,208:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:03,208:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:32:03,235:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:03.208867Z', u'time': u'2019-02-01T00:32:03.208857Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:32:03Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:32:03,235:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:32:03,235:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:03,235:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:03,235:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:32:08,262:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:08.236084Z', u'time': u'2019-02-01T00:32:08.236063Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:32:08Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:32:08,263:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:32:08,263:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:08,263:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:08,263:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:32:08,289:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:08.263494Z', u'time': u'2019-02-01T00:32:08.263484Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:32:08Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:32:08,289:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:32:08,289:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:08,289:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:08,290:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:32:13,316:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:13.290141Z', u'time': u'2019-02-01T00:32:13.290122Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:32:13Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:32:13,316:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:32:13,317:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:13,317:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:13,317:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:32:13,342:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:13.317315Z', u'time': u'2019-02-01T00:32:13.317305Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:32:13Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:32:13,342:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:32:13,343:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:13,343:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:13,343:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:32:18,369:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:18.343392Z', u'time': u'2019-02-01T00:32:18.343366Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:32:18Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:32:18,370:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:32:18,370:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:18,370:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:18,370:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:32:18,397:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:18.370427Z', u'time': u'2019-02-01T00:32:18.370416Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:32:18Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:32:18,397:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:32:18,397:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:18,397:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:18,398:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:32:23,423:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:23.398199Z', u'time': u'2019-02-01T00:32:23.398179Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:32:23Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:32:23,423:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:32:23,424:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:23,424:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:23,424:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:32:23,448:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:23.424333Z', u'time': u'2019-02-01T00:32:23.424322Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:32:23Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:32:23,448:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:32:23,448:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:23,448:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:23,448:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:32:28,474:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:28.448716Z', u'time': u'2019-02-01T00:32:28.448696Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:32:28Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:32:28,474:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:32:28,474:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:28,474:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:28,474:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:32:28,501:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:28.474672Z', u'time': u'2019-02-01T00:32:28.474662Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:32:28Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:32:28,501:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:32:28,501:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:28,501:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:28,501:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:32:33,530:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:33.502057Z', u'time': u'2019-02-01T00:32:33.502039Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:32:33Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:32:33,530:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:32:33,530:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:33,530:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:33,530:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:32:33,555:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:33.530915Z', u'time': u'2019-02-01T00:32:33.530905Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:32:33Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:32:33,556:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:32:33,556:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:33,556:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:33,556:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:32:38,581:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:38.556568Z', u'time': u'2019-02-01T00:32:38.556549Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:32:38Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:32:38,582:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:32:38,582:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:38,582:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:38,582:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:32:38,606:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:38.582428Z', u'time': u'2019-02-01T00:32:38.582419Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:32:38Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:32:38,606:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:32:38,606:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:38,606:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:38,606:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:32:43,632:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:43.607016Z', u'time': u'2019-02-01T00:32:43.606998Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:32:43Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:32:43,632:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:32:43,632:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:43,632:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:43,632:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:32:43,659:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:43.633054Z', u'time': u'2019-02-01T00:32:43.633044Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:32:43Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:32:43,659:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:32:43,659:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:43,659:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:43,659:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:32:48,685:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:48.659845Z', u'time': u'2019-02-01T00:32:48.659826Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:32:48Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:32:48,685:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:32:48,685:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:48,685:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:48,685:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:32:48,710:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:48.686035Z', u'time': u'2019-02-01T00:32:48.686025Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:32:48Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:32:48,710:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:32:48,710:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:48,710:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:48,710:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:32:53,736:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:53.711382Z', u'time': u'2019-02-01T00:32:53.711362Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:32:53Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:32:53,736:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:32:53,736:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:53,736:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:53,736:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:32:53,760:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:53.737090Z', u'time': u'2019-02-01T00:32:53.737079Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:32:53Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:32:53,760:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:32:53,761:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:53,761:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:53,761:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:32:58,788:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:58.761408Z', u'time': u'2019-02-01T00:32:58.761367Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:32:58Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:32:58,789:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:32:58,789:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:58,789:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:32:58,789:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:32:58,814:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:27:58.789542Z', u'time': u'2019-02-01T00:32:58.789531Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:32:58Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:32:58,814:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:32:58,814:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:58,814:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:32:58,815:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:33:03,846:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:03.815237Z', u'time': u'2019-02-01T00:33:03.815179Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:33:03Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:33:03,846:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:33:03,846:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:03,846:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:03,846:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:33:03,874:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:03.847011Z', u'time': u'2019-02-01T00:33:03.847002Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:33:03Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:33:03,874:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:33:03,874:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:03,874:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:03,874:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:33:08,906:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:08.875145Z', u'time': u'2019-02-01T00:33:08.875119Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:33:08Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:33:08,906:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:33:08,906:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:08,907:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:08,907:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:33:08,936:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:08.907304Z', u'time': u'2019-02-01T00:33:08.907292Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:33:08Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:33:08,936:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:33:08,936:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:08,936:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:08,936:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:33:13,969:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:13.937250Z', u'time': u'2019-02-01T00:33:13.937222Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:33:13Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:33:13,969:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:33:13,969:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:13,970:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:13,970:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:33:13,997:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:13.970269Z', u'time': u'2019-02-01T00:33:13.970258Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:33:13Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:33:13,997:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:33:13,997:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:13,997:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:13,997:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:33:19,030:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:18.997781Z', u'time': u'2019-02-01T00:33:18.997753Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:33:19Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:33:19,030:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:33:19,030:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:19,031:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:19,031:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:33:19,062:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:19.031324Z', u'time': u'2019-02-01T00:33:19.031311Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:33:19Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:33:19,062:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:33:19,062:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:19,063:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:19,063:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:33:24,091:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:24.063327Z', u'time': u'2019-02-01T00:33:24.063308Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:33:24Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:33:24,091:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:33:24,091:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:24,091:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:24,091:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:33:24,117:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:24.091641Z', u'time': u'2019-02-01T00:33:24.091630Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:33:24Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:33:24,117:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:33:24,117:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:24,117:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:24,117:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:33:29,144:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:29.117906Z', u'time': u'2019-02-01T00:33:29.117885Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:33:29Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:33:29,144:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:33:29,144:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:29,144:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:29,145:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:33:29,170:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:29.145115Z', u'time': u'2019-02-01T00:33:29.145105Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:33:29Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:33:29,171:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:33:29,171:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:29,171:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:29,171:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:33:34,202:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:34.171784Z', u'time': u'2019-02-01T00:33:34.171759Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:33:34Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:33:34,203:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:33:34,203:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:34,203:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:34,203:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:33:34,231:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:34.203498Z', u'time': u'2019-02-01T00:33:34.203487Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:33:34Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:33:34,232:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:33:34,232:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:34,232:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:34,232:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:33:39,260:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:39.232492Z', u'time': u'2019-02-01T00:33:39.232465Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:33:39Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:33:39,261:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:33:39,261:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:39,261:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:39,261:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:33:39,289:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:39.261399Z', u'time': u'2019-02-01T00:33:39.261388Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:33:39Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:33:39,289:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:33:39,289:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:39,289:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:39,289:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:33:44,317:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:44.289763Z', u'time': u'2019-02-01T00:33:44.289736Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:33:44Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:33:44,317:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:33:44,318:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:44,318:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:44,318:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:33:44,344:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:44.318412Z', u'time': u'2019-02-01T00:33:44.318400Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:33:44Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:33:44,344:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:33:44,344:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:44,344:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:44,344:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:33:49,372:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:49.344833Z', u'time': u'2019-02-01T00:33:49.344806Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:33:49Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:33:49,372:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:33:49,372:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:49,372:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:49,372:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:33:49,398:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:49.372713Z', u'time': u'2019-02-01T00:33:49.372700Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:33:49Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:33:49,398:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:33:49,398:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:49,398:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:49,398:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:33:54,424:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:54.399180Z', u'time': u'2019-02-01T00:33:54.399161Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:33:54Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:33:54,424:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:33:54,424:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:54,424:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:54,425:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:33:54,449:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:54.425154Z', u'time': u'2019-02-01T00:33:54.425143Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:33:54Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:33:54,449:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:33:54,449:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:54,449:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:54,449:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:33:59,474:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:59.449782Z', u'time': u'2019-02-01T00:33:59.449762Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:33:59Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:33:59,474:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:33:59,474:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:59,474:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:33:59,475:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:33:59,498:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:28:59.475174Z', u'time': u'2019-02-01T00:33:59.475164Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:33:59Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:33:59,498:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:33:59,498:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:59,498:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:33:59,498:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:34:04,525:DEBUG:*** Get Network_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:29:04.499046Z', u'time': u'2019-02-01T00:34:04.499026Z'}, u'namespace': u'logical-network', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network.network.status.bool', u'acquired_at': u'2019-02-01T00:34:04Z', u'value': True, u'resource_id': u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1'}]}]
+2019-02-01 00:34:04,525:DEBUG: -> Target_namespace=[logical-network]
+2019-02-01 00:34:04,525:DEBUG: -> Expect_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:34:04,525:DEBUG: -> Actual_resource_id=[[u'b761b0cd-d7c3-4b7a-b596-cea1cf9cc1e1']]
+2019-02-01 00:34:04,525:INFO:*** Get Network_status : Succeed!!
+2019-02-01 00:34:04,549:DEBUG:*** Get Port_status_result data=[{u'query': {u'per_page': 1000, u'page': 1, u'backscan': u'2019-02-01T00:29:04.525591Z', u'time': u'2019-02-01T00:34:04.525581Z'}, u'namespace': u'logical-network-port', u'page': {u'next': None}, u'resources': [{u'metric': u'logical-network-port.port.status.bool', u'acquired_at': u'2019-02-01T00:34:04Z', u'value': True, u'resource_id': u'3a04e6ed-68fb-4534-8822-d5162d19f35a'}]}]
+2019-02-01 00:34:04,549:DEBUG: -> Target_namespace=[logical-network-port]
+2019-02-01 00:34:04,550:DEBUG: -> Expect_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:34:04,550:DEBUG: -> Actual_resource_id=[[u'3a04e6ed-68fb-4534-8822-d5162d19f35a']]
+2019-02-01 00:34:04,550:INFO:*** Get Port_status : Succeed!!
+2019-02-01 00:34:09,572:DEBUG:*** Get Network_status_result data=[{u'error': u''}]
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/eventlet/hubs/poll.py", line 97, in wait
+    readers.get(fileno, noop).cb(fileno)
+  File "/usr/lib/python2.7/dist-packages/eventlet/greenthread.py", line 194, in main
+    result = function(*args, **kwargs)
+  File "/sample/mockapi.py", line 151, in _loop_checking_status
+    logging.debug(" -> Target_namespace=[{0}]".format(result['namespace']))
+KeyError: 'namespace'
+Removing descriptor: 5

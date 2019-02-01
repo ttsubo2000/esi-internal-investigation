@@ -19,7 +19,7 @@ These are stored data for "heat_templates" in etcd.
             "image": "Fvnf_template+vnf_template_id:image",
             "reboot": "Preboot",
             "user_data": "Puser_data",
-            "heat_timeout": "C18",
+            "heat_timeout": "C30",
             "version": "Vauto_filled",
             "gohan_id": "Pid",
             "flavor": "Fvnf_plan+vnf_plan_id:flavor",

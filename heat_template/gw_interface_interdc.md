@@ -7,190 +7,190 @@ These are stored data for "heat_templates" in etcd.
 /config/v2.0/heat_templates/gw_interface_interdc
 {
     "body": {
-        "handler": "heat_worker", 
-        "watch": [], 
-        "id": "gw_interface_interdc", 
-        "template_file": "heat_template_version: 2013-05-23\n\ndescription: >\n  Gateway Interface Inter DC\n\nparameters:\n  primary_device_ip:\n    description: Ip address that will be used to establish ssh connection to the Primary Device.\n    label: Ip address of the device.\n    type: string\n  primary_device_port:\n    description: Port that will be used to establish ssh connection to the Primary Device.\n    label: Port of the ssh connection.\n    type: number\n  primary_device_username:\n    description: Name of the user which will be used to log onto the Primary Device.\n    label: User name to log on to device.\n    type: string\n  primary_device_password:\n    description: Password of the user which will be used to log onto the Primary Device.\n    label: Users password.\n    type: string\n    hidden: true\n  primary_device_physical_downlink_interface:\n    description: MX physical port on which logical interface will be created\n    label: Underlying physical interface\n    type: string\n  primary_device_physical_uplink_interface:\n    description: MX physical port on which logical interface will be created\n    label: Underlying physical interface\n    type: string\n  secondary_device_ip:\n    description: Ip address that will be used to establish ssh connection to the Secondary Device.\n    label: Ip address of the device.\n    type: string\n  secondary_device_port:\n    description: Port that will be used to establish ssh connection to the Secondary Device.\n    label: Port of the ssh connection.\n    type: number\n  secondary_device_username:\n    description: Name of the user which will be used to log onto the Secondary Device.\n    label: User name to log on to device.\n    type: string\n  secondary_device_password:\n    description: Password of the user which will be used to log onto the Secondary Device.\n    label: Users password.\n    type: string\n    hidden: true\n  secondary_device_physical_downlink_interface:\n    description: MX physical port on which logical interface will be created\n    label: Underlying physical interface\n    type: string\n  secondary_device_physical_uplink_interface:\n    description: MX physical port on which logical interface will be created\n    label: Underlying physical interface\n    type: string\n  downlink_vlan_id:\n    description: Vlan tag for mx logical downlink interface\n    label: Vlan Tag\n    type: string\n  uplink_vlan_id:\n    description: Vlan tag for mx logical uplink interface\n    label: Vlan Tag\n    type: string\n  gw_vip:\n    description: Virtual IP configured on VRRP\n    label: Inet Address CIDR\n    type: string\n  primary_device_gw_ip:\n    description: IP on primary device\n    label: Inet Address CIDR\n    type: string\n  secondary_device_gw_ip:\n    description: IP on secondary device\n    label: Inet Address CIDR\n    type: string\n  netmask:\n    description: Netmask for gw_ip\n    label: Netmask\n    type: number\n  vrrp_group:\n    type: string\n    label: VRRP Group\n  primary_device_priority:\n    type: string\n    label: Primary device priority\n  secondary_device_priority:\n    type: string\n    label: Secondary device priority\n  vrf_name:\n    type: string\n    label: VRF\n  primary_logical_interface_name:\n    description: MX logical port\n    label: Underlying logical interface\n    type: string\n  secondary_logical_interface_name:\n    description: MX logical port\n    label: Underlying logical interface\n    type: string\n  gohan_id:\n    type: string\n    label: Gohan resource ID\n    description: UUID of the GW Interface\n  tenant_id:\n    type: string\n    label: Tenant ID\n  version:\n    type: number\n    label: Config version\nresources:\n{% for device in [\"primary\", \"secondary\"] %}\n  netconf_configure_{{ device }}:\n    type: OS::Contrail::NetconfNamedConfigs\n    {% if device == \"secondary\" %}depends_on: netconf_configure_primary{% endif %}\n    properties:\n      lock_timeout: 3000\n      device_ip:\n        get_param: {{ device }}_device_ip\n      password:\n        get_param: {{ device }}_device_password\n      port:\n        get_param: {{ device }}_device_port\n      username:\n        get_param: {{ device }}_device_username\n      configs:\n      - config:\n          str_replace:\n            params:\n              $VRRP_GROUP:\n                get_param: vrrp_group\n              $PRIORITY:\n                get_param: {{ device }}_device_priority\n              $VIP:\n                get_param: gw_vip\n              $UPLINK_IF:\n                get_param: {{device}}_device_physical_uplink_interface\n              $UPLINK_VLAN_ID:\n                get_param: uplink_vlan_id\n            template: |\n              vrrp-group $VRRP_GROUP {\n                virtual-address $VIP;\n                priority $PRIORITY;\n                track {\n                  interface $UPLINK_IF.$UPLINK_VLAN_ID {\n                    priority-cost 10;\n                  }\n                }\n              }\n        path:\n        - config_type: tag\n          xml_type: tag\n          tag: interfaces\n        - config_type: name\n          xml_type: named_tag\n          tag: interface\n          name: { get_param: {{ device }}_device_physical_downlink_interface }\n        - config_type: named_tag\n          xml_type: named_tag\n          tag: unit\n          name: { get_param: downlink_vlan_id }\n        - config_type: tag\n          xml_type: tag\n          tag: family\n        - config_type: tag\n          xml_type: tag\n          tag: inet\n        - config_type: named_tag\n          xml_type: named_tag\n          tag: address\n          name:\n            str_replace:\n              params:\n                $DEVICE_IP:\n                  get_param: {{ device }}_device_gw_ip\n                $NETMASK:\n                  get_param: netmask\n              template: |\n                $DEVICE_IP/$NETMASK\n{% endfor %}\n\n  vrrp_monitor:\n    type: ESI::Monitoring::MonitoringTarget\n    properties:\n      type: vrrp_pool\n      resource_type: gw_interfaces\n      resource_id: { get_param: gohan_id }\n      tenant_id: { get_param: tenant_id }\n      version: { get_param: version }\n      field_name: status\n      properties:\n        vrid:\n          - { get_param: vrrp_group }\n        primary:\n          host: { get_param: primary_device_ip }\n          port: { get_param: primary_device_port }\n          login: { get_param: primary_device_username }\n          password: { get_param: primary_device_password }\n          interface: { get_param: primary_logical_interface_name }\n        secondary:\n          host: { get_param: secondary_device_ip }\n          port: { get_param: secondary_device_port }\n          login: { get_param: secondary_device_username }\n          password: { get_param: secondary_device_password }\n          interface: { get_param: secondary_logical_interface_name }\n      syncer_properties:\n        etcd:\n          status:\n            key: status\n          hold_options:\n            positive_status:\n              primary: MASTER\n              secondary: BACKUP\n            time_seconds: 360\n    depends_on: netconf_configure_secondary\n\noutputs:\n  monitoring_target_id:\n    description: Monitoring Target ID\n    value: { get_resource: vrrp_monitor}\n  monitoring_link:\n    description: Monitoring Process Link\n    value: { get_attr: [vrrp_monitor, link]}\n", 
+        "handler": "heat_worker",
+        "watch": [],
+        "id": "gw_interface_interdc",
+        "template_file": "heat_template_version: 2013-05-23\n\ndescription: >\n  Gateway Interface Inter DC\n\nparameters:\n  primary_device_ip:\n    description: Ip address that will be used to establish ssh connection to the Primary Device.\n    label: Ip address of the device.\n    type: string\n  primary_device_port:\n    description: Port that will be used to establish ssh connection to the Primary Device.\n    label: Port of the ssh connection.\n    type: number\n  primary_device_username:\n    description: Name of the user which will be used to log onto the Primary Device.\n    label: User name to log on to device.\n    type: string\n  primary_device_password:\n    description: Password of the user which will be used to log onto the Primary Device.\n    label: Users password.\n    type: string\n    hidden: true\n  primary_device_physical_downlink_interface:\n    description: MX physical port on which logical interface will be created\n    label: Underlying physical interface\n    type: string\n  primary_device_physical_uplink_interface:\n    description: MX physical port on which logical interface will be created\n    label: Underlying physical interface\n    type: string\n  secondary_device_ip:\n    description: Ip address that will be used to establish ssh connection to the Secondary Device.\n    label: Ip address of the device.\n    type: string\n  secondary_device_port:\n    description: Port that will be used to establish ssh connection to the Secondary Device.\n    label: Port of the ssh connection.\n    type: number\n  secondary_device_username:\n    description: Name of the user which will be used to log onto the Secondary Device.\n    label: User name to log on to device.\n    type: string\n  secondary_device_password:\n    description: Password of the user which will be used to log onto the Secondary Device.\n    label: Users password.\n    type: string\n    hidden: true\n  secondary_device_physical_downlink_interface:\n    description: MX physical port on which logical interface will be created\n    label: Underlying physical interface\n    type: string\n  secondary_device_physical_uplink_interface:\n    description: MX physical port on which logical interface will be created\n    label: Underlying physical interface\n    type: string\n  downlink_vlan_id:\n    description: Vlan tag for mx logical downlink interface\n    label: Vlan Tag\n    type: string\n  uplink_vlan_id:\n    description: Vlan tag for mx logical uplink interface\n    label: Vlan Tag\n    type: string\n  gw_vip:\n    description: Virtual IP configured on VRRP\n    label: Inet Address CIDR\n    type: string\n  primary_device_gw_ip:\n    description: IP on primary device\n    label: Inet Address CIDR\n    type: string\n  secondary_device_gw_ip:\n    description: IP on secondary device\n    label: Inet Address CIDR\n    type: string\n  netmask:\n    description: Netmask for gw_ip\n    label: Netmask\n    type: number\n  vrrp_group:\n    type: string\n    label: VRRP Group\n  primary_device_priority:\n    type: string\n    label: Primary device priority\n  secondary_device_priority:\n    type: string\n    label: Secondary device priority\n  vrf_name:\n    type: string\n    label: VRF\n  primary_logical_interface_name:\n    description: MX logical port\n    label: Underlying logical interface\n    type: string\n  secondary_logical_interface_name:\n    description: MX logical port\n    label: Underlying logical interface\n    type: string\n  gohan_id:\n    type: string\n    label: Gohan resource ID\n    description: UUID of the GW Interface\n  tenant_id:\n    type: string\n    label: Tenant ID\n  version:\n    type: number\n    label: Config version\nresources:\n{% for device in [\"primary\", \"secondary\"] %}\n  netconf_configure_{{ device }}:\n    type: OS::Contrail::NetconfNamedConfigs\n    {% if device == \"secondary\" %}depends_on: netconf_configure_primary{% endif %}\n    properties:\n      lock_timeout: 3000\n      device_ip:\n        get_param: {{ device }}_device_ip\n      password:\n        get_param: {{ device }}_device_password\n      port:\n        get_param: {{ device }}_device_port\n      username:\n        get_param: {{ device }}_device_username\n      configs:\n      - config:\n          str_replace:\n            params:\n              $VRRP_GROUP:\n                get_param: vrrp_group\n              $PRIORITY:\n                get_param: {{ device }}_device_priority\n              $VIP:\n                get_param: gw_vip\n              $UPLINK_IF:\n                get_param: {{device}}_device_physical_uplink_interface\n              $UPLINK_VLAN_ID:\n                get_param: uplink_vlan_id\n            template: |\n              vrrp-group $VRRP_GROUP {\n                virtual-address $VIP;\n                priority $PRIORITY;\n                track {\n                  interface $UPLINK_IF.$UPLINK_VLAN_ID {\n                    priority-cost 10;\n                  }\n                }\n              }\n        path:\n        - config_type: tag\n          xml_type: tag\n          tag: interfaces\n        - config_type: name\n          xml_type: named_tag\n          tag: interface\n          name: { get_param: {{ device }}_device_physical_downlink_interface }\n        - config_type: named_tag\n          xml_type: named_tag\n          tag: unit\n          name: { get_param: downlink_vlan_id }\n        - config_type: tag\n          xml_type: tag\n          tag: family\n        - config_type: tag\n          xml_type: tag\n          tag: inet\n        - config_type: named_tag\n          xml_type: named_tag\n          tag: address\n          name:\n            str_replace:\n              params:\n                $DEVICE_IP:\n                  get_param: {{ device }}_device_gw_ip\n                $NETMASK:\n                  get_param: netmask\n              template: |\n                $DEVICE_IP/$NETMASK\n{% endfor %}\n\n  vrrp_monitor:\n    type: ESI::Monitoring::MonitoringTarget\n    properties:\n      type: vrrp_pool\n      resource_type: gw_interfaces\n      resource_id: { get_param: gohan_id }\n      tenant_id: { get_param: tenant_id }\n      version: { get_param: version }\n      field_name: status\n      properties:\n        vrid:\n          - { get_param: vrrp_group }\n        primary:\n          host: { get_param: primary_device_ip }\n          port: { get_param: primary_device_port }\n          login: { get_param: primary_device_username }\n          password: { get_param: primary_device_password }\n          interface: { get_param: primary_logical_interface_name }\n        secondary:\n          host: { get_param: secondary_device_ip }\n          port: { get_param: secondary_device_port }\n          login: { get_param: secondary_device_username }\n          password: { get_param: secondary_device_password }\n          interface: { get_param: secondary_logical_interface_name }\n      syncer_properties:\n        etcd:\n          status:\n            key: status\n          hold_options:\n            positive_status:\n              - primary: MASTER\n                secondary: BACKUP\n            time_seconds: 360\n    depends_on: netconf_configure_secondary\n\noutputs:\n  monitoring_target_id:\n    description: Monitoring Target ID\n    value: { get_resource: vrrp_monitor}\n  monitoring_link:\n    description: Monitoring Process Link\n    value: { get_attr: [vrrp_monitor, link]}\n",
         "parameter_mappings": {
             "primary_device_password": {
-                "field": "password", 
+                "field": "password",
                 "path": [
-                    "interdc_gw_id", 
-                    "downlink_interface_id", 
-                    "ha_router_id", 
+                    "interdc_gw_id",
+                    "downlink_interface_id",
+                    "ha_router_id",
                     "primary_router_id"
                 ]
-            }, 
+            },
             "secondary_device_gw_ip": {
                 "field": "secondary_ipv4"
-            }, 
+            },
             "gohan_id": {
                 "field": "id"
-            }, 
+            },
             "gw_vip": {
                 "field": "gw_vipv4"
-            }, 
+            },
             "primary_device_ip": {
-                "field": "ip", 
+                "field": "ip",
                 "path": [
-                    "interdc_gw_id", 
-                    "downlink_interface_id", 
-                    "ha_router_id", 
+                    "interdc_gw_id",
+                    "downlink_interface_id",
+                    "ha_router_id",
                     "primary_router_id"
                 ]
-            }, 
+            },
             "version": {
                 "version": "auto_filled"
-            }, 
+            },
             "secondary_device_physical_downlink_interface": {
-                "field": "name", 
+                "field": "name",
                 "path": [
-                    "interdc_gw_id", 
-                    "downlink_interface_id", 
+                    "interdc_gw_id",
+                    "downlink_interface_id",
                     "secondary_interface_id"
                 ]
-            }, 
+            },
             "secondary_device_username": {
-                "field": "login", 
+                "field": "login",
                 "path": [
-                    "interdc_gw_id", 
-                    "downlink_interface_id", 
-                    "ha_router_id", 
+                    "interdc_gw_id",
+                    "downlink_interface_id",
+                    "ha_router_id",
                     "secondary_router_id"
                 ]
-            }, 
+            },
             "downlink_vlan_id": {
-                "field": "downlink_vlan_id", 
+                "field": "downlink_vlan_id",
                 "path": [
                     "interdc_gw_id"
                 ]
-            }, 
+            },
             "primary_device_physical_uplink_interface": {
-                "field": "name", 
+                "field": "name",
                 "path": [
-                    "interdc_gw_id", 
-                    "uplink_interface_id", 
+                    "interdc_gw_id",
+                    "uplink_interface_id",
                     "primary_interface_id"
                 ]
-            }, 
+            },
             "secondary_logical_interface_name": {
-                "field": "secondary_logical_downlink_interface_name", 
+                "field": "secondary_logical_downlink_interface_name",
                 "path": [
                     "interdc_gw_id"
                 ]
-            }, 
+            },
             "jinja_force_dependency1": {
-                "field": "id", 
+                "field": "id",
                 "path": [
                     {
-                        "type": "network", 
+                        "type": "network",
                         "id": "network_id"
                     }
                 ]
-            }, 
+            },
             "primary_logical_interface_name": {
-                "field": "primary_logical_downlink_interface_name", 
+                "field": "primary_logical_downlink_interface_name",
                 "path": [
                     "interdc_gw_id"
                 ]
-            }, 
+            },
             "primary_device_gw_ip": {
                 "field": "primary_ipv4"
-            }, 
+            },
             "netmask": {
                 "field": "netmask"
-            }, 
+            },
             "vrrp_group": {
                 "field": "vrid"
-            }, 
+            },
             "primary_device_priority": {
                 "constant": 105
-            }, 
+            },
             "tenant_id": {
                 "field": "tenant_id"
-            }, 
+            },
             "secondary_device_port": {
-                "field": "ssh_port", 
+                "field": "ssh_port",
                 "path": [
-                    "interdc_gw_id", 
-                    "downlink_interface_id", 
-                    "ha_router_id", 
+                    "interdc_gw_id",
+                    "downlink_interface_id",
+                    "ha_router_id",
                     "secondary_router_id"
                 ]
-            }, 
+            },
             "secondary_device_password": {
-                "field": "password", 
+                "field": "password",
                 "path": [
-                    "interdc_gw_id", 
-                    "downlink_interface_id", 
-                    "ha_router_id", 
+                    "interdc_gw_id",
+                    "downlink_interface_id",
+                    "ha_router_id",
                     "secondary_router_id"
                 ]
-            }, 
+            },
             "uplink_vlan_id": {
-                "field": "uplink_vlan_id", 
+                "field": "uplink_vlan_id",
                 "path": [
                     "interdc_gw_id"
                 ]
-            }, 
+            },
             "heat_timeout": {
                 "constant": 60
-            }, 
+            },
             "vrf_name": {
-                "field": "vrf_name", 
+                "field": "vrf_name",
                 "path": [
                     "interdc_gw_id"
                 ]
-            }, 
+            },
             "primary_device_username": {
-                "field": "login", 
+                "field": "login",
                 "path": [
-                    "interdc_gw_id", 
-                    "downlink_interface_id", 
-                    "ha_router_id", 
+                    "interdc_gw_id",
+                    "downlink_interface_id",
+                    "ha_router_id",
                     "primary_router_id"
                 ]
-            }, 
+            },
             "primary_device_physical_downlink_interface": {
-                "field": "name", 
+                "field": "name",
                 "path": [
-                    "interdc_gw_id", 
-                    "downlink_interface_id", 
+                    "interdc_gw_id",
+                    "downlink_interface_id",
                     "primary_interface_id"
                 ]
-            }, 
+            },
             "secondary_device_priority": {
                 "constant": 100
-            }, 
+            },
             "primary_device_port": {
-                "field": "ssh_port", 
+                "field": "ssh_port",
                 "path": [
-                    "interdc_gw_id", 
-                    "downlink_interface_id", 
-                    "ha_router_id", 
+                    "interdc_gw_id",
+                    "downlink_interface_id",
+                    "ha_router_id",
                     "primary_router_id"
                 ]
-            }, 
+            },
             "secondary_device_physical_uplink_interface": {
-                "field": "name", 
+                "field": "name",
                 "path": [
-                    "interdc_gw_id", 
-                    "uplink_interface_id", 
+                    "interdc_gw_id",
+                    "uplink_interface_id",
                     "secondary_interface_id"
                 ]
-            }, 
+            },
             "secondary_device_ip": {
-                "field": "ip", 
+                "field": "ip",
                 "path": [
-                    "interdc_gw_id", 
-                    "downlink_interface_id", 
-                    "ha_router_id", 
+                    "interdc_gw_id",
+                    "downlink_interface_id",
+                    "ha_router_id",
                     "secondary_router_id"
                 ]
             }
         }
-    }, 
-    "version": 1, 
+    },
+    "version": 1,
     "marked_for_deletion": false
 }
 ```
@@ -411,8 +411,8 @@ resources:
             key: status
           hold_options:
             positive_status:
-              primary: MASTER
-              secondary: BACKUP
+              - primary: MASTER
+                secondary: BACKUP
             time_seconds: 360
     depends_on: netconf_configure_secondary
 

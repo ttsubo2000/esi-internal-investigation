@@ -1,0 +1,32 @@
+2019-04-02 03:01:37.204 22 INFO glance.common.wsgi [-] Starting 4 workers
+2019-04-02 03:01:37.208 22 INFO glance.common.wsgi [-] Started child 36
+2019-04-02 03:01:37.213 36 INFO eventlet.wsgi.server [-] (36) wsgi starting up on http://0.0.0.0:9191
+2019-04-02 03:01:37.212 22 INFO glance.common.wsgi [-] Started child 37
+2019-04-02 03:01:37.217 37 INFO eventlet.wsgi.server [-] (37) wsgi starting up on http://0.0.0.0:9191
+2019-04-02 03:01:37.217 22 INFO glance.common.wsgi [-] Started child 38
+2019-04-02 03:01:37.222 38 INFO eventlet.wsgi.server [-] (38) wsgi starting up on http://0.0.0.0:9191
+2019-04-02 03:01:37.222 22 INFO glance.common.wsgi [-] Started child 39
+2019-04-02 03:01:37.227 39 INFO eventlet.wsgi.server [-] (39) wsgi starting up on http://0.0.0.0:9191
+2019-04-02 03:01:43.999 65 INFO glance.common.wsgi [-] Starting 4 workers
+2019-04-02 03:01:44.003 65 INFO glance.common.wsgi [-] Started child 78
+2019-04-02 03:01:44.008 78 INFO eventlet.wsgi.server [-] (78) wsgi starting up on http://0.0.0.0:9191
+2019-04-02 03:01:44.008 65 INFO glance.common.wsgi [-] Started child 79
+2019-04-02 03:01:44.013 79 INFO eventlet.wsgi.server [-] (79) wsgi starting up on http://0.0.0.0:9191
+2019-04-02 03:01:44.013 65 INFO glance.common.wsgi [-] Started child 80
+2019-04-02 03:01:44.018 80 INFO eventlet.wsgi.server [-] (80) wsgi starting up on http://0.0.0.0:9191
+2019-04-02 03:01:44.018 65 INFO glance.common.wsgi [-] Started child 81
+2019-04-02 03:01:44.023 81 INFO eventlet.wsgi.server [-] (81) wsgi starting up on http://0.0.0.0:9191
+2019-04-02 03:03:34.712 81 WARNING keystonemiddleware.auth_token [-] Using the in-process token cache is deprecated as of the 4.2.0 release and may be removed in the 5.0.0 release or the 'O' development cycle. The in-process cache causes inconsistent results and high memory usage. When the feature is removed the auth_token middleware will not cache tokens by default which may result in performance issues. It is recommended to use  memcache for the auth_token token cache by setting the memcached_servers option.
+2019-04-02 03:03:35.074 81 INFO eventlet.wsgi.server [req-72f2661f-0dea-4cf2-9a38-9f44a5746e8e 4763e26949b143fcab1ea1b20e9a8490 d2a4608bbd28402196acdba7a1632daf - - -] 127.0.0.1 - - [02/Apr/2019 03:03:35] "GET /images/detail?limit=20&name=vyatta-0108-2016 HTTP/1.1" 200 920 0.364123
+2019-04-02 03:03:36.554 79 WARNING keystonemiddleware.auth_token [-] Using the in-process token cache is deprecated as of the 4.2.0 release and may be removed in the 5.0.0 release or the 'O' development cycle. The in-process cache causes inconsistent results and high memory usage. When the feature is removed the auth_token middleware will not cache tokens by default which may result in performance issues. It is recommended to use  memcache for the auth_token token cache by setting the memcached_servers option.
+2019-04-02 03:03:36.745 79 INFO eventlet.wsgi.server [req-fe04f483-bffd-463e-9974-c521227d6bd8 4763e26949b143fcab1ea1b20e9a8490 d2a4608bbd28402196acdba7a1632daf - - -] 127.0.0.1 - - [02/Apr/2019 03:03:36] "GET /images/detail?limit=20&name=vyatta-0108-2016 HTTP/1.1" 200 920 0.192145
+2019-04-02 03:03:36.916 81 INFO eventlet.wsgi.server [req-9bc7b388-54c6-415b-81ce-9a173b7cf752 4763e26949b143fcab1ea1b20e9a8490 d2a4608bbd28402196acdba7a1632daf - - -] 127.0.0.1 - - [02/Apr/2019 03:03:36] "GET /images/detail?limit=20&name=vyatta-0108-2016 HTTP/1.1" 200 920 0.056742
+2019-04-02 03:03:36.945 78 WARNING keystonemiddleware.auth_token [-] Using the in-process token cache is deprecated as of the 4.2.0 release and may be removed in the 5.0.0 release or the 'O' development cycle. The in-process cache causes inconsistent results and high memory usage. When the feature is removed the auth_token middleware will not cache tokens by default which may result in performance issues. It is recommended to use  memcache for the auth_token token cache by setting the memcached_servers option.
+2019-04-02 03:03:37.255 78 INFO eventlet.wsgi.server [req-fc6c0c87-2646-4b3f-aeff-0f3aecbd7ed3 4763e26949b143fcab1ea1b20e9a8490 d2a4608bbd28402196acdba7a1632daf - - -] 127.0.0.1 - - [02/Apr/2019 03:03:37] "GET /images/detail?limit=20&name=vyatta-0108-2016 HTTP/1.1" 200 920 0.310080
+2019-04-02 03:03:41.156 80 WARNING keystonemiddleware.auth_token [-] Using the in-process token cache is deprecated as of the 4.2.0 release and may be removed in the 5.0.0 release or the 'O' development cycle. The in-process cache causes inconsistent results and high memory usage. When the feature is removed the auth_token middleware will not cache tokens by default which may result in performance issues. It is recommended to use  memcache for the auth_token token cache by setting the memcached_servers option.
+2019-04-02 03:03:41.427 80 INFO eventlet.wsgi.server [req-f5bea0d4-96b8-4227-9ba6-9cc416c04d4e 4763e26949b143fcab1ea1b20e9a8490 d2a4608bbd28402196acdba7a1632daf - - -] 127.0.0.1 - - [02/Apr/2019 03:03:41] "GET /images/9fc4bb4b-a95d-4d86-8510-8679969d969b HTTP/1.1" 200 917 0.274951
+2019-04-02 03:10:05.682 80 INFO eventlet.wsgi.server [req-11922afd-313c-489f-9076-a46a14175507 4763e26949b143fcab1ea1b20e9a8490 d2a4608bbd28402196acdba7a1632daf - - -] 127.0.0.1 - - [02/Apr/2019 03:10:05] "GET /images/9fc4bb4b-a95d-4d86-8510-8679969d969b HTTP/1.1" 200 917 0.056928
+2019-04-02 03:10:34.107 79 INFO eventlet.wsgi.server [req-cb447922-b8f8-46f8-8cd5-d4fff7462036 4763e26949b143fcab1ea1b20e9a8490 d2a4608bbd28402196acdba7a1632daf - - -] 127.0.0.1 - - [02/Apr/2019 03:10:34] "GET /images/detail?limit=20&name=vyatta-0108-2016 HTTP/1.1" 200 920 0.058559
+2019-04-02 03:10:34.283 80 INFO eventlet.wsgi.server [req-c8dfe73c-c257-4dff-a68d-5e4f7542b51f 4763e26949b143fcab1ea1b20e9a8490 d2a4608bbd28402196acdba7a1632daf - - -] 127.0.0.1 - - [02/Apr/2019 03:10:34] "GET /images/detail?limit=20&name=vyatta-0108-2016 HTTP/1.1" 200 920 0.054487
+2019-04-02 03:10:36.517 80 INFO eventlet.wsgi.server [req-f0eb58d0-ee79-469f-bfec-995f9ca402a7 4763e26949b143fcab1ea1b20e9a8490 d2a4608bbd28402196acdba7a1632daf - - -] 127.0.0.1 - - [02/Apr/2019 03:10:36] "GET /images/detail?limit=20&name=vyatta-0108-2016 HTTP/1.1" 200 920 0.043200
+2019-04-02 03:15:08.758 80 INFO eventlet.wsgi.server [req-8e1e67e6-e0f1-4809-afed-209cef9b12f6 4763e26949b143fcab1ea1b20e9a8490 d2a4608bbd28402196acdba7a1632daf - - -] 127.0.0.1 - - [02/Apr/2019 03:15:08] "GET /images/9fc4bb4b-a95d-4d86-8510-8679969d969b HTTP/1.1" 200 917 0.048463

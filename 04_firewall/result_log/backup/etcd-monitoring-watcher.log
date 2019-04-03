@@ -1,254 +1,549 @@
-2018-02-12 07:38:10,759:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:38:10,760:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:38:10,760:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:38:10,761:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:38:10,764:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:41:25,700:DEBUG:
+2019-04-02 03:01:14,441:DEBUG:New etcd client created for etcd-server:2379/v2
+2019-04-02 03:01:14,442:DEBUG:Starting new HTTP connection (1): etcd-server:2379
+2019-04-02 03:01:14,445:DEBUG:http://etcd-server:2379 "GET /v2/machines HTTP/1.1" 200 23
+2019-04-02 03:01:14,445:DEBUG:Retrieved list of machines: [u'http://etcd-server:2379']
+2019-04-02 03:01:14,446:DEBUG:Machines cache initialised to []
+2019-04-02 03:01:14,446:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:01:14,446:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:01:14,447:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:01:34,443:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:01:34,444:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:01:34,445:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:01:34,445:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:01:34,446:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:01:34,446:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:01:34,447:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:01:34,449:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:01:54,469:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:01:54,472:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:01:54,473:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:01:54,473:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:01:54,474:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:01:54,474:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:01:54,475:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:01:54,477:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:02:14,469:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:02:14,473:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:02:14,473:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:02:14,474:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:02:14,474:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:02:14,475:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:02:14,475:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:02:14,477:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:02:34,477:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:02:34,478:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:02:34,478:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:02:34,479:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:02:34,479:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:02:34,480:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:02:34,480:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:02:34,482:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:02:54,501:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:02:54,504:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:02:54,504:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:02:54,504:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:02:54,505:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:02:54,505:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:02:54,506:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:02:54,508:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:03:14,503:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:03:14,506:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:03:14,506:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:03:14,507:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:03:14,508:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:03:14,508:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:03:14,509:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:03:14,511:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:03:34,505:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:03:34,506:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:03:34,506:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:03:34,507:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:03:34,507:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:03:34,507:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:03:34,508:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:03:34,510:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:03:54,531:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:03:54,534:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:03:54,534:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:03:54,535:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:03:54,535:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:03:54,536:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:03:54,536:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:03:54,539:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:04:05,196:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/ports/cdde9cfd-a898-4911-b812-b6849f611549],
+ action=[set], key=[/monitoring/v2.0/ports/47c9831b-b346-4317-bc44-f942ecaee54c],
  value=[{
     "version": 3, 
     "vmi": "UP"
 }]
-2018-02-12 07:41:25,701:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:41:25,704:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:41:25,704:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:41:25,705:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:41:25,706:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:45:26,095:DEBUG:
+2019-04-02 03:04:05,197:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:04:05,198:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:04:05,200:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:04:25,219:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:04:25,222:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:04:25,223:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:04:25,223:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:04:25,224:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:04:25,224:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:04:25,225:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:04:25,228:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:04:45,219:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:04:45,222:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:04:45,222:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:04:45,222:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:04:45,223:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:04:45,223:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:04:45,224:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:04:45,225:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:05:05,223:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:05:05,224:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:05:05,224:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:05:05,225:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:05:05,225:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:05:05,225:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:05:05,226:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:05:05,227:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:05:25,246:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:05:25,249:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:05:25,249:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:05:25,250:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:05:25,250:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:05:25,251:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:05:25,251:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:05:25,253:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:05:45,247:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:05:45,249:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:05:45,250:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:05:45,250:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:05:45,251:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:05:45,251:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:05:45,252:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:05:45,254:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:06:05,249:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:06:05,252:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:06:05,252:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:06:05,252:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:06:05,253:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:06:05,253:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:06:05,254:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:06:05,256:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:06:25,276:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:06:25,278:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:06:25,279:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:06:25,279:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:06:25,280:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:06:25,280:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:06:25,281:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:06:25,283:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:06:45,275:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:06:45,276:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:06:45,276:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:06:45,277:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:06:45,277:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:06:45,278:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:06:45,278:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:06:45,280:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:07:05,276:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:07:05,278:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:07:05,279:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:07:05,279:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:07:05,279:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:07:05,280:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:07:05,280:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:07:05,282:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:07:25,302:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:07:25,303:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:07:25,303:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:07:25,304:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:07:25,304:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:07:25,305:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:07:25,305:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:07:25,307:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:07:45,305:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:07:45,308:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:07:45,308:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:07:45,308:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:07:45,309:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:07:45,309:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:07:45,310:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:07:45,312:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:08:05,310:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:08:05,310:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:08:05,311:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:08:05,311:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:08:05,311:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:08:05,312:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:08:05,312:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:08:05,314:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:08:11,658:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/ports/fd09eda4-10b1-4534-984a-7124c338c69d],
+ action=[set], key=[/monitoring/v2.0/ports/160234ca-2b72-4029-b3ff-8c83d82b9c5a],
  value=[{
     "version": 3, 
     "vmi": "UP"
 }]
-2018-02-12 07:45:26,096:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:45:26,098:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:45:26,098:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:45:26,099:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:45:26,103:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:45:26,118:DEBUG:
+2019-04-02 03:08:11,659:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:08:11,659:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:08:11,661:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:08:26,991:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/ports/cdde9cfd-a898-4911-b812-b6849f611549],
+ action=[set], key=[/monitoring/v2.0/ports/47c97a61-e3e8-403a-b662-a117935c7a02],
  value=[{
     "version": 3, 
-    "vmi": "FAIL"
+    "vmi": "UP"
 }]
-2018-02-12 07:45:26,119:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:45:26,120:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:45:26,121:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:45:26,123:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:45:26,125:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:45:46,307:DEBUG:
+2019-04-02 03:08:26,993:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:08:26,993:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:08:26,995:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:08:47,009:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:08:47,010:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:08:47,011:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:08:47,011:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:08:47,012:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:08:47,012:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:08:47,013:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:08:47,015:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:09:07,001:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:09:07,004:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:09:07,004:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:09:07,005:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:09:07,005:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:09:07,006:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:09:07,006:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:09:07,008:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:09:22,380:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/vnf_instances/44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb],
+ action=[set], key=[/monitoring/v2.0/vnf_instances/c10935ab-768a-4901-8953-11f9d3987949],
  value=[{
     "version": 1, 
     "server": "UP"
 }]
-2018-02-12 07:45:46,308:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:45:46,308:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:45:46,309:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:45:46,310:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:45:46,311:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:45:50,020:DEBUG:
+2019-04-02 03:09:22,380:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:09:22,381:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:09:22,382:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:09:26,872:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/firewalls/8e4c20be-d221-43f4-8325-0162c1f06166],
+ action=[set], key=[/monitoring/v2.0/firewalls/dbd98e9a-30ba-4b9b-a2a4-ef4ddb3d36cc],
  value=[{
     "firewall": "UP", 
     "version": 1
 }]
-2018-02-12 07:45:50,021:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:45:50,022:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:45:50,022:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:45:50,023:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:45:50,024:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:45:52,415:DEBUG:
+2019-04-02 03:09:26,872:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:09:26,873:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:09:26,874:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:09:30,214:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/firewall_interfaces/3543155d-0d9a-43a3-ae77-3479cf8a0e4a],
+ action=[set], key=[/monitoring/v2.0/firewall_interfaces/69718be2-0ae7-4601-bead-face902fe88e],
  value=[{
     "interface": "UP", 
     "version": 1
 }]
-2018-02-12 07:45:52,415:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:45:52,416:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:45:52,417:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:45:52,418:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:45:52,421:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:45:52,459:DEBUG:
+2019-04-02 03:09:30,216:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:09:30,216:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:09:30,218:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:09:30,223:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/firewall_interfaces/1c351257-d185-40b7-b04a-6272de75d434],
+ action=[set], key=[/monitoring/v2.0/firewall_interfaces/e262b311-b17e-442b-adb1-41e93117067d],
  value=[{
     "interface": "UP", 
     "version": 1
 }]
-2018-02-12 07:45:52,460:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:45:52,460:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:45:52,461:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:45:52,463:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:45:52,466:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:45:52,497:DEBUG:
+2019-04-02 03:09:30,223:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:09:30,224:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:09:30,226:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:09:30,274:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/firewall_interfaces/cdf30a48-8cf7-4935-9f8a-5b51f1177704],
+ action=[set], key=[/monitoring/v2.0/firewall_interfaces/1fbbd8eb-0e12-4178-96e8-7454faed5f82],
  value=[{
     "interface": "UP", 
     "version": 1
 }]
-2018-02-12 07:45:52,498:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:45:52,503:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:45:52,503:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:45:52,505:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:45:52,506:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:47:07,904:DEBUG:
+2019-04-02 03:09:30,275:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:09:30,276:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:09:30,277:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:09:50,299:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:09:50,299:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:09:50,300:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:09:50,300:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:09:50,301:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:09:50,301:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:09:50,302:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:09:50,304:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:10:10,298:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:10:10,300:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:10:10,301:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:10:10,301:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:10:10,302:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:10:10,302:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:10:10,305:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:10:10,307:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:10:30,305:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:10:30,306:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:10:30,307:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:10:30,307:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:10:30,308:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:10:30,309:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:10:30,310:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:10:30,312:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:10:33,969:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/monitoring/v2.0/ports/dea87c7b-b43f-4936-8e32-8995b038b3f8],
+ action=[delete], key=[/monitoring/v2.0/ports/160234ca-2b72-4029-b3ff-8c83d82b9c5a],
  value=[]
-2018-02-12 07:47:07,905:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:47:07,906:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:47:07,906:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:47:07,907:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:47:07,909:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:47:16,666:DEBUG:
+2019-04-02 03:10:33,970:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:10:33,971:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:10:33,972:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:10:44,950:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/monitoring/v2.0/ports/fd09eda4-10b1-4534-984a-7124c338c69d],
+ action=[delete], key=[/monitoring/v2.0/ports/47c97a61-e3e8-403a-b662-a117935c7a02],
  value=[]
-2018-02-12 07:47:16,666:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:47:16,667:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:47:16,667:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:47:16,668:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:47:16,670:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:47:26,148:DEBUG:
+2019-04-02 03:10:44,951:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:10:44,952:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:10:44,953:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:11:04,953:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:11:04,955:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:11:04,956:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:11:04,956:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:11:04,957:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:11:04,957:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:11:04,958:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:11:04,960:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:11:24,979:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:11:24,981:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:11:24,982:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:11:24,982:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:11:24,983:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:11:24,983:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:11:24,984:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:11:24,986:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:11:44,982:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:11:44,984:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:11:44,985:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:11:44,985:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:11:44,986:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:11:44,986:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:11:44,987:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:11:44,989:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:12:04,987:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:12:04,989:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:12:04,990:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:12:04,990:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:12:04,991:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:12:04,991:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:12:04,992:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:12:04,994:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:12:14,394:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/ports/cdde9cfd-a898-4911-b812-b6849f611549],
+ action=[set], key=[/monitoring/v2.0/ports/3bf53c24-5937-4b84-b276-0babb300b79d],
  value=[{
     "version": 3, 
     "vmi": "UP"
 }]
-2018-02-12 07:47:26,149:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:47:26,150:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:47:26,150:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:47:26,151:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:47:26,153:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:48:56,586:DEBUG:
+2019-04-02 03:12:14,395:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:12:14,397:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:12:14,402:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:12:24,338:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/monitoring/v2.0/vnf_instances/44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb],
+ action=[delete], key=[/monitoring/v2.0/vnf_instances/c10935ab-768a-4901-8953-11f9d3987949],
  value=[]
-2018-02-12 07:48:56,586:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:48:56,587:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:48:56,588:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:48:56,589:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:48:56,590:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:49:04,257:DEBUG:
+2019-04-02 03:12:24,340:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:12:24,341:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:12:24,342:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:12:28,051:DEBUG:
 *** Consume stored data in etcd ***
- action=[delete], key=[/monitoring/v2.0/firewall_interfaces/3543155d-0d9a-43a3-ae77-3479cf8a0e4a],
- value=[]
-2018-02-12 07:49:04,257:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:49:04,258:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:49:04,259:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:49:04,259:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:49:04,261:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:49:11,867:DEBUG:
-*** Consume stored data in etcd ***
- action=[delete], key=[/monitoring/v2.0/firewalls/8e4c20be-d221-43f4-8325-0162c1f06166],
- value=[]
-2018-02-12 07:49:11,867:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:49:11,868:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:49:11,868:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:49:11,870:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:49:11,871:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:49:26,182:DEBUG:
-*** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/ports/fd09eda4-10b1-4534-984a-7124c338c69d],
+ action=[set], key=[/monitoring/v2.0/ports/47c97a61-e3e8-403a-b662-a117935c7a02],
  value=[{
     "version": 6, 
     "vmi": "UP"
 }]
-2018-02-12 07:49:26,182:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:49:26,183:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:49:26,184:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:49:26,184:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:49:26,188:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:49:26,205:DEBUG:
+2019-04-02 03:12:28,064:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:12:28,076:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:12:28,092:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:12:32,922:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/ports/cdde9cfd-a898-4911-b812-b6849f611549],
- value=[{
-    "version": 3, 
-    "vmi": "FAIL"
-}]
-2018-02-12 07:49:26,206:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:49:26,207:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:49:26,208:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:49:26,212:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:49:26,217:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:49:52,602:DEBUG:
+ action=[delete], key=[/monitoring/v2.0/firewall_interfaces/1fbbd8eb-0e12-4178-96e8-7454faed5f82],
+ value=[]
+2019-04-02 03:12:32,923:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:12:32,923:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:12:32,925:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:12:41,507:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/firewall_interfaces/3543155d-0d9a-43a3-ae77-3479cf8a0e4a],
- value=[{
-    "interface": "UP", 
-    "version": 2
-}]
-2018-02-12 07:49:52,604:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:49:52,604:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:49:52,605:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:49:52,605:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:49:52,607:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:49:56,606:DEBUG:
+ action=[delete], key=[/monitoring/v2.0/firewalls/dbd98e9a-30ba-4b9b-a2a4-ef4ddb3d36cc],
+ value=[]
+2019-04-02 03:12:41,508:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:12:41,508:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:12:41,510:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:13:01,502:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:13:01,505:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:13:01,505:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:13:01,506:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:13:01,506:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:13:01,507:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:13:01,507:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:13:01,509:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:13:21,527:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:13:21,530:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:13:21,530:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:13:21,531:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:13:21,532:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:13:21,532:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:13:21,533:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:13:21,535:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:13:24,313:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/vnf_instances/44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb],
+ action=[set], key=[/monitoring/v2.0/vnf_instances/c10935ab-768a-4901-8953-11f9d3987949],
  value=[{
     "version": 2, 
     "server": "UP"
 }]
-2018-02-12 07:49:56,606:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:49:56,607:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:49:56,607:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:49:56,609:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:49:56,612:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:50:11,886:DEBUG:
+2019-04-02 03:13:24,313:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:13:24,315:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:13:24,316:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:13:30,242:DEBUG:
 *** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/firewalls/8e4c20be-d221-43f4-8325-0162c1f06166],
+ action=[set], key=[/monitoring/v2.0/firewall_interfaces/1fbbd8eb-0e12-4178-96e8-7454faed5f82],
+ value=[{
+    "interface": "UP", 
+    "version": 2
+}]
+2019-04-02 03:13:30,243:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:13:30,243:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:13:30,245:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:13:41,483:DEBUG:
+*** Consume stored data in etcd ***
+ action=[set], key=[/monitoring/v2.0/firewalls/dbd98e9a-30ba-4b9b-a2a4-ef4ddb3d36cc],
  value=[{
     "firewall": "UP", 
     "version": 2
 }]
-2018-02-12 07:50:11,887:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:50:11,887:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:50:11,889:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:50:11,890:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:50:11,896:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:53:26,263:DEBUG:
-*** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/ports/472879c4-4611-4762-a069-293e0081bcbf],
- value=[{
-    "version": 3, 
-    "vmi": "UP"
-}]
-2018-02-12 07:53:26,266:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:53:26,267:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:53:26,268:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:53:26,269:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:53:26,276:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:53:26,293:DEBUG:
-*** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/ports/fd09eda4-10b1-4534-984a-7124c338c69d],
- value=[{
-    "version": 6, 
-    "vmi": "FAIL"
-}]
-2018-02-12 07:53:26,294:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:53:26,294:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:53:26,295:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:53:26,295:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:53:26,297:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
-2018-02-12 07:54:26,308:DEBUG:
-*** Consume stored data in etcd ***
- action=[set], key=[/monitoring/v2.0/ports/472879c4-4611-4762-a069-293e0081bcbf],
- value=[{
-    "version": 3, 
-    "vmi": "FAIL"
-}]
-2018-02-12 07:54:26,309:DEBUG:New etcd client created for etcd-server:2379/v2
-2018-02-12 07:54:26,311:DEBUG:About to wait on key /monitoring, index None
-2018-02-12 07:54:26,312:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
-2018-02-12 07:54:26,313:DEBUG:Starting new HTTP connection (1): etcd-server
-2018-02-12 07:54:26,316:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:13:41,484:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:13:41,484:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:13:41,485:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:14:01,484:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:14:01,487:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:14:01,487:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:14:01,488:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:14:01,488:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:14:01,488:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:14:01,489:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:14:01,491:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:14:21,506:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:14:21,507:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:14:21,507:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:14:21,508:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:14:21,508:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:14:21,508:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:14:21,509:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:14:21,511:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:14:41,495:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:14:41,496:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:14:41,496:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:14:41,497:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:14:41,497:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:14:41,498:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:14:41,498:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:14:41,500:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:15:01,498:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:15:01,500:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:15:01,501:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:15:01,501:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:15:01,502:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:15:01,502:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:15:01,503:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:15:01,504:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:15:21,510:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:15:21,511:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:15:21,512:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:15:21,512:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:15:21,513:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:15:21,513:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:15:21,514:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:15:21,515:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:15:41,510:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:15:41,511:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:15:41,511:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:15:41,512:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:15:41,513:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:15:41,514:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:15:41,514:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:15:41,517:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:16:01,510:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:16:01,511:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:16:01,512:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:16:01,512:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:16:01,513:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:16:01,514:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:16:01,515:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:16:01,518:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:16:21,539:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:16:21,542:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:16:21,543:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:16:21,543:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:16:21,544:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:16:21,544:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:16:21,545:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:16:21,547:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:16:41,544:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:16:41,545:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:16:41,546:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:16:41,547:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:16:41,547:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:16:41,548:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:16:41,548:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:16:41,551:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:17:01,548:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:17:01,549:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:17:01,549:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:17:01,549:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:17:01,550:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:17:01,550:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:17:01,551:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:17:01,553:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:17:21,565:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:17:21,568:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:17:21,569:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:17:21,569:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:17:21,569:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:17:21,570:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:17:21,571:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:17:21,573:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:17:41,569:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:17:41,572:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:17:41,573:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:17:41,573:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:17:41,574:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:17:41,575:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:17:41,576:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:17:41,579:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:18:01,575:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:18:01,577:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:18:01,577:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:18:01,578:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:18:01,579:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:18:01,580:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:18:01,581:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:18:01,583:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:18:21,596:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:18:21,600:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:18:21,601:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:18:21,602:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:18:21,603:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:18:21,603:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:18:21,604:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:18:21,607:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:18:41,604:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:18:41,607:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:18:41,608:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:18:41,609:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:18:41,610:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:18:41,611:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:18:41,611:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:18:41,614:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None
+2019-04-02 03:19:01,613:ERROR:Request to server http://etcd-server:2379 failed: ReadTimeoutError("HTTPConnectionPool(host='etcd-server', port=2379): Read timed out.",)
+2019-04-02 03:19:01,614:INFO:Reconnection allowed, looking for another server.
+2019-04-02 03:19:01,614:DEBUG:Selection next machine in cache. Available machines: []
+2019-04-02 03:19:01,615:ERROR:Machines cache is empty, no machines to try.
+2019-04-02 03:19:01,615:DEBUG:About to wait on key /monitoring, index None
+2019-04-02 03:19:01,616:DEBUG:Issuing read for key /monitoring with args {'recursive': True, 'timeout': None, 'wait': True}
+2019-04-02 03:19:01,616:DEBUG:Resetting dropped connection: etcd-server
+2019-04-02 03:19:01,618:DEBUG:http://etcd-server:2379 "GET /v2/keys/monitoring?recursive=true&wait=true HTTP/1.1" 200 None

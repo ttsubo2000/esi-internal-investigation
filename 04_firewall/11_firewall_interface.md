@@ -15,12 +15,12 @@ First of all, Gohan has received JSON data for "Update Firewall Interface" in HT
 
 * Checking JSON data at post method
 ```
-PUT /v2.0/firewall_interfaces/3543155d-0d9a-43a3-ae77-3479cf8a0e4a
+PUT /v2.0/firewall_interfaces/1fbbd8eb-0e12-4178-96e8-7454faed5f82
 ```
 ```
 {
     "firewall_interface": {
-        "network_id": "82712b89-c35c-4276-83cb-818860d41f9e"
+        "network_id": "0422f224-5da3-4f01-8ba5-2ae68f241774"
     }
 }
 ```
@@ -124,7 +124,7 @@ As a result, Heat has stored heat-stacks for "Update Firewall Interface".
 ### (1) Stopping vnf-instace in nova-comoute
 * from heat to nova
 ```
-POST /v2/0f40dffa48614d9baa7eaac7e7532099/servers/2e555b09-e0d7-4cce-8854-c481a2363917/action
+POST /v2/d2a4608bbd28402196acdba7a1632daf/servers/dab11f56-f0f2-4cac-bee6-6cec5038458c/action
 ```
 ```
 {
@@ -132,75 +132,127 @@ POST /v2/0f40dffa48614d9baa7eaac7e7532099/servers/2e555b09-e0d7-4cce-8854-c481a2
 }
 ```
 ### (2) deleting interface in nova-comoute
+* from gohan to nova
+```
+POST /v2/d2a4608bbd28402196acdba7a1632daf/os-server-external-events
+```
+```
+{
+    "events": [
+        {
+            "name": "network-vif-deleted",
+            "server_uuid": "dab11f56-f0f2-4cac-bee6-6cec5038458c",
+            "status": "completed",
+            "tag": "160234ca-2b72-4029-b3ff-8c83d82b9c5a"
+        }
+    ]
+}
+```
 * from heat to nova
 ```
-DELETE /v2/0f40dffa48614d9baa7eaac7e7532099/servers/2e555b09-e0d7-4cce-8854-c481a2363917/os-interface/dea87c7b-b43f-4936-8e32-8995b038b3f8
-```
-* from nova to gohan
-```
-DELETE /v2.0/ports/dea87c7b-b43f-4936-8e32-8995b038b3f8.json
+DELETE /v2/d2a4608bbd28402196acdba7a1632daf/servers/dab11f56-f0f2-4cac-bee6-6cec5038458c/os-interface/160234ca-2b72-4029-b3ff-8c83d82b9c5a
 ```
 ### (3) deleting interface in nova-comoute
 * from heat to nova
 ```
-DELETE /v2/0f40dffa48614d9baa7eaac7e7532099/servers/2e555b09-e0d7-4cce-8854-c481a2363917/os-interface/fd09eda4-10b1-4534-984a-7124c338c69d
+DELETE /v2/d2a4608bbd28402196acdba7a1632daf/servers/dab11f56-f0f2-4cac-bee6-6cec5038458c/os-interface/47c97a61-e3e8-403a-b662-a117935c7a02
 ```
 * from nova to gohan
 ```
-DELETE /v2.0/ports/fd09eda4-10b1-4534-984a-7124c338c69d.json
+PUT /v2.0/ports/47c97a61-e3e8-403a-b662-a117935c7a02.json
+```
+```
+{   
+    "port": {
+        "device_owner": "",
+        "device_id": ""
+    }
+}
 ```
 ### (4) Attaching interface in nova-comoute
 * from heat to nova
 ```
-POST /v2/0f40dffa48614d9baa7eaac7e7532099/servers/2e555b09-e0d7-4cce-8854-c481a2363917/os-interface
+POST /v2/d2a4608bbd28402196acdba7a1632daf/servers/dab11f56-f0f2-4cac-bee6-6cec5038458c/os-interface
 ```
 ```
 {
     "interfaceAttachment": {
-        "port_id": "472879c4-4611-4762-a069-293e0081bcbf"
+        "port_id": "3bf53c24-5937-4b84-b276-0babb300b79d"
     }
 }
 ```
 * from nova to gohan
 ```
-PUT /v2.0/ports/472879c4-4611-4762-a069-293e0081bcbf.json
+PUT /v2.0/ports/3bf53c24-5937-4b84-b276-0babb300b79d.json
 ```
 ```
 {
     "port": {
         "device_owner": "compute:nova",
-        "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917"
+        "device_id": "dab11f56-f0f2-4cac-bee6-6cec5038458c"
     }
+}
+```
+* from gohan to nova
+```
+POST /v2/d2a4608bbd28402196acdba7a1632daf/os-server-external-events
+```
+```
+{
+    "events": [
+        {
+            "name": "network-vif-plugged",
+            "server_uuid": "dab11f56-f0f2-4cac-bee6-6cec5038458c",
+            "status": "completed",
+            "tag": "3bf53c24-5937-4b84-b276-0babb300b79d"
+        }
+    ]
 }
 ```
 ### (5) Attaching interface in nova-comoute
 * from heat to nova
 ```
-POST /v2/0f40dffa48614d9baa7eaac7e7532099/servers/2e555b09-e0d7-4cce-8854-c481a2363917/os-interface
+POST /v2/d2a4608bbd28402196acdba7a1632daf/servers/dab11f56-f0f2-4cac-bee6-6cec5038458c/os-interface
 ```
 ```
 {
     "interfaceAttachment": {
-        "port_id": "fd09eda4-10b1-4534-984a-7124c338c69d"
+        "port_id": "47c97a61-e3e8-403a-b662-a117935c7a02"
     }
 }
 ```
 * from nova to gohan
 ```
-PUT /v2.0/ports/fd09eda4-10b1-4534-984a-7124c338c69d.json
+PUT /v2.0/ports/47c97a61-e3e8-403a-b662-a117935c7a02.json
 ```
 ```
 {
     "port": {
         "device_owner": "compute:nova",
-        "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917"
+        "device_id": "dab11f56-f0f2-4cac-bee6-6cec5038458c"
     }
+}
+```
+* from gohan to nova
+```
+POST /v2/d2a4608bbd28402196acdba7a1632daf/os-server-external-events
+```
+```
+{
+    "events": [
+        {
+            "name": "network-vif-plugged",
+            "server_uuid": "dab11f56-f0f2-4cac-bee6-6cec5038458c",
+            "status": "completed",
+            "tag": "47c97a61-e3e8-403a-b662-a117935c7a02"
+        }
+    ]
 }
 ```
 ### (6) Starting vnf-instace in nova-comoute
 * from heat to nova
 ```
-POST /v2/0f40dffa48614d9baa7eaac7e7532099/servers/2e555b09-e0d7-4cce-8854-c481a2363917/action
+POST /v2/d2a4608bbd28402196acdba7a1632daf/servers/dab11f56-f0f2-4cac-bee6-6cec5038458c/action
 ```
 ```
 {
@@ -237,24 +289,24 @@ As a result, checking resources regarding of "Firewall Interface" in gohan.
 
 * Checking the target of resources via gohan client
 ```
-$ gohan client firewall_interface show --output-format json 3543155d-0d9a-43a3-ae77-3479cf8a0e4a
+$ gohan client firewall_interface show --output-format json 1fbbd8eb-0e12-4178-96e8-7454faed5f82
 {
     "firewall_interface": {
         "description": null,
-        "firewall_id": "8e4c20be-d221-43f4-8325-0162c1f06166",
-        "id": "3543155d-0d9a-43a3-ae77-3479cf8a0e4a",
-        "ip_address": "10.98.76.3",
+        "firewall_id": "dbd98e9a-30ba-4b9b-a2a4-ef4ddb3d36cc",
+        "id": "1fbbd8eb-0e12-4178-96e8-7454faed5f82",
+        "ip_address": "10.98.77.3",
         "name": "dp0s4",
-        "network_id": "82712b89-c35c-4276-83cb-818860d41f9e",
+        "network_id": "0422f224-5da3-4f01-8ba5-2ae68f241774",
         "operational_state": "UP",
         "orchestration_state": "UPDATE_COMPLETE",
         "slot_number": 1,
         "status": "ACTIVE",
-        "tenant_id": "0f40dffa48614d9baa7eaac7e7532099",
+        "tenant_id": "d2a4608bbd28402196acdba7a1632daf",
         "type": "user",
         "virtual_ip_address": null,
         "virtual_ip_properties": null,
-        "vnf_interface_id": "c6cf2771-be40-4d16-ba15-20a62f8b78f6"
+        "vnf_interface_id": "20e0aabb-d2db-4b0f-89f6-61f685f1af0d"
     }
 }
 ```
@@ -269,27 +321,27 @@ $ gohan client billing_resource list --output-format json
         {
             "config_version": 2,
             "ended": null,
-            "id": "613357ec-62d3-43d8-a1ee-146986f4ace3",
+            "id": "a75ba422-35f4-422f-a750-289e92813b41",
             "info": {},
             "parent_billing_id": null,
-            "resource_id": "8e4c20be-d221-43f4-8325-0162c1f06166",
+            "resource_id": "dbd98e9a-30ba-4b9b-a2a4-ef4ddb3d36cc",
             "resource_type": "firewall",
-            "started": 1.51842155e+09,
-            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099",
-            "unique_resource_id": "8e4c20be-d221-43f4-8325-0162c1f06166"
+            "started": 1554174566,
+            "tenant_id": "d2a4608bbd28402196acdba7a1632daf",
+            "unique_resource_id": "dbd98e9a-30ba-4b9b-a2a4-ef4ddb3d36cc"
         },
         {
             "config_version": 2,
             "ended": null,
-            "id": "b95d379f-4019-4396-8fdf-973d826db114",
+            "id": "5425b94a-c38b-4d14-baa0-1cc0c249e5dd",
             "info": {
                 "plan_name": "Brocade_5600_vRouter_3.5R6S3_2CPU-8GB-2IF"
             },
-            "parent_billing_id": "613357ec-62d3-43d8-a1ee-146986f4ace3",
-            "resource_id": "40520774-4f10-4e8c-90fa-550bd4cdf101",
+            "parent_billing_id": "a75ba422-35f4-422f-a750-289e92813b41",
+            "resource_id": "3cf84f69-ae2e-47a1-a8f7-31286603d2f6",
             "resource_type": "firewall_plan",
-            "started": 1.51842155e+09,
-            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099",
+            "started": 1554174566,
+            "tenant_id": "d2a4608bbd28402196acdba7a1632daf",
             "unique_resource_id": null
         }
     ]
@@ -297,7 +349,7 @@ $ gohan client billing_resource list --output-format json
 ```
 * Checking another resources via nova client
 ```
-$ nova show 2e555b09-e0d7-4cce-8854-c481a2363917
+$ nova show dab11f56-f0f2-4cac-bee6-6cec5038458c
 +--------------------------------------+----------------------------------------------------------+
 | Property                             | Value                                                    |
 +--------------------------------------+----------------------------------------------------------+
@@ -309,40 +361,39 @@ $ nova show 2e555b09-e0d7-4cce-8854-c481a2363917
 | OS-EXT-STS:power_state               | 1                                                        |
 | OS-EXT-STS:task_state                | -                                                        |
 | OS-EXT-STS:vm_state                  | active                                                   |
-| OS-SRV-USG:launched_at               | 2018-02-12T07:40:10.000000                               |
+| OS-SRV-USG:launched_at               | 2019-04-02T03:03:43.000000                               |
 | OS-SRV-USG:terminated_at             | -                                                        |
 | accessIPv4                           |                                                          |
 | accessIPv6                           |                                                          |
-| adminpod-net network                 | 100.64.193.3                                             |
+| adminpod-net network                 | 100.64.194.3                                             |
 | config_drive                         |                                                          |
-| created                              | 2018-02-12T07:40:09Z                                     |
-| dummy-net network                    | 10.121.232.4                                             |
+| created                              | 2019-04-02T03:03:41Z                                     |
+| dummy-net network                    | 10.121.233.4                                             |
 | flavor                               | m1.large (4)                                             |
-| hostId                               | a1ada0b7af73f0f3e44a99d3a558afdaf2caf52e3fb9910565b4d755 |
-| id                                   | 2e555b09-e0d7-4cce-8854-c481a2363917                     |
-| image                                | vyatta-0108-2016 (b2cb95f5-1f08-42ae-a1d2-d18b5da04f0c)  |
+| hostId                               | 4f4fbb86d429cec49e95d62cb55cc424096b58690396c7d4ca0ca65b |
+| id                                   | dab11f56-f0f2-4cac-bee6-6cec5038458c                     |
+| image                                | vyatta-0108-2016 (9fc4bb4b-a95d-4d86-8510-8679969d969b)  |
 | key_name                             | -                                                        |
 | metadata                             | {}                                                       |
-| name                                 | firewall-8e4c20be-d221-43f4-8325-0162c1f06166            |
+| name                                 | firewall-dbd98e9a-30ba-4b9b-a2a4-ef4ddb3d36cc            |
 | os-extended-volumes:volumes_attached | []                                                       |
 | progress                             | 0                                                        |
-| sample-fw-net network                | 10.98.76.3                                               |
-| security_groups                      | default                                                  |
+| sample-fw-net network                | 10.98.77.3                                               |
 | status                               | ACTIVE                                                   |
-| tenant_id                            | 0f40dffa48614d9baa7eaac7e7532099                         |
-| updated                              | 2018-02-12T07:48:53Z                                     |
-| user_id                              | 0c7ba6a7a9624837929c5953b2a54c93                         |
+| tenant_id                            | d2a4608bbd28402196acdba7a1632daf                         |
+| updated                              | 2019-04-02T03:12:20Z                                     |
+| user_id                              | 4763e26949b143fcab1ea1b20e9a8490                         |
 +--------------------------------------+----------------------------------------------------------+
 ```
 ```
-$ nova interface-list 2e555b09-e0d7-4cce-8854-c481a2363917
-+------------------------+--------------------------------------+--------------------------------------+--------------+-------------------+
-| Port State             | Port ID                              | Net ID                               | IP addresses | MAC Addr          |
-+------------------------+--------------------------------------+--------------------------------------+--------------+-------------------+
-| MONITORING_UNAVAILABLE | 472879c4-4611-4762-a069-293e0081bcbf | 82712b89-c35c-4276-83cb-818860d41f9e | 10.98.76.3   | fa:16:3e:f0:f2:72 |
-| MONITORING_UNAVAILABLE | cdde9cfd-a898-4911-b812-b6849f611549 | 75c2c3ec-7fe7-494c-a35c-db3f94d3a554 | 100.64.193.3 | fa:16:3e:2f:e8:a6 |
-| ACTIVE                 | fd09eda4-10b1-4534-984a-7124c338c69d | 73b2c401-a1f3-49fb-8612-8c755b37a28d | 10.121.232.4 | fa:16:3e:8e:dd:05 |
-+------------------------+--------------------------------------+--------------------------------------+--------------+-------------------+
+$ nova interface-list dab11f56-f0f2-4cac-bee6-6cec5038458c
++------------+--------------------------------------+--------------------------------------+--------------+-------------------+
+| Port State | Port ID                              | Net ID                               | IP addresses | MAC Addr          |
++------------+--------------------------------------+--------------------------------------+--------------+-------------------+
+| ACTIVE     | 3bf53c24-5937-4b84-b276-0babb300b79d | 0422f224-5da3-4f01-8ba5-2ae68f241774 | 10.98.77.3   | fa:16:3e:ce:cb:b2 |
+| ACTIVE     | 47c97a61-e3e8-403a-b662-a117935c7a02 | 3ad67159-9f73-404a-94da-582bda1641fb | 10.121.233.4 | fa:16:3e:85:92:30 |
+| ACTIVE     | 47c9831b-b346-4317-bc44-f942ecaee54c | 690a259f-d2bb-4674-ba29-07b3619cc537 | 100.64.194.3 | fa:16:3e:b6:b6:57 |
++------------+--------------------------------------+--------------------------------------+--------------+-------------------+
 ```
 * Checking another resources via neutron client
 ```
@@ -350,13 +401,13 @@ $ neutron port-list | grep -v dhcp-server-port
 +--------------------------------------+--------------------------+-------------------+-------------------------------------------------------------------------------------+
 | id                                   | name                     | mac_address       | fixed_ips                                                                           |
 +--------------------------------------+--------------------------+-------------------+-------------------------------------------------------------------------------------+
-| 472879c4-4611-4762-a069-293e0081bcbf | firewall-user-port       | fa:16:3e:f0:f2:72 | {"subnet_id": "a11785e2-0c2b-4131-9144-349155f958f5", "ip_address": "10.98.76.3"}   |
-| cdde9cfd-a898-4911-b812-b6849f611549 | firewall-management-port | fa:16:3e:2f:e8:a6 | {"subnet_id": "c8090497-34be-456b-9186-377e918f3d50", "ip_address": "100.64.193.3"} |
-| fd09eda4-10b1-4534-984a-7124c338c69d | firewall-user-port       | fa:16:3e:8e:dd:05 | {"subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", "ip_address": "10.121.232.4"} |
+| 3bf53c24-5937-4b84-b276-0babb300b79d | firewall-user-port       | fa:16:3e:ce:cb:b2 | {"subnet_id": "8effd73d-925d-4ec9-9cee-8cffc9aafef3", "ip_address": "10.98.77.3"}   |
+| 47c97a61-e3e8-403a-b662-a117935c7a02 | firewall-user-port       | fa:16:3e:85:92:30 | {"subnet_id": "0479131c-e828-4721-abaa-a46265518b89", "ip_address": "10.121.233.4"} |
+| 47c9831b-b346-4317-bc44-f942ecaee54c | firewall-management-port | fa:16:3e:b6:b6:57 | {"subnet_id": "35e00dad-ad5e-46a2-b71d-93b4e72800b1", "ip_address": "100.64.194.3"} |
 +--------------------------------------+--------------------------+-------------------+-------------------------------------------------------------------------------------+
 ```
 ```
-$ neutron port-show 472879c4-4611-4762-a069-293e0081bcbf
+$ neutron port-show 3bf53c24-5937-4b84-b276-0babb300b79d
 +-----------------------+-----------------------------------------------------------------------------------+
 | Field                 | Value                                                                             |
 +-----------------------+-----------------------------------------------------------------------------------+
@@ -365,58 +416,28 @@ $ neutron port-show 472879c4-4611-4762-a069-293e0081bcbf
 | attached              | True                                                                              |
 | binding:vif_type      | vrouter                                                                           |
 | description           |                                                                                   |
-| device_id             | 2e555b09-e0d7-4cce-8854-c481a2363917                                              |
+| device_id             | dab11f56-f0f2-4cac-bee6-6cec5038458c                                              |
 | device_owner          | compute:nova                                                                      |
 | ese_logical_port_id   |                                                                                   |
 | fake_delete           | True                                                                              |
-| fixed_ips             | {"subnet_id": "a11785e2-0c2b-4131-9144-349155f958f5", "ip_address": "10.98.76.3"} |
-| id                    | 472879c4-4611-4762-a069-293e0081bcbf                                              |
-| mac_address           | fa:16:3e:f0:f2:72                                                                 |
+| fixed_ips             | {"subnet_id": "8effd73d-925d-4ec9-9cee-8cffc9aafef3", "ip_address": "10.98.77.3"} |
+| id                    | 3bf53c24-5937-4b84-b276-0babb300b79d                                              |
+| mac_address           | fa:16:3e:ce:cb:b2                                                                 |
 | managed_by_service    | False                                                                             |
 | name                  | firewall-user-port                                                                |
-| network_id            | 82712b89-c35c-4276-83cb-818860d41f9e                                              |
-| operational_state     | FAIL                                                                              |
+| network_id            | 0422f224-5da3-4f01-8ba5-2ae68f241774                                              |
+| operational_state     | UP                                                                                |
 | orchestration_state   | UPDATE_COMPLETE                                                                   |
 | security_groups       |                                                                                   |
 | segmentation_id       | 0                                                                                 |
 | segmentation_type     | flat                                                                              |
-| status                | MONITORING_UNAVAILABLE                                                            |
+| status                | ACTIVE                                                                            |
 | tags                  | {}                                                                                |
-| tenant_id             | 0f40dffa48614d9baa7eaac7e7532099                                                  |
+| tenant_id             | d2a4608bbd28402196acdba7a1632daf                                                  |
 +-----------------------+-----------------------------------------------------------------------------------+
 ```
 ```
-$ neutron port-show cdde9cfd-a898-4911-b812-b6849f611549
-+-----------------------+-------------------------------------------------------------------------------------+
-| Field                 | Value                                                                               |
-+-----------------------+-------------------------------------------------------------------------------------+
-| admin_state_up        | True                                                                                |
-| allowed_address_pairs |                                                                                     |
-| attached              | True                                                                                |
-| binding:vif_type      | vrouter                                                                             |
-| description           |                                                                                     |
-| device_id             | 2e555b09-e0d7-4cce-8854-c481a2363917                                                |
-| device_owner          | compute:nova                                                                        |
-| ese_logical_port_id   |                                                                                     |
-| fake_delete           | True                                                                                |
-| fixed_ips             | {"subnet_id": "c8090497-34be-456b-9186-377e918f3d50", "ip_address": "100.64.193.3"} |
-| id                    | cdde9cfd-a898-4911-b812-b6849f611549                                                |
-| mac_address           | fa:16:3e:2f:e8:a6                                                                   |
-| managed_by_service    | False                                                                               |
-| name                  | firewall-management-port                                                            |
-| network_id            | 75c2c3ec-7fe7-494c-a35c-db3f94d3a554                                                |
-| operational_state     | FAIL                                                                                |
-| orchestration_state   | UPDATE_COMPLETE                                                                     |
-| security_groups       |                                                                                     |
-| segmentation_id       | 0                                                                                   |
-| segmentation_type     | flat                                                                                |
-| status                | MONITORING_UNAVAILABLE                                                              |
-| tags                  | {}                                                                                  |
-| tenant_id             | 0f40dffa48614d9baa7eaac7e7532099                                                    |
-+-----------------------+-------------------------------------------------------------------------------------+
-```
-```
-$ neutron port-show fd09eda4-10b1-4534-984a-7124c338c69d
+$ neutron port-show 47c97a61-e3e8-403a-b662-a117935c7a02
 +-----------------------+-------------------------------------------------------------------------------------+
 | Field                 | Value                                                                               |
 +-----------------------+-------------------------------------------------------------------------------------+
@@ -425,16 +446,16 @@ $ neutron port-show fd09eda4-10b1-4534-984a-7124c338c69d
 | attached              | True                                                                                |
 | binding:vif_type      | vrouter                                                                             |
 | description           |                                                                                     |
-| device_id             | 2e555b09-e0d7-4cce-8854-c481a2363917                                                |
+| device_id             | dab11f56-f0f2-4cac-bee6-6cec5038458c                                                |
 | device_owner          | compute:nova                                                                        |
 | ese_logical_port_id   |                                                                                     |
 | fake_delete           | True                                                                                |
-| fixed_ips             | {"subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88", "ip_address": "10.121.232.4"} |
-| id                    | fd09eda4-10b1-4534-984a-7124c338c69d                                                |
-| mac_address           | fa:16:3e:8e:dd:05                                                                   |
+| fixed_ips             | {"subnet_id": "0479131c-e828-4721-abaa-a46265518b89", "ip_address": "10.121.233.4"} |
+| id                    | 47c97a61-e3e8-403a-b662-a117935c7a02                                                |
+| mac_address           | fa:16:3e:85:92:30                                                                   |
 | managed_by_service    | False                                                                               |
 | name                  | firewall-user-port                                                                  |
-| network_id            | 73b2c401-a1f3-49fb-8612-8c755b37a28d                                                |
+| network_id            | 3ad67159-9f73-404a-94da-582bda1641fb                                                |
 | operational_state     | UP                                                                                  |
 | orchestration_state   | UPDATE_COMPLETE                                                                     |
 | security_groups       |                                                                                     |
@@ -442,26 +463,56 @@ $ neutron port-show fd09eda4-10b1-4534-984a-7124c338c69d
 | segmentation_type     | flat                                                                                |
 | status                | ACTIVE                                                                              |
 | tags                  | {}                                                                                  |
-| tenant_id             | 0f40dffa48614d9baa7eaac7e7532099                                                    |
+| tenant_id             | d2a4608bbd28402196acdba7a1632daf                                                    |
++-----------------------+-------------------------------------------------------------------------------------+
+```
+```
+$ neutron port-show 47c9831b-b346-4317-bc44-f942ecaee54c
++-----------------------+-------------------------------------------------------------------------------------+
+| Field                 | Value                                                                               |
++-----------------------+-------------------------------------------------------------------------------------+
+| admin_state_up        | True                                                                                |
+| allowed_address_pairs |                                                                                     |
+| attached              | True                                                                                |
+| binding:vif_type      | vrouter                                                                             |
+| description           |                                                                                     |
+| device_id             | dab11f56-f0f2-4cac-bee6-6cec5038458c                                                |
+| device_owner          | compute:nova                                                                        |
+| ese_logical_port_id   |                                                                                     |
+| fake_delete           | True                                                                                |
+| fixed_ips             | {"subnet_id": "35e00dad-ad5e-46a2-b71d-93b4e72800b1", "ip_address": "100.64.194.3"} |
+| id                    | 47c9831b-b346-4317-bc44-f942ecaee54c                                                |
+| mac_address           | fa:16:3e:b6:b6:57                                                                   |
+| managed_by_service    | False                                                                               |
+| name                  | firewall-management-port                                                            |
+| network_id            | 690a259f-d2bb-4674-ba29-07b3619cc537                                                |
+| operational_state     | UP                                                                                  |
+| orchestration_state   | UPDATE_COMPLETE                                                                     |
+| security_groups       |                                                                                     |
+| segmentation_id       | 0                                                                                   |
+| segmentation_type     | flat                                                                                |
+| status                | ACTIVE                                                                              |
+| tags                  | {}                                                                                  |
+| tenant_id             | d2a4608bbd28402196acdba7a1632daf                                                    |
 +-----------------------+-------------------------------------------------------------------------------------+
 ```
 * Checking another resources via gohan client
 ```
-$ gohan client firewall show --output-format json 8e4c20be-d221-43f4-8325-0162c1f06166
+$ gohan client firewall show --output-format json dbd98e9a-30ba-4b9b-a2a4-ef4ddb3d36cc
 {
     "firewall": {
         "admin_username": "user-admin",
         "availability_zone": "nova",
         "default_gateway": "192.168.1.1",
         "description": "",
-        "firewall_plan_id": "40520774-4f10-4e8c-90fa-550bd4cdf101",
-        "id": "8e4c20be-d221-43f4-8325-0162c1f06166",
+        "firewall_plan_id": "3cf84f69-ae2e-47a1-a8f7-31286603d2f6",
+        "id": "dbd98e9a-30ba-4b9b-a2a4-ef4ddb3d36cc",
         "interfaces": [
             {
-                "id": "1c351257-d185-40b7-b04a-6272de75d434",
-                "ip_address": "100.64.193.3",
+                "id": "e262b311-b17e-442b-adb1-41e93117067d",
+                "ip_address": "100.64.194.3",
                 "name": "dp0s3",
-                "network_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554",
+                "network_id": "690a259f-d2bb-4674-ba29-07b3619cc537",
                 "operational_state": "UP",
                 "orchestration_state": "CREATE_COMPLETE",
                 "slot_number": 0,
@@ -469,13 +520,13 @@ $ gohan client firewall show --output-format json 8e4c20be-d221-43f4-8325-0162c1
                 "type": "management",
                 "virtual_ip_address": null,
                 "virtual_ip_properties": null,
-                "vnf_interface_id": "c8fef8f8-a7a1-448f-ae76-81992e598016"
+                "vnf_interface_id": "a641f61c-cbc9-447c-b180-a7eaa4a683ad"
             },
             {
-                "id": "3543155d-0d9a-43a3-ae77-3479cf8a0e4a",
-                "ip_address": "10.98.76.3",
+                "id": "1fbbd8eb-0e12-4178-96e8-7454faed5f82",
+                "ip_address": "10.98.77.3",
                 "name": "dp0s4",
-                "network_id": "82712b89-c35c-4276-83cb-818860d41f9e",
+                "network_id": "0422f224-5da3-4f01-8ba5-2ae68f241774",
                 "operational_state": "UP",
                 "orchestration_state": "UPDATE_COMPLETE",
                 "slot_number": 1,
@@ -483,10 +534,10 @@ $ gohan client firewall show --output-format json 8e4c20be-d221-43f4-8325-0162c1
                 "type": "user",
                 "virtual_ip_address": null,
                 "virtual_ip_properties": null,
-                "vnf_interface_id": "c6cf2771-be40-4d16-ba15-20a62f8b78f6"
+                "vnf_interface_id": "20e0aabb-d2db-4b0f-89f6-61f685f1af0d"
             },
             {
-                "id": "cdf30a48-8cf7-4935-9f8a-5b51f1177704",
+                "id": "69718be2-0ae7-4601-bead-face902fe88e",
                 "ip_address": null,
                 "name": "dp0s5",
                 "network_id": null,
@@ -497,7 +548,7 @@ $ gohan client firewall show --output-format json 8e4c20be-d221-43f4-8325-0162c1
                 "type": "user",
                 "virtual_ip_address": null,
                 "virtual_ip_properties": null,
-                "vnf_interface_id": "1e047117-2ca8-43dc-aa80-619b224bab4c"
+                "vnf_interface_id": "3c6c8dcb-16f5-4523-90d0-f06295670928"
             }
         ],
         "name": "",
@@ -505,7 +556,7 @@ $ gohan client firewall show --output-format json 8e4c20be-d221-43f4-8325-0162c1
             {
                 "cidr": "24",
                 "ifname": "dp0s4",
-                "ip_address": "10.98.76.3",
+                "ip_address": "10.98.77.3",
                 "type": "static"
             },
             {
@@ -517,44 +568,44 @@ $ gohan client firewall show --output-format json 8e4c20be-d221-43f4-8325-0162c1
         "orchestration_state": "UPDATE_COMPLETE",
         "other_username": "",
         "status": "ACTIVE",
-        "tenant_id": "0f40dffa48614d9baa7eaac7e7532099",
+        "tenant_id": "d2a4608bbd28402196acdba7a1632daf",
         "user_username": "user-read",
-        "vnf_instance_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+        "vnf_instance_id": "c10935ab-768a-4901-8953-11f9d3987949"
     }
 }
 ```
 ```
-$ gohan client vnf_instance show --output-format json 44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb
+$ gohan client vnf_instance show --output-format json c10935ab-768a-4901-8953-11f9d3987949
 {
     "vnf_instance": {
         "availability_zone": "nova",
         "config_drive": false,
         "description": null,
-        "id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb",
-        "management_ip": "100.64.193.3",
-        "name": "firewall-8e4c20be-d221-43f4-8325-0162c1f06166",
+        "id": "c10935ab-768a-4901-8953-11f9d3987949",
+        "management_ip": "100.64.194.3",
+        "name": "firewall-dbd98e9a-30ba-4b9b-a2a4-ef4ddb3d36cc",
         "networks": [
             {
-                "port": "cdde9cfd-a898-4911-b812-b6849f611549"
+                "port": "47c9831b-b346-4317-bc44-f942ecaee54c"
             },
             {
-                "port": "472879c4-4611-4762-a069-293e0081bcbf"
+                "port": "3bf53c24-5937-4b84-b276-0babb300b79d"
             },
             {
-                "port": "fd09eda4-10b1-4534-984a-7124c338c69d"
+                "port": "47c97a61-e3e8-403a-b662-a117935c7a02"
             }
         ],
         "operational_state": "UP",
         "orchestration_state": "UPDATE_COMPLETE",
-        "owner_tenant_id": "0f40dffa48614d9baa7eaac7e7532099",
+        "owner_tenant_id": "d2a4608bbd28402196acdba7a1632daf",
         "reboot": "",
         "status": "ACTIVE",
-        "tenant_id": "0f40dffa48614d9baa7eaac7e7532099",
+        "tenant_id": "d2a4608bbd28402196acdba7a1632daf",
         "user_data": "",
         "user_data_format": "RAW",
         "user_data_parameters": {},
-        "vnf_plan_id": "60791395-2267-4553-b115-a38fad3ebf69",
-        "vnf_template_id": "5a84974a-9d8b-4887-898b-8e3c095e744d"
+        "vnf_plan_id": "e881b86c-4e61-4268-93a9-6b272a48cb6a",
+        "vnf_template_id": "856d0c84-482e-483d-9fec-55a8ce177e11"
     }
 }
 ```
@@ -571,81 +622,21 @@ $ gohan client port list --output-format json
             "attached": true,
             "binding:vif_type": "vrouter",
             "description": "",
-            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917",
+            "device_id": "dab11f56-f0f2-4cac-bee6-6cec5038458c",
             "device_owner": "compute:nova",
             "ese_logical_port_id": null,
             "fake_delete": true,
             "fixed_ips": [
                 {
-                    "ip_address": "10.98.76.3",
-                    "subnet_id": "a11785e2-0c2b-4131-9144-349155f958f5"
+                    "ip_address": "10.98.77.3",
+                    "subnet_id": "8effd73d-925d-4ec9-9cee-8cffc9aafef3"
                 }
             ],
-            "id": "472879c4-4611-4762-a069-293e0081bcbf",
-            "mac_address": "fa:16:3e:f0:f2:72",
+            "id": "3bf53c24-5937-4b84-b276-0babb300b79d",
+            "mac_address": "fa:16:3e:ce:cb:b2",
             "managed_by_service": false,
             "name": "firewall-user-port",
-            "network_id": "82712b89-c35c-4276-83cb-818860d41f9e",
-            "operational_state": "FAIL",
-            "orchestration_state": "UPDATE_COMPLETE",
-            "security_groups": [],
-            "segmentation_id": 0,
-            "segmentation_type": "flat",
-            "status": "MONITORING_UNAVAILABLE",
-            "tags": {},
-            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099"
-        },
-        {
-            "admin_state_up": true,
-            "allowed_address_pairs": [],
-            "attached": true,
-            "binding:vif_type": "vrouter",
-            "description": "",
-            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917",
-            "device_owner": "compute:nova",
-            "ese_logical_port_id": null,
-            "fake_delete": true,
-            "fixed_ips": [
-                {
-                    "ip_address": "100.64.193.3",
-                    "subnet_id": "c8090497-34be-456b-9186-377e918f3d50"
-                }
-            ],
-            "id": "cdde9cfd-a898-4911-b812-b6849f611549",
-            "mac_address": "fa:16:3e:2f:e8:a6",
-            "managed_by_service": false,
-            "name": "firewall-management-port",
-            "network_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554",
-            "operational_state": "FAIL",
-            "orchestration_state": "UPDATE_COMPLETE",
-            "security_groups": [],
-            "segmentation_id": 0,
-            "segmentation_type": "flat",
-            "status": "MONITORING_UNAVAILABLE",
-            "tags": {},
-            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099"
-        },
-        {
-            "admin_state_up": false,
-            "allowed_address_pairs": [],
-            "attached": true,
-            "binding:vif_type": "vrouter",
-            "description": "",
-            "device_id": "2e555b09-e0d7-4cce-8854-c481a2363917",
-            "device_owner": "compute:nova",
-            "ese_logical_port_id": null,
-            "fake_delete": true,
-            "fixed_ips": [
-                {
-                    "ip_address": "10.121.232.4",
-                    "subnet_id": "1244d619-cc55-4bb7-b181-606776ba5e88"
-                }
-            ],
-            "id": "fd09eda4-10b1-4534-984a-7124c338c69d",
-            "mac_address": "fa:16:3e:8e:dd:05",
-            "managed_by_service": false,
-            "name": "firewall-user-port",
-            "network_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d",
+            "network_id": "0422f224-5da3-4f01-8ba5-2ae68f241774",
             "operational_state": "UP",
             "orchestration_state": "UPDATE_COMPLETE",
             "security_groups": [],
@@ -653,7 +644,67 @@ $ gohan client port list --output-format json
             "segmentation_type": "flat",
             "status": "ACTIVE",
             "tags": {},
-            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099"
+            "tenant_id": "d2a4608bbd28402196acdba7a1632daf"
+        },
+        {
+            "admin_state_up": false,
+            "allowed_address_pairs": [],
+            "attached": true,
+            "binding:vif_type": "vrouter",
+            "description": "",
+            "device_id": "dab11f56-f0f2-4cac-bee6-6cec5038458c",
+            "device_owner": "compute:nova",
+            "ese_logical_port_id": null,
+            "fake_delete": true,
+            "fixed_ips": [
+                {
+                    "ip_address": "10.121.233.4",
+                    "subnet_id": "0479131c-e828-4721-abaa-a46265518b89"
+                }
+            ],
+            "id": "47c97a61-e3e8-403a-b662-a117935c7a02",
+            "mac_address": "fa:16:3e:85:92:30",
+            "managed_by_service": false,
+            "name": "firewall-user-port",
+            "network_id": "3ad67159-9f73-404a-94da-582bda1641fb",
+            "operational_state": "UP",
+            "orchestration_state": "UPDATE_COMPLETE",
+            "security_groups": [],
+            "segmentation_id": 0,
+            "segmentation_type": "flat",
+            "status": "ACTIVE",
+            "tags": {},
+            "tenant_id": "d2a4608bbd28402196acdba7a1632daf"
+        },
+        {
+            "admin_state_up": true,
+            "allowed_address_pairs": [],
+            "attached": true,
+            "binding:vif_type": "vrouter",
+            "description": "",
+            "device_id": "dab11f56-f0f2-4cac-bee6-6cec5038458c",
+            "device_owner": "compute:nova",
+            "ese_logical_port_id": null,
+            "fake_delete": true,
+            "fixed_ips": [
+                {
+                    "ip_address": "100.64.194.3",
+                    "subnet_id": "35e00dad-ad5e-46a2-b71d-93b4e72800b1"
+                }
+            ],
+            "id": "47c9831b-b346-4317-bc44-f942ecaee54c",
+            "mac_address": "fa:16:3e:b6:b6:57",
+            "managed_by_service": false,
+            "name": "firewall-management-port",
+            "network_id": "690a259f-d2bb-4674-ba29-07b3619cc537",
+            "operational_state": "UP",
+            "orchestration_state": "UPDATE_COMPLETE",
+            "security_groups": [],
+            "segmentation_id": 0,
+            "segmentation_type": "flat",
+            "status": "ACTIVE",
+            "tags": {},
+            "tenant_id": "d2a4608bbd28402196acdba7a1632daf"
         }
     ]
 }
@@ -664,48 +715,48 @@ $ gohan client vnf_interface list --output-format json
     "vnf_interfaces": [
         {
             "description": null,
-            "id": "1e047117-2ca8-43dc-aa80-619b224bab4c",
+            "id": "20e0aabb-d2db-4b0f-89f6-61f685f1af0d",
+            "ip_address": "10.98.77.3",
+            "name": "interface-1",
+            "network_id": "0422f224-5da3-4f01-8ba5-2ae68f241774",
+            "port_id": "3bf53c24-5937-4b84-b276-0babb300b79d",
+            "slot_number": 1,
+            "status": "ACTIVE",
+            "tenant_id": "d2a4608bbd28402196acdba7a1632daf",
+            "type": "user",
+            "virtual_ip_address": null,
+            "virtual_ip_properties": null,
+            "vnf_instance_id": "c10935ab-768a-4901-8953-11f9d3987949"
+        },
+        {
+            "description": null,
+            "id": "3c6c8dcb-16f5-4523-90d0-f06295670928",
             "ip_address": null,
             "name": "interface-2",
             "network_id": null,
-            "port_id": "fd09eda4-10b1-4534-984a-7124c338c69d",
+            "port_id": "47c97a61-e3e8-403a-b662-a117935c7a02",
             "slot_number": 2,
             "status": "ACTIVE",
-            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099",
+            "tenant_id": "d2a4608bbd28402196acdba7a1632daf",
             "type": "user",
             "virtual_ip_address": null,
             "virtual_ip_properties": null,
-            "vnf_instance_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+            "vnf_instance_id": "c10935ab-768a-4901-8953-11f9d3987949"
         },
         {
             "description": null,
-            "id": "c6cf2771-be40-4d16-ba15-20a62f8b78f6",
-            "ip_address": "10.98.76.3",
-            "name": "interface-1",
-            "network_id": "82712b89-c35c-4276-83cb-818860d41f9e",
-            "port_id": "472879c4-4611-4762-a069-293e0081bcbf",
-            "slot_number": 1,
-            "status": "MONITORING_UNAVAILABLE",
-            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099",
-            "type": "user",
-            "virtual_ip_address": null,
-            "virtual_ip_properties": null,
-            "vnf_instance_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
-        },
-        {
-            "description": null,
-            "id": "c8fef8f8-a7a1-448f-ae76-81992e598016",
-            "ip_address": "100.64.193.3",
+            "id": "a641f61c-cbc9-447c-b180-a7eaa4a683ad",
+            "ip_address": "100.64.194.3",
             "name": "interface-0",
-            "network_id": "75c2c3ec-7fe7-494c-a35c-db3f94d3a554",
-            "port_id": "cdde9cfd-a898-4911-b812-b6849f611549",
+            "network_id": "690a259f-d2bb-4674-ba29-07b3619cc537",
+            "port_id": "47c9831b-b346-4317-bc44-f942ecaee54c",
             "slot_number": 0,
-            "status": "MONITORING_UNAVAILABLE",
-            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099",
+            "status": "ACTIVE",
+            "tenant_id": "d2a4608bbd28402196acdba7a1632daf",
             "type": "management",
             "virtual_ip_address": null,
             "virtual_ip_properties": null,
-            "vnf_instance_id": "44799fe4-6fbf-4a5d-a2bc-ccd45e9f04eb"
+            "vnf_instance_id": "c10935ab-768a-4901-8953-11f9d3987949"
         }
     ]
 }

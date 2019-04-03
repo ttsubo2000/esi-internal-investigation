@@ -25,7 +25,7 @@ POST /v2.0/networks
         "name": "dummy-net",
         "plane": "data",
         "tags": {},
-        "tenant_id": "0f40dffa48614d9baa7eaac7e7532099"
+        "tenant_id": "d2a4608bbd28402196acdba7a1632daf"
     }
 }
 ```
@@ -86,33 +86,14 @@ As a result, Heat has stored heat-stacks for "Create Network".
 ## 1.6. Stored resource in gohan
 As a result, checking resources regarding of "Network" in gohan.
 
-* Checking the target of resources via neutron client
-```
-$ neutron net-show 73b2c401-a1f3-49fb-8612-8c755b37a28d
-+---------------------+--------------------------------------+
-| Field               | Value                                |
-+---------------------+--------------------------------------+
-| admin_state_up      | True                                 |
-| description         | dummy network for firewall           |
-| id                  | 73b2c401-a1f3-49fb-8612-8c755b37a28d |
-| name                | dummy-net                            |
-| orchestration_state | CREATE_COMPLETE                      |
-| plane               | data                                 |
-| shared              | False                                |
-| status              | ACTIVE                               |
-| subnets             |                                      |
-| tags                | {}                                   |
-| tenant_id           | 0f40dffa48614d9baa7eaac7e7532099     |
-+---------------------+--------------------------------------+
-```
 * Checking the target of resources via gohan client
 ```
-$ gohan client network show --output-format json 73b2c401-a1f3-49fb-8612-8c755b37a28d
-{   
+$ gohan client network show --output-format json 3ad67159-9f73-404a-94da-582bda1641fb
+{
     "network": {
         "admin_state_up": true,
         "description": "dummy network for firewall",
-        "id": "73b2c401-a1f3-49fb-8612-8c755b37a28d",
+        "id": "3ad67159-9f73-404a-94da-582bda1641fb",
         "name": "dummy-net",
         "orchestration_state": "CREATE_COMPLETE",
         "plane": "data",
@@ -120,26 +101,26 @@ $ gohan client network show --output-format json 73b2c401-a1f3-49fb-8612-8c755b3
         "status": "ACTIVE",
         "subnets": [],
         "tags": {},
-        "tenant_id": "0f40dffa48614d9baa7eaac7e7532099"
+        "tenant_id": "d2a4608bbd28402196acdba7a1632daf"
     }
 }
 ```
 * Checking billing_resource via gohan client
 ```
 $ gohan client billing_resource list --output-format json
-{   
+{
     "billing_resources": [
-        {   
+        {
             "config_version": 1,
             "ended": null,
-            "id": "04731679-7d83-4ded-b6a7-8064e9cbb655",
+            "id": "5ba536a7-df43-4f55-ad80-abfd9eb2b632",
             "info": {},
             "parent_billing_id": null,
-            "resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d",
+            "resource_id": "3ad67159-9f73-404a-94da-582bda1641fb",
             "resource_type": "network",
-            "started": 1.518421169e+09,
-            "tenant_id": "0f40dffa48614d9baa7eaac7e7532099",
-            "unique_resource_id": "73b2c401-a1f3-49fb-8612-8c755b37a28d"
+            "started": 1554174142,
+            "tenant_id": "d2a4608bbd28402196acdba7a1632daf",
+            "unique_resource_id": "3ad67159-9f73-404a-94da-582bda1641fb"
         }
     ]
 }

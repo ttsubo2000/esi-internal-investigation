@@ -3,7 +3,7 @@
 # 2. Clarification of interface in Sequence Diagram "Create Network for admin-net"
 You can see the relations of "Network" as following.
 
-![Network](resource/gohan_investigate_for_firewall.004.png)
+![Network](resource/gohan_investigate_for_firewall.003.png)
 
 
 ## 2.1. Gohan

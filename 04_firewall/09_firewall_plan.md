@@ -3,7 +3,7 @@
 # 9. Clarification of interface in Sequence Diagram "Create Firewall Plan"
 You can see the relations of "Firewall Plan" as following.
 
-![Firewall Plan](resource/gohan_investigate_for_firewall.008.png)
+![Firewall Plan](resource/gohan_investigate_for_firewall.010.png)
 
 
 ## 9.1. Gohan

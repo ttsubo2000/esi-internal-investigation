@@ -3,7 +3,7 @@
 # 4. Clarification of interface in Sequence Diagram "Create Subnet for dummy-net"
 You can see the relations of "Subnet" as following.
 
-![Subnet](resource/gohan_investigate_for_firewall.003.png)
+![Subnet](resource/gohan_investigate_for_firewall.005.png)
 
 
 ## 4.1. Gohan

@@ -3,7 +3,7 @@
 # 7. Clarification of interface in Sequence Diagram "Create Vnf Template"
 You can see the relations of "Vnf Template" as following.
 
-![Vnf Template](resource/gohan_investigate_for_firewall.006.png)
+![Vnf Template](resource/gohan_investigate_for_firewall.008.png)
 
 
 ## 7.1. Gohan

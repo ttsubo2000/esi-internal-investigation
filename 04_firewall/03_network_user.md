@@ -3,7 +3,7 @@
 # 3. Clarification of interface in Sequence Diagram "Create Network for user-net"
 You can see the relations of "Network" as following.
 
-![Network](resource/gohan_investigate_for_firewall.010.png)
+![Network](resource/gohan_investigate_for_firewall.004.png)
 
 
 ## 3.1. Gohan

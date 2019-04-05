@@ -3,7 +3,7 @@
 # 10. Clarification of interface in Sequence Diagram "Create Firewall"
 You can see the relations of "Firewall" as following.
 
-![Firewall](resource/gohan_investigate_for_firewall.009.png)
+![Firewall](resource/gohan_investigate_for_firewall.011.png)
 
 
 ## 10.1. Gohan
@@ -263,9 +263,9 @@ PUT /v2.0/ports/47c97a61-e3e8-403a-b662-a117935c7a02.json
 }
 ```
 * from gohan to nova
-``` 
+```
 POST /v2/d2a4608bbd28402196acdba7a1632daf/os-server-external-events
-``` 
+```
 ```
 {
     "events": [

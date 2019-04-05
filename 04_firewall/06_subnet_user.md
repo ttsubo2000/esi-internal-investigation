@@ -3,7 +3,7 @@
 # 6. Clarification of interface in Sequence Diagram "Create Subnet for user-net"
 You can see the relations of "Subnet" as following.
 
-![Subnet](resource/gohan_investigate_for_firewall.011.png)
+![Subnet](resource/gohan_investigate_for_firewall.007.png)
 
 
 ## 6.1. Gohan

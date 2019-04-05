@@ -3,7 +3,7 @@
 # 8. Clarification of interface in Sequence Diagram "Create Vnf Plan"
 You can see the relations of "Vnf Plan" as following.
 
-![Vnf Plan](resource/gohan_investigate_for_firewall.007.png)
+![Vnf Plan](resource/gohan_investigate_for_firewall.009.png)
 
 
 ## 8.1. Gohan

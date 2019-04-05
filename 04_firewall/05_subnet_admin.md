@@ -3,7 +3,7 @@
 # 5. Clarification of interface in Sequence Diagram "Create Subnet for admin-net"
 You can see the relations of "Subnet" as following.
 
-![Subnet](resource/gohan_investigate_for_firewall.005.png)
+![Subnet](resource/gohan_investigate_for_firewall.006.png)
 
 
 ## 5.1. Gohan

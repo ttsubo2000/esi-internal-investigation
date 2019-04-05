@@ -47,6 +47,7 @@ And then, ResourceReader keeps storing template_mappings for following processin
 ### Reference
 * [Checking schemas in ResourceReader](../memo/schemas.txt)
 * [Checking template_mappings in ResourceReader](../memo/template_mappings.md)
+* [Checking _relations in ResourceReader](../memo/_relations.md)
 
 ![scope](../images/ESI_Sequence_diagram.003.png)
 
